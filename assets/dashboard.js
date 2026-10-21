@@ -12,40 +12,78 @@ const safeUrl=url=>/^https?:\/\//i.test(url)?url:'#';
 const external=(url,text)=>`<a href="${esc(safeUrl(url))}" target="_blank" rel="noopener noreferrer">${esc(text??url)}</a>`;
 const fullName=j=>j.title+' ('+j.code+')';
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-const metricInfo={citescore:{label:'CiteScore & Tracker',short:'CiteScore',scopus:true,decimals:1},citations:{label:'Trích dẫn trong cửa sổ CiteScore',short:'Trích dẫn',scopus:true},documents:{label:'Tài liệu trong cửa sổ CiteScore',short:'Tài liệu',scopus:true},papers:{label:'Bài đã xuất bản',short:'Bài xuất bản'},issues:{label:'Kỳ đã xuất bản',short:'Kỳ xuất bản'},localDocs:{label:'Tài liệu trích dẫn đã xác nhận',short:'Tài liệu trích dẫn',local:true},localEdges:{label:'Lượt trích dẫn đã xác nhận',short:'Lượt trích dẫn',local:true},localScore:{label:'Chỉ số 4 năm tự tính · không chính thức',short:'Chỉ số tự tính',local:true,decimals:2}};
+
+const brandThemes=[
+ {id:'nature',name:'1. Nature Portfolio',short:'Nature',accent:'#a31d32',paper:'#ffffff',desc:'Nature Portfolio (Springer Nature) — Trắng học thuật, đỏ crimson & serif cổ điển'},
+ {id:'economist',name:'2. The Economist',short:'Economist',accent:'#e3120b',paper:'#f9f8f5',desc:'The Economist — Viền đỏ đặc trưng, nền giấy ấm & bảng màu Data Team'},
+ {id:'ft',name:'3. Financial Times',short:'Financial Times',accent:'#990f3d',paper:'#fff1e5',desc:'Financial Times — Giấy hồng salmon đặc trưng, đỏ claret & xanh Oxford'},
+ {id:'scopus',name:'4. Elsevier Scopus',short:'Scopus',accent:'#ff6c00',paper:'#f7f9fc',desc:'Elsevier Scopus — Cam phân tích, xanh hải quân đậm & kiểu chữ hiện đại'},
+ {id:'clarivate',name:'5. Clarivate WoS',short:'Clarivate WoS',accent:'#5e33bf',paper:'#f9f8fc',desc:'Clarivate Web of Science — Tím hoàng gia, chàm đậm & bố cục chỉ mục'},
+ {id:'science',name:'6. Science (AAAS)',short:'Science AAAS',accent:'#c5001a',paper:'#ffffff',desc:'Science (AAAS) — Đỏ tươi AAAS, đường kẻ đen sắc nét & tương phản cao'},
+ {id:'springer',name:'7. SpringerLink',short:'SpringerLink',accent:'#025e8d',paper:'#f6f9fb',desc:'SpringerLink — Thanh tiêu đề xanh navy học thuật & lam cerulean'},
+ {id:'wiley',name:'8. Wiley Library',short:'Wiley',accent:'#00594f',paper:'#f7fbfa',desc:'Wiley Online Library — Xanh ngọc lục bảo, xanh lục nhạt & bo góc mềm'},
+ {id:'nytimes',name:'9. NYT The Upshot',short:'NYT Upshot',accent:'#326891',paper:'#fdfdfc',desc:'The New York Times (The Upshot) — Viền kép nhật báo, chữ serif & xanh thép'},
+ {id:'bloomberg',name:'10. Bloomberg Dark',short:'Bloomberg',accent:'#ff8000',paper:'#0d1219',desc:'Bloomberg Terminal — Nền tối carbon, cam hổ phách, xanh lục & font số kỹ thuật'}
+];
+
+const metricInfo={citescore:{label:'CiteScore & Tracker chính thức',short:'CiteScore',scopus:true,decimals:1},citations:{label:'Trích dẫn trong cửa sổ CiteScore',short:'Trích dẫn',scopus:true},documents:{label:'Tài liệu trong cửa sổ CiteScore',short:'Tài liệu',scopus:true},papers:{label:'Bài đã xuất bản',short:'Bài xuất bản'},issues:{label:'Kỳ đã xuất bản',short:'Kỳ xuất bản'},localDocs:{label:'Tài liệu trích dẫn đã xác nhận',short:'Tài liệu trích dẫn',local:true},localEdges:{label:'Lượt trích dẫn đã xác nhận',short:'Lượt trích dẫn',local:true},localScore:{label:'CiteScore dự kiến 4 năm tự tính (5 tạp chí chưa vào Scopus)',short:'CiteScore dự kiến',local:true,decimals:2}};
 const metricValue=value=>state.metric==='localScore'?ratio(value):metricInfo[state.metric].decimals?score(value):number(value);
-let dashboard,scopus,journals,recordIndex,state,chartWidth=1000,subChartWidth=680,plot,selectedYear=null,pinned=false;
+let dashboard,scopus,journals,recordIndex,state,chartWidth=1000,subChartWidth=680,plot,selectedYear=null,pinned=false,currentTheme='nature';
 const defaultSeries=['vjm','ansn','vjc','vjes'];
-const candidateIds=['vjmech','jcc','ajb','vjmst','vjbt','cip'];
+const candidateIds=['vjmech','jcc','ajb','vjmst','vjbt'];
 const nonScopusIds=['vjmech','jcc','ajb','vjmst','vjbt'];
 const scopusIds=['vjm','amv','ansn','vjc','vjes','vjst','cip'];
 const localIds=['vjc','vjes','vjst','cip','vjmech','jcc','ajb','vjmst','vjbt'];
 let candidateSeries=new Set(candidateIds),citationSeriesSet=new Set(localIds),paperSeriesSet=new Set();
 let citationMode='localEdges',papersFocusYear=2025;
 const subState={candidates:{year:null,pinned:false,plot:null},citations:{year:null,pinned:false,plot:null},papers:{year:null,pinned:false,plot:null}};
-const seriesPalette=[['var(--c1)',''],['var(--c2)','7 4'],['var(--c3)','2 4'],['var(--c4)','10 4 2 4'],['var(--c5)','14 4'],['var(--c6)','4 3'],['var(--ink)',''],['#1f6f8b','9 3'],['#8c4a27','3 3'],['#2e6f40','11 3 2 3'],['#5e4b8b','2 3'],['#9a3b5a','6 3 1 3']];
+const seriesPalette=[['var(--c1)',''],['var(--c2)','7 4'],['var(--c3)','2 4'],['var(--c4)','10 4 2 4'],['var(--c5)','14 4'],['var(--c6)','4 3'],['var(--c7)',''],['var(--c8)','9 3'],['var(--c9)','3 3'],['var(--c10)','11 3 2 3'],['var(--c11)','2 3'],['var(--c12)','6 3 1 3']];
 let styles;
 async function fetchJson(url){const response=await fetch(url,{cache:'no-cache'});if(!response.ok)throw new Error('Không tải được '+url+' ('+response.status+')');return response.json();}
 function checkedAt(j){return j.checkedAt??dashboard.collectedAt;}
 function output(j,year){return j.outputs.find(o=>o.year===Number(year));}
 function scopusRecord(j,year){return recordIndex.get(j.code+'|'+year+'|'+(year===scopus.trackerYear?'tracker':'annual'));}
+function verifiedScopus(j){return j.indexings.some(i=>i.system==='Scopus'&&i.status==='listed'&&i.evidenceLevel==='database');}
 function observation(j,metric,year){
- if(metricInfo[metric].local){const local=j.localCitation,r=metric==='localScore'?local?.selfCalculatedSeries.find(v=>v.year===year):local?.citationSeries.find(v=>v.year===year);const value=metric==='localScore'?r?.value:metric==='localDocs'?r?.citingDocuments:r?.confirmedCitationEdges;return {value:value??null,reason:'Chưa có số liệu trong bộ thu thập đã đối chiếu.',updated:local?.sourceExportDate??null,kind:year===Number(dashboard.collectedAt.slice(0,4))?'ytd':'annual',verified:Boolean(r),extra:r};}
+ if(metric==='localScore'){
+  if(verifiedScopus(j))return {value:null,reason:'Tạp chí đã vào Scopus; chỉ dùng CiteScore chính thức.',updated:null,kind:'annual',verified:false,extra:null};
+  const local=j.localCitation,r=local?.selfCalculatedSeries.find(v=>v.year===year);
+  return {value:r?.value??null,reason:'Chưa có số liệu trong bộ thu thập đã đối chiếu.',updated:local?.sourceExportDate??null,kind:year===Number(dashboard.collectedAt.slice(0,4))?'ytd':'annual',verified:Boolean(r),extra:r};
+ }
+ if(metricInfo[metric].local){const local=j.localCitation,r=local?.citationSeries.find(v=>v.year===year);const value=metric==='localDocs'?r?.citingDocuments:r?.confirmedCitationEdges;return {value:value??null,reason:'Chưa có số liệu trong bộ thu thập đã đối chiếu.',updated:local?.sourceExportDate??null,kind:year===Number(dashboard.collectedAt.slice(0,4))?'ytd':'annual',verified:Boolean(r),extra:r};}
  if(!metricInfo[metric].scopus){const o=output(j,year),value=metric==='papers'&&o?.coverage!=='complete'?null:o?.[metric];return {value:value??null,reason:o?.noteVi??'Chưa có số liệu đã đối chiếu cho kỳ này.',updated:o?.asOf??null,kind:o?.periodKind??'annual',verified:metric==='issues'?Number.isFinite(o?.issues):o?.coverage==='complete',extra:o};}
  const r=scopusRecord(j,year);
  const value=metric==='citescore'?r?.value:r?.[metric];
  return {value:Number.isFinite(value)?value:null,reason:r?.status==='scopus_na'?'Scopus hiển thị N/A cho năm này.':'Chưa có số liệu trong bản đối chiếu Scopus.',updated:r?.lastUpdated??r?.accessed??null,kind:r?.type??'annual',verified:r?.status==='verified_scopus',extra:r};
 }
 function annualRecord(j){return recordIndex.get(j.code+'|'+scopus.annualYears.at(-1)+'|annual');}
-function verifiedScopus(j){return j.indexings.some(i=>i.system==='Scopus'&&i.status==='listed'&&i.evidenceLevel==='database');}
 function indexingName(i){return i.system==='WoS'?'WoS '+(i.collection??'chưa rõ bộ chỉ mục'):i.system;}
 function indexingBadges(j){
  const entries=j.indexings.filter(i=>i.status==='listed');
  if(!entries.length)return '<span class="badge pending">Chưa đối chiếu</span>';
  return '<div class="badge-list">'+entries.map(i=>`<span class="badge ${i.evidenceLevel==='database'?'verified':''}" title="${esc((i.evidenceLevel==='database'?'Đối chiếu cơ sở dữ liệu':i.evidenceLevel==='vast'?'VAST công bố':'Website tạp chí công bố')+'; kiểm tra '+date(i.checkedAt))}">${esc(indexingName(i))}${i.evidenceLevel==='database'?'':'*'}</span>`).join('')+'</div>';
 }
+function applyTheme(themeId,persist=true){
+ const found=brandThemes.find(t=>t.id===themeId)??brandThemes[0];
+ currentTheme=found.id;
+ document.documentElement.dataset.theme=currentTheme;
+ document.querySelector('meta[name="theme-color"]')?.setAttribute('content',found.paper);
+ if($('#theme-select'))$('#theme-select').value=currentTheme;
+ if($('#theme-active-desc'))$('#theme-active-desc').textContent=found.desc;
+ for(const btn of document.querySelectorAll('.theme-pill'))btn.setAttribute('aria-pressed',String(btn.dataset.theme===currentTheme));
+ if(persist){
+  try{localStorage.setItem('vast-dashboard-theme',currentTheme);}catch{}
+  if(state)saveState();
+ }
+}
+function renderThemeBar(){
+ $('#theme-pills').innerHTML=brandThemes.map(t=>`<button type="button" class="theme-pill" data-theme="${t.id}" aria-pressed="${t.id===currentTheme}" title="${esc(t.desc)}"><span class="theme-swatch" style="background:linear-gradient(135deg,${t.accent} 55%,${t.paper} 55%)"></span><span class="theme-pill-name">${esc(t.name)}</span></button>`).join('');
+}
 function readState(){
  const p=new URLSearchParams(location.search),years=dashboard.outputYears;
+ let savedTheme='nature';try{savedTheme=localStorage.getItem('vast-dashboard-theme')||'nature';}catch{}
+ const requestedTheme=p.get('theme')||savedTheme;
+ applyTheme(requestedTheme,false);
  const ids=p.has('series')?p.get('series').split(',').filter(id=>journals.some(j=>j.id===id)):defaultSeries;
  state={q:p.get('q')??'',year:years.includes(Number(p.get('year')))?Number(p.get('year')):dashboard.defaultOutputYear,subject:p.get('subject')??'all',index:p.get('index')??'all',sort:p.get('sort')??'default',metric:Object.hasOwn(metricInfo,p.get('metric'))?p.get('metric'):'citescore',from:Number(p.get('from')),to:Number(p.get('to')),series:new Set(ids)};
  const available=availableYears();
@@ -58,7 +96,7 @@ function readState(){
 function saveState(){
  const url=new URL(location.href),p=url.searchParams;
  const set=(key,value,defaultValue)=>{if(value===defaultValue)p.delete(key);else p.set(key,value);};
- set('q',state.q,'');set('year',String(state.year),String(dashboard.defaultOutputYear));set('subject',state.subject,'all');set('index',state.index,'all');set('sort',state.sort,'default');set('metric',state.metric,'citescore');
+ set('theme',currentTheme,'nature');set('q',state.q,'');set('year',String(state.year),String(dashboard.defaultOutputYear));set('subject',state.subject,'all');set('index',state.index,'all');set('sort',state.sort,'default');set('metric',state.metric,'citescore');
  const years=availableYears();set('from',String(state.from),String(years[0]));set('to',String(state.to),String(years.at(-1)));
  const selected=journals.filter(j=>state.series.has(j.id)).map(j=>j.id).join(',');set('series',selected,defaultSeries.join(','));
  history.replaceState(null,'',url);
@@ -84,28 +122,29 @@ function renderOverview(){
  const totalPapers=papers.reduce((sum,o)=>sum+o.papers,0),totalIssues=issues.reduce((sum,o)=>sum+o.issues,0);
  const period=state.year===Number(dashboard.collectedAt.slice(0,4))?'Đến '+date(dashboard.collectedAt):'Cả năm '+state.year;
  const totalConfirmedCitations=journals.reduce((sum,j)=>sum+(j.localCitation?.totals?.citations??0),0);
- const cells=[['Tạp chí trong danh mục',journals.length,'7 đã vào Scopus · 5 ứng viên tiềm năng'],['Bài xuất bản '+state.year,papers.length?number(totalPapers):'—',papers.length+'/12 tạp chí đủ nguồn · '+period],['Kỳ xuất bản '+state.year,issues.length?number(totalIssues):'—',issues.length+'/12 tạp chí đã đối chiếu'],['Lượt trích dẫn xác nhận (09–09h)',number(totalConfirmedCitations),'9 tạp chí VAST đã lọc trích dẫn ảo']];
+ const cells=[['Tạp chí trong danh mục',journals.length,'7 đã vào Scopus · 5 chưa vào Scopus'],['Bài xuất bản '+state.year,papers.length?number(totalPapers):'—',papers.length+'/12 tạp chí đủ nguồn · '+period],['Kỳ xuất bản '+state.year,issues.length?number(totalIssues):'—',issues.length+'/12 tạp chí đã đối chiếu'],['Lượt trích dẫn xác nhận (09–09h)',number(totalConfirmedCitations),'9 tạp chí VAST đã lọc trích dẫn ảo']];
  $('#summary-strip').innerHTML=cells.map(([label,value,detail])=>`<div class="summary-item"><span class="summary-label">${esc(label)}</span><strong class="summary-value">${esc(value)}</strong><span class="summary-detail">${esc(detail)}</span></div>`).join('');
  const year=scopus.annualYears.at(-1),previous=year-1;
  const comparable=journals.filter(j=>Number.isFinite(scopusRecord(j,year)?.value)&&Number.isFinite(scopusRecord(j,previous)?.value));
  const growing=comparable.filter(j=>scopusRecord(j,year).value>scopusRecord(j,previous).value);
  const remarks=[
   `${growing.length}/${comparable.length} tạp chí Scopus có số liệu so sánh tăng CiteScore năm ${year} so với ${previous}; VJES đạt 5,0 (Q1, phân vị 77%), ANSN đạt 3,9 và VJC đạt 3,0.`,
-  `Trong 5 tạp chí chưa vào Scopus, VJMech (1,14) và JCC (1,12) có CiteScore dự kiến 2026 vượt mốc CIP (0,67 tự tính / 0,7 Tracker Scopus); AJB (0,65) và VJMST (0,63) tiệm cận mốc CIP.`,
+  `Chỉ số CiteScore tự tính (dự kiến) chỉ áp dụng cho 5 tạp chí chưa vào Scopus: VJMech (1,14) và JCC (1,12) vượt mốc Tracker Scopus 0,7 của CIP; AJB (0,65) và VJMST (0,63) tiệm cận mốc 0,7.`,
   `Giai đoạn 2020–2026, cả 12/12 tạp chí đã được kiểm đếm đầy đủ theo từng số phát hành chính thức (${number(totalPapers)} bài / ${number(totalIssues)} kỳ trong kỳ đang chọn ${state.year}).`
  ];
  $('#remarks').innerHTML=remarks.map(text=>`<li>${esc(text)}</li>`).join('');
- $('#coverage-copy').textContent='7 tạp chí có CiteScore/Tracker chính thức từ Scopus; 5 tạp chí chưa vào Scopus có chỉ số CiteScore dự kiến 4 năm tự tính từ bộ dữ liệu trích dẫn đã xác nhận (09, 09e–09h). Sản lượng xuất bản 2020–2026 được đối chiếu đủ 12/12 tạp chí theo số đã phát hành.';
+ $('#coverage-copy').textContent='7 tạp chí đã vào Scopus chỉ dùng CiteScore/Tracker chính thức từ Scopus. Chỉ số CiteScore dự kiến (4 năm tự tính từ bộ 09, 09e–09h) chỉ áp dụng cho 5 tạp chí chưa vào Scopus (VJMech, JCC, AJB, VJMST, VJBT).';
 }
 function renderPortfolio(){
  const year=scopus.annualYears.at(-1),tracker=scopus.trackerYear;
- $('#annual-column').innerHTML='CiteScore '+year+'<small>Hoặc dự kiến*</small>';$('#tracker-column').innerHTML='Tracker '+tracker+`<small>${date(scopus.records.find(r=>r.type==='tracker').lastUpdated)} / dự kiến*</small>`;$('#output-column').innerHTML=`Bài / kỳ ${state.year}<small>${state.year===Number(dashboard.collectedAt.slice(0,4))?'Đến '+date(dashboard.collectedAt):'Cả năm'}</small>`;
+ $('#annual-column').innerHTML='CiteScore '+year+'<small>Chính thức / dự kiến*</small>';$('#tracker-column').innerHTML='Tracker '+tracker+`<small>${date(scopus.records.find(r=>r.type==='tracker').lastUpdated)} / dự kiến*</small>`;$('#output-column').innerHTML=`Bài / kỳ ${state.year}<small>${state.year===Number(dashboard.collectedAt.slice(0,4))?'Đến '+date(dashboard.collectedAt):'Cả năm'}</small>`;
  const list=filteredJournals();
  $('#portfolio-body').innerHTML=list.map(j=>{
-  const a=annualRecord(j),t=scopusRecord(j,tracker),o=output(j,state.year),papers=o?.coverage==='complete'?o.papers:null;
-  const local25=j.localCitation?.selfCalculatedSeries.find(r=>r.year===year),local26=j.localCitation?.selfCalculatedSeries.find(r=>r.year===tracker);
-  const annualCell=Number.isFinite(a?.value)?`<strong>${score(a.value)}</strong><small>Scopus chính thức</small>`:local25&&Number.isFinite(local25.value)?`<strong class="neutral">${ratio(local25.value)}*</strong><small>Dự kiến (${local25.numerator}/${local25.denominator})</small>`:'<strong class="neutral">—</strong>';
-  const trackerCell=Number.isFinite(t?.value)?`<strong>${score(t.value)}</strong><small>Scopus Tracker</small>`:local26&&Number.isFinite(local26.value)?`<strong class="neutral">${ratio(local26.value)}*</strong><small>Dự kiến (${local26.numerator}/${local26.denominator})</small>`:'<strong class="neutral">—</strong>';
+  const isScopus=verifiedScopus(j),a=annualRecord(j),t=scopusRecord(j,tracker),o=output(j,state.year),papers=o?.coverage==='complete'?o.papers:null;
+  const local25=!isScopus?j.localCitation?.selfCalculatedSeries.find(r=>r.year===year):null;
+  const local26=!isScopus?j.localCitation?.selfCalculatedSeries.find(r=>r.year===tracker):null;
+  const annualCell=isScopus?(Number.isFinite(a?.value)?`<strong>${score(a.value)}</strong><small>Scopus chính thức</small>`:`<strong class="neutral">—</strong><small>Scopus N/A</small>`):(local25&&Number.isFinite(local25.value)?`<strong class="neutral">${ratio(local25.value)}*</strong><small>Dự kiến (${local25.numerator}/${local25.denominator})</small>`:'<strong class="neutral">—</strong>');
+  const trackerCell=isScopus?(Number.isFinite(t?.value)?`<strong>${score(t.value)}</strong><small>Scopus Tracker</small>`:'<strong class="neutral">—</strong>'):(local26&&Number.isFinite(local26.value)?`<strong class="neutral">${ratio(local26.value)}*</strong><small>Dự kiến (${local26.numerator}/${local26.denominator})</small>`:'<strong class="neutral">—</strong>');
   return `<tr><th scope="row"><a href="#journal/${encodeURIComponent(j.id)}">${esc(fullName(j))}</a><small>${esc(j.subject)} · ${esc(j.titleVi)}</small></th><td class="index-cell">${indexingBadges(j)}</td><td data-label="CiteScore ${year}">${annualCell}</td><td data-label="Tracker ${tracker}">${trackerCell}</td><td data-label="Bài / kỳ ${state.year}"><strong class="${Number.isFinite(papers)?'':'neutral'}">${number(papers)}</strong><small>${Number.isFinite(o?.issues)?number(o.issues)+' kỳ':'Chưa đối chiếu kỳ'}</small></td><td class="updated-cell"><time datetime="${esc(checkedAt(j))}">${date(checkedAt(j))}</time><small>Hồ sơ / nguồn</small></td></tr>`;
  }).join('');
  $('#results-count').textContent=list.length+' / '+journals.length+' tạp chí';$('#portfolio-empty').hidden=list.length!==0;
@@ -114,25 +153,33 @@ function detailMetric(label,value,detail){return `<div><span class="summary-labe
 function renderDetail(id){
  const j=journals.find(item=>item.id===id),panel=$('#detail-panel');
  if(!j){panel.innerHTML='<h2 id="detail-heading">Không tìm thấy tạp chí</h2><p>Địa chỉ hồ sơ không nằm trong danh mục đã đối chiếu.</p><a href="#journals">Trở lại danh mục</a>';return;}
- const a=annualRecord(j),t=scopusRecord(j,scopus.trackerYear),o=output(j,state.year),profileRows=[['Tên tiếng Việt',j.titleVi],['Lĩnh vực',j.subject],['ISSN bản in',j.issn??'Chưa xác minh'],['ISSN điện tử',j.eissn??'Chưa xác minh'],['Đơn vị xuất bản',j.publisher??'Chưa xác minh'],['Kỳ hạn công bố',j.frequency?.issuesPerYear?j.frequency.issuesPerYear+' kỳ/năm (theo website)':'Chưa xác minh'],['Ngày đối chiếu',date(checkedAt(j))]];
+ const isScopus=verifiedScopus(j),a=annualRecord(j),t=scopusRecord(j,scopus.trackerYear),o=output(j,state.year),profileRows=[['Tên tiếng Việt',j.titleVi],['Lĩnh vực',j.subject],['ISSN bản in',j.issn??'Chưa xác minh'],['ISSN điện tử',j.eissn??'Chưa xác minh'],['Đơn vị xuất bản',j.publisher??'Chưa xác minh'],['Kỳ hạn công bố',j.frequency?.issuesPerYear?j.frequency.issuesPerYear+' kỳ/năm (theo website)':'Chưa xác minh'],['Ngày đối chiếu',date(checkedAt(j))]];
  const ownRecords=scopus.records.filter(r=>r.journal===j.code);
  const categories=j.scopusCategories??[];
- const local25=j.localCitation?.selfCalculatedSeries.find(r=>r.year===scopus.annualYears.at(-1));
- const local26=j.localCitation?.selfCalculatedSeries.find(r=>r.year===scopus.trackerYear);
+ const local25=!isScopus?j.localCitation?.selfCalculatedSeries.find(r=>r.year===scopus.annualYears.at(-1)):null;
+ const local26=!isScopus?j.localCitation?.selfCalculatedSeries.find(r=>r.year===scopus.trackerYear):null;
  const metricRows=ownRecords.map(r=>`<tr><th scope="row">${r.year}${r.type==='tracker'?' · Tracker':''}</th><td>${score(r.value)}</td><td>${number(r.citations)}</td><td>${number(r.documents)}</td></tr>`).join('');
  const outputRows=j.outputs.map(row=>`<tr><th scope="row">${row.year}${row.periodKind==='ytd'?' · đến '+date(row.asOf):''}</th><td>${row.coverage==='complete'?number(row.papers):'—'}</td><td>${number(row.issues)}</td><td>${row.coverage==='complete'?'Đã đối chiếu':'Chưa đủ số bài'}</td></tr>`).join('');
  const indexRows=j.indexings.map(i=>`<li><strong>${esc(indexingName(i))}</strong> · ${i.status==='listed'?'Có tên theo nguồn':i.status==='not_listed'?'Nguồn ghi chưa thuộc danh mục':'Chưa xác minh'}<small>${i.evidenceLevel==='database'?'Đối chiếu trực tiếp cơ sở dữ liệu':i.evidenceLevel==='vast'?'Thông báo VAST':'Công bố trên website tạp chí'} · ${date(i.checkedAt)}${i.coverage?' · Phạm vi '+esc(i.coverage):''}</small>${external(i.sourceUrl,'Mở nguồn đối chiếu')}</li>`).join('');
  const issueGroups=j.outputs.slice().reverse().map(row=>`<section class="detail-section"><h3>Nguồn sản lượng ${row.year} (${number(row.papers)} bài / ${number(row.issues)} kỳ)</h3><p class="detail-note">${row.coverage==='complete'?'Đã đối chiếu bài đủ điều kiện trong các số đã phát hành.':'Chưa đủ bằng chứng để chốt tổng số bài; không suy từ số trang hay kỳ hạn xuất bản.'}${row.periodKind==='ytd'?' Số liệu đến '+date(row.asOf)+'.':''}</p><ul class="source-evidence">${row.issueItems.map(issue=>`<li>${external(issue.url,issue.title)}<small>${issue.published?'Phát hành '+date(issue.published)+' · ':''}${issue.paperKeys.length?issue.paperKeys.length+' bài được liệt kê':'Nguồn số đã phát hành'}</small></li>`).join('')}</ul></section>`).join('');
- const card1=Number.isFinite(a?.value)?detailMetric('CiteScore '+scopus.annualYears.at(-1),score(a.value),'Nguồn Scopus chính thức'):local25?detailMetric('CiteScore dự kiến '+local25.year,ratio(local25.value),`Tự tính 4 năm (${local25.numerator}/${local25.denominator}) · chưa vào Scopus`):detailMetric('CiteScore '+scopus.annualYears.at(-1),'—','Chưa đối chiếu Scopus');
- const card2=Number.isFinite(t?.value)?detailMetric('Tracker '+scopus.trackerYear,score(t.value),'Cập nhật '+date(t.lastUpdated)):local26?detailMetric('Tracker dự kiến '+local26.year,ratio(local26.value),`Tự tính 4 năm (${local26.numerator}/${local26.denominator}) · bộ 09–09h`):detailMetric('Tracker '+scopus.trackerYear,'—','Chưa có bản đối chiếu');
- panel.innerHTML=`<a class="detail-back" href="#journals">Trở lại danh mục tạp chí</a><h2 id="detail-heading" class="detail-heading">${esc(fullName(j))}</h2><p class="detail-subtitle">${esc(j.titleVi)} · ${esc(j.subject)}</p><div class="detail-metrics">${card1}${card2}${detailMetric('Bài xuất bản '+state.year,o?.coverage==='complete'?number(o.papers):'—',Number.isFinite(o?.issues)?o.issues+' kỳ đã phát hành':'Chưa đủ nguồn sản lượng')}</div><div class="detail-grid"><div><section class="detail-section"><h3>Hồ sơ tạp chí</h3><dl class="profile-list">${profileRows.map(([label,value])=>`<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>${j.formerTitles?.length?`<p class="detail-note">Tên / ISSN trước đây: ${j.formerTitles.map(v=>esc(v.title)+(v.issn?' ('+esc(v.issn)+')':'')).join('; ')}.</p>`:''}<div class="detail-links">${external(j.website,'Website chính thức')}<a href="#trends" data-trend-journal="${j.id}">Xem xu hướng tạp chí</a></div></section><section class="detail-section"><h3>Sản lượng xuất bản (2020–2026)</h3><div class="detail-table-scroll"><table class="detail-table"><thead><tr><th scope="col">Kỳ dữ liệu</th><th scope="col">Bài</th><th scope="col">Số / kỳ</th><th scope="col">Đối chiếu</th></tr></thead><tbody>${outputRows}</tbody></table></div><p class="detail-note">Đếm bài trong số đã phát hành, khác số tài liệu trong cửa sổ tính CiteScore. Không tính tăng/giảm giữa một năm chưa kết thúc và cả năm trước.</p></section>${ownRecords.length?`<section class="detail-section"><h3>Lịch sử Scopus</h3><div class="detail-table-scroll"><table class="detail-table"><thead><tr><th scope="col">Năm</th><th scope="col">CiteScore</th><th scope="col">Trích dẫn</th><th scope="col">Tài liệu</th></tr></thead><tbody>${metricRows}</tbody></table></div><p class="detail-note">Trích dẫn / tài liệu thuộc cửa sổ tính CiteScore của từng năm; Tracker là tạm thời. “—” là nguồn chưa có giá trị, không phải 0.</p></section>`:'<p class="detail-note">Tạp chí chưa có trong danh mục Scopus chính thức; xem bảng trích dẫn và CiteScore dự kiến 4 năm tự tính bên dưới.</p>'}${categories.length?`<section class="detail-section"><h3>Phân vị theo nhóm ngành Scopus</h3><ul class="source-evidence">${categories.map(c=>`<li>${esc(c.name)} · ${c.year}<small>Phân vị ${number(c.percentile)} · Hạng ${number(c.rank)}/${number(c.total)}</small>${external(c.sourceUrl,'Nguồn Scopus')}</li>`).join('')}</ul></section>`:''}</div><div><section class="detail-section"><h3>Tình trạng chỉ mục</h3><ul class="source-evidence">${indexRows||'<li>Chưa có trạng thái chỉ mục được đối chiếu.</li>'}</ul></section><section class="detail-section"><h3>Kỳ phát hành mới nhất</h3>${j.latestIssue?`<p>${external(j.latestIssue.url,j.latestIssue.title)}</p><p class="detail-note">${j.latestIssue.published?'Phát hành '+date(j.latestIssue.published):'Chưa xác minh ngày phát hành'}</p>`:'<p class="detail-note">Chưa xác minh kỳ phát hành mới nhất.</p>'}</section>${issueGroups}<section class="detail-section"><h3>Nguồn hồ sơ</h3><ol class="reference-list" role="list">${j.profileSources.map(url=>`<li><p>${external(url)}. Truy cập ngày ${date(checkedAt(j))}.</p></li>`).join('')}</ol></section></div></div>`;
+ const card1=isScopus?detailMetric('CiteScore '+scopus.annualYears.at(-1),score(a?.value),Number.isFinite(a?.value)?'Nguồn Scopus chính thức':'Scopus hiển thị N/A'):local25?detailMetric('CiteScore dự kiến '+local25.year,ratio(local25.value),`Tự tính 4 năm (${local25.numerator}/${local25.denominator}) · chưa vào Scopus`):detailMetric('CiteScore '+scopus.annualYears.at(-1),'—','Chưa vào Scopus');
+ const card2=isScopus?detailMetric('Tracker '+scopus.trackerYear,score(t?.value),t?'Cập nhật '+date(t.lastUpdated):'Nguồn Scopus'):local26?detailMetric('Tracker dự kiến '+local26.year,ratio(local26.value),`Tự tính 4 năm (${local26.numerator}/${local26.denominator}) · chưa vào Scopus`):detailMetric('Tracker '+scopus.trackerYear,'—','Chưa vào Scopus');
+ panel.innerHTML=`<a class="detail-back" href="#journals">Trở lại danh mục tạp chí</a><h2 id="detail-heading" class="detail-heading">${esc(fullName(j))}</h2><p class="detail-subtitle">${esc(j.titleVi)} · ${esc(j.subject)}</p><div class="detail-metrics">${card1}${card2}${detailMetric('Bài xuất bản '+state.year,o?.coverage==='complete'?number(o.papers):'—',Number.isFinite(o?.issues)?o.issues+' kỳ đã phát hành':'Chưa đủ nguồn sản lượng')}</div><div class="detail-grid"><div><section class="detail-section"><h3>Hồ sơ tạp chí</h3><dl class="profile-list">${profileRows.map(([label,value])=>`<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>${j.formerTitles?.length?`<p class="detail-note">Tên / ISSN trước đây: ${j.formerTitles.map(v=>esc(v.title)+(v.issn?' ('+esc(v.issn)+')':'')).join('; ')}.</p>`:''}<div class="detail-links">${external(j.website,'Website chính thức')}<a href="#trends" data-trend-journal="${j.id}">Xem xu hướng tạp chí</a></div></section><section class="detail-section"><h3>Sản lượng xuất bản (2020–2026)</h3><div class="detail-table-scroll"><table class="detail-table"><thead><tr><th scope="col">Kỳ dữ liệu</th><th scope="col">Bài</th><th scope="col">Số / kỳ</th><th scope="col">Đối chiếu</th></tr></thead><tbody>${outputRows}</tbody></table></div><p class="detail-note">Đếm bài trong số đã phát hành, khác số tài liệu trong cửa sổ tính CiteScore. Không tính tăng/giảm giữa một năm chưa kết thúc và cả năm trước.</p></section>${ownRecords.length?`<section class="detail-section"><h3>Lịch sử Scopus chính thức</h3><div class="detail-table-scroll"><table class="detail-table"><thead><tr><th scope="col">Năm</th><th scope="col">CiteScore</th><th scope="col">Trích dẫn</th><th scope="col">Tài liệu</th></tr></thead><tbody>${metricRows}</tbody></table></div><p class="detail-note">Trích dẫn / tài liệu thuộc cửa sổ tính CiteScore của từng năm; Tracker là tạm thời. “—” là nguồn chưa có giá trị, không phải 0.</p></section>`:'<p class="detail-note">Tạp chí chưa có trong danh mục Scopus chính thức; xem bảng trích dẫn và CiteScore dự kiến 4 năm tự tính bên dưới.</p>'}${categories.length?`<section class="detail-section"><h3>Phân vị theo nhóm ngành Scopus</h3><ul class="source-evidence">${categories.map(c=>`<li>${esc(c.name)} · ${c.year}<small>Phân vị ${number(c.percentile)} · Hạng ${number(c.rank)}/${number(c.total)}</small>${external(c.sourceUrl,'Nguồn Scopus')}</li>`).join('')}</ul></section>`:''}</div><div><section class="detail-section"><h3>Tình trạng chỉ mục</h3><ul class="source-evidence">${indexRows||'<li>Chưa có trạng thái chỉ mục được đối chiếu.</li>'}</ul></section><section class="detail-section"><h3>Kỳ phát hành mới nhất</h3>${j.latestIssue?`<p>${external(j.latestIssue.url,j.latestIssue.title)}</p><p class="detail-note">${j.latestIssue.published?'Phát hành '+date(j.latestIssue.published):'Chưa xác minh ngày phát hành'}</p>`:'<p class="detail-note">Chưa xác minh kỳ phát hành mới nhất.</p>'}</section>${issueGroups}<section class="detail-section"><h3>Nguồn hồ sơ</h3><ol class="reference-list" role="list">${j.profileSources.map(url=>`<li><p>${external(url)}. Truy cập ngày ${date(checkedAt(j))}.</p></li>`).join('')}</ol></section></div></div>`;
  if(j.localCitation)panel.querySelector('.detail-grid>div').insertAdjacentHTML('beforeend',localCitationSection(j));
 }
 function localCitationSection(j){
- const local=j.localCitation,years=[...new Set([...local.citationSeries,...local.selfCalculatedSeries].map(r=>r.year))].filter(y=>y>=2015&&y<=Number(dashboard.collectedAt.slice(0,4))).sort((a,b)=>a-b);
- const rows=years.map(year=>{const c=local.citationSeries.find(r=>r.year===year),s=local.selfCalculatedSeries.find(r=>r.year===year);return `<tr><th scope="row">${year}</th><td>${number(c?.citingDocuments)}</td><td>${number(c?.confirmedCitationEdges)}</td><td title="${s?esc(s.window+': '+s.numerator+' / '+s.denominator):'Chưa có giá trị'}">${ratio(s?.value)}${s?` <small>(${s.numerator}/${s.denominator})</small>`:''}</td></tr>`;}).join('');
+ const local=j.localCitation,showSelfScore=!verifiedScopus(j);
+ const years=[...new Set([...local.citationSeries,...(showSelfScore?local.selfCalculatedSeries:[])].map(r=>r.year))].filter(y=>y>=2015&&y<=Number(dashboard.collectedAt.slice(0,4))).sort((a,b)=>a-b);
+ const rows=years.map(year=>{
+  const c=local.citationSeries.find(r=>r.year===year),s=showSelfScore?local.selfCalculatedSeries.find(r=>r.year===year):null;
+  const scoreCol=showSelfScore?`<td title="${s?esc(s.window+': '+s.numerator+' / '+s.denominator):'Chưa có giá trị'}">${ratio(s?.value)}${s&&s.denominator>0?` <small>(${s.numerator}/${s.denominator})</small>`:''}</td>`:'';
+  return `<tr><th scope="row">${year}</th><td>${number(c?.citingDocuments)}</td><td>${number(c?.confirmedCitationEdges)}</td>${scoreCol}</tr>`;
+ }).join('');
  const tot=local.totals?`<p class="detail-note"><strong>Tổng hợp toàn bộ dữ liệu xác nhận:</strong> ${number(local.totals.citations)} lượt trích dẫn từ ${number(local.totals.citingDocs)} tài liệu trích dẫn (lọc từ ${number(local.totals.sourceRows)} dòng Scopus thô); ${number(local.totals.citedArticles)} bài được trích dẫn; <strong>h-index: ${number(local.totals.hIndex)}</strong>.</p>`:'';
- return `<section class="detail-section"><h3>Trích dẫn &amp; CiteScore dự kiến từ bộ số liệu thu thập</h3><p class="detail-note">Xử lý ngày ${date(local.processedAt)}.${local.sourceExportDate?' Xuất Scopus ngày '+date(local.sourceExportDate)+'.':' Bộ dữ liệu chưa ghi ngày xuất Scopus.'} Chỉ đếm tài liệu và lượt trích dẫn đã khớp với danh mục bài.</p>${tot}<div class="detail-table-scroll"><table class="detail-table"><thead><tr><th scope="col">Năm</th><th scope="col">Tài liệu trích dẫn</th><th scope="col">Lượt trích dẫn</th><th scope="col">Chỉ số 4 năm<br>tự tính (tử/mẫu)</th></tr></thead><tbody>${rows}</tbody></table></div><p class="detail-note">Năm là năm của tài liệu trích dẫn. Chỉ số tự tính = lượt trích dẫn trong cửa sổ 4 năm tới bài xuất bản trong cùng cửa sổ / số bài trong danh mục của cửa sổ; không phải CiteScore hay Tracker chính thức của Scopus.</p>${local.publicSourceUrl?external(local.publicSourceUrl,'Nguồn thống kê tạp chí'):''}</section>`;
+ const heading=showSelfScore?'Trích dẫn &amp; CiteScore dự kiến (4 năm tự tính)':'Trích dẫn đã xác nhận từ bộ số liệu thu thập (09–09h)';
+ const colHead=showSelfScore?'<th scope="col">CiteScore dự kiến<br>4 năm (tử/mẫu)</th>':'';
+ const footNote=showSelfScore?'Năm là năm của tài liệu trích dẫn. CiteScore dự kiến = lượt trích dẫn xác nhận trong cửa sổ 4 năm tới bài xuất bản trong cùng cửa sổ / số bài trong danh mục của cửa sổ (chỉ áp dụng cho 5 tạp chí chưa vào Scopus).':'Năm là năm của tài liệu trích dẫn. Tạp chí đã vào Scopus nên chỉ số CiteScore và Tracker sử dụng trực tiếp từ bảng Lịch sử Scopus chính thức phía trên.';
+ return `<section class="detail-section"><h3>${heading}</h3><p class="detail-note">Xử lý ngày ${date(local.processedAt)}.${local.sourceExportDate?' Xuất Scopus ngày '+date(local.sourceExportDate)+'.':' Bộ dữ liệu chưa ghi ngày xuất Scopus.'} Chỉ đếm tài liệu và lượt trích dẫn đã khớp với danh mục bài.</p>${tot}<div class="detail-table-scroll"><table class="detail-table"><thead><tr><th scope="col">Năm</th><th scope="col">Tài liệu trích dẫn</th><th scope="col">Lượt trích dẫn</th>${colHead}</tr></thead><tbody>${rows}</tbody></table></div><p class="detail-note">${footNote}</p>${local.publicSourceUrl?external(local.publicSourceUrl,'Nguồn thống kê tạp chí'):''}</section>`;
 }
 function renderUpdates(){
  $('#snapshot-history').innerHTML=dashboard.history.map(h=>`<li><time datetime="${h.date}">${date(h.date)}</time><h4>${esc(h.title)}</h4><p>${esc(h.description)}</p>${h.url?`<a href="${esc(h.url)}">Mở bản dữ liệu đã lưu</a>`:''}</li>`).join('');
@@ -154,13 +201,13 @@ function route(moveFocus=false){
 function legendButtonsHtml(ids,activeSet,attrName){
  return ids.map(id=>{
   const j=journals.find(x=>x.id===id),s=styles[id];
-  const isBenchmark=attrName==='data-candidate'&&id==='cip';
   const mark=`<line x1="0" y1="6" x2="28" y2="6" stroke="${s.color}" stroke-width="2"${s.dash?` stroke-dasharray="${s.dash}"`:''}/>`;
-  return `<button class="journal-toggle" type="button" ${attrName}="${j.id}" aria-pressed="${activeSet.has(j.id)}" aria-label="${esc(fullName(j))}" title="${esc(fullName(j))}"><svg viewBox="0 0 28 12" aria-hidden="true">${mark}</svg><span class="legend-label" translate="no">${j.code}${isBenchmark?' (Mốc Scopus)':''}</span></button>`;
+  return `<button class="journal-toggle" type="button" ${attrName}="${j.id}" aria-pressed="${activeSet.has(j.id)}" aria-label="${esc(fullName(j))}" title="${esc(fullName(j))}"><svg viewBox="0 0 28 12" aria-hidden="true">${mark}</svg><span class="legend-label" translate="no">${j.code}</span></button>`;
  }).join('');
 }
 function renderLegend(){
- $('#chart-legend').innerHTML=journals.map(j=>{const s=styles[j.id],isTrackerOnly=j.code==='CIP'&&state.metric==='citescore';const mark=isTrackerOnly?`<path d="M14 1 L19 6 L14 11 L9 6 Z" fill="var(--paper)" stroke="${s.color}" stroke-width="2"/>`:`<line x1="0" y1="6" x2="28" y2="6" stroke="${s.color}" stroke-width="2"${s.dash?` stroke-dasharray="${s.dash}"`:''}/>`;return `<button class="journal-toggle" type="button" data-journal="${j.id}" aria-pressed="${state.series.has(j.id)}" aria-label="${esc(fullName(j))}" title="${esc(fullName(j))}"><svg viewBox="0 0 28 12" aria-hidden="true">${mark}</svg><span class="legend-label" translate="no">${j.code}</span></button>`;}).join('');
+ const list=state.metric==='localScore'?journals.filter(j=>!verifiedScopus(j)):journals;
+ $('#chart-legend').innerHTML=list.map(j=>{const s=styles[j.id],isTrackerOnly=j.code==='CIP'&&state.metric==='citescore';const mark=isTrackerOnly?`<path d="M14 1 L19 6 L14 11 L9 6 Z" fill="var(--paper)" stroke="${s.color}" stroke-width="2"/>`:`<line x1="0" y1="6" x2="28" y2="6" stroke="${s.color}" stroke-width="2"${s.dash?` stroke-dasharray="${s.dash}"`:''}/>`;return `<button class="journal-toggle" type="button" data-journal="${j.id}" aria-pressed="${state.series.has(j.id)}" aria-label="${esc(fullName(j))}" title="${esc(fullName(j))}"><svg viewBox="0 0 28 12" aria-hidden="true">${mark}</svg><span class="legend-label" translate="no">${j.code}</span></button>`;}).join('');
 }
 function niceScale(maximum,decimals=false){
  const target=Math.max(decimals?0.5:1,maximum*1.12),rough=target/5,power=10**Math.floor(Math.log10(rough));
@@ -196,13 +243,14 @@ function renderChart(){
  svg+=`<g id="chart-empty" hidden><text x="${width/2}" y="${height/2-10}" text-anchor="middle" fill="var(--muted)" font-size="13"><tspan x="${width/2}">Chưa có giá trị để vẽ</tspan><tspan x="${width/2}" dy="22">Đổi chỉ số, khoảng năm hoặc chọn tạp chí.</tspan></text></g><g id="chart-hover" aria-hidden="true" pointer-events="none" hidden></g>`;
  chart.innerHTML=svg;updateSeries();
  const processingDates=[...new Set(journals.filter(j=>j.localCitation).map(j=>j.localCitation.processedAt.slice(0,10)))].sort(),processingPeriod=processingDates.length===1?date(processingDates[0]):date(processingDates[0])+'–'+date(processingDates.at(-1));
- $('#chart-caption').textContent=metricInfo[state.metric].local?`Nguồn: bộ số liệu đã thu thập 09–09h, xử lý ${processingPeriod}. Tài liệu / lượt trích dẫn được tính theo năm của tài liệu trích dẫn và chỉ gồm tập đã xác nhận. Chỉ số 4 năm là tự tính, không phải CiteScore/Tracker chính thức. Hình thoi, nét đứt: năm chưa kết thúc; ngày xuất nguồn ghi trong từng hồ sơ.`:metricInfo[state.metric].scopus?`Điểm tròn: số liệu năm trong cửa sổ tính CiteScore. Hình thoi, nét đứt: Tracker ${scopus.trackerYear}, cập nhật ${date(scopus.records.find(r=>r.type==='tracker').lastUpdated)}. Trích dẫn / tài liệu không phải sản lượng xuất bản của riêng năm đó.`:`Bài / kỳ trong các số đã phát hành. ${currentYear} là số liệu đến ${date(dashboard.collectedAt)}, không tương đương một năm đầy đủ. Giá trị thiếu nguồn không được thay bằng 0.`;
+ $('#chart-caption').textContent=state.metric==='localScore'?`Nguồn: bộ số liệu 09, 09e–09h, xử lý ${processingPeriod}. Chỉ số CiteScore 4 năm tự tính chỉ áp dụng cho 5 tạp chí chưa vào Scopus (VJMech, JCC, AJB, VJMST, VJBT).`:metricInfo[state.metric].local?`Nguồn: bộ số liệu đã thu thập 09–09h, xử lý ${processingPeriod}. Tài liệu / lượt trích dẫn được tính theo năm của tài liệu trích dẫn và chỉ gồm tập đã xác nhận.`:metricInfo[state.metric].scopus?`Điểm tròn: số liệu năm trong cửa sổ tính CiteScore. Hình thoi, nét đứt: Tracker ${scopus.trackerYear}, cập nhật ${date(scopus.records.find(r=>r.type==='tracker').lastUpdated)}. Trích dẫn / tài liệu không phải sản lượng xuất bản của riêng năm đó.`:`Bài / kỳ trong các số đã phát hành. ${currentYear} là số liệu đến ${date(dashboard.collectedAt)}, không tương đương một năm đầy đủ. Giá trị thiếu nguồn không được thay bằng 0.`;
 }
 function updateSeries(animate=false){
  for(const button of document.querySelectorAll('#chart-legend .journal-toggle'))button.setAttribute('aria-pressed',String(state.series.has(button.dataset.journal)));
  let points=0;for(const group of document.querySelectorAll('#trend-chart .journal-series')){const on=state.series.has(group.dataset.journal),wasHidden=group.hasAttribute('hidden');group.toggleAttribute('hidden',!on);group.classList.remove('is-muted');if(on)points+=group.querySelectorAll('.chart-point').length;if(on&&wasHidden&&animate&&!reduced.matches)group.animate([{opacity:0},{opacity:1}],{duration:180,easing:'cubic-bezier(.23,1,.32,1)'});}
- $('#show-all').disabled=state.series.size===journals.length;$('#chart-empty')?.toggleAttribute('hidden',points!==0);
- const selected=[...state.series].map(id=>journals.find(j=>j.id===id)).filter(Boolean),withData=selected.filter(j=>plot.years.some(y=>Number.isFinite(observation(j,state.metric,y).value))).length;
+ const pool=state.metric==='localScore'?nonScopusIds:journals.map(j=>j.id);
+ $('#show-all').disabled=pool.every(id=>state.series.has(id));$('#chart-empty')?.toggleAttribute('hidden',points!==0);
+ const selected=pool.filter(id=>state.series.has(id)).map(id=>journals.find(j=>j.id===id)).filter(Boolean),withData=selected.filter(j=>plot.years.some(y=>Number.isFinite(observation(j,state.metric,y).value))).length;
  $('#chart-scope').textContent=`${selected.length} tạp chí được chọn; ${withData} có giá trị trong khoảng năm này.`+(selected.length>4?' Có thể chọn 2–4 tạp chí để dễ đối chiếu.':'');
  if(!points)closeDetails();else if(selectedYear!==null)showYear(selectedYear,true);
 }
@@ -217,10 +265,11 @@ function closeAllTooltips(){
 }
 function showYear(year,force=false,announce=false){
  if(!state.series.size||!plot.years.includes(year))return;if(year===selectedYear&&!force)return;selectedYear=year;
- const rows=journals.filter(j=>state.series.has(j.id)).map(j=>({j,o:observation(j,state.metric,year)})),provisional=year===Number(dashboard.collectedAt.slice(0,4));
+ const pool=state.metric==='localScore'?journals.filter(j=>!verifiedScopus(j)):journals;
+ const rows=pool.filter(j=>state.series.has(j.id)).map(j=>({j,o:observation(j,state.metric,year)})),provisional=year===Number(dashboard.collectedAt.slice(0,4));
  const heading=metricInfo[state.metric].short+' '+year+(provisional?(metricInfo[state.metric].scopus?' · Tracker':metricInfo[state.metric].local?' · chưa đủ năm':' · đến ngày chốt'):'');$('#tooltip-year').textContent=heading;
  $('#tooltip-values').innerHTML=rows.map(({j,o})=>`<div class="tooltip-row"><dt><span class="tooltip-dot" style="background:${styles[j.id].color}" aria-hidden="true"></span><span title="${esc(fullName(j))}" translate="no">${j.code}</span></dt><dd class="${Number.isFinite(o.value)?'':'neutral'}" title="${esc(Number.isFinite(o.value)?'':o.reason)}">${metricValue(o.value)}</dd></div>`).join('');
- $('#tooltip-note').textContent=metricInfo[state.metric].local?'Tập số liệu đã thu thập; không phải tổng trích dẫn hay chỉ số chính thức của Scopus. “—”: chưa có nguồn.':provisional?(metricInfo[state.metric].scopus?'Chỉ số tạm thời. Nguồn cập nhật '+date(scopus.records.find(r=>r.type==='tracker').lastUpdated)+'.':'Năm chưa kết thúc; đối chiếu đến '+date(dashboard.collectedAt)+'.'):'“—”: chưa có giá trị được đối chiếu cho kỳ này.';
+ $('#tooltip-note').textContent=state.metric==='localScore'?'Chỉ áp dụng cho 5 tạp chí chưa vào Scopus. Các tạp chí đã vào Scopus dùng CiteScore chính thức.':metricInfo[state.metric].local?'Tập số liệu đã thu thập; không phải tổng trích dẫn của Scopus. “—”: chưa có nguồn.':provisional?(metricInfo[state.metric].scopus?'Chỉ số tạm thời. Nguồn cập nhật '+date(scopus.records.find(r=>r.type==='tracker').lastUpdated)+'.':'Năm chưa kết thúc; đối chiếu đến '+date(dashboard.collectedAt)+'.'):'“—”: chưa có giá trị được đối chiếu cho kỳ này.';
  const px=plot.x(year),tipWidth=Math.min(300,plot.width-24);$('#chart-tooltip').style.left=Math.max(12,px+16+tipWidth<=plot.width-12?px+16:px-tipWidth-16)+'px';$('#chart-tooltip').hidden=false;
  const hover=$('#chart-hover');hover.removeAttribute('hidden');hover.innerHTML=`<line x1="${px}" y1="${plot.top}" x2="${px}" y2="${plot.height-plot.bottom}" stroke="var(--muted)" stroke-dasharray="3 4"/>`+rows.filter(r=>Number.isFinite(r.o.value)).map(({j,o})=>`<circle cx="${px}" cy="${plot.y(o.value)}" r="5" fill="var(--paper)" stroke="${styles[j.id].color}" stroke-width="2.5"/>`).join('');
  if(announce)$('#chart-announcement').textContent=heading+'. '+rows.map(({j,o})=>j.code+': '+metricValue(o.value)).join('; ')+'.';
@@ -240,11 +289,11 @@ function renderCandidatesChart(){
  const scale=niceScale(Math.max(1.2,...values),true);
  const x=year=>left+(year-start)/(end-start)*plotWidth,y=value=>top+(1-value/scale.max)*plotHeight;
  subState.candidates.plot={width,height,left,right,top,bottom,plotWidth,years,start,end,x,y};
- const boundary=(x(2025)+x(2026))/2,cipRef=0.67;
- let svg=`<title id="candidates-chart-title">CiteScore dự kiến của 5 tạp chí chưa vào Scopus (2015–2026)</title><desc id="candidates-chart-desc">So sánh chỉ số 4 năm tự tính của VJMech, JCC, AJB, VJMST, VJBT với mốc CIP (0,67 năm 2026).</desc>`;
+ const boundary=(x(2025)+x(2026))/2,cipOfficialTracker=0.7;
+ let svg=`<title id="candidates-chart-title">CiteScore dự kiến của 5 tạp chí chưa vào Scopus (2015–2026)</title><desc id="candidates-chart-desc">Diễn biến chỉ số 4 năm tự tính của 5 tạp chí chưa vào Scopus: VJMech, JCC, AJB, VJMST, VJBT.</desc>`;
  svg+=`<rect x="${boundary}" y="${top-10}" width="${width-boundary}" height="${plotHeight+10}" fill="var(--surface)"/><text x="${width-6}" y="15" text-anchor="end" fill="var(--muted)" font-size="11">Dự kiến 2026</text>`;
  for(let i=0;i<=Math.round(scale.max/scale.step);i++){const v=+(i*scale.step).toFixed(4);svg+=`<line x1="${left}" y1="${y(v)}" x2="${width}" y2="${y(v)}" stroke="var(--line)"/><text x="${left-10}" y="${y(v)+4}" text-anchor="end" fill="var(--muted)" font-size="11">${formatAxisTick(v,true)}</text>`;}
- svg+=`<line x1="${left}" y1="${y(cipRef)}" x2="${width}" y2="${y(cipRef)}" stroke="var(--accent)" stroke-width="1.25" stroke-dasharray="4 4"/><text x="${left+6}" y="${y(cipRef)-6}" fill="var(--accent)" font-size="11" font-weight="500">Mốc CIP 2026: 0,67 (Scopus Tracker 0,7)</text>`;
+ svg+=`<line x1="${left}" y1="${y(cipOfficialTracker)}" x2="${width}" y2="${y(cipOfficialTracker)}" stroke="var(--accent)" stroke-width="1.25" stroke-dasharray="4 4"/><text x="${left+6}" y="${y(cipOfficialTracker)-6}" fill="var(--accent)" font-size="11" font-weight="500">Mốc tham chiếu Tracker Scopus chính thức của CIP (2026): 0,7</text>`;
  const tickStep=width<520?3:2;
  for(const year of years)if((year-start)%tickStep===0||year===end)svg+=`<text x="${x(year)}" y="${height-10}" text-anchor="middle" fill="var(--muted)" font-size="12">${year}</text>`;
  for(const j of list){
@@ -255,7 +304,7 @@ function renderCandidatesChart(){
    if(year<2026){d+=(connected?' L':'M')+x(year).toFixed(2)+' '+y(o.value).toFixed(2);connected=true;}
    else{const prev=observation(j,'localScore',2025);if(Number.isFinite(prev.value))svg+=`<path d="M${x(2025)} ${y(prev.value)} L${x(2026)} ${y(o.value)}" fill="none" stroke="${style.color}" stroke-width="2" stroke-dasharray="5 4"/>`;connected=false;}
   }
-  if(d)svg+=`<path d="${d}" fill="none" stroke="${style.color}" stroke-width="${j.id==='cip'?2.4:2}"${style.dash?` stroke-dasharray="${style.dash}"`:''}/>`;
+  if(d)svg+=`<path d="${d}" fill="none" stroke="${style.color}" stroke-width="2"${style.dash?` stroke-dasharray="${style.dash}"`:''}/>`;
   for(const year of years){
    const o=observation(j,'localScore',year);if(!Number.isFinite(o.value))continue;
    const px=x(year),py=y(o.value);
@@ -271,9 +320,9 @@ function renderCandidatesChart(){
   return {j,s25,s26};
  }).sort((a,b)=>(b.s26?.value??0)-(a.s26?.value??0));
  const maxBar=Math.max(1.2,...barRows.flatMap(r=>[r.s25?.value??0,r.s26?.value??0]));
- $('#candidates-bars').innerHTML=barRows.map(({j,s25,s26})=>{
-  const c=styles[j.id].color,isBenchmark=j.id==='cip';
-  return `<div class="bar-item"><div class="bar-top"><div><a href="#journal/${j.id}">${esc(j.code)} · ${esc(j.title)}</a><small>${isBenchmark?'Mốc đã vào Scopus (08/2026)':'Chưa vào Scopus'}</small></div><div class="bar-metrics"><strong>${ratio(s26?.value)}</strong> (2026)</div></div><div class="bar-track"><div class="bar-row"><span>2025</span><div class="bar-rail"><div class="bar-fill" style="width:${((s25?.value??0)/maxBar*100).toFixed(1)}%;background:${c};opacity:.55"></div></div><span>${ratio(s25?.value)} (${s25?.numerator}/${s25?.denominator})</span></div><div class="bar-row"><span>2026*</span><div class="bar-rail"><div class="bar-fill" style="width:${((s26?.value??0)/maxBar*100).toFixed(1)}%;background:${c}"></div></div><span><strong>${ratio(s26?.value)}</strong> (${s26?.numerator}/${s26?.denominator})</span></div></div></div>`;
+ $('#candidates-bars').innerHTML=barRows.map(({j,s25,s26},idx)=>{
+  const c=styles[j.id].color;
+  return `<div class="bar-item"><div class="bar-top"><div><a href="#journal/${j.id}">${idx+1}. ${esc(j.code)} · ${esc(j.title)}</a><small>Ứng viên chưa vào Scopus</small></div><div class="bar-metrics"><strong>${ratio(s26?.value)}</strong> (2026)</div></div><div class="bar-track"><div class="bar-row"><span>2025</span><div class="bar-rail"><div class="bar-fill" style="width:${((s25?.value??0)/maxBar*100).toFixed(1)}%;background:${c};opacity:.55"></div></div><span>${ratio(s25?.value)} (${s25?.numerator}/${s25?.denominator})</span></div><div class="bar-row"><span>2026*</span><div class="bar-rail"><div class="bar-fill" style="width:${((s26?.value??0)/maxBar*100).toFixed(1)}%;background:${c}"></div></div><span><strong>${ratio(s26?.value)}</strong> (${s26?.numerator}/${s26?.denominator})</span></div></div></div>`;
  }).join('');
 }
 function showCandidateYear(year,force=false){
@@ -281,8 +330,8 @@ function showCandidateYear(year,force=false){
  if(subState.candidates.year===year&&!force)return;subState.candidates.year=year;
  const rows=candidateIds.filter(id=>candidateSeries.has(id)).map(id=>{const j=journals.find(x=>x.id===id);return {j,o:observation(j,'localScore',year)};});
  $('#candidates-tooltip-year').textContent='CiteScore dự kiến '+year+(year===2026?' · Tracker dự kiến':'');
- $('#candidates-tooltip-values').innerHTML=rows.map(({j,o})=>`<div class="tooltip-row"><dt><span class="tooltip-dot" style="background:${styles[j.id].color}"></span><span>${j.code}${j.id==='cip'?' (Mốc)':''}</span></dt><dd class="${Number.isFinite(o.value)?'':'neutral'}">${ratio(o.value)}${o.extra&&o.extra.denominator>0?` (${o.extra.numerator}/${o.extra.denominator})`:''}</dd></div>`).join('');
- $('#candidates-tooltip-note').textContent=`Cửa sổ 4 năm (${year-3}–${year}): lượt trích dẫn xác nhận / số bài trong danh mục.`;
+ $('#candidates-tooltip-values').innerHTML=rows.map(({j,o})=>`<div class="tooltip-row"><dt><span class="tooltip-dot" style="background:${styles[j.id].color}"></span><span>${j.code}</span></dt><dd class="${Number.isFinite(o.value)?'':'neutral'}">${ratio(o.value)}${o.extra&&o.extra.denominator>0?` (${o.extra.numerator}/${o.extra.denominator})`:''}</dd></div>`).join('');
+ $('#candidates-tooltip-note').textContent=`Cửa sổ 4 năm (${year-3}–${year}) của 5 tạp chí chưa vào Scopus: lượt trích dẫn xác nhận / số bài trong danh mục.`;
  const px=p.x(year),tipWidth=Math.min(300,p.width-24),tip=$('#candidates-tooltip');
  tip.style.left=Math.max(12,px+16+tipWidth<=p.width-12?px+16:px-tipWidth-16)+'px';tip.hidden=false;
  const hover=$('#candidates-chart .sub-hover');hover.removeAttribute('hidden');
@@ -447,6 +496,8 @@ function bindSubChartInteraction(key,svgSelector,areaSelector,closeBtnSelector,s
 }
 function bindEvents(){
  $('.skip-link').addEventListener('click',event=>{event.preventDefault();$('#main-content').focus();$('#main-content').scrollIntoView({block:'start'});});
+ $('#theme-select').addEventListener('change',e=>applyTheme(e.target.value,true));
+ $('#theme-pills').addEventListener('click',e=>{const b=e.target.closest('button[data-theme]');if(b)applyTheme(b.dataset.theme,true);});
  document.querySelector('.chart-jump-nav').addEventListener('click',event=>{
   const link=event.target.closest('[data-chart-jump]');if(!link)return;
   event.preventDefault();
@@ -456,11 +507,15 @@ function bindEvents(){
  $('#portfolio-filters').addEventListener('submit',e=>e.preventDefault());
  for(const [selector,key]of[['#journal-search','q'],['#publication-year','year'],['#subject-filter','subject'],['#index-filter','index'],['#sort-order','sort']])$(selector).addEventListener(key==='q'?'input':'change',event=>{state[key]=key==='year'?Number(event.target.value):event.target.value;saveState();renderPortfolio();renderOverview();});
  $('#reset-filters').addEventListener('click',()=>{Object.assign(state,{q:'',subject:'all',index:'all',sort:'default',year:dashboard.defaultOutputYear});syncInputs();saveState();renderPortfolio();renderOverview();});
- $('#trend-metric').addEventListener('change',event=>{state.metric=event.target.value;const years=availableYears();state.from=years[0];state.to=years.at(-1);closeDetails();syncInputs();saveState();renderLegend();renderChart();});
+ $('#trend-metric').addEventListener('change',event=>{
+  state.metric=event.target.value;
+  if(state.metric==='localScore'&&!nonScopusIds.some(id=>state.series.has(id)))state.series=new Set(nonScopusIds);
+  const years=availableYears();state.from=years[0];state.to=years.at(-1);closeDetails();syncInputs();saveState();renderLegend();renderChart();
+ });
  $('#trend-from').addEventListener('change',event=>{state.from=Number(event.target.value);if(state.to<state.from)state.to=state.from;closeDetails();syncInputs();saveState();renderChart();});
  $('#trend-to').addEventListener('change',event=>{state.to=Number(event.target.value);if(state.from>state.to)state.from=state.to;closeDetails();syncInputs();saveState();renderChart();});
- $('#show-all').addEventListener('click',event=>{for(const j of journals)state.series.add(j.id);saveState();updateSeries(event.detail>0);});
- $('#reset-series').addEventListener('click',event=>{state.series=new Set(defaultSeries);saveState();updateSeries(event.detail>0);});
+ $('#show-all').addEventListener('click',event=>{const pool=state.metric==='localScore'?nonScopusIds:journals.map(j=>j.id);for(const id of pool)state.series.add(id);saveState();updateSeries(event.detail>0);});
+ $('#reset-series').addEventListener('click',event=>{state.series=new Set(state.metric==='localScore'?nonScopusIds:defaultSeries);saveState();updateSeries(event.detail>0);});
  $('#chart-legend').addEventListener('click',event=>{const button=event.target.closest('button[data-journal]');if(!button)return;const id=button.dataset.journal;if(state.series.has(id))state.series.delete(id);else state.series.add(id);saveState();updateSeries(event.detail>0);});
  $('#chart-legend').addEventListener('pointerover',event=>{const b=event.target.closest('button[data-journal]');if(event.pointerType==='mouse'&&b&&state.series.has(b.dataset.journal))for(const g of document.querySelectorAll('#trend-chart .journal-series'))g.classList.toggle('is-muted',g.dataset.journal!==b.dataset.journal);});
  $('#chart-legend').addEventListener('pointerleave',()=>{for(const g of document.querySelectorAll('#trend-chart .journal-series'))g.classList.remove('is-muted');});
@@ -496,6 +551,7 @@ function bindEvents(){
 }
 async function start(){
  try{
+  renderThemeBar();
   [dashboard,scopus]=await Promise.all([fetchJson('data/dashboard.json'),fetchJson('data-scopus.json')]);
   journals=dashboard.journals;
   if(journals.length!==12||new Set(journals.map(j=>j.id)).size!==12)throw new Error('Danh mục tạp chí không hợp lệ.');

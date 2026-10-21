@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" data-theme="nature">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,15 +8,35 @@
 <title>VAST · Dashboard tạp chí</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=Source+Serif+4:wght@400;600&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/dashboard.css?v=20261021b">
-<script type="module" src="assets/dashboard.js?v=20261021b"></script>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Source+Serif+4:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/dashboard.css?v=20261021c">
+<script type="module" src="assets/dashboard.js?v=20261021c"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Đến nội dung dashboard</a>
-<header class="masthead"><div class="masthead-inner"><a class="wordmark" href="#overview" translate="no">VAST</a><div class="institution"><p>Viện Hàn lâm Khoa học và Công nghệ Việt Nam</p><span>Theo dõi danh mục tạp chí</span></div><a class="source-shortcut" href="#updates">Nguồn &amp; cập nhật</a></div></header>
+<header class="masthead"><div class="masthead-inner"><a class="wordmark" href="#overview" translate="no">VAST</a><div class="institution"><p>Viện Hàn lâm Khoa học và Công nghệ Việt Nam</p><span>Theo dõi danh mục tạp chí</span></div>
+<div class="masthead-actions">
+<label class="theme-picker-label" for="theme-select">Giao diện</label>
+<select id="theme-select" class="theme-select" aria-label="Chọn giao diện thương hiệu">
+<option value="nature">1. Nature Portfolio (Mặc định)</option>
+<option value="economist">2. The Economist</option>
+<option value="ft">3. Financial Times</option>
+<option value="scopus">4. Elsevier Scopus</option>
+<option value="clarivate">5. Clarivate Web of Science</option>
+<option value="science">6. Science (AAAS)</option>
+<option value="springer">7. SpringerLink</option>
+<option value="wiley">8. Wiley Online Library</option>
+<option value="nytimes">9. The New York Times (Upshot)</option>
+<option value="bloomberg">10. Bloomberg Terminal (Dark)</option>
+</select>
+<a class="source-shortcut" href="#updates">Nguồn &amp; cập nhật</a>
+</div></div></header>
 <div class="workspace">
 <div class="title-row"><div><h1>Dashboard tạp chí</h1><p class="subtitle">12 tạp chí. Dữ liệu xuất bản, trích dẫn và chỉ số CiteScore được đối chiếu theo từng nguồn.</p></div><p class="snapshot-stamp">Ngày chốt dữ liệu <time id="snapshot-date">Đang tải…</time></p></div>
+<section class="theme-bar" aria-label="Chọn nhanh 10 giao diện thương hiệu lớn">
+<div class="theme-bar-head"><span class="theme-bar-title">10 giao diện thương hiệu:</span><span id="theme-active-desc" class="theme-bar-desc">Nature Portfolio — Trắng học thuật, đỏ crimson &amp; serif cổ điển</span></div>
+<div id="theme-pills" class="theme-pills" role="group" aria-label="Danh sách 10 giao diện"></div>
+</section>
 <nav class="tabs" aria-label="Các phần dashboard"><a href="#overview" data-view="overview">Tổng quan</a><a href="#journals" data-view="journals">Danh mục tạp chí</a><a href="#trends" data-view="trends">Biểu đồ &amp; xu hướng</a><a href="#updates" data-view="updates">Nguồn &amp; cập nhật</a></nav>
 <main id="main-content" tabindex="-1">
 <p id="load-status" class="load-status" role="status">Đang tải dữ liệu đã đối chiếu…</p>
@@ -27,7 +47,7 @@
 <div id="summary-strip" class="summary-strip" aria-label="Các số liệu tổng hợp"></div>
 <nav class="chart-jump-nav" aria-label="Đi nhanh tới các biểu đồ">
 <span class="jump-label">Biểu đồ trực quan:</span>
-<a href="#chart-scopus-block" data-chart-jump="chart-scopus-block">1. CiteScore &amp; Tracker Scopus</a>
+<a href="#chart-scopus-block" data-chart-jump="chart-scopus-block">1. CiteScore &amp; Tracker Scopus (7 tạp chí)</a>
 <a href="#chart-candidates-block" data-chart-jump="chart-candidates-block">2. CiteScore dự kiến (5 tạp chí chưa vào Scopus)</a>
 <a href="#chart-citations-block" data-chart-jump="chart-citations-block">3. Trích dẫn của các tạp chí</a>
 <a href="#chart-papers-block" data-chart-jump="chart-papers-block">4. Số bài đã xuất bản (2020–2026)</a>
@@ -37,11 +57,11 @@
 
 <section id="trends-panel" class="view-panel" aria-labelledby="trends-heading" hidden>
 <div class="chart-block" id="chart-scopus-block">
-<div class="section-heading"><div><span class="chart-kicker">Biểu đồ 1 · Nguồn Scopus chính thức &amp; tra cứu đa chỉ số</span><h2 id="trends-heading">Diễn biến CiteScore &amp; Tracker theo thời gian (2015–2026)</h2><p class="section-description">Đối chiếu diễn biến của từng tạp chí, không quy đổi thành bảng xếp hạng chất lượng ngang ngành.</p></div></div>
+<div class="section-heading"><div><span class="chart-kicker">Biểu đồ 1 · Nguồn Scopus chính thức &amp; tra cứu đa chỉ số</span><h2 id="trends-heading">Diễn biến CiteScore &amp; Tracker chính thức (7 tạp chí Scopus, 2015–2026)</h2><p class="section-description">Đối chiếu diễn biến của từng tạp chí trên Scopus chính thức hoặc chuyển sang xem các chỉ số xuất bản và trích dẫn.</p></div></div>
 <div class="trend-controls"><div class="field"><label for="trend-metric">Chỉ số</label><select id="trend-metric">
-<optgroup label="Scopus · số liệu chính thức"><option value="citescore">CiteScore &amp; Tracker</option><option value="citations">Trích dẫn trong cửa sổ CiteScore</option><option value="documents">Tài liệu trong cửa sổ CiteScore</option></optgroup>
-<optgroup label="Kho số đã phát hành"><option value="papers">Bài đã xuất bản</option><option value="issues">Kỳ đã xuất bản</option></optgroup>
-<optgroup label="Bộ số liệu đã thu thập"><option value="localDocs">Tài liệu trích dẫn đã xác nhận</option><option value="localEdges">Lượt trích dẫn đã xác nhận</option><option value="localScore">Chỉ số 4 năm tự tính · không chính thức</option></optgroup>
+<optgroup label="Scopus · 7 tạp chí đã vào Scopus"><option value="citescore">CiteScore &amp; Tracker chính thức</option><option value="citations">Trích dẫn trong cửa sổ CiteScore</option><option value="documents">Tài liệu trong cửa sổ CiteScore</option></optgroup>
+<optgroup label="Kho số đã phát hành · 12 tạp chí"><option value="papers">Bài đã xuất bản (2020–2026)</option><option value="issues">Kỳ đã xuất bản (2020–2026)</option></optgroup>
+<optgroup label="Bộ số liệu thu thập 09–09h"><option value="localDocs">Tài liệu trích dẫn đã xác nhận (9 tạp chí)</option><option value="localEdges">Lượt trích dẫn đã xác nhận (9 tạp chí)</option><option value="localScore">CiteScore dự kiến 4 năm tự tính (chỉ 5 tạp chí chưa vào Scopus)</option></optgroup>
 </select></div><div class="field"><label for="trend-from">Từ năm</label><select id="trend-from"></select></div><div class="field"><label for="trend-to">Đến năm</label><select id="trend-to"></select></div><button id="show-all" class="text-button" type="button">Chọn tất cả</button><button id="reset-series" class="text-button" type="button">Lựa chọn mặc định</button></div>
 <div id="chart-legend" class="legend" role="group" aria-label="Chọn tạp chí hiển thị"></div>
 <p id="chart-help" class="chart-help">Bấm tên để ẩn/hiện. Rê chuột hoặc chạm biểu đồ để đọc số liệu; bấm để ghim.</p>
@@ -51,13 +71,13 @@
 </div>
 
 <div class="chart-block" id="chart-candidates-block">
-<div class="section-heading"><div><span class="chart-kicker">Biểu đồ 2 · Đánh giá tiềm năng từ bộ dữ liệu 09, 09e–09h</span><h2 id="candidates-heading">CiteScore dự kiến của 5 tạp chí chưa vào Scopus (2015–2026)</h2><p class="section-description">Chỉ số 4 năm tự tính (lượt trích dẫn xác nhận trong cửa sổ 4 năm / số bài trong cửa sổ 4 năm) của VJMech, JCC, AJB, VJMST, VJBT đặt cạnh mốc đối chuẩn CIP (vừa được CSAB chấp thuận vào Scopus tháng 08/2026).</p></div>
-<div class="inline-actions"><button id="candidates-show-all" class="text-button" type="button">Hiện đủ 5 tạp chí + mốc CIP</button></div></div>
-<div id="candidates-legend" class="legend" role="group" aria-label="Chọn tạp chí ứng viên hiển thị"></div>
+<div class="section-heading"><div><span class="chart-kicker">Biểu đồ 2 · Chỉ áp dụng cho 5 tạp chí chưa vào Scopus (09, 09e–09h)</span><h2 id="candidates-heading">CiteScore dự kiến của 5 tạp chí chưa vào Scopus (2015–2026)</h2><p class="section-description">Chỉ số 4 năm tự tính (lượt trích dẫn xác nhận trong cửa sổ 4 năm / số bài trong cửa sổ 4 năm) áp dụng riêng cho 5 tạp chí chưa vào Scopus: VJMech, JCC, AJB, VJMST và VJBT.</p></div>
+<div class="inline-actions"><button id="candidates-show-all" class="text-button" type="button">Hiện đủ 5 tạp chí</button></div></div>
+<div id="candidates-legend" class="legend" role="group" aria-label="Chọn tạp chí chưa vào Scopus hiển thị"></div>
 <div class="chart-split">
-<figure aria-labelledby="candidates-heading"><div class="chart-area" id="candidates-chart-area"><svg id="candidates-chart" class="interactive-svg" role="group" tabindex="0" aria-labelledby="candidates-chart-title candidates-chart-desc" xmlns="http://www.w3.org/2000/svg"></svg><aside id="candidates-tooltip" class="chart-tooltip" aria-labelledby="candidates-tooltip-year" hidden><div class="tooltip-head"><h3 id="candidates-tooltip-year"></h3><button id="close-candidates-tooltip" type="button" aria-label="Đóng bảng số liệu">×</button></div><dl id="candidates-tooltip-values"></dl><p id="candidates-tooltip-note" class="tooltip-note"></p></aside></div><figcaption class="chart-caption">Đường nét đứt ngang biểu thị mốc CIP năm 2026 (0,67 tự tính · 0,7 Tracker Scopus). Năm 2026 là chỉ số dự kiến tính đến ngày xử lý bộ dữ liệu (19–20/10/2026); mẫu số bằng 0 (VJBT 2015) được giữ trống.</figcaption></figure>
+<figure aria-labelledby="candidates-heading"><div class="chart-area" id="candidates-chart-area"><svg id="candidates-chart" class="interactive-svg" role="group" tabindex="0" aria-labelledby="candidates-chart-title candidates-chart-desc" xmlns="http://www.w3.org/2000/svg"></svg><aside id="candidates-tooltip" class="chart-tooltip" aria-labelledby="candidates-tooltip-year" hidden><div class="tooltip-head"><h3 id="candidates-tooltip-year"></h3><button id="close-candidates-tooltip" type="button" aria-label="Đóng bảng số liệu">×</button></div><dl id="candidates-tooltip-values"></dl><p id="candidates-tooltip-note" class="tooltip-note"></p></aside></div><figcaption class="chart-caption">Chỉ số CiteScore tự tính chỉ áp dụng cho 5 tạp chí chưa vào Scopus. Vạch đứt ngang biểu thị mốc Tracker Scopus chính thức 0,7 của CIP (tạp chí VAST vừa được CSAB chấp thuận tháng 08/2026) để tham chiếu.</figcaption></figure>
 <aside class="comparison-card" aria-labelledby="candidates-bar-heading">
-<div class="comparison-head"><h3 id="candidates-bar-heading">So sánh CiteScore dự kiến 2025 &amp; 2026</h3><p>Xếp theo chỉ số dự kiến 2026 (tử số / mẫu số trong cửa sổ 4 năm). Bấm tên tạp chí để xem hồ sơ chi tiết.</p></div>
+<div class="comparison-head"><h3 id="candidates-bar-heading">CiteScore dự kiến 2025 &amp; 2026 (5 tạp chí chưa vào Scopus)</h3><p>Xếp theo chỉ số dự kiến năm 2026 (tử số / mẫu số trong cửa sổ 4 năm). Các tạp chí đã vào Scopus dùng số liệu Scopus chính thức, không tính ở bảng này.</p></div>
 <div id="candidates-bars" class="bar-list"></div>
 </aside>
 </div>
@@ -116,14 +136,14 @@
 </form>
 <div class="table-scroll" role="region" tabindex="0" aria-label="Bảng danh mục tạp chí"><table class="portfolio-table"><thead><tr><th scope="col">Tạp chí</th><th scope="col">Chỉ mục</th><th scope="col" id="annual-column">CiteScore</th><th scope="col" id="tracker-column">Tracker</th><th scope="col" id="output-column">Bài / kỳ xuất bản</th><th scope="col">Đối chiếu</th></tr></thead><tbody id="portfolio-body"></tbody></table></div>
 <p id="portfolio-empty" class="empty-state" hidden>Không có tạp chí phù hợp. Thử từ khóa khác hoặc xóa bộ lọc.</p>
-<p class="table-note">Sản lượng là bài trong các số đã phát hành, không phải số tài liệu được Scopus lập chỉ mục. Chỉ mục có dấu * là thông tin tạp chí hoặc VAST công bố, chưa đối chiếu trực tiếp tại cơ sở dữ liệu. “—” không phải 0.</p>
+<p class="table-note">Sản lượng là bài trong các số đã phát hành, không phải số tài liệu được Scopus lập chỉ mục. Chỉ số có dấu * ở cột CiteScore/Tracker là CiteScore dự kiến (4 năm tự tính), chỉ áp dụng cho 5 tạp chí chưa vào Scopus. Chỉ mục có dấu * là thông tin tạp chí hoặc VAST công bố. “—” không phải 0.</p>
 </section>
 <section id="detail-panel" class="view-panel" aria-labelledby="detail-heading" hidden></section>
 <section id="updates-panel" class="view-panel" aria-labelledby="updates-heading" hidden>
 <div class="section-heading"><div><h2 id="updates-heading">Nguồn &amp; cập nhật</h2><p class="section-description">Tách ngày chốt dashboard, ngày kiểm tra nguồn và kỳ mà từng chỉ số phản ánh.</p></div></div>
 <div class="updates-grid"><section><h3>Lịch sử cập nhật</h3><ol id="snapshot-history" class="history-list"></ol></section><section><h3>Chu kỳ đối chiếu</h3><dl class="method-list"><div><dt>CiteScore năm</dt><dd>Theo lần công bố chính thức trên Scopus.</dd></div><div><dt>Tracker</dt><dd>Đối chiếu theo tháng; chỉ số tạm thời, không thay CiteScore năm.</dd></div><div><dt>Sản lượng</dt><dd>Đối chiếu kho số sau mỗi kỳ phát hành hoặc hàng tháng.</dd></div><div><dt>Chỉ mục</dt><dd>Ghi rõ cơ sở dữ liệu, bộ chỉ mục, nguồn bằng chứng và ngày kiểm tra.</dd></div></dl></section></div>
 <section class="methodology"><h3>Quy ước dữ liệu</h3><ul><li>Sản lượng đếm bài nghiên cứu, tổng quan và thông báo ngắn trong các số đã phát hành; không đếm bìa, mục lục, tin, xã luận hay đính chính. Bài online-first chưa xếp vào số đã phát hành không nằm trong số đếm này.</li><li>Năm 2026 là số liệu đến ngày chốt; không so tăng/giảm với cả năm 2025. Dấu “—” phân biệt chưa có giá trị, chưa đủ bằng chứng hoặc ngoài phạm vi nguồn.</li><li>CiteScore, Tracker, JIF và các phân vị thuộc hệ thống/kỳ đo khác nhau. Không cộng hoặc lấy trung bình CiteScore để chấm điểm chung danh mục.</li><li>Phân vị Scopus luôn đi kèm nhóm ngành và năm. Web of Science Zoological Record không đồng nghĩa với SCIE/ESCI của Core Collection.</li><li>Dashboard công khai không chứa hồ sơ bài nộp, thông tin phản biện hay thông tin đăng nhập. Không tự động khai thác Scopus/JCR ngoài quyền được cấp.</li></ul></section>
-<p class="detail-note">Bộ thống kê đã thu thập từ 09–09h cung cấp số tài liệu trích dẫn, lượt trích dẫn đã xác nhận và chỉ số 4 năm tự tính. Các số liệu này được trình bày riêng, không thay CiteScore/Tracker chính thức. Ngày xử lý và ngày xuất nguồn được phân biệt trong hồ sơ tạp chí.</p>
+<p class="detail-note">Bộ thống kê đã thu thập từ 09–09h cung cấp số tài liệu trích dẫn, lượt trích dẫn đã xác nhận cho 9 tạp chí; riêng chỉ số CiteScore 4 năm tự tính (dự kiến) chỉ áp dụng cho 5 tạp chí chưa vào Scopus (VJMech, JCC, AJB, VJMST, VJBT).</p>
 <section class="source-section" aria-labelledby="sources-heading"><h3 id="sources-heading">Tài liệu tham khảo</h3><ol id="source-links" class="reference-list" role="list"></ol></section>
 </section>
 <noscript><p>Dashboard cần JavaScript. Có thể đọc <a href="data-scopus.json">bản đối chiếu Scopus gốc</a>.</p></noscript>

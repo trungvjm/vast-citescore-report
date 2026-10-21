@@ -45,7 +45,7 @@ function validateOutput(j,o){
  if(o.papers!==null)assert.equal(o.papers,allKeys.length,j.code+': papers must reconcile to eligible issue keys.');
  if(o.coverage==='complete')assert(Number.isInteger(o.papers)&&o.papers>=0,j.code+': complete coverage requires an exact paper count.');
 }
-async function localCollection(audit){
+async function localCollection(audit,isScopusIndexed){
  const statsSource=audit.sourceFiles.find(s=>s.path.endsWith('-stats.json'));
  assert(statsSource,audit.code+': no decoded stats input.');
  for(const input of audit.sourceFiles){
@@ -59,7 +59,7 @@ async function localCollection(audit){
   assert(Number.isInteger(r.year)&&Number.isInteger(r.docs)&&r.docs>=0&&Number.isInteger(r.occurrences)&&r.occurrences>=r.docs,audit.code+': invalid confirmed citation counts.');
   return {year:r.year,citingDocuments:r.docs,confirmedCitationEdges:r.occurrences};
  });
- const selfCalculatedSeries=raw.citeScoreSeries.filter(r=>r.year<=currentYear).map(r=>{
+ const selfCalculatedSeries=isScopusIndexed?[]:raw.citeScoreSeries.filter(r=>r.year<=currentYear).map(r=>{
   assert(Number.isInteger(r.cs4_num)&&r.cs4_num>=0&&Number.isInteger(r.cs4_den)&&r.cs4_den>=0,audit.code+': invalid four-year components.');
   if(r.cs4_den>0)assert(Math.abs(r.cs4-r.cs4_num/r.cs4_den)<=0.005001,audit.code+': rounded four-year ratio does not reconcile.');
   return {year:r.year,value:r.cs4_den>0?r.cs4:null,numerator:r.cs4_num,denominator:r.cs4_den,window:r.window};
@@ -89,7 +89,7 @@ for(let index=0;index<order.length;index++){
  const category=categories[j.code];
  if(category){const r=scopus.records.find(r=>r.journal===j.code&&r.type==='annual'&&r.year===2025);assert(r.evidenceQuote.includes(category[0])&&r.evidenceQuote.includes(category[1]+'%')&&r.evidenceQuote.includes(category[2]+'/'+category[3]),j.code+': percentile not supported by baseline quote.');j.scopusCategories=[{year:2025,name:category[0],percentile:category[1],rank:category[2],total:category[3],sourceUrl:'https://www.scopus.com/sourceid/'+original.sourceId}];}
  const audit=localAudits.find(a=>a.id===j.id);
- if(audit)j.localCitation=await localCollection(audit);
+ if(audit)j.localCitation=await localCollection(audit,Boolean(original));
  journals.push(j);
 }
 const snapshotId=collectedAt+'-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
