@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CiteScore · 7 tạp chí VAST</title>
-<meta name="description" content="Báo cáo CiteScore của 7 tạp chí VAST: biểu đồ xu hướng 2015–2025, kết quả năm 2025 và biến động so với năm trước. Nguồn số liệu: Scopus.">
+<meta name="description" content="Báo cáo CiteScore của 7 tạp chí VAST tại ngày 21/10/2026: xu hướng 2015–2025 và CiteScore Tracker 2026. Nguồn số liệu: Scopus.">
 <meta name="theme-color" content="#153653">
 <style>
 :root{color-scheme:light;--fg:#172d42;--muted:#526476;--border:#dce4ed;--surface:#f5f7fb;--accent:#1e40af;--success:#17664b;--warning:#80531b;--error:#a52e3e;--c1:#1e40af;--c2:#7c3aed;--c3:#0f766e;--c4:#b45309;--c5:#b91c1c;--c6:#475569}
@@ -52,7 +52,6 @@ figure{margin:0}
 .legend{display:flex;gap:10px 22px;flex-wrap:wrap;padding:8px 24px 16px;font-size:12px;color:var(--fg)}
 .legend span{display:inline-flex;align-items:center;gap:7px}
 .legend svg{width:28px;height:12px;flex-shrink:0}
-.legend .unavailable{color:var(--muted)}
 .chart-caption{padding:0 24px 18px;color:var(--muted);font-size:12px}
 .chart-value{display:block;min-height:30px;padding:0 24px;font-size:13px;color:var(--fg)}
 .table-scroll{overflow:auto;overscroll-behavior-x:contain}
@@ -104,11 +103,11 @@ section{scroll-margin-top:24px}
 <a class="skip-link" href="#main-content">Đến nội dung báo cáo</a>
 <header class="topbar"><div class="topbar-inner"><a class="brand" href="#overview"><span class="brand-mark">VAST</span><span>BÁO CÁO CHỈ SỐ TẠP CHÍ</span></a><nav aria-label="Mục lục"><a href="#overview">Tổng quan</a><a href="#trend">Biểu đồ</a><a href="#results">Kết quả</a></nav></div></header>
 <main class="wrap" id="main-content">
-<section id="overview" aria-labelledby="report-title"><div class="hero"><div><div class="eyebrow">Viện Hàn lâm Khoa học và Công nghệ Việt Nam</div><h1 id="report-title">CiteScore của 7 tạp chí VAST</h1><p class="subtitle">Diễn biến giai đoạn 2015–2025 và kết quả năm 2025</p><p class="meta">Nguồn: Scopus · Số liệu tra cứu ngày 21/10/2026</p></div><div class="actions"><button id="csv-export" type="button">Tải số liệu CSV</button><button id="print-report" class="primary" type="button">In / Lưu PDF</button></div></div>
-<div class="metrics" aria-label="Tổng quan"><div class="metric"><strong>7</strong><span>Tạp chí được theo dõi</span></div><div class="metric"><strong id="growth-count">—</strong><span>Tạp chí tăng CiteScore năm 2025*</span></div><div class="metric"><strong>2015–2025</strong><span>Giai đoạn theo dõi</span></div></div></section>
+<section id="overview" aria-labelledby="report-title"><div class="hero"><div><div class="eyebrow">Viện Hàn lâm Khoa học và Công nghệ Việt Nam</div><h1 id="report-title">CiteScore của 7 tạp chí VAST</h1><p class="subtitle">Diễn biến 2015–2025 và CiteScore Tracker 2026</p><p class="meta">Nguồn: Scopus · Số liệu tra cứu ngày 21/10/2026</p></div><div class="actions"><button id="csv-export" type="button">Tải số liệu CSV</button><button id="print-report" class="primary" type="button">In / Lưu PDF</button></div></div>
+<div class="metrics" aria-label="Tổng quan"><div class="metric"><strong>7</strong><span>Tạp chí được theo dõi</span></div><div class="metric"><strong id="growth-count">—</strong><span>Tạp chí tăng CiteScore năm 2025*</span></div><div class="metric"><strong>2015–2026</strong><span>Giai đoạn theo dõi · 2026: Tracker</span></div></div></section>
 <section id="trend" class="panel" aria-labelledby="trend-heading"><div class="panel-heading"><div class="section-head"><div><div class="eyebrow">01 / Diễn biến qua các năm</div><h2 id="trend-heading">Xu hướng CiteScore</h2></div><div class="filter"><label for="journal-select">Tạp chí</label><select id="journal-select"><option value="all">Tất cả tạp chí</option></select></div></div></div>
-<figure aria-labelledby="trend-heading"><div class="chart-area"><svg id="trend-chart" role="img" aria-labelledby="chart-title chart-description" xmlns="http://www.w3.org/2000/svg"></svg></div><div id="chart-legend" class="legend" aria-label="Chú giải tạp chí"></div><output id="chart-value" class="chart-value" aria-live="polite"></output><figcaption class="chart-caption">CiteScore chính thức theo năm. CIP chưa có CiteScore năm; CiteScore Tracker 2026 của CIP được trình bày trong bảng kết quả.</figcaption></figure></section>
-<section id="results" class="panel" aria-labelledby="results-heading"><div class="panel-heading"><div class="eyebrow">02 / Kết quả mới nhất</div><h2 id="results-heading">CiteScore năm 2025 và biến động so với 2024</h2></div><div class="table-scroll" role="region" tabindex="0" aria-label="Bảng chỉ số mới nhất của bảy tạp chí"><table><thead><tr><th scope="col">Tạp chí</th><th scope="col">CiteScore 2025</th><th scope="col">Thay đổi so với 2024</th><th scope="col" class="tracker">Tracker 2026<small>Cập nhật 05/10/2026</small></th></tr></thead><tbody id="results-body"></tbody></table></div><p class="table-note">* So sánh trên 6 tạp chí có CiteScore năm 2024 và 2025. Tracker 2026 là chỉ số tạm thời; “—” là chưa có CiteScore năm.</p></section>
+<figure aria-labelledby="trend-heading"><div class="chart-area"><svg id="trend-chart" role="img" aria-labelledby="chart-title chart-description" xmlns="http://www.w3.org/2000/svg"></svg></div><div id="chart-legend" class="legend" aria-label="Chú giải tạp chí"></div><output id="chart-value" class="chart-value" aria-live="polite"></output><figcaption class="chart-caption">2015–2025: CiteScore năm. 2026 T: CiteScore Tracker, cập nhật 05/10/2026, biểu thị bằng điểm hình thoi và đoạn nối nét đứt.</figcaption></figure></section>
+<section id="results" class="panel" aria-labelledby="results-heading"><div class="panel-heading"><div class="eyebrow">02 / Kết quả mới nhất</div><h2 id="results-heading">CiteScore 2025, biến động và Tracker 2026</h2></div><div class="table-scroll" role="region" tabindex="0" aria-label="Bảng chỉ số mới nhất của bảy tạp chí"><table><thead><tr><th scope="col">Tạp chí</th><th scope="col">CiteScore 2025</th><th scope="col">Thay đổi so với 2024</th><th scope="col" class="tracker">Tracker 2026<small>Cập nhật 05/10/2026</small></th></tr></thead><tbody id="results-body"></tbody></table></div><p class="table-note">* So sánh trên 6 tạp chí có CiteScore năm 2024 và 2025. Tracker 2026 là chỉ số tạm thời; “—” là chưa có CiteScore năm.</p></section>
 <section class="panel conclusions" aria-labelledby="conclusions-heading"><div class="eyebrow">03 / Nhận định</div><h2 id="conclusions-heading">Diễn biến đáng chú ý</h2><ul><li><strong>VJES và VJC</strong> có CiteScore tăng liên tục trong chuỗi số liệu đã công bố, lần lượt từ năm 2020 và 2021 đến năm 2025.</li><li><strong>ANSN</strong> phục hồi năm 2025 sau giai đoạn đi xuống và đi ngang 2020–2024; <strong>AMV</strong> tăng trở lại sau hai năm giảm.</li><li><strong>VJM</strong> tăng trong dài hạn nhưng giảm năm 2025. <strong>CIP</strong> hiện có CiteScore Tracker 2026, chưa có chỉ số năm chính thức.</li></ul></section>
 <footer class="footer"><p>Nguồn: Scopus Sources và Source Details của từng tạp chí. Ngày tra cứu: 21/10/2026.</p><details><summary>Danh mục tạp chí và nguồn số liệu</summary><div id="source-links" class="source-list"></div><button id="json-export" type="button">Tải dữ liệu gốc JSON</button></details></footer>
 <noscript><p>Bật JavaScript để xem biểu đồ và bảng kết quả, hoặc đọc <a href="data-scopus.json">dữ liệu gốc</a>.</p></noscript>
@@ -138,7 +137,7 @@ const seriesStyles=[
  {color:'var(--c1)',dash:''},{color:'var(--c2)',dash:'7 4'},
  {color:'var(--c3)',dash:'2 4'},{color:'var(--c4)',dash:'10 4 2 4'},
  {color:'var(--c5)',dash:'14 4'},{color:'var(--c6)',dash:'4 3'},
- {color:'var(--muted)',dash:''}
+ {color:'var(--fg)',dash:''}
 ];
 const journalSelect=document.getElementById('journal-select');
 for(const j of data.journals){const option=document.createElement('option');option.value=j.code;option.textContent=j.code+' · '+j.title;journalSelect.append(option);}
@@ -149,20 +148,23 @@ function renderChart(printWidth){
  const height=width<600?320:400;
  const left=44,right=18,top=28,bottom=40;
  const plotWidth=width-left-right,plotHeight=height-top-bottom;
- const x=year=>left+(year-2015)/10*plotWidth;
+ const x=year=>left+(year-data.annualYears[0])/(data.trackerYear-data.annualYears[0])*plotWidth;
  const y=value=>top+(1-value/5.5)*plotHeight;
  const selected=journalSelect.value;
  const journals=data.journals.filter(j=>selected==='all'||j.code===selected);
  chart.setAttribute('viewBox',`0 0 ${width} ${height}`);
- let svg='<title id="chart-title">Diễn biến CiteScore 2015–2025</title><desc id="chart-description">Biểu đồ đường của VJM, AMV, ANSN, VJC, VJES và VJST. CIP chưa có CiteScore năm. Dữ liệu chi tiết có trong tệp CSV.</desc>';
+ let svg='<title id="chart-title">CiteScore 2015–2025 và Tracker 2026</title><desc id="chart-description">Bảy tạp chí VAST. CiteScore năm được nối theo chuỗi lịch sử; Tracker 2026 là điểm hình thoi, nối nét đứt từ 2025 khi có dữ liệu. CIP chỉ có điểm Tracker. Dữ liệu chi tiết có trong tệp CSV.</desc>';
  for(let value=0;value<=5;value++){
   svg+=`<line x1="${left}" y1="${y(value)}" x2="${width-right}" y2="${y(value)}" stroke="var(--border)" stroke-width="1"/><text x="${left-10}" y="${y(value)+4}" text-anchor="end" fill="var(--muted)" font-size="12">${value}</text>`;
  }
  svg+=`<text x="${left}" y="14" fill="var(--muted)" font-size="11">CiteScore</text>`;
  for(const year of data.annualYears){
-  if(width<600&&year%2===0)continue;
+  if(width<600&&(year-data.annualYears[0])%3!==0)continue;
   svg+=`<text x="${x(year)}" y="${height-14}" text-anchor="middle" fill="var(--muted)" font-size="12">${year}</text>`;
  }
+ const trackerX=x(data.trackerYear),lastAnnualYear=data.annualYears[data.annualYears.length-1];
+ const separatorX=(x(lastAnnualYear)+trackerX)/2;
+ svg+=`<line x1="${separatorX}" y1="${top}" x2="${separatorX}" y2="${height-bottom}" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 4"/><text x="${trackerX}" y="${height-14}" text-anchor="middle" fill="var(--warning)" font-size="12">${data.trackerYear} T</text>`;
  let pointCount=0;
  for(const j of journals){
   const style=seriesStyles[data.journals.findIndex(item=>item.code===j.code)];
@@ -173,19 +175,25 @@ function renderChart(printWidth){
    path+=(connected?' L':'M')+x(year).toFixed(2)+' '+y(point.value).toFixed(2);
    connected=true;
   }
-  if(!path)continue;
-  svg+=`<path class="chart-series" data-journal="${j.code}" d="${path}" fill="none" stroke="${style.color}" stroke-width="2.5"${style.dash?` stroke-dasharray="${style.dash}"`:''}/>`;
+  if(path)svg+=`<path class="chart-series" data-journal="${j.code}" d="${path}" fill="none" stroke="${style.color}" stroke-width="2.5"${style.dash?` stroke-dasharray="${style.dash}"`:''}/>`;
   for(const point of annual.filter(r=>r.journal===j.code)){
    pointCount++;
    const label=`${j.code} · ${point.year}: ${fmt(point.value)}`;
-   svg+=`<circle class="chart-point" data-journal="${j.code}" data-year="${point.year}" data-value="${point.value}" cx="${x(point.year)}" cy="${y(point.value)}" r="4" fill="${style.color}" stroke="var(--surface)" stroke-width="1" tabindex="0" aria-label="${escapeHtml(label)}"><title>${escapeHtml(label)}</title></circle>`;
+   svg+=`<circle class="chart-point" data-type="annual" data-journal="${j.code}" data-year="${point.year}" data-value="${point.value}" cx="${x(point.year)}" cy="${y(point.value)}" r="4" fill="${style.color}" stroke="var(--surface)" stroke-width="1" tabindex="0" aria-label="${escapeHtml(label)}"><title>${escapeHtml(label)}</title></circle>`;
+  }
+  const tracker=trackers.find(r=>r.journal===j.code),lastAnnual=getAnnual(j.code,lastAnnualYear);
+  if(tracker){
+   pointCount++;
+   const trackerY=y(tracker.value),label=`${j.code} · Tracker ${tracker.year}: ${fmt(tracker.value)} · Cập nhật 05/10/2026`;
+   if(lastAnnual)svg+=`<path class="tracker-segment" data-journal="${j.code}" d="M${x(lastAnnualYear)} ${y(lastAnnual.value)} L${trackerX} ${trackerY}" fill="none" stroke="${style.color}" stroke-width="2" stroke-dasharray="6 4"/>`;
+   svg+=`<path class="chart-point tracker-point" data-type="tracker" data-journal="${j.code}" data-year="${tracker.year}" data-value="${tracker.value}" d="M${trackerX} ${trackerY-5} L${trackerX+5} ${trackerY} L${trackerX} ${trackerY+5} L${trackerX-5} ${trackerY} Z" fill="var(--surface)" stroke="${style.color}" stroke-width="2" tabindex="0" aria-label="${escapeHtml(label)}"><title>${escapeHtml(label)}</title></path>`;
   }
  }
- if(!pointCount)svg+=`<text x="${width/2}" y="${height/2}" text-anchor="middle" fill="var(--muted)" font-size="13">Chưa có CiteScore năm</text>`;
+ if(!pointCount)svg+=`<text x="${width/2}" y="${height/2}" text-anchor="middle" fill="var(--muted)" font-size="13">Chưa có số liệu</text>`;
  chart.innerHTML=svg;
  document.getElementById('chart-legend').innerHTML=journals.map(j=>{
   const style=seriesStyles[data.journals.findIndex(item=>item.code===j.code)],hasData=annual.some(r=>r.journal===j.code);
-  return `<span class="${hasData?'':'unavailable'}">${hasData?`<svg viewBox="0 0 28 12" aria-hidden="true"><line x1="0" y1="6" x2="28" y2="6" stroke="${style.color}" stroke-width="2.5"${style.dash?` stroke-dasharray="${style.dash}"`:''}/></svg>`:''}${j.code}${hasData?'':' · chưa có chỉ số năm'}</span>`;
+  return `<span><svg viewBox="0 0 28 12" aria-hidden="true">${hasData?`<line x1="0" y1="6" x2="28" y2="6" stroke="${style.color}" stroke-width="2.5"${style.dash?` stroke-dasharray="${style.dash}"`:''}/>`:`<path d="M14 1 L19 6 L14 11 L9 6 Z" fill="var(--surface)" stroke="${style.color}" stroke-width="2"/>`}</svg>${j.code}</span>`;
  }).join('');
  chartValue.textContent=selected==='CIP'?'CIP: CiteScore Tracker 2026 là '+fmt(trackers.find(r=>r.journal==='CIP').value)+'.':'';
 }
