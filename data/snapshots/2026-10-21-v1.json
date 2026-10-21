@@ -1,0 +1,4971 @@
+{
+  "schemaVersion": 1,
+  "snapshotId": "2026-10-21-v1",
+  "collectedAt": "2026-10-21",
+  "reviewAfterDays": 45,
+  "outputYears": [
+    2025,
+    2026
+  ],
+  "defaultOutputYear": 2025,
+  "officialScopus": {
+    "path": "data-scopus.json",
+    "sha256": "113f67b7de073007741f9bb3a1a2f4948df7098f520a434649d151bb2be10d89",
+    "observations": 84,
+    "reportDate": "2026-10-21",
+    "trackerSourceUpdatedAt": "2026-10-05"
+  },
+  "sources": [
+    {
+      "path": "evidence/dashboard-publishers.json",
+      "sha256": "1423dc4c2ada5f242db7ca52aeee954068bb1b20933643facb40f4e7b30f8ac6"
+    },
+    {
+      "path": "evidence/dashboard-vjs-core.json",
+      "sha256": "af08d4d8d0373d16a87ada290c1afe001a06fe360b47522ca25e24a3e313ed6a"
+    },
+    {
+      "path": "evidence/dashboard-vjs-other.json",
+      "sha256": "4e86b6641ccaaa21e678c6591a8ce918cbbb9a2416c24c6b72416f80f2ff99da"
+    },
+    {
+      "path": "evidence/dashboard-local-core.json",
+      "sha256": "e0e31a699b16bd486b7c6bd79c36be8612474bfc2e2f59d8598d25e81ac60acd"
+    },
+    {
+      "path": "evidence/dashboard-local-chem-earth.json",
+      "sha256": "c291c103c27b891d0986758c3966d7e7cc2143c7a7d06297ec57a74db14aa896"
+    },
+    {
+      "path": "evidence/dashboard-local-other.json",
+      "sha256": "80650396a1aed73c608c8af3a6b5dc4126cc152d3840e69ac8a817e0805e09ca"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-10-21",
+      "title": "Danh mục 12 tạp chí và bộ thống kê đã thu thập",
+      "description": "Bổ sung hồ sơ, nguồn chỉ mục, sản lượng theo số đã phát hành và số liệu trích dẫn từ 9 bộ thu thập. Các chỉ số tự tính được tách khỏi Scopus chính thức.",
+      "url": "data/snapshots/2026-10-21-v1.json"
+    },
+    {
+      "date": "2026-10-21",
+      "title": "Bản đối chiếu Scopus của 7 tạp chí",
+      "description": "Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.",
+      "url": "data-scopus.json"
+    }
+  ],
+  "journals": [
+    {
+      "id": "vjm",
+      "code": "VJM",
+      "title": "Vietnam Journal of Mathematics",
+      "titleVi": "Tạp chí Toán học",
+      "subject": "Toán học",
+      "website": "https://link.springer.com/journal/10013",
+      "publisher": "Springer Nature & Vietnam Academy of Science and Technology",
+      "issn": "2305-221X",
+      "eissn": "2305-2228",
+      "formerTitles": [
+        {
+          "title": "Tập san Toán lý",
+          "issn": null,
+          "until": "1973"
+        },
+        {
+          "title": "Tạp chí Toán học",
+          "issn": null,
+          "until": "1990"
+        },
+        {
+          "title": "Journal of Mathematics",
+          "issn": null,
+          "until": "1994"
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://link.springer.com/journal/10013"
+      },
+      "profileSources": [
+        "https://link.springer.com/journal/10013",
+        "https://link.springer.com/journal/10013/volumes-and-issues",
+        "https://vjs.ac.vn/",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286934",
+          "checkedAt": "2026-10-21",
+          "coverage": "2013-2026"
+        },
+        {
+          "system": "WoS",
+          "collection": "ESCI",
+          "status": "listed",
+          "evidenceLevel": "vast",
+          "sourceUrl": "https://vast.gov.vn/CmsView-EcoIT-portlet/html/print_cms.jsp?articleId=125804",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "not_listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/api/search/journals/2305-2228",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 54 No. 4 (October 2026)",
+        "published": "2026-10",
+        "url": "https://link.springer.com/journal/10013/volumes-and-issues/54-4"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 51,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-4"
+          ],
+          "issueItems": [
+            {
+              "title": "Vol. 53 No. 1 (January 2025)",
+              "published": "2025-01",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/53-1",
+              "paperKeys": [
+                "doi:10.1007/s10013-023-00617-3",
+                "doi:10.1007/s10013-023-00621-7",
+                "doi:10.1007/s10013-023-00619-1",
+                "doi:10.1007/s10013-023-00620-8",
+                "doi:10.1007/s10013-023-00618-2",
+                "doi:10.1007/s10013-023-00630-6",
+                "doi:10.1007/s10013-023-00639-x",
+                "doi:10.1007/s10013-023-00649-9",
+                "doi:10.1007/s10013-023-00641-3",
+                "doi:10.1007/s10013-023-00638-y",
+                "doi:10.1007/s10013-023-00655-x",
+                "doi:10.1007/s10013-023-00645-z",
+                "doi:10.1007/s10013-023-00651-1",
+                "doi:10.1007/s10013-023-00662-y",
+                "doi:10.1007/s10013-023-00663-x"
+              ],
+              "id": "vol53n1"
+            },
+            {
+              "title": "Vol. 53 No. 2 (April 2025)",
+              "published": "2025-04",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/53-2",
+              "paperKeys": [
+                "doi:10.1007/s10013-023-00652-0",
+                "doi:10.1007/s10013-023-00658-8",
+                "doi:10.1007/s10013-023-00667-7",
+                "doi:10.1007/s10013-023-00676-6",
+                "doi:10.1007/s10013-023-00677-5",
+                "doi:10.1007/s10013-023-00670-y",
+                "doi:10.1007/s10013-023-00679-3",
+                "doi:10.1007/s10013-023-00678-4",
+                "doi:10.1007/s10013-024-00682-2",
+                "doi:10.1007/s10013-024-00685-z",
+                "doi:10.1007/s10013-024-00684-0",
+                "doi:10.1007/s10013-024-00689-9",
+                "doi:10.1007/s10013-024-00690-2",
+                "doi:10.1007/s10013-024-00691-1"
+              ],
+              "id": "vol53n2"
+            },
+            {
+              "title": "Vol. 53 No. 3 (July 2025)",
+              "published": "2025-07",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/53-3",
+              "paperKeys": [
+                "doi:10.1007/s10013-023-00666-8",
+                "doi:10.1007/s10013-024-00681-3",
+                "doi:10.1007/s10013-024-00688-w",
+                "doi:10.1007/s10013-024-00720-z",
+                "doi:10.1007/s10013-024-00711-0",
+                "doi:10.1007/s10013-024-00710-1",
+                "doi:10.1007/s10013-024-00701-2",
+                "doi:10.1007/s10013-024-00712-z",
+                "doi:10.1007/s10013-024-00704-z",
+                "doi:10.1007/s10013-024-00694-y",
+                "doi:10.1007/s10013-024-00721-y"
+              ],
+              "id": "vol53n3"
+            },
+            {
+              "title": "Vol. 53 No. 4 (October 2025)",
+              "published": "2025-10",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/53-4",
+              "paperKeys": [
+                "doi:10.1007/s10013-024-00715-w",
+                "doi:10.1007/s10013-024-00722-x",
+                "doi:10.1007/s10013-024-00699-7",
+                "doi:10.1007/s10013-025-00739-w",
+                "doi:10.1007/s10013-025-00767-6",
+                "doi:10.1007/s10013-024-00700-3",
+                "doi:10.1007/s10013-024-00706-x",
+                "doi:10.1007/s10013-024-00716-9",
+                "doi:10.1007/s10013-025-00742-1",
+                "doi:10.1007/s10013-025-00760-z",
+                "doi:10.1007/s10013-025-00770-x"
+              ],
+              "id": "vol53n4"
+            }
+          ],
+          "note": "Volume 53 (2025) complete: 4 regular/special issues, 51 eligible research/review articles enumerated. 1 preface in Issue 3 excluded."
+        },
+        {
+          "year": 2026,
+          "papers": 58,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-4"
+          ],
+          "issueItems": [
+            {
+              "title": "Vol. 54 No. 1 (January 2026)",
+              "published": "2026-01",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/54-1",
+              "paperKeys": [
+                "doi:10.1007/s10013-024-00696-w",
+                "doi:10.1007/s10013-024-00698-8",
+                "doi:10.1007/s10013-024-00695-x",
+                "doi:10.1007/s10013-024-00697-9",
+                "doi:10.1007/s10013-024-00702-1",
+                "doi:10.1007/s10013-024-00705-y",
+                "doi:10.1007/s10013-024-00703-0",
+                "doi:10.1007/s10013-024-00708-9",
+                "doi:10.1007/s10013-024-00707-w",
+                "doi:10.1007/s10013-024-00726-7",
+                "doi:10.1007/s10013-024-00718-7",
+                "doi:10.1007/s10013-024-00724-9"
+              ],
+              "id": "vol54n1"
+            },
+            {
+              "title": "Vol. 54 No. 2 (June 2026)",
+              "published": "2026-06",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/54-2",
+              "paperKeys": [
+                "doi:10.1007/s10013-025-00771-w",
+                "doi:10.1007/s10013-025-00738-x",
+                "doi:10.1007/s10013-024-00727-6",
+                "doi:10.1007/s10013-025-00764-9",
+                "doi:10.1007/s10013-025-00773-8",
+                "doi:10.1007/s10013-025-00757-8",
+                "doi:10.1007/s10013-025-00779-2",
+                "doi:10.1007/s10013-025-00783-6",
+                "doi:10.1007/s10013-025-00787-2",
+                "doi:10.1007/s10013-025-00772-9",
+                "doi:10.1007/s10013-025-00781-8",
+                "doi:10.1007/s10013-025-00774-7"
+              ],
+              "id": "vol54n2"
+            },
+            {
+              "title": "Vol. 54 No. 3 (June 2026)",
+              "published": "2026-06",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/54-3",
+              "paperKeys": [
+                "doi:10.1007/s10013-024-00693-z",
+                "doi:10.1007/s10013-024-00709-8",
+                "doi:10.1007/s10013-024-00717-8",
+                "doi:10.1007/s10013-024-00725-8",
+                "doi:10.1007/s10013-024-00719-6",
+                "doi:10.1007/s10013-024-00713-y",
+                "doi:10.1007/s10013-024-00714-x",
+                "doi:10.1007/s10013-024-00723-w",
+                "doi:10.1007/s10013-024-00728-5",
+                "doi:10.1007/s10013-025-00737-y",
+                "doi:10.1007/s10013-025-00740-3",
+                "doi:10.1007/s10013-025-00769-4",
+                "doi:10.1007/s10013-025-00748-9",
+                "doi:10.1007/s10013-025-00754-x",
+                "doi:10.1007/s10013-025-00762-x"
+              ],
+              "id": "vol54n3"
+            },
+            {
+              "title": "Vol. 54 No. 4 (October 2026)",
+              "published": "2026-10",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/54-4",
+              "paperKeys": [
+                "doi:10.1007/s10013-025-00741-2",
+                "doi:10.1007/s10013-025-00744-z",
+                "doi:10.1007/s10013-025-00745-y",
+                "doi:10.1007/s10013-025-00731-4",
+                "doi:10.1007/s10013-025-00749-8",
+                "doi:10.1007/s10013-025-00753-y",
+                "doi:10.1007/s10013-025-00746-x",
+                "doi:10.1007/s10013-025-00761-y",
+                "doi:10.1007/s10013-025-00751-0",
+                "doi:10.1007/s10013-025-00752-z",
+                "doi:10.1007/s10013-025-00755-w",
+                "doi:10.1007/s10013-025-00763-w",
+                "doi:10.1007/s10013-025-00765-8",
+                "doi:10.1007/s10013-025-00768-5",
+                "doi:10.1007/s10013-025-00766-7",
+                "doi:10.1007/s10013-025-00756-9",
+                "doi:10.1007/s10013-025-00758-7",
+                "doi:10.1007/s10013-025-00775-6",
+                "doi:10.1007/s10013-026-00820-y"
+              ],
+              "id": "vol54n4"
+            }
+          ],
+          "note": "Volume 54 (2026) complete through Issue 4 (October 2026) as of 2026-10-21: 4 quarterly issues fully issued on SpringerLink, 58 eligible research/review articles enumerated. 1 preface in Issue 2 and 1 correction in Issue 3 excluded."
+        }
+      ],
+      "checkedAt": "2026-10-21",
+      "aliases": [],
+      "scopusCategories": [
+        {
+          "year": 2025,
+          "name": "General Mathematics",
+          "percentile": 72,
+          "rank": 115,
+          "total": 414,
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286934"
+        }
+      ]
+    },
+    {
+      "id": "amv",
+      "code": "AMV",
+      "title": "Acta Mathematica Vietnamica",
+      "titleVi": "Acta Mathematica Vietnamica",
+      "subject": "Toán học",
+      "website": "https://link.springer.com/journal/40306",
+      "publisher": "Springer Nature & Institute of Mathematics, Vietnam Academy of Science and Technology",
+      "issn": "0251-4184",
+      "eissn": "2315-4144",
+      "formerTitles": [],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://link.springer.com/journal/40306"
+      },
+      "profileSources": [
+        "https://link.springer.com/journal/40306",
+        "https://link.springer.com/journal/40306/volumes-and-issues",
+        "https://math.ac.vn/",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21100199843",
+          "checkedAt": "2026-10-21",
+          "coverage": "2011 to 2026"
+        },
+        {
+          "system": "WoS",
+          "collection": "ESCI",
+          "status": "listed",
+          "evidenceLevel": "vast",
+          "sourceUrl": "https://vast.gov.vn/web/vietnam-academy-of-science-and-technology/tin-chi-tiet/-/chi-tiet/scientific-journals-of-vietnam-academy-of-science-and-technology-continue-to-grow-125804-871.html",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "not_listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/api/search/journals/2315-4144",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 51 No. 3 (September 2026)",
+        "published": "2026-09",
+        "url": "https://link.springer.com/journal/40306/volumes-and-issues/51-3"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 32,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-4"
+          ],
+          "issueItems": [
+            {
+              "title": "Vol. 50 No. 1 (March 2025)",
+              "published": "2025-03",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/50-1",
+              "paperKeys": [
+                "doi:10.1007/s40306-024-00561-5",
+                "doi:10.1007/s40306-024-00558-0",
+                "doi:10.1007/s40306-024-00553-5",
+                "doi:10.1007/s40306-024-00556-2",
+                "doi:10.1007/s40306-024-00557-1",
+                "doi:10.1007/s40306-024-00562-4",
+                "doi:10.1007/s40306-025-00563-x",
+                "doi:10.1007/s40306-025-00564-w"
+              ],
+              "id": "vol50n1"
+            },
+            {
+              "title": "Vol. 50 No. 2 (June 2025)",
+              "published": "2025-06",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/50-2",
+              "paperKeys": [
+                "doi:10.1007/s40306-025-00565-9",
+                "doi:10.1007/s40306-025-00566-8",
+                "doi:10.1007/s40306-025-00567-7",
+                "doi:10.1007/s40306-025-00569-5",
+                "doi:10.1007/s40306-025-00568-6",
+                "doi:10.1007/s40306-025-00570-y",
+                "doi:10.1007/s40306-025-00572-w"
+              ],
+              "id": "vol50n2"
+            },
+            {
+              "title": "Vol. 50 No. 3 (September 2025)",
+              "published": "2025-09",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/50-3",
+              "paperKeys": [
+                "doi:10.1007/s40306-025-00574-8",
+                "doi:10.1007/s40306-025-00571-x",
+                "doi:10.1007/s40306-025-00573-9",
+                "doi:10.1007/s40306-025-00575-7",
+                "doi:10.1007/s40306-025-00576-6",
+                "doi:10.1007/s40306-025-00577-5",
+                "doi:10.1007/s40306-025-00578-4",
+                "doi:10.1007/s40306-025-00580-w",
+                "doi:10.1007/s40306-025-00579-3"
+              ],
+              "id": "vol50n3"
+            },
+            {
+              "title": "Vol. 50 No. 4 (December 2025)",
+              "published": "2025-12",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/50-4",
+              "paperKeys": [
+                "doi:10.1007/s40306-025-00582-8",
+                "doi:10.1007/s40306-025-00583-7",
+                "doi:10.1007/s40306-025-00581-9",
+                "doi:10.1007/s40306-025-00584-6",
+                "doi:10.1007/s40306-025-00588-2",
+                "doi:10.1007/s40306-025-00587-3",
+                "doi:10.1007/s40306-025-00590-8",
+                "doi:10.1007/s40306-025-00589-1"
+              ],
+              "id": "vol50n4"
+            }
+          ],
+          "note": "Volume 50 (2025) complete: 4 issues, 32 eligible research/review articles enumerated. 3 corrections excluded."
+        },
+        {
+          "year": 2026,
+          "papers": 27,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/51-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/51-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/51-3"
+          ],
+          "issueItems": [
+            {
+              "title": "Vol. 51 No. 1 (March 2026)",
+              "published": "2026-03",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/51-1",
+              "paperKeys": [
+                "doi:10.1007/s40306-026-00600-3",
+                "doi:10.1007/s40306-025-00594-4",
+                "doi:10.1007/s40306-025-00593-5",
+                "doi:10.1007/s40306-026-00602-1",
+                "doi:10.1007/s40306-026-00601-2",
+                "doi:10.1007/s40306-025-00596-2",
+                "doi:10.1007/s40306-025-00592-6",
+                "doi:10.1007/s40306-026-00599-7",
+                "doi:10.1007/s40306-025-00595-3"
+              ],
+              "id": "vol51n1"
+            },
+            {
+              "title": "Vol. 51 No. 2 (June 2026)",
+              "published": "2026-06",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/51-2",
+              "paperKeys": [
+                "doi:10.1007/s40306-026-00613-y",
+                "doi:10.1007/s40306-026-00626-7",
+                "doi:10.1007/s40306-026-00621-y",
+                "doi:10.1007/s40306-026-00628-5",
+                "doi:10.1007/s40306-026-00619-6",
+                "doi:10.1007/s40306-025-00597-1",
+                "doi:10.1007/s40306-026-00620-z",
+                "doi:10.1007/s40306-026-00612-z",
+                "doi:10.1007/s40306-026-00630-x"
+              ],
+              "id": "vol51n2"
+            },
+            {
+              "title": "Vol. 51 No. 3 (September 2026)",
+              "published": "2026-09",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/51-3",
+              "paperKeys": [
+                "doi:10.1007/s40306-026-00635-6",
+                "doi:10.1007/s40306-026-00625-8",
+                "doi:10.1007/s40306-026-00624-9",
+                "doi:10.1007/s40306-026-00633-8",
+                "doi:10.1007/s40306-026-00629-4",
+                "doi:10.1007/s40306-026-00623-w",
+                "doi:10.1007/s40306-026-00631-w",
+                "doi:10.1007/s40306-026-00627-6",
+                "doi:10.1007/s40306-026-00622-x"
+              ],
+              "id": "vol51n3"
+            }
+          ],
+          "note": "Volume 51 (2026) complete for issued issues through asOf 2026-10-21: 3 quarterly issues fully issued on SpringerLink, 27 eligible research/review articles enumerated. 1 erratum and 1 correction in Issue 1 excluded. Issue 4 is scheduled for December 2026."
+        }
+      ],
+      "checkedAt": "2026-10-21",
+      "aliases": [
+        "AVM"
+      ],
+      "scopusCategories": [
+        {
+          "year": 2025,
+          "name": "General Mathematics",
+          "percentile": 18,
+          "rank": 338,
+          "total": 414,
+          "sourceUrl": "https://www.scopus.com/sourceid/21100199843"
+        }
+      ]
+    },
+    {
+      "id": "ansn",
+      "code": "ANSN",
+      "title": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
+      "titleVi": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
+      "subject": "Vật liệu và công nghệ nano",
+      "website": "https://iopscience.iop.org/journal/2043-6262",
+      "publisher": "IOP Publishing & Vietnam Academy of Science and Technology",
+      "issn": "2043-6254",
+      "eissn": "2043-6262",
+      "formerTitles": [],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://iopscience.iop.org/journal/2043-6262"
+      },
+      "profileSources": [
+        "https://iopscience.iop.org/journal/2043-6262",
+        "https://iopscience.iop.org/journal/rss/2043-6262",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286862",
+          "checkedAt": "2026-10-21",
+          "coverage": "2010 to 2026"
+        },
+        {
+          "system": "WoS",
+          "collection": "ESCI",
+          "status": "listed",
+          "evidenceLevel": "vast",
+          "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/tap-chi-advances-in-natural-sciences-nanoscience-and-nanotechnology-ansn-tro-lai-web-of-science-esci--5416-463.html",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "not_listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/api/search/journals/2043-6262",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 17 No. 3 (September 2026)",
+        "published": "2026-09",
+        "url": "https://iopscience.iop.org/issue/2043-6262/17/3"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 76,
+          "issues": 4,
+          "coverage": "partial",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works"
+          ],
+          "issueItems": [
+            {
+              "id": "vol16n1",
+              "title": "Vol. 16 No. 1 (2025)",
+              "published": "2025-01",
+              "url": "https://iopscience.iop.org/issue/2043-6262/16/1",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/ada005",
+                "doi:10.1088/2043-6262/ad9f49",
+                "doi:10.1088/2043-6262/ad9ff4",
+                "doi:10.1088/2043-6262/ad9ff5",
+                "doi:10.1088/2043-6262/ad9ff2",
+                "doi:10.1088/2043-6262/ad9ff3",
+                "doi:10.1088/2043-6262/ada000",
+                "doi:10.1088/2043-6262/ad9ff1",
+                "doi:10.1088/2043-6262/ada007",
+                "doi:10.1088/2043-6262/ad9f4a",
+                "doi:10.1088/2043-6262/ada254",
+                "doi:10.1088/2043-6262/ada009",
+                "doi:10.1088/2043-6262/ada008",
+                "doi:10.1088/2043-6262/ada0b5",
+                "doi:10.1088/2043-6262/ad9fff",
+                "doi:10.1088/2043-6262/ada002",
+                "doi:10.1088/2043-6262/ad9ffe",
+                "doi:10.1088/2043-6262/ad9ff0",
+                "doi:10.1088/2043-6262/ada004",
+                "doi:10.1088/2043-6262/ada006"
+              ]
+            },
+            {
+              "id": "vol16n2",
+              "title": "Vol. 16 No. 2 (2025)",
+              "published": "2025-03",
+              "url": "https://iopscience.iop.org/issue/2043-6262/16/2",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/adc66d",
+                "doi:10.1088/2043-6262/adddc2",
+                "doi:10.1088/2043-6262/adc977",
+                "doi:10.1088/2043-6262/adb566",
+                "doi:10.1088/2043-6262/adb564",
+                "doi:10.1088/2043-6262/adb55c",
+                "doi:10.1088/2043-6262/adc66c",
+                "doi:10.1088/2043-6262/adb55d",
+                "doi:10.1088/2043-6262/adc7db",
+                "doi:10.1088/2043-6262/adb565",
+                "doi:10.1088/2043-6262/adc66e",
+                "doi:10.1088/2043-6262/adc4c6",
+                "doi:10.1088/2043-6262/adc4c4",
+                "doi:10.1088/2043-6262/adc7dc",
+                "doi:10.1088/2043-6262/adc4c5",
+                "doi:10.1088/2043-6262/adb55f",
+                "doi:10.1088/2043-6262/adb563",
+                "doi:10.1088/2043-6262/adb560",
+                "doi:10.1088/2043-6262/adc66f",
+                "doi:10.1088/2043-6262/adc66b",
+                "doi:10.1088/2043-6262/adc54f"
+              ]
+            },
+            {
+              "id": "vol16n3",
+              "title": "Vol. 16 No. 3 (2025)",
+              "published": "2025-06",
+              "url": "https://iopscience.iop.org/issue/2043-6262/16/3",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/addcdd",
+                "doi:10.1088/2043-6262/adef5b",
+                "doi:10.1088/2043-6262/adef17",
+                "doi:10.1088/2043-6262/adef5a",
+                "doi:10.1088/2043-6262/addce0",
+                "doi:10.1088/2043-6262/adddc1",
+                "doi:10.1088/2043-6262/adee9c",
+                "doi:10.1088/2043-6262/addd24",
+                "doi:10.1088/2043-6262/addf2b",
+                "doi:10.1088/2043-6262/addce1",
+                "doi:10.1088/2043-6262/addcdf",
+                "doi:10.1088/2043-6262/addcd9",
+                "doi:10.1088/2043-6262/ade256",
+                "doi:10.1088/2043-6262/adee26",
+                "doi:10.1088/2043-6262/adee9d",
+                "doi:10.1088/2043-6262/adef1c",
+                "doi:10.1088/2043-6262/addcde",
+                "doi:10.1088/2043-6262/adee27",
+                "doi:10.1088/2043-6262/adefe8"
+              ]
+            },
+            {
+              "id": "vol16n4",
+              "title": "Vol. 16 No. 4 (2025)",
+              "published": "2025-10",
+              "url": "https://iopscience.iop.org/issue/2043-6262/16/4",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/ae1d82",
+                "doi:10.1088/2043-6262/adfa2d",
+                "doi:10.1088/2043-6262/ae22df",
+                "doi:10.1088/2043-6262/adf96d",
+                "doi:10.1088/2043-6262/adf96e",
+                "doi:10.1088/2043-6262/ae0746",
+                "doi:10.1088/2043-6262/ae16a7",
+                "doi:10.1088/2043-6262/ae2620",
+                "doi:10.1088/2043-6262/ae0b6f",
+                "doi:10.1088/2043-6262/adf96c",
+                "doi:10.1088/2043-6262/ae261f",
+                "doi:10.1088/2043-6262/adf96f",
+                "doi:10.1088/2043-6262/ae0cce",
+                "doi:10.1088/2043-6262/ae1589",
+                "doi:10.1088/2043-6262/ae1df8",
+                "doi:10.1088/2043-6262/ae25cb"
+              ]
+            }
+          ],
+          "note": "Volume 16 (2025) 4 issues, 76 eligible research/review articles enumerated via official IOP RSS and Crossref metadata (1 corrigendum in Issue 4 excluded). Marked partial as inventory is reconciled via feed/API metadata without fulltext HTML TOC verification due to publisher bot verification; count represents verified lower bound."
+        },
+        {
+          "year": 2026,
+          "papers": 56,
+          "issues": 3,
+          "coverage": "partial",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://iopscience.iop.org/journal/rss/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works"
+          ],
+          "issueItems": [
+            {
+              "id": "vol17n1",
+              "title": "Vol. 17 No. 1 (2026)",
+              "published": "2026-01",
+              "url": "https://iopscience.iop.org/issue/2043-6262/17/1",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/ae1239",
+                "doi:10.1088/2043-6262/ae22dc",
+                "doi:10.1088/2043-6262/ae318b",
+                "doi:10.1088/2043-6262/ae3247",
+                "doi:10.1088/2043-6262/ae0745",
+                "doi:10.1088/2043-6262/ae318a",
+                "doi:10.1088/2043-6262/ae324a",
+                "doi:10.1088/2043-6262/ae39e0",
+                "doi:10.1088/2043-6262/ae402b",
+                "doi:10.1088/2043-6262/ae3249",
+                "doi:10.1088/2043-6262/ae3248",
+                "doi:10.1088/2043-6262/ae331e",
+                "doi:10.1088/2043-6262/ae3387",
+                "doi:10.1088/2043-6262/ae3deb",
+                "doi:10.1088/2043-6262/ae3dec",
+                "doi:10.1088/2043-6262/ae45ad",
+                "doi:10.1088/2043-6262/ae4980",
+                "doi:10.1088/2043-6262/ae497f",
+                "doi:10.1088/2043-6262/ae4ee7"
+              ]
+            },
+            {
+              "id": "vol17n2",
+              "title": "Vol. 17 No. 2 (2026)",
+              "published": "2026-04",
+              "url": "https://iopscience.iop.org/issue/2043-6262/17/2",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/ae5497",
+                "doi:10.1088/2043-6262/ae5538",
+                "doi:10.1088/2043-6262/ae7372",
+                "doi:10.1088/2043-6262/ae7373",
+                "doi:10.1088/2043-6262/ae7975",
+                "doi:10.1088/2043-6262/ae7f8f",
+                "doi:10.1088/2043-6262/ae4fbf",
+                "doi:10.1088/2043-6262/ae55a3",
+                "doi:10.1088/2043-6262/ae55a2",
+                "doi:10.1088/2043-6262/ae5dd1",
+                "doi:10.1088/2043-6262/ae5dd2",
+                "doi:10.1088/2043-6262/ae607b",
+                "doi:10.1088/2043-6262/ae7371",
+                "doi:10.1088/2043-6262/ae77ff",
+                "doi:10.1088/2043-6262/ae7976",
+                "doi:10.1088/2043-6262/ae8302",
+                "doi:10.1088/2043-6262/ae8303"
+              ]
+            },
+            {
+              "id": "vol17n3",
+              "title": "Vol. 17 No. 3 (2026)",
+              "published": "2026-07",
+              "url": "https://iopscience.iop.org/issue/2043-6262/17/3",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/ae8909",
+                "doi:10.1088/2043-6262/ae8908",
+                "doi:10.1088/2043-6262/ae890b",
+                "doi:10.1088/2043-6262/ae890a",
+                "doi:10.1088/2043-6262/ae8a57",
+                "doi:10.1088/2043-6262/ae8a56",
+                "doi:10.1088/2043-6262/ae93b6",
+                "doi:10.1088/2043-6262/ae9aa2",
+                "doi:10.1088/2043-6262/ae9aa1",
+                "doi:10.1088/2043-6262/ae9bc4",
+                "doi:10.1088/2043-6262/ae9c41",
+                "doi:10.1088/2043-6262/ae9c44",
+                "doi:10.1088/2043-6262/ae9c43",
+                "doi:10.1088/2043-6262/ae9c42",
+                "doi:10.1088/2043-6262/ae9d84",
+                "doi:10.1088/2043-6262/ae9e2d",
+                "doi:10.1088/2043-6262/ae9ec8",
+                "doi:10.1088/2043-6262/ae9f5f",
+                "doi:10.1088/2043-6262/ae9aa3",
+                "doi:10.1088/2043-6262/aea229"
+              ]
+            }
+          ],
+          "note": "Volume 17 (2026) YTD through Issue 3 (September 2026): 3 issued issues, 56 eligible research/review articles enumerated via IOP RSS and Crossref (1 erratum in Issue 1 excluded). Issue 4 is scheduled for December 2026 (3 early-assigned online articles excluded per contract). Marked partial as verified lower bound from feed/API records."
+        }
+      ],
+      "checkedAt": "2026-10-21",
+      "aliases": [],
+      "scopusCategories": [
+        {
+          "year": 2025,
+          "name": "Industrial and Manufacturing Engineering",
+          "percentile": 61,
+          "rank": 164,
+          "total": 425,
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286862"
+        }
+      ]
+    },
+    {
+      "id": "vjc",
+      "code": "VJC",
+      "title": "Vietnam Journal of Chemistry",
+      "titleVi": "Tạp chí Hóa học",
+      "subject": "Hóa học",
+      "website": "https://onlinelibrary.wiley.com/journal/25728288",
+      "publisher": "Wiley-VCH & Vietnam Academy of Science and Technology",
+      "issn": "2525-2321",
+      "eissn": "2572-8288",
+      "formerTitles": [
+        {
+          "title": "Tập san Hóa học",
+          "issn": null,
+          "until": "1976"
+        },
+        {
+          "title": "Tạp chí Hóa học",
+          "issn": "0866-7144",
+          "until": "2024"
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 6,
+        "sourceUrl": "https://onlinelibrary.wiley.com/journal/25728288"
+      },
+      "profileSources": [
+        "https://onlinelibrary.wiley.com/journal/25728288",
+        "https://vjs.ac.vn/index.php/vjchem",
+        "https://vast.gov.vn/tap-chi",
+        "https://vjs.ac.vn/vjchem/statistic"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21101043786",
+          "checkedAt": "2026-10-21",
+          "coverage": "2018-2026"
+        },
+        {
+          "system": "WoS",
+          "collection": "ESCI",
+          "status": "listed",
+          "evidenceLevel": "vast",
+          "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/vietnam-journal-of-chemistry-tap-chi-hoa-hoc-%C4%91uoc-chap-nhan-vao-danh-muc-cac-tap-chi-cua-web-of-science-wos-tro-thanh-tap-chi-moi-noi-emerging-source-citation-index-esci-cua-he-thong-nay-10704-427.html",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "not_listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/api/search/journals/2572-8288",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 64 No. 5 (October 2026)",
+        "published": "2026-10",
+        "url": "https://doi.org/10.1002/vjch.v64.5"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 90,
+          "issues": 6,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v63.1",
+            "https://doi.org/10.1002/vjch.v63.2",
+            "https://doi.org/10.1002/vjch.v63.3",
+            "https://doi.org/10.1002/vjch.v63.4",
+            "https://doi.org/10.1002/vjch.v63.5",
+            "https://doi.org/10.1002/vjch.v63.6"
+          ],
+          "issueItems": [
+            {
+              "id": "vol63n1",
+              "title": "Vol. 63 No. 1 (February 2025)",
+              "published": "2025-02",
+              "url": "https://doi.org/10.1002/vjch.v63.1",
+              "paperKeys": [
+                "doi:10.1002/vjch.202400211",
+                "doi:10.1002/vjch.202400151",
+                "doi:10.1002/vjch.202400149",
+                "doi:10.1002/vjch.202400119",
+                "doi:10.1002/vjch.202400106",
+                "doi:10.1002/vjch.202400096",
+                "doi:10.1002/vjch.202400086",
+                "doi:10.1002/vjch.202400059",
+                "doi:10.1002/vjch.202400011",
+                "doi:10.1002/vjch.202300410",
+                "doi:10.1002/vjch.202300407",
+                "doi:10.1002/vjch.202300398",
+                "doi:10.1002/vjch.202300393",
+                "doi:10.1002/vjch.202300376",
+                "doi:10.1002/vjch.202300352",
+                "doi:10.1002/vjch.202300280"
+              ]
+            },
+            {
+              "id": "vol63n2",
+              "title": "Vol. 63 No. 2 (April 2025)",
+              "published": "2025-04",
+              "url": "https://doi.org/10.1002/vjch.v63.2",
+              "paperKeys": [
+                "doi:10.1002/vjch.202400247",
+                "doi:10.1002/vjch.202400226",
+                "doi:10.1002/vjch.202400148",
+                "doi:10.1002/vjch.202400141",
+                "doi:10.1002/vjch.202400127",
+                "doi:10.1002/vjch.202400114",
+                "doi:10.1002/vjch.202400089",
+                "doi:10.1002/vjch.202400085",
+                "doi:10.1002/vjch.202400047",
+                "doi:10.1002/vjch.202400044",
+                "doi:10.1002/vjch.202400029",
+                "doi:10.1002/vjch.202300423",
+                "doi:10.1002/vjch.202300399",
+                "doi:10.1002/vjch.202300271",
+                "doi:10.1002/vjch.202300234"
+              ]
+            },
+            {
+              "id": "vol63n3",
+              "title": "Vol. 63 No. 3 (June 2025)",
+              "published": "2025-06",
+              "url": "https://doi.org/10.1002/vjch.v63.3",
+              "paperKeys": [
+                "doi:10.1002/vjch.202400265",
+                "doi:10.1002/vjch.202400238",
+                "doi:10.1002/vjch.202400209",
+                "doi:10.1002/vjch.202400208",
+                "doi:10.1002/vjch.202400186",
+                "doi:10.1002/vjch.202400152",
+                "doi:10.1002/vjch.202400140",
+                "doi:10.1002/vjch.202400128",
+                "doi:10.1002/vjch.202400112",
+                "doi:10.1002/vjch.202400105",
+                "doi:10.1002/vjch.202400077",
+                "doi:10.1002/vjch.202400074",
+                "doi:10.1002/vjch.202400068",
+                "doi:10.1002/vjch.202400028",
+                "doi:10.1002/vjch.202300386"
+              ]
+            },
+            {
+              "id": "vol63n4",
+              "title": "Vol. 63 No. 4 (August 2025)",
+              "published": "2025-08",
+              "url": "https://doi.org/10.1002/vjch.v63.4",
+              "paperKeys": [
+                "doi:10.1002/vjch.70007",
+                "doi:10.1002/vjch.70005",
+                "doi:10.1002/vjch.202400277",
+                "doi:10.1002/vjch.202400264",
+                "doi:10.1002/vjch.202400212",
+                "doi:10.1002/vjch.202400179",
+                "doi:10.1002/vjch.202400159",
+                "doi:10.1002/vjch.202400155",
+                "doi:10.1002/vjch.202400124",
+                "doi:10.1002/vjch.202400103",
+                "doi:10.1002/vjch.202400100",
+                "doi:10.1002/vjch.202400055",
+                "doi:10.1002/vjch.202400019",
+                "doi:10.1002/vjch.202300360"
+              ]
+            },
+            {
+              "id": "vol63n5",
+              "title": "Vol. 63 No. 5 (October 2025)",
+              "published": "2025-10",
+              "url": "https://doi.org/10.1002/vjch.v63.5",
+              "paperKeys": [
+                "doi:10.1002/vjch.70026",
+                "doi:10.1002/vjch.70022",
+                "doi:10.1002/vjch.70020",
+                "doi:10.1002/vjch.70018",
+                "doi:10.1002/vjch.70017",
+                "doi:10.1002/vjch.70012",
+                "doi:10.1002/vjch.70011",
+                "doi:10.1002/vjch.70009",
+                "doi:10.1002/vjch.70006",
+                "doi:10.1002/vjch.70004",
+                "doi:10.1002/vjch.70002",
+                "doi:10.1002/vjch.70000",
+                "doi:10.1002/vjch.202400259",
+                "doi:10.1002/vjch.202400227",
+                "doi:10.1002/vjch.202400001"
+              ]
+            },
+            {
+              "id": "vol63n6",
+              "title": "Vol. 63 No. 6 (December 2025)",
+              "published": "2025-12",
+              "url": "https://doi.org/10.1002/vjch.v63.6",
+              "paperKeys": [
+                "doi:10.1002/vjch.70096",
+                "doi:10.1002/vjch.70091",
+                "doi:10.1002/vjch.70090",
+                "doi:10.1002/vjch.70089",
+                "doi:10.1002/vjch.70088",
+                "doi:10.1002/vjch.70087",
+                "doi:10.1002/vjch.70085",
+                "doi:10.1002/vjch.70071",
+                "doi:10.1002/vjch.70070",
+                "doi:10.1002/vjch.70064",
+                "doi:10.1002/vjch.70063",
+                "doi:10.1002/vjch.70061",
+                "doi:10.1002/vjch.70029",
+                "doi:10.1002/vjch.70024",
+                "doi:10.1002/vjch.70013"
+              ]
+            }
+          ],
+          "note": "Volume 63 (2025) complete: 6 regular issues, 90 eligible research/review articles enumerated. Two 50th Anniversary announcements (DOIs 10.1002/vjch.70103 and 70105) and 12 paratext items (TOC contents, cover/issue records) strictly excluded per contract. Reconciled and cross-validated with user local collection (2026/09d-OJS-Citation Statistics-VJC/data/vjmech_ojs_catalog.json) and Wiley/Crossref metadata."
+        },
+        {
+          "year": 2026,
+          "papers": 96,
+          "issues": 6,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v64.1",
+            "https://doi.org/10.1002/vjch.v64.2",
+            "https://doi.org/10.1002/vjch.v64.3",
+            "https://doi.org/10.1002/vjch.v64.4",
+            "https://doi.org/10.1002/vjch.v64.5",
+            "https://doi.org/10.1002/vjch.v64.s1"
+          ],
+          "issueItems": [
+            {
+              "id": "vol64n1",
+              "title": "Vol. 64 No. 1 (February 2026)",
+              "published": "2026-02",
+              "url": "https://doi.org/10.1002/vjch.v64.1",
+              "paperKeys": [
+                "doi:10.1002/vjch.70039",
+                "doi:10.1002/vjch.70036",
+                "doi:10.1002/vjch.70035",
+                "doi:10.1002/vjch.70033",
+                "doi:10.1002/vjch.70032",
+                "doi:10.1002/vjch.70031",
+                "doi:10.1002/vjch.70030",
+                "doi:10.1002/vjch.70028",
+                "doi:10.1002/vjch.70025",
+                "doi:10.1002/vjch.70021",
+                "doi:10.1002/vjch.70016",
+                "doi:10.1002/vjch.202400117"
+              ]
+            },
+            {
+              "id": "vol64n2",
+              "title": "Vol. 64 No. 2 (April 2026)",
+              "published": "2026-04",
+              "url": "https://doi.org/10.1002/vjch.v64.2",
+              "paperKeys": [
+                "doi:10.1002/vjch.70082",
+                "doi:10.1002/vjch.70066",
+                "doi:10.1002/vjch.70062",
+                "doi:10.1002/vjch.70054",
+                "doi:10.1002/vjch.70053",
+                "doi:10.1002/vjch.70052",
+                "doi:10.1002/vjch.70051",
+                "doi:10.1002/vjch.70048",
+                "doi:10.1002/vjch.70047",
+                "doi:10.1002/vjch.70046",
+                "doi:10.1002/vjch.70044",
+                "doi:10.1002/vjch.70034",
+                "doi:10.1002/vjch.70027"
+              ]
+            },
+            {
+              "id": "vol64n3",
+              "title": "Vol. 64 No. 3 (June 2026)",
+              "published": "2026-06",
+              "url": "https://doi.org/10.1002/vjch.v64.3",
+              "paperKeys": [
+                "doi:10.1002/vjch.70098",
+                "doi:10.1002/vjch.70097",
+                "doi:10.1002/vjch.70086",
+                "doi:10.1002/vjch.70084",
+                "doi:10.1002/vjch.70083",
+                "doi:10.1002/vjch.70075",
+                "doi:10.1002/vjch.70072",
+                "doi:10.1002/vjch.70068",
+                "doi:10.1002/vjch.70065",
+                "doi:10.1002/vjch.70059",
+                "doi:10.1002/vjch.70057",
+                "doi:10.1002/vjch.70050"
+              ]
+            },
+            {
+              "id": "vol64n4",
+              "title": "Vol. 64 No. 4 (August 2026)",
+              "published": "2026-08",
+              "url": "https://doi.org/10.1002/vjch.v64.4",
+              "paperKeys": [
+                "doi:10.1002/vjch.70126",
+                "doi:10.1002/vjch.70125",
+                "doi:10.1002/vjch.70122",
+                "doi:10.1002/vjch.70121",
+                "doi:10.1002/vjch.70120",
+                "doi:10.1002/vjch.70118",
+                "doi:10.1002/vjch.70111",
+                "doi:10.1002/vjch.70101",
+                "doi:10.1002/vjch.70100",
+                "doi:10.1002/vjch.70092",
+                "doi:10.1002/vjch.70078",
+                "doi:10.1002/vjch.70074",
+                "doi:10.1002/vjch.70069"
+              ]
+            },
+            {
+              "id": "vol64n5",
+              "title": "Vol. 64 No. 5 (October 2026)",
+              "published": "2026-10",
+              "url": "https://doi.org/10.1002/vjch.v64.5",
+              "paperKeys": [
+                "doi:10.1002/vjch.70143",
+                "doi:10.1002/vjch.70142",
+                "doi:10.1002/vjch.70140",
+                "doi:10.1002/vjch.70139",
+                "doi:10.1002/vjch.70138",
+                "doi:10.1002/vjch.70136",
+                "doi:10.1002/vjch.70135",
+                "doi:10.1002/vjch.70133",
+                "doi:10.1002/vjch.70128",
+                "doi:10.1002/vjch.70123",
+                "doi:10.1002/vjch.70060"
+              ]
+            },
+            {
+              "id": "vol64ns1",
+              "title": "Vol. 64 No. S1 (February 2026)",
+              "published": "2026-02",
+              "url": "https://doi.org/10.1002/vjch.v64.S1",
+              "paperKeys": [
+                "doi:10.1002/vjch.70132",
+                "doi:10.1002/vjch.70130",
+                "doi:10.1002/vjch.70117",
+                "doi:10.1002/vjch.70116",
+                "doi:10.1002/vjch.70115",
+                "doi:10.1002/vjch.70114",
+                "doi:10.1002/vjch.70113",
+                "doi:10.1002/vjch.70112",
+                "doi:10.1002/vjch.70110",
+                "doi:10.1002/vjch.70109",
+                "doi:10.1002/vjch.70108",
+                "doi:10.1002/vjch.70107",
+                "doi:10.1002/vjch.70106",
+                "doi:10.1002/vjch.70104",
+                "doi:10.1002/vjch.70099",
+                "doi:10.1002/vjch.70095",
+                "doi:10.1002/vjch.70094",
+                "doi:10.1002/vjch.70093",
+                "doi:10.1002/vjch.70079",
+                "doi:10.1002/vjch.70077",
+                "doi:10.1002/vjch.70076",
+                "doi:10.1002/vjch.70067",
+                "doi:10.1002/vjch.70055",
+                "doi:10.1002/vjch.70049",
+                "doi:10.1002/vjch.70045",
+                "doi:10.1002/vjch.70043",
+                "doi:10.1002/vjch.70042",
+                "doi:10.1002/vjch.70040",
+                "doi:10.1002/vjch.70038",
+                "doi:10.1002/vjch.70037",
+                "doi:10.1002/vjch.70023",
+                "doi:10.1002/vjch.70014",
+                "doi:10.1002/vjch.70008",
+                "doi:10.1002/vjch.70003",
+                "doi:10.1002/vjch.70001"
+              ]
+            }
+          ],
+          "note": "Volume 64 (2026) complete for issued issues through asOf 2026-10-21: 6 issues (5 regular issues through October 2026 plus Special Issue S1 from February 2026), 96 eligible research/review articles enumerated. Reconciled with user local catalog (2026/09d-OJS-Citation Statistics-VJC/data/vjmech_ojs_catalog.json) and Wiley issue DOIs. 12 paratext items excluded; 30 unassigned Online First articles excluded. Issue 6 scheduled for December 2026."
+        }
+      ],
+      "checkedAt": "2026-10-21",
+      "aliases": [],
+      "scopusCategories": [
+        {
+          "year": 2025,
+          "name": "General Chemistry",
+          "percentile": 43,
+          "rank": 227,
+          "total": 402,
+          "sourceUrl": "https://www.scopus.com/sourceid/21101043786"
+        }
+      ],
+      "localCitation": {
+        "sourceDirectory": "2026/09d-OJS-Citation Statistics-VJC",
+        "sourceFiles": [
+          {
+            "path": "2026/09d-OJS-Citation Statistics-VJC/data/vjmech-stats.json",
+            "sha256": "e569ed67b4fb1f208cd6db207d1ad5f03f375bd3bf07f63f45703268b155c5d9"
+          },
+          {
+            "path": "2026/09d-OJS-Citation Statistics-VJC/data/vjmech_ojs_catalog.json",
+            "sha256": "695ed485051384b9b493068ae62b2fdc9e52a619e1cfb1c50440ef5aaea77e44"
+          },
+          {
+            "path": "2026/09d-OJS-Citation Statistics-VJC/data/citation-audit.json",
+            "sha256": "385d1b15638fef9df78411342d778b14564e7a68bd445c8210facafd8e09e8be"
+          },
+          {
+            "path": "2026/09d-OJS-Citation Statistics-VJC/data/vjmech-stats-gz.txt",
+            "sha256": "4ffea3954bb1c3fb4f2e692f2b1f5f31f2b8907db01444785173f2b1f5281ae3"
+          },
+          {
+            "path": "2026/09d-OJS-Citation Statistics-VJC/data/scopus-exports/VJCH.csv",
+            "sha256": "d2fb47b4cda3343acf6a2e0595dd30ba796cbe11dbaf809c85395151ce0978e8"
+          },
+          {
+            "path": "2026/09d-OJS-Citation Statistics-VJC/data/.last_synced_csv",
+            "sha256": "888022398fdfe58e5f0612b4d3a9b1357a9fad6f4873a93e2b151780fbef2936"
+          }
+        ],
+        "sourceExportDate": null,
+        "processedAt": "2026-10-19",
+        "publicSourceUrl": "https://vjs.ac.vn/vjchem/statistic",
+        "officialScopusMetric": false,
+        "citationSeries": [
+          {
+            "year": 2007,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2008,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2009,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2010,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2011,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2012,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2013,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2014,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2015,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2016,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2017,
+            "citingDocuments": 4,
+            "confirmedCitationEdges": 4
+          },
+          {
+            "year": 2018,
+            "citingDocuments": 20,
+            "confirmedCitationEdges": 20
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 52,
+            "confirmedCitationEdges": 59
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 143,
+            "confirmedCitationEdges": 158
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 268,
+            "confirmedCitationEdges": 289
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 470,
+            "confirmedCitationEdges": 493
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 609,
+            "confirmedCitationEdges": 675
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 940,
+            "confirmedCitationEdges": 1008
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 1170,
+            "confirmedCitationEdges": 1229
+          },
+          {
+            "year": 2026,
+            "citingDocuments": 1010,
+            "confirmedCitationEdges": 1064
+          }
+        ],
+        "selfCalculatedSeries": [
+          {
+            "year": 2015,
+            "value": 0,
+            "numerator": 0,
+            "denominator": 26,
+            "window": "2012-2015"
+          },
+          {
+            "year": 2016,
+            "value": 0.04,
+            "numerator": 1,
+            "denominator": 26,
+            "window": "2013-2016"
+          },
+          {
+            "year": 2017,
+            "value": 0.06,
+            "numerator": 3,
+            "denominator": 50,
+            "window": "2014-2017"
+          },
+          {
+            "year": 2018,
+            "value": 0.15,
+            "numerator": 24,
+            "denominator": 158,
+            "window": "2015-2018"
+          },
+          {
+            "year": 2019,
+            "value": 0.3,
+            "numerator": 77,
+            "denominator": 255,
+            "window": "2016-2019"
+          },
+          {
+            "year": 2020,
+            "value": 0.62,
+            "numerator": 234,
+            "denominator": 378,
+            "window": "2017-2020"
+          },
+          {
+            "year": 2021,
+            "value": 1,
+            "numerator": 466,
+            "denominator": 468,
+            "window": "2018-2021"
+          },
+          {
+            "year": 2022,
+            "value": 1.44,
+            "numerator": 668,
+            "denominator": 463,
+            "window": "2019-2022"
+          },
+          {
+            "year": 2023,
+            "value": 1.77,
+            "numerator": 832,
+            "denominator": 471,
+            "window": "2020-2023"
+          },
+          {
+            "year": 2024,
+            "value": 2.32,
+            "numerator": 1084,
+            "denominator": 467,
+            "window": "2021-2024"
+          },
+          {
+            "year": 2025,
+            "value": 2.95,
+            "numerator": 1326,
+            "denominator": 450,
+            "window": "2022-2025"
+          },
+          {
+            "year": 2026,
+            "value": 3.3,
+            "numerator": 1561,
+            "denominator": 473,
+            "window": "2023-2026"
+          }
+        ],
+        "definition": "Citing documents and edges are a catalog-matched subset by citing-document year. Four-year ratio counts matched citations within the window to catalog articles dated in that window, divided by catalog articles in that window. It is not official CiteScore/Tracker; a zero denominator is unavailable."
+      }
+    },
+    {
+      "id": "vjes",
+      "code": "VJES",
+      "title": "Vietnam Journal of Earth Sciences",
+      "titleVi": "Tạp chí Các Khoa học về Trái đất",
+      "subject": "Khoa học Trái đất",
+      "website": "https://vjs.ac.vn/index.php/jse",
+      "publisher": "Publishing House for Science and Technology, Vietnam Academy of Science and Technology",
+      "issn": "2615-9783",
+      "eissn": "2815-5890",
+      "formerTitles": [
+        {
+          "title": "Tạp chí Sinh vật - Địa học",
+          "issn": null,
+          "until": 1978
+        },
+        {
+          "title": "Tạp chí Các Khoa học về Trái Đất",
+          "issn": "0866-7187",
+          "until": 2017
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vjs.ac.vn/index.php/jse/about#publicationFrequency"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/jse",
+        "https://vjs.ac.vn/index.php/jse/about",
+        "https://vjs.ac.vn/jse/indexing",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21101039869",
+          "checkedAt": "2026-10-21",
+          "coverage": "2018-2026 (Years currently covered by Scopus: from 2018 to 2026)"
+        },
+        {
+          "system": "WoS",
+          "collection": "ESCI",
+          "status": "listed",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/jse/indexing",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/api/search/journals/issn:2615-9783",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 48 No. 3 (2026)",
+        "published": "2026-09-07",
+        "url": "https://vjs.ac.vn/jse/issue/view/1440"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 31,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jse/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol47n1",
+              "title": "Vol. 47 No. 1 (2025)",
+              "published": "2025-04-16",
+              "url": "https://vjs.ac.vn/jse/issue/view/1383",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/21329",
+                "doi:10.15625/2615-9783/21539",
+                "doi:10.15625/2615-9783/21658",
+                "doi:10.15625/2615-9783/21910",
+                "doi:10.15625/2615-9783/21915",
+                "doi:10.15625/2615-9783/22189",
+                "doi:10.15625/2615-9783/22194"
+              ]
+            },
+            {
+              "id": "vol47n2",
+              "title": "Vol. 47 No. 2 (2025)",
+              "published": "2025-06-30",
+              "url": "https://vjs.ac.vn/jse/issue/view/1392",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/22192",
+                "doi:10.15625/2615-9783/22196",
+                "doi:10.15625/2615-9783/22438",
+                "doi:10.15625/2615-9783/22479",
+                "doi:10.15625/2615-9783/22702",
+                "doi:10.15625/2615-9783/22704",
+                "doi:10.15625/2615-9783/23010",
+                "doi:10.15625/2615-9783/23027"
+              ]
+            },
+            {
+              "id": "vol47n3",
+              "title": "Vol. 47 No. 3 (2025)",
+              "published": "2025-09-29",
+              "url": "https://vjs.ac.vn/jse/issue/view/1401",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/22711",
+                "doi:10.15625/2615-9783/23115",
+                "doi:10.15625/2615-9783/23225",
+                "doi:10.15625/2615-9783/23301",
+                "doi:10.15625/2615-9783/23402",
+                "doi:10.15625/2615-9783/23431",
+                "doi:10.15625/2615-9783/23462",
+                "doi:10.15625/2615-9783/23484"
+              ]
+            },
+            {
+              "id": "vol47n4",
+              "title": "Vol. 47 No. 4 (2025)",
+              "published": "2025-11-18",
+              "url": "https://vjs.ac.vn/jse/issue/view/1307",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/23607",
+                "doi:10.15625/2615-9783/23628",
+                "doi:10.15625/2615-9783/23664",
+                "doi:10.15625/2615-9783/23656",
+                "doi:10.15625/2615-9783/23665",
+                "doi:10.15625/2615-9783/23669",
+                "doi:10.15625/2615-9783/23733",
+                "doi:10.15625/2615-9783/23783"
+              ]
+            }
+          ],
+          "note": "Full annual 2025 output verified from official archive across 4 published regular issues."
+        },
+        {
+          "year": 2026,
+          "papers": 24,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jse/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol48n1",
+              "title": "Vol. 48 No. 1 (2026)",
+              "published": "2026-03-09",
+              "url": "https://vjs.ac.vn/jse/issue/view/1419",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/23795",
+                "doi:10.15625/2615-9783/23802",
+                "doi:10.15625/2615-9783/23814",
+                "doi:10.15625/2615-9783/23821",
+                "doi:10.15625/2615-9783/23833",
+                "doi:10.15625/2615-9783/23973",
+                "doi:10.15625/2615-9783/24022",
+                "doi:10.15625/2615-9783/24023"
+              ]
+            },
+            {
+              "id": "vol48n2",
+              "title": "Vol. 48 No. 2 (2026)",
+              "published": "2026-04-23",
+              "url": "https://vjs.ac.vn/jse/issue/view/1424",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/23990",
+                "doi:10.15625/2615-9783/24026",
+                "doi:10.15625/2615-9783/23852",
+                "doi:10.15625/2615-9783/24030",
+                "doi:10.15625/2615-9783/24214",
+                "doi:10.15625/2615-9783/24315",
+                "doi:10.15625/2615-9783/24344",
+                "doi:10.15625/2615-9783/24406",
+                "doi:10.15625/2615-9783/24459"
+              ]
+            },
+            {
+              "id": "vol48n3",
+              "title": "Vol. 48 No. 3 (2026)",
+              "published": "2026-09-07",
+              "url": "https://vjs.ac.vn/jse/issue/view/1440",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/24020",
+                "doi:10.15625/2615-9783/24463",
+                "doi:10.15625/2615-9783/24038",
+                "doi:10.15625/2615-9783/24217",
+                "doi:10.15625/2615-9783/24496",
+                "doi:10.15625/2615-9783/24522",
+                "doi:10.15625/2615-9783/24314"
+              ]
+            }
+          ],
+          "note": "Year-to-date 2026 output as of 2026-10-21 across 3 published regular issues. Unassigned Online First articles excluded per contract."
+        }
+      ],
+      "checkedAt": "2026-10-21",
+      "aliases": [],
+      "localCitation": {
+        "sourceDirectory": "2026/09c-OJS-Citation Statistics-VJES",
+        "sourceFiles": [
+          {
+            "path": "2026/09c-OJS-Citation Statistics-VJES/data/vjmech-stats.json",
+            "sha256": "bcb9a90dfd60370b386b831b825cc8e5de910adae191e3efd5c0571cfcfb1715"
+          },
+          {
+            "path": "2026/09c-OJS-Citation Statistics-VJES/data/vjmech_ojs_catalog.json",
+            "sha256": "ede4d787cf2d3b7781f53f4ef5b9b4a52575cd6f2d07dbe47cbd7b454bf827dc"
+          },
+          {
+            "path": "2026/09c-OJS-Citation Statistics-VJES/data/citation-audit.json",
+            "sha256": "730e901c8aac52dac58251321d2c26b9f831783ad22fe25798c4fe208c79145e"
+          },
+          {
+            "path": "2026/09c-OJS-Citation Statistics-VJES/data/vjmech-stats-gz.txt",
+            "sha256": "e591372659698f2c9d3d108191338a536f8616b65df00bdc1bf362a88cf9eec7"
+          },
+          {
+            "path": "2026/09c-OJS-Citation Statistics-VJES/data/scopus-exports/VJES.csv",
+            "sha256": "f9cc82d86302f209737fbe3ba7f19ee3a99043343fb052e3645ab54db026cf9c"
+          },
+          {
+            "path": "2026/09c-OJS-Citation Statistics-VJES/data/.last_synced_csv",
+            "sha256": "d895d4def28e2d088da88741b6366219d284648c6b8000f21463672a4ad4973a"
+          }
+        ],
+        "sourceExportDate": null,
+        "processedAt": "2026-10-19",
+        "publicSourceUrl": "https://vjs.ac.vn/jse/statistic",
+        "officialScopusMetric": false,
+        "citationSeries": [
+          {
+            "year": 2014,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2015,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2016,
+            "citingDocuments": 2,
+            "confirmedCitationEdges": 2
+          },
+          {
+            "year": 2017,
+            "citingDocuments": 5,
+            "confirmedCitationEdges": 7
+          },
+          {
+            "year": 2018,
+            "citingDocuments": 31,
+            "confirmedCitationEdges": 38
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 57,
+            "confirmedCitationEdges": 97
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 92,
+            "confirmedCitationEdges": 187
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 170,
+            "confirmedCitationEdges": 293
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 209,
+            "confirmedCitationEdges": 340
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 224,
+            "confirmedCitationEdges": 358
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 317,
+            "confirmedCitationEdges": 500
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 332,
+            "confirmedCitationEdges": 473
+          },
+          {
+            "year": 2026,
+            "citingDocuments": 317,
+            "confirmedCitationEdges": 459
+          }
+        ],
+        "selfCalculatedSeries": [
+          {
+            "year": 2015,
+            "value": 0.01,
+            "numerator": 1,
+            "denominator": 75,
+            "window": "2012-2015"
+          },
+          {
+            "year": 2016,
+            "value": 0.02,
+            "numerator": 3,
+            "denominator": 127,
+            "window": "2013-2016"
+          },
+          {
+            "year": 2017,
+            "value": 0.06,
+            "numerator": 10,
+            "denominator": 163,
+            "window": "2014-2017"
+          },
+          {
+            "year": 2018,
+            "value": 0.23,
+            "numerator": 46,
+            "denominator": 196,
+            "window": "2015-2018"
+          },
+          {
+            "year": 2019,
+            "value": 0.62,
+            "numerator": 112,
+            "denominator": 182,
+            "window": "2016-2019"
+          },
+          {
+            "year": 2020,
+            "value": 1.25,
+            "numerator": 211,
+            "denominator": 169,
+            "window": "2017-2020"
+          },
+          {
+            "year": 2021,
+            "value": 1.75,
+            "numerator": 287,
+            "denominator": 164,
+            "window": "2018-2021"
+          },
+          {
+            "year": 2022,
+            "value": 2.97,
+            "numerator": 383,
+            "denominator": 129,
+            "window": "2019-2022"
+          },
+          {
+            "year": 2023,
+            "value": 3.44,
+            "numerator": 444,
+            "denominator": 129,
+            "window": "2020-2023"
+          },
+          {
+            "year": 2024,
+            "value": 3.98,
+            "numerator": 486,
+            "denominator": 122,
+            "window": "2021-2024"
+          },
+          {
+            "year": 2025,
+            "value": 4.39,
+            "numerator": 566,
+            "denominator": 129,
+            "window": "2022-2025"
+          },
+          {
+            "year": 2026,
+            "value": 4.18,
+            "numerator": 518,
+            "denominator": 124,
+            "window": "2023-2026"
+          }
+        ],
+        "definition": "Citing documents and edges are a catalog-matched subset by citing-document year. Four-year ratio counts matched citations within the window to catalog articles dated in that window, divided by catalog articles in that window. It is not official CiteScore/Tracker; a zero denominator is unavailable."
+      }
+    },
+    {
+      "id": "vjst",
+      "code": "VJST",
+      "title": "Vietnam Journal of Science and Technology",
+      "titleVi": "Tạp chí Khoa học và Công nghệ",
+      "subject": "Khoa học và công nghệ",
+      "website": "https://vjs.ac.vn/index.php/jst",
+      "publisher": "Publishing House for Science and Technology, Vietnam Academy of Science and Technology",
+      "issn": "2525-2518",
+      "eissn": "2815-5874",
+      "formerTitles": [
+        {
+          "title": "Tập san Khoa học Kỹ thuật",
+          "issn": null,
+          "until": 1996
+        },
+        {
+          "title": "Tạp chí Khoa học và Công nghệ",
+          "issn": "0866-708X",
+          "until": 2016
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 6,
+        "sourceUrl": "https://vjs.ac.vn/jst/journal-description"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/jst",
+        "https://vjs.ac.vn/jst/journal-description",
+        "https://vjs.ac.vn/jst/journal-history",
+        "https://vjs.ac.vn/jst/aims-and-scope",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853",
+          "checkedAt": "2026-10-21",
+          "coverage": "2019 to 2026"
+        },
+        {
+          "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "journal",
+          "sourceUrl": "http://www.asean-cites.org/index.php?r=contents%2Findex&id=9",
+          "checkedAt": "2026-10-21",
+          "coverage": "since 2017"
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/api/search/journals/issn:2525-2518",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 64 No. 5 (2026)",
+        "published": "2026-10-20",
+        "url": "https://vjs.ac.vn/jst/issue/view/vol64n5"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 89,
+          "issues": 6,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jst/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol63n1",
+              "title": "Vol. 63 No. 1 (2025)",
+              "published": "2025-02-28",
+              "url": "https://vjs.ac.vn/jst/issue/view/1376",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/19533",
+                "doi:10.15625/2525-2518/18104",
+                "doi:10.15625/2525-2518/18494",
+                "doi:10.15625/2525-2518/17618",
+                "doi:10.15625/2525-2518/18365",
+                "doi:10.15625/2525-2518/18444",
+                "doi:10.15625/2525-2518/20042",
+                "doi:10.15625/2525-2518/17622",
+                "doi:10.15625/2525-2518/19250",
+                "doi:10.15625/2525-2518/19196",
+                "doi:10.15625/2525-2518/17395",
+                "doi:10.15625/2525-2518/19648",
+                "doi:10.15625/2525-2518/20142",
+                "doi:10.15625/2525-2518/18306",
+                "doi:10.15625/2525-2518/18389"
+              ]
+            },
+            {
+              "id": "vol63n2",
+              "title": "Vol. 63 No. 2 (2025)",
+              "published": "2025-04-28",
+              "url": "https://vjs.ac.vn/jst/issue/view/1386",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/20044",
+                "doi:10.15625/2525-2518/19962",
+                "doi:10.15625/2525-2518/18307",
+                "doi:10.15625/2525-2518/18478",
+                "doi:10.15625/2525-2518/18489",
+                "doi:10.15625/2525-2518/18203",
+                "doi:10.15625/2525-2518/18515",
+                "doi:10.15625/2525-2518/18536",
+                "doi:10.15625/2525-2518/17630",
+                "doi:10.15625/2525-2518/18491",
+                "doi:10.15625/2525-2518/19061",
+                "doi:10.15625/2525-2518/18701",
+                "doi:10.15625/2525-2518/19491",
+                "doi:10.15625/2525-2518/19286",
+                "doi:10.15625/2525-2518/20303"
+              ]
+            },
+            {
+              "id": "vol63n3",
+              "title": "Vol. 63 No. 3 (2025)",
+              "published": "2025-06-26",
+              "url": "https://vjs.ac.vn/jst/issue/view/1388",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/20050",
+                "doi:10.15625/2525-2518/21671",
+                "doi:10.15625/2525-2518/18662",
+                "doi:10.15625/2525-2518/18442",
+                "doi:10.15625/2525-2518/18528",
+                "doi:10.15625/2525-2518/18603",
+                "doi:10.15625/2525-2518/20164",
+                "doi:10.15625/2525-2518/18543",
+                "doi:10.15625/2525-2518/18501",
+                "doi:10.15625/2525-2518/19096",
+                "doi:10.15625/2525-2518/19688",
+                "doi:10.15625/2525-2518/18876",
+                "doi:10.15625/2525-2518/19667",
+                "doi:10.15625/2525-2518/20974",
+                "doi:10.15625/2525-2518/19336",
+                "doi:10.15625/2525-2518/19409"
+              ]
+            },
+            {
+              "id": "vol63n4",
+              "title": "Vol. 63 No. 4 (2025)",
+              "published": "2025-08-28",
+              "url": "https://vjs.ac.vn/jst/issue/view/1394",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/21069",
+                "doi:10.15625/2525-2518/21269",
+                "doi:10.15625/2525-2518/18107",
+                "doi:10.15625/2525-2518/18781",
+                "doi:10.15625/2525-2518/20088",
+                "doi:10.15625/2525-2518/17628",
+                "doi:10.15625/2525-2518/19578",
+                "doi:10.15625/2525-2518/18013",
+                "doi:10.15625/2525-2518/17636",
+                "doi:10.15625/2525-2518/19478",
+                "doi:10.15625/2525-2518/19437",
+                "doi:10.15625/2525-2518/19447",
+                "doi:10.15625/2525-2518/19639",
+                "doi:10.15625/2525-2518/17640"
+              ]
+            },
+            {
+              "id": "vol63n5",
+              "title": "Vol. 63 No. 5 (2025)",
+              "published": "2025-10-23",
+              "url": "https://vjs.ac.vn/jst/issue/view/1397",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/20515",
+                "doi:10.15625/2525-2518/22558",
+                "doi:10.15625/2525-2518/18669",
+                "doi:10.15625/2525-2518/18333",
+                "doi:10.15625/2525-2518/18526",
+                "doi:10.15625/2525-2518/18533",
+                "doi:10.15625/2525-2518/18562",
+                "doi:10.15625/2525-2518/18511",
+                "doi:10.15625/2525-2518/18159",
+                "doi:10.15625/2525-2518/18519",
+                "doi:10.15625/2525-2518/18544",
+                "doi:10.15625/2525-2518/18571",
+                "doi:10.15625/2525-2518/18507",
+                "doi:10.15625/2525-2518/20703",
+                "doi:10.15625/2525-2518/22502"
+              ]
+            },
+            {
+              "id": "vol63n6",
+              "title": "Vol. 63 No. 6 (2025)",
+              "published": "2025-12-12",
+              "url": "https://vjs.ac.vn/jst/issue/view/1399",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/22909",
+                "doi:10.15625/2525-2518/22764",
+                "doi:10.15625/2525-2518/21955",
+                "doi:10.15625/2525-2518/18887",
+                "doi:10.15625/2525-2518/17649",
+                "doi:10.15625/2525-2518/18033",
+                "doi:10.15625/2525-2518/18110",
+                "doi:10.15625/2525-2518/19131",
+                "doi:10.15625/2525-2518/19189",
+                "doi:10.15625/2525-2518/19276",
+                "doi:10.15625/2525-2518/19366",
+                "doi:10.15625/2525-2518/21587",
+                "doi:10.15625/2525-2518/20573",
+                "doi:10.15625/2525-2518/19839"
+              ]
+            }
+          ],
+          "note": "Full annual 2025 output verified from official archive across 6 published regular issues (89 unique research papers with valid DOIs). Reconciled with user's local catalog (vjmech_ojs_catalog.json, 88 records): the local catalog lacks issue groupings (catalog.issues is empty) and groups articles by online submission/posting date rather than published volume year. Consequently, the local catalog includes 16 unissued Online First articles (volume=None, issue=''), 6 of which were later assigned to 2026 issues and 10 remain unissued, while omitting 17 articles published in Vol. 63 (2025) whose online-first dates were in 2023 or 2024. All 89 articles in this dataset are verified directly from Vol. 63 No. 1-6 official issue pages."
+        },
+        {
+          "year": 2026,
+          "papers": 76,
+          "issues": 5,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jst/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol64n1",
+              "title": "Vol. 64 No. 1 (2026)",
+              "published": "2026-02-26",
+              "url": "https://vjs.ac.vn/jst/issue/view/vol64n1",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/19637",
+                "doi:10.15625/2525-2518/21229",
+                "doi:10.15625/2525-2518/18785",
+                "doi:10.15625/2525-2518/19970",
+                "doi:10.15625/2525-2518/17983",
+                "doi:10.15625/2525-2518/18599",
+                "doi:10.15625/2525-2518/18821",
+                "doi:10.15625/2525-2518/19643",
+                "doi:10.15625/2525-2518/21218",
+                "doi:10.15625/2525-2518/19181",
+                "doi:10.15625/2525-2518/22381",
+                "doi:10.15625/2525-2518/22956",
+                "doi:10.15625/2525-2518/20799",
+                "doi:10.15625/2525-2518/22041"
+              ]
+            },
+            {
+              "id": "vol64n2",
+              "title": "Vol. 64 No. 2 (2026)",
+              "published": "2026-04-25",
+              "url": "https://vjs.ac.vn/jst/issue/view/vol64n2",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/22090",
+                "doi:10.15625/2525-2518/22121",
+                "doi:10.15625/2525-2518/18811",
+                "doi:10.15625/2525-2518/18889",
+                "doi:10.15625/2525-2518/20030",
+                "doi:10.15625/2525-2518/18289",
+                "doi:10.15625/2525-2518/18386",
+                "doi:10.15625/2525-2518/18545",
+                "doi:10.15625/2525-2518/20757",
+                "doi:10.15625/2525-2518/19492",
+                "doi:10.15625/2525-2518/20449",
+                "doi:10.15625/2525-2518/21348",
+                "doi:10.15625/2525-2518/21463",
+                "doi:10.15625/2525-2518/21672"
+              ]
+            },
+            {
+              "id": "vol64n3",
+              "title": "Vol. 64 No. 3 (2026)",
+              "published": "2026-06-28",
+              "url": "https://vjs.ac.vn/jst/issue/view/vol64n3",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/22424",
+                "doi:10.15625/2525-2518/23015",
+                "doi:10.15625/2525-2518/19235",
+                "doi:10.15625/2525-2518/19579",
+                "doi:10.15625/2525-2518/20054",
+                "doi:10.15625/2525-2518/21503",
+                "doi:10.15625/2525-2518/18299",
+                "doi:10.15625/2525-2518/19779",
+                "doi:10.15625/2525-2518/20662",
+                "doi:10.15625/2525-2518/20734",
+                "doi:10.15625/2525-2518/21444",
+                "doi:10.15625/2525-2518/20566",
+                "doi:10.15625/2525-2518/20664",
+                "doi:10.15625/2525-2518/21728",
+                "doi:10.15625/2525-2518/21773",
+                "doi:10.15625/2525-2518/21413"
+              ]
+            },
+            {
+              "id": "vol64n4",
+              "title": "Vol. 64 No. 4 (2026)",
+              "published": "2026-08-17",
+              "url": "https://vjs.ac.vn/jst/issue/view/vol64n4",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/23683",
+                "doi:10.15625/2525-2518/23813",
+                "doi:10.15625/2525-2518/21761",
+                "doi:10.15625/2525-2518/22294",
+                "doi:10.15625/2525-2518/22376",
+                "doi:10.15625/2525-2518/22395",
+                "doi:10.15625/2525-2518/19390",
+                "doi:10.15625/2525-2518/19614",
+                "doi:10.15625/2525-2518/20666",
+                "doi:10.15625/2525-2518/21258",
+                "doi:10.15625/2525-2518/22026",
+                "doi:10.15625/2525-2518/21972",
+                "doi:10.15625/2525-2518/22068",
+                "doi:10.15625/2525-2518/22656",
+                "doi:10.15625/2525-2518/20241",
+                "doi:10.15625/2525-2518/21391",
+                "doi:10.15625/2525-2518/21929"
+              ]
+            },
+            {
+              "id": "vol64n5",
+              "title": "Vol. 64 No. 5 (2026)",
+              "published": "2026-10-20",
+              "url": "https://vjs.ac.vn/jst/issue/view/vol64n5",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/23881",
+                "doi:10.15625/2525-2518/23902",
+                "doi:10.15625/2525-2518/18497",
+                "doi:10.15625/2525-2518/19326",
+                "doi:10.15625/2525-2518/19436",
+                "doi:10.15625/2525-2518/18585",
+                "doi:10.15625/2525-2518/19112",
+                "doi:10.15625/2525-2518/19150",
+                "doi:10.15625/2525-2518/19563",
+                "doi:10.15625/2525-2518/19751",
+                "doi:10.15625/2525-2518/20417",
+                "doi:10.15625/2525-2518/19754",
+                "doi:10.15625/2525-2518/20423",
+                "doi:10.15625/2525-2518/23094",
+                "doi:10.15625/2525-2518/21035"
+              ]
+            }
+          ],
+          "note": "Year-to-date 2026 output as of 2026-10-21 verified across 5 published regular issues (76 unique research papers with valid DOIs). Latest issue Vol. 64 No. 5 was published on 2026-10-20. Reconciled with user's local catalog (78 records): local catalog was exported prior to Vol. 64 No. 5 (which contains 15 articles, 12 new to local catalog) and includes 25 unissued Online First articles (volume=None, issue=''), while omitting 11 articles published in Vol. 64 whose online-first dates were in 2024 or 2025. Per contract, unassigned Online First articles are excluded until published in a numbered regular issue."
+        }
+      ],
+      "checkedAt": "2026-10-21",
+      "aliases": [],
+      "scopusCategories": [
+        {
+          "year": 2025,
+          "name": "Electrical and Electronic Engineering",
+          "percentile": 20,
+          "rank": 821,
+          "total": 1030,
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853"
+        }
+      ],
+      "localCitation": {
+        "sourceDirectory": "2026/09b-OJS-Citation Statistics-VJST",
+        "sourceFiles": [
+          {
+            "path": "2026/09b-OJS-Citation Statistics-VJST/data/vjmech-stats.json",
+            "sha256": "efbedc6c4e52a69bd84f25dd2230bb44ed99c1902229dd765c353a82092053cc"
+          },
+          {
+            "path": "2026/09b-OJS-Citation Statistics-VJST/data/vjmech_ojs_catalog.json",
+            "sha256": "23087bae1cf0bb46cfc42e2daa2e3b9353899a9b1fa74ad0a56e1168c83d2dfc"
+          },
+          {
+            "path": "2026/09b-OJS-Citation Statistics-VJST/data/scopus-exports/VJST.csv",
+            "sha256": "5da66d30f9594415954629f7ad2b4428bb12f51ee527ea084c2e69f461c8a47d"
+          }
+        ],
+        "sourceExportDate": null,
+        "processedAt": "2026-10-19",
+        "publicSourceUrl": "https://vjs.ac.vn/jst/statistic",
+        "officialScopusMetric": false,
+        "citationSeries": [
+          {
+            "year": 2014,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2015,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2016,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2017,
+            "citingDocuments": 2,
+            "confirmedCitationEdges": 2
+          },
+          {
+            "year": 2018,
+            "citingDocuments": 20,
+            "confirmedCitationEdges": 22
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 94,
+            "confirmedCitationEdges": 101
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 189,
+            "confirmedCitationEdges": 199
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 239,
+            "confirmedCitationEdges": 259
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 264,
+            "confirmedCitationEdges": 295
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 312,
+            "confirmedCitationEdges": 328
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 394,
+            "confirmedCitationEdges": 419
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 540,
+            "confirmedCitationEdges": 563
+          },
+          {
+            "year": 2026,
+            "citingDocuments": 524,
+            "confirmedCitationEdges": 557
+          }
+        ],
+        "selfCalculatedSeries": [
+          {
+            "year": 2015,
+            "value": 0,
+            "numerator": 0,
+            "denominator": 27,
+            "window": "2012-2015"
+          },
+          {
+            "year": 2016,
+            "value": 0.01,
+            "numerator": 1,
+            "denominator": 106,
+            "window": "2013-2016"
+          },
+          {
+            "year": 2017,
+            "value": 0.01,
+            "numerator": 2,
+            "denominator": 199,
+            "window": "2014-2017"
+          },
+          {
+            "year": 2018,
+            "value": 0.03,
+            "numerator": 23,
+            "denominator": 862,
+            "window": "2015-2018"
+          },
+          {
+            "year": 2019,
+            "value": 0.13,
+            "numerator": 123,
+            "denominator": 948,
+            "window": "2016-2019"
+          },
+          {
+            "year": 2020,
+            "value": 0.3,
+            "numerator": 301,
+            "denominator": 1005,
+            "window": "2017-2020"
+          },
+          {
+            "year": 2021,
+            "value": 0.43,
+            "numerator": 423,
+            "denominator": 993,
+            "window": "2018-2021"
+          },
+          {
+            "year": 2022,
+            "value": 0.57,
+            "numerator": 243,
+            "denominator": 423,
+            "window": "2019-2022"
+          },
+          {
+            "year": 2023,
+            "value": 0.61,
+            "numerator": 244,
+            "denominator": 401,
+            "window": "2020-2023"
+          },
+          {
+            "year": 2024,
+            "value": 0.58,
+            "numerator": 218,
+            "denominator": 377,
+            "window": "2021-2024"
+          },
+          {
+            "year": 2025,
+            "value": 0.88,
+            "numerator": 337,
+            "denominator": 384,
+            "window": "2022-2025"
+          },
+          {
+            "year": 2026,
+            "value": 1.15,
+            "numerator": 426,
+            "denominator": 369,
+            "window": "2023-2026"
+          }
+        ],
+        "definition": "Citing documents and edges are a catalog-matched subset by citing-document year. Four-year ratio counts matched citations within the window to catalog articles dated in that window, divided by catalog articles in that window. It is not official CiteScore/Tracker; a zero denominator is unavailable."
+      }
+    },
+    {
+      "id": "cip",
+      "code": "CIP",
+      "title": "Communications in Physics",
+      "titleVi": "Tạp chí Vật lý",
+      "subject": "Vật lý",
+      "website": "https://vjs.ac.vn/index.php/cip",
+      "publisher": "Publishing House for Science and Technology, Vietnam Academy of Science and Technology",
+      "issn": "0868-3166",
+      "eissn": "2815-5947",
+      "formerTitles": [
+        {
+          "title": "Tạp chí Vật lý",
+          "issn": "0868-3166",
+          "until": 1990
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vjs.ac.vn/cip/publication-frequency"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/cip",
+        "https://vjs.ac.vn/cip/journal-description",
+        "https://vjs.ac.vn/cip/aims-and-scope",
+        "https://vjs.ac.vn/cip/indexing",
+        "https://vjs.ac.vn/cip/publication-frequency",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21101380177",
+          "checkedAt": "2026-10-21",
+          "coverage": "2022-2026 (Years currently covered by Scopus: from 2022 to 2026)"
+        },
+        {
+          "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/toc/0868-3166",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 36 No. 3 (2026)",
+        "published": "2026-09-15",
+        "url": "https://vjs.ac.vn/cip/issue/view/1428"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 34,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/cip/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol35n1",
+              "title": "Vol. 35 No. 1 (2025)",
+              "published": "2025-01-08",
+              "url": "https://vjs.ac.vn/cip/issue/view/1375",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/22081",
+                "doi:10.15625/0868-3166/21959",
+                "doi:10.15625/0868-3166/21740",
+                "doi:10.15625/0868-3166/21631",
+                "doi:10.15625/0868-3166/21622",
+                "doi:10.15625/0868-3166/21614",
+                "doi:10.15625/0868-3166/21873",
+                "doi:10.15625/0868-3166/22079"
+              ]
+            },
+            {
+              "id": "vol35n2",
+              "title": "Vol. 35 No. 2 (2025)",
+              "published": "2025-05-29",
+              "url": "https://vjs.ac.vn/cip/issue/view/1384",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/22369",
+                "doi:10.15625/0868-3166/21623",
+                "doi:10.15625/0868-3166/22080",
+                "doi:10.15625/0868-3166/22638",
+                "doi:10.15625/0868-3166/22706",
+                "doi:10.15625/0868-3166/21541",
+                "doi:10.15625/0868-3166/22113",
+                "doi:10.15625/0868-3166/21857"
+              ]
+            },
+            {
+              "id": "vol35n3",
+              "title": "Vol. 35 No. 3 (2025)",
+              "published": "2025-09-24",
+              "url": "https://vjs.ac.vn/cip/issue/view/1393",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/22722",
+                "doi:10.15625/0868-3166/22683",
+                "doi:10.15625/0868-3166/22759",
+                "doi:10.15625/0868-3166/21634",
+                "doi:10.15625/0868-3166/22700",
+                "doi:10.15625/0868-3166/22195",
+                "doi:10.15625/0868-3166/22594",
+                "doi:10.15625/0868-3166/22403",
+                "doi:10.15625/0868-3166/22724"
+              ]
+            },
+            {
+              "id": "vol35n4",
+              "title": "Vol. 35 No. 4 (2025)",
+              "published": "2025-12-09",
+              "url": "https://vjs.ac.vn/cip/issue/view/1400",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/23303",
+                "doi:10.15625/0868-3166/23107",
+                "doi:10.15625/0868-3166/23002",
+                "doi:10.15625/0868-3166/22766",
+                "doi:10.15625/0868-3166/22929",
+                "doi:10.15625/0868-3166/22650",
+                "doi:10.15625/0868-3166/22871",
+                "doi:10.15625/0868-3166/23365",
+                "doi:10.15625/0868-3166/22744"
+              ]
+            }
+          ],
+          "note": "Full annual 2025 output verified from official archive across 4 published regular issues (34 research papers). Reconciled with local catalog: exactly matches the 34 article records in the local catalog."
+        },
+        {
+          "year": 2026,
+          "papers": 30,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/cip/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol36n1",
+              "title": "Vol. 36 No. 1 (2026)",
+              "published": "2026-03-05",
+              "url": "https://vjs.ac.vn/cip/issue/view/1418",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/23939",
+                "doi:10.15625/0868-3166/23876",
+                "doi:10.15625/0868-3166/23350",
+                "doi:10.15625/0868-3166/23333",
+                "doi:10.15625/0868-3166/23473",
+                "doi:10.15625/0868-3166/23580",
+                "doi:10.15625/0868-3166/23283",
+                "doi:10.15625/0868-3166/23264",
+                "doi:10.15625/0868-3166/23622",
+                "doi:10.15625/0868-3166/22927"
+              ]
+            },
+            {
+              "id": "vol36n2",
+              "title": "Vol. 36 No. 2 (2026)",
+              "published": "2026-06-09",
+              "url": "https://vjs.ac.vn/cip/issue/view/1407",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/24012",
+                "doi:10.15625/0868-3166/23767",
+                "doi:10.15625/0868-3166/23523",
+                "doi:10.15625/0868-3166/23736",
+                "doi:10.15625/0868-3166/23659",
+                "doi:10.15625/0868-3166/24331",
+                "doi:10.15625/0868-3166/23242",
+                "doi:10.15625/0868-3166/23633",
+                "doi:10.15625/0868-3166/23831",
+                "doi:10.15625/0868-3166/23649"
+              ]
+            },
+            {
+              "id": "vol36n3",
+              "title": "Vol. 36 No. 3 (2026)",
+              "published": "2026-09-15",
+              "url": "https://vjs.ac.vn/cip/issue/view/1428",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/24281",
+                "doi:10.15625/0868-3166/24116",
+                "doi:10.15625/0868-3166/24399",
+                "doi:10.15625/0868-3166/23777",
+                "doi:10.15625/0868-3166/23911",
+                "doi:10.15625/0868-3166/24092",
+                "doi:10.15625/0868-3166/23866",
+                "doi:10.15625/0868-3166/23691",
+                "doi:10.15625/0868-3166/24093",
+                "doi:10.15625/0868-3166/23058"
+              ]
+            }
+          ],
+          "note": "Year-to-date 2026 output as of 2026-10-21 across 3 published regular issues (30 research papers; Vol. 36 No. 1, 2, 3 with 10 papers each). Reconciled with local catalog: local catalog includes 26 numbered issue articles and 8 unnumbered/forthcoming articles; Vol. 36 No. 4 is forthcoming and excluded per contract."
+        }
+      ],
+      "checkedAt": "2026-10-21",
+      "aliases": [],
+      "localCitation": {
+        "sourceDirectory": "2026/09a-OJS-Citation Statistics-CIP",
+        "sourceFiles": [
+          {
+            "path": "2026/09a-OJS-Citation Statistics-CIP/data/vjmech-stats.json",
+            "sha256": "f2d0fec7fc71fff67edd670c655abdf2895a4f554faaded0e449055bb53453ab"
+          },
+          {
+            "path": "2026/09a-OJS-Citation Statistics-CIP/data/vjmech_ojs_catalog.json",
+            "sha256": "a1998f5ee2387ba5761f956b8c8a66be5d5410b33548db92deb8e2c8da5634ca"
+          },
+          {
+            "path": "2026/09a-OJS-Citation Statistics-CIP/data/scopus-exports/CIP.csv",
+            "sha256": "fc56a72679207270a65d5c79f83ecfee9d9f3cdbcd6034e4a9ee20c27c35fa68"
+          }
+        ],
+        "sourceExportDate": null,
+        "processedAt": "2026-10-19",
+        "publicSourceUrl": "https://vjs.ac.vn/cip/statistic",
+        "officialScopusMetric": false,
+        "citationSeries": [
+          {
+            "year": 2007,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2008,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2009,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2010,
+            "citingDocuments": 2,
+            "confirmedCitationEdges": 2
+          },
+          {
+            "year": 2011,
+            "citingDocuments": 4,
+            "confirmedCitationEdges": 4
+          },
+          {
+            "year": 2012,
+            "citingDocuments": 3,
+            "confirmedCitationEdges": 3
+          },
+          {
+            "year": 2013,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2014,
+            "citingDocuments": 3,
+            "confirmedCitationEdges": 5
+          },
+          {
+            "year": 2015,
+            "citingDocuments": 3,
+            "confirmedCitationEdges": 5
+          },
+          {
+            "year": 2016,
+            "citingDocuments": 4,
+            "confirmedCitationEdges": 4
+          },
+          {
+            "year": 2017,
+            "citingDocuments": 4,
+            "confirmedCitationEdges": 4
+          },
+          {
+            "year": 2018,
+            "citingDocuments": 4,
+            "confirmedCitationEdges": 4
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 4,
+            "confirmedCitationEdges": 4
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 4,
+            "confirmedCitationEdges": 4
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 6,
+            "confirmedCitationEdges": 6
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 12,
+            "confirmedCitationEdges": 12
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 14,
+            "confirmedCitationEdges": 16
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 38,
+            "confirmedCitationEdges": 47
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 48,
+            "confirmedCitationEdges": 53
+          },
+          {
+            "year": 2026,
+            "citingDocuments": 66,
+            "confirmedCitationEdges": 76
+          }
+        ],
+        "selfCalculatedSeries": [
+          {
+            "year": 2015,
+            "value": 0.04,
+            "numerator": 9,
+            "denominator": 245,
+            "window": "2012-2015"
+          },
+          {
+            "year": 2016,
+            "value": 0.05,
+            "numerator": 11,
+            "denominator": 207,
+            "window": "2013-2016"
+          },
+          {
+            "year": 2017,
+            "value": 0.03,
+            "numerator": 6,
+            "denominator": 205,
+            "window": "2014-2017"
+          },
+          {
+            "year": 2018,
+            "value": 0.02,
+            "numerator": 4,
+            "denominator": 170,
+            "window": "2015-2018"
+          },
+          {
+            "year": 2019,
+            "value": 0.01,
+            "numerator": 2,
+            "denominator": 183,
+            "window": "2016-2019"
+          },
+          {
+            "year": 2020,
+            "value": 0,
+            "numerator": 0,
+            "denominator": 187,
+            "window": "2017-2020"
+          },
+          {
+            "year": 2021,
+            "value": 0.01,
+            "numerator": 2,
+            "denominator": 173,
+            "window": "2018-2021"
+          },
+          {
+            "year": 2022,
+            "value": 0.04,
+            "numerator": 8,
+            "denominator": 181,
+            "window": "2019-2022"
+          },
+          {
+            "year": 2023,
+            "value": 0.09,
+            "numerator": 15,
+            "denominator": 174,
+            "window": "2020-2023"
+          },
+          {
+            "year": 2024,
+            "value": 0.29,
+            "numerator": 48,
+            "denominator": 165,
+            "window": "2021-2024"
+          },
+          {
+            "year": 2025,
+            "value": 0.54,
+            "numerator": 87,
+            "denominator": 162,
+            "window": "2022-2025"
+          },
+          {
+            "year": 2026,
+            "value": 0.67,
+            "numerator": 100,
+            "denominator": 150,
+            "window": "2023-2026"
+          }
+        ],
+        "definition": "Citing documents and edges are a catalog-matched subset by citing-document year. Four-year ratio counts matched citations within the window to catalog articles dated in that window, divided by catalog articles in that window. It is not official CiteScore/Tracker; a zero denominator is unavailable."
+      }
+    },
+    {
+      "id": "vjmech",
+      "code": "VJMech",
+      "title": "Vietnam Journal of Mechanics",
+      "titleVi": "Tạp chí Cơ học",
+      "subject": "Cơ học",
+      "website": "https://vjs.ac.vn/index.php/vjmech",
+      "publisher": "Publishing House for Science and Technology, Vietnam Academy of Science and Technology",
+      "issn": "0866-7136",
+      "eissn": "2815-5882",
+      "formerTitles": [
+        {
+          "title": "Tạp chí Cơ học",
+          "issn": "0866-7136",
+          "until": 2004
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vjs.ac.vn/index.php/vjmech/about#frequency"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/vjmech",
+        "https://vjs.ac.vn/vjmech/about",
+        "https://vjs.ac.vn/vjmech/abstracting-and-indexing",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sources",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/vjmech/abstracting-and-indexing",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/toc/0866-7136",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 48 No. 3 (2026)",
+        "published": "2026-09-09",
+        "url": "https://vjs.ac.vn/vjmech/issue/view/vol48n3"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 24,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjmech/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol47n1",
+              "title": "Vol. 47 No. 1 (2025)",
+              "published": "2025-03-17",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol47n1",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/21276",
+                "doi:10.15625/0866-7136/21542",
+                "doi:10.15625/0866-7136/21586",
+                "doi:10.15625/0866-7136/21925",
+                "doi:10.15625/0866-7136/22165"
+              ]
+            },
+            {
+              "id": "vol47n2",
+              "title": "Vol. 47 No. 2 (2025)",
+              "published": "2025-06-27",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol47n2",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/21845",
+                "doi:10.15625/0866-7136/22011",
+                "doi:10.15625/0866-7136/22179",
+                "doi:10.15625/0866-7136/22318",
+                "doi:10.15625/0866-7136/22319",
+                "doi:10.15625/0866-7136/22333"
+              ]
+            },
+            {
+              "id": "vol47n3",
+              "title": "Vol. 47 No. 3 (2025)",
+              "published": "2025-09-30",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol47n3",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/21949",
+                "doi:10.15625/0866-7136/22269",
+                "doi:10.15625/0866-7136/22277",
+                "doi:10.15625/0866-7136/22285",
+                "doi:10.15625/0866-7136/22341",
+                "doi:10.15625/0866-7136/22383",
+                "doi:10.15625/0866-7136/22643"
+              ]
+            },
+            {
+              "id": "vol47n4",
+              "title": "Vol. 47 No. 4 (2025)",
+              "published": "2025-12-28",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol47n4",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/20921",
+                "doi:10.15625/0866-7136/22420",
+                "doi:10.15625/0866-7136/22777",
+                "doi:10.15625/0866-7136/23029",
+                "doi:10.15625/0866-7136/23163",
+                "doi:10.15625/0866-7136/23362"
+              ]
+            }
+          ],
+          "note": "Full annual 2025 output verified from official archive across 4 published regular issues (24 research papers). Reconciled with local catalog (25 records): 1 non-research memorial announcement (OJS id 22566, DOI 10.15625/0866-7136/22566, Prof. Nguyen Van Khang memorial in Vol. 47 No. 1) was excluded per contract criteria."
+        },
+        {
+          "year": 2026,
+          "papers": 20,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjmech/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol48n1",
+              "title": "Vol. 48 No. 1 (2026)",
+              "published": "2026-03-30",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol48n1",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/22664",
+                "doi:10.15625/0866-7136/23064",
+                "doi:10.15625/0866-7136/23272",
+                "doi:10.15625/0866-7136/23571",
+                "doi:10.15625/0866-7136/23632",
+                "doi:10.15625/0866-7136/23709",
+                "doi:10.15625/0866-7136/23920"
+              ]
+            },
+            {
+              "id": "vol48n2",
+              "title": "Vol. 48 No. 2 (2026)",
+              "published": "2026-06-25",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol48n2",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/23425",
+                "doi:10.15625/0866-7136/23483",
+                "doi:10.15625/0866-7136/23589",
+                "doi:10.15625/0866-7136/23630",
+                "doi:10.15625/0866-7136/23666",
+                "doi:10.15625/0866-7136/23703"
+              ]
+            },
+            {
+              "id": "vol48n3",
+              "title": "Vol. 48 No. 3 (2026)",
+              "published": "2026-09-09",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol48n3",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/23723",
+                "doi:10.15625/0866-7136/23737",
+                "doi:10.15625/0866-7136/23782",
+                "doi:10.15625/0866-7136/23885",
+                "doi:10.15625/0866-7136/23918",
+                "doi:10.15625/0866-7136/23994",
+                "doi:10.15625/0866-7136/24360"
+              ]
+            }
+          ],
+          "note": "Year-to-date 2026 output as of 2026-10-21 across 3 published regular issues (20 research papers). Reconciled with local catalog (43 records total): exactly matches the 20 numbered issue articles; the 23 unassigned Online First articles are excluded per contract."
+        }
+      ],
+      "checkedAt": "2026-10-21",
+      "aliases": [],
+      "localCitation": {
+        "sourceDirectory": "2026/09-OJS-Citation Statistics-VJMech",
+        "sourceFiles": [
+          {
+            "path": "2026/09-OJS-Citation Statistics-VJMech/data/vjmech-stats.json",
+            "sha256": "762c5c5be61781925de70fe5364a07af988f5383aa60aff06ccd61c177907709"
+          },
+          {
+            "path": "2026/09-OJS-Citation Statistics-VJMech/data/vjmech_ojs_catalog.json",
+            "sha256": "445efc92c08cf440ed63cd1da11f36f8b0611901065c8662bf1d106cac7920b1"
+          },
+          {
+            "path": "2026/09-OJS-Citation Statistics-VJMech/data/scopus-exports/export_03bd6b7b-2dca-4784-aa42-f720eaf72202_2026-10-17T104025.701747456.csv",
+            "sha256": "6a0508d2ee65c2e0b4107706f5b5953ee0a9279f54c827441a9f08cf42c3154a"
+          }
+        ],
+        "sourceExportDate": "2026-10-17T10:40:25.701747456",
+        "processedAt": "2026-10-20",
+        "publicSourceUrl": "https://vjs.ac.vn/vjmech/statistic",
+        "officialScopusMetric": false,
+        "citationSeries": [
+          {
+            "year": 2002,
+            "citingDocuments": 2,
+            "confirmedCitationEdges": 2
+          },
+          {
+            "year": 2003,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 2
+          },
+          {
+            "year": 2004,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2005,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2006,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2007,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2008,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2009,
+            "citingDocuments": 3,
+            "confirmedCitationEdges": 6
+          },
+          {
+            "year": 2010,
+            "citingDocuments": 5,
+            "confirmedCitationEdges": 5
+          },
+          {
+            "year": 2011,
+            "citingDocuments": 7,
+            "confirmedCitationEdges": 9
+          },
+          {
+            "year": 2012,
+            "citingDocuments": 18,
+            "confirmedCitationEdges": 20
+          },
+          {
+            "year": 2013,
+            "citingDocuments": 19,
+            "confirmedCitationEdges": 26
+          },
+          {
+            "year": 2014,
+            "citingDocuments": 19,
+            "confirmedCitationEdges": 21
+          },
+          {
+            "year": 2015,
+            "citingDocuments": 24,
+            "confirmedCitationEdges": 27
+          },
+          {
+            "year": 2016,
+            "citingDocuments": 36,
+            "confirmedCitationEdges": 40
+          },
+          {
+            "year": 2017,
+            "citingDocuments": 30,
+            "confirmedCitationEdges": 31
+          },
+          {
+            "year": 2018,
+            "citingDocuments": 37,
+            "confirmedCitationEdges": 46
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 41,
+            "confirmedCitationEdges": 52
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 47,
+            "confirmedCitationEdges": 53
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 87,
+            "confirmedCitationEdges": 93
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 103,
+            "confirmedCitationEdges": 113
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 103,
+            "confirmedCitationEdges": 109
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 129,
+            "confirmedCitationEdges": 137
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 149,
+            "confirmedCitationEdges": 179
+          },
+          {
+            "year": 2026,
+            "citingDocuments": 161,
+            "confirmedCitationEdges": 182
+          }
+        ],
+        "selfCalculatedSeries": [
+          {
+            "year": 2015,
+            "value": 0.08,
+            "numerator": 8,
+            "denominator": 104,
+            "window": "2012-2015"
+          },
+          {
+            "year": 2016,
+            "value": 0.06,
+            "numerator": 6,
+            "denominator": 98,
+            "window": "2013-2016"
+          },
+          {
+            "year": 2017,
+            "value": 0.07,
+            "numerator": 7,
+            "denominator": 99,
+            "window": "2014-2017"
+          },
+          {
+            "year": 2018,
+            "value": 0.14,
+            "numerator": 15,
+            "denominator": 104,
+            "window": "2015-2018"
+          },
+          {
+            "year": 2019,
+            "value": 0.14,
+            "numerator": 15,
+            "denominator": 105,
+            "window": "2016-2019"
+          },
+          {
+            "year": 2020,
+            "value": 0.18,
+            "numerator": 21,
+            "denominator": 116,
+            "window": "2017-2020"
+          },
+          {
+            "year": 2021,
+            "value": 0.5,
+            "numerator": 58,
+            "denominator": 115,
+            "window": "2018-2021"
+          },
+          {
+            "year": 2022,
+            "value": 0.64,
+            "numerator": 79,
+            "denominator": 123,
+            "window": "2019-2022"
+          },
+          {
+            "year": 2023,
+            "value": 0.85,
+            "numerator": 102,
+            "denominator": 120,
+            "window": "2020-2023"
+          },
+          {
+            "year": 2024,
+            "value": 0.86,
+            "numerator": 97,
+            "denominator": 113,
+            "window": "2021-2024"
+          },
+          {
+            "year": 2025,
+            "value": 0.79,
+            "numerator": 89,
+            "denominator": 112,
+            "window": "2022-2025"
+          },
+          {
+            "year": 2026,
+            "value": 1.14,
+            "numerator": 109,
+            "denominator": 96,
+            "window": "2023-2026"
+          }
+        ],
+        "definition": "Citing documents and edges are a catalog-matched subset by citing-document year. Four-year ratio counts matched citations within the window to catalog articles dated in that window, divided by catalog articles in that window. It is not official CiteScore/Tracker; a zero denominator is unavailable."
+      }
+    },
+    {
+      "id": "jcc",
+      "code": "JCC",
+      "title": "Journal of Computer Science and Cybernetics",
+      "titleVi": "Tạp chí Tin học và Điều khiển học",
+      "subject": "Tin học và điều khiển",
+      "website": "https://vjs.ac.vn/index.php/jcc",
+      "publisher": "Vietnam Academy of Science and Technology",
+      "issn": "1813-9663",
+      "eissn": null,
+      "formerTitles": [],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/journal-of-computer-sciences-and-cybernetics-tap-chi-tin-hoc-va-%C4%91ieu-khien-hoc--20047-438.html"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/jcc",
+        "https://vjs.ac.vn/jcc/issue/archive",
+        "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/journal-of-computer-sciences-and-cybernetics-tap-chi-tin-hoc-va-%C4%91ieu-khien-hoc--20047-438.html"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jcc",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jcc",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 42 No. 3 (2026)",
+        "published": "2026-06-24",
+        "url": "https://vjs.ac.vn/jcc/issue/view/1430"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 25,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/jcc/issue/archive",
+            "https://vjs.ac.vn/jcc/issue/view/1404",
+            "https://vjs.ac.vn/jcc/issue/view/1391",
+            "https://vjs.ac.vn/jcc/issue/view/1387",
+            "https://vjs.ac.vn/jcc/issue/view/1381"
+          ],
+          "issueItems": [
+            {
+              "id": "vol41n1",
+              "title": "Vol. 41 No. 1 (2025)",
+              "published": "2025-03-28",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1381",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/21668",
+                "doi:10.15625/1813-9663/21653",
+                "doi:10.15625/1813-9663/21637",
+                "doi:10.15625/1813-9663/21613",
+                "doi:10.15625/1813-9663/21537",
+                "doi:10.15625/1813-9663/20607",
+                "doi:10.15625/1813-9663/22140"
+              ]
+            },
+            {
+              "id": "vol41n2",
+              "title": "Vol. 41 No. 2 (2025)",
+              "published": "2025-06-28",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1391",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/22317",
+                "doi:10.15625/1813-9663/22522",
+                "doi:10.15625/1813-9663/21945",
+                "doi:10.15625/1813-9663/20349",
+                "doi:10.15625/1813-9663/21964",
+                "doi:10.15625/1813-9663/22071"
+              ]
+            },
+            {
+              "id": "vol41n3",
+              "title": "Vol. 41 No. 3 (2025)",
+              "published": "2025-06-06",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1387",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/22487",
+                "doi:10.15625/1813-9663/22770",
+                "doi:10.15625/1813-9663/23018",
+                "doi:10.15625/1813-9663/21055",
+                "doi:10.15625/1813-9663/20618",
+                "doi:10.15625/1813-9663/20525"
+              ]
+            },
+            {
+              "id": "vol41n4",
+              "title": "Vol. 41 No. 4 (2025)",
+              "published": "2025-11-07",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1404",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/22005",
+                "doi:10.15625/1813-9663/22535",
+                "doi:10.15625/1813-9663/23150",
+                "doi:10.15625/1813-9663/22884",
+                "doi:10.15625/1813-9663/23278",
+                "doi:10.15625/1813-9663/21772"
+              ]
+            }
+          ],
+          "note": "All four 2025 issue pages were read. Each page lists six or seven Articles entries, represented by DOI paper keys; total is 25 unique papers."
+        },
+        {
+          "year": 2026,
+          "papers": 18,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/jcc/issue/archive",
+            "https://vjs.ac.vn/jcc/issue/view/1430",
+            "https://vjs.ac.vn/jcc/issue/view/1426",
+            "https://vjs.ac.vn/jcc/issue/view/1417"
+          ],
+          "issueItems": [
+            {
+              "id": "vol42n1",
+              "title": "Vol. 42 No. 1 (2026)",
+              "published": "2026-02-28",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1417",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/23021",
+                "doi:10.15625/1813-9663/22518",
+                "doi:10.15625/1813-9663/22392",
+                "doi:10.15625/1813-9663/23095",
+                "doi:10.15625/1813-9663/23407",
+                "doi:10.15625/1813-9663/23414"
+              ]
+            },
+            {
+              "id": "vol42n2",
+              "title": "Vol. 42 No. 2 (2026)",
+              "published": "2026-05-07",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1426",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/23647",
+                "doi:10.15625/1813-9663/21114",
+                "doi:10.15625/1813-9663/24322",
+                "doi:10.15625/1813-9663/21899",
+                "doi:10.15625/1813-9663/22428",
+                "doi:10.15625/1813-9663/24199"
+              ]
+            },
+            {
+              "id": "vol42n3",
+              "title": "Vol. 42 No. 3 (2026)",
+              "published": "2026-06-24",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1430",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/23599",
+                "doi:10.15625/1813-9663/24229",
+                "doi:10.15625/1813-9663/23101",
+                "doi:10.15625/1813-9663/24220",
+                "doi:10.15625/1813-9663/24272",
+                "doi:10.15625/1813-9663/22832"
+              ]
+            }
+          ],
+          "note": "All three 2026 issue pages were read; six Articles entries per page yield 18 unique DOI paper keys. This is publication through 2026-06-24, not a full-year output."
+        }
+      ],
+      "checkedAt": "2026-10-21",
+      "aliases": [],
+      "localCitation": {
+        "sourceDirectory": "2026/09g-OJS-Citation Statistics-JCC",
+        "sourceFiles": [
+          {
+            "path": "2026/09g-OJS-Citation Statistics-JCC/data/vjmech-stats.json",
+            "sha256": "6c087a06fbfc249528c07da12a31b380b659460f8c89eb408b7c055a8679f4a6"
+          },
+          {
+            "path": "2026/09g-OJS-Citation Statistics-JCC/data/vjmech_ojs_catalog.json",
+            "sha256": "4e3f6679976c30cb2a8c45b0ff282ee28cb9d88d3743d9a595740f523488c64b"
+          },
+          {
+            "path": "2026/09g-OJS-Citation Statistics-JCC/data/scopus-exports/JCSC.csv",
+            "sha256": "fe7a872438719113af87faf084426695aef400b05e7ab598ead38d65e4eb3ebb"
+          }
+        ],
+        "sourceExportDate": null,
+        "processedAt": "2026-10-19",
+        "publicSourceUrl": "https://vjs.ac.vn/jcc/statistic",
+        "officialScopusMetric": false,
+        "citationSeries": [
+          {
+            "year": 2001,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2002,
+            "citingDocuments": 5,
+            "confirmedCitationEdges": 7
+          },
+          {
+            "year": 2003,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2004,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2005,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2006,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2007,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2008,
+            "citingDocuments": 4,
+            "confirmedCitationEdges": 4
+          },
+          {
+            "year": 2009,
+            "citingDocuments": 2,
+            "confirmedCitationEdges": 2
+          },
+          {
+            "year": 2010,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2011,
+            "citingDocuments": 6,
+            "confirmedCitationEdges": 6
+          },
+          {
+            "year": 2012,
+            "citingDocuments": 10,
+            "confirmedCitationEdges": 11
+          },
+          {
+            "year": 2013,
+            "citingDocuments": 4,
+            "confirmedCitationEdges": 4
+          },
+          {
+            "year": 2014,
+            "citingDocuments": 7,
+            "confirmedCitationEdges": 7
+          },
+          {
+            "year": 2015,
+            "citingDocuments": 13,
+            "confirmedCitationEdges": 14
+          },
+          {
+            "year": 2016,
+            "citingDocuments": 18,
+            "confirmedCitationEdges": 18
+          },
+          {
+            "year": 2017,
+            "citingDocuments": 23,
+            "confirmedCitationEdges": 26
+          },
+          {
+            "year": 2018,
+            "citingDocuments": 50,
+            "confirmedCitationEdges": 52
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 114,
+            "confirmedCitationEdges": 131
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 138,
+            "confirmedCitationEdges": 150
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 198,
+            "confirmedCitationEdges": 222
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 251,
+            "confirmedCitationEdges": 268
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 304,
+            "confirmedCitationEdges": 320
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 325,
+            "confirmedCitationEdges": 340
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 317,
+            "confirmedCitationEdges": 325
+          },
+          {
+            "year": 2026,
+            "citingDocuments": 274,
+            "confirmedCitationEdges": 290
+          }
+        ],
+        "selfCalculatedSeries": [
+          {
+            "year": 2015,
+            "value": 0.05,
+            "numerator": 35,
+            "denominator": 643,
+            "window": "2012-2015"
+          },
+          {
+            "year": 2016,
+            "value": 0.06,
+            "numerator": 25,
+            "denominator": 420,
+            "window": "2013-2016"
+          },
+          {
+            "year": 2017,
+            "value": 0.12,
+            "numerator": 43,
+            "denominator": 363,
+            "window": "2014-2017"
+          },
+          {
+            "year": 2018,
+            "value": 0.06,
+            "numerator": 27,
+            "denominator": 432,
+            "window": "2015-2018"
+          },
+          {
+            "year": 2019,
+            "value": 0.18,
+            "numerator": 69,
+            "denominator": 393,
+            "window": "2016-2019"
+          },
+          {
+            "year": 2020,
+            "value": 0.63,
+            "numerator": 112,
+            "denominator": 178,
+            "window": "2017-2020"
+          },
+          {
+            "year": 2021,
+            "value": 0.9,
+            "numerator": 168,
+            "denominator": 186,
+            "window": "2018-2021"
+          },
+          {
+            "year": 2022,
+            "value": 1.16,
+            "numerator": 123,
+            "denominator": 106,
+            "window": "2019-2022"
+          },
+          {
+            "year": 2023,
+            "value": 0.51,
+            "numerator": 49,
+            "denominator": 97,
+            "window": "2020-2023"
+          },
+          {
+            "year": 2024,
+            "value": 0.58,
+            "numerator": 57,
+            "denominator": 98,
+            "window": "2021-2024"
+          },
+          {
+            "year": 2025,
+            "value": 0.7,
+            "numerator": 66,
+            "denominator": 94,
+            "window": "2022-2025"
+          },
+          {
+            "year": 2026,
+            "value": 1.12,
+            "numerator": 100,
+            "denominator": 89,
+            "window": "2023-2026"
+          }
+        ],
+        "definition": "Citing documents and edges are a catalog-matched subset by citing-document year. Four-year ratio counts matched citations within the window to catalog articles dated in that window, divided by catalog articles in that window. It is not official CiteScore/Tracker; a zero denominator is unavailable."
+      }
+    },
+    {
+      "id": "ajb",
+      "code": "AJB",
+      "title": "Academia Journal of Biology",
+      "titleVi": "Tạp chí Sinh học",
+      "subject": "Sinh học",
+      "website": "https://vjs.ac.vn/index.php/vjbio",
+      "publisher": "Vietnam Academy of Science and Technology",
+      "issn": "2615-9023",
+      "eissn": "2815-5920",
+      "formerTitles": [
+        {
+          "title": "Tạp chí Sinh học (Tap chi Sinh hoc)",
+          "issn": "0866-7160",
+          "until": "2019"
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vjs.ac.vn/index.php/vjbio"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/vjbio",
+        "https://vjs.ac.vn/vjbio/issue/archive"
+      ],
+      "indexings": [
+        {
+          "system": "WoS",
+          "collection": "Zoological Record",
+          "status": "listed",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbio",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "WoS",
+          "collection": "Core Collection",
+          "status": "not_listed",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbio",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbio",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 48 No. 3 (2026)",
+        "published": "2026-09-23",
+        "url": "https://vjs.ac.vn/vjbio/issue/view/1413"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 52,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/vjbio/issue/archive",
+            "https://vjs.ac.vn/vjbio/issue/view/1396",
+            "https://vjs.ac.vn/vjbio/issue/view/1395",
+            "https://vjs.ac.vn/vjbio/issue/view/1378",
+            "https://vjs.ac.vn/vjbio/issue/view/1377"
+          ],
+          "issueItems": [
+            {
+              "id": "vol47n1",
+              "title": "Vol. 47 No. 1 (2025)",
+              "published": "2025-03-28",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1377",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/21690",
+                "doi:10.15625/2615-9023/21657",
+                "doi:10.15625/2615-9023/20517",
+                "doi:10.15625/2615-9023/22384",
+                "doi:10.15625/2615-9023/21459",
+                "doi:10.15625/2615-9023/21635",
+                "doi:10.15625/2615-9023/20952",
+                "doi:10.15625/2615-9023/20121",
+                "doi:10.15625/2615-9023/21232",
+                "doi:10.15625/2615-9023/21433",
+                "doi:10.15625/2615-9023/21153",
+                "doi:10.15625/2615-9023/21328"
+              ]
+            },
+            {
+              "id": "vol47n2",
+              "title": "Vol. 47 No. 2 (2025)",
+              "published": "2025-06-24",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1378",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/22083",
+                "doi:10.15625/2615-9023/22551",
+                "doi:10.15625/2615-9023/21702",
+                "doi:10.15625/2615-9023/22372",
+                "doi:10.15625/2615-9023/22401",
+                "doi:10.15625/2615-9023/21776",
+                "doi:10.15625/2615-9023/21558",
+                "doi:10.15625/2615-9023/22482",
+                "doi:10.15625/2615-9023/20512",
+                "doi:10.15625/2615-9023/22761",
+                "doi:10.15625/2615-9023/22816",
+                "doi:10.15625/2615-9023/20939",
+                "doi:10.15625/2615-9023/22003",
+                "doi:10.15625/2615-9023/21734"
+              ]
+            },
+            {
+              "id": "vol47n3",
+              "title": "Vol. 47 No. 3 (2025)",
+              "published": "2025-09-26",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1395",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/21386",
+                "doi:10.15625/2615-9023/22573",
+                "doi:10.15625/2615-9023/21771",
+                "doi:10.15625/2615-9023/21287",
+                "doi:10.15625/2615-9023/21422",
+                "doi:10.15625/2615-9023/21479",
+                "doi:10.15625/2615-9023/22925",
+                "doi:10.15625/2615-9023/22600",
+                "doi:10.15625/2615-9023/21799",
+                "doi:10.15625/2615-9023/22091",
+                "doi:10.15625/2615-9023/21729",
+                "doi:10.15625/2615-9023/21663",
+                "doi:10.15625/2615-9023/21897"
+              ]
+            },
+            {
+              "id": "vol47n4",
+              "title": "Vol. 47 No. 4 (2025)",
+              "published": "2025-12-25",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1396",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/23104",
+                "doi:10.15625/2615-9023/22468",
+                "doi:10.15625/2615-9023/21414",
+                "doi:10.15625/2615-9023/22912",
+                "doi:10.15625/2615-9023/22836",
+                "doi:10.15625/2615-9023/20802",
+                "doi:10.15625/2615-9023/22493",
+                "doi:10.15625/2615-9023/22798",
+                "doi:10.15625/2615-9023/22680",
+                "doi:10.15625/2615-9023/22947",
+                "doi:10.15625/2615-9023/22414",
+                "doi:10.15625/2615-9023/22662",
+                "doi:10.15625/2615-9023/22978"
+              ]
+            }
+          ],
+          "note": "All four issue pages were read. The article section entries are enumerated as unique DOI paper keys; 52 eligible article records across the 2025 archive."
+        },
+        {
+          "year": 2026,
+          "papers": 41,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/vjbio/issue/archive",
+            "https://vjs.ac.vn/vjbio/issue/view/1413",
+            "https://vjs.ac.vn/vjbio/issue/view/1412",
+            "https://vjs.ac.vn/vjbio/issue/view/1411"
+          ],
+          "issueItems": [
+            {
+              "id": "vol48n1",
+              "title": "Vol. 48 No. 1 (2026)",
+              "published": "2026-03-25",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1411",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/23236",
+                "doi:10.15625/2615-9023/23026",
+                "doi:10.15625/2615-9023/23224",
+                "doi:10.15625/2615-9023/22417",
+                "doi:10.15625/2615-9023/23050",
+                "doi:10.15625/2615-9023/21739",
+                "doi:10.15625/2615-9023/23033",
+                "doi:10.15625/2615-9023/22919",
+                "doi:10.15625/2615-9023/21339",
+                "doi:10.15625/2615-9023/23298",
+                "doi:10.15625/2615-9023/24262",
+                "doi:10.15625/2615-9023/23526",
+                "doi:10.15625/2615-9023/23267"
+              ]
+            },
+            {
+              "id": "vol48n2",
+              "title": "Vol. 48 No. 2 (2026)",
+              "published": "2026-06-17",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1412",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/23951",
+                "doi:10.15625/2615-9023/23849",
+                "doi:10.15625/2615-9023/23637",
+                "doi:10.15625/2615-9023/23670",
+                "doi:10.15625/2615-9023/22899",
+                "doi:10.15625/2615-9023/23491",
+                "doi:10.15625/2615-9023/23056",
+                "doi:10.15625/2615-9023/22547",
+                "doi:10.15625/2615-9023/23405",
+                "doi:10.15625/2615-9023/24318",
+                "doi:10.15625/2615-9023/23521",
+                "doi:10.15625/2615-9023/22380",
+                "doi:10.15625/2615-9023/23321",
+                "doi:10.15625/2615-9023/23329"
+              ]
+            },
+            {
+              "id": "vol48n3",
+              "title": "Vol. 48 No. 3 (2026)",
+              "published": "2026-09-23",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1413",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/24342",
+                "doi:10.15625/2615-9023/22586",
+                "doi:10.15625/2615-9023/21560",
+                "doi:10.15625/2615-9023/22598",
+                "doi:10.15625/2615-9023/9311",
+                "doi:10.15625/2615-9023/23323",
+                "doi:10.15625/2615-9023/23339",
+                "doi:10.15625/2615-9023/23295",
+                "doi:10.15625/2615-9023/23883",
+                "doi:10.15625/2615-9023/24511",
+                "doi:10.15625/2615-9023/23857",
+                "doi:10.15625/2615-9023/23528",
+                "doi:10.15625/2615-9023/24395",
+                "doi:10.15625/2615-9023/24288"
+              ]
+            }
+          ],
+          "note": "All three 2026 issue pages were read and the 41 listed article records enumerated by DOI. Window is through 2026-09-23, not a full-year total."
+        }
+      ],
+      "checkedAt": "2026-10-21",
+      "aliases": [],
+      "localCitation": {
+        "sourceDirectory": "2026/09e-OJS-Citation Statistics-AJB",
+        "sourceFiles": [
+          {
+            "path": "2026/09e-OJS-Citation Statistics-AJB/data/vjmech-stats.json",
+            "sha256": "36c2bd5bce97e1eddd0f846d22b811d501084cc025c53b9671b7a521ee458b02"
+          },
+          {
+            "path": "2026/09e-OJS-Citation Statistics-AJB/data/vjmech_ojs_catalog.json",
+            "sha256": "284837ee88fedb8f236455a15bf4c90ef9c09a99914da3522e13219419f24655"
+          },
+          {
+            "path": "2026/09e-OJS-Citation Statistics-AJB/data/scopus-exports/AJB.csv",
+            "sha256": "95d9f631e7597debcbd5db50985d9ada5c9d4bc3f3e0e2b33010976b8d5e5419"
+          }
+        ],
+        "sourceExportDate": null,
+        "processedAt": "2026-10-19",
+        "publicSourceUrl": "https://vjs.ac.vn/vjbio/statistic",
+        "officialScopusMetric": false,
+        "citationSeries": [
+          {
+            "year": 2009,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 2
+          },
+          {
+            "year": 2010,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2011,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2012,
+            "citingDocuments": 3,
+            "confirmedCitationEdges": 3
+          },
+          {
+            "year": 2013,
+            "citingDocuments": 5,
+            "confirmedCitationEdges": 13
+          },
+          {
+            "year": 2014,
+            "citingDocuments": 6,
+            "confirmedCitationEdges": 7
+          },
+          {
+            "year": 2015,
+            "citingDocuments": 8,
+            "confirmedCitationEdges": 8
+          },
+          {
+            "year": 2016,
+            "citingDocuments": 11,
+            "confirmedCitationEdges": 14
+          },
+          {
+            "year": 2017,
+            "citingDocuments": 34,
+            "confirmedCitationEdges": 42
+          },
+          {
+            "year": 2018,
+            "citingDocuments": 40,
+            "confirmedCitationEdges": 50
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 44,
+            "confirmedCitationEdges": 48
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 72,
+            "confirmedCitationEdges": 91
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 98,
+            "confirmedCitationEdges": 130
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 104,
+            "confirmedCitationEdges": 127
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 119,
+            "confirmedCitationEdges": 134
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 132,
+            "confirmedCitationEdges": 163
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 178,
+            "confirmedCitationEdges": 199
+          },
+          {
+            "year": 2026,
+            "citingDocuments": 151,
+            "confirmedCitationEdges": 162
+          }
+        ],
+        "selfCalculatedSeries": [
+          {
+            "year": 2015,
+            "value": 0.04,
+            "numerator": 30,
+            "denominator": 796,
+            "window": "2012-2015"
+          },
+          {
+            "year": 2016,
+            "value": 0.04,
+            "numerator": 26,
+            "denominator": 645,
+            "window": "2013-2016"
+          },
+          {
+            "year": 2017,
+            "value": 0.07,
+            "numerator": 44,
+            "denominator": 589,
+            "window": "2014-2017"
+          },
+          {
+            "year": 2018,
+            "value": 0.15,
+            "numerator": 46,
+            "denominator": 302,
+            "window": "2015-2018"
+          },
+          {
+            "year": 2019,
+            "value": 0.15,
+            "numerator": 45,
+            "denominator": 300,
+            "window": "2016-2019"
+          },
+          {
+            "year": 2020,
+            "value": 0.15,
+            "numerator": 35,
+            "denominator": 241,
+            "window": "2017-2020"
+          },
+          {
+            "year": 2021,
+            "value": 0.21,
+            "numerator": 58,
+            "denominator": 270,
+            "window": "2018-2021"
+          },
+          {
+            "year": 2022,
+            "value": 0.27,
+            "numerator": 71,
+            "denominator": 267,
+            "window": "2019-2022"
+          },
+          {
+            "year": 2023,
+            "value": 0.31,
+            "numerator": 66,
+            "denominator": 210,
+            "window": "2020-2023"
+          },
+          {
+            "year": 2024,
+            "value": 0.43,
+            "numerator": 89,
+            "denominator": 207,
+            "window": "2021-2024"
+          },
+          {
+            "year": 2025,
+            "value": 0.6,
+            "numerator": 122,
+            "denominator": 202,
+            "window": "2022-2025"
+          },
+          {
+            "year": 2026,
+            "value": 0.65,
+            "numerator": 113,
+            "denominator": 174,
+            "window": "2023-2026"
+          }
+        ],
+        "definition": "Citing documents and edges are a catalog-matched subset by citing-document year. Four-year ratio counts matched citations within the window to catalog articles dated in that window, divided by catalog articles in that window. It is not official CiteScore/Tracker; a zero denominator is unavailable."
+      }
+    },
+    {
+      "id": "vjmst",
+      "code": "VJMST",
+      "title": "Vietnam Journal of Marine Science and Technology",
+      "titleVi": "Tạp chí Khoa học và Công nghệ biển",
+      "subject": "Khoa học và công nghệ biển",
+      "website": "https://vjs.ac.vn/index.php/jmst",
+      "publisher": "Vietnam Academy of Science and Technology",
+      "issn": "1859-3097",
+      "eissn": "2815-5904",
+      "formerTitles": [],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vjs.ac.vn/index.php/jmst"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/jmst",
+        "https://vjs.ac.vn/jmst/issue/archive"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jmst",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jmst",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 26 No. 3 (2026)",
+        "published": "2026-09-22",
+        "url": "https://vjs.ac.vn/jmst/issue/view/1445"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 39,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/jmst/issue/archive",
+            "https://vjs.ac.vn/jmst/issue/view/1409",
+            "https://vjs.ac.vn/jmst/issue/view/1403",
+            "https://vjs.ac.vn/jmst/issue/view/1385",
+            "https://vjs.ac.vn/jmst/issue/view/1382"
+          ],
+          "issueItems": [
+            {
+              "id": "vol25n1",
+              "title": "Vol. 25 No. 1 (2025)",
+              "published": "2025-03-31",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1382",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/22492",
+                "doi:10.15625/1859-3097/22634",
+                "doi:10.15625/1859-3097/20808",
+                "doi:10.15625/1859-3097/20912",
+                "doi:10.15625/1859-3097/22636",
+                "doi:10.15625/1859-3097/22149",
+                "doi:10.15625/1859-3097/18632",
+                "doi:10.15625/1859-3097/20503",
+                "doi:10.15625/1859-3097/21581",
+                "doi:10.15625/1859-3097/20770"
+              ]
+            },
+            {
+              "id": "vol25n2",
+              "title": "Vol. 25 No. 2 (2025)",
+              "published": "2025-04-17",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1385",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/22728",
+                "doi:10.15625/1859-3097/22729",
+                "doi:10.15625/1859-3097/22730",
+                "doi:10.15625/1859-3097/22731",
+                "doi:10.15625/1859-3097/22732",
+                "doi:10.15625/1859-3097/22733",
+                "doi:10.15625/1859-3097/22734",
+                "doi:10.15625/1859-3097/22735",
+                "doi:10.15625/1859-3097/22736",
+                "doi:10.15625/1859-3097/22737",
+                "doi:10.15625/1859-3097/22739"
+              ]
+            },
+            {
+              "id": "vol25n3",
+              "title": "Vol. 25 No. 3 (2025)",
+              "published": "2025-09-30",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1403",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/21842",
+                "doi:10.15625/1859-3097/23555",
+                "doi:10.15625/1859-3097/23556",
+                "doi:10.15625/1859-3097/22161",
+                "doi:10.15625/1859-3097/23498",
+                "doi:10.15625/1859-3097/21871",
+                "doi:10.15625/1859-3097/21566",
+                "doi:10.15625/1859-3097/20434",
+                "doi:10.15625/1859-3097/23497",
+                "doi:10.15625/1859-3097/21290"
+              ]
+            },
+            {
+              "id": "vol25n4",
+              "title": "Vol. 25 No. 4 (2025)",
+              "published": "2025-12-30",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1409",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/20339",
+                "doi:10.15625/1859-3097/23573",
+                "doi:10.15625/1859-3097/22329",
+                "doi:10.15625/1859-3097/22534",
+                "doi:10.15625/1859-3097/20415",
+                "doi:10.15625/1859-3097/21882",
+                "doi:10.15625/1859-3097/23413",
+                "doi:10.15625/1859-3097/23078"
+              ]
+            }
+          ],
+          "note": "All four archive issues including the special issue Vol. 25 No. 2 were read and all listed eligible article/review entries enumerated by DOI; total 39 unique paper keys."
+        },
+        {
+          "year": 2026,
+          "papers": 20,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/jmst/issue/archive",
+            "https://vjs.ac.vn/jmst/issue/view/1445",
+            "https://vjs.ac.vn/jmst/issue/view/1431",
+            "https://vjs.ac.vn/jmst/issue/view/1422"
+          ],
+          "issueItems": [
+            {
+              "id": "vol26n1",
+              "title": "Vol. 26 No. 1 (2026)",
+              "published": "2026-03-30",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1422",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/22266",
+                "doi:10.15625/1859-3097/23504",
+                "doi:10.15625/1859-3097/21704",
+                "doi:10.15625/1859-3097/23495",
+                "doi:10.15625/1859-3097/20012",
+                "doi:10.15625/1859-3097/22217",
+                "doi:10.15625/1859-3097/23492"
+              ]
+            },
+            {
+              "id": "vol26n2",
+              "title": "Vol. 26 No. 2 (2026)",
+              "published": "2026-06-25",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1431",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/23788",
+                "doi:10.15625/1859-3097/22789",
+                "doi:10.15625/1859-3097/22471",
+                "doi:10.15625/1859-3097/22740",
+                "doi:10.15625/1859-3097/23490",
+                "doi:10.15625/1859-3097/22402"
+              ]
+            },
+            {
+              "id": "vol26n3",
+              "title": "Vol. 26 No. 3 (2026)",
+              "published": "2026-09-22",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1445",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/23988",
+                "doi:10.15625/1859-3097/23098",
+                "doi:10.15625/1859-3097/24029",
+                "doi:10.15625/1859-3097/23221",
+                "doi:10.15625/1859-3097/22152",
+                "doi:10.15625/1859-3097/23910",
+                "doi:10.15625/1859-3097/22691"
+              ]
+            }
+          ],
+          "note": "All three 2026 archive issues read; 20 DOI-keyed eligible records enumerated through 2026-09-22."
+        }
+      ],
+      "checkedAt": "2026-10-21",
+      "aliases": [],
+      "localCitation": {
+        "sourceDirectory": "2026/09h-OJS-Citation Statistics-VJMST",
+        "sourceFiles": [
+          {
+            "path": "2026/09h-OJS-Citation Statistics-VJMST/data/vjmech-stats.json",
+            "sha256": "55327b2a3b86401a81d4971484ec42de8af67b196d257a03d23b1f9cefa19d79"
+          },
+          {
+            "path": "2026/09h-OJS-Citation Statistics-VJMST/data/vjmech_ojs_catalog.json",
+            "sha256": "53ae73eae4af6d8492ec3bfb02ea1c66af27c00d598b818aee2e02e2ebbb0ccf"
+          },
+          {
+            "path": "2026/09h-OJS-Citation Statistics-VJMST/data/scopus-exports/VJMST.csv",
+            "sha256": "7895844e5578b65fc21bf1f9ef5244daf95ac65258d828dc3440eebe2525c687"
+          }
+        ],
+        "sourceExportDate": null,
+        "processedAt": "2026-10-19",
+        "publicSourceUrl": "https://vjs.ac.vn/jmst/statistic",
+        "officialScopusMetric": false,
+        "citationSeries": [
+          {
+            "year": 2014,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2015,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2016,
+            "citingDocuments": 2,
+            "confirmedCitationEdges": 2
+          },
+          {
+            "year": 2017,
+            "citingDocuments": 1,
+            "confirmedCitationEdges": 1
+          },
+          {
+            "year": 2018,
+            "citingDocuments": 0,
+            "confirmedCitationEdges": 0
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 2,
+            "confirmedCitationEdges": 3
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 15,
+            "confirmedCitationEdges": 17
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 20,
+            "confirmedCitationEdges": 27
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 36,
+            "confirmedCitationEdges": 66
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 45,
+            "confirmedCitationEdges": 61
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 79,
+            "confirmedCitationEdges": 93
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 88,
+            "confirmedCitationEdges": 128
+          },
+          {
+            "year": 2026,
+            "citingDocuments": 100,
+            "confirmedCitationEdges": 148
+          }
+        ],
+        "selfCalculatedSeries": [
+          {
+            "year": 2015,
+            "value": 0,
+            "numerator": 1,
+            "denominator": 235,
+            "window": "2012-2015"
+          },
+          {
+            "year": 2016,
+            "value": 0.01,
+            "numerator": 2,
+            "denominator": 197,
+            "window": "2013-2016"
+          },
+          {
+            "year": 2017,
+            "value": 0.01,
+            "numerator": 2,
+            "denominator": 210,
+            "window": "2014-2017"
+          },
+          {
+            "year": 2018,
+            "value": 0,
+            "numerator": 0,
+            "denominator": 209,
+            "window": "2015-2018"
+          },
+          {
+            "year": 2019,
+            "value": 0,
+            "numerator": 1,
+            "denominator": 283,
+            "window": "2016-2019"
+          },
+          {
+            "year": 2020,
+            "value": 0.03,
+            "numerator": 10,
+            "denominator": 290,
+            "window": "2017-2020"
+          },
+          {
+            "year": 2021,
+            "value": 0.09,
+            "numerator": 26,
+            "denominator": 286,
+            "window": "2018-2021"
+          },
+          {
+            "year": 2022,
+            "value": 0.21,
+            "numerator": 60,
+            "denominator": 282,
+            "window": "2019-2022"
+          },
+          {
+            "year": 2023,
+            "value": 0.27,
+            "numerator": 54,
+            "denominator": 199,
+            "window": "2020-2023"
+          },
+          {
+            "year": 2024,
+            "value": 0.35,
+            "numerator": 61,
+            "denominator": 176,
+            "window": "2021-2024"
+          },
+          {
+            "year": 2025,
+            "value": 0.45,
+            "numerator": 70,
+            "denominator": 156,
+            "window": "2022-2025"
+          },
+          {
+            "year": 2026,
+            "value": 0.63,
+            "numerator": 83,
+            "denominator": 132,
+            "window": "2023-2026"
+          }
+        ],
+        "definition": "Citing documents and edges are a catalog-matched subset by citing-document year. Four-year ratio counts matched citations within the window to catalog articles dated in that window, divided by catalog articles in that window. It is not official CiteScore/Tracker; a zero denominator is unavailable."
+      }
+    },
+    {
+      "id": "vjbt",
+      "code": "VJBT",
+      "title": "Vietnam Journal of Biotechnology",
+      "titleVi": "Tạp chí Công nghệ Sinh học",
+      "subject": "Công nghệ sinh học",
+      "website": "https://vjs.ac.vn/index.php/vjbt",
+      "publisher": "Vietnam Academy of Science and Technology",
+      "issn": "2815-5955",
+      "eissn": "2815-5912",
+      "formerTitles": [
+        {
+          "title": "Tạp chí Công nghệ Sinh học (Journal of Biotechnology)",
+          "issn": "1811-4989",
+          "until": null
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vjs.ac.vn/index.php/vjbt"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/vjbt",
+        "https://vjs.ac.vn/vjbt/issue/archive"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbt",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbt",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 24 No. 3 (2026)",
+        "published": "2026-09-29",
+        "url": "https://vjs.ac.vn/vjbt/issue/view/1442"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 45,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/vjbt/issue/archive",
+            "https://vjs.ac.vn/vjbt/issue/view/1406",
+            "https://vjs.ac.vn/vjbt/issue/view/1398",
+            "https://vjs.ac.vn/vjbt/issue/view/1390",
+            "https://vjs.ac.vn/vjbt/issue/view/pdf"
+          ],
+          "issueItems": [
+            {
+              "id": "vol23n1",
+              "title": "Vol. 23 No. 1 (2025)",
+              "published": "2025-03-31",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/pdf",
+              "paperKeys": [
+                "doi:10.15625/vjbt-21323",
+                "doi:10.15625/vjbt-22379",
+                "doi:10.15625/vjbt-21785",
+                "doi:10.15625/vjbt-22093",
+                "doi:10.15625/vjbt-22200",
+                "doi:10.15625/vjbt-21997",
+                "doi:10.15625/vjbt-21868",
+                "doi:10.15625/vjbt-21940",
+                "doi:10.15625/vjbt-21957",
+                "doi:10.15625/vjbt-21914",
+                "doi:10.15625/vjbt-21792"
+              ]
+            },
+            {
+              "id": "vol23n2",
+              "title": "Vol. 23 No. 2 (2025)",
+              "published": "2025-06-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1390",
+              "paperKeys": [
+                "doi:10.15625/vjbt-22325",
+                "doi:10.15625/vjbt-21990",
+                "doi:10.15625/vjbt-21644",
+                "doi:10.15625/vjbt-22132",
+                "doi:10.15625/vjbt-21902",
+                "doi:10.15625/vjbt-22344",
+                "doi:10.15625/vjbt-22299",
+                "doi:10.15625/vjbt-21721",
+                "doi:10.15625/vjbt-22589",
+                "doi:10.15625/vjbt-22858"
+              ]
+            },
+            {
+              "id": "vol23n3",
+              "title": "Vol. 23 No. 3 (2025)",
+              "published": "2025-09-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1398",
+              "paperKeys": [
+                "doi:10.15625/vjbt-22794",
+                "doi:10.15625/vjbt-22102",
+                "doi:10.15625/vjbt-22326",
+                "doi:10.15625/vjbt-21060",
+                "doi:10.15625/vjbt-23222",
+                "doi:10.15625/vjbt-21904",
+                "doi:10.15625/vjbt-22112",
+                "doi:10.15625/vjbt-22856",
+                "doi:10.15625/vjbt-22577",
+                "doi:10.15625/vjbt-22437",
+                "doi:10.15625/vjbt-23144"
+              ]
+            },
+            {
+              "id": "vol23n4",
+              "title": "Vol. 23 No. 4 (2025)",
+              "published": "2025-12-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1406",
+              "paperKeys": [
+                "doi:10.15625/vjbt-22572",
+                "doi:10.15625/vjbt-23169",
+                "doi:10.15625/vjbt-23276",
+                "doi:10.15625/vjbt-22771",
+                "doi:10.15625/vjbt-23481",
+                "doi:10.15625/vjbt-22415",
+                "doi:10.15625/vjbt-22037",
+                "doi:10.15625/vjbt-22546",
+                "doi:10.15625/vjbt-22681",
+                "doi:10.15625/vjbt-22699",
+                "doi:10.15625/vjbt-23226",
+                "doi:10.15625/vjbt-23378",
+                "doi:10.15625/vjbt-23121"
+              ]
+            }
+          ],
+          "note": "All four official issue pages including the /issue/view/pdf route were opened. Enumerated 45 unique DOI paper keys across their review/article sections."
+        },
+        {
+          "year": 2026,
+          "papers": 33,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/vjbt/issue/archive",
+            "https://vjs.ac.vn/vjbt/issue/view/1442",
+            "https://vjs.ac.vn/vjbt/issue/view/1427",
+            "https://vjs.ac.vn/vjbt/issue/view/vol24n1"
+          ],
+          "issueItems": [
+            {
+              "id": "vol24n1",
+              "title": "Vol. 24 No. 1 (2026)",
+              "published": "2026-03-27",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/vol24n1",
+              "paperKeys": [
+                "doi:10.15625/vjbt-23543",
+                "doi:10.15625/vjbt-24015",
+                "doi:10.15625/vjbt-23336",
+                "doi:10.15625/vjbt-21946",
+                "doi:10.15625/vjbt-23273",
+                "doi:10.15625/vjbt-21874",
+                "doi:10.15625/vjbt-23376",
+                "doi:10.15625/vjbt-22971",
+                "doi:10.15625/vjbt-23173",
+                "doi:10.15625/vjbt-22443",
+                "doi:10.15625/vjbt-22393"
+              ]
+            },
+            {
+              "id": "vol24n2",
+              "title": "Vol. 24 No. 2 (2026)",
+              "published": "2026-06-24",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1427",
+              "paperKeys": [
+                "doi:10.15625/vjbt-23474",
+                "doi:10.15625/vjbt-23261",
+                "doi:10.15625/vjbt-24007",
+                "doi:10.15625/vjbt-23548",
+                "doi:10.15625/vjbt-24452",
+                "doi:10.15625/vjbt-23386",
+                "doi:10.15625/vjbt-23946",
+                "doi:10.15625/vjbt-23764",
+                "doi:10.15625/vjbt-23338",
+                "doi:10.15625/vjbt-22442",
+                "doi:10.15625/vjbt-23418"
+              ]
+            },
+            {
+              "id": "vol24n3",
+              "title": "Vol. 24 No. 3 (2026)",
+              "published": "2026-09-29",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1442",
+              "paperKeys": [
+                "doi:10.15625/vjbt-24869",
+                "doi:10.15625/vjbt-24585",
+                "doi:10.15625/vjbt-23884",
+                "doi:10.15625/vjbt-21694",
+                "doi:10.15625/vjbt-24204",
+                "doi:10.15625/vjbt-24706",
+                "doi:10.15625/vjbt-25046",
+                "doi:10.15625/vjbt-24362",
+                "doi:10.15625/vjbt-24914",
+                "doi:10.15625/vjbt-23327",
+                "doi:10.15625/vjbt-24422"
+              ]
+            }
+          ],
+          "note": "All three 2026 issue pages were read; review/article entries yield 33 unique DOI paper keys through 2026-09-29."
+        }
+      ],
+      "checkedAt": "2026-10-21",
+      "aliases": [],
+      "localCitation": {
+        "sourceDirectory": "2026/09f-OJS-Citation Statistics-VJBT",
+        "sourceFiles": [
+          {
+            "path": "2026/09f-OJS-Citation Statistics-VJBT/data/vjmech-stats.json",
+            "sha256": "a5b10f80efa4c334232aae9f270bea630fc48a054e1a0d5aaf3cca7aa19fd9e8"
+          },
+          {
+            "path": "2026/09f-OJS-Citation Statistics-VJBT/data/vjmech_ojs_catalog.json",
+            "sha256": "371b5c451487e70df2769b4d7330c0d48c472b7fd710fc25d4adce71a4d6bf99"
+          },
+          {
+            "path": "2026/09f-OJS-Citation Statistics-VJBT/data/scopus-exports/VJBT.csv",
+            "sha256": "39d3b92074dfbe82ff7f8fb1eff7619436f421a8b0e8ff7f5f6615970e3cd319"
+          }
+        ],
+        "sourceExportDate": null,
+        "processedAt": "2026-10-19",
+        "publicSourceUrl": "https://vjs.ac.vn/vjbt/statistic",
+        "officialScopusMetric": false,
+        "citationSeries": [
+          {
+            "year": 2018,
+            "citingDocuments": 2,
+            "confirmedCitationEdges": 2
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 5,
+            "confirmedCitationEdges": 5
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 8,
+            "confirmedCitationEdges": 8
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 15,
+            "confirmedCitationEdges": 15
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 32,
+            "confirmedCitationEdges": 39
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 43,
+            "confirmedCitationEdges": 48
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 99,
+            "confirmedCitationEdges": 118
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 127,
+            "confirmedCitationEdges": 134
+          },
+          {
+            "year": 2026,
+            "citingDocuments": 126,
+            "confirmedCitationEdges": 137
+          }
+        ],
+        "selfCalculatedSeries": [
+          {
+            "year": 2015,
+            "value": null,
+            "numerator": 0,
+            "denominator": 0,
+            "window": "2012-2015"
+          },
+          {
+            "year": 2016,
+            "value": 0,
+            "numerator": 0,
+            "denominator": 70,
+            "window": "2013-2016"
+          },
+          {
+            "year": 2017,
+            "value": 0,
+            "numerator": 0,
+            "denominator": 74,
+            "window": "2014-2017"
+          },
+          {
+            "year": 2018,
+            "value": 0.01,
+            "numerator": 2,
+            "denominator": 242,
+            "window": "2015-2018"
+          },
+          {
+            "year": 2019,
+            "value": 0.03,
+            "numerator": 7,
+            "denominator": 242,
+            "window": "2016-2019"
+          },
+          {
+            "year": 2020,
+            "value": 0.03,
+            "numerator": 9,
+            "denominator": 291,
+            "window": "2017-2020"
+          },
+          {
+            "year": 2021,
+            "value": 0.06,
+            "numerator": 20,
+            "denominator": 357,
+            "window": "2018-2021"
+          },
+          {
+            "year": 2022,
+            "value": 0.09,
+            "numerator": 26,
+            "denominator": 288,
+            "window": "2019-2022"
+          },
+          {
+            "year": 2023,
+            "value": 0.17,
+            "numerator": 59,
+            "denominator": 348,
+            "window": "2020-2023"
+          },
+          {
+            "year": 2024,
+            "value": 0.3,
+            "numerator": 87,
+            "denominator": 289,
+            "window": "2021-2024"
+          },
+          {
+            "year": 2025,
+            "value": 0.48,
+            "numerator": 127,
+            "denominator": 264,
+            "window": "2022-2025"
+          },
+          {
+            "year": 2026,
+            "value": 0.4,
+            "numerator": 79,
+            "denominator": 198,
+            "window": "2023-2026"
+          }
+        ],
+        "definition": "Citing documents and edges are a catalog-matched subset by citing-document year. Four-year ratio counts matched citations within the window to catalog articles dated in that window, divided by catalog articles in that window. It is not official CiteScore/Tracker; a zero denominator is unavailable."
+      }
+    }
+  ]
+}

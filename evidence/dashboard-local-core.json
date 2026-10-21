@@ -1,0 +1,125 @@
+{
+  "auditedAt": "2026-10-21",
+  "journals": [
+    {
+      "id": "vjmech",
+      "code": "VJMech",
+      "sourceDirectory": "2026/09-OJS-Citation Statistics-VJMech",
+      "sourceFiles": [
+        {"path": "2026/09-OJS-Citation Statistics-VJMech/data/vjmech-stats.json", "sha256": "762c5c5be61781925de70fe5364a07af988f5383aa60aff06ccd61c177907709", "role": "Decoded local Scopus-derived statistics and annual series"},
+        {"path": "2026/09-OJS-Citation Statistics-VJMech/data/vjmech_ojs_catalog.json", "sha256": "445efc92c08cf440ed63cd1da11f36f8b0611901065c8662bf1d106cac7920b1", "role": "OJS article/issue catalog used for local citation confirmation and publication counts"},
+        {"path": "2026/09-OJS-Citation Statistics-VJMech/data/scopus-exports/export_03bd6b7b-2dca-4784-aa42-f720eaf72202_2026-10-17T104025.701747456.csv", "sha256": "6a0508d2ee65c2e0b4107706f5b5953ee0a9279f54c827441a9f08cf42c3154a", "role": "Original source export; hash agrees with stats metadata's truncated sourceSha256"}
+      ],
+      "sourceExportDate": "2026-10-17T10:40:25.701747456",
+      "processedAt": "2026-10-20",
+      "catalogRetrievedAt": null,
+      "publicSourceUrl": "https://vjs.ac.vn/vjmech/statistic",
+      "officialMetricStatus": "Local stats metadata explicitly has officialScopusMetric=false. No official CiteScore value is established by this collection.",
+      "meta": {"sourceRows": 1040, "totalCitations": 1160, "totalCitingDocs": 1028, "totalCitedArticles": 319, "hIndex": 12, "officialScopusMetric": false, "sourceFile": "export_03bd6b7b-2dca-4784-aa42-f720eaf72202_2026-10-17T104025.701747456.csv", "sourceSha256": "6a0508d2ee65c2e0"},
+      "publicationSeries": [
+        {"year": 2025, "papers": 25, "basis": "count of catalog.articles with year=2025", "coverage": "Catalog count, includes all article records; not independently classified as eligible research papers."},
+        {"year": 2026, "papers": 43, "basis": "count of catalog.articles with year=2026", "coverage": "20 numbered-issue articles plus 23 Online First; contract/dashboard eligible published issue count excludes Online First."}
+      ],
+      "catalogPublicationHistory": {"definition": "Raw count of catalog.articles grouped by article.year; not filtered for assigned issue, Online First, or paper eligibility. Year values can reflect submission/posting year rather than published issue year.", "yearCountPairs": [[1979,14],[1980,18],[1981,20],[1982,20],[1983,17],[1984,20],[1985,22],[1986,18],[1987,19],[1988,17],[1989,28],[1990,18],[1991,21],[1992,19],[1993,29],[1994,31],[1995,29],[1996,28],[1997,29],[1998,25],[1999,23],[2000,24],[2001,23],[2002,21],[2003,24],[2004,25],[2005,27],[2006,27],[2007,41],[2008,36],[2009,25],[2010,23],[2011,23],[2012,30],[2013,26],[2014,23],[2015,25],[2016,24],[2017,27],[2018,28],[2019,26],[2020,35],[2021,26],[2022,36],[2023,23],[2024,28],[2025,25],[2026,43]]},
+      "citationSeries": [
+        {"year": 2025, "citingDocuments": 149, "confirmedCitationEdges": 179, "basis": "stats.citingSeries docs = distinct citing documents with >=1 catalog-confirmed citation; occurrences = confirmed citation edges. Per README confirmation requires exact full DOI/catalog match, or normalized full-title plus specified year/page/author token criteria; unresolved/ambiguous DOI is not guessed."},
+        {"year": 2026, "citingDocuments": 161, "confirmedCitationEdges": 182, "basis": "Same local confirmed-document/edge definitions; source export is not a complete calendar-year observation."},
+        {"year": 2027, "citingDocuments": 3, "confirmedCitationEdges": 3, "basis": "Future-year records present in source payload; not current-year/final results and excluded from published current dashboard totals."}
+      ],
+      "confirmedCitationHistory": {"definition": "Year, distinct citing docs with >=1 catalog-confirmed citation, confirmed citation-edge occurrences; rows follow local stats.citingSeries.", "yearDocEdgeTriples": [[2002,2,2],[2003,1,2],[2004,1,1],[2005,1,1],[2006,0,0],[2007,1,1],[2008,1,1],[2009,3,6],[2010,5,5],[2011,7,9],[2012,18,20],[2013,19,26],[2014,19,21],[2015,24,27],[2016,36,40],[2017,30,31],[2018,37,46],[2019,41,52],[2020,47,53],[2021,87,93],[2022,103,113],[2023,103,109],[2024,129,137],[2025,149,179],[2026,161,182],[2027,3,3]]},
+      "selfCalculatedSeries": [
+        {"year": 2025, "value": 0.79, "numerator": 89, "denominator": 112, "window": "2022-2025", "basis": "Local citeScoreSeries cs4; numerator and denominator from source file; self-calculated, NOT official Scopus CiteScore. Denominator by year [36,23,28,25]."},
+        {"year": 2026, "value": 1.14, "numerator": 109, "denominator": 96, "window": "2023-2026", "basis": "Local citeScoreSeries cs4; self-calculated, NOT official Scopus CiteScore. Denominator by year [23,28,25,20]. Source marks isTracker=true; meaning is not established as an official metric and must not be presented as one."}
+      ],
+      "totals": {"catalogIssues": 189, "catalogArticleRecords": 1209, "statsCitingDocs": 1028, "statsCitationOccurrences": 1160, "statsCitedArticles": 319},
+      "reconciliation": [
+        {"year": 2025, "localCatalogArticleRecords": 25, "dashboardVjsCorePublishedPapers": 24, "dashboardIssueKeys": 24, "difference": 1, "finding": "All 24 dashboard issue DOI keys match catalog DOI records. Extra local catalog record is OJS id 22566, DOI 10.15625/0866-7136/22566, https://vjs.ac.vn/vjmech/article/view/22566; official OJS article page identifies its section/articleType as Announcement. The dashboard eligible research-paper count excludes non-research matter; local raw catalog count includes this Announcement."},
+        {"year": 2026, "localCatalogArticleRecords": 43, "localNumberedIssueArticleRecords": 20, "localOnlineFirstRecords": 23, "dashboardVjsCorePublishedPapers": 20, "finding": "Matches dashboard after excluding unassigned Online First articles; dashboard contract excludes these pending assignment to a numbered issue."}
+      ],
+      "limitations": ["Local stats only cover Scopus sourceRows and confirmed catalog matches; source README explicitly warns catalog/citation-chain gaps mean these are a verified subset, not complete counts or error-free coverage.", "2026 output is partial/YTD; 2027 citation year is future-year data.", "Catalog retrieval timestamp is not recorded; file modification time is not a source retrieval timestamp."]
+    },
+    {
+      "id": "cip",
+      "code": "CIP",
+      "sourceDirectory": "2026/09a-OJS-Citation Statistics-CIP",
+      "sourceFiles": [
+        {"path": "2026/09a-OJS-Citation Statistics-CIP/data/vjmech-stats.json", "sha256": "f2d0fec7fc71fff67edd670c655abdf2895a4f554faaded0e449055bb53453ab", "role": "Decoded local Scopus-derived statistics and annual series"},
+        {"path": "2026/09a-OJS-Citation Statistics-CIP/data/vjmech_ojs_catalog.json", "sha256": "a1998f5ee2387ba5761f956b8c8a66be5d5410b33548db92deb8e2c8da5634ca", "role": "OJS article catalog used for local citation confirmation and publication counts"},
+        {"path": "2026/09a-OJS-Citation Statistics-CIP/data/scopus-exports/CIP.csv", "sha256": "fc56a72679207270a65d5c79f83ecfee9d9f3cdbcd6034e4a9ee20c27c35fa68", "role": "Original source export; hash agrees with stats metadata's truncated sourceSha256"}
+      ],
+      "sourceExportDate": null,
+      "sourceExportDateReason": "Source is named CIP.csv and neither it nor .last_synced_csv records an export date; stats meta.updatedAt is processing date only.",
+      "processedAt": "2026-10-19",
+      "catalogRetrievedAt": null,
+      "publicSourceUrl": "https://vjs.ac.vn/cip/statistic",
+      "officialMetricStatus": "Local stats metadata explicitly has officialScopusMetric=false. No official CiteScore value is established by this collection.",
+      "meta": {"sourceRows": 342, "totalCitations": 250, "totalCitingDocs": 220, "totalCitedArticles": 140, "hIndex": 5, "officialScopusMetric": false, "sourceFile": "CIP.csv", "sourceSha256": "fc56a72679207270"},
+      "publicationSeries": [
+        {"year": 2025, "papers": 34, "numberedIssueRecords": 34, "basis": "count of catalog.articles with year=2025", "coverage": "Catalog count, includes all article records; not independently classified as eligible research papers."},
+        {"year": 2026, "papers": 34, "numberedIssueRecords": 26, "unNumberedIssueLabelRecords": 8, "basis": "count of catalog.articles with year=2026", "coverage": "26 records list numbered Vol. 36 No. 1–3; 8 records have issueLabel '2026' without volume/issue (one inspected OJS record, https://vjs.ac.vn/cip/article/view/24173, is marked Forthcoming). Do not classify all 34 as issued papers."}
+      ],
+      "catalogPublicationHistory": {"definition": "Raw count of catalog.articles grouped by article.year; not filtered for assigned issue, Online First, or paper eligibility.", "yearCountPairs": [[2007,24],[2008,14],[2009,16],[2010,3],[2011,47],[2012,80],[2013,53],[2014,73],[2015,39],[2016,42],[2017,51],[2018,38],[2019,52],[2020,46],[2021,37],[2022,46],[2023,45],[2024,37],[2025,34],[2026,34]]},
+      "citationSeries": [
+        {"year": 2025, "citingDocuments": 48, "confirmedCitationEdges": 53, "basis": "stats.citingSeries docs = confirmed citing documents; occurrences = confirmed citation edges. Confirmation follows README's exact DOI or normalized full-title plus year/page/author-token matching criteria; unresolved foreign DOI blocks title fallback."},
+        {"year": 2026, "citingDocuments": 66, "confirmedCitationEdges": 76, "basis": "Same local confirmed-document/edge definitions; source export date unavailable, and observation is not established as full-year."}
+      ],
+      "confirmedCitationHistory": {"definition": "Year, distinct citing docs with >=1 catalog-confirmed citation, confirmed citation-edge occurrences; rows follow local stats.citingSeries.", "yearDocEdgeTriples": [[2007,1,1],[2008,0,0],[2009,0,0],[2010,2,2],[2011,4,4],[2012,3,3],[2013,0,0],[2014,3,5],[2015,3,5],[2016,4,4],[2017,4,4],[2018,4,4],[2019,4,4],[2020,4,4],[2021,6,6],[2022,12,12],[2023,14,16],[2024,38,47],[2025,48,53],[2026,66,76]]},
+      "selfCalculatedSeries": [
+        {"year": 2025, "value": 0.54, "numerator": 87, "denominator": 162, "window": "2022-2025", "basis": "Local citeScoreSeries cs4; numerator/denominator from source, self-calculated, NOT official Scopus CiteScore. Denominator by year [46,45,37,34]."},
+        {"year": 2026, "value": 0.67, "numerator": 100, "denominator": 150, "window": "2023-2026", "basis": "Local citeScoreSeries cs4; numerator/denominator from source, self-calculated, NOT official Scopus CiteScore. Denominator by year [45,37,34,34]. Source marks isTracker=true; meaning is not established as official metric."}
+      ],
+      "totals": {"catalogIssues": 0, "catalogArticleRecords": 811, "statsCitingDocs": 220, "statsCitationOccurrences": 250, "statsCitedArticles": 140},
+      "reconciliation": [
+        {"year": 2025, "localCatalogArticleRecords": 34, "dashboardVjsCorePublishedPapers": 34, "dashboardIssueKeyCount": 34, "doiSetMatch": true, "officialIssueSources": ["https://vjs.ac.vn/cip/issue/view/1375", "https://vjs.ac.vn/cip/issue/view/1384", "https://vjs.ac.vn/cip/issue/view/1393", "https://vjs.ac.vn/cip/issue/view/1400"], "finding": "Exact DOI set comparison (strip the dashboard 'doi:' prefix, lowercase; retain namespace/path) finds all 34 official dashboard issue DOIs in the 34 local catalog records for year 2025, with no extras or omissions."},
+        {"year": 2026, "localCatalogArticleRecords": 34, "localNumberedIssueRecords": 26, "localUnnumberedIssueLabelRecords": 8, "dashboardVjsCorePublishedPapers": 30, "dashboardIssueKeyCount": 30, "doiSetMatch": true, "officialIssueSources": ["https://vjs.ac.vn/cip/issue/view/1418", "https://vjs.ac.vn/cip/issue/view/1407", "https://vjs.ac.vn/cip/issue/view/1428"], "finding": "The core has 30 papers in three official 2026 issues (10 each); the local catalog has 34 year=2026 records. Exact DOI matching finds all 30 core issue keys among local records; 4 local records are not in those issue sets. Eight local entries have issueLabel '2026' without volume/issue: four correspond to official issue DOIs despite missing local issue assignment; four do not. The latter are 10.15625/0868-3166/24350 (article URL https://vjs.ac.vn/cip/article/view/24350 returned 404), 24173 (https://vjs.ac.vn/cip/article/view/24173, OJS page says Forthcoming/Vol. 36 No. 4), 24168 (https://vjs.ac.vn/cip/article/view/24168, Forthcoming), and 23488 (https://vjs.ac.vn/cip/article/view/23488, Forthcoming). These 4 are distinct from the official 30 issue papers; the other four unnumbered-label catalog records are in the issue DOI set."}
+      ],
+      "limitations": ["Original export filename has no recorded date; latest collection processing date (2026-10-19) is not source retrieval/export date.", "Catalog has no issue records. Its 8 unnumbered-label entries for 2026 include four official issue DOI matches and four records outside the official issue set (three pages marked Forthcoming and one DOI URL returned 404); do not infer publication status only from issueLabel or isOnlineFirst.", "Local statistics are explicitly nonofficial and confirmed matches may be incomplete; sourceRows is search result rows, not confirmed citing-document total.", "2026 citation observation is not documented as a full calendar year."]
+    },
+    {
+      "id": "vjst",
+      "code": "VJST",
+      "sourceDirectory": "2026/09b-OJS-Citation Statistics-VJST",
+      "sourceFiles": [
+        {"path": "2026/09b-OJS-Citation Statistics-VJST/data/vjmech-stats.json", "sha256": "efbedc6c4e52a69bd84f25dd2230bb44ed99c1902229dd765c353a82092053cc", "role": "Decoded local Scopus-derived statistics and annual series"},
+        {"path": "2026/09b-OJS-Citation Statistics-VJST/data/vjmech_ojs_catalog.json", "sha256": "23087bae1cf0bb46cfc42e2daa2e3b9353899a9b1fa74ad0a56e1168c83d2dfc", "role": "OJS article catalog used for local citation confirmation and publication counts"},
+        {"path": "2026/09b-OJS-Citation Statistics-VJST/data/scopus-exports/VJST.csv", "sha256": "5da66d30f9594415954629f7ad2b4428bb12f51ee527ea084c2e69f461c8a47d", "role": "Original source export; hash agrees with stats metadata's truncated sourceSha256"}
+      ],
+      "sourceExportDate": null,
+      "sourceExportDateReason": "Source is named VJST.csv and neither it nor .last_synced_csv records an export date; stats meta.updatedAt is processing date only.",
+      "processedAt": "2026-10-19",
+      "catalogRetrievedAt": null,
+      "publicSourceUrl": "https://vjs.ac.vn/jst/statistic",
+      "officialMetricStatus": "Local stats metadata explicitly has officialScopusMetric=false. No official CiteScore value is established by this collection.",
+      "meta": {"sourceRows": 3524, "totalCitations": 2759, "totalCitingDocs": 2591, "totalCitedArticles": 856, "hIndex": 16, "officialScopusMetric": false, "sourceFile": "VJST.csv", "sourceSha256": "5da66d30f9594415"},
+      "publicationSeries": [
+        {"year": 2025, "papers": 88, "basis": "count of catalog.articles with year=2025", "coverage": "Catalog article records include non-research matter not independently excluded."},
+        {"year": 2026, "papers": 78, "basis": "count of catalog.articles with year=2026", "coverage": "Catalog record count; dashboard eligible output excludes non-research matter."}
+      ],
+      "catalogPublicationHistory": {"definition": "Raw count of catalog.articles grouped by article.year; not filtered for issue assignment or paper eligibility.", "yearCountPairs": [[2015,27],[2016,79],[2017,93],[2018,663],[2019,113],[2020,136],[2021,81],[2022,93],[2023,91],[2024,112],[2025,88],[2026,78]]},
+      "citationSeries": [
+        {"year": 2025, "citingDocuments": 540, "confirmedCitationEdges": 563, "basis": "stats.citingSeries docs = confirmed citing documents; occurrences = confirmed citation edges using README exact DOI or normalized title/year/page/author-token criteria."},
+        {"year": 2026, "citingDocuments": 524, "confirmedCitationEdges": 557, "basis": "Same local confirmed-document/edge definitions; annual observation is partial as of export of unknown date."},
+        {"year": 2027, "citingDocuments": 12, "confirmedCitationEdges": 13, "basis": "Future-year data present in payload; not current/final data."}
+      ],
+      "confirmedCitationHistory": {"definition": "Year, distinct citing docs with >=1 catalog-confirmed citation, confirmed citation-edge occurrences; rows follow local stats.citingSeries.", "yearDocEdgeTriples": [[2014,1,1],[2015,0,0],[2016,0,0],[2017,2,2],[2018,20,22],[2019,94,101],[2020,189,199],[2021,239,259],[2022,264,295],[2023,312,328],[2024,394,419],[2025,540,563],[2026,524,557],[2027,12,13]]},
+      "selfCalculatedSeries": [
+        {"year": 2025, "value": 0.88, "numerator": 337, "denominator": 384, "window": "2022-2025", "basis": "Local citeScoreSeries cs4; self-calculated, NOT official Scopus CiteScore. Denominator by year [93,91,112,88]."},
+        {"year": 2026, "value": 1.15, "numerator": 426, "denominator": 369, "window": "2023-2026", "basis": "Local citeScoreSeries cs4; self-calculated, NOT official Scopus CiteScore. Denominator by year [91,112,88,78]. Source marks isTracker=true; meaning not established as official metric."}
+      ],
+      "totals": {"catalogIssues": 0, "catalogArticleRecords": 1654, "statsCitingDocs": 2591, "statsCitationOccurrences": 2759, "statsCitedArticles": 856},
+      "reconciliation": [
+        {"year": 2025, "localCatalogArticleRecords": 88, "localRecordsWithOnlyYearLabel": 19, "localRecordsWithoutIssueAssignment": 16, "dashboardVjsCorePublishedPapers": 89, "dashboardIssueKeyCount": 89, "paperKeyNormalization": "Compared DOI after removing dashboard 'doi:' prefix and lowercasing; DOI namespace/path remain exact. All 89 dashboard issue DOI keys are present somewhere in the local catalog, but 17 are catalogued under year=2023/2024 rather than 2025 (posting-year vs issue-year attribution).", "crossYearDashboardExamples": [{"doi": "10.15625/2525-2518/19533", "catalogYear": 2024, "officialIssueUrl": "https://vjs.ac.vn/jst/issue/view/1376"}, {"doi": "10.15625/2525-2518/17395", "catalogYear": 2023, "officialIssueUrl": "https://vjs.ac.vn/jst/issue/view/1376"}, {"doi": "10.15625/2525-2518/18489", "catalogYear": 2023, "officialIssueUrl": "https://vjs.ac.vn/jst/issue/view/1386"}], "unassignedLocalExamples": [{"doi": "10.15625/2525-2518/22876", "articleUrl": "https://vjs.ac.vn/jst/article/view/22876", "catalogIssueLabel": "2025", "sourcePageStatus": "Forthcoming; metadata issued 2026-02-01, page shows Published 05-09-2025"}, {"doi": "10.15625/2525-2518/22826", "articleUrl": "https://vjs.ac.vn/jst/article/view/22826", "catalogIssueLabel": "2025"}, {"doi": "10.15625/2525-2518/22658", "articleUrl": "https://vjs.ac.vn/jst/article/view/22658", "catalogIssueLabel": "2025"}], "officialIssueSources": ["https://vjs.ac.vn/jst/issue/view/1376", "https://vjs.ac.vn/jst/issue/view/1386", "https://vjs.ac.vn/jst/issue/view/1388", "https://vjs.ac.vn/jst/issue/view/1394", "https://vjs.ac.vn/jst/issue/view/1397", "https://vjs.ac.vn/jst/issue/view/1399"], "finding": "All six official issue pages were inspected; dashboard core has 89 unique issue DOI keys and issue counts 15,15,16,14,15,14. The local catalog's year=2025 count (88) misattributes by issue year: all official issue keys are found across the local catalog, but 17 are stored under local years 2023/2024. The 16 local 2025 records absent from the 2025 issue DOI set are unassigned (volume=null, issue=''); e.g. 22876 is publicly labelled Forthcoming despite conflicting publication dates. This is a year/scope reconciliation issue, not a 17-item DOI absence. Use official issue-year set for published 2025 outputs; do not count unassigned Online First as issued."},
+        {"year": 2026, "localCatalogArticleRecords": 78, "localRecordsWithOnlyYearLabel": 33, "localRecordsWithoutIssueAssignment": 25, "dashboardVjsCorePublishedPapers": 76, "dashboardIssueKeyCount": 76, "paperKeyNormalization": "Compared DOI after removing dashboard 'doi:' prefix and lowercasing; DOI namespace/path remain exact. 11 dashboard issue DOIs are found in local catalog under earlier years 2024/2025; 12 are absent from the local catalog.", "crossYearDashboardExamples": [{"doi": "10.15625/2525-2518/18785", "catalogYear": 2025, "officialIssueUrl": "https://vjs.ac.vn/jst/issue/view/vol64n1"}, {"doi": "10.15625/2525-2518/18821", "catalogYear": 2025, "officialIssueUrl": "https://vjs.ac.vn/jst/issue/view/vol64n1"}, {"doi": "10.15625/2525-2518/19181", "catalogYear": 2024, "officialIssueUrl": "https://vjs.ac.vn/jst/issue/view/vol64n1"}], "unassignedLocalExamples": [{"doi": "10.15625/2525-2518/24123", "articleUrl": "https://vjs.ac.vn/jst/article/view/24123", "catalogIssueLabel": "2026"}, {"doi": "10.15625/2525-2518/24045", "articleUrl": "https://vjs.ac.vn/jst/article/view/24045", "catalogIssueLabel": "2026"}, {"doi": "10.15625/2525-2518/23961", "articleUrl": "https://vjs.ac.vn/jst/article/view/23961", "catalogIssueLabel": "2026"}], "officialIssueSources": ["https://vjs.ac.vn/jst/issue/view/vol64n1", "https://vjs.ac.vn/jst/issue/view/vol64n2", "https://vjs.ac.vn/jst/issue/view/vol64n3", "https://vjs.ac.vn/jst/issue/view/vol64n4", "https://vjs.ac.vn/jst/issue/view/vol64n5"], "finding": "All five official issue pages were inspected; dashboard core has 76 unique issue DOI keys and count breakdown 14,14,16,17,15. 11 DOIs assigned to 2026 issue pages are catalogued under 2024/2025 in the local catalog; 12 issue-5 DOIs are absent from the local catalog (Vol. 64 No. 5 was published 2026-10-20: https://vjs.ac.vn/jst/issue/view/vol64n5). The 25 local 2026 records not in the 2026 issue DOI set are all unassigned Online First records (volume=null, issue=''). The apparent total-count/set mismatch is chiefly issue-year attribution plus unassigned Online First and a stale catalog boundary, not DOI case or namespace normalization. Preserve official published issue-year counts and local unassigned records as separate scopes."}
+      ],
+      "limitations": ["Original source export filename has no date and .last_synced_csv records no date; actual export/retrieval date unknown; processedAt is not source date.", "Catalog has no issue collection. Its year field is not published issue year: confirmed issue DOIs occur under earlier year labels, while entries with no volume/issue are unassigned Online First.", "2026 issue 5 was published 2026-10-20 after the source data's latest known processing date 2026-10-19, but the catalog retrieval date is not recorded; this is consistent with, but does not prove, why its 12 DOIs are absent.", "2027 citation records are future-year data; 2026 is partial and source export date unknown.", "Local stats are nonofficial and confirmed-citation coverage is a subset bounded by the catalog and matching rules."]
+    }
+  ],
+  "limitations": [
+    "Local 4-year values are self-calculated ratios from local citation/paper data, not official CiteScore or Tracker values. Source citeScoreSeries marks year 2026 isTracker=true, but this field alone is not evidence of official Scopus Tracker status.",
+    "2025 and 2026 are the dashboard reconciliation focus; full raw catalog article.year count histories are included per journal under catalogPublicationHistory. These raw catalog counts do not automatically equal dashboard eligible research-paper counts or published issue-year counts.",
+    "Scopus CSV export dates are explicit only for VJMech (2026-10-17 timestamp in source filename); CIP and VJST source dates are unavailable. Stats updatedAt values record processing, not retrieval.",
+    "Catalog retrieval timestamps are not recorded. Source directories were read-only; file modification dates were not used as evidence of source retrieval.",
+    "2025/2026 comparisons are not growth comparisons; 2026 is year-to-date/partial. 2027 records are future-year values and must not appear as current final metrics.",
+    "No raw CSV rows, author records, or individual citation records are included. Source hashes cover inputs only."
+  ]
+}

@@ -1,0 +1,1014 @@
+{
+  "collectedAt": "2026-10-21",
+  "journals": [
+    {
+      "id": "vjes",
+      "code": "VJES",
+      "title": "Vietnam Journal of Earth Sciences",
+      "titleVi": "Tạp chí Các Khoa học về Trái đất",
+      "subject": "Khoa học Trái đất và Môi trường",
+      "website": "https://vjs.ac.vn/index.php/jse",
+      "publisher": "Publishing House for Science and Technology, Vietnam Academy of Science and Technology",
+      "issn": "2615-9783",
+      "eissn": "2815-5890",
+      "formerTitles": [
+        {
+          "title": "Tạp chí Sinh vật - Địa học",
+          "issn": null,
+          "until": 1978
+        },
+        {
+          "title": "Tạp chí Các Khoa học về Trái Đất",
+          "issn": "0866-7187",
+          "until": 2017
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vjs.ac.vn/index.php/jse/about#publicationFrequency"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/jse",
+        "https://vjs.ac.vn/index.php/jse/about",
+        "https://vjs.ac.vn/jse/indexing",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21101039869",
+          "checkedAt": "2026-10-21",
+          "coverage": "2018-2026"
+        },
+        {
+          "system": "WoS",
+          "collection": "ESCI",
+          "status": "listed",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/jse/indexing",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/api/search/journals/issn:2615-9783",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 48 No. 3 (2026)",
+        "published": "2026-09-07",
+        "url": "https://vjs.ac.vn/jse/issue/view/1440"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 31,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jse/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol47n1",
+              "title": "Vol. 47 No. 1 (2025)",
+              "published": "2025-04-16",
+              "url": "https://vjs.ac.vn/jse/issue/view/1383",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/21329",
+                "doi:10.15625/2615-9783/21539",
+                "doi:10.15625/2615-9783/21658",
+                "doi:10.15625/2615-9783/21910",
+                "doi:10.15625/2615-9783/21915",
+                "doi:10.15625/2615-9783/22189",
+                "doi:10.15625/2615-9783/22194"
+              ]
+            },
+            {
+              "id": "vol47n2",
+              "title": "Vol. 47 No. 2 (2025)",
+              "published": "2025-06-30",
+              "url": "https://vjs.ac.vn/jse/issue/view/1392",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/22192",
+                "doi:10.15625/2615-9783/22196",
+                "doi:10.15625/2615-9783/22438",
+                "doi:10.15625/2615-9783/22479",
+                "doi:10.15625/2615-9783/22702",
+                "doi:10.15625/2615-9783/22704",
+                "doi:10.15625/2615-9783/23010",
+                "doi:10.15625/2615-9783/23027"
+              ]
+            },
+            {
+              "id": "vol47n3",
+              "title": "Vol. 47 No. 3 (2025)",
+              "published": "2025-09-29",
+              "url": "https://vjs.ac.vn/jse/issue/view/1401",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/22711",
+                "doi:10.15625/2615-9783/23115",
+                "doi:10.15625/2615-9783/23225",
+                "doi:10.15625/2615-9783/23301",
+                "doi:10.15625/2615-9783/23402",
+                "doi:10.15625/2615-9783/23431",
+                "doi:10.15625/2615-9783/23462",
+                "doi:10.15625/2615-9783/23484"
+              ]
+            },
+            {
+              "id": "vol47n4",
+              "title": "Vol. 47 No. 4 (2025)",
+              "published": "2025-11-18",
+              "url": "https://vjs.ac.vn/jse/issue/view/1307",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/23607",
+                "doi:10.15625/2615-9783/23628",
+                "doi:10.15625/2615-9783/23664",
+                "doi:10.15625/2615-9783/23656",
+                "doi:10.15625/2615-9783/23665",
+                "doi:10.15625/2615-9783/23669",
+                "doi:10.15625/2615-9783/23733",
+                "doi:10.15625/2615-9783/23783"
+              ]
+            }
+          ],
+          "note": "Full annual 2025 output verified from official archive across 4 published regular issues."
+        },
+        {
+          "year": 2026,
+          "papers": 24,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jse/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol48n1",
+              "title": "Vol. 48 No. 1 (2026)",
+              "published": "2026-03-09",
+              "url": "https://vjs.ac.vn/jse/issue/view/1419",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/23795",
+                "doi:10.15625/2615-9783/23802",
+                "doi:10.15625/2615-9783/23814",
+                "doi:10.15625/2615-9783/23821",
+                "doi:10.15625/2615-9783/23833",
+                "doi:10.15625/2615-9783/23973",
+                "doi:10.15625/2615-9783/24022",
+                "doi:10.15625/2615-9783/24023"
+              ]
+            },
+            {
+              "id": "vol48n2",
+              "title": "Vol. 48 No. 2 (2026)",
+              "published": "2026-04-23",
+              "url": "https://vjs.ac.vn/jse/issue/view/1424",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/23990",
+                "doi:10.15625/2615-9783/24026",
+                "doi:10.15625/2615-9783/23852",
+                "doi:10.15625/2615-9783/24030",
+                "doi:10.15625/2615-9783/24214",
+                "doi:10.15625/2615-9783/24315",
+                "doi:10.15625/2615-9783/24344",
+                "doi:10.15625/2615-9783/24406",
+                "doi:10.15625/2615-9783/24459"
+              ]
+            },
+            {
+              "id": "vol48n3",
+              "title": "Vol. 48 No. 3 (2026)",
+              "published": "2026-09-07",
+              "url": "https://vjs.ac.vn/jse/issue/view/1440",
+              "paperKeys": [
+                "doi:10.15625/2615-9783/24020",
+                "doi:10.15625/2615-9783/24463",
+                "doi:10.15625/2615-9783/24038",
+                "doi:10.15625/2615-9783/24217",
+                "doi:10.15625/2615-9783/24496",
+                "doi:10.15625/2615-9783/24522",
+                "doi:10.15625/2615-9783/24314"
+              ]
+            }
+          ],
+          "note": "Year-to-date 2026 output as of 2026-10-21 across 3 published regular issues. Unassigned Online First articles excluded per contract."
+        }
+      ]
+    },
+    {
+      "id": "vjst",
+      "code": "VJST",
+      "title": "Vietnam Journal of Science and Technology",
+      "titleVi": "Tạp chí Khoa học và Công nghệ",
+      "subject": "Khoa học và Công nghệ",
+      "website": "https://vjs.ac.vn/index.php/jst",
+      "publisher": "Publishing House for Science and Technology, Vietnam Academy of Science and Technology",
+      "issn": "2525-2518",
+      "eissn": "2815-5874",
+      "formerTitles": [
+        {
+          "title": "Tập san Khoa học Kỹ thuật",
+          "issn": null,
+          "until": 1996
+        },
+        {
+          "title": "Tạp chí Khoa học và Công nghệ",
+          "issn": "0866-708X",
+          "until": 2016
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 6,
+        "sourceUrl": "https://vjs.ac.vn/jst/journal-description"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/jst",
+        "https://vjs.ac.vn/jst/journal-description",
+        "https://vjs.ac.vn/jst/journal-history",
+        "https://vjs.ac.vn/jst/aims-and-scope",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853",
+          "checkedAt": "2026-10-21",
+          "coverage": "2019-2026"
+        },
+        {
+          "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "journal",
+          "sourceUrl": "http://www.asean-cites.org/index.php?r=contents%2Findex&id=9",
+          "checkedAt": "2026-10-21",
+          "coverage": "since 2017"
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/api/search/journals/issn:2525-2518",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 64 No. 5 (2026)",
+        "published": "2026-10-20",
+        "url": "https://vjs.ac.vn/jst/issue/view/vol64n5"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 89,
+          "issues": 6,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jst/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol63n1",
+              "title": "Vol. 63 No. 1 (2025)",
+              "published": "2025-02-28",
+              "url": "https://vjs.ac.vn/jst/issue/view/1376",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/19533",
+                "doi:10.15625/2525-2518/18104",
+                "doi:10.15625/2525-2518/18494",
+                "doi:10.15625/2525-2518/17618",
+                "doi:10.15625/2525-2518/18365",
+                "doi:10.15625/2525-2518/18444",
+                "doi:10.15625/2525-2518/20042",
+                "doi:10.15625/2525-2518/17622",
+                "doi:10.15625/2525-2518/19250",
+                "doi:10.15625/2525-2518/19196",
+                "doi:10.15625/2525-2518/17395",
+                "doi:10.15625/2525-2518/19648",
+                "doi:10.15625/2525-2518/20142",
+                "doi:10.15625/2525-2518/18306",
+                "doi:10.15625/2525-2518/18389"
+              ]
+            },
+            {
+              "id": "vol63n2",
+              "title": "Vol. 63 No. 2 (2025)",
+              "published": "2025-04-28",
+              "url": "https://vjs.ac.vn/jst/issue/view/1386",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/20044",
+                "doi:10.15625/2525-2518/19962",
+                "doi:10.15625/2525-2518/18307",
+                "doi:10.15625/2525-2518/18478",
+                "doi:10.15625/2525-2518/18489",
+                "doi:10.15625/2525-2518/18203",
+                "doi:10.15625/2525-2518/18515",
+                "doi:10.15625/2525-2518/18536",
+                "doi:10.15625/2525-2518/17630",
+                "doi:10.15625/2525-2518/18491",
+                "doi:10.15625/2525-2518/19061",
+                "doi:10.15625/2525-2518/18701",
+                "doi:10.15625/2525-2518/19491",
+                "doi:10.15625/2525-2518/19286",
+                "doi:10.15625/2525-2518/20303"
+              ]
+            },
+            {
+              "id": "vol63n3",
+              "title": "Vol. 63 No. 3 (2025)",
+              "published": "2025-06-26",
+              "url": "https://vjs.ac.vn/jst/issue/view/1388",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/20050",
+                "doi:10.15625/2525-2518/21671",
+                "doi:10.15625/2525-2518/18662",
+                "doi:10.15625/2525-2518/18442",
+                "doi:10.15625/2525-2518/18528",
+                "doi:10.15625/2525-2518/18603",
+                "doi:10.15625/2525-2518/20164",
+                "doi:10.15625/2525-2518/18543",
+                "doi:10.15625/2525-2518/18501",
+                "doi:10.15625/2525-2518/19096",
+                "doi:10.15625/2525-2518/19688",
+                "doi:10.15625/2525-2518/18876",
+                "doi:10.15625/2525-2518/19667",
+                "doi:10.15625/2525-2518/20974",
+                "doi:10.15625/2525-2518/19336",
+                "doi:10.15625/2525-2518/19409"
+              ]
+            },
+            {
+              "id": "vol63n4",
+              "title": "Vol. 63 No. 4 (2025)",
+              "published": "2025-08-28",
+              "url": "https://vjs.ac.vn/jst/issue/view/1394",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/21069",
+                "doi:10.15625/2525-2518/21269",
+                "doi:10.15625/2525-2518/18107",
+                "doi:10.15625/2525-2518/18781",
+                "doi:10.15625/2525-2518/20088",
+                "doi:10.15625/2525-2518/17628",
+                "doi:10.15625/2525-2518/19578",
+                "doi:10.15625/2525-2518/18013",
+                "doi:10.15625/2525-2518/17636",
+                "doi:10.15625/2525-2518/19478",
+                "doi:10.15625/2525-2518/19437",
+                "doi:10.15625/2525-2518/19447",
+                "doi:10.15625/2525-2518/19639",
+                "doi:10.15625/2525-2518/17640"
+              ]
+            },
+            {
+              "id": "vol63n5",
+              "title": "Vol. 63 No. 5 (2025)",
+              "published": "2025-10-23",
+              "url": "https://vjs.ac.vn/jst/issue/view/1397",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/20515",
+                "doi:10.15625/2525-2518/22558",
+                "doi:10.15625/2525-2518/18669",
+                "doi:10.15625/2525-2518/18333",
+                "doi:10.15625/2525-2518/18526",
+                "doi:10.15625/2525-2518/18533",
+                "doi:10.15625/2525-2518/18562",
+                "doi:10.15625/2525-2518/18511",
+                "doi:10.15625/2525-2518/18159",
+                "doi:10.15625/2525-2518/18519",
+                "doi:10.15625/2525-2518/18544",
+                "doi:10.15625/2525-2518/18571",
+                "doi:10.15625/2525-2518/18507",
+                "doi:10.15625/2525-2518/20703",
+                "doi:10.15625/2525-2518/22502"
+              ]
+            },
+            {
+              "id": "vol63n6",
+              "title": "Vol. 63 No. 6 (2025)",
+              "published": "2025-12-12",
+              "url": "https://vjs.ac.vn/jst/issue/view/1399",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/22909",
+                "doi:10.15625/2525-2518/22764",
+                "doi:10.15625/2525-2518/21955",
+                "doi:10.15625/2525-2518/18887",
+                "doi:10.15625/2525-2518/17649",
+                "doi:10.15625/2525-2518/18033",
+                "doi:10.15625/2525-2518/18110",
+                "doi:10.15625/2525-2518/19131",
+                "doi:10.15625/2525-2518/19189",
+                "doi:10.15625/2525-2518/19276",
+                "doi:10.15625/2525-2518/19366",
+                "doi:10.15625/2525-2518/21587",
+                "doi:10.15625/2525-2518/20573",
+                "doi:10.15625/2525-2518/19839"
+              ]
+            }
+          ],
+          "note": "Full annual 2025 output verified from official archive across 6 published regular issues (89 unique research papers with valid DOIs). Reconciled with user's local catalog (vjmech_ojs_catalog.json, 88 records): the local catalog lacks issue groupings (catalog.issues is empty) and groups articles by online submission/posting date rather than published volume year. Consequently, the local catalog includes 16 unissued Online First articles (volume=None, issue=''), 6 of which were later assigned to 2026 issues and 10 remain unissued, while omitting 17 articles published in Vol. 63 (2025) whose online-first dates were in 2023 or 2024. All 89 articles in this dataset are verified directly from Vol. 63 No. 1-6 official issue pages."
+        },
+        {
+          "year": 2026,
+          "papers": 76,
+          "issues": 5,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jst/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol64n1",
+              "title": "Vol. 64 No. 1 (2026)",
+              "published": "2026-02-26",
+              "url": "https://vjs.ac.vn/jst/issue/view/vol64n1",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/19637",
+                "doi:10.15625/2525-2518/21229",
+                "doi:10.15625/2525-2518/18785",
+                "doi:10.15625/2525-2518/19970",
+                "doi:10.15625/2525-2518/17983",
+                "doi:10.15625/2525-2518/18599",
+                "doi:10.15625/2525-2518/18821",
+                "doi:10.15625/2525-2518/19643",
+                "doi:10.15625/2525-2518/21218",
+                "doi:10.15625/2525-2518/19181",
+                "doi:10.15625/2525-2518/22381",
+                "doi:10.15625/2525-2518/22956",
+                "doi:10.15625/2525-2518/20799",
+                "doi:10.15625/2525-2518/22041"
+              ]
+            },
+            {
+              "id": "vol64n2",
+              "title": "Vol. 64 No. 2 (2026)",
+              "published": "2026-04-25",
+              "url": "https://vjs.ac.vn/jst/issue/view/vol64n2",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/22090",
+                "doi:10.15625/2525-2518/22121",
+                "doi:10.15625/2525-2518/18811",
+                "doi:10.15625/2525-2518/18889",
+                "doi:10.15625/2525-2518/20030",
+                "doi:10.15625/2525-2518/18289",
+                "doi:10.15625/2525-2518/18386",
+                "doi:10.15625/2525-2518/18545",
+                "doi:10.15625/2525-2518/20757",
+                "doi:10.15625/2525-2518/19492",
+                "doi:10.15625/2525-2518/20449",
+                "doi:10.15625/2525-2518/21348",
+                "doi:10.15625/2525-2518/21463",
+                "doi:10.15625/2525-2518/21672"
+              ]
+            },
+            {
+              "id": "vol64n3",
+              "title": "Vol. 64 No. 3 (2026)",
+              "published": "2026-06-28",
+              "url": "https://vjs.ac.vn/jst/issue/view/vol64n3",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/22424",
+                "doi:10.15625/2525-2518/23015",
+                "doi:10.15625/2525-2518/19235",
+                "doi:10.15625/2525-2518/19579",
+                "doi:10.15625/2525-2518/20054",
+                "doi:10.15625/2525-2518/21503",
+                "doi:10.15625/2525-2518/18299",
+                "doi:10.15625/2525-2518/19779",
+                "doi:10.15625/2525-2518/20662",
+                "doi:10.15625/2525-2518/20734",
+                "doi:10.15625/2525-2518/21444",
+                "doi:10.15625/2525-2518/20566",
+                "doi:10.15625/2525-2518/20664",
+                "doi:10.15625/2525-2518/21728",
+                "doi:10.15625/2525-2518/21773",
+                "doi:10.15625/2525-2518/21413"
+              ]
+            },
+            {
+              "id": "vol64n4",
+              "title": "Vol. 64 No. 4 (2026)",
+              "published": "2026-08-17",
+              "url": "https://vjs.ac.vn/jst/issue/view/vol64n4",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/23683",
+                "doi:10.15625/2525-2518/23813",
+                "doi:10.15625/2525-2518/21761",
+                "doi:10.15625/2525-2518/22294",
+                "doi:10.15625/2525-2518/22376",
+                "doi:10.15625/2525-2518/22395",
+                "doi:10.15625/2525-2518/19390",
+                "doi:10.15625/2525-2518/19614",
+                "doi:10.15625/2525-2518/20666",
+                "doi:10.15625/2525-2518/21258",
+                "doi:10.15625/2525-2518/22026",
+                "doi:10.15625/2525-2518/21972",
+                "doi:10.15625/2525-2518/22068",
+                "doi:10.15625/2525-2518/22656",
+                "doi:10.15625/2525-2518/20241",
+                "doi:10.15625/2525-2518/21391",
+                "doi:10.15625/2525-2518/21929"
+              ]
+            },
+            {
+              "id": "vol64n5",
+              "title": "Vol. 64 No. 5 (2026)",
+              "published": "2026-10-20",
+              "url": "https://vjs.ac.vn/jst/issue/view/vol64n5",
+              "paperKeys": [
+                "doi:10.15625/2525-2518/23881",
+                "doi:10.15625/2525-2518/23902",
+                "doi:10.15625/2525-2518/18497",
+                "doi:10.15625/2525-2518/19326",
+                "doi:10.15625/2525-2518/19436",
+                "doi:10.15625/2525-2518/18585",
+                "doi:10.15625/2525-2518/19112",
+                "doi:10.15625/2525-2518/19150",
+                "doi:10.15625/2525-2518/19563",
+                "doi:10.15625/2525-2518/19751",
+                "doi:10.15625/2525-2518/20417",
+                "doi:10.15625/2525-2518/19754",
+                "doi:10.15625/2525-2518/20423",
+                "doi:10.15625/2525-2518/23094",
+                "doi:10.15625/2525-2518/21035"
+              ]
+            }
+          ],
+          "note": "Year-to-date 2026 output as of 2026-10-21 verified across 5 published regular issues (76 unique research papers with valid DOIs). Latest issue Vol. 64 No. 5 was published on 2026-10-20. Reconciled with user's local catalog (78 records): local catalog was exported prior to Vol. 64 No. 5 (which contains 15 articles, 12 new to local catalog) and includes 25 unissued Online First articles (volume=None, issue=''), while omitting 11 articles published in Vol. 64 whose online-first dates were in 2024 or 2025. Per contract, unassigned Online First articles are excluded until published in a numbered regular issue."
+        }
+      ]
+    },
+    {
+      "id": "cip",
+      "code": "CIP",
+      "title": "Communications in Physics",
+      "titleVi": "Tạp chí Vật lý",
+      "subject": "Vật lý",
+      "website": "https://vjs.ac.vn/index.php/cip",
+      "publisher": "Publishing House for Science and Technology, Vietnam Academy of Science and Technology",
+      "issn": "0868-3166",
+      "eissn": "2815-5947",
+      "formerTitles": [
+        {
+          "title": "Tạp chí Vật lý",
+          "issn": "0868-3166",
+          "until": 1990
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vjs.ac.vn/cip/publication-frequency"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/cip",
+        "https://vjs.ac.vn/cip/journal-description",
+        "https://vjs.ac.vn/cip/aims-and-scope",
+        "https://vjs.ac.vn/cip/indexing",
+        "https://vjs.ac.vn/cip/publication-frequency",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21101380177",
+          "checkedAt": "2026-10-21",
+          "coverage": "2022-2026"
+        },
+        {
+          "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/toc/0868-3166",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 36 No. 3 (2026)",
+        "published": "2026-09-15",
+        "url": "https://vjs.ac.vn/cip/issue/view/1428"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 34,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/cip/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol35n1",
+              "title": "Vol. 35 No. 1 (2025)",
+              "published": "2025-01-08",
+              "url": "https://vjs.ac.vn/cip/issue/view/1375",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/22081",
+                "doi:10.15625/0868-3166/21959",
+                "doi:10.15625/0868-3166/21740",
+                "doi:10.15625/0868-3166/21631",
+                "doi:10.15625/0868-3166/21622",
+                "doi:10.15625/0868-3166/21614",
+                "doi:10.15625/0868-3166/21873",
+                "doi:10.15625/0868-3166/22079"
+              ]
+            },
+            {
+              "id": "vol35n2",
+              "title": "Vol. 35 No. 2 (2025)",
+              "published": "2025-05-29",
+              "url": "https://vjs.ac.vn/cip/issue/view/1384",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/22369",
+                "doi:10.15625/0868-3166/21623",
+                "doi:10.15625/0868-3166/22080",
+                "doi:10.15625/0868-3166/22638",
+                "doi:10.15625/0868-3166/22706",
+                "doi:10.15625/0868-3166/21541",
+                "doi:10.15625/0868-3166/22113",
+                "doi:10.15625/0868-3166/21857"
+              ]
+            },
+            {
+              "id": "vol35n3",
+              "title": "Vol. 35 No. 3 (2025)",
+              "published": "2025-09-24",
+              "url": "https://vjs.ac.vn/cip/issue/view/1393",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/22722",
+                "doi:10.15625/0868-3166/22683",
+                "doi:10.15625/0868-3166/22759",
+                "doi:10.15625/0868-3166/21634",
+                "doi:10.15625/0868-3166/22700",
+                "doi:10.15625/0868-3166/22195",
+                "doi:10.15625/0868-3166/22594",
+                "doi:10.15625/0868-3166/22403",
+                "doi:10.15625/0868-3166/22724"
+              ]
+            },
+            {
+              "id": "vol35n4",
+              "title": "Vol. 35 No. 4 (2025)",
+              "published": "2025-12-09",
+              "url": "https://vjs.ac.vn/cip/issue/view/1400",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/23303",
+                "doi:10.15625/0868-3166/23107",
+                "doi:10.15625/0868-3166/23002",
+                "doi:10.15625/0868-3166/22766",
+                "doi:10.15625/0868-3166/22929",
+                "doi:10.15625/0868-3166/22650",
+                "doi:10.15625/0868-3166/22871",
+                "doi:10.15625/0868-3166/23365",
+                "doi:10.15625/0868-3166/22744"
+              ]
+            }
+          ],
+          "note": "Full annual 2025 output verified from official archive across 4 published regular issues (34 research papers). Reconciled with local catalog: exactly matches the 34 article records in the local catalog."
+        },
+        {
+          "year": 2026,
+          "papers": 30,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/cip/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol36n1",
+              "title": "Vol. 36 No. 1 (2026)",
+              "published": "2026-03-05",
+              "url": "https://vjs.ac.vn/cip/issue/view/1418",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/23939",
+                "doi:10.15625/0868-3166/23876",
+                "doi:10.15625/0868-3166/23350",
+                "doi:10.15625/0868-3166/23333",
+                "doi:10.15625/0868-3166/23473",
+                "doi:10.15625/0868-3166/23580",
+                "doi:10.15625/0868-3166/23283",
+                "doi:10.15625/0868-3166/23264",
+                "doi:10.15625/0868-3166/23622",
+                "doi:10.15625/0868-3166/22927"
+              ]
+            },
+            {
+              "id": "vol36n2",
+              "title": "Vol. 36 No. 2 (2026)",
+              "published": "2026-06-09",
+              "url": "https://vjs.ac.vn/cip/issue/view/1407",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/24012",
+                "doi:10.15625/0868-3166/23767",
+                "doi:10.15625/0868-3166/23523",
+                "doi:10.15625/0868-3166/23736",
+                "doi:10.15625/0868-3166/23659",
+                "doi:10.15625/0868-3166/24331",
+                "doi:10.15625/0868-3166/23242",
+                "doi:10.15625/0868-3166/23633",
+                "doi:10.15625/0868-3166/23831",
+                "doi:10.15625/0868-3166/23649"
+              ]
+            },
+            {
+              "id": "vol36n3",
+              "title": "Vol. 36 No. 3 (2026)",
+              "published": "2026-09-15",
+              "url": "https://vjs.ac.vn/cip/issue/view/1428",
+              "paperKeys": [
+                "doi:10.15625/0868-3166/24281",
+                "doi:10.15625/0868-3166/24116",
+                "doi:10.15625/0868-3166/24399",
+                "doi:10.15625/0868-3166/23777",
+                "doi:10.15625/0868-3166/23911",
+                "doi:10.15625/0868-3166/24092",
+                "doi:10.15625/0868-3166/23866",
+                "doi:10.15625/0868-3166/23691",
+                "doi:10.15625/0868-3166/24093",
+                "doi:10.15625/0868-3166/23058"
+              ]
+            }
+          ],
+          "note": "Year-to-date 2026 output as of 2026-10-21 across 3 published regular issues (30 research papers; Vol. 36 No. 1, 2, 3 with 10 papers each). Reconciled with local catalog: local catalog includes 26 numbered issue articles and 8 unnumbered/forthcoming articles; Vol. 36 No. 4 is forthcoming and excluded per contract."
+        }
+      ]
+    },
+    {
+      "id": "vjmech",
+      "code": "VJMech",
+      "title": "Vietnam Journal of Mechanics",
+      "titleVi": "Tạp chí Cơ học",
+      "subject": "Cơ học",
+      "website": "https://vjs.ac.vn/index.php/vjmech",
+      "publisher": "Publishing House for Science and Technology, Vietnam Academy of Science and Technology",
+      "issn": "0866-7136",
+      "eissn": "2815-5882",
+      "formerTitles": [
+        {
+          "title": "Tạp chí Cơ học",
+          "issn": "0866-7136",
+          "until": 2004
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vjs.ac.vn/index.php/vjmech/about#frequency"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/vjmech",
+        "https://vjs.ac.vn/vjmech/about",
+        "https://vjs.ac.vn/vjmech/abstracting-and-indexing",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sources",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/vjmech/abstracting-and-indexing",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/toc/0866-7136",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 48 No. 3 (2026)",
+        "published": "2026-09-09",
+        "url": "https://vjs.ac.vn/vjmech/issue/view/vol48n3"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 24,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjmech/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol47n1",
+              "title": "Vol. 47 No. 1 (2025)",
+              "published": "2025-03-17",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol47n1",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/21276",
+                "doi:10.15625/0866-7136/21542",
+                "doi:10.15625/0866-7136/21586",
+                "doi:10.15625/0866-7136/21925",
+                "doi:10.15625/0866-7136/22165"
+              ]
+            },
+            {
+              "id": "vol47n2",
+              "title": "Vol. 47 No. 2 (2025)",
+              "published": "2025-06-27",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol47n2",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/21845",
+                "doi:10.15625/0866-7136/22011",
+                "doi:10.15625/0866-7136/22179",
+                "doi:10.15625/0866-7136/22318",
+                "doi:10.15625/0866-7136/22319",
+                "doi:10.15625/0866-7136/22333"
+              ]
+            },
+            {
+              "id": "vol47n3",
+              "title": "Vol. 47 No. 3 (2025)",
+              "published": "2025-09-30",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol47n3",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/21949",
+                "doi:10.15625/0866-7136/22269",
+                "doi:10.15625/0866-7136/22277",
+                "doi:10.15625/0866-7136/22285",
+                "doi:10.15625/0866-7136/22341",
+                "doi:10.15625/0866-7136/22383",
+                "doi:10.15625/0866-7136/22643"
+              ]
+            },
+            {
+              "id": "vol47n4",
+              "title": "Vol. 47 No. 4 (2025)",
+              "published": "2025-12-28",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol47n4",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/20921",
+                "doi:10.15625/0866-7136/22420",
+                "doi:10.15625/0866-7136/22777",
+                "doi:10.15625/0866-7136/23029",
+                "doi:10.15625/0866-7136/23163",
+                "doi:10.15625/0866-7136/23362"
+              ]
+            }
+          ],
+          "note": "Full annual 2025 output verified from official archive across 4 published regular issues (24 research papers). Reconciled with local catalog (25 records): 1 non-research memorial announcement (OJS id 22566, DOI 10.15625/0866-7136/22566, Prof. Nguyen Van Khang memorial in Vol. 47 No. 1) was excluded per contract criteria."
+        },
+        {
+          "year": 2026,
+          "papers": 20,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjmech/issue/archive"
+          ],
+          "issueItems": [
+            {
+              "id": "vol48n1",
+              "title": "Vol. 48 No. 1 (2026)",
+              "published": "2026-03-30",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol48n1",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/22664",
+                "doi:10.15625/0866-7136/23064",
+                "doi:10.15625/0866-7136/23272",
+                "doi:10.15625/0866-7136/23571",
+                "doi:10.15625/0866-7136/23632",
+                "doi:10.15625/0866-7136/23709",
+                "doi:10.15625/0866-7136/23920"
+              ]
+            },
+            {
+              "id": "vol48n2",
+              "title": "Vol. 48 No. 2 (2026)",
+              "published": "2026-06-25",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol48n2",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/23425",
+                "doi:10.15625/0866-7136/23483",
+                "doi:10.15625/0866-7136/23589",
+                "doi:10.15625/0866-7136/23630",
+                "doi:10.15625/0866-7136/23666",
+                "doi:10.15625/0866-7136/23703"
+              ]
+            },
+            {
+              "id": "vol48n3",
+              "title": "Vol. 48 No. 3 (2026)",
+              "published": "2026-09-09",
+              "url": "https://vjs.ac.vn/vjmech/issue/view/vol48n3",
+              "paperKeys": [
+                "doi:10.15625/0866-7136/23723",
+                "doi:10.15625/0866-7136/23737",
+                "doi:10.15625/0866-7136/23782",
+                "doi:10.15625/0866-7136/23885",
+                "doi:10.15625/0866-7136/23918",
+                "doi:10.15625/0866-7136/23994",
+                "doi:10.15625/0866-7136/24360"
+              ]
+            }
+          ],
+          "note": "Year-to-date 2026 output as of 2026-10-21 across 3 published regular issues (20 research papers). Reconciled with local catalog (43 records total): exactly matches the 20 numbered issue articles; the 23 unassigned Online First articles are excluded per contract."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Year 2026 outputs represent published-to-date (YTD) counts as of 2026-10-21 and are partial annual volumes; per contract instructions, they must not be directly compared with full-year 2025 volumes as growth or decline.",
+    "Unassigned Online First articles (present on VJES, VJST, and VJMech platforms) are excluded per contract specification until officially assigned to a numbered published regular issue.",
+    "Non-research matter (cover pages, tables of contents, editorial announcements, memorials, errata, corrigenda) is excluded from eligible research paper counts (e.g. 1 memorial announcement in VJMech Vol. 47 No. 1).",
+    "Reconciliation with local user OJS citation catalogs (09-series): Local catalogs do not track issue structures (catalog.issues is empty) and group articles by initial online-submission/posting date rather than official published issue year. Furthermore, local exports reflect a frozen snapshot (processed 2026-10-19) that predates recent issue publications (such as VJST Vol. 64 No. 5 published 2026-10-20). These structural and temporal differences fully account for discrepancies between catalog record totals and official issue paper counts.",
+    "Indexing statuses marked with evidenceLevel 'journal' represent explicit claims posted on official journal websites/pages rather than independent direct database audits, whereas DOAJ entries and preserved Scopus records are directly verified at the database level.",
+    "VJMech is not part of the original 7-journal Scopus snapshot; its Scopus and WoS statuses are reported as unverified with honest source qualification rather than asserting non-indexing, adhering to the contract rule against inventing negative not_listed claims."
+  ]
+}

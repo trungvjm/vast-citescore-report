@@ -1,0 +1,478 @@
+{
+  "auditedAt": "2026-10-21",
+  "definitions": {
+    "publications": "Count of catalog articles[] records per integer publication year; catalog issues[] is empty in these collections.",
+    "citingDocuments": "Distinct Scopus citing documents with >=1 catalog-confirmed citation (citingSeries.docs).",
+    "confirmedCitationEdges": "Citation occurrences/edges to catalog-confirmed journal articles (citingSeries.occurrences).",
+    "selfCalculatedMetric": "Source citeScoreSeries cs4: 4-year window ratio of confirmed citation edges to catalog publication records in 4-year window; locally computed, not official Scopus CiteScore. Tracker flag marks ongoing calculation year, not official Scopus Tracker status."
+  },
+  "journals": [
+    {
+      "id": "vjes",
+      "code": "VJES",
+      "title": "Vietnam Journal of Earth Sciences",
+      "sourceDirectory": "2026/09c-OJS-Citation Statistics-VJES",
+      "sourceFiles": [
+        {
+          "path": "2026/09c-OJS-Citation Statistics-VJES/data/vjmech-stats.json",
+          "sha256": "bcb9a90dfd60370b386b831b825cc8e5de910adae191e3efd5c0571cfcfb1715",
+          "role": "Decoded local Scopus-derived statistics and annual series"
+        },
+        {
+          "path": "2026/09c-OJS-Citation Statistics-VJES/data/vjmech_ojs_catalog.json",
+          "sha256": "ede4d787cf2d3b7781f53f4ef5b9b4a52575cd6f2d07dbe47cbd7b454bf827dc",
+          "role": "OJS article catalog used for local citation confirmation and publication counts"
+        },
+        {
+          "path": "2026/09c-OJS-Citation Statistics-VJES/data/citation-audit.json",
+          "sha256": "730e901c8aac52dac58251321d2c26b9f831783ad22fe25798c4fe208c79145e",
+          "role": "Citation audit identifying confirmed citing documents and excluded search hits"
+        },
+        {
+          "path": "2026/09c-OJS-Citation Statistics-VJES/data/vjmech-stats-gz.txt",
+          "sha256": "e591372659698f2c9d3d108191338a536f8616b65df00bdc1bf362a88cf9eec7",
+          "role": "Compressed base64-gzipped statistics payload for OJS publisher library"
+        },
+        {
+          "path": "2026/09c-OJS-Citation Statistics-VJES/data/scopus-exports/VJES.csv",
+          "sha256": "f9cc82d86302f209737fbe3ba7f19ee3a99043343fb052e3645ab54db026cf9c",
+          "role": "Original Scopus source export CSV; hash agrees with stats metadata truncated sourceSha256 (f9cc82d86302f209)"
+        },
+        {
+          "path": "2026/09c-OJS-Citation Statistics-VJES/data/.last_synced_csv",
+          "sha256": "d895d4def28e2d088da88741b6366219d284648c6b8000f21463672a4ad4973a",
+          "role": "Sync state tracking last processed CSV file and hash"
+        }
+      ],
+      "sourceExportDate": null,
+      "sourceExportDateReason": "Source export is named VJES.csv without embedded timestamp in filename or CSV content; filesystem modified time is 2026-10-19 20:47:17, but filesystem timestamp is not verified source export date. Stats metadata records updatedAt 2026-10-19.",
+      "processedAt": "2026-10-19",
+      "catalogRetrievedAt": null,
+      "publicSourceUrl": "https://vjs.ac.vn/jse/statistic",
+      "officialMetricStatus": "Local stats metadata explicitly specifies officialScopusMetric=false. All cs4 values in citeScoreSeries are self-calculated 4-year ratios and must NOT be presented as official Scopus CiteScore or Tracker metrics.",
+      "meta": {
+        "sourceFile": "VJES.csv",
+        "sourceSha256": "f9cc82d86302f209",
+        "sourceRows": 1884,
+        "totalCitations": 2759,
+        "totalCitingDocs": 1761,
+        "totalCitedArticles": 347,
+        "hIndex": 23,
+        "officialScopusMetric": false
+      },
+      "citationAudit": {
+        "sourceRows": 1884,
+        "confirmedCitingRows": 1761,
+        "excludedSearchHitRows": 123,
+        "excludedVirtualArticles": 202
+      },
+      "publicationSeries": [
+        {"year": 2003, "papers": 22, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "archived_catalog"},
+        {"year": 2006, "papers": 7, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "archived_catalog"},
+        {"year": 2008, "papers": 50, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "archived_catalog"},
+        {"year": 2009, "papers": 1, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "archived_catalog"},
+        {"year": 2011, "papers": 14, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "archived_catalog"},
+        {"year": 2014, "papers": 31, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "archived_catalog"},
+        {"year": 2015, "papers": 44, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2016, "papers": 52, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2017, "papers": 36, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2018, "papers": 64, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2019, "papers": 30, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2020, "papers": 39, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2021, "papers": 31, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2022, "papers": 29, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2023, "papers": 30, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2024, "papers": 32, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2025, "papers": 38, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "catalog_cohort (includes 25 Vol.47 2025 issued and 13 early online-first appearing in Vol.48 2026)"},
+        {"year": 2026, "papers": 24, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "catalog_cohort_ytd (includes 10 Vol.48 2026 issued and 14 unassigned Online First articles)"}
+      ],
+      "citationSeries": [
+        {"year": 2014, "citingDocuments": 1, "confirmedCitationEdges": 1, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2015, "citingDocuments": 1, "confirmedCitationEdges": 1, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2016, "citingDocuments": 2, "confirmedCitationEdges": 2, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2017, "citingDocuments": 5, "confirmedCitationEdges": 7, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2018, "citingDocuments": 31, "confirmedCitationEdges": 38, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2019, "citingDocuments": 57, "confirmedCitationEdges": 97, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2020, "citingDocuments": 92, "confirmedCitationEdges": 187, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2021, "citingDocuments": 170, "confirmedCitationEdges": 293, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2022, "citingDocuments": 209, "confirmedCitationEdges": 340, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2023, "citingDocuments": 224, "confirmedCitationEdges": 358, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2024, "citingDocuments": 317, "confirmedCitationEdges": 500, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2025, "citingDocuments": 332, "confirmedCitationEdges": 473, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2026, "citingDocuments": 317, "confirmedCitationEdges": 459, "basis": "Confirmed citing docs / citation edges (YTD as of 2026-10-19 export)", "isFuture": false},
+        {"year": 2027, "citingDocuments": 3, "confirmedCitationEdges": 3, "basis": "Future-year in-press citations; excluded from current final metrics", "isFuture": true}
+      ],
+      "selfCalculatedSeries": [
+        {"year": 2015, "value": 0.01, "numerator": 1, "denominator": 75, "window": "2012-2015", "isTracker": false, "denominatorByYear": [0, 0, 31, 44], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2016, "value": 0.02, "numerator": 3, "denominator": 127, "window": "2013-2016", "isTracker": false, "denominatorByYear": [0, 31, 44, 52], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2017, "value": 0.06, "numerator": 10, "denominator": 163, "window": "2014-2017", "isTracker": false, "denominatorByYear": [31, 44, 52, 36], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2018, "value": 0.23, "numerator": 46, "denominator": 196, "window": "2015-2018", "isTracker": false, "denominatorByYear": [44, 52, 36, 64], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2019, "value": 0.62, "numerator": 112, "denominator": 182, "window": "2016-2019", "isTracker": false, "denominatorByYear": [52, 36, 64, 30], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2020, "value": 1.25, "numerator": 211, "denominator": 169, "window": "2017-2020", "isTracker": false, "denominatorByYear": [36, 64, 30, 39], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2021, "value": 1.75, "numerator": 287, "denominator": 164, "window": "2018-2021", "isTracker": false, "denominatorByYear": [64, 30, 39, 31], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2022, "value": 2.97, "numerator": 383, "denominator": 129, "window": "2019-2022", "isTracker": false, "denominatorByYear": [30, 39, 31, 29], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2023, "value": 3.44, "numerator": 444, "denominator": 129, "window": "2020-2023", "isTracker": false, "denominatorByYear": [39, 31, 29, 30], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2024, "value": 3.98, "numerator": 486, "denominator": 122, "window": "2021-2024", "isTracker": false, "denominatorByYear": [31, 29, 30, 32], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2025, "value": 4.39, "numerator": 566, "denominator": 129, "window": "2022-2025", "isTracker": false, "denominatorByYear": [29, 30, 32, 38], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2026, "value": 4.18, "numerator": 518, "denominator": 124, "window": "2023-2026", "isTracker": true, "denominatorByYear": [30, 32, 38, 24], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"}
+      ],
+      "totals": {
+        "catalogIssues": 0,
+        "catalogArticleRecords": 574,
+        "sourceRows": 1884,
+        "confirmedCitingDocs": 1761,
+        "excludedSearchHitRows": 123,
+        "confirmedCitationOccurrences": 2759,
+        "citedArticles": 347,
+        "hIndex": 23
+      },
+      "reconciliation": [
+        {
+          "category": "publication_counts_2025",
+          "year": 2025,
+          "localCatalogArticleRecords": 38,
+          "dashboardVjsCorePublishedPapers": 31,
+          "difference": 7,
+          "finding": "Dashboard core has 31 published regular-issue papers across Vol. 47 Nos 1-4. The local catalog records 38 articles tagged with year 2025. Cross-referencing shows 25 of the 38 catalog articles were published in Vol. 47 (2025), while 13 were early online appearances published in Vol. 48 (2026) regular issues. Additionally, 6 papers published in Vol. 47 (2025) carry year 2024 in the catalog (25 + 6 = 31). Local catalog assigns year based on OJS metadata/submission timestamps rather than journal issue volume publication dates."
+        },
+        {
+          "category": "publication_counts_2026",
+          "year": 2026,
+          "localCatalogArticleRecords": 24,
+          "dashboardVjsCorePublishedPapers": 24,
+          "difference": 0,
+          "finding": "Both sources record exactly 24 articles. However, their composition differs: in dashboard-vjs-core.json, all 24 are published papers across Vol. 48 Nos 1-3. In the local catalog, 10 belong to Vol. 48 regular issues (Nos 2-3) and 14 are Online First advance articles. The remaining 14 published papers of Vol. 48 are tagged with year 2025 in the catalog (13 papers) or uncatalogued (1 paper, DOI 10.15625/2615-9783/24030)."
+        },
+        {
+          "category": "official_scopus_citescore",
+          "comparison": [
+            {
+              "year": 2020,
+              "officialCiteScore": 0.7,
+              "officialCitations": 23,
+              "officialDocuments": 31,
+              "officialWindow": "2017-2020",
+              "selfCalculatedValue": 1.25,
+              "selfCalculatedNumerator": 211,
+              "selfCalculatedDenominator": 169,
+              "selfCalculatedWindow": "2017-2020",
+              "differenceExplanation": "Scopus indexed VJES starting in 2018; pre-2018 documents were not in Scopus source profile (only 31 counted). Local catalog includes 169 retrospective articles and matched 211 incoming citations."
+            },
+            {
+              "year": 2021,
+              "officialCiteScore": 1.5,
+              "officialCitations": 83,
+              "officialDocuments": 54,
+              "officialWindow": "2018-2021",
+              "selfCalculatedValue": 1.75,
+              "selfCalculatedNumerator": 287,
+              "selfCalculatedDenominator": 164,
+              "selfCalculatedWindow": "2018-2021",
+              "differenceExplanation": "Scopus source profile indexed 54 documents in window. Local catalog includes 164 articles with full retrospective coverage."
+            },
+            {
+              "year": 2022,
+              "officialCiteScore": 3.1,
+              "officialCitations": 357,
+              "officialDocuments": 115,
+              "officialWindow": "2019-2022",
+              "selfCalculatedValue": 2.97,
+              "selfCalculatedNumerator": 383,
+              "selfCalculatedDenominator": 129,
+              "selfCalculatedWindow": "2019-2022",
+              "differenceExplanation": "Official Scopus has 357 citations and 115 documents. Local self-calculation has 383 citations and 129 denominator articles."
+            },
+            {
+              "year": 2023,
+              "officialCiteScore": 3.6,
+              "officialCitations": 421,
+              "officialDocuments": 117,
+              "officialWindow": "2020-2023",
+              "selfCalculatedValue": 3.44,
+              "selfCalculatedNumerator": 444,
+              "selfCalculatedDenominator": 129,
+              "selfCalculatedWindow": "2020-2023",
+              "differenceExplanation": "Official Scopus has 421 citations and 117 documents. Local self-calculation has 444 citations and 129 denominator articles."
+            },
+            {
+              "year": 2024,
+              "officialCiteScore": 4.0,
+              "officialCitations": 479,
+              "officialDocuments": 119,
+              "officialWindow": "2021-2024",
+              "selfCalculatedValue": 3.98,
+              "selfCalculatedNumerator": 486,
+              "selfCalculatedDenominator": 122,
+              "selfCalculatedWindow": "2021-2024",
+              "differenceExplanation": "Close agreement: official 4.0 (479/119) vs local 3.98 (486/122)."
+            },
+            {
+              "year": 2025,
+              "officialCiteScore": 5.0,
+              "officialCitations": 604,
+              "officialDocuments": 122,
+              "officialWindow": "2022-2025",
+              "selfCalculatedValue": 4.39,
+              "selfCalculatedNumerator": 566,
+              "selfCalculatedDenominator": 129,
+              "selfCalculatedWindow": "2022-2025",
+              "differenceExplanation": "Official CiteScore 2025 was finalized by Scopus on 2026-05-05 with 604 citations and 122 documents (ratio 4.95 -> 5.0). Local self-calculation as of 2026-10-19 export yields 566 citations and 129 catalog denominator articles (ratio 4.39). Difference stems from Scopus citation window calculation date vs local citation matching export date and inclusion of Online First articles in catalog denominator."
+            },
+            {
+              "year": 2026,
+              "officialCiteScore": 4.6,
+              "officialCitations": 502,
+              "officialDocuments": 108,
+              "officialType": "tracker",
+              "officialUpdated": "2026-10-05",
+              "selfCalculatedValue": 4.18,
+              "selfCalculatedNumerator": 518,
+              "selfCalculatedDenominator": 124,
+              "selfCalculatedWindow": "2023-2026",
+              "differenceExplanation": "Official CiteScoreTracker snapshot dated 2026-10-05 records 502 citations and 108 documents (ratio 4.6). Local self-calculation tracker has 518 citations and 124 denominator articles (ratio 4.18)."
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Source export filename VJES.csv lacks an explicit export timestamp; processedAt 2026-10-19 is when sync_csv.py ran, not verified Scopus export date.",
+        "Catalog issues collection is empty; article years reflect OJS metadata/submission timestamps rather than strict journal volume publication years.",
+        "Future-year 2027 citations (3 docs, 3 citation edges) exist in Scopus export due to advance online / in-press indexing; must not be published as current final data.",
+        "2026 citation counts and publication counts are Year-To-Date (YTD) and incomplete.",
+        "123 rows in source CSV were excluded as search hits lacking confirmed catalog citations; 202 virtual external references were excluded."
+      ]
+    },
+    {
+      "id": "vjc",
+      "code": "VJC",
+      "title": "Vietnam Journal of Chemistry",
+      "sourceDirectory": "2026/09d-OJS-Citation Statistics-VJC",
+      "sourceFiles": [
+        {
+          "path": "2026/09d-OJS-Citation Statistics-VJC/data/vjmech-stats.json",
+          "sha256": "e569ed67b4fb1f208cd6db207d1ad5f03f375bd3bf07f63f45703268b155c5d9",
+          "role": "Decoded local Scopus-derived statistics and annual series"
+        },
+        {
+          "path": "2026/09d-OJS-Citation Statistics-VJC/data/vjmech_ojs_catalog.json",
+          "sha256": "695ed485051384b9b493068ae62b2fdc9e52a619e1cfb1c50440ef5aaea77e44",
+          "role": "OJS article catalog used for local citation confirmation and publication counts"
+        },
+        {
+          "path": "2026/09d-OJS-Citation Statistics-VJC/data/citation-audit.json",
+          "sha256": "385d1b15638fef9df78411342d778b14564e7a68bd445c8210facafd8e09e8be",
+          "role": "Citation audit identifying confirmed citing documents and excluded search hits"
+        },
+        {
+          "path": "2026/09d-OJS-Citation Statistics-VJC/data/vjmech-stats-gz.txt",
+          "sha256": "4ffea3954bb1c3fb4f2e692f2b1f5f31f2b8907db01444785173f2b1f5281ae3",
+          "role": "Compressed base64-gzipped statistics payload for OJS publisher library"
+        },
+        {
+          "path": "2026/09d-OJS-Citation Statistics-VJC/data/scopus-exports/VJCH.csv",
+          "sha256": "d2fb47b4cda3343acf6a2e0595dd30ba796cbe11dbaf809c85395151ce0978e8",
+          "role": "Original Scopus source export CSV; hash agrees with stats metadata truncated sourceSha256 (d2fb47b4cda3343a)"
+        },
+        {
+          "path": "2026/09d-OJS-Citation Statistics-VJC/data/.last_synced_csv",
+          "sha256": "888022398fdfe58e5f0612b4d3a9b1357a9fad6f4873a93e2b151780fbef2936",
+          "role": "Sync state tracking last processed CSV file and hash"
+        }
+      ],
+      "sourceExportDate": null,
+      "sourceExportDateReason": "Source export is named VJCH.csv without embedded timestamp in filename or CSV content; filesystem modified time is 2026-10-19 20:51:25, but filesystem timestamp is not verified source export date. Stats metadata records updatedAt 2026-10-19.",
+      "processedAt": "2026-10-19",
+      "catalogRetrievedAt": null,
+      "publicSourceUrl": "https://vjs.ac.vn/vjchem/statistic",
+      "officialMetricStatus": "Local stats metadata explicitly specifies officialScopusMetric=false. All cs4 values in citeScoreSeries are self-calculated 4-year ratios and must NOT be presented as official Scopus CiteScore or Tracker metrics.",
+      "meta": {
+        "sourceFile": "VJCH.csv",
+        "sourceSha256": "d2fb47b4cda3343a",
+        "sourceRows": 5853,
+        "totalCitations": 5013,
+        "totalCitingDocs": 4700,
+        "totalCitedArticles": 856,
+        "hIndex": 26,
+        "officialScopusMetric": false
+      },
+      "citationAudit": {
+        "sourceRows": 5853,
+        "confirmedCitingRows": 4700,
+        "excludedSearchHitRows": 1153,
+        "excludedVirtualArticles": 1093
+      },
+      "publicationSeries": [
+        {"year": 2015, "papers": 26, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "archived_catalog"},
+        {"year": 2017, "papers": 24, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "archived_catalog"},
+        {"year": 2018, "papers": 108, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2019, "papers": 123, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2020, "papers": 123, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2021, "papers": 114, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2022, "papers": 103, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2023, "papers": 131, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2024, "papers": 119, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "complete_catalog_cohort"},
+        {"year": 2025, "papers": 97, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "catalog_cohort (90 issued Vol.63 research/review articles + 7 unassigned catalog entries)"},
+        {"year": 2026, "papers": 126, "basis": "Articles enumerated in data/vjmech_ojs_catalog.json", "coverage": "catalog_cohort_ytd (96 issued Vol.64 research/review articles through Issue 5 & S1 + 30 unassigned Online First articles)"}
+      ],
+      "citationSeries": [
+        {"year": 2007, "citingDocuments": 1, "confirmedCitationEdges": 1, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2008, "citingDocuments": 0, "confirmedCitationEdges": 0, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2009, "citingDocuments": 0, "confirmedCitationEdges": 0, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2010, "citingDocuments": 0, "confirmedCitationEdges": 0, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2011, "citingDocuments": 0, "confirmedCitationEdges": 0, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2012, "citingDocuments": 1, "confirmedCitationEdges": 1, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2013, "citingDocuments": 0, "confirmedCitationEdges": 0, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2014, "citingDocuments": 0, "confirmedCitationEdges": 0, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2015, "citingDocuments": 0, "confirmedCitationEdges": 0, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2016, "citingDocuments": 1, "confirmedCitationEdges": 1, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2017, "citingDocuments": 4, "confirmedCitationEdges": 4, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2018, "citingDocuments": 20, "confirmedCitationEdges": 20, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2019, "citingDocuments": 52, "confirmedCitationEdges": 59, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2020, "citingDocuments": 143, "confirmedCitationEdges": 158, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2021, "citingDocuments": 268, "confirmedCitationEdges": 289, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2022, "citingDocuments": 470, "confirmedCitationEdges": 493, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2023, "citingDocuments": 609, "confirmedCitationEdges": 675, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2024, "citingDocuments": 940, "confirmedCitationEdges": 1008, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2025, "citingDocuments": 1170, "confirmedCitationEdges": 1229, "basis": "Confirmed citing docs / citation edges from Scopus export matching catalog", "isFuture": false},
+        {"year": 2026, "citingDocuments": 1010, "confirmedCitationEdges": 1064, "basis": "Confirmed citing docs / citation edges (YTD as of 2026-10-19 export)", "isFuture": false},
+        {"year": 2027, "citingDocuments": 11, "confirmedCitationEdges": 11, "basis": "Future-year in-press citations; excluded from current final metrics", "isFuture": true}
+      ],
+      "selfCalculatedSeries": [
+        {"year": 2015, "value": 0.0, "numerator": 0, "denominator": 26, "window": "2012-2015", "isTracker": false, "denominatorByYear": [0, 0, 0, 26], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2016, "value": 0.04, "numerator": 1, "denominator": 26, "window": "2013-2016", "isTracker": false, "denominatorByYear": [0, 0, 26, 0], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2017, "value": 0.06, "numerator": 3, "denominator": 50, "window": "2014-2017", "isTracker": false, "denominatorByYear": [0, 26, 0, 24], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2018, "value": 0.15, "numerator": 24, "denominator": 158, "window": "2015-2018", "isTracker": false, "denominatorByYear": [26, 0, 24, 108], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2019, "value": 0.3, "numerator": 77, "denominator": 255, "window": "2016-2019", "isTracker": false, "denominatorByYear": [0, 24, 108, 123], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2020, "value": 0.62, "numerator": 234, "denominator": 378, "window": "2017-2020", "isTracker": false, "denominatorByYear": [24, 108, 123, 123], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2021, "value": 1.0, "numerator": 466, "denominator": 468, "window": "2018-2021", "isTracker": false, "denominatorByYear": [108, 123, 123, 114], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2022, "value": 1.44, "numerator": 668, "denominator": 463, "window": "2019-2022", "isTracker": false, "denominatorByYear": [123, 123, 114, 103], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2023, "value": 1.77, "numerator": 832, "denominator": 471, "window": "2020-2023", "isTracker": false, "denominatorByYear": [123, 114, 103, 131], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2024, "value": 2.32, "numerator": 1084, "denominator": 467, "window": "2021-2024", "isTracker": false, "denominatorByYear": [114, 103, 131, 119], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2025, "value": 2.95, "numerator": 1326, "denominator": 450, "window": "2022-2025", "isTracker": false, "denominatorByYear": [103, 131, 119, 97], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"},
+        {"year": 2026, "value": 3.3, "numerator": 1561, "denominator": 473, "window": "2023-2026", "isTracker": true, "denominatorByYear": [131, 119, 97, 126], "basis": "Local cs4 ratio (num/den); self-calculated, NOT official Scopus CiteScore"}
+      ],
+      "totals": {
+        "catalogIssues": 0,
+        "catalogArticleRecords": 1094,
+        "sourceRows": 5853,
+        "confirmedCitingDocs": 4700,
+        "excludedSearchHitRows": 1153,
+        "confirmedCitationOccurrences": 5013,
+        "citedArticles": 856,
+        "hIndex": 26
+      },
+      "reconciliation": [
+        {
+          "category": "publication_counts_2025",
+          "year": 2025,
+          "localCatalogArticleRecords": 97,
+          "dashboardPublishersPublishedPapers": 90,
+          "difference": 7,
+          "finding": "dashboard-publishers.json records 90 published research/review articles across 6 regular issues of Vol. 63 (15 papers each). All 90 issued papers are present in the local catalog. The 7 extra catalog entries correspond to unassigned / advance articles not included in the 6 regular numbered issues."
+        },
+        {
+          "category": "publication_counts_2026",
+          "year": 2026,
+          "localCatalogArticleRecords": 126,
+          "dashboardPublishersPublishedPapers": 96,
+          "difference": 30,
+          "finding": "dashboard-publishers.json records 96 published research/review articles across 6 issues (Issues 1-5 + Special Issue S1) of Vol. 64. All 96 issued papers are present in the catalog. The 30 extra catalog entries correspond exactly to the 30 unassigned Online First articles documented in dashboard-publishers.json, which were excluded from published issue counts pending formal issue assignment."
+        },
+        {
+          "category": "official_scopus_citescore",
+          "comparison": [
+            {
+              "year": 2021,
+              "officialCiteScore": 0.5,
+              "officialCitations": 109,
+              "officialDocuments": 237,
+              "officialWindow": "2018-2021",
+              "selfCalculatedValue": 1.0,
+              "selfCalculatedNumerator": 466,
+              "selfCalculatedDenominator": 468,
+              "selfCalculatedWindow": "2018-2021",
+              "differenceExplanation": "Scopus coverage for VJC started 2018. Scopus source documents count in 2018-2021 was 237 docs. Local catalog has 468 articles in 2018-2021 including complete journal catalog before Wiley partnership transition."
+            },
+            {
+              "year": 2022,
+              "officialCiteScore": 1.4,
+              "officialCitations": 638,
+              "officialDocuments": 460,
+              "officialWindow": "2019-2022",
+              "selfCalculatedValue": 1.44,
+              "selfCalculatedNumerator": 668,
+              "selfCalculatedDenominator": 463,
+              "selfCalculatedWindow": "2019-2022",
+              "differenceExplanation": "Official Scopus CiteScore is 1.4 (638 cit / 460 doc). Local self-calculation yields 1.44 (668 cit / 463 doc)."
+            },
+            {
+              "year": 2023,
+              "officialCiteScore": 1.7,
+              "officialCitations": 813,
+              "officialDocuments": 468,
+              "officialWindow": "2020-2023",
+              "selfCalculatedValue": 1.77,
+              "selfCalculatedNumerator": 832,
+              "selfCalculatedDenominator": 471,
+              "selfCalculatedWindow": "2020-2023",
+              "differenceExplanation": "Official Scopus CiteScore is 1.7 (813 cit / 468 doc). Local self-calculation yields 1.77 (832 cit / 471 doc)."
+            },
+            {
+              "year": 2024,
+              "officialCiteScore": 2.3,
+              "officialCitations": 1068,
+              "officialDocuments": 462,
+              "officialWindow": "2021-2024",
+              "selfCalculatedValue": 2.32,
+              "selfCalculatedNumerator": 1084,
+              "selfCalculatedDenominator": 467,
+              "selfCalculatedWindow": "2021-2024",
+              "differenceExplanation": "Close agreement: official 2.3 (1,068 cit / 462 doc) vs local 2.32 (1,084 cit / 467 doc)."
+            },
+            {
+              "year": 2025,
+              "officialCiteScore": 3.0,
+              "officialCitations": 1313,
+              "officialDocuments": 433,
+              "officialWindow": "2022-2025",
+              "selfCalculatedValue": 2.95,
+              "selfCalculatedNumerator": 1326,
+              "selfCalculatedDenominator": 450,
+              "selfCalculatedWindow": "2022-2025",
+              "differenceExplanation": "Official CiteScore 2025 was finalized by Scopus on 2026-05-05 with 1,313 citations and 433 documents (ratio 3.03 -> 3.0). Local self-calculation as of 2026-10-19 export yields 1,326 citations and 450 catalog denominator articles (ratio 2.95). Local denominator includes 97 catalog articles for 2025 (90 issued + 7 unassigned) vs Scopus indexed document count."
+            },
+            {
+              "year": 2026,
+              "officialCiteScore": 3.4,
+              "officialCitations": 1418,
+              "officialDocuments": 414,
+              "officialType": "tracker",
+              "officialUpdated": "2026-10-05",
+              "selfCalculatedValue": 3.3,
+              "selfCalculatedNumerator": 1561,
+              "selfCalculatedDenominator": 473,
+              "selfCalculatedWindow": "2023-2026",
+              "differenceExplanation": "Official CiteScoreTracker snapshot dated 2026-10-05 records 1,418 citations and 414 documents (ratio 3.4). Local self-calculation tracker has 1,561 citations and 473 denominator articles (ratio 3.30)."
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Source export filename VJCH.csv lacks an explicit export timestamp; processedAt 2026-10-19 is when sync_csv.py ran, not verified Scopus export date.",
+        "Catalog issues collection is empty; 2025 includes 7 unassigned articles and 2026 includes 30 unassigned Online First articles, which inflates catalog denominator relative to published issue counts.",
+        "Future-year 2027 citations (11 docs, 11 citation edges) exist in Scopus export due to advance online / in-press indexing; must not be published as current final data.",
+        "2026 citation counts and publication counts are Year-To-Date (YTD) and incomplete.",
+        "1,153 rows in source CSV were excluded as search hits lacking confirmed catalog citations; 1,093 virtual external references were excluded."
+      ]
+    }
+  ],
+  "limitations": [
+    "Local 4-year cs4 values are self-calculated ratios from local citation matching and catalog article records, NOT official Scopus CiteScore or Tracker values. They must be clearly labeled as self-calculated.",
+    "Source Scopus CSV filenames (VJES.csv and VJCH.csv) lack embedded export dates. While filesystem modification dates are 2026-10-19, filesystem timestamps are not verified source retrieval dates. Metadata updatedAt records processing date (2026-10-19).",
+    "Catalog retrieval timestamps are not recorded. Catalogs contain no issue records; article years reflect OJS metadata/submission timestamps rather than strict issue volume publication dates.",
+    "Future-year 2027 records (VJES: 3 docs / 3 edges; VJC: 11 docs / 11 edges) represent advance online/in-press citations and must NOT be published as current final annual figures.",
+    "2026 observations are Year-To-Date (YTD) partial counts, not full calendar-year metrics.",
+    "Search-hit rows lacking confirmed citations to catalog articles (123 for VJES, 1,153 for VJC) and virtual external references (202 for VJES, 1,093 for VJC) were excluded per the citation audit contract.",
+    "No raw CSV rows, author EIDs, or personal credentials are included in this output. All hashes represent immutable input files."
+  ]
+}

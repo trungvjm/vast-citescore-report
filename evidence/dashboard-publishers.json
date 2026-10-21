@@ -1,0 +1,1200 @@
+{
+  "collectedAt": "2026-10-21",
+  "journals": [
+    {
+      "id": "vjm",
+      "code": "VJM",
+      "title": "Vietnam Journal of Mathematics",
+      "titleVi": "Tạp chí Toán học",
+      "subject": "Toán học",
+      "website": "https://link.springer.com/journal/10013",
+      "publisher": "Springer Nature & Vietnam Academy of Science and Technology",
+      "issn": "2305-221X",
+      "eissn": "2305-2228",
+      "formerTitles": [
+        {
+          "title": "Tập san Toán lý",
+          "issn": null,
+          "until": "1973"
+        },
+        {
+          "title": "Tạp chí Toán học",
+          "issn": null,
+          "until": "1990"
+        },
+        {
+          "title": "Journal of Mathematics",
+          "issn": null,
+          "until": "1994"
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://link.springer.com/journal/10013"
+      },
+      "profileSources": [
+        "https://link.springer.com/journal/10013",
+        "https://link.springer.com/journal/10013/volumes-and-issues",
+        "https://vjs.ac.vn/",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286934",
+          "checkedAt": "2026-10-21",
+          "coverage": "2013-2026"
+        },
+        {
+          "system": "WoS",
+          "collection": "ESCI",
+          "status": "listed",
+          "evidenceLevel": "vast",
+          "sourceUrl": "https://vast.gov.vn/CmsView-EcoIT-portlet/html/print_cms.jsp?articleId=125804",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "not_listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/api/search/journals/2305-2228",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 54 No. 4 (October 2026)",
+        "published": "2026-10",
+        "url": "https://link.springer.com/journal/10013/volumes-and-issues/54-4"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 51,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-4"
+          ],
+          "issueItems": [
+            {
+              "title": "Vol. 53 No. 1 (January 2025)",
+              "published": "2025-01",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/53-1",
+              "paperKeys": [
+                "doi:10.1007/s10013-023-00617-3",
+                "doi:10.1007/s10013-023-00621-7",
+                "doi:10.1007/s10013-023-00619-1",
+                "doi:10.1007/s10013-023-00620-8",
+                "doi:10.1007/s10013-023-00618-2",
+                "doi:10.1007/s10013-023-00630-6",
+                "doi:10.1007/s10013-023-00639-x",
+                "doi:10.1007/s10013-023-00649-9",
+                "doi:10.1007/s10013-023-00641-3",
+                "doi:10.1007/s10013-023-00638-y",
+                "doi:10.1007/s10013-023-00655-x",
+                "doi:10.1007/s10013-023-00645-z",
+                "doi:10.1007/s10013-023-00651-1",
+                "doi:10.1007/s10013-023-00662-y",
+                "doi:10.1007/s10013-023-00663-x"
+              ],
+              "id": "vol53n1"
+            },
+            {
+              "title": "Vol. 53 No. 2 (April 2025)",
+              "published": "2025-04",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/53-2",
+              "paperKeys": [
+                "doi:10.1007/s10013-023-00652-0",
+                "doi:10.1007/s10013-023-00658-8",
+                "doi:10.1007/s10013-023-00667-7",
+                "doi:10.1007/s10013-023-00676-6",
+                "doi:10.1007/s10013-023-00677-5",
+                "doi:10.1007/s10013-023-00670-y",
+                "doi:10.1007/s10013-023-00679-3",
+                "doi:10.1007/s10013-023-00678-4",
+                "doi:10.1007/s10013-024-00682-2",
+                "doi:10.1007/s10013-024-00685-z",
+                "doi:10.1007/s10013-024-00684-0",
+                "doi:10.1007/s10013-024-00689-9",
+                "doi:10.1007/s10013-024-00690-2",
+                "doi:10.1007/s10013-024-00691-1"
+              ],
+              "id": "vol53n2"
+            },
+            {
+              "title": "Vol. 53 No. 3 (July 2025)",
+              "published": "2025-07",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/53-3",
+              "paperKeys": [
+                "doi:10.1007/s10013-023-00666-8",
+                "doi:10.1007/s10013-024-00681-3",
+                "doi:10.1007/s10013-024-00688-w",
+                "doi:10.1007/s10013-024-00720-z",
+                "doi:10.1007/s10013-024-00711-0",
+                "doi:10.1007/s10013-024-00710-1",
+                "doi:10.1007/s10013-024-00701-2",
+                "doi:10.1007/s10013-024-00712-z",
+                "doi:10.1007/s10013-024-00704-z",
+                "doi:10.1007/s10013-024-00694-y",
+                "doi:10.1007/s10013-024-00721-y"
+              ],
+              "id": "vol53n3"
+            },
+            {
+              "title": "Vol. 53 No. 4 (October 2025)",
+              "published": "2025-10",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/53-4",
+              "paperKeys": [
+                "doi:10.1007/s10013-024-00715-w",
+                "doi:10.1007/s10013-024-00722-x",
+                "doi:10.1007/s10013-024-00699-7",
+                "doi:10.1007/s10013-025-00739-w",
+                "doi:10.1007/s10013-025-00767-6",
+                "doi:10.1007/s10013-024-00700-3",
+                "doi:10.1007/s10013-024-00706-x",
+                "doi:10.1007/s10013-024-00716-9",
+                "doi:10.1007/s10013-025-00742-1",
+                "doi:10.1007/s10013-025-00760-z",
+                "doi:10.1007/s10013-025-00770-x"
+              ],
+              "id": "vol53n4"
+            }
+          ],
+          "note": "Volume 53 (2025) complete: 4 regular/special issues, 51 eligible research/review articles enumerated. 1 preface in Issue 3 excluded."
+        },
+        {
+          "year": 2026,
+          "papers": 58,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-4"
+          ],
+          "issueItems": [
+            {
+              "title": "Vol. 54 No. 1 (January 2026)",
+              "published": "2026-01",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/54-1",
+              "paperKeys": [
+                "doi:10.1007/s10013-024-00696-w",
+                "doi:10.1007/s10013-024-00698-8",
+                "doi:10.1007/s10013-024-00695-x",
+                "doi:10.1007/s10013-024-00697-9",
+                "doi:10.1007/s10013-024-00702-1",
+                "doi:10.1007/s10013-024-00705-y",
+                "doi:10.1007/s10013-024-00703-0",
+                "doi:10.1007/s10013-024-00708-9",
+                "doi:10.1007/s10013-024-00707-w",
+                "doi:10.1007/s10013-024-00726-7",
+                "doi:10.1007/s10013-024-00718-7",
+                "doi:10.1007/s10013-024-00724-9"
+              ],
+              "id": "vol54n1"
+            },
+            {
+              "title": "Vol. 54 No. 2 (June 2026)",
+              "published": "2026-06",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/54-2",
+              "paperKeys": [
+                "doi:10.1007/s10013-025-00771-w",
+                "doi:10.1007/s10013-025-00738-x",
+                "doi:10.1007/s10013-024-00727-6",
+                "doi:10.1007/s10013-025-00764-9",
+                "doi:10.1007/s10013-025-00773-8",
+                "doi:10.1007/s10013-025-00757-8",
+                "doi:10.1007/s10013-025-00779-2",
+                "doi:10.1007/s10013-025-00783-6",
+                "doi:10.1007/s10013-025-00787-2",
+                "doi:10.1007/s10013-025-00772-9",
+                "doi:10.1007/s10013-025-00781-8",
+                "doi:10.1007/s10013-025-00774-7"
+              ],
+              "id": "vol54n2"
+            },
+            {
+              "title": "Vol. 54 No. 3 (June 2026)",
+              "published": "2026-06",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/54-3",
+              "paperKeys": [
+                "doi:10.1007/s10013-024-00693-z",
+                "doi:10.1007/s10013-024-00709-8",
+                "doi:10.1007/s10013-024-00717-8",
+                "doi:10.1007/s10013-024-00725-8",
+                "doi:10.1007/s10013-024-00719-6",
+                "doi:10.1007/s10013-024-00713-y",
+                "doi:10.1007/s10013-024-00714-x",
+                "doi:10.1007/s10013-024-00723-w",
+                "doi:10.1007/s10013-024-00728-5",
+                "doi:10.1007/s10013-025-00737-y",
+                "doi:10.1007/s10013-025-00740-3",
+                "doi:10.1007/s10013-025-00769-4",
+                "doi:10.1007/s10013-025-00748-9",
+                "doi:10.1007/s10013-025-00754-x",
+                "doi:10.1007/s10013-025-00762-x"
+              ],
+              "id": "vol54n3"
+            },
+            {
+              "title": "Vol. 54 No. 4 (October 2026)",
+              "published": "2026-10",
+              "url": "https://link.springer.com/journal/10013/volumes-and-issues/54-4",
+              "paperKeys": [
+                "doi:10.1007/s10013-025-00741-2",
+                "doi:10.1007/s10013-025-00744-z",
+                "doi:10.1007/s10013-025-00745-y",
+                "doi:10.1007/s10013-025-00731-4",
+                "doi:10.1007/s10013-025-00749-8",
+                "doi:10.1007/s10013-025-00753-y",
+                "doi:10.1007/s10013-025-00746-x",
+                "doi:10.1007/s10013-025-00761-y",
+                "doi:10.1007/s10013-025-00751-0",
+                "doi:10.1007/s10013-025-00752-z",
+                "doi:10.1007/s10013-025-00755-w",
+                "doi:10.1007/s10013-025-00763-w",
+                "doi:10.1007/s10013-025-00765-8",
+                "doi:10.1007/s10013-025-00768-5",
+                "doi:10.1007/s10013-025-00766-7",
+                "doi:10.1007/s10013-025-00756-9",
+                "doi:10.1007/s10013-025-00758-7",
+                "doi:10.1007/s10013-025-00775-6",
+                "doi:10.1007/s10013-026-00820-y"
+              ],
+              "id": "vol54n4"
+            }
+          ],
+          "note": "Volume 54 (2026) complete through Issue 4 (October 2026) as of 2026-10-21: 4 quarterly issues fully issued on SpringerLink, 58 eligible research/review articles enumerated. 1 preface in Issue 2 and 1 correction in Issue 3 excluded."
+        }
+      ]
+    },
+    {
+      "id": "amv",
+      "code": "AMV",
+      "title": "Acta Mathematica Vietnamica",
+      "titleVi": "Acta Mathematica Vietnamica",
+      "subject": "Toán học",
+      "website": "https://link.springer.com/journal/40306",
+      "publisher": "Springer Nature & Institute of Mathematics, Vietnam Academy of Science and Technology",
+      "issn": "0251-4184",
+      "eissn": "2315-4144",
+      "formerTitles": [],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://link.springer.com/journal/40306"
+      },
+      "profileSources": [
+        "https://link.springer.com/journal/40306",
+        "https://link.springer.com/journal/40306/volumes-and-issues",
+        "https://math.ac.vn/",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21100199843",
+          "checkedAt": "2026-10-21",
+          "coverage": "2011 to 2026"
+        },
+        {
+          "system": "WoS",
+          "collection": "ESCI",
+          "status": "listed",
+          "evidenceLevel": "vast",
+          "sourceUrl": "https://vast.gov.vn/web/vietnam-academy-of-science-and-technology/tin-chi-tiet/-/chi-tiet/scientific-journals-of-vietnam-academy-of-science-and-technology-continue-to-grow-125804-871.html",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "not_listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/api/search/journals/2315-4144",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 51 No. 3 (September 2026)",
+        "published": "2026-09",
+        "url": "https://link.springer.com/journal/40306/volumes-and-issues/51-3"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 32,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-4"
+          ],
+          "issueItems": [
+            {
+              "title": "Vol. 50 No. 1 (March 2025)",
+              "published": "2025-03",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/50-1",
+              "paperKeys": [
+                "doi:10.1007/s40306-024-00561-5",
+                "doi:10.1007/s40306-024-00558-0",
+                "doi:10.1007/s40306-024-00553-5",
+                "doi:10.1007/s40306-024-00556-2",
+                "doi:10.1007/s40306-024-00557-1",
+                "doi:10.1007/s40306-024-00562-4",
+                "doi:10.1007/s40306-025-00563-x",
+                "doi:10.1007/s40306-025-00564-w"
+              ],
+              "id": "vol50n1"
+            },
+            {
+              "title": "Vol. 50 No. 2 (June 2025)",
+              "published": "2025-06",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/50-2",
+              "paperKeys": [
+                "doi:10.1007/s40306-025-00565-9",
+                "doi:10.1007/s40306-025-00566-8",
+                "doi:10.1007/s40306-025-00567-7",
+                "doi:10.1007/s40306-025-00569-5",
+                "doi:10.1007/s40306-025-00568-6",
+                "doi:10.1007/s40306-025-00570-y",
+                "doi:10.1007/s40306-025-00572-w"
+              ],
+              "id": "vol50n2"
+            },
+            {
+              "title": "Vol. 50 No. 3 (September 2025)",
+              "published": "2025-09",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/50-3",
+              "paperKeys": [
+                "doi:10.1007/s40306-025-00574-8",
+                "doi:10.1007/s40306-025-00571-x",
+                "doi:10.1007/s40306-025-00573-9",
+                "doi:10.1007/s40306-025-00575-7",
+                "doi:10.1007/s40306-025-00576-6",
+                "doi:10.1007/s40306-025-00577-5",
+                "doi:10.1007/s40306-025-00578-4",
+                "doi:10.1007/s40306-025-00580-w",
+                "doi:10.1007/s40306-025-00579-3"
+              ],
+              "id": "vol50n3"
+            },
+            {
+              "title": "Vol. 50 No. 4 (December 2025)",
+              "published": "2025-12",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/50-4",
+              "paperKeys": [
+                "doi:10.1007/s40306-025-00582-8",
+                "doi:10.1007/s40306-025-00583-7",
+                "doi:10.1007/s40306-025-00581-9",
+                "doi:10.1007/s40306-025-00584-6",
+                "doi:10.1007/s40306-025-00588-2",
+                "doi:10.1007/s40306-025-00587-3",
+                "doi:10.1007/s40306-025-00590-8",
+                "doi:10.1007/s40306-025-00589-1"
+              ],
+              "id": "vol50n4"
+            }
+          ],
+          "note": "Volume 50 (2025) complete: 4 issues, 32 eligible research/review articles enumerated. 3 corrections excluded."
+        },
+        {
+          "year": 2026,
+          "papers": 27,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/51-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/51-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/51-3"
+          ],
+          "issueItems": [
+            {
+              "title": "Vol. 51 No. 1 (March 2026)",
+              "published": "2026-03",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/51-1",
+              "paperKeys": [
+                "doi:10.1007/s40306-026-00600-3",
+                "doi:10.1007/s40306-025-00594-4",
+                "doi:10.1007/s40306-025-00593-5",
+                "doi:10.1007/s40306-026-00602-1",
+                "doi:10.1007/s40306-026-00601-2",
+                "doi:10.1007/s40306-025-00596-2",
+                "doi:10.1007/s40306-025-00592-6",
+                "doi:10.1007/s40306-026-00599-7",
+                "doi:10.1007/s40306-025-00595-3"
+              ],
+              "id": "vol51n1"
+            },
+            {
+              "title": "Vol. 51 No. 2 (June 2026)",
+              "published": "2026-06",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/51-2",
+              "paperKeys": [
+                "doi:10.1007/s40306-026-00613-y",
+                "doi:10.1007/s40306-026-00626-7",
+                "doi:10.1007/s40306-026-00621-y",
+                "doi:10.1007/s40306-026-00628-5",
+                "doi:10.1007/s40306-026-00619-6",
+                "doi:10.1007/s40306-025-00597-1",
+                "doi:10.1007/s40306-026-00620-z",
+                "doi:10.1007/s40306-026-00612-z",
+                "doi:10.1007/s40306-026-00630-x"
+              ],
+              "id": "vol51n2"
+            },
+            {
+              "title": "Vol. 51 No. 3 (September 2026)",
+              "published": "2026-09",
+              "url": "https://link.springer.com/journal/40306/volumes-and-issues/51-3",
+              "paperKeys": [
+                "doi:10.1007/s40306-026-00635-6",
+                "doi:10.1007/s40306-026-00625-8",
+                "doi:10.1007/s40306-026-00624-9",
+                "doi:10.1007/s40306-026-00633-8",
+                "doi:10.1007/s40306-026-00629-4",
+                "doi:10.1007/s40306-026-00623-w",
+                "doi:10.1007/s40306-026-00631-w",
+                "doi:10.1007/s40306-026-00627-6",
+                "doi:10.1007/s40306-026-00622-x"
+              ],
+              "id": "vol51n3"
+            }
+          ],
+          "note": "Volume 51 (2026) complete for issued issues through asOf 2026-10-21: 3 quarterly issues fully issued on SpringerLink, 27 eligible research/review articles enumerated. 1 erratum and 1 correction in Issue 1 excluded. Issue 4 is scheduled for December 2026."
+        }
+      ]
+    },
+    {
+      "id": "ansn",
+      "code": "ANSN",
+      "title": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
+      "titleVi": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
+      "subject": "Vật liệu & Công nghệ nano",
+      "website": "https://iopscience.iop.org/journal/2043-6262",
+      "publisher": "IOP Publishing & Vietnam Academy of Science and Technology",
+      "issn": "2043-6254",
+      "eissn": "2043-6262",
+      "formerTitles": [],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://iopscience.iop.org/journal/2043-6262"
+      },
+      "profileSources": [
+        "https://iopscience.iop.org/journal/2043-6262",
+        "https://iopscience.iop.org/journal/rss/2043-6262",
+        "https://vast.gov.vn/tap-chi"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286862",
+          "checkedAt": "2026-10-21",
+          "coverage": "2010 to 2026"
+        },
+        {
+          "system": "WoS",
+          "collection": "ESCI",
+          "status": "listed",
+          "evidenceLevel": "vast",
+          "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/tap-chi-advances-in-natural-sciences-nanoscience-and-nanotechnology-ansn-tro-lai-web-of-science-esci--5416-463.html",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "not_listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/api/search/journals/2043-6262",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 17 No. 3 (September 2026)",
+        "published": "2026-09",
+        "url": "https://iopscience.iop.org/issue/2043-6262/17/3"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 76,
+          "issues": 4,
+          "coverage": "partial",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works"
+          ],
+          "issueItems": [
+            {
+              "id": "vol16n1",
+              "title": "Vol. 16 No. 1 (2025)",
+              "published": "2025-01",
+              "url": "https://iopscience.iop.org/issue/2043-6262/16/1",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/ada005",
+                "doi:10.1088/2043-6262/ad9f49",
+                "doi:10.1088/2043-6262/ad9ff4",
+                "doi:10.1088/2043-6262/ad9ff5",
+                "doi:10.1088/2043-6262/ad9ff2",
+                "doi:10.1088/2043-6262/ad9ff3",
+                "doi:10.1088/2043-6262/ada000",
+                "doi:10.1088/2043-6262/ad9ff1",
+                "doi:10.1088/2043-6262/ada007",
+                "doi:10.1088/2043-6262/ad9f4a",
+                "doi:10.1088/2043-6262/ada254",
+                "doi:10.1088/2043-6262/ada009",
+                "doi:10.1088/2043-6262/ada008",
+                "doi:10.1088/2043-6262/ada0b5",
+                "doi:10.1088/2043-6262/ad9fff",
+                "doi:10.1088/2043-6262/ada002",
+                "doi:10.1088/2043-6262/ad9ffe",
+                "doi:10.1088/2043-6262/ad9ff0",
+                "doi:10.1088/2043-6262/ada004",
+                "doi:10.1088/2043-6262/ada006"
+              ]
+            },
+            {
+              "id": "vol16n2",
+              "title": "Vol. 16 No. 2 (2025)",
+              "published": "2025-03",
+              "url": "https://iopscience.iop.org/issue/2043-6262/16/2",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/adc66d",
+                "doi:10.1088/2043-6262/adddc2",
+                "doi:10.1088/2043-6262/adc977",
+                "doi:10.1088/2043-6262/adb566",
+                "doi:10.1088/2043-6262/adb564",
+                "doi:10.1088/2043-6262/adb55c",
+                "doi:10.1088/2043-6262/adc66c",
+                "doi:10.1088/2043-6262/adb55d",
+                "doi:10.1088/2043-6262/adc7db",
+                "doi:10.1088/2043-6262/adb565",
+                "doi:10.1088/2043-6262/adc66e",
+                "doi:10.1088/2043-6262/adc4c6",
+                "doi:10.1088/2043-6262/adc4c4",
+                "doi:10.1088/2043-6262/adc7dc",
+                "doi:10.1088/2043-6262/adc4c5",
+                "doi:10.1088/2043-6262/adb55f",
+                "doi:10.1088/2043-6262/adb563",
+                "doi:10.1088/2043-6262/adb560",
+                "doi:10.1088/2043-6262/adc66f",
+                "doi:10.1088/2043-6262/adc66b",
+                "doi:10.1088/2043-6262/adc54f"
+              ]
+            },
+            {
+              "id": "vol16n3",
+              "title": "Vol. 16 No. 3 (2025)",
+              "published": "2025-06",
+              "url": "https://iopscience.iop.org/issue/2043-6262/16/3",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/addcdd",
+                "doi:10.1088/2043-6262/adef5b",
+                "doi:10.1088/2043-6262/adef17",
+                "doi:10.1088/2043-6262/adef5a",
+                "doi:10.1088/2043-6262/addce0",
+                "doi:10.1088/2043-6262/adddc1",
+                "doi:10.1088/2043-6262/adee9c",
+                "doi:10.1088/2043-6262/addd24",
+                "doi:10.1088/2043-6262/addf2b",
+                "doi:10.1088/2043-6262/addce1",
+                "doi:10.1088/2043-6262/addcdf",
+                "doi:10.1088/2043-6262/addcd9",
+                "doi:10.1088/2043-6262/ade256",
+                "doi:10.1088/2043-6262/adee26",
+                "doi:10.1088/2043-6262/adee9d",
+                "doi:10.1088/2043-6262/adef1c",
+                "doi:10.1088/2043-6262/addcde",
+                "doi:10.1088/2043-6262/adee27",
+                "doi:10.1088/2043-6262/adefe8"
+              ]
+            },
+            {
+              "id": "vol16n4",
+              "title": "Vol. 16 No. 4 (2025)",
+              "published": "2025-10",
+              "url": "https://iopscience.iop.org/issue/2043-6262/16/4",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/ae1d82",
+                "doi:10.1088/2043-6262/adfa2d",
+                "doi:10.1088/2043-6262/ae22df",
+                "doi:10.1088/2043-6262/adf96d",
+                "doi:10.1088/2043-6262/adf96e",
+                "doi:10.1088/2043-6262/ae0746",
+                "doi:10.1088/2043-6262/ae16a7",
+                "doi:10.1088/2043-6262/ae2620",
+                "doi:10.1088/2043-6262/ae0b6f",
+                "doi:10.1088/2043-6262/adf96c",
+                "doi:10.1088/2043-6262/ae261f",
+                "doi:10.1088/2043-6262/adf96f",
+                "doi:10.1088/2043-6262/ae0cce",
+                "doi:10.1088/2043-6262/ae1589",
+                "doi:10.1088/2043-6262/ae1df8",
+                "doi:10.1088/2043-6262/ae25cb"
+              ]
+            }
+          ],
+          "note": "Volume 16 (2025) 4 issues, 76 eligible research/review articles enumerated via official IOP RSS and Crossref metadata (1 corrigendum in Issue 4 excluded). Marked partial as inventory is reconciled via feed/API metadata without fulltext HTML TOC verification due to publisher bot verification; count represents verified lower bound."
+        },
+        {
+          "year": 2026,
+          "papers": 56,
+          "issues": 3,
+          "coverage": "partial",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://iopscience.iop.org/journal/rss/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works"
+          ],
+          "issueItems": [
+            {
+              "id": "vol17n1",
+              "title": "Vol. 17 No. 1 (2026)",
+              "published": "2026-01",
+              "url": "https://iopscience.iop.org/issue/2043-6262/17/1",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/ae1239",
+                "doi:10.1088/2043-6262/ae22dc",
+                "doi:10.1088/2043-6262/ae318b",
+                "doi:10.1088/2043-6262/ae3247",
+                "doi:10.1088/2043-6262/ae0745",
+                "doi:10.1088/2043-6262/ae318a",
+                "doi:10.1088/2043-6262/ae324a",
+                "doi:10.1088/2043-6262/ae39e0",
+                "doi:10.1088/2043-6262/ae402b",
+                "doi:10.1088/2043-6262/ae3249",
+                "doi:10.1088/2043-6262/ae3248",
+                "doi:10.1088/2043-6262/ae331e",
+                "doi:10.1088/2043-6262/ae3387",
+                "doi:10.1088/2043-6262/ae3deb",
+                "doi:10.1088/2043-6262/ae3dec",
+                "doi:10.1088/2043-6262/ae45ad",
+                "doi:10.1088/2043-6262/ae4980",
+                "doi:10.1088/2043-6262/ae497f",
+                "doi:10.1088/2043-6262/ae4ee7"
+              ]
+            },
+            {
+              "id": "vol17n2",
+              "title": "Vol. 17 No. 2 (2026)",
+              "published": "2026-04",
+              "url": "https://iopscience.iop.org/issue/2043-6262/17/2",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/ae5497",
+                "doi:10.1088/2043-6262/ae5538",
+                "doi:10.1088/2043-6262/ae7372",
+                "doi:10.1088/2043-6262/ae7373",
+                "doi:10.1088/2043-6262/ae7975",
+                "doi:10.1088/2043-6262/ae7f8f",
+                "doi:10.1088/2043-6262/ae4fbf",
+                "doi:10.1088/2043-6262/ae55a3",
+                "doi:10.1088/2043-6262/ae55a2",
+                "doi:10.1088/2043-6262/ae5dd1",
+                "doi:10.1088/2043-6262/ae5dd2",
+                "doi:10.1088/2043-6262/ae607b",
+                "doi:10.1088/2043-6262/ae7371",
+                "doi:10.1088/2043-6262/ae77ff",
+                "doi:10.1088/2043-6262/ae7976",
+                "doi:10.1088/2043-6262/ae8302",
+                "doi:10.1088/2043-6262/ae8303"
+              ]
+            },
+            {
+              "id": "vol17n3",
+              "title": "Vol. 17 No. 3 (2026)",
+              "published": "2026-07",
+              "url": "https://iopscience.iop.org/issue/2043-6262/17/3",
+              "paperKeys": [
+                "doi:10.1088/2043-6262/ae8909",
+                "doi:10.1088/2043-6262/ae8908",
+                "doi:10.1088/2043-6262/ae890b",
+                "doi:10.1088/2043-6262/ae890a",
+                "doi:10.1088/2043-6262/ae8a57",
+                "doi:10.1088/2043-6262/ae8a56",
+                "doi:10.1088/2043-6262/ae93b6",
+                "doi:10.1088/2043-6262/ae9aa2",
+                "doi:10.1088/2043-6262/ae9aa1",
+                "doi:10.1088/2043-6262/ae9bc4",
+                "doi:10.1088/2043-6262/ae9c41",
+                "doi:10.1088/2043-6262/ae9c44",
+                "doi:10.1088/2043-6262/ae9c43",
+                "doi:10.1088/2043-6262/ae9c42",
+                "doi:10.1088/2043-6262/ae9d84",
+                "doi:10.1088/2043-6262/ae9e2d",
+                "doi:10.1088/2043-6262/ae9ec8",
+                "doi:10.1088/2043-6262/ae9f5f",
+                "doi:10.1088/2043-6262/ae9aa3",
+                "doi:10.1088/2043-6262/aea229"
+              ]
+            }
+          ],
+          "note": "Volume 17 (2026) YTD through Issue 3 (September 2026): 3 issued issues, 56 eligible research/review articles enumerated via IOP RSS and Crossref (1 erratum in Issue 1 excluded). Issue 4 is scheduled for December 2026 (3 early-assigned online articles excluded per contract). Marked partial as verified lower bound from feed/API records."
+        }
+      ]
+    },
+    {
+      "id": "vjc",
+      "code": "VJC",
+      "title": "Vietnam Journal of Chemistry",
+      "titleVi": "Tạp chí Hóa học",
+      "subject": "Hóa học",
+      "website": "https://onlinelibrary.wiley.com/journal/25728288",
+      "publisher": "Wiley-VCH & Vietnam Academy of Science and Technology",
+      "issn": "2525-2321",
+      "eissn": "2572-8288",
+      "formerTitles": [
+        {
+          "title": "Tập san Hóa học",
+          "issn": null,
+          "until": "1976"
+        },
+        {
+          "title": "Tạp chí Hóa học",
+          "issn": "0866-7144",
+          "until": "2024"
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 6,
+        "sourceUrl": "https://onlinelibrary.wiley.com/journal/25728288"
+      },
+      "profileSources": [
+        "https://onlinelibrary.wiley.com/journal/25728288",
+        "https://vjs.ac.vn/index.php/vjchem",
+        "https://vast.gov.vn/tap-chi",
+        "https://vjs.ac.vn/vjchem/statistic"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sourceid/21101043786",
+          "checkedAt": "2026-10-21",
+          "coverage": "2018-2026"
+        },
+        {
+          "system": "WoS",
+          "collection": "ESCI",
+          "status": "listed",
+          "evidenceLevel": "vast",
+          "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/vietnam-journal-of-chemistry-tap-chi-hoa-hoc-%C4%91uoc-chap-nhan-vao-danh-muc-cac-tap-chi-cua-web-of-science-wos-tro-thanh-tap-chi-moi-noi-emerging-source-citation-index-esci-cua-he-thong-nay-10704-427.html",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "not_listed",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/api/search/journals/2572-8288",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 64 No. 5 (October 2026)",
+        "published": "2026-10",
+        "url": "https://doi.org/10.1002/vjch.v64.5"
+      },
+      "outputs": [
+        {
+          "year": 2025,
+          "papers": 90,
+          "issues": 6,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v63.1",
+            "https://doi.org/10.1002/vjch.v63.2",
+            "https://doi.org/10.1002/vjch.v63.3",
+            "https://doi.org/10.1002/vjch.v63.4",
+            "https://doi.org/10.1002/vjch.v63.5",
+            "https://doi.org/10.1002/vjch.v63.6"
+          ],
+          "issueItems": [
+            {
+              "id": "vol63n1",
+              "title": "Vol. 63 No. 1 (February 2025)",
+              "published": "2025-02",
+              "url": "https://doi.org/10.1002/vjch.v63.1",
+              "paperKeys": [
+                "doi:10.1002/vjch.202400211",
+                "doi:10.1002/vjch.202400151",
+                "doi:10.1002/vjch.202400149",
+                "doi:10.1002/vjch.202400119",
+                "doi:10.1002/vjch.202400106",
+                "doi:10.1002/vjch.202400096",
+                "doi:10.1002/vjch.202400086",
+                "doi:10.1002/vjch.202400059",
+                "doi:10.1002/vjch.202400011",
+                "doi:10.1002/vjch.202300410",
+                "doi:10.1002/vjch.202300407",
+                "doi:10.1002/vjch.202300398",
+                "doi:10.1002/vjch.202300393",
+                "doi:10.1002/vjch.202300376",
+                "doi:10.1002/vjch.202300352",
+                "doi:10.1002/vjch.202300280"
+              ]
+            },
+            {
+              "id": "vol63n2",
+              "title": "Vol. 63 No. 2 (April 2025)",
+              "published": "2025-04",
+              "url": "https://doi.org/10.1002/vjch.v63.2",
+              "paperKeys": [
+                "doi:10.1002/vjch.202400247",
+                "doi:10.1002/vjch.202400226",
+                "doi:10.1002/vjch.202400148",
+                "doi:10.1002/vjch.202400141",
+                "doi:10.1002/vjch.202400127",
+                "doi:10.1002/vjch.202400114",
+                "doi:10.1002/vjch.202400089",
+                "doi:10.1002/vjch.202400085",
+                "doi:10.1002/vjch.202400047",
+                "doi:10.1002/vjch.202400044",
+                "doi:10.1002/vjch.202400029",
+                "doi:10.1002/vjch.202300423",
+                "doi:10.1002/vjch.202300399",
+                "doi:10.1002/vjch.202300271",
+                "doi:10.1002/vjch.202300234"
+              ]
+            },
+            {
+              "id": "vol63n3",
+              "title": "Vol. 63 No. 3 (June 2025)",
+              "published": "2025-06",
+              "url": "https://doi.org/10.1002/vjch.v63.3",
+              "paperKeys": [
+                "doi:10.1002/vjch.202400265",
+                "doi:10.1002/vjch.202400238",
+                "doi:10.1002/vjch.202400209",
+                "doi:10.1002/vjch.202400208",
+                "doi:10.1002/vjch.202400186",
+                "doi:10.1002/vjch.202400152",
+                "doi:10.1002/vjch.202400140",
+                "doi:10.1002/vjch.202400128",
+                "doi:10.1002/vjch.202400112",
+                "doi:10.1002/vjch.202400105",
+                "doi:10.1002/vjch.202400077",
+                "doi:10.1002/vjch.202400074",
+                "doi:10.1002/vjch.202400068",
+                "doi:10.1002/vjch.202400028",
+                "doi:10.1002/vjch.202300386"
+              ]
+            },
+            {
+              "id": "vol63n4",
+              "title": "Vol. 63 No. 4 (August 2025)",
+              "published": "2025-08",
+              "url": "https://doi.org/10.1002/vjch.v63.4",
+              "paperKeys": [
+                "doi:10.1002/vjch.70007",
+                "doi:10.1002/vjch.70005",
+                "doi:10.1002/vjch.202400277",
+                "doi:10.1002/vjch.202400264",
+                "doi:10.1002/vjch.202400212",
+                "doi:10.1002/vjch.202400179",
+                "doi:10.1002/vjch.202400159",
+                "doi:10.1002/vjch.202400155",
+                "doi:10.1002/vjch.202400124",
+                "doi:10.1002/vjch.202400103",
+                "doi:10.1002/vjch.202400100",
+                "doi:10.1002/vjch.202400055",
+                "doi:10.1002/vjch.202400019",
+                "doi:10.1002/vjch.202300360"
+              ]
+            },
+            {
+              "id": "vol63n5",
+              "title": "Vol. 63 No. 5 (October 2025)",
+              "published": "2025-10",
+              "url": "https://doi.org/10.1002/vjch.v63.5",
+              "paperKeys": [
+                "doi:10.1002/vjch.70026",
+                "doi:10.1002/vjch.70022",
+                "doi:10.1002/vjch.70020",
+                "doi:10.1002/vjch.70018",
+                "doi:10.1002/vjch.70017",
+                "doi:10.1002/vjch.70012",
+                "doi:10.1002/vjch.70011",
+                "doi:10.1002/vjch.70009",
+                "doi:10.1002/vjch.70006",
+                "doi:10.1002/vjch.70004",
+                "doi:10.1002/vjch.70002",
+                "doi:10.1002/vjch.70000",
+                "doi:10.1002/vjch.202400259",
+                "doi:10.1002/vjch.202400227",
+                "doi:10.1002/vjch.202400001"
+              ]
+            },
+            {
+              "id": "vol63n6",
+              "title": "Vol. 63 No. 6 (December 2025)",
+              "published": "2025-12",
+              "url": "https://doi.org/10.1002/vjch.v63.6",
+              "paperKeys": [
+                "doi:10.1002/vjch.70096",
+                "doi:10.1002/vjch.70091",
+                "doi:10.1002/vjch.70090",
+                "doi:10.1002/vjch.70089",
+                "doi:10.1002/vjch.70088",
+                "doi:10.1002/vjch.70087",
+                "doi:10.1002/vjch.70085",
+                "doi:10.1002/vjch.70071",
+                "doi:10.1002/vjch.70070",
+                "doi:10.1002/vjch.70064",
+                "doi:10.1002/vjch.70063",
+                "doi:10.1002/vjch.70061",
+                "doi:10.1002/vjch.70029",
+                "doi:10.1002/vjch.70024",
+                "doi:10.1002/vjch.70013"
+              ]
+            }
+          ],
+          "note": "Volume 63 (2025) complete: 6 regular issues, 90 eligible research/review articles enumerated. Two 50th Anniversary announcements (DOIs 10.1002/vjch.70103 and 70105) and 12 paratext items (TOC contents, cover/issue records) strictly excluded per contract. Reconciled and cross-validated with user local collection (2026/09d-OJS-Citation Statistics-VJC/data/vjmech_ojs_catalog.json) and Wiley/Crossref metadata."
+        },
+        {
+          "year": 2026,
+          "papers": 96,
+          "issues": 6,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v64.1",
+            "https://doi.org/10.1002/vjch.v64.2",
+            "https://doi.org/10.1002/vjch.v64.3",
+            "https://doi.org/10.1002/vjch.v64.4",
+            "https://doi.org/10.1002/vjch.v64.5",
+            "https://doi.org/10.1002/vjch.v64.s1"
+          ],
+          "issueItems": [
+            {
+              "id": "vol64n1",
+              "title": "Vol. 64 No. 1 (February 2026)",
+              "published": "2026-02",
+              "url": "https://doi.org/10.1002/vjch.v64.1",
+              "paperKeys": [
+                "doi:10.1002/vjch.70039",
+                "doi:10.1002/vjch.70036",
+                "doi:10.1002/vjch.70035",
+                "doi:10.1002/vjch.70033",
+                "doi:10.1002/vjch.70032",
+                "doi:10.1002/vjch.70031",
+                "doi:10.1002/vjch.70030",
+                "doi:10.1002/vjch.70028",
+                "doi:10.1002/vjch.70025",
+                "doi:10.1002/vjch.70021",
+                "doi:10.1002/vjch.70016",
+                "doi:10.1002/vjch.202400117"
+              ]
+            },
+            {
+              "id": "vol64n2",
+              "title": "Vol. 64 No. 2 (April 2026)",
+              "published": "2026-04",
+              "url": "https://doi.org/10.1002/vjch.v64.2",
+              "paperKeys": [
+                "doi:10.1002/vjch.70082",
+                "doi:10.1002/vjch.70066",
+                "doi:10.1002/vjch.70062",
+                "doi:10.1002/vjch.70054",
+                "doi:10.1002/vjch.70053",
+                "doi:10.1002/vjch.70052",
+                "doi:10.1002/vjch.70051",
+                "doi:10.1002/vjch.70048",
+                "doi:10.1002/vjch.70047",
+                "doi:10.1002/vjch.70046",
+                "doi:10.1002/vjch.70044",
+                "doi:10.1002/vjch.70034",
+                "doi:10.1002/vjch.70027"
+              ]
+            },
+            {
+              "id": "vol64n3",
+              "title": "Vol. 64 No. 3 (June 2026)",
+              "published": "2026-06",
+              "url": "https://doi.org/10.1002/vjch.v64.3",
+              "paperKeys": [
+                "doi:10.1002/vjch.70098",
+                "doi:10.1002/vjch.70097",
+                "doi:10.1002/vjch.70086",
+                "doi:10.1002/vjch.70084",
+                "doi:10.1002/vjch.70083",
+                "doi:10.1002/vjch.70075",
+                "doi:10.1002/vjch.70072",
+                "doi:10.1002/vjch.70068",
+                "doi:10.1002/vjch.70065",
+                "doi:10.1002/vjch.70059",
+                "doi:10.1002/vjch.70057",
+                "doi:10.1002/vjch.70050"
+              ]
+            },
+            {
+              "id": "vol64n4",
+              "title": "Vol. 64 No. 4 (August 2026)",
+              "published": "2026-08",
+              "url": "https://doi.org/10.1002/vjch.v64.4",
+              "paperKeys": [
+                "doi:10.1002/vjch.70126",
+                "doi:10.1002/vjch.70125",
+                "doi:10.1002/vjch.70122",
+                "doi:10.1002/vjch.70121",
+                "doi:10.1002/vjch.70120",
+                "doi:10.1002/vjch.70118",
+                "doi:10.1002/vjch.70111",
+                "doi:10.1002/vjch.70101",
+                "doi:10.1002/vjch.70100",
+                "doi:10.1002/vjch.70092",
+                "doi:10.1002/vjch.70078",
+                "doi:10.1002/vjch.70074",
+                "doi:10.1002/vjch.70069"
+              ]
+            },
+            {
+              "id": "vol64n5",
+              "title": "Vol. 64 No. 5 (October 2026)",
+              "published": "2026-10",
+              "url": "https://doi.org/10.1002/vjch.v64.5",
+              "paperKeys": [
+                "doi:10.1002/vjch.70143",
+                "doi:10.1002/vjch.70142",
+                "doi:10.1002/vjch.70140",
+                "doi:10.1002/vjch.70139",
+                "doi:10.1002/vjch.70138",
+                "doi:10.1002/vjch.70136",
+                "doi:10.1002/vjch.70135",
+                "doi:10.1002/vjch.70133",
+                "doi:10.1002/vjch.70128",
+                "doi:10.1002/vjch.70123",
+                "doi:10.1002/vjch.70060"
+              ]
+            },
+            {
+              "id": "vol64ns1",
+              "title": "Vol. 64 No. S1 (February 2026)",
+              "published": "2026-02",
+              "url": "https://doi.org/10.1002/vjch.v64.S1",
+              "paperKeys": [
+                "doi:10.1002/vjch.70132",
+                "doi:10.1002/vjch.70130",
+                "doi:10.1002/vjch.70117",
+                "doi:10.1002/vjch.70116",
+                "doi:10.1002/vjch.70115",
+                "doi:10.1002/vjch.70114",
+                "doi:10.1002/vjch.70113",
+                "doi:10.1002/vjch.70112",
+                "doi:10.1002/vjch.70110",
+                "doi:10.1002/vjch.70109",
+                "doi:10.1002/vjch.70108",
+                "doi:10.1002/vjch.70107",
+                "doi:10.1002/vjch.70106",
+                "doi:10.1002/vjch.70104",
+                "doi:10.1002/vjch.70099",
+                "doi:10.1002/vjch.70095",
+                "doi:10.1002/vjch.70094",
+                "doi:10.1002/vjch.70093",
+                "doi:10.1002/vjch.70079",
+                "doi:10.1002/vjch.70077",
+                "doi:10.1002/vjch.70076",
+                "doi:10.1002/vjch.70067",
+                "doi:10.1002/vjch.70055",
+                "doi:10.1002/vjch.70049",
+                "doi:10.1002/vjch.70045",
+                "doi:10.1002/vjch.70043",
+                "doi:10.1002/vjch.70042",
+                "doi:10.1002/vjch.70040",
+                "doi:10.1002/vjch.70038",
+                "doi:10.1002/vjch.70037",
+                "doi:10.1002/vjch.70023",
+                "doi:10.1002/vjch.70014",
+                "doi:10.1002/vjch.70008",
+                "doi:10.1002/vjch.70003",
+                "doi:10.1002/vjch.70001"
+              ]
+            }
+          ],
+          "note": "Volume 64 (2026) complete for issued issues through asOf 2026-10-21: 6 issues (5 regular issues through October 2026 plus Special Issue S1 from February 2026), 96 eligible research/review articles enumerated. Reconciled with user local catalog (2026/09d-OJS-Citation Statistics-VJC/data/vjmech_ojs_catalog.json) and Wiley issue DOIs. 12 paratext items excluded; 30 unassigned Online First articles excluded. Issue 6 scheduled for December 2026."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Reconciliation with local user collections: VJC article inventory was cross-referenced directly against user's local curated catalog (2026/09d-OJS-Citation Statistics-VJC/data/vjmech_ojs_catalog.json, updated 2026-10-19/20) and benchmarked against 09i summary (2026/09i-Danh-gia-kha-thi-Scopus-VAST/data/bang-tong-hop-chi-so-9-tap-chi-vast-2026-10-19.json). All source directories and original data remain completely untouched and unmutated.",
+    "Web of Science Core Collection indexing verified: All four journals (VJM, AMV, ANSN, VJC) are indexed in ESCI (Emerging Sources Citation Index), confirmed by Clarivate Master Journal List and official VAST announcements. Specifically for ANSN, VAST official dispatch (03/07/2019, article 5416-463) documents that ANSN was in SCIE from Dec 2015 to Dec 2016, dropped in Dec 2016, and officially re-admitted into Web of Science under ESCI in May 2019, where it actively remains.",
+    "DOAJ database queries: Exact queries to DOAJ public API (https://doaj.org/api/search/journals/issn:{ISSN}) for all print and electronic ISSNs of all 4 journals (2305-221X, 2305-2228, 0251-4184, 2315-4144, 2043-6254, 2043-6262, 2525-2321, 2572-8288) returned 0 results ('total': 0, 'results': []). They are strictly recorded as 'not_listed' at evidenceLevel 'database'.",
+    "Quarterly issue schedule and 2026 YTD scope: For VJM, Volume 54 completed all 4 quarterly issues (Issue 1 Jan, Issue 2 June, Issue 3 June, Issue 4 Oct 2026 with continuous pagination pp. 737-1011). For AMV, Volume 51 published 3 quarterly issues through September 2026 (Issue 4 scheduled for Dec 2026). For ANSN, Volume 17 completed 3 issues through September 2026; Issue 4 is scheduled for December 2026, and its 3 early-assigned online articles are excluded per contract. For VJC, Volume 64 published 5 regular issues through October 2026 plus 1 Special Issue (S1, Feb 2026); Issue 6 scheduled for Dec 2026 is unissued.",
+    "Non-research items: Prefaces, editorials, anniversary announcements (such as VJC 50th VAST Anniversary notes 10.1002/vjch.70103 and 70105), corrections, errata, corrigenda, cover pages, tables of contents, and container issue DOIs have been strictly identified and excluded from eligible paper counts across all four journals."
+  ]
+}
