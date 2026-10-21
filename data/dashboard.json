@@ -15,7 +15,7 @@
   "defaultOutputYear": 2025,
   "logos": {
     "vast": "assets/images/logos/vast.png",
-    "nxb": "assets/images/logos/nxb.png",
+    "nxb": "assets/images/logos/nxb.svg",
     "im": "assets/images/logos/im-vast.png"
   },
   "officialScopus": {
@@ -856,7 +856,7 @@
       "cover": "assets/images/covers/vjm.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.png",
+        "logo": "assets/images/logos/nxb.svg",
         "coPublisher": "Springer Nature",
         "coLogo": "assets/images/logos/springer.svg"
       },
@@ -2859,7 +2859,7 @@
       "cover": "assets/images/covers/ansn.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.png",
+        "logo": "assets/images/logos/nxb.svg",
         "coPublisher": "IOP Publishing",
         "coLogo": "assets/images/logos/iop.svg"
       },
@@ -4343,7 +4343,7 @@
       "cover": "assets/images/covers/vjc.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.png",
+        "logo": "assets/images/logos/nxb.svg",
         "coPublisher": "Wiley-VCH",
         "coLogo": "assets/images/logos/wiley.svg"
       },
@@ -5173,7 +5173,7 @@
       "cover": "assets/images/covers/vjes.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.png",
+        "logo": "assets/images/logos/nxb.svg",
         "coPublisher": null,
         "coLogo": null
       },
@@ -6512,7 +6512,7 @@
       "cover": "assets/images/covers/vjst.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.png",
+        "logo": "assets/images/logos/nxb.svg",
         "coPublisher": null,
         "coLogo": null
       },
@@ -7352,7 +7352,7 @@
       "cover": "assets/images/covers/cip.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.png",
+        "logo": "assets/images/logos/nxb.svg",
         "coPublisher": null,
         "coLogo": null
       },
@@ -8181,7 +8181,7 @@
       "cover": "assets/images/covers/vjmech.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.png",
+        "logo": "assets/images/logos/nxb.svg",
         "coPublisher": null,
         "coLogo": null
       },
@@ -9246,7 +9246,7 @@
       "cover": "assets/images/covers/jcc.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.png",
+        "logo": "assets/images/logos/nxb.svg",
         "coPublisher": null,
         "coLogo": null
       },
@@ -10451,7 +10451,7 @@
       "cover": "assets/images/covers/ajb.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.png",
+        "logo": "assets/images/logos/nxb.svg",
         "coPublisher": null,
         "coLogo": null
       },
@@ -11449,7 +11449,7 @@
       "cover": "assets/images/covers/vjmst.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.png",
+        "logo": "assets/images/logos/nxb.svg",
         "coPublisher": null,
         "coLogo": null
       },
@@ -12556,7 +12556,7 @@
       "cover": "assets/images/covers/vjbt.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.png",
+        "logo": "assets/images/logos/nxb.svg",
         "coPublisher": null,
         "coLogo": null
       },

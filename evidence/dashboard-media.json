@@ -7,8 +7,8 @@
       "height": 572,
       "format": "PNG",
       "mode": "RGB",
-      "bytes": 157119,
-      "sha256": "6396a141f36903b882dc3d4661b788bdbeffb74f7641743e3e34c8fd03b25045",
+      "bytes": 108007,
+      "sha256": "ee63d40a1897c8f92add6ee5d7462256a86cb5fd04c8adbc76967cb74a235880",
       "name": "Vietnam Academy of Science and Technology (VAST)",
       "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
       "source": "2026/13-Dashbroad 12 Tạp chí VAST/Logo VAST.png"
@@ -19,8 +19,8 @@
       "height": 453,
       "format": "PNG",
       "mode": "RGB",
-      "bytes": 120850,
-      "sha256": "684139fbb32f3a1a52ca1c404706f11aaa4438d37aca01498208b3a3bc449c40",
+      "bytes": 26329,
+      "sha256": "e4f5a6ebd90ca4b0a31bad88b58c108769a011effc2fe68c2524071e07f67dde",
       "name": "Publishing House for Science and Technology (PST)",
       "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
       "source": "2026/13-Dashbroad 12 Tạp chí VAST/Logo NXB.png"
@@ -55,8 +55,8 @@
       "height": 48,
       "format": "SVG",
       "mode": "VECTOR",
-      "bytes": 703,
-      "sha256": "12664d8e7fffb33042829c9d31d28f862a81bb431831df4464713ead25dc0f1b",
+      "bytes": 5106,
+      "sha256": "fa23ff8cdb48ff5d673309dd348228349ba8c72ff6c26ca02d93f6f035206a48",
       "name": "Springer Nature",
       "nameVi": "Nhà xuất bản Springer Nature",
       "source": "Generated clean vector badge for Springer Nature"
@@ -79,11 +79,23 @@
       "height": 48,
       "format": "SVG",
       "mode": "VECTOR",
-      "bytes": 450,
-      "sha256": "10c19ea148ba0428e5048027e6e696596c007e6cf61ebd7cc06aeec68e5cbb72",
+      "bytes": 3523,
+      "sha256": "3e991c4cc890229eebcadd3dfaf870c3fed187553619e68772a00ba7e65c9682",
       "name": "Wiley-VCH",
       "nameVi": "Nhà xuất bản Wiley-VCH",
       "source": "Generated clean vector badge for Wiley-VCH"
+    },
+    "nxbSvg": {
+      "id": "nxb-svg",
+      "path": "assets/images/logos/nxb.svg",
+      "width": 396,
+      "height": 234,
+      "format": "SVG",
+      "bytes": 51316,
+      "sha256": "377b30f5ab9addefac97b52754131dbaa0e5bdb0e0e108190ee842d89500f8ee",
+      "name": "Publishing House for Science and Technology (PST) Vector",
+      "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ (Vector không nền)",
+      "source": "2026/01-NXB/15-Logo NXB/Logo NXB 2026.eps"
     }
   },
   "covers": {

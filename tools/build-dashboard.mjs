@@ -119,7 +119,7 @@ for(let index=0;index<order.length;index++){
  const co=coPublishers[j.id];
  j.institution=j.id==='amv'
   ?{name:'Viện Toán học (VAST)',logo:'assets/images/logos/im-vast.png',coPublisher:co[0],coLogo:co[1]}
-  :{name:'NXB Khoa học tự nhiên và Công nghệ',logo:'assets/images/logos/nxb.png',coPublisher:co?.[0]??null,coLogo:co?.[1]??null};
+  :{name:'NXB Khoa học tự nhiên và Công nghệ',logo:'assets/images/logos/nxb.svg',coPublisher:co?.[0]??null,coLogo:co?.[1]??null};
  j.publisher=j.id==='amv'?'Viện Toán học (VAST) & Springer Nature':co?`NXB Khoa học tự nhiên và Công nghệ (VAST) & ${co[0]}`:'NXB Khoa học tự nhiên và Công nghệ, Viện Hàn lâm Khoa học và Công nghệ Việt Nam';
  if(original){
   assert.equal(j.title,original.title,j.code+': journal title differs from verified Scopus identity.');
@@ -140,7 +140,7 @@ for(let index=0;index<order.length;index++){
  journals.push(j);
 }
 const snapshotId=collectedAt+'-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
-const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.png',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, chuỗi số bài xuất bản lịch sử toàn thời gian và thống kê trích dẫn của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
+const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.svg',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, chuỗi số bài xuất bản lịch sử toàn thời gian và thống kê trích dẫn của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
 const serialized=JSON.stringify(dataset,null,2)+'\n';
 if(process.argv.includes('--write')){
  await mkdir(path.join(root,'data/snapshots'),{recursive:true});
