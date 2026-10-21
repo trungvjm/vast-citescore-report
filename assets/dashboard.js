@@ -16,7 +16,7 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 const fontPresets={
  nature:['"Source Serif 4",Georgia,serif','"Geist",system-ui,sans-serif','"Geist",sans-serif','Source Serif 4 + Geist'],
  economist:['"Merriweather",Georgia,serif','"IBM Plex Sans",system-ui,sans-serif','"IBM Plex Sans",sans-serif','Merriweather + IBM Plex Sans'],
- ft:['"Libre Baskerville",Georgia,serif','"IBM Plex Sans",system-ui,sans-serif','"Libre Baskerville",Georgia,serif','Libre Baskerville + IBM Plex'],
+ ft:['"Playfair Display","Source Serif 4",Georgia,serif','"IBM Plex Sans",system-ui,sans-serif','"Source Serif 4",Georgia,serif','Playfair Display + IBM Plex'],
  scopus:['"Plus Jakarta Sans",system-ui,sans-serif','"Plus Jakarta Sans",system-ui,sans-serif','"JetBrains Mono",monospace','Plus Jakarta Sans + JetBrains Mono'],
  clarivate:['"Outfit",system-ui,sans-serif','"Plus Jakarta Sans",system-ui,sans-serif','"Outfit",sans-serif','Outfit + Plus Jakarta Sans'],
  science:['"Oswald",system-ui,sans-serif','"IBM Plex Sans",system-ui,sans-serif','"Oswald",sans-serif','Oswald In hoa + IBM Plex'],
@@ -412,6 +412,7 @@ function drawSeriesGeometry({list,activeIds,years,start,end,left,top,plotWidth,p
  const theme=activeThemeObj(),chartStyle=theme.chartStyle,baseline=top+plotHeight;
  const activeOrder=list.filter(j=>activeIds.has(j.id)).map(j=>j.id);
  const stepX=years.length>1?plotWidth/(years.length-1):plotWidth*0.4;
+ const usedLabelY=[];
  let svg='';
  for(const j of list){
   const style=styles[j.id],on=activeIds.has(j.id),activeIdx=Math.max(0,activeOrder.indexOf(j.id)),activeCount=Math.max(1,activeOrder.length);
@@ -475,11 +476,14 @@ function drawSeriesGeometry({list,activeIds,years,start,end,left,top,plotWidth,p
      svg+=`<circle ${attrs} cx="${px}" cy="${py}" r="3.25" fill="${style.color}" stroke="var(--paper)"/>`;
     }
    }
-   if(chartStyle==='dot-band'){
+   if(chartStyle==='dot-band'&&on){
     const lastYr=[...years].reverse().find(yr=>Number.isFinite(obsFn(j,yr)?.value));
     if(lastYr!==undefined){
      const o=obsFn(j,lastYr);
-     svg+=`<text x="${(x(lastYr)+7).toFixed(1)}" y="${(y(o.value)+3.5).toFixed(1)}" fill="${style.color}" font-size="10" font-weight="600">${j.code} ${formatVal?formatVal(o.value):o.value}</text>`;
+     let ly=y(o.value)+3.5;
+     while(usedLabelY.some(u=>Math.abs(u-ly)<10.5))ly+=10.5;
+     usedLabelY.push(ly);
+     svg+=`<text x="${(x(lastYr)+7).toFixed(1)}" y="${ly.toFixed(1)}" fill="${style.color}" font-size="10" font-weight="600">${j.code} ${formatVal?formatVal(o.value):o.value}</text>`;
     }
    }
   }
