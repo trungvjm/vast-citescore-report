@@ -44,6 +44,7 @@ function validateOutput(j,o){
  assert.equal(new Set(allKeys).size,allKeys.length,j.code+': duplicate paper identifier across issues.');
  if(o.papers!==null)assert.equal(o.papers,allKeys.length,j.code+': papers must reconcile to eligible issue keys.');
  if(o.coverage==='complete')assert(Number.isInteger(o.papers)&&o.papers>=0,j.code+': complete coverage requires an exact paper count.');
+ delete o.note;
 }
 async function localCollection(audit,isScopusIndexed){
  const statsSource=audit.sourceFiles.find(s=>s.path.endsWith('-stats.json'));
@@ -65,8 +66,8 @@ async function localCollection(audit,isScopusIndexed){
   return {year:r.year,value:r.cs4_den>0?r.cs4:null,numerator:r.cs4_num,denominator:r.cs4_den,window:r.window};
  });
  for(const series of [citationSeries,selfCalculatedSeries])assert.equal(new Set(series.map(r=>r.year)).size,series.length,audit.code+': duplicate year.');
- const totals={sourceRows:raw.meta.sourceRows,citingDocs:raw.meta.totalCitingDocs,citations:raw.meta.totalCitations,citedArticles:raw.meta.totalCitedArticles,hIndex:raw.meta.hIndex};
- return {sourceDirectory:audit.sourceDirectory,sourceFiles:audit.sourceFiles.map(f=>({path:f.path,sha256:f.sha256})),sourceExportDate:audit.sourceExportDate,processedAt:audit.processedAt,publicSourceUrl:audit.publicSourceUrl,officialScopusMetric:false,totals,citationSeries,selfCalculatedSeries,definition:'Citing documents and edges are a catalog-matched subset by citing-document year. Four-year ratio counts matched citations within the window to catalog articles dated in that window, divided by catalog articles in that window. It is not official CiteScore/Tracker; a zero denominator is unavailable.'};
+ const totals={citingDocs:raw.meta.totalCitingDocs,citations:raw.meta.totalCitations,citedArticles:raw.meta.totalCitedArticles,hIndex:raw.meta.hIndex};
+ return {processedAt:audit.processedAt,publicSourceUrl:audit.publicSourceUrl,officialScopusMetric:false,totals,citationSeries,selfCalculatedSeries};
 }
 const categories={VJM:['General Mathematics',72,115,414],AMV:['General Mathematics',18,338,414],ANSN:['Industrial and Manufacturing Engineering',61,164,425],VJC:['General Chemistry',43,227,402],VJST:['Electrical and Electronic Engineering',20,821,1030]};
 const journals=[];
@@ -77,6 +78,7 @@ for(let index=0;index<order.length;index++){
  j.profileSources=[...new Set([j.website,...j.profileSources])];
  assert(j.profileSources.every(url=>/^https?:\/\//.test(url)),j.code+': profileSources must use http(s) URLs.');
  const original=scopus.journals.find(s=>s.code===j.code);
+ j.group=original?'VAST-1':'VAST-2';
  if(original){
   assert.equal(j.title,original.title,j.code+': journal title differs from verified Scopus identity.');
   for(const key of ['issn','eissn'])if(original[key])assert.equal(j[key],original[key],j.code+': identity conflict.');
@@ -93,7 +95,7 @@ for(let index=0;index<order.length;index++){
  journals.push(j);
 }
 const snapshotId=collectedAt+'-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
-const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},sources,history:[{date:collectedAt,title:'Danh mục 12 tạp chí và bộ thống kê đã thu thập (2020–2026)',description:'Bổ sung hồ sơ, nguồn chỉ mục, sản lượng theo số đã phát hành giai đoạn 2020–2026 cho cả 12 tạp chí và số liệu trích dẫn từ 9 bộ thu thập. Các chỉ số tự tính được tách khỏi Scopus chính thức.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
+const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2, 2020–2026)',description:'Tổng hợp hồ sơ, chỉ mục, sản lượng xuất bản giai đoạn 2020–2026 của 12 tạp chí (7 tạp chí nhóm VAST-1 thuộc Scopus/WoS và 5 tạp chí nhóm VAST-2), kèm thống kê trích dẫn và CiteScore dự kiến cho nhóm VAST-2.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
 const serialized=JSON.stringify(dataset,null,2)+'\n';
 if(process.argv.includes('--write')){
  await mkdir(path.join(root,'data/snapshots'),{recursive:true});
