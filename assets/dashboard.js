@@ -63,6 +63,9 @@ function isMonoDarkLogo(src){
 function logoClass(src,extra=''){
   return `${extra}${isMonoDarkLogo(src)?(extra?' ':'')+'themed-mono-logo':''}`;
 }
+function coverUrl(j){
+  return j?.cover||j?.coverImage||`assets/images/covers/${j?.id}.png`;
+}
 
 /* ==========================================================================
    1. LIGHT / DARK MODE TOGGLE (GETARTCRAFT.COM PALETTE)
@@ -420,7 +423,7 @@ function renderHeroAndOverview(){
     orbitBox.innerHTML=dashboard.journals.map((j,idx)=>{
       const pos=orbitPositions[idx]||orbitPositions[0];
       return `<a class="orbit-cover-node" href="#journal/${esc(j.id)}" style="left:${pos.x}%;top:${pos.y}%" title="${esc(j.title)} (${esc(j.code)})">
-        <img src="${esc(j.coverImage)}" alt="Bìa ${esc(j.code)}" loading="lazy">
+        <img src="${esc(coverUrl(j))}" alt="Bìa ${esc(j.code)}">
         <span class="orbit-cover-tag">${esc(j.code)}</span>
       </a>`;
     }).join('');
@@ -500,12 +503,12 @@ function renderVast1MatrixTable(){
     return `<tr>
       <td>
         <div class="matrix-journal-cell">
-          <a href="#journal/${esc(j.id)}"><img class="matrix-cover" src="${esc(j.coverImage)}" alt="Bìa ${esc(j.code)}" width="38" height="52" loading="lazy"></a>
+          <a href="#journal/${esc(j.id)}"><img class="matrix-cover" src="${esc(coverUrl(j))}" alt="Bìa ${esc(j.code)}" width="40" height="58"></a>
           <div class="matrix-meta">
             <a href="#journal/${esc(j.id)}">${esc(j.code)} · ${esc(j.title)}</a>
             <div class="matrix-pub-row">
-              <img class="${logoClass(inst.logo,'mini-inst-logo')}" src="${esc(inst.logo)}" alt="${esc(inst.name)}" loading="lazy">
-              ${inst.coLogo?`<img class="${logoClass(inst.coLogo,'mini-inst-logo')}" src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}" loading="lazy">`:''}
+              <img class="${logoClass(inst.logo,'mini-inst-logo')}" src="${esc(inst.logo)}" alt="${esc(inst.name)}">
+              ${inst.coLogo?`<img class="${logoClass(inst.coLogo,'mini-inst-logo')}" src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}">`:''}
               <span>${esc(inst.name)}${inst.coPublisher?` &amp; ${esc(inst.coPublisher)}`:''}</span>
             </div>
           </div>
@@ -582,13 +585,13 @@ function renderCatalog(){
       </div>
       <div class="lineup-stage">
         <a class="lineup-cover-link" href="#journal/${esc(j.id)}" aria-label="Xem hồ sơ và biểu đồ lịch sử của ${esc(j.title)}">
-          <img class="lineup-cover" src="${esc(j.coverImage)}" alt="Bìa tạp chí ${esc(j.title)}" width="98" height="138" loading="lazy">
+          <img class="lineup-cover" src="${esc(coverUrl(j))}" alt="Bìa tạp chí ${esc(j.title)}" width="102" height="148">
         </a>
         <div class="lineup-logos">
           <div class="lineup-inst-badge">
             <div class="lineup-inst-logos">
-              <img class="${logoClass(inst.logo)}" src="${esc(inst.logo)}" alt="${esc(inst.name)}" title="${esc(inst.name)}" loading="lazy">
-              ${inst.coLogo?`<img class="${logoClass(inst.coLogo)}" src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}" title="${esc(inst.coPublisher||'')}" loading="lazy">`:''}
+              <img class="${logoClass(inst.logo)}" src="${esc(inst.logo)}" alt="${esc(inst.name)}" title="${esc(inst.name)}">
+              ${inst.coLogo?`<img class="${logoClass(inst.coLogo)}" src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}" title="${esc(inst.coPublisher||'')}">`:''}
             </div>
             <span class="lineup-inst-name">${esc(inst.name)}${inst.coPublisher?` &amp; ${esc(inst.coPublisher)}`:''}</span>
           </div>
@@ -1180,7 +1183,7 @@ function renderDetail(id){
     </div>
 
     <div class="detail-hero">
-      <img class="detail-cover-img" src="${esc(j.coverImage)}" alt="Bìa tạp chí ${esc(j.title)}" width="164" height="230">
+      <img class="detail-cover-img" src="${esc(coverUrl(j))}" alt="Bìa tạp chí ${esc(j.title)}" width="164" height="238">
       <div>
         <div class="lineup-tags">${indexingBadges(j)}</div>
         <h2 id="detail-heading" class="detail-heading">${esc(fullName(j))}</h2>
@@ -1540,7 +1543,7 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json'),fetch('data-scopus.json')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261021k'),fetch('data-scopus.json?v=20261021k')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     dashboard=await dRes.json();
     scopus=await sRes.json();
