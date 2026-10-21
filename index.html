@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi" data-theme="nature">
+<html lang="vi" data-theme="nature" data-layout="journal">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,43 +9,45 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&amp;family=Oswald:wght@500;600;700&amp;family=Outfit:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/dashboard.css?v=20261021d">
-<script type="module" src="assets/dashboard.js?v=20261021d"></script>
+<link rel="stylesheet" href="assets/dashboard.css?v=20261021e">
+<script type="module" src="assets/dashboard.js?v=20261021e"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Đến nội dung dashboard</a>
 <header class="masthead"><div class="masthead-inner"><a class="wordmark" href="#overview" translate="no">VAST</a><div class="institution"><p>Viện Hàn lâm Khoa học và Công nghệ Việt Nam</p><span>Theo dõi danh mục tạp chí khoa học</span></div>
 <div class="masthead-actions">
-<label class="theme-picker-label" for="theme-select">Phong cách</label>
-<select id="theme-select" class="theme-select" aria-label="Chọn phong cách thương hiệu">
-<option value="nature">1. Nature Portfolio (Tạp chí Khoa học)</option>
-<option value="economist">2. The Economist (Báo cáo Phân tích)</option>
-<option value="ft">3. Financial Times (Nhật báo Tài chính)</option>
-<option value="scopus">4. Elsevier Scopus (Bento Analytics)</option>
-<option value="clarivate">5. Clarivate WoS (Cổng Chỉ mục)</option>
-<option value="science">6. Science · AAAS (Tạp chí Hiện đại)</option>
-<option value="springer">7. SpringerLink (Cổng Học thuật)</option>
-<option value="wiley">8. Wiley Library (Thẻ Nghiên cứu)</option>
-<option value="nytimes">9. NYT The Upshot (Báo in Đa cột)</option>
-<option value="bloomberg">10. Bloomberg Terminal (Ma trận Dữ liệu)</option>
-</select>
+<button id="theme-prev" class="theme-step-btn" type="button" title="Giao diện trước" aria-label="Giao diện trước">◀</button>
+<label class="theme-picker-label" for="theme-select">50 Themes</label>
+<select id="theme-select" class="theme-select" aria-label="Chọn 1 trong 50 giao diện thương hiệu"></select>
+<button id="theme-next" class="theme-step-btn" type="button" title="Giao diện tiếp theo" aria-label="Giao diện tiếp theo">▶</button>
 <a class="source-shortcut" href="#updates">Nguồn &amp; cập nhật</a>
 </div></div></header>
 <div class="workspace">
 <div class="title-row">
 <div class="title-main">
-<span id="brand-kicker" class="brand-kicker">NATURE PORTFOLIO · EDITORIAL REPORT</span>
+<span id="brand-kicker" class="brand-kicker">NATURE PORTFOLIO · SCIENTIFIC JOURNAL REPORT</span>
 <h1>Dashboard tạp chí khoa học VAST</h1>
 <p class="subtitle">12 tạp chí. Dữ liệu xuất bản, trích dẫn và chỉ số CiteScore được đối chiếu theo từng nguồn.</p>
 </div>
 <div class="title-meta">
 <p class="snapshot-stamp">Ngày chốt dữ liệu <time id="snapshot-date">Đang tải…</time></p>
-<p id="theme-spec-badge" class="theme-spec-badge">Font: Source Serif 4 + Geist · Bố cục: Tạp chí học thuật</p>
+<p id="theme-spec-badge" class="theme-spec-badge">Font: Source Serif 4 + Geist · Bố cục: Tạp chí Khoa học · Biểu đồ: Đường chuẩn</p>
 </div>
 </div>
-<section class="theme-bar" aria-label="Chọn nhanh 10 phong cách thương hiệu lớn">
-<div class="theme-bar-head"><span class="theme-bar-title">10 phong cách thương hiệu (đổi màu, font chữ, bố cục &amp; cách trình bày):</span><span id="theme-active-desc" class="theme-bar-desc"></span></div>
-<div id="theme-pills" class="theme-pills" role="group" aria-label="Danh sách 10 phong cách"></div>
+<section class="theme-bar" aria-label="Bộ sưu tập 50 phong cách thương hiệu lớn">
+<div class="theme-bar-head">
+<div class="theme-groups" id="theme-groups" role="tablist" aria-label="Nhóm thương hiệu">
+<button type="button" class="theme-group-btn" data-group="active" aria-selected="true">Nhóm đang chọn (10)</button>
+<button type="button" class="theme-group-btn" data-group="0" aria-selected="false">1–10 · Xuất bản KH</button>
+<button type="button" class="theme-group-btn" data-group="1" aria-selected="false">11–20 · Đại học &amp; Viện</button>
+<button type="button" class="theme-group-btn" data-group="2" aria-selected="false">21–30 · Báo chí &amp; Tài chính</button>
+<button type="button" class="theme-group-btn" data-group="3" aria-selected="false">31–40 · Tổ chức Quốc tế</button>
+<button type="button" class="theme-group-btn" data-group="4" aria-selected="false">41–50 · Công nghệ &amp; BI</button>
+<button type="button" class="theme-group-btn" data-group="all" aria-selected="false">Tất cả 50 Themes</button>
+</div>
+<span id="theme-active-desc" class="theme-bar-desc"></span>
+</div>
+<div id="theme-pills" class="theme-pills" role="group" aria-label="Danh sách phong cách thương hiệu"></div>
 </section>
 <nav class="tabs" aria-label="Các phần dashboard"><a href="#overview" data-view="overview">Tổng quan</a><a href="#journals" data-view="journals">Danh mục tạp chí</a><a href="#trends" data-view="trends">Biểu đồ &amp; xu hướng</a><a href="#updates" data-view="updates">Nguồn &amp; cập nhật</a></nav>
 <main id="main-content" tabindex="-1">
