@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#ffffff">
-<meta name="description" content="Dashboard theo dõi 12 tạp chí khoa học thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST): phân nhóm VAST-1, VAST-2, chỉ số CiteScore, trích dẫn và sản lượng xuất bản.">
+<meta name="description" content="Dashboard theo dõi 12 tạp chí khoa học thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST): phân nhóm VAST-1, VAST-2, chỉ số CiteScore, trích dẫn và quy mô xuất bản.">
 <title>VAST · Dashboard tạp chí khoa học</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&amp;family=Merriweather:ital,wght@0,400;0,700;1,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&amp;family=Oswald:wght@500;600;700&amp;family=Outfit:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/dashboard.css?v=20261021g">
-<script type="module" src="assets/dashboard.js?v=20261021g"></script>
+<link rel="stylesheet" href="assets/dashboard.css?v=20261021h">
+<script type="module" src="assets/dashboard.js?v=20261021h"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Đến nội dung dashboard</a>
@@ -27,7 +27,7 @@
 <div class="title-main">
 <span id="brand-kicker" class="brand-kicker">VIỆN HÀN LÂM KHOA HỌC VÀ CÔNG NGHỆ VIỆT NAM</span>
 <h1>Dashboard tạp chí khoa học VAST</h1>
-<p class="subtitle">Theo dõi chỉ số CiteScore, trích dẫn và sản lượng công bố của 12 tạp chí khoa học (Nhóm VAST-1 &amp; VAST-2).</p>
+<p class="subtitle">Theo dõi chỉ số CiteScore, trích dẫn và quy mô xuất bản của 12 tạp chí khoa học (Nhóm VAST-1 &amp; VAST-2).</p>
 </div>
 <div class="title-meta">
 <p class="snapshot-stamp">Cập nhật <time id="snapshot-date">Đang tải…</time></p>
@@ -73,7 +73,7 @@
 <div class="section-heading"><div><span class="chart-kicker">Biểu đồ 1 · Nhóm VAST-1 (Scopus / Web of Science)</span><h2 id="trends-heading">Diễn biến CiteScore &amp; Tracker — Nhóm VAST-1 (2015–2026)</h2><p class="section-description">Chuỗi CiteScore năm (2015–2025) và CiteScoreTracker (2026) của 7 tạp chí nhóm VAST-1.</p></div></div>
 <div class="trend-controls"><div class="field"><label for="trend-metric">Chỉ số</label><select id="trend-metric">
 <optgroup label="Nhóm VAST-1 · Scopus"><option value="citescore">CiteScore &amp; Tracker</option><option value="citations">Trích dẫn trong cửa sổ CiteScore</option><option value="documents">Tài liệu trong cửa sổ CiteScore</option></optgroup>
-<optgroup label="Sản lượng công bố · 12 tạp chí"><option value="papers">Bài đã xuất bản (2020–2026)</option><option value="issues">Kỳ đã xuất bản (2020–2026)</option></optgroup>
+<optgroup label="Quy mô xuất bản · 12 tạp chí"><option value="papers">Bài đã xuất bản (2020–2026)</option><option value="issues">Kỳ đã xuất bản (2020–2026)</option></optgroup>
 <optgroup label="Thống kê trích dẫn &amp; Nhóm VAST-2"><option value="localDocs">Tài liệu trích dẫn theo năm</option><option value="localEdges">Lượt trích dẫn theo năm</option><option value="localScore">CiteScore dự kiến 4 năm (Nhóm VAST-2)</option></optgroup>
 </select></div><div class="field"><label for="trend-from">Từ năm</label><select id="trend-from"></select></div><div class="field"><label for="trend-to">Đến năm</label><select id="trend-to"></select></div><button id="show-all" class="text-button" type="button">Chọn tất cả</button><button id="reset-series" class="text-button" type="button">Lựa chọn mặc định</button></div>
 <div id="chart-legend" class="legend" role="group" aria-label="Chọn tạp chí hiển thị"></div>
@@ -119,7 +119,7 @@
 </div>
 
 <div class="chart-block" id="chart-papers-block">
-<div class="section-heading"><div><span class="chart-kicker">Biểu đồ 4 · Sản lượng công bố</span><h2 id="papers-heading">Số bài đã xuất bản của 12 tạp chí (2020–2026)</h2><p class="section-description">Số lượng bài báo khoa học xuất bản trong các số phát hành chính thức của 12 tạp chí giai đoạn 2020–2026.</p></div></div>
+<div class="section-heading"><div><span class="chart-kicker">Biểu đồ 4 · Quy mô xuất bản</span><h2 id="papers-heading">Số bài đã xuất bản của 12 tạp chí (2020–2026)</h2><p class="section-description">Số lượng bài báo khoa học xuất bản trong các số phát hành chính thức của 12 tạp chí giai đoạn 2020–2026.</p></div></div>
 <div class="trend-controls">
 <div class="field"><label for="papers-focus-year">Năm so sánh</label><select id="papers-focus-year"></select></div>
 <button id="papers-preset-all" class="text-button" type="button">Cả 12 tạp chí</button>
@@ -154,7 +154,7 @@
 <section id="detail-panel" class="view-panel" aria-labelledby="detail-heading" hidden></section>
 <section id="updates-panel" class="view-panel" aria-labelledby="updates-heading" hidden>
 <div class="section-heading"><div><h2 id="updates-heading">Thông tin &amp; nguồn dữ liệu</h2><p class="section-description">Phân nhóm tạp chí, định nghĩa chỉ số và danh mục liên kết chính thức.</p></div></div>
-<div class="updates-grid"><section><h3>Lịch sử cập nhật</h3><ol id="snapshot-history" class="history-list"></ol></section><section><h3>Định nghĩa chỉ số</h3><dl class="method-list"><div><dt>Nhóm VAST-1</dt><dd>7 tạp chí thuộc danh mục Scopus và Web of Science Core Collection (ESCI): VJM, AMV, ANSN, VJC, VJES, VJST, CIP.</dd></div><div><dt>Nhóm VAST-2</dt><dd>5 tạp chí chuyên ngành: VJMech, JCC, AJB, VJMST, VJBT; theo dõi qua chỉ số CiteScore dự kiến (cửa sổ 4 năm).</dd></div><div><dt>CiteScore &amp; Tracker</dt><dd>CiteScore năm là chỉ số chính thức của Scopus; CiteScoreTracker là chỉ số cập nhật theo tháng trong năm hiện hành.</dd></div><div><dt>Sản lượng công bố</dt><dd>Số lượng bài báo khoa học trong các số phát hành chính thức của từng tạp chí từ năm 2020 đến nay.</dd></div></dl></section></div>
+<div class="updates-grid"><section><h3>Lịch sử cập nhật</h3><ol id="snapshot-history" class="history-list"></ol></section><section><h3>Định nghĩa chỉ số</h3><dl class="method-list"><div><dt>Nhóm VAST-1</dt><dd>7 tạp chí thuộc danh mục Scopus và Web of Science Core Collection (ESCI): VJM, AMV, ANSN, VJC, VJES, VJST, CIP.</dd></div><div><dt>Nhóm VAST-2</dt><dd>5 tạp chí chuyên ngành: VJMech, JCC, AJB, VJMST, VJBT; theo dõi qua chỉ số CiteScore dự kiến (cửa sổ 4 năm).</dd></div><div><dt>CiteScore &amp; Tracker</dt><dd>CiteScore năm là chỉ số chính thức của Scopus; CiteScoreTracker là chỉ số cập nhật theo tháng trong năm hiện hành.</dd></div><div><dt>Quy mô xuất bản</dt><dd>Số lượng bài báo khoa học và số kỳ phát hành chính thức của từng tạp chí từ năm 2020 đến nay.</dd></div></dl></section></div>
 <section class="source-section" aria-labelledby="sources-heading"><h3 id="sources-heading">Danh mục tạp chí &amp; liên kết nguồn</h3><ol id="source-links" class="reference-list" role="list"></ol></section>
 </section>
 <noscript><p>Dashboard cần JavaScript để hiển thị biểu đồ tương tác.</p></noscript>

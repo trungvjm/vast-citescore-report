@@ -9,7 +9,7 @@ const workspace=path.resolve(root,'../..');
 const baselineHash='113f67b7de073007741f9bb3a1a2f4948df7098f520a434649d151bb2be10d89';
 const order=['vjm','amv','ansn','vjc','vjes','vjst','cip','vjmech','jcc','ajb','vjmst','vjbt'];
 const codes=['VJM','AMV','ANSN','VJC','VJES','VJST','CIP','VJMech','JCC','AJB','VJMST','VJBT'];
-const subjects={vjm:'Toán học',amv:'Toán học',ansn:'Vật liệu và công nghệ nano',vjc:'Hóa học',vjes:'Khoa học Trái đất',vjst:'Khoa học và công nghệ',cip:'Vật lý',vjmech:'Cơ học',jcc:'Tin học và điều khiển',ajb:'Sinh học',vjmst:'Khoa học và công nghệ biển',vjbt:'Công nghệ sinh học'};
+const subjects={vjm:'Toán học',amv:'Toán học',ansn:'Vật liệu và công nghệ nano',vjc:'Hóa học',vjes:'Khoa học Trái đất',vjst:'Khoa học và công nghệ',cip:'Vật lý',vjmech:'Cơ học',jcc:'Tin học và điều khiển học',ajb:'Sinh học',vjmst:'Khoa học và công nghệ biển',vjbt:'Công nghệ sinh học'};
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const readJson=async file=>JSON.parse(await readFile(file,'utf8'));
 const profileFiles=['evidence/dashboard-publishers.json','evidence/dashboard-vjs-core.json','evidence/dashboard-vjs-other.json'];
@@ -95,7 +95,7 @@ for(let index=0;index<order.length;index++){
  journals.push(j);
 }
 const snapshotId=collectedAt+'-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
-const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2, 2020–2026)',description:'Tổng hợp hồ sơ, chỉ mục, sản lượng xuất bản giai đoạn 2020–2026 của 12 tạp chí (7 tạp chí nhóm VAST-1 thuộc Scopus/WoS và 5 tạp chí nhóm VAST-2), kèm thống kê trích dẫn và CiteScore dự kiến cho nhóm VAST-2.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
+const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2, 2020–2026)',description:'Tổng hợp hồ sơ, chỉ mục, số lượng bài và kỳ xuất bản giai đoạn 2020–2026 của 12 tạp chí (7 tạp chí nhóm VAST-1 thuộc Scopus/WoS và 5 tạp chí nhóm VAST-2), kèm thống kê trích dẫn và CiteScore dự kiến cho nhóm VAST-2.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
 const serialized=JSON.stringify(dataset,null,2)+'\n';
 if(process.argv.includes('--write')){
  await mkdir(path.join(root,'data/snapshots'),{recursive:true});

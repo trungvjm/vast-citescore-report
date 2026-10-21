@@ -24,7 +24,7 @@
     {
       "date": "2026-10-21",
       "title": "Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2, 2020–2026)",
-      "description": "Tổng hợp hồ sơ, chỉ mục, sản lượng xuất bản giai đoạn 2020–2026 của 12 tạp chí (7 tạp chí nhóm VAST-1 thuộc Scopus/WoS và 5 tạp chí nhóm VAST-2), kèm thống kê trích dẫn và CiteScore dự kiến cho nhóm VAST-2.",
+      "description": "Tổng hợp hồ sơ, chỉ mục, số lượng bài và kỳ xuất bản giai đoạn 2020–2026 của 12 tạp chí (7 tạp chí nhóm VAST-1 thuộc Scopus/WoS và 5 tạp chí nhóm VAST-2), kèm thống kê trích dẫn và CiteScore dự kiến cho nhóm VAST-2.",
       "url": "data/snapshots/2026-10-21-v1.json"
     },
     {
@@ -7463,7 +7463,7 @@
       "code": "JCC",
       "title": "Journal of Computer Science and Cybernetics",
       "titleVi": "Tạp chí Tin học và Điều khiển học",
-      "subject": "Tin học và điều khiển",
+      "subject": "Tin học và điều khiển học",
       "website": "https://vjs.ac.vn/index.php/jcc",
       "publisher": "Vietnam Academy of Science and Technology",
       "issn": "1813-9663",
