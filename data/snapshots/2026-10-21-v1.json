@@ -15,7 +15,7 @@
   "defaultOutputYear": 2025,
   "logos": {
     "vast": "assets/images/logos/vast.png",
-    "nxb": "assets/images/logos/nxb.svg",
+    "nxb": "assets/images/logos/nxb.png",
     "im": "assets/images/logos/im-vast.png"
   },
   "officialScopus": {
@@ -852,11 +852,15 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "order": 1,
       "group": "VAST-1",
+      "scopusSourceId": "21100286934",
+      "archiveUrl": "https://link.springer.com/journal/10013/volumes-and-issues",
       "cover": "assets/images/covers/vjm.png",
+      "coverImage": "assets/images/covers/vjm.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.svg",
+        "logo": "assets/images/logos/nxb.png",
         "coPublisher": "Springer Nature",
         "coLogo": "assets/images/logos/springer.svg"
       },
@@ -875,87 +879,159 @@
           "year": 2013,
           "papers": 37,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2014,
           "papers": 42,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2015,
           "papers": 59,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2016,
           "papers": 56,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2017,
           "papers": 44,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2018,
           "papers": 58,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2019,
           "papers": 50,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2020,
           "papers": 56,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2021,
           "papers": 64,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2022,
           "papers": 56,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2023,
           "papers": 54,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2024,
           "papers": 53,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2025,
           "papers": 51,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2026,
           "papers": 58,
           "issues": 4,
-          "periodKind": "ytd"
+          "periodKind": "ytd",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         }
-      ]
+      ],
+      "historyStartYear": 2013,
+      "historyEndYear": 2026
     },
     {
       "id": "amv",
@@ -1632,8 +1708,12 @@
       "aliases": [
         "AVM"
       ],
+      "order": 2,
       "group": "VAST-1",
+      "scopusSourceId": "21100199843",
+      "archiveUrl": "https://link.springer.com/journal/40306/volumes-and-issues",
       "cover": "assets/images/covers/amv.png",
+      "coverImage": "assets/images/covers/amv.png",
       "institution": {
         "name": "Viện Toán học (VAST)",
         "logo": "assets/images/logos/im-vast.png",
@@ -1655,309 +1735,566 @@
           "year": 1976,
           "papers": 15,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1977,
           "papers": 12,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1978,
           "papers": 19,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1979,
           "papers": 19,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1980,
           "papers": 28,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1981,
           "papers": 21,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1982,
           "papers": 26,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1983,
           "papers": 11,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1984,
           "papers": 18,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1985,
           "papers": 15,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1986,
           "papers": 17,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1987,
           "papers": 22,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1988,
           "papers": 26,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1989,
           "papers": 21,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1990,
           "papers": 21,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1991,
           "papers": 18,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1992,
           "papers": 24,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1993,
           "papers": 20,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1994,
           "papers": 27,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1995,
           "papers": 23,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1996,
           "papers": 24,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1997,
           "papers": 29,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1998,
           "papers": 29,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1999,
           "papers": 26,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2000,
           "papers": 27,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2001,
           "papers": 30,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2002,
           "papers": 41,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2003,
           "papers": 29,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2004,
           "papers": 24,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2005,
           "papers": 25,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2006,
           "papers": 25,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2007,
           "papers": 26,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2008,
           "papers": 33,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2009,
           "papers": 34,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2010,
           "papers": 31,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2011,
           "papers": 46,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2012,
           "papers": 41,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2013,
           "papers": 39,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2014,
           "papers": 42,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2015,
           "papers": 40,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2016,
           "papers": 47,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2017,
           "papers": 44,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2018,
           "papers": 46,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2019,
           "papers": 53,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2020,
           "papers": 53,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2021,
           "papers": 46,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2022,
           "papers": 48,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2023,
           "papers": 36,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2024,
           "papers": 36,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2025,
           "papers": 32,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2026,
           "papers": 27,
           "issues": 3,
-          "periodKind": "ytd"
+          "periodKind": "ytd",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         }
-      ]
+      ],
+      "historyStartYear": 1976,
+      "historyEndYear": 2026
     },
     {
       "id": "ansn",
@@ -2855,11 +3192,15 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "order": 3,
       "group": "VAST-1",
+      "scopusSourceId": "21100286862",
+      "archiveUrl": "https://iopscience.iop.org/journal/rss/2043-6262",
       "cover": "assets/images/covers/ansn.png",
+      "coverImage": "assets/images/covers/ansn.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.svg",
+        "logo": "assets/images/logos/nxb.png",
         "coPublisher": "IOP Publishing",
         "coLogo": "assets/images/logos/iop.svg"
       },
@@ -2878,105 +3219,192 @@
           "year": 2010,
           "papers": 70,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2011,
           "papers": 70,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2012,
           "papers": 77,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2013,
           "papers": 80,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2014,
           "papers": 80,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2015,
           "papers": 80,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2016,
           "papers": 80,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2017,
           "papers": 80,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2018,
           "papers": 73,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2019,
           "papers": 71,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2020,
           "papers": 76,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2021,
           "papers": 71,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2022,
           "papers": 67,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2023,
           "papers": 73,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2024,
           "papers": 75,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2025,
           "papers": 76,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2026,
           "papers": 56,
           "issues": 3,
-          "periodKind": "ytd"
+          "periodKind": "ytd",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         }
-      ]
+      ],
+      "historyStartYear": 2010,
+      "historyEndYear": 2026
     },
     {
       "id": "vjc",
@@ -4339,11 +4767,15 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "order": 4,
       "group": "VAST-1",
+      "scopusSourceId": "21101043786",
+      "archiveUrl": "https://vjs.ac.vn/index.php/vjchem",
       "cover": "assets/images/covers/vjc.png",
+      "coverImage": "assets/images/covers/vjc.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.svg",
+        "logo": "assets/images/logos/nxb.png",
         "coPublisher": "Wiley-VCH",
         "coLogo": "assets/images/logos/wiley.svg"
       },
@@ -4446,111 +4878,203 @@
           "year": 2007,
           "papers": 130,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2008,
           "papers": 82,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2009,
           "papers": 137,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2010,
           "papers": 135,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2011,
           "papers": 104,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2014,
           "papers": 100,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2015,
           "papers": 185,
           "issues": 7,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 0,
+          "citationEdges": 0,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2016,
           "papers": 144,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2017,
           "papers": 137,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 4,
+          "citationEdges": 4,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2018,
           "papers": 108,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 20,
+          "citationEdges": 20,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2019,
           "papers": 123,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 52,
+          "citationEdges": 59,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2020,
           "papers": 123,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 143,
+          "citationEdges": 158,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2021,
           "papers": 114,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 268,
+          "citationEdges": 289,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2022,
           "papers": 103,
           "issues": 7,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 470,
+          "citationEdges": 493,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2023,
           "papers": 130,
           "issues": 9,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 609,
+          "citationEdges": 675,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2024,
           "papers": 119,
           "issues": 7,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 940,
+          "citationEdges": 1008,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2025,
           "papers": 90,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1170,
+          "citationEdges": 1229,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2026,
           "papers": 96,
           "issues": 6,
-          "periodKind": "ytd"
+          "periodKind": "ytd",
+          "citingDocs": 1010,
+          "citationEdges": 1064,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         }
-      ]
+      ],
+      "historyStartYear": 2007,
+      "historyEndYear": 2026
     },
     {
       "id": "vjes",
@@ -5169,11 +5693,15 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "order": 5,
       "group": "VAST-1",
+      "scopusSourceId": "21101039869",
+      "archiveUrl": "https://vjs.ac.vn/index.php/jse/about",
       "cover": "assets/images/covers/vjes.png",
+      "coverImage": "assets/images/covers/vjes.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.svg",
+        "logo": "assets/images/logos/nxb.png",
         "coPublisher": null,
         "coLogo": null
       },
@@ -5271,111 +5799,203 @@
           "year": 2003,
           "papers": 36,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2006,
           "papers": 38,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2008,
           "papers": 50,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2009,
           "papers": 1,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2011,
           "papers": 14,
           "issues": 5,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2014,
           "papers": 53,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2015,
           "papers": 41,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2016,
           "papers": 33,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 2,
+          "citationEdges": 2,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2017,
           "papers": 28,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 5,
+          "citationEdges": 7,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2018,
           "papers": 27,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 31,
+          "citationEdges": 38,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2019,
           "papers": 30,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 57,
+          "citationEdges": 97,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2020,
           "papers": 31,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 92,
+          "citationEdges": 187,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2021,
           "papers": 31,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 170,
+          "citationEdges": 293,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2022,
           "papers": 31,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 209,
+          "citationEdges": 340,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2023,
           "papers": 32,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 224,
+          "citationEdges": 358,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2024,
           "papers": 31,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 317,
+          "citationEdges": 500,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2025,
           "papers": 31,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 332,
+          "citationEdges": 473,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2026,
           "papers": 24,
           "issues": 3,
-          "periodKind": "ytd"
+          "periodKind": "ytd",
+          "citingDocs": 317,
+          "citationEdges": 459,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         }
-      ]
+      ],
+      "historyStartYear": 2003,
+      "historyEndYear": 2026
     },
     {
       "id": "vjst",
@@ -6508,11 +7128,15 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "order": 6,
       "group": "VAST-1",
+      "scopusSourceId": "21101101853",
+      "archiveUrl": "https://vjs.ac.vn/jst/journal-description",
       "cover": "assets/images/covers/vjst.png",
+      "coverImage": "assets/images/covers/vjst.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.svg",
+        "logo": "assets/images/logos/nxb.png",
         "coPublisher": null,
         "coLogo": null
       },
@@ -6610,81 +7234,148 @@
           "year": 2013,
           "papers": 27,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2015,
           "papers": 27,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 0,
+          "citationEdges": 0,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2016,
           "papers": 328,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 0,
+          "citationEdges": 0,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2017,
           "papers": 257,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 2,
+          "citationEdges": 2,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2018,
           "papers": 223,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 20,
+          "citationEdges": 22,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2019,
           "papers": 129,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 94,
+          "citationEdges": 101,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2020,
           "papers": 85,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 189,
+          "citationEdges": 199,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2021,
           "papers": 75,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 239,
+          "citationEdges": 259,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2022,
           "papers": 97,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 264,
+          "citationEdges": 295,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2023,
           "papers": 87,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 312,
+          "citationEdges": 328,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2024,
           "papers": 93,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 394,
+          "citationEdges": 419,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2025,
           "papers": 89,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 540,
+          "citationEdges": 563,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2026,
           "papers": 76,
           "issues": 5,
-          "periodKind": "ytd"
+          "periodKind": "ytd",
+          "citingDocs": 524,
+          "citationEdges": 557,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         }
-      ]
+      ],
+      "historyStartYear": 2013,
+      "historyEndYear": 2026
     },
     {
       "id": "cip",
@@ -7348,11 +8039,15 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "order": 7,
       "group": "VAST-1",
+      "scopusSourceId": "21101380177",
+      "archiveUrl": "https://vjs.ac.vn/cip/journal-description",
       "cover": "assets/images/covers/cip.png",
+      "coverImage": "assets/images/covers/cip.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.svg",
+        "logo": "assets/images/logos/nxb.png",
         "coPublisher": null,
         "coLogo": null
       },
@@ -7460,129 +8155,236 @@
           "year": 2004,
           "papers": 31,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2007,
           "papers": 3,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2008,
           "papers": 9,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2009,
           "papers": 17,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2010,
           "papers": 47,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 2,
+          "citationEdges": 2,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2011,
           "papers": 48,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 4,
+          "citationEdges": 4,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2012,
           "papers": 46,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 3,
+          "citationEdges": 3,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2013,
           "papers": 46,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2014,
           "papers": 85,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 3,
+          "citationEdges": 5,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2015,
           "papers": 41,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 3,
+          "citationEdges": 5,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2016,
           "papers": 40,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 4,
+          "citationEdges": 4,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2017,
           "papers": 36,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 4,
+          "citationEdges": 4,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2018,
           "papers": 35,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 4,
+          "citationEdges": 4,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2019,
           "papers": 50,
           "issues": 5,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 4,
+          "citationEdges": 4,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2020,
           "papers": 40,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 4,
+          "citationEdges": 4,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2021,
           "papers": 39,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 6,
+          "citationEdges": 6,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2022,
           "papers": 40,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 12,
+          "citationEdges": 12,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2023,
           "papers": 40,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 14,
+          "citationEdges": 16,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2024,
           "papers": 36,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 38,
+          "citationEdges": 47,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2025,
           "papers": 34,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 48,
+          "citationEdges": 53,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2026,
           "papers": 30,
           "issues": 3,
-          "periodKind": "ytd"
+          "periodKind": "ytd",
+          "citingDocs": 66,
+          "citationEdges": 76,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         }
-      ]
+      ],
+      "historyStartYear": 2004,
+      "historyEndYear": 2026
     },
     {
       "id": "vjmech",
@@ -8177,11 +8979,15 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "order": 8,
       "group": "VAST-2",
+      "scopusSourceId": null,
+      "archiveUrl": "https://vjs.ac.vn/vjmech/about",
       "cover": "assets/images/covers/vjmech.png",
+      "coverImage": "assets/images/covers/vjmech.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.svg",
+        "logo": "assets/images/logos/nxb.png",
         "coPublisher": null,
         "coLogo": null
       },
@@ -8409,291 +9215,533 @@
           "year": 1979,
           "papers": 14,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1980,
           "papers": 18,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1981,
           "papers": 20,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1982,
           "papers": 20,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1983,
           "papers": 17,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1984,
           "papers": 20,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1985,
           "papers": 22,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1986,
           "papers": 18,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1987,
           "papers": 19,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1988,
           "papers": 17,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1989,
           "papers": 28,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1990,
           "papers": 18,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1991,
           "papers": 21,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1992,
           "papers": 19,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1993,
           "papers": 29,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1994,
           "papers": 31,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1995,
           "papers": 29,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1996,
           "papers": 28,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1997,
           "papers": 29,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1998,
           "papers": 25,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1999,
           "papers": 23,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2000,
           "papers": 24,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2001,
           "papers": 23,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2002,
           "papers": 21,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 2,
+          "citationEdges": 2,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2003,
           "papers": 24,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 2,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2004,
           "papers": 25,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2005,
           "papers": 27,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2006,
           "papers": 27,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2007,
           "papers": 41,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2008,
           "papers": 36,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2009,
           "papers": 25,
           "issues": 3,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 3,
+          "citationEdges": 6,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2010,
           "papers": 23,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 5,
+          "citationEdges": 5,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2011,
           "papers": 23,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 7,
+          "citationEdges": 9,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2012,
           "papers": 30,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 18,
+          "citationEdges": 20,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2013,
           "papers": 26,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 19,
+          "citationEdges": 26,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2014,
           "papers": 23,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 19,
+          "citationEdges": 21,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2015,
           "papers": 25,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 24,
+          "citationEdges": 27,
+          "selfCalcScore": 0.08,
+          "selfCalcNum": 8,
+          "selfCalcDen": 104
         },
         {
           "year": 2016,
           "papers": 24,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 36,
+          "citationEdges": 40,
+          "selfCalcScore": 0.06,
+          "selfCalcNum": 6,
+          "selfCalcDen": 98
         },
         {
           "year": 2017,
           "papers": 27,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 30,
+          "citationEdges": 31,
+          "selfCalcScore": 0.07,
+          "selfCalcNum": 7,
+          "selfCalcDen": 99
         },
         {
           "year": 2018,
           "papers": 28,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 37,
+          "citationEdges": 46,
+          "selfCalcScore": 0.14,
+          "selfCalcNum": 15,
+          "selfCalcDen": 104
         },
         {
           "year": 2019,
           "papers": 26,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 41,
+          "citationEdges": 52,
+          "selfCalcScore": 0.14,
+          "selfCalcNum": 15,
+          "selfCalcDen": 105
         },
         {
           "year": 2020,
           "papers": 35,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 47,
+          "citationEdges": 53,
+          "selfCalcScore": 0.18,
+          "selfCalcNum": 21,
+          "selfCalcDen": 116
         },
         {
           "year": 2021,
           "papers": 26,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 87,
+          "citationEdges": 93,
+          "selfCalcScore": 0.5,
+          "selfCalcNum": 58,
+          "selfCalcDen": 115
         },
         {
           "year": 2022,
           "papers": 36,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 103,
+          "citationEdges": 113,
+          "selfCalcScore": 0.64,
+          "selfCalcNum": 79,
+          "selfCalcDen": 123
         },
         {
           "year": 2023,
           "papers": 23,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 103,
+          "citationEdges": 109,
+          "selfCalcScore": 0.85,
+          "selfCalcNum": 102,
+          "selfCalcDen": 120
         },
         {
           "year": 2024,
           "papers": 28,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 129,
+          "citationEdges": 137,
+          "selfCalcScore": 0.86,
+          "selfCalcNum": 97,
+          "selfCalcDen": 113
         },
         {
           "year": 2025,
           "papers": 24,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 149,
+          "citationEdges": 179,
+          "selfCalcScore": 0.79,
+          "selfCalcNum": 89,
+          "selfCalcDen": 112
         },
         {
           "year": 2026,
           "papers": 20,
           "issues": 3,
-          "periodKind": "ytd"
+          "periodKind": "ytd",
+          "citingDocs": 161,
+          "citationEdges": 182,
+          "selfCalcScore": 1.14,
+          "selfCalcNum": 109,
+          "selfCalcDen": 96
         }
-      ]
+      ],
+      "historyStartYear": 1979,
+      "historyEndYear": 2026
     },
     {
       "id": "jcc",
@@ -9242,11 +10290,15 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "order": 9,
       "group": "VAST-2",
+      "scopusSourceId": null,
+      "archiveUrl": "https://vjs.ac.vn/jcc/issue/archive",
       "cover": "assets/images/covers/jcc.png",
+      "coverImage": "assets/images/covers/jcc.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.svg",
+        "logo": "assets/images/logos/nxb.png",
         "coPublisher": null,
         "coLogo": null
       },
@@ -9464,243 +10516,445 @@
           "year": 1985,
           "papers": 46,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1987,
           "papers": 13,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1988,
           "papers": 18,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1989,
           "papers": 21,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1990,
           "papers": 20,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1991,
           "papers": 21,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1992,
           "papers": 13,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1993,
           "papers": 14,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1994,
           "papers": 21,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1995,
           "papers": 24,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1997,
           "papers": 41,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1998,
           "papers": 38,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 1999,
           "papers": 40,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2000,
           "papers": 46,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2001,
           "papers": 52,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2002,
           "papers": 53,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 5,
+          "citationEdges": 7,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2003,
           "papers": 46,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2004,
           "papers": 42,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2005,
           "papers": 37,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2006,
           "papers": 37,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2007,
           "papers": 37,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2008,
           "papers": 35,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 4,
+          "citationEdges": 4,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2009,
           "papers": 31,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 2,
+          "citationEdges": 2,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2010,
           "papers": 32,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2011,
           "papers": 34,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 6,
+          "citationEdges": 6,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2012,
           "papers": 33,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 10,
+          "citationEdges": 11,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2013,
           "papers": 33,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 4,
+          "citationEdges": 4,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2014,
           "papers": 36,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 7,
+          "citationEdges": 7,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2015,
           "papers": 27,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 13,
+          "citationEdges": 14,
+          "selfCalcScore": 0.05,
+          "selfCalcNum": 35,
+          "selfCalcDen": 643
         },
         {
           "year": 2016,
           "papers": 23,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 18,
+          "citationEdges": 18,
+          "selfCalcScore": 0.06,
+          "selfCalcNum": 25,
+          "selfCalcDen": 420
         },
         {
           "year": 2017,
           "papers": 23,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 23,
+          "citationEdges": 26,
+          "selfCalcScore": 0.12,
+          "selfCalcNum": 43,
+          "selfCalcDen": 363
         },
         {
           "year": 2018,
           "papers": 26,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 50,
+          "citationEdges": 52,
+          "selfCalcScore": 0.06,
+          "selfCalcNum": 27,
+          "selfCalcDen": 432
         },
         {
           "year": 2019,
           "papers": 23,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 114,
+          "citationEdges": 131,
+          "selfCalcScore": 0.18,
+          "selfCalcNum": 69,
+          "selfCalcDen": 393
         },
         {
           "year": 2020,
           "papers": 23,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 138,
+          "citationEdges": 150,
+          "selfCalcScore": 0.63,
+          "selfCalcNum": 112,
+          "selfCalcDen": 178
         },
         {
           "year": 2021,
           "papers": 28,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 198,
+          "citationEdges": 222,
+          "selfCalcScore": 0.9,
+          "selfCalcNum": 168,
+          "selfCalcDen": 186
         },
         {
           "year": 2022,
           "papers": 22,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 251,
+          "citationEdges": 268,
+          "selfCalcScore": 1.16,
+          "selfCalcNum": 123,
+          "selfCalcDen": 106
         },
         {
           "year": 2023,
           "papers": 24,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 304,
+          "citationEdges": 320,
+          "selfCalcScore": 0.51,
+          "selfCalcNum": 49,
+          "selfCalcDen": 97
         },
         {
           "year": 2024,
           "papers": 24,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 325,
+          "citationEdges": 340,
+          "selfCalcScore": 0.58,
+          "selfCalcNum": 57,
+          "selfCalcDen": 98
         },
         {
           "year": 2025,
           "papers": 25,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 317,
+          "citationEdges": 325,
+          "selfCalcScore": 0.7,
+          "selfCalcNum": 66,
+          "selfCalcDen": 94
         },
         {
           "year": 2026,
           "papers": 18,
           "issues": 3,
-          "periodKind": "ytd"
+          "periodKind": "ytd",
+          "citingDocs": 274,
+          "citationEdges": 290,
+          "selfCalcScore": 1.12,
+          "selfCalcNum": 100,
+          "selfCalcDen": 89
         }
-      ]
+      ],
+      "historyStartYear": 1985,
+      "historyEndYear": 2026
     },
     {
       "id": "ajb",
@@ -10447,11 +11701,15 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "order": 10,
       "group": "VAST-2",
+      "scopusSourceId": null,
+      "archiveUrl": "https://vjs.ac.vn/vjbio/issue/archive",
       "cover": "assets/images/covers/ajb.png",
+      "coverImage": "assets/images/covers/ajb.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.svg",
+        "logo": "assets/images/logos/nxb.png",
         "coPublisher": null,
         "coLogo": null
       },
@@ -10649,135 +11907,247 @@
           "year": 2005,
           "papers": 50,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2006,
           "papers": 64,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2007,
           "papers": 57,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2008,
           "papers": 46,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2009,
           "papers": 50,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 2,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2010,
           "papers": 62,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2011,
           "papers": 57,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2012,
           "papers": 123,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 3,
+          "citationEdges": 3,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2013,
           "papers": 100,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 5,
+          "citationEdges": 13,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2014,
           "papers": 105,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 6,
+          "citationEdges": 7,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2015,
           "papers": 108,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 8,
+          "citationEdges": 8,
+          "selfCalcScore": 0.04,
+          "selfCalcNum": 30,
+          "selfCalcDen": 796
         },
         {
           "year": 2016,
           "papers": 67,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 11,
+          "citationEdges": 14,
+          "selfCalcScore": 0.04,
+          "selfCalcNum": 26,
+          "selfCalcDen": 645
         },
         {
           "year": 2017,
           "papers": 44,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 34,
+          "citationEdges": 42,
+          "selfCalcScore": 0.07,
+          "selfCalcNum": 44,
+          "selfCalcDen": 589
         },
         {
           "year": 2018,
           "papers": 58,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 40,
+          "citationEdges": 50,
+          "selfCalcScore": 0.15,
+          "selfCalcNum": 46,
+          "selfCalcDen": 302
         },
         {
           "year": 2019,
           "papers": 104,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 44,
+          "citationEdges": 48,
+          "selfCalcScore": 0.15,
+          "selfCalcNum": 45,
+          "selfCalcDen": 300
         },
         {
           "year": 2020,
           "papers": 51,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 72,
+          "citationEdges": 91,
+          "selfCalcScore": 0.15,
+          "selfCalcNum": 35,
+          "selfCalcDen": 241
         },
         {
           "year": 2021,
           "papers": 53,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 98,
+          "citationEdges": 130,
+          "selfCalcScore": 0.21,
+          "selfCalcNum": 58,
+          "selfCalcDen": 270
         },
         {
           "year": 2022,
           "papers": 55,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 104,
+          "citationEdges": 127,
+          "selfCalcScore": 0.27,
+          "selfCalcNum": 71,
+          "selfCalcDen": 267
         },
         {
           "year": 2023,
           "papers": 47,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 119,
+          "citationEdges": 134,
+          "selfCalcScore": 0.31,
+          "selfCalcNum": 66,
+          "selfCalcDen": 210
         },
         {
           "year": 2024,
           "papers": 49,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 132,
+          "citationEdges": 163,
+          "selfCalcScore": 0.43,
+          "selfCalcNum": 89,
+          "selfCalcDen": 207
         },
         {
           "year": 2025,
           "papers": 52,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 178,
+          "citationEdges": 199,
+          "selfCalcScore": 0.6,
+          "selfCalcNum": 122,
+          "selfCalcDen": 202
         },
         {
           "year": 2026,
           "papers": 41,
           "issues": 3,
-          "periodKind": "ytd"
+          "periodKind": "ytd",
+          "citingDocs": 151,
+          "citationEdges": 162,
+          "selfCalcScore": 0.65,
+          "selfCalcNum": 113,
+          "selfCalcDen": 174
         }
-      ]
+      ],
+      "historyStartYear": 2005,
+      "historyEndYear": 2026
     },
     {
       "id": "vjmst",
@@ -11445,11 +12815,15 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "order": 11,
       "group": "VAST-2",
+      "scopusSourceId": null,
+      "archiveUrl": "https://vjs.ac.vn/jmst/issue/archive",
       "cover": "assets/images/covers/vjmst.png",
+      "coverImage": "assets/images/covers/vjmst.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.svg",
+        "logo": "assets/images/logos/nxb.png",
         "coPublisher": null,
         "coLogo": null
       },
@@ -11622,123 +12996,225 @@
           "year": 2007,
           "papers": 33,
           "issues": 5,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2008,
           "papers": 33,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2009,
           "papers": 25,
           "issues": 5,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2010,
           "papers": 28,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2011,
           "papers": 26,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2012,
           "papers": 36,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2013,
           "papers": 52,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2014,
           "papers": 48,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": null,
+          "selfCalcNum": null,
+          "selfCalcDen": null
         },
         {
           "year": 2015,
           "papers": 44,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 0,
+          "citationEdges": 0,
+          "selfCalcScore": 0,
+          "selfCalcNum": 1,
+          "selfCalcDen": 235
         },
         {
           "year": 2016,
           "papers": 52,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 2,
+          "citationEdges": 2,
+          "selfCalcScore": 0.01,
+          "selfCalcNum": 2,
+          "selfCalcDen": 197
         },
         {
           "year": 2017,
           "papers": 77,
           "issues": 5,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 1,
+          "citationEdges": 1,
+          "selfCalcScore": 0.01,
+          "selfCalcNum": 2,
+          "selfCalcDen": 210
         },
         {
           "year": 2018,
           "papers": 67,
           "issues": 5,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 0,
+          "citationEdges": 0,
+          "selfCalcScore": 0,
+          "selfCalcNum": 0,
+          "selfCalcDen": 209
         },
         {
           "year": 2019,
           "papers": 103,
           "issues": 6,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 2,
+          "citationEdges": 3,
+          "selfCalcScore": 0,
+          "selfCalcNum": 1,
+          "selfCalcDen": 283
         },
         {
           "year": 2020,
           "papers": 60,
           "issues": 5,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 15,
+          "citationEdges": 17,
+          "selfCalcScore": 0.03,
+          "selfCalcNum": 10,
+          "selfCalcDen": 290
         },
         {
           "year": 2021,
           "papers": 46,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 20,
+          "citationEdges": 27,
+          "selfCalcScore": 0.09,
+          "selfCalcNum": 26,
+          "selfCalcDen": 286
         },
         {
           "year": 2022,
           "papers": 38,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 36,
+          "citationEdges": 66,
+          "selfCalcScore": 0.21,
+          "selfCalcNum": 60,
+          "selfCalcDen": 282
         },
         {
           "year": 2023,
           "papers": 36,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 45,
+          "citationEdges": 61,
+          "selfCalcScore": 0.27,
+          "selfCalcNum": 54,
+          "selfCalcDen": 199
         },
         {
           "year": 2024,
           "papers": 36,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 79,
+          "citationEdges": 93,
+          "selfCalcScore": 0.35,
+          "selfCalcNum": 61,
+          "selfCalcDen": 176
         },
         {
           "year": 2025,
           "papers": 39,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 88,
+          "citationEdges": 128,
+          "selfCalcScore": 0.45,
+          "selfCalcNum": 70,
+          "selfCalcDen": 156
         },
         {
           "year": 2026,
           "papers": 20,
           "issues": 3,
-          "periodKind": "ytd"
+          "periodKind": "ytd",
+          "citingDocs": 100,
+          "citationEdges": 148,
+          "selfCalcScore": 0.63,
+          "selfCalcNum": 83,
+          "selfCalcDen": 132
         }
-      ]
+      ],
+      "historyStartYear": 2007,
+      "historyEndYear": 2026
     },
     {
       "id": "vjbt",
@@ -12552,11 +14028,15 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "order": 12,
       "group": "VAST-2",
+      "scopusSourceId": null,
+      "archiveUrl": "https://vjs.ac.vn/vjbt/issue/archive",
       "cover": "assets/images/covers/vjbt.png",
+      "coverImage": "assets/images/covers/vjbt.png",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
-        "logo": "assets/images/logos/nxb.svg",
+        "logo": "assets/images/logos/nxb.png",
         "coPublisher": null,
         "coLogo": null
       },
@@ -12709,69 +14189,126 @@
           "year": 2016,
           "papers": 92,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": 0,
+          "selfCalcNum": 0,
+          "selfCalcDen": 70
         },
         {
           "year": 2017,
           "papers": 86,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": null,
+          "citationEdges": null,
+          "selfCalcScore": 0,
+          "selfCalcNum": 0,
+          "selfCalcDen": 74
         },
         {
           "year": 2018,
           "papers": 86,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 2,
+          "citationEdges": 2,
+          "selfCalcScore": 0.01,
+          "selfCalcNum": 2,
+          "selfCalcDen": 242
         },
         {
           "year": 2019,
           "papers": 43,
           "issues": 2,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 5,
+          "citationEdges": 5,
+          "selfCalcScore": 0.03,
+          "selfCalcNum": 7,
+          "selfCalcDen": 242
         },
         {
           "year": 2020,
           "papers": 73,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 8,
+          "citationEdges": 8,
+          "selfCalcScore": 0.03,
+          "selfCalcNum": 9,
+          "selfCalcDen": 291
         },
         {
           "year": 2021,
           "papers": 75,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 15,
+          "citationEdges": 15,
+          "selfCalcScore": 0.06,
+          "selfCalcNum": 20,
+          "selfCalcDen": 357
         },
         {
           "year": 2022,
           "papers": 79,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 32,
+          "citationEdges": 39,
+          "selfCalcScore": 0.09,
+          "selfCalcNum": 26,
+          "selfCalcDen": 288
         },
         {
           "year": 2023,
           "papers": 69,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 43,
+          "citationEdges": 48,
+          "selfCalcScore": 0.17,
+          "selfCalcNum": 59,
+          "selfCalcDen": 348
         },
         {
           "year": 2024,
           "papers": 50,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 99,
+          "citationEdges": 118,
+          "selfCalcScore": 0.3,
+          "selfCalcNum": 87,
+          "selfCalcDen": 289
         },
         {
           "year": 2025,
           "papers": 45,
           "issues": 4,
-          "periodKind": "annual"
+          "periodKind": "annual",
+          "citingDocs": 127,
+          "citationEdges": 134,
+          "selfCalcScore": 0.48,
+          "selfCalcNum": 127,
+          "selfCalcDen": 264
         },
         {
           "year": 2026,
           "papers": 33,
           "issues": 3,
-          "periodKind": "ytd"
+          "periodKind": "ytd",
+          "citingDocs": 126,
+          "citationEdges": 137,
+          "selfCalcScore": 0.4,
+          "selfCalcNum": 79,
+          "selfCalcDen": 198
         }
-      ]
+      ],
+      "historyStartYear": 2016,
+      "historyEndYear": 2026
     }
   ]
 }

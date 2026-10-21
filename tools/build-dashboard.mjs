@@ -100,7 +100,20 @@ function buildAnnualHistory(j,hist,cat,verifiedOutputs){
   }
  }
  for(const o of verifiedOutputs)byYear.set(o.year,{year:o.year,papers:o.papers,issues:o.issues,periodKind:o.periodKind});
- return [...byYear.values()].sort((a,b)=>a.year-b.year);
+ const citMap=new Map((j.localCitation?.citationSeries||hist?.fullCitationSeries||[]).map(c=>[c.year,c]));
+ const csMap=new Map((j.localCitation?.selfCalculatedSeries||[]).map(c=>[c.year,c]));
+ return [...byYear.values()].sort((a,b)=>a.year-b.year).map(r=>{
+  const cit=citMap.get(r.year);
+  const cs=csMap.get(r.year);
+  return {
+   ...r,
+   citingDocs:cit?(cit.citingDocuments??cit.docs??null):null,
+   citationEdges:cit?(cit.confirmedCitationEdges??cit.occurrences??null):null,
+   selfCalcScore:cs?(cs.value??cs.score??null):null,
+   selfCalcNum:cs?(cs.numerator??null):null,
+   selfCalcDen:cs?(cs.denominator??null):null
+  };
+ });
 }
 
 const categories={VJM:['General Mathematics',72,115,414],AMV:['General Mathematics',18,338,414],ANSN:['Industrial and Manufacturing Engineering',61,164,425],VJC:['General Chemistry',43,227,402],VJES:['Earth and Planetary Sciences (miscellaneous)',77,45,201],VJST:['Electrical and Electronic Engineering',20,821,1030]};
@@ -113,13 +126,17 @@ for(let index=0;index<order.length;index++){
  j.profileSources=[...new Set([j.website,...j.profileSources])];
  assert(j.profileSources.every(url=>/^https?:\/\//.test(url)),j.code+': profileSources must use http(s) URLs.');
  const original=scopus.journals.find(s=>s.code===j.code);
+ j.order=index+1;
  j.group=original?'VAST-1':'VAST-2';
+ j.scopusSourceId=original?.sourceId??null;
+ j.archiveUrl=j.profileSources.find(u=>u!==j.website)||j.website;
  j.cover='assets/images/covers/'+j.id+'.png';
+ j.coverImage=j.cover;
  assert(media.covers[j.id]?.path===j.cover,j.code+': missing verified cover asset.');
  const co=coPublishers[j.id];
  j.institution=j.id==='amv'
   ?{name:'Viện Toán học (VAST)',logo:'assets/images/logos/im-vast.png',coPublisher:co[0],coLogo:co[1]}
-  :{name:'NXB Khoa học tự nhiên và Công nghệ',logo:'assets/images/logos/nxb.svg',coPublisher:co?.[0]??null,coLogo:co?.[1]??null};
+  :{name:'NXB Khoa học tự nhiên và Công nghệ',logo:'assets/images/logos/nxb.png',coPublisher:co?.[0]??null,coLogo:co?.[1]??null};
  j.publisher=j.id==='amv'?'Viện Toán học (VAST) & Springer Nature':co?`NXB Khoa học tự nhiên và Công nghệ (VAST) & ${co[0]}`:'NXB Khoa học tự nhiên và Công nghệ, Viện Hàn lâm Khoa học và Công nghệ Việt Nam';
  if(original){
   assert.equal(j.title,original.title,j.code+': journal title differs from verified Scopus identity.');
@@ -136,11 +153,13 @@ for(let index=0;index<order.length;index++){
  let cat=null;
  if(audit){const res=await localCollection(audit,Boolean(original));j.localCitation=res.local;cat=res.cat;}
  j.annualHistory=buildAnnualHistory(j,historyMap.get(j.id),cat,j.outputs);
+ j.historyStartYear=j.annualHistory[0]?.year??2020;
+ j.historyEndYear=j.annualHistory.at(-1)?.year??2026;
  assert(j.annualHistory.length>=7,j.code+': annualHistory must include at least 2020-2026.');
  journals.push(j);
 }
 const snapshotId=collectedAt+'-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
-const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.svg',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, chuỗi số bài xuất bản lịch sử toàn thời gian và thống kê trích dẫn của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
+const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.png',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, chuỗi số bài xuất bản lịch sử toàn thời gian và thống kê trích dẫn của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
 const serialized=JSON.stringify(dataset,null,2)+'\n';
 if(process.argv.includes('--write')){
  await mkdir(path.join(root,'data/snapshots'),{recursive:true});

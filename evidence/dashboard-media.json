@@ -7,8 +7,8 @@
       "height": 572,
       "format": "PNG",
       "mode": "RGB",
-      "bytes": 108007,
-      "sha256": "ee63d40a1897c8f92add6ee5d7462256a86cb5fd04c8adbc76967cb74a235880",
+      "bytes": 72340,
+      "sha256": "c449fb708ad92542f38409db09abbd2300434723f1bdd0c87405a98dc24aec76",
       "name": "Vietnam Academy of Science and Technology (VAST)",
       "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
       "source": "2026/13-Dashbroad 12 Tạp chí VAST/Logo VAST.png"
@@ -19,8 +19,8 @@
       "height": 453,
       "format": "PNG",
       "mode": "RGB",
-      "bytes": 26329,
-      "sha256": "e4f5a6ebd90ca4b0a31bad88b58c108769a011effc2fe68c2524071e07f67dde",
+      "bytes": 53653,
+      "sha256": "ede104e85b04cf40be9503401a6a8b2ecf405c8bb4c375019bdf6effabe70eed",
       "name": "Publishing House for Science and Technology (PST)",
       "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
       "source": "2026/13-Dashbroad 12 Tạp chí VAST/Logo NXB.png"
@@ -84,18 +84,6 @@
       "name": "Wiley-VCH",
       "nameVi": "Nhà xuất bản Wiley-VCH",
       "source": "Generated clean vector badge for Wiley-VCH"
-    },
-    "nxbSvg": {
-      "id": "nxb-svg",
-      "path": "assets/images/logos/nxb.svg",
-      "width": 396,
-      "height": 234,
-      "format": "SVG",
-      "bytes": 51316,
-      "sha256": "377b30f5ab9addefac97b52754131dbaa0e5bdb0e0e108190ee842d89500f8ee",
-      "name": "Publishing House for Science and Technology (PST) Vector",
-      "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ (Vector không nền)",
-      "source": "2026/01-NXB/15-Logo NXB/Logo NXB 2026.eps"
     }
   },
   "covers": {
