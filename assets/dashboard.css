@@ -298,8 +298,8 @@ input[type="search"]::placeholder{color:var(--faint)}
 .brand-cell{
   display:flex;
   align-items:center;
-  gap:10px;
-  padding:0 18px;
+  gap:8px;
+  padding:0 14px;
   border-right:1px solid var(--line);
   text-decoration:none;
   color:var(--ink-strong);
@@ -334,13 +334,14 @@ input[type="search"]::placeholder{color:var(--faint)}
   align-items:center;
   gap:6px;
   height:28px;
-  padding:0 10px;
+  padding:0 8px;
   font-family:var(--font-mono);
   font-size:11px;
   font-weight:500;
-  letter-spacing:0.12em;
+  letter-spacing:0.09em;
   text-transform:uppercase;
   text-decoration:none;
+  white-space:nowrap;
   color:var(--muted);
   border-radius:1px;
   transition:background-color 140ms ease,color 140ms ease;
@@ -359,7 +360,7 @@ input[type="search"]::placeholder{color:var(--faint)}
 .nav-status-cell{
   display:flex;
   align-items:center;
-  padding:0 16px;
+  padding:0 12px;
   border-left:1px solid var(--line);
   white-space:nowrap;
 }
@@ -374,7 +375,7 @@ input[type="search"]::placeholder{color:var(--faint)}
   gap:7px;
   height:100%;
   min-height:0;
-  padding:0 16px;
+  padding:0 12px;
   border:0;
   border-left:1px solid var(--line);
   border-right:1px solid var(--line);
@@ -391,7 +392,7 @@ input[type="search"]::placeholder{color:var(--faint)}
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:0 20px;
+  padding:0 14px;
   background:var(--invert-bg);
   color:var(--invert-fg);
   font-family:var(--font-mono);
@@ -603,7 +604,35 @@ input[type="search"]::placeholder{color:var(--faint)}
   pointer-events:none;
   overflow:hidden;
 }
+.hero-galaxy{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  opacity:0.42;
+  filter:saturate(0.7);
+}
+:root[data-theme="dark"] .hero-galaxy{opacity:0.62}
+.hero-photo-credit{
+  position:absolute;
+  left:18px;
+  right:18px;
+  bottom:10px;
+  z-index:10;
+  margin:0;
+  width:fit-content;
+  max-width:calc(100% - 36px);
+  padding:4px 7px;
+  background:color-mix(in srgb,var(--bg) 90%,transparent);
+  color:var(--ink);
+  font-size:11px;
+  line-height:1.5;
+}
+.hero-photo-credit a{color:inherit}
 .orbital-svg{
+  position:relative;
   width:100%;
   height:100%;
   color:var(--ink);
@@ -656,6 +685,8 @@ input[type="search"]::placeholder{color:var(--faint)}
   position:relative;
   z-index:10;
   max-width:760px;
+  min-width:0;
+  width:min(100%,760px);
   text-align:center;
   display:flex;
   flex-direction:column;
@@ -1550,6 +1581,8 @@ figure{margin:0;min-width:0}
   border-color:color-mix(in srgb,var(--positive) 45%,var(--line));
   color:var(--positive);
 }
+.badge{text-decoration:none}
+.badge[href]:hover{text-decoration:underline}
 .lineup-explore{
   font-family:var(--font-mono);
   font-weight:600;
@@ -1606,6 +1639,10 @@ figure{margin:0;min-width:0}
   border-bottom:1px solid var(--line);
   background:var(--bg);
   padding:0 0 36px;
+}
+#journal-info,#journal-charts,#journal-data,#journal-indexing,
+#section-overview,#section-citescore,#section-catalog,#section-references{
+  scroll-margin-top:148px;
 }
 .detail-top-bar{
   display:flex;
@@ -1825,6 +1862,7 @@ table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
 .error-banner{color:var(--negative)}
 
 @media(max-width:1180px){
+  .nav-status-cell,.nav-cta-cell{display:none}
   .orbit-cover-node{display:none}
   .chart-split,.overview-arch-grid,.detail-grid{grid-template-columns:1fr}
   .arch-cell{border-right:0!important;border-bottom:1px solid var(--line)!important}
@@ -1841,6 +1879,10 @@ table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
   .main-nav{width:100%;overflow-x:auto;padding:6px 12px;border-top:1px solid var(--line)}
   .artcraft-hero{min-height:460px;padding:36px 18px}
   .hero-center-stage{padding:16px 8px}
+  .hero-wordmark{font-size:clamp(20px,6.6vw,50px)}
+  .hero-backdrop-glow{inset:-24px -12px}
+  .hero-lead{max-width:100%}
+  .hero-photo-credit{font-size:10px}
   .summary-strip,.detail-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
   .summary-item:nth-child(2n){border-right:0}
   .summary-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
@@ -1863,4 +1905,9 @@ table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
 @media print{
   #artcraft-scrollbar,.scroll-flight-layer,.site-nav,.filters,.trend-controls,.legend{display:none!important}
   .page-shell{padding:0}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  [data-reveal],.flight-char,.hero-wordmark{transition:none}
 }

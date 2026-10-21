@@ -28,6 +28,15 @@
       ],
       "indexings": [
         {
+          "system": "Scopus",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sources",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
           "system": "WoS",
           "collection": "Zoological Record",
           "status": "listed",
@@ -50,7 +59,16 @@
           "collection": null,
           "status": "listed",
           "evidenceLevel": "journal",
-          "sourceUrl": "https://vjs.ac.vn/index.php/vjbio",
+          "sourceUrl": "https://asean-cites.org/journal_info?jid=11498",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/",
           "checkedAt": "2026-10-21",
           "coverage": null
         }
@@ -761,8 +779,14 @@
       "website": "https://vjs.ac.vn/index.php/jcc",
       "publisher": "Vietnam Academy of Science and Technology",
       "issn": "1813-9663",
-      "eissn": null,
-      "formerTitles": [],
+      "eissn": "2815-5939",
+      "formerTitles": [
+        {
+          "title": "Journal of Computational Science and Cybernetics",
+          "issn": null,
+          "until": "1989"
+        }
+      ],
       "frequency": {
         "issuesPerYear": 4,
         "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/journal-of-computer-sciences-and-cybernetics-tap-chi-tin-hoc-va-%C4%91ieu-khien-hoc--20047-438.html"
@@ -784,6 +808,24 @@
         },
         {
           "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jcc",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jcc",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
           "collection": null,
           "status": "unverified",
           "evidenceLevel": "journal",
@@ -1315,7 +1357,13 @@
       "publisher": "Vietnam Academy of Science and Technology",
       "issn": "1859-3097",
       "eissn": "2815-5904",
-      "formerTitles": [],
+      "formerTitles": [
+        {
+          "title": "Tạp chí Khoa học và Công nghệ Biển / Journal of Marine Science and Technology",
+          "issn": "1859-3097",
+          "until": "2018"
+        }
+      ],
       "frequency": {
         "issuesPerYear": 4,
         "sourceUrl": "https://vjs.ac.vn/index.php/jmst"
@@ -1335,7 +1383,25 @@
           "coverage": null
         },
         {
+          "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jmst",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
           "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jmst",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
           "collection": null,
           "status": "unverified",
           "evidenceLevel": "journal",
@@ -1991,7 +2057,7 @@
         {
           "title": "Tạp chí Công nghệ Sinh học (Journal of Biotechnology)",
           "issn": "1811-4989",
-          "until": null
+          "until": "2022"
         }
       ],
       "frequency": {
@@ -2013,7 +2079,25 @@
           "coverage": null
         },
         {
+          "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbt",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
           "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbt",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
           "collection": null,
           "status": "unverified",
           "evidenceLevel": "journal",

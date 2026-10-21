@@ -25,11 +25,17 @@
     "reportDate": "2026-10-21",
     "trackerSourceUpdatedAt": "2026-10-05"
   },
+  "officialJcr": {
+    "path": "evidence/dashboard-jcr.json",
+    "metricYear": 2025,
+    "journalsCount": 5,
+    "edition": "Emerging Sources Citation Index (ESCI)"
+  },
   "history": [
     {
       "date": "2026-10-21",
       "title": "Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)",
-      "description": "Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, chuỗi số bài xuất bản lịch sử toàn thời gian và thống kê trích dẫn của 12 tạp chí.",
+      "description": "Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.",
       "url": "data/snapshots/2026-10-21-v1.json"
     },
     {
@@ -74,7 +80,6 @@
       "profileSources": [
         "https://link.springer.com/journal/10013",
         "https://link.springer.com/journal/10013/volumes-and-issues",
-        "https://vjs.ac.vn/",
         "https://vast.gov.vn/tap-chi"
       ],
       "indexings": [
@@ -94,7 +99,8 @@
           "evidenceLevel": "vast",
           "sourceUrl": "https://vast.gov.vn/CmsView-EcoIT-portlet/html/print_cms.jsp?articleId=125804",
           "checkedAt": "2026-10-21",
-          "coverage": null
+          "coverage": "JCR 2025: JIF 0.9 · JCI 0.68",
+          "notes": "Báo cáo Clarivate JCR 2025 (JCR_VIETNAM J MATH_2025.pdf, tải ngày 6/20/2026 13:53:51)"
         },
         {
           "system": "DOAJ",
@@ -852,10 +858,168 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "archiveUrl": "https://link.springer.com/journal/10013/volumes-and-issues",
       "order": 1,
       "group": "VAST-1",
       "scopusSourceId": "21100286934",
-      "archiveUrl": "https://link.springer.com/journal/10013/volumes-and-issues",
+      "jcr": {
+        "id": "vjm",
+        "code": "VJM",
+        "title": "Vietnam Journal of Mathematics",
+        "metricYear": 2025,
+        "issn": "2305-221X",
+        "eissn": "2305-2228",
+        "wosCollection": "ESCI",
+        "jif": 0.9,
+        "jifWithoutSelfCitations": 0.9,
+        "jci": 0.68,
+        "fiveYearJif": 0.8,
+        "immediacyIndex": 0.2,
+        "eigenfactorScore": 0.0014,
+        "normalizedEigenfactor": 0.31705,
+        "articleInfluenceScore": 0.526,
+        "totalCitations": 568,
+        "jifNumerator": 113,
+        "jifWithoutSelfNumerator": 108,
+        "jifDenominator": 127,
+        "fiveYearNumerator": 292,
+        "fiveYearDenominator": 350,
+        "immediacyNumerator": 8,
+        "immediacyDenominator": 48,
+        "citedHalfLife": 5.8,
+        "citingHalfLife": 16.3,
+        "categories": [
+          {
+            "name": "MATHEMATICS",
+            "jif": {
+              "rank": 179,
+              "total": 492,
+              "quartile": "Q2",
+              "percentile": 63.7
+            },
+            "jci": {
+              "rank": 197,
+              "total": 492,
+              "quartile": "Q2",
+              "percentile": 60.06
+            },
+            "jifHistory": [
+              {
+                "year": 2025,
+                "rank": 179,
+                "total": 492,
+                "quartile": "Q2",
+                "percentile": 63.7
+              },
+              {
+                "year": 2024,
+                "rank": 242,
+                "total": 492,
+                "quartile": "Q2",
+                "percentile": 50.9
+              },
+              {
+                "year": 2023,
+                "rank": 179,
+                "total": 490,
+                "quartile": "Q2",
+                "percentile": 63.6
+              }
+            ],
+            "jciHistory": [
+              {
+                "year": 2025,
+                "rank": 197,
+                "total": 492,
+                "quartile": "Q2",
+                "percentile": 60.06
+              },
+              {
+                "year": 2024,
+                "rank": 198,
+                "total": 496,
+                "quartile": "Q2",
+                "percentile": 60.18
+              },
+              {
+                "year": 2023,
+                "rank": 168,
+                "total": 490,
+                "quartile": "Q2",
+                "percentile": 65.82
+              },
+              {
+                "year": 2022,
+                "rank": 208,
+                "total": 485,
+                "quartile": "Q2",
+                "percentile": 57.22
+              },
+              {
+                "year": 2021,
+                "rank": 161,
+                "total": 475,
+                "quartile": "Q2",
+                "percentile": 66.21
+              },
+              {
+                "year": 2020,
+                "rank": 169,
+                "total": 471,
+                "quartile": "Q2",
+                "percentile": 64.23
+              },
+              {
+                "year": 2019,
+                "rank": 186,
+                "total": 470,
+                "quartile": "Q2",
+                "percentile": 60.53
+              },
+              {
+                "year": 2018,
+                "rank": 255,
+                "total": 469,
+                "quartile": "Q3",
+                "percentile": 45.74
+              },
+              {
+                "year": 2017,
+                "rank": 313,
+                "total": 462,
+                "quartile": "Q3",
+                "percentile": 32.36
+              }
+            ]
+          }
+        ],
+        "source": {
+          "filename": "JCR_VIETNAM J MATH_2025.pdf",
+          "sha256": "2062d3d1d1fff6f15abefc4708f4b65a81233788ecda3e17df404c73d9b18388",
+          "pageCount": 23,
+          "downloadedAtRaw": "6/20/2026 13:53:51",
+          "pages": {
+            "identity": 1,
+            "jif": 2,
+            "jifCalculation": 3,
+            "jci": 6,
+            "rankJif": 10,
+            "rankJci": 11,
+            "totalCitations": 7,
+            "otherMetrics": {
+              "fiveYearJif": 22,
+              "immediacyIndex": 23,
+              "eigenfactorScore": 20,
+              "normalizedEigenfactor": 20,
+              "articleInfluenceScore": 21
+            }
+          }
+        },
+        "notes": [
+          "Total Citations in JCR year 2025 is 568 (verified on PDF page 7 and corroborated on page 12 Citation Network: 559 non-self + 9 self citations).",
+          "JIF calculation: 113/127 = 0.8898..., which rounds to the printed one-decimal JIF 0.9. The without-self-citations numerator is 108, giving 108/127 = 0.8504..., also rounding to 0.9."
+        ]
+      },
       "cover": "assets/images/covers/vjm.png",
       "coverImage": "assets/images/covers/vjm.png",
       "institution": {
@@ -1043,7 +1207,13 @@
       "publisher": "Viện Toán học (VAST) & Springer Nature",
       "issn": "0251-4184",
       "eissn": "2315-4144",
-      "formerTitles": [],
+      "formerTitles": [
+        {
+          "title": "Acta Scientiarum Vietnamicarum, Sectio Scientiarum Mathematicarum et Physicarum",
+          "issn": null,
+          "until": "1974"
+        }
+      ],
       "frequency": {
         "issuesPerYear": 4,
         "sourceUrl": "https://link.springer.com/journal/40306"
@@ -1052,7 +1222,9 @@
         "https://link.springer.com/journal/40306",
         "https://link.springer.com/journal/40306/volumes-and-issues",
         "https://math.ac.vn/",
-        "https://vast.gov.vn/tap-chi"
+        "https://vast.gov.vn/tap-chi",
+        "https://math.ac.vn/acta/home",
+        "https://math.ac.vn/acta/open-access-issues"
       ],
       "indexings": [
         {
@@ -1071,7 +1243,8 @@
           "evidenceLevel": "vast",
           "sourceUrl": "https://vast.gov.vn/web/vietnam-academy-of-science-and-technology/tin-chi-tiet/-/chi-tiet/scientific-journals-of-vietnam-academy-of-science-and-technology-continue-to-grow-125804-871.html",
           "checkedAt": "2026-10-21",
-          "coverage": null
+          "coverage": "JCR 2025: JIF 0.6 · JCI 0.42",
+          "notes": "Báo cáo Clarivate JCR 2025 (JCR_ACTA MATH VIETNAM_2025.pdf, tải ngày 6/20/2026 13:55:59)"
         },
         {
           "system": "DOAJ",
@@ -1708,10 +1881,178 @@
       "aliases": [
         "AVM"
       ],
+      "archiveUrl": "https://link.springer.com/journal/40306/volumes-and-issues",
+      "additionalArchives": [
+        {
+          "label": "Viện Toán học — mục lục AMV từ 1976",
+          "url": "https://math.ac.vn/acta/home"
+        },
+        {
+          "label": "Viện Toán học — các số truy cập mở 1976–2012",
+          "url": "https://math.ac.vn/acta/open-access-issues"
+        }
+      ],
       "order": 2,
       "group": "VAST-1",
       "scopusSourceId": "21100199843",
-      "archiveUrl": "https://link.springer.com/journal/40306/volumes-and-issues",
+      "jcr": {
+        "id": "amv",
+        "code": "AMV",
+        "title": "Acta Mathematica Vietnamica",
+        "metricYear": 2025,
+        "issn": "0251-4184",
+        "eissn": "2315-4144",
+        "wosCollection": "ESCI",
+        "jif": 0.6,
+        "jifWithoutSelfCitations": 0.5,
+        "jci": 0.42,
+        "fiveYearJif": 0.4,
+        "immediacyIndex": 0.5,
+        "eigenfactorScore": 0.00052,
+        "normalizedEigenfactor": 0.11903,
+        "articleInfluenceScore": 0.301,
+        "totalCitations": 395,
+        "jifNumerator": 38,
+        "jifWithoutSelfNumerator": 36,
+        "jifDenominator": 66,
+        "fiveYearNumerator": 97,
+        "fiveYearDenominator": 230,
+        "immediacyNumerator": 10,
+        "immediacyDenominator": 21,
+        "citedHalfLife": 10,
+        "citingHalfLife": 15.5,
+        "categories": [
+          {
+            "name": "MATHEMATICS",
+            "jif": {
+              "rank": 313,
+              "total": 492,
+              "quartile": "Q3",
+              "percentile": 36.5
+            },
+            "jci": {
+              "rank": 353,
+              "total": 492,
+              "quartile": "Q3",
+              "percentile": 28.35
+            },
+            "jifHistory": [
+              {
+                "year": 2025,
+                "rank": 313,
+                "total": 492,
+                "quartile": "Q3",
+                "percentile": 36.5
+              },
+              {
+                "year": 2024,
+                "rank": 438,
+                "total": 492,
+                "quartile": "Q4",
+                "percentile": 11.1
+              },
+              {
+                "year": 2023,
+                "rank": 432,
+                "total": 490,
+                "quartile": "Q4",
+                "percentile": 11.9
+              }
+            ],
+            "jciHistory": [
+              {
+                "year": 2025,
+                "rank": 353,
+                "total": 492,
+                "quartile": "Q3",
+                "percentile": 28.35
+              },
+              {
+                "year": 2024,
+                "rank": 446,
+                "total": 496,
+                "quartile": "Q4",
+                "percentile": 10.18
+              },
+              {
+                "year": 2023,
+                "rank": 398,
+                "total": 490,
+                "quartile": "Q4",
+                "percentile": 18.88
+              },
+              {
+                "year": 2022,
+                "rank": 346,
+                "total": 485,
+                "quartile": "Q3",
+                "percentile": 28.76
+              },
+              {
+                "year": 2021,
+                "rank": 310,
+                "total": 475,
+                "quartile": "Q3",
+                "percentile": 34.84
+              },
+              {
+                "year": 2020,
+                "rank": 236,
+                "total": 471,
+                "quartile": "Q3",
+                "percentile": 50
+              },
+              {
+                "year": 2019,
+                "rank": 307,
+                "total": 470,
+                "quartile": "Q3",
+                "percentile": 34.79
+              },
+              {
+                "year": 2018,
+                "rank": 326,
+                "total": 469,
+                "quartile": "Q3",
+                "percentile": 30.6
+              },
+              {
+                "year": 2017,
+                "rank": 358,
+                "total": 462,
+                "quartile": "Q4",
+                "percentile": 22.62
+              }
+            ]
+          }
+        ],
+        "source": {
+          "filename": "JCR_ACTA MATH VIETNAM_2025.pdf",
+          "sha256": "fac709f46e4fac2e5b54ba950a882f0be0226ffa348eda2aec6d6dbbd73ac037",
+          "pageCount": 23,
+          "downloadedAtRaw": "6/20/2026 13:55:59",
+          "pages": {
+            "identity": 1,
+            "jif": 2,
+            "jifCalculation": 3,
+            "jci": 6,
+            "rankJif": 10,
+            "rankJci": 11,
+            "totalCitations": 7,
+            "otherMetrics": {
+              "fiveYearJif": 22,
+              "immediacyIndex": 23,
+              "eigenfactorScore": 20,
+              "normalizedEigenfactor": 20,
+              "articleInfluenceScore": 21
+            }
+          }
+        },
+        "notes": [
+          "Total Citations in JCR year 2025 is 395 (verified on PDF page 7 and corroborated on page 12 Citation Network: 386 non-self + 9 self citations).",
+          "JIF calculation: 38/66 = 0.5758..., which rounds to the printed one-decimal JIF 0.6; the printed JIF without self-citations is 36/66 = 0.5454..., rounding to 0.5."
+        ]
+      },
       "cover": "assets/images/covers/amv.png",
       "coverImage": "assets/images/covers/amv.png",
       "institution": {
@@ -2333,7 +2674,8 @@
           "evidenceLevel": "vast",
           "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/tap-chi-advances-in-natural-sciences-nanoscience-and-nanotechnology-ansn-tro-lai-web-of-science-esci--5416-463.html",
           "checkedAt": "2026-10-21",
-          "coverage": null
+          "coverage": "JCR 2025: JIF 2.4 · JCI 0.31",
+          "notes": "Báo cáo Clarivate JCR 2025 (JCR_ADV NAT SCI-NANOSCI_2025.pdf, tải ngày 6/20/2026 13:52:09)"
         },
         {
           "system": "DOAJ",
@@ -3192,10 +3534,293 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "archiveUrl": "https://iopscience.iop.org/journal/2043-6262",
       "order": 3,
       "group": "VAST-1",
       "scopusSourceId": "21100286862",
-      "archiveUrl": "https://iopscience.iop.org/journal/rss/2043-6262",
+      "jcr": {
+        "id": "ansn",
+        "code": "ANSN",
+        "title": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
+        "metricYear": 2025,
+        "issn": "2043-6254",
+        "eissn": "2043-6262",
+        "wosCollection": "ESCI",
+        "jif": 2.4,
+        "jifWithoutSelfCitations": 1.9,
+        "jci": 0.31,
+        "fiveYearJif": 2.4,
+        "immediacyIndex": 0.8,
+        "eigenfactorScore": 0.00066,
+        "normalizedEigenfactor": 0.15122,
+        "articleInfluenceScore": 0.243,
+        "totalCitations": 2750,
+        "jifNumerator": 355,
+        "jifWithoutSelfNumerator": 288,
+        "jifDenominator": 148,
+        "fiveYearNumerator": 855,
+        "fiveYearDenominator": 362,
+        "immediacyNumerator": 58,
+        "immediacyDenominator": 77,
+        "citedHalfLife": 7.7,
+        "citingHalfLife": 5.8,
+        "categories": [
+          {
+            "name": "MATERIALS SCIENCE, MULTIDISCIPLINARY",
+            "jif": {
+              "rank": 326,
+              "total": 472,
+              "quartile": "Q3",
+              "percentile": 31
+            },
+            "jci": {
+              "rank": 362,
+              "total": 473,
+              "quartile": "Q4",
+              "percentile": 23.57
+            },
+            "jifHistory": [
+              {
+                "year": 2025,
+                "rank": 326,
+                "total": 472,
+                "quartile": "Q3",
+                "percentile": 31
+              },
+              {
+                "year": 2024,
+                "rank": 318,
+                "total": 461,
+                "quartile": "Q3",
+                "percentile": 31.1
+              },
+              {
+                "year": 2023,
+                "rank": 322,
+                "total": 439,
+                "quartile": "Q3",
+                "percentile": 26.8
+              }
+            ],
+            "jciHistory": [
+              {
+                "year": 2025,
+                "rank": 362,
+                "total": 473,
+                "quartile": "Q4",
+                "percentile": 23.57
+              },
+              {
+                "year": 2024,
+                "rank": 356,
+                "total": 463,
+                "quartile": "Q4",
+                "percentile": 23.22
+              },
+              {
+                "year": 2023,
+                "rank": 332,
+                "total": 439,
+                "quartile": "Q4",
+                "percentile": 24.49
+              },
+              {
+                "year": 2022,
+                "rank": 313,
+                "total": 424,
+                "quartile": "Q3",
+                "percentile": 26.3
+              },
+              {
+                "year": 2021,
+                "rank": 309,
+                "total": 414,
+                "quartile": "Q3",
+                "percentile": 25.48
+              }
+            ]
+          },
+          {
+            "name": "NANOSCIENCE & NANOTECHNOLOGY",
+            "jif": {
+              "rank": 113,
+              "total": 148,
+              "quartile": "Q4",
+              "percentile": 24
+            },
+            "jci": {
+              "rank": 114,
+              "total": 148,
+              "quartile": "Q4",
+              "percentile": 23.31
+            },
+            "jifHistory": [
+              {
+                "year": 2025,
+                "rank": 113,
+                "total": 148,
+                "quartile": "Q4",
+                "percentile": 24
+              },
+              {
+                "year": 2024,
+                "rank": 116,
+                "total": 147,
+                "quartile": "Q4",
+                "percentile": 21.4
+              },
+              {
+                "year": 2023,
+                "rank": 113,
+                "total": 141,
+                "quartile": "Q4",
+                "percentile": 20.2
+              }
+            ],
+            "jciHistory": [
+              {
+                "year": 2025,
+                "rank": 114,
+                "total": 148,
+                "quartile": "Q4",
+                "percentile": 23.31
+              },
+              {
+                "year": 2024,
+                "rank": 118,
+                "total": 147,
+                "quartile": "Q4",
+                "percentile": 20.07
+              },
+              {
+                "year": 2023,
+                "rank": 112,
+                "total": 141,
+                "quartile": "Q4",
+                "percentile": 20.92
+              },
+              {
+                "year": 2022,
+                "rank": 105,
+                "total": 141,
+                "quartile": "Q3",
+                "percentile": 25.89
+              },
+              {
+                "year": 2021,
+                "rank": 102,
+                "total": 138,
+                "quartile": "Q3",
+                "percentile": 26.45
+              }
+            ]
+          },
+          {
+            "name": "PHYSICS, APPLIED",
+            "jif": {
+              "rank": 123,
+              "total": 191,
+              "quartile": "Q3",
+              "percentile": 35.9
+            },
+            "jci": {
+              "rank": 144,
+              "total": 191,
+              "quartile": "Q4",
+              "percentile": 24.87
+            },
+            "jifHistory": [
+              {
+                "year": 2025,
+                "rank": 123,
+                "total": 191,
+                "quartile": "Q3",
+                "percentile": 35.9
+              },
+              {
+                "year": 2024,
+                "rank": 123,
+                "total": 187,
+                "quartile": "Q3",
+                "percentile": 34.5
+              },
+              {
+                "year": 2023,
+                "rank": 125,
+                "total": 179,
+                "quartile": "Q3",
+                "percentile": 30.4
+              }
+            ],
+            "jciHistory": [
+              {
+                "year": 2025,
+                "rank": 144,
+                "total": 191,
+                "quartile": "Q4",
+                "percentile": 24.87
+              },
+              {
+                "year": 2024,
+                "rank": 147,
+                "total": 187,
+                "quartile": "Q4",
+                "percentile": 21.66
+              },
+              {
+                "year": 2023,
+                "rank": 138,
+                "total": 179,
+                "quartile": "Q4",
+                "percentile": 23.18
+              },
+              {
+                "year": 2022,
+                "rank": 133,
+                "total": 178,
+                "quartile": "Q3",
+                "percentile": 25.56
+              },
+              {
+                "year": 2021,
+                "rank": 126,
+                "total": 178,
+                "quartile": "Q3",
+                "percentile": 29.49
+              }
+            ]
+          }
+        ],
+        "source": {
+          "filename": "JCR_ADV NAT SCI-NANOSCI_2025.pdf",
+          "sha256": "5039ef64c40608e67723e37f003396d8c0356a16aa562e50da572ec7ec792080",
+          "pageCount": 24,
+          "downloadedAtRaw": "6/20/2026 13:52:09",
+          "pages": {
+            "identity": 1,
+            "jif": 2,
+            "jifCalculation": 3,
+            "jci": 6,
+            "rankJif": [
+              10,
+              11
+            ],
+            "rankJci": 12,
+            "totalCitations": 7,
+            "otherMetrics": {
+              "fiveYearJif": 23,
+              "immediacyIndex": 24,
+              "eigenfactorScore": 21,
+              "normalizedEigenfactor": 21,
+              "articleInfluenceScore": 22
+            }
+          }
+        },
+        "notes": [
+          "All three printed JIF category rows and all three printed JCI category rows are captured separately. The Materials Science and Nanoscience historical tables before JCR year 2023 identify SCIE despite this report's current edition identifying ESCI; no pre-2023 rank history is included.",
+          "JIF calculation: 355/148 = 2.3986..., which rounds to the printed one-decimal JIF 2.4; without self-citations, 288/148 = 1.9459..., which rounds to the printed 1.9."
+        ]
+      },
       "cover": "assets/images/covers/ansn.png",
       "coverImage": "assets/images/covers/ansn.png",
       "institution": {
@@ -3425,7 +4050,7 @@
         {
           "title": "Tạp chí Hóa học",
           "issn": "0866-7144",
-          "until": "2024"
+          "until": "2018"
         }
       ],
       "frequency": {
@@ -3434,9 +4059,10 @@
       },
       "profileSources": [
         "https://onlinelibrary.wiley.com/journal/25728288",
+        "https://onlinelibrary.wiley.com/loi/25728288",
+        "https://vjs.ac.vn/index.php/vjchem/issue/archive",
         "https://vjs.ac.vn/index.php/vjchem",
-        "https://vast.gov.vn/tap-chi",
-        "https://vjs.ac.vn/vjchem/statistic"
+        "https://vast.gov.vn/tap-chi"
       ],
       "indexings": [
         {
@@ -3455,7 +4081,8 @@
           "evidenceLevel": "vast",
           "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/vietnam-journal-of-chemistry-tap-chi-hoa-hoc-%C4%91uoc-chap-nhan-vao-danh-muc-cac-tap-chi-cua-web-of-science-wos-tro-thanh-tap-chi-moi-noi-emerging-source-citation-index-esci-cua-he-thong-nay-10704-427.html",
           "checkedAt": "2026-10-21",
-          "coverage": null
+          "coverage": "JCR 2025: JIF 1.4 · JCI 0.19",
+          "notes": "Báo cáo Clarivate JCR 2025 (JCR_VIETNAM J CHEM_2025.pdf, tải ngày 6/20/2026 13:53:40)"
         },
         {
           "system": "DOAJ",
@@ -4767,10 +5394,146 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "archiveUrl": "https://onlinelibrary.wiley.com/loi/25728288",
+      "additionalArchives": [
+        {
+          "label": "Kho lưu trữ OJS VJS (các số 2014–2017)",
+          "url": "https://vjs.ac.vn/index.php/vjchem/issue/archive"
+        }
+      ],
       "order": 4,
       "group": "VAST-1",
       "scopusSourceId": "21101043786",
-      "archiveUrl": "https://vjs.ac.vn/index.php/vjchem",
+      "jcr": {
+        "id": "vjc",
+        "code": "VJC",
+        "title": "Vietnam Journal of Chemistry",
+        "metricYear": 2025,
+        "issn": "0866-7144",
+        "eissn": "2572-8288",
+        "wosCollection": "ESCI",
+        "jif": 1.4,
+        "jifWithoutSelfCitations": 1.4,
+        "jci": 0.19,
+        "fiveYearJif": 1.3,
+        "immediacyIndex": 0.2,
+        "eigenfactorScore": 0.00072,
+        "normalizedEigenfactor": 0.1645,
+        "articleInfluenceScore": 0.148,
+        "totalCitations": 1079,
+        "jifNumerator": 433,
+        "jifWithoutSelfNumerator": 420,
+        "jifDenominator": 300,
+        "fiveYearNumerator": 834,
+        "fiveYearDenominator": 645,
+        "immediacyNumerator": 26,
+        "immediacyDenominator": 120,
+        "citedHalfLife": 3.5,
+        "citingHalfLife": 8.8,
+        "categories": [
+          {
+            "name": "CHEMISTRY, MULTIDISCIPLINARY",
+            "jif": {
+              "rank": 184,
+              "total": 250,
+              "quartile": "Q3",
+              "percentile": 26.6
+            },
+            "jci": {
+              "rank": 186,
+              "total": 251,
+              "quartile": "Q3",
+              "percentile": 26.1
+            },
+            "jifHistory": [
+              {
+                "year": 2025,
+                "rank": 184,
+                "total": 250,
+                "quartile": "Q3",
+                "percentile": 26.6
+              },
+              {
+                "year": 2024,
+                "rank": 166,
+                "total": 239,
+                "quartile": "Q3",
+                "percentile": 30.8
+              },
+              {
+                "year": 2023,
+                "rank": 160,
+                "total": 231,
+                "quartile": "Q3",
+                "percentile": 31
+              }
+            ],
+            "jciHistory": [
+              {
+                "year": 2025,
+                "rank": 186,
+                "total": 251,
+                "quartile": "Q3",
+                "percentile": 26.1
+              },
+              {
+                "year": 2024,
+                "rank": 174,
+                "total": 241,
+                "quartile": "Q3",
+                "percentile": 28.01
+              },
+              {
+                "year": 2023,
+                "rank": 177,
+                "total": 231,
+                "quartile": "Q4",
+                "percentile": 23.59
+              },
+              {
+                "year": 2022,
+                "rank": 183,
+                "total": 230,
+                "quartile": "Q4",
+                "percentile": 20.65
+              },
+              {
+                "year": 2021,
+                "rank": 190,
+                "total": 224,
+                "quartile": "Q4",
+                "percentile": 15.4
+              }
+            ]
+          }
+        ],
+        "source": {
+          "filename": "JCR_VIETNAM J CHEM_2025.pdf",
+          "sha256": "173b33954dbd64b061afff2c31794f5dbd10d27565e712839c9c71ca15df2aef",
+          "pageCount": 24,
+          "downloadedAtRaw": "6/20/2026 13:53:40",
+          "pages": {
+            "identity": 1,
+            "jif": 2,
+            "jifCalculation": 3,
+            "jci": 6,
+            "rankJif": 10,
+            "rankJci": 11,
+            "totalCitations": 7,
+            "otherMetrics": {
+              "fiveYearJif": 23,
+              "immediacyIndex": 24,
+              "eigenfactorScore": 21,
+              "normalizedEigenfactor": 21,
+              "articleInfluenceScore": 22
+            }
+          }
+        },
+        "notes": [
+          "PDF prints ISSN 0866-7144; current dashboard identity uses ISSN 2525-2321 with 0866-7144 listed as former-title ISSN (through 2024). This is a historical ISSN mismatch, not silently reconciled.",
+          "JIF calculation: 433/300 = 1.4433..., which rounds to the printed one-decimal JIF 1.4; without self-citations, 420/300 = 1.4."
+        ]
+      },
       "cover": "assets/images/covers/vjc.png",
       "coverImage": "assets/images/covers/vjc.png",
       "institution": {
@@ -5104,6 +5867,7 @@
       },
       "profileSources": [
         "https://vjs.ac.vn/index.php/jse",
+        "https://vjs.ac.vn/index.php/jse/issue/archive",
         "https://vjs.ac.vn/index.php/jse/about",
         "https://vjs.ac.vn/jse/indexing",
         "https://vast.gov.vn/tap-chi"
@@ -5125,7 +5889,8 @@
           "evidenceLevel": "journal",
           "sourceUrl": "https://vjs.ac.vn/jse/indexing",
           "checkedAt": "2026-10-21",
-          "coverage": null
+          "coverage": "JCR 2025: JIF 2.1 · JCI 0.64",
+          "notes": "Báo cáo Clarivate JCR 2025 (JCR_VIETNAM J EARTH SCI_2025.pdf, tải ngày 6/20/2026 13:53:31)"
         },
         {
           "system": "ACI",
@@ -5693,10 +6458,155 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "archiveUrl": "https://vjs.ac.vn/index.php/jse/issue/archive",
       "order": 5,
       "group": "VAST-1",
       "scopusSourceId": "21101039869",
-      "archiveUrl": "https://vjs.ac.vn/index.php/jse/about",
+      "jcr": {
+        "id": "vjes",
+        "code": "VJES",
+        "title": "Vietnam Journal of Earth Sciences",
+        "metricYear": 2025,
+        "issn": "0866-7187",
+        "eissn": "2615-9783",
+        "wosCollection": "ESCI",
+        "jif": 2.1,
+        "jifWithoutSelfCitations": 1.7,
+        "jci": 0.64,
+        "fiveYearJif": 1.7,
+        "immediacyIndex": 1,
+        "eigenfactorScore": 0.00028,
+        "normalizedEigenfactor": 0.06486,
+        "articleInfluenceScore": 0.245,
+        "totalCitations": 417,
+        "jifNumerator": 133,
+        "jifWithoutSelfNumerator": 105,
+        "jifDenominator": 63,
+        "fiveYearNumerator": 257,
+        "fiveYearDenominator": 154,
+        "immediacyNumerator": 25,
+        "immediacyDenominator": 24,
+        "citedHalfLife": 3.8,
+        "citingHalfLife": 8.4,
+        "categories": [
+          {
+            "name": "GEOSCIENCES, MULTIDISCIPLINARY",
+            "jif": {
+              "rank": 143,
+              "total": 259,
+              "quartile": "Q3",
+              "percentile": 45
+            },
+            "jci": {
+              "rank": 117,
+              "total": 259,
+              "quartile": "Q2",
+              "percentile": 55.02
+            },
+            "jifHistory": [
+              {
+                "year": 2025,
+                "rank": 143,
+                "total": 259,
+                "quartile": "Q3",
+                "percentile": 45
+              },
+              {
+                "year": 2024,
+                "rank": 108,
+                "total": 258,
+                "quartile": "Q2",
+                "percentile": 58.3
+              },
+              {
+                "year": 2023,
+                "rank": 111,
+                "total": 254,
+                "quartile": "Q2",
+                "percentile": 56.5
+              }
+            ],
+            "jciHistory": [
+              {
+                "year": 2025,
+                "rank": 117,
+                "total": 259,
+                "quartile": "Q2",
+                "percentile": 55.02
+              },
+              {
+                "year": 2024,
+                "rank": 107,
+                "total": 258,
+                "quartile": "Q2",
+                "percentile": 58.72
+              },
+              {
+                "year": 2023,
+                "rank": 133,
+                "total": 254,
+                "quartile": "Q3",
+                "percentile": 47.83
+              },
+              {
+                "year": 2022,
+                "rank": 174,
+                "total": 249,
+                "quartile": "Q3",
+                "percentile": 30.32
+              },
+              {
+                "year": 2021,
+                "rank": 164,
+                "total": 245,
+                "quartile": "Q3",
+                "percentile": 33.27
+              },
+              {
+                "year": 2020,
+                "rank": 192,
+                "total": 239,
+                "quartile": "Q4",
+                "percentile": 19.87
+              },
+              {
+                "year": 2019,
+                "rank": 206,
+                "total": 239,
+                "quartile": "Q4",
+                "percentile": 14.02
+              }
+            ]
+          }
+        ],
+        "source": {
+          "filename": "JCR_VIETNAM J EARTH SCI_2025.pdf",
+          "sha256": "29623c9c0c6c96e51d8266464234cc8ed53ed0863641ef8f454814eb9b366d8b",
+          "pageCount": 23,
+          "downloadedAtRaw": "6/20/2026 13:53:31",
+          "pages": {
+            "identity": 1,
+            "jif": 2,
+            "jifCalculation": 3,
+            "jci": 6,
+            "rankJif": 10,
+            "rankJci": 11,
+            "totalCitations": 7,
+            "otherMetrics": {
+              "fiveYearJif": 22,
+              "immediacyIndex": 23,
+              "eigenfactorScore": 20,
+              "normalizedEigenfactor": 20,
+              "articleInfluenceScore": 21
+            }
+          }
+        },
+        "notes": [
+          "PDF prints ISSN 0866-7187 and EISSN 2615-9783; dashboard current ISSN is 2615-9783 and current EISSN is 2815-5890 (0866-7187 is recorded as former-title ISSN through 2017). The PDF's serial identifiers conflict with the dashboard current identity and are preserved exactly as printed.",
+          "Total Citations in JCR year 2025 is 417 (verified on PDF page 7 and corroborated on page 12 Citation Network: 352 non-self + 65 self citations).",
+          "JIF calculation: 133/63 = 2.1111..., which rounds to the printed one-decimal JIF 2.1; without self-citations, 105/63 = 1.6667..., rounding to 1.7."
+        ]
+      },
       "cover": "assets/images/covers/vjes.png",
       "coverImage": "assets/images/covers/vjes.png",
       "institution": {
@@ -6025,6 +6935,7 @@
       },
       "profileSources": [
         "https://vjs.ac.vn/index.php/jst",
+        "https://vjs.ac.vn/index.php/jst/issue/archive",
         "https://vjs.ac.vn/jst/journal-description",
         "https://vjs.ac.vn/jst/journal-history",
         "https://vjs.ac.vn/jst/aims-and-scope",
@@ -6053,8 +6964,8 @@
           "system": "ACI",
           "collection": null,
           "status": "listed",
-          "evidenceLevel": "journal",
-          "sourceUrl": "http://www.asean-cites.org/index.php?r=contents%2Findex&id=9",
+          "evidenceLevel": "vast",
+          "sourceUrl": "https://vast.gov.vn/web/guest/tap-chi-chi-tiet/-/chi-tiet/tap-chi-khoa-hoc-va-cong-nghe-20046-438.html",
           "checkedAt": "2026-10-21",
           "coverage": "since 2017"
         },
@@ -7128,10 +8039,11 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "archiveUrl": "https://vjs.ac.vn/index.php/jst/issue/archive",
       "order": 6,
       "group": "VAST-1",
       "scopusSourceId": "21101101853",
-      "archiveUrl": "https://vjs.ac.vn/jst/journal-description",
+      "jcr": null,
       "cover": "assets/images/covers/vjst.png",
       "coverImage": "assets/images/covers/vjst.png",
       "institution": {
@@ -7233,7 +8145,7 @@
         {
           "year": 2013,
           "papers": 27,
-          "issues": 4,
+          "issues": 3,
           "periodKind": "annual",
           "citingDocs": null,
           "citationEdges": null,
@@ -7400,6 +8312,7 @@
       },
       "profileSources": [
         "https://vjs.ac.vn/index.php/cip",
+        "https://vjs.ac.vn/index.php/cip/issue/archive",
         "https://vjs.ac.vn/cip/journal-description",
         "https://vjs.ac.vn/cip/aims-and-scope",
         "https://vjs.ac.vn/cip/indexing",
@@ -7439,7 +8352,7 @@
           "collection": null,
           "status": "listed",
           "evidenceLevel": "database",
-          "sourceUrl": "https://doaj.org/toc/0868-3166",
+          "sourceUrl": "https://doaj.org/toc/2815-5947",
           "checkedAt": "2026-10-21",
           "coverage": null
         }
@@ -8039,10 +8952,11 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "archiveUrl": "https://vjs.ac.vn/index.php/cip/issue/archive",
       "order": 7,
       "group": "VAST-1",
       "scopusSourceId": "21101380177",
-      "archiveUrl": "https://vjs.ac.vn/cip/journal-description",
+      "jcr": null,
       "cover": "assets/images/covers/cip.png",
       "coverImage": "assets/images/covers/cip.png",
       "institution": {
@@ -8154,7 +9068,7 @@
         {
           "year": 2004,
           "papers": 31,
-          "issues": 4,
+          "issues": 2,
           "periodKind": "annual",
           "citingDocs": null,
           "citationEdges": null,
@@ -8409,6 +9323,7 @@
       },
       "profileSources": [
         "https://vjs.ac.vn/index.php/vjmech",
+        "https://vjs.ac.vn/index.php/vjmech/issue/archive",
         "https://vjs.ac.vn/vjmech/about",
         "https://vjs.ac.vn/vjmech/abstracting-and-indexing",
         "https://vast.gov.vn/tap-chi"
@@ -8436,9 +9351,9 @@
           "system": "ACI",
           "collection": null,
           "status": "listed",
-          "evidenceLevel": "journal",
-          "sourceUrl": "https://vjs.ac.vn/vjmech/abstracting-and-indexing",
-          "checkedAt": "2026-10-21",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/journal_info?jid=10758",
+          "checkedAt": "2026-10-22",
           "coverage": null
         },
         {
@@ -8979,10 +9894,11 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "archiveUrl": "https://vjs.ac.vn/index.php/vjmech/issue/archive",
       "order": 8,
       "group": "VAST-2",
       "scopusSourceId": null,
-      "archiveUrl": "https://vjs.ac.vn/vjmech/about",
+      "jcr": null,
       "cover": "assets/images/covers/vjmech.png",
       "coverImage": "assets/images/covers/vjmech.png",
       "institution": {
@@ -9752,8 +10668,14 @@
       "website": "https://vjs.ac.vn/index.php/jcc",
       "publisher": "NXB Khoa học tự nhiên và Công nghệ, Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
       "issn": "1813-9663",
-      "eissn": null,
-      "formerTitles": [],
+      "eissn": "2815-5939",
+      "formerTitles": [
+        {
+          "title": "Journal of Computational Science and Cybernetics",
+          "issn": null,
+          "until": "1989"
+        }
+      ],
       "frequency": {
         "issuesPerYear": 4,
         "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/journal-of-computer-sciences-and-cybernetics-tap-chi-tin-hoc-va-%C4%91ieu-khien-hoc--20047-438.html"
@@ -9775,6 +10697,24 @@
         },
         {
           "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jcc",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jcc",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
           "collection": null,
           "status": "unverified",
           "evidenceLevel": "journal",
@@ -10290,10 +11230,11 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "archiveUrl": "https://vjs.ac.vn/jcc/issue/archive",
       "order": 9,
       "group": "VAST-2",
       "scopusSourceId": null,
-      "archiveUrl": "https://vjs.ac.vn/jcc/issue/archive",
+      "jcr": null,
       "cover": "assets/images/covers/jcc.png",
       "coverImage": "assets/images/covers/jcc.png",
       "institution": {
@@ -10526,7 +11467,7 @@
         {
           "year": 1987,
           "papers": 13,
-          "issues": 4,
+          "issues": 2,
           "periodKind": "annual",
           "citingDocs": null,
           "citationEdges": null,
@@ -10537,7 +11478,7 @@
         {
           "year": 1988,
           "papers": 18,
-          "issues": 4,
+          "issues": 3,
           "periodKind": "annual",
           "citingDocs": null,
           "citationEdges": null,
@@ -10983,6 +11924,15 @@
       ],
       "indexings": [
         {
+          "system": "Scopus",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://www.scopus.com/sources",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
           "system": "WoS",
           "collection": "Zoological Record",
           "status": "listed",
@@ -11005,7 +11955,16 @@
           "collection": null,
           "status": "listed",
           "evidenceLevel": "journal",
-          "sourceUrl": "https://vjs.ac.vn/index.php/vjbio",
+          "sourceUrl": "https://asean-cites.org/journal_info?jid=11498",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://doaj.org/",
           "checkedAt": "2026-10-21",
           "coverage": null
         }
@@ -11701,10 +12660,11 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "archiveUrl": "https://vjs.ac.vn/vjbio/issue/archive",
       "order": 10,
       "group": "VAST-2",
       "scopusSourceId": null,
-      "archiveUrl": "https://vjs.ac.vn/vjbio/issue/archive",
+      "jcr": null,
       "cover": "assets/images/covers/ajb.png",
       "coverImage": "assets/images/covers/ajb.png",
       "institution": {
@@ -12159,7 +13119,13 @@
       "publisher": "NXB Khoa học tự nhiên và Công nghệ, Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
       "issn": "1859-3097",
       "eissn": "2815-5904",
-      "formerTitles": [],
+      "formerTitles": [
+        {
+          "title": "Tạp chí Khoa học và Công nghệ Biển / Journal of Marine Science and Technology",
+          "issn": "1859-3097",
+          "until": "2018"
+        }
+      ],
       "frequency": {
         "issuesPerYear": 4,
         "sourceUrl": "https://vjs.ac.vn/index.php/jmst"
@@ -12179,7 +13145,25 @@
           "coverage": null
         },
         {
+          "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jmst",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
           "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jmst",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
           "collection": null,
           "status": "unverified",
           "evidenceLevel": "journal",
@@ -12815,10 +13799,11 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "archiveUrl": "https://vjs.ac.vn/jmst/issue/archive",
       "order": 11,
       "group": "VAST-2",
       "scopusSourceId": null,
-      "archiveUrl": "https://vjs.ac.vn/jmst/issue/archive",
+      "jcr": null,
       "cover": "assets/images/covers/vjmst.png",
       "coverImage": "assets/images/covers/vjmst.png",
       "institution": {
@@ -13230,7 +14215,7 @@
         {
           "title": "Tạp chí Công nghệ Sinh học (Journal of Biotechnology)",
           "issn": "1811-4989",
-          "until": null
+          "until": "2022"
         }
       ],
       "frequency": {
@@ -13252,7 +14237,25 @@
           "coverage": null
         },
         {
+          "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbt",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
           "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbt",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "DOAJ",
           "collection": null,
           "status": "unverified",
           "evidenceLevel": "journal",
@@ -14028,10 +15031,11 @@
       ],
       "checkedAt": "2026-10-21",
       "aliases": [],
+      "archiveUrl": "https://vjs.ac.vn/vjbt/issue/archive",
       "order": 12,
       "group": "VAST-2",
       "scopusSourceId": null,
-      "archiveUrl": "https://vjs.ac.vn/vjbt/issue/archive",
+      "jcr": null,
       "cover": "assets/images/covers/vjbt.png",
       "coverImage": "assets/images/covers/vjbt.png",
       "institution": {

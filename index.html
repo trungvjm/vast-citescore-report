@@ -11,8 +11,8 @@
 <link rel="preload" href="assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/dashboard.css?v=20261021k">
-<script type="module" src="assets/dashboard.js?v=20261021k"></script>
+<link rel="stylesheet" href="assets/dashboard.css?v=20261022a">
+<script type="module" src="assets/dashboard.js?v=20261022a"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Đến nội dung chính</a>
@@ -28,9 +28,9 @@
 </div>
 
 <!-- ARTCRAFT FIXED SCROLL-FLIGHT KINETIC LETTERS OVERLAY (getartcraft.com z-40 flight) -->
-<div id="scroll-flight-layer" class="scroll-flight-layer" aria-hidden="true">
-<div id="flight-brand-dock" class="flight-brand-dock"></div>
-<div id="flight-letters-stage" class="flight-letters-stage"></div>
+<div id="scroll-flight-layer" class="scroll-flight-layer">
+<div id="flight-brand-dock" class="flight-brand-dock" aria-hidden="true"></div>
+<div id="flight-letters-stage" class="flight-letters-stage" aria-hidden="true"></div>
 <nav class="flight-corner-anchors" aria-label="Mục lục góc phải">
 <a href="#section-overview" data-flight-link="overview">TỔNG QUAN</a>
 <a href="#section-citescore" data-flight-link="citescore">CITESCORE</a>
@@ -56,7 +56,7 @@
 </nav>
 </div>
 <div class="site-nav-right">
-<span class="nav-status-cell hud-label">SNAPSHOT · <time id="snapshot-date">2026-10-21</time></span>
+<span class="nav-status-cell hud-label">DỮ LIỆU NGÀY · <time id="snapshot-date">2026-10-21</time></span>
 <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Chuyển đổi giao diện Sáng / Tối" title="Chuyển đổi giao diện Sáng / Tối">
 <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
 <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
@@ -78,6 +78,7 @@
 <!-- ARTCRAFT ARCHITECTURAL ORBITAL HERO -->
 <section id="hero" class="artcraft-hero" aria-labelledby="hero-title">
 <div class="hero-orbital-bg" aria-hidden="true">
+<img class="hero-galaxy" src="assets/images/milky-way-eso0932a.jpg" alt="" fetchpriority="high" decoding="async">
 <svg class="orbital-svg" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice">
 <g fill="none" stroke="currentColor" stroke-width="1">
 <ellipse cx="720" cy="380" rx="250" ry="155" opacity="0.22"/>
@@ -99,13 +100,14 @@
 <span class="wm-char">V</span><span class="wm-char">A</span><span class="wm-char">S</span><span class="wm-char">T</span><span class="wm-char wm-space"> </span><span class="wm-char">J</span><span class="wm-char">O</span><span class="wm-char">U</span><span class="wm-char">R</span><span class="wm-char">N</span><span class="wm-char">A</span><span class="wm-char">L</span><span class="wm-char">S</span>
 </div>
 <h1 id="hero-title" class="hero-display-title">12 tạp chí <em class="serif-italic">khoa học.</em></h1>
-<p class="hero-lead">Hệ thống theo dõi toàn diện <strong>12 tạp chí khoa học</strong> của Viện Hàn lâm Khoa học và Công nghệ Việt Nam: phân tích biến động <strong>CiteScore &amp; CiteScore Tracker</strong> của <strong>7 tạp chí nhóm VAST-1</strong> (Scopus / Web of Science Core Collection), dự báo chỉ số và quy mô trích dẫn của <strong>5 tạp chí nhóm VAST-2</strong>, cùng hồ sơ lịch sử xuất bản toàn thời gian từ năm 1976 đến 2026.</p>
+<p class="hero-lead">Theo dõi <strong>12 tạp chí khoa học</strong> của Viện Hàn lâm Khoa học và Công nghệ Việt Nam: biến động <strong>CiteScore &amp; CiteScore Tracker</strong> của <strong>7 tạp chí nhóm VAST-1</strong>, chỉ số CiteScore tự tính và trích dẫn của <strong>5 tạp chí nhóm VAST-2</strong>, cùng số bài và số kỳ xuất bản qua các năm có dữ liệu, từ 1976 đến 2026.</p>
 <div class="hero-cta-group">
 <a class="btn-solid" href="#section-citescore">01 · XEM BIỂU ĐỒ CITESCORE</a>
 <a class="btn-outline" href="#section-catalog">02 · DANH MỤC 12 TẠP CHÍ</a>
 </div>
-<p class="hud-label hero-meta-foot">7 TẠP CHÍ VAST-1 (SCOPUS / WOS) &nbsp;·&nbsp; 5 TẠP CHÍ VAST-2 &nbsp;·&nbsp; 11 TẠP CHÍ NXB KHTN&amp;CN &nbsp;·&nbsp; 1 TẠP CHÍ VIỆN TOÁN HỌC (AMV)</p>
+<p class="hud-label hero-meta-foot">7 TẠP CHÍ VAST-1 (CÓ DỮ LIỆU SCOPUS) &nbsp;·&nbsp; 5 TẠP CHÍ VAST-2 &nbsp;·&nbsp; 11 TẠP CHÍ NXB KHTN&amp;CN &nbsp;·&nbsp; 1 TẠP CHÍ VIỆN TOÁN HỌC (AMV)</p>
 </div>
+<p class="hero-photo-credit">Ảnh: <a href="https://www.eso.org/public/images/eso0932a/" target="_blank" rel="noopener noreferrer">ESO/S. Brunier</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · Cắt khung và phủ màu</p>
 </section>
 
 <!-- SCROLL-VELOCITY KINETIC MARQUEE TICKER (getartcraft.com .marquee border-y border-line) -->
@@ -126,7 +128,7 @@
 
 <div class="section-intro-head" data-reveal>
 <p class="hud-label section-kicker">01.A · GIỚI THIỆU TỔNG QUAN 12 TẠP CHÍ KHOA HỌC CỦA VAST</p>
-<h2 id="heading-overview" class="section-display-title">Cấu trúc xuất bản học thuật <em class="serif-italic">hai nhóm chiến lược.</em></h2>
+<h2 id="heading-overview" class="section-display-title">Hệ thống 12 tạp chí <em class="serif-italic">gồm hai nhóm.</em></h2>
 <p class="section-lead">Hệ thống 12 tạp chí khoa học của Viện Hàn lâm Khoa học và Công nghệ Việt Nam được vận hành bởi hai đầu mối xuất bản trực thuộc Viện Hàn lâm và hợp tác đồng xuất bản với các nhà xuất bản học thuật quốc tế hàng đầu (<strong>Springer Nature</strong>, <strong>IOP Publishing</strong>, <strong>Wiley-VCH</strong>).</p>
 </div>
 
@@ -141,7 +143,7 @@
 <span class="hud-label arch-cell-num">01</span>
 </div>
 <h3>Nhóm VAST-1 — 7 tạp chí trong Scopus &amp; Web of Science</h3>
-<p>Gồm <strong>VJM</strong>, <strong>AMV</strong>, <strong>ANSN</strong>, <strong>VJC</strong>, <strong>VJES</strong>, <strong>VJST</strong> và <strong>CIP</strong>. Cả 7 tạp chí đã được chỉ mục chính thức trong hệ thống <strong>Elsevier Scopus</strong> (trong đó 5 tạp chí đồng thời thuộc <strong>Web of Science Core Collection — ESCI</strong>). Riêng <em>Communications in Physics (CIP)</em> được Hội đồng CSAB chấp thuận tháng 08/2026 và đã có <strong>CiteScore Tracker 2026 = 0,7</strong>.</p>
+<p>Gồm <strong>VJM</strong>, <strong>AMV</strong>, <strong>ANSN</strong>, <strong>VJC</strong>, <strong>VJES</strong>, <strong>VJST</strong> và <strong>CIP</strong>. Cả 7 tạp chí đã được chỉ mục trong hệ thống <strong>Elsevier Scopus</strong>; trong đó <strong>5 tạp chí</strong> (<em>VJM, AMV, ANSN, VJC, VJES</em>) đồng thời thuộc <strong>Web of Science Core Collection — ESCI</strong> và đã có báo cáo <strong>Clarivate JCR 2025</strong> (JIF &amp; JCI). Riêng <em>Communications in Physics (CIP)</em> đã có <strong>CiteScore Tracker 2026 = 0,7</strong> (dữ liệu Scopus từ 2022–2026).</p>
 <div class="arch-pill-list">
 <a href="#journal/vjm">VJM (2,1)</a>
 <a href="#journal/amv">AMV (0,8)</a>
@@ -155,11 +157,11 @@
 
 <article class="arch-cell">
 <div class="arch-cell-head">
-<span class="hud-label">NHÓM NGUỒN TIỀM NĂNG</span>
+<span class="hud-label">NHÓM TẠP CHÍ CHUYÊN NGÀNH</span>
 <span class="hud-label arch-cell-num">02</span>
 </div>
-<h3>Nhóm VAST-2 — 5 tạp chí chuyên ngành hướng chuẩn Scopus</h3>
-<p>Gồm <strong>VJMech</strong> (Cơ học), <strong>JCC</strong> (Tin học &amp; Điều khiển học), <strong>AJB</strong> (Sinh học — đã thuộc <em>Web of Science Zoological Record</em>), <strong>VJMST</strong> (Khoa học &amp; Công nghệ biển) và <strong>VJBT</strong> (Công nghệ sinh học). Cả 5 tạp chí xuất bản 100% bằng tiếng Anh trên nền tảng OJS của Viện Hàn lâm và được theo dõi chuỗi <strong>CiteScore dự kiến (4 năm)</strong> đối chiếu với chuẩn ngành quốc tế.</p>
+<h3>Nhóm VAST-2 — 5 tạp chí chuyên ngành hướng tới Scopus</h3>
+<p>Gồm <strong>VJMech</strong> (Cơ học), <strong>JCC</strong> (Tin học &amp; Điều khiển học), <strong>AJB</strong> (Sinh học — đã thuộc <em>Web of Science Zoological Record</em>), <strong>VJMST</strong> (Khoa học &amp; Công nghệ biển) và <strong>VJBT</strong> (Công nghệ sinh học). Các tạp chí xuất bản trên hệ thống tạp chí điện tử OJS của Viện Hàn lâm. Chỉ số <strong>CiteScore tự tính theo giai đoạn 4 năm</strong> được trình bày để tham khảo, không phải chỉ số Scopus chính thức.</p>
 <div class="arch-pill-list">
 <a href="#journal/vjmech">VJMech (1979–2026)</a>
 <a href="#journal/jcc">JCC (1985–2026)</a>
@@ -198,7 +200,7 @@
 </div>
 </div>
 <h3>Viện Toán học (Institute of Mathematics, VAST)</h3>
-<p>Đơn vị trực tiếp chủ quản tạp chí <strong>Acta Mathematica Vietnamica (AMV)</strong> — tạp chí toán học lâu đời nhất của Viện Hàn lâm với chuỗi lịch sử xuất bản liên tục <strong>51 năm (1976–2026 · 1.512 bài khoa học)</strong>, đồng xuất bản quốc tế cùng <strong>Springer Nature</strong> và chỉ mục trong cả Scopus lẫn Web of Science Core Collection (ESCI).</p>
+<p>Viện Toán học trực tiếp chủ quản tạp chí <strong>Acta Mathematica Vietnamica (AMV)</strong>, đồng xuất bản cùng <strong>Springer Nature</strong>. Số liệu xuất bản trên trang gồm <strong>51 năm (1976–2026 · 1.512 bài khoa học)</strong>. Các số cũ của AMV được lưu trên website Viện Toán học; người đọc có thể xem mục lục và các bài truy cập mở tại <a href="https://math.ac.vn/acta/open-access-issues" target="_blank" rel="noopener noreferrer">kho lưu trữ AMV của Viện Toán học</a>.</p>
 </article>
 </div>
 
@@ -216,9 +218,9 @@
 <!-- SUBSECTION 01.B: BẢNG MA TRẬN CITESCORE VAST-1 & 4 BIỂU ĐỒ TƯƠNG TÁC -->
 <div id="section-citescore" class="citescore-subsection">
 <div class="section-intro-head" data-reveal>
-<p class="hud-label section-kicker">01.B · BẢNG MA TRẬN &amp; 4 BIỂU ĐỒ CITESCORE / TRÍCH DẪN / QUY MÔ XUẤT BẢN</p>
-<h2 class="section-display-title">Biến động CiteScore <em class="serif-italic">&amp; Năng lực Trích dẫn.</em></h2>
-<p class="section-lead">Bảng ma trận tổng hợp chuỗi <strong>CiteScore chính thức (2015–2025)</strong> và <strong>CiteScore Tracker 2026</strong> trực tiếp từ Scopus của 7 tạp chí nhóm <strong>VAST-1</strong>, kết hợp bộ 4 biểu đồ tương tác đối sánh toàn bộ 12 tạp chí.</p>
+<p class="hud-label section-kicker">01.B · BẢNG TỔNG HỢP &amp; 4 BIỂU ĐỒ CITESCORE / TRÍCH DẪN / QUY MÔ XUẤT BẢN</p>
+<h2 class="section-display-title">Biến động CiteScore <em class="serif-italic">&amp; Trích dẫn.</em></h2>
+<p class="section-lead">Bảng 1 tổng hợp <strong>CiteScore chính thức theo năm (2015–2025)</strong> và <strong>CiteScore Tracker 2026</strong> từ Scopus cho 7 tạp chí nhóm <strong>VAST-1</strong>. Bảng 2 trình bày riêng <strong>chỉ số Web of Science — Clarivate JCR 2025 (JIF, 5-Year JIF, JCI, Quartile)</strong> của 5 tạp chí VAST-1 thuộc ESCI (không trộn với CiteScore). Bốn biểu đồ bên dưới giúp theo dõi và so sánh các chỉ số của 12 tạp chí.</p>
 </div>
 
 <div class="matrix-scroll" data-reveal>
@@ -228,12 +230,26 @@
 </table>
 </div>
 
+<div class="matrix-scroll" id="vast1-jcr-wrap" data-reveal>
+<div class="section-heading" style="padding:18px 0 10px">
+<div>
+<span class="hud-label chart-kicker">BẢNG ĐỐI CHIẾU WEB OF SCIENCE · CLARIVATE JCR 2025 (5 TẠP CHÍ VAST-1 THUỘC ESCI)</span>
+<h3 style="margin:4px 0 0;font-size:20px">Chỉ số Journal Impact Factor (JIF 2025), JCI và xếp hạng phân ngành Web of Science</h3>
+</div>
+</div>
+<table class="citescore-matrix-table" id="vast1-jcr-table">
+<thead id="vast1-jcr-head"></thead>
+<tbody id="vast1-jcr-body"></tbody>
+</table>
+<p class="chart-caption" style="margin-top:8px">Nguồn: 5 báo cáo <em>Clarivate Journal Citation Reports™ 2025</em> (© 2026 Clarivate, trích xuất ngày 20/06/2026 tại thư mục hồ sơ NXB). Chỉ số JIF 2025 tính theo trích dẫn năm 2025 đối với các bài citable xuất bản năm 2023–2024 trên Web of Science Core Collection (ESCI), hoàn toàn tách biệt với CiteScore 4 năm của Scopus. Hai tạp chí VAST-1 còn lại (<em>VJST, CIP</em>) đã vào Scopus nhưng chưa thuộc danh mục có báo cáo JCR 2025 này.</p>
+</div>
+
 <div id="trends-panel" class="charts-suite">
 <!-- BIỂU ĐỒ 1: CITESCORE & TRACKER NHÓM VAST-1 -->
 <section class="chart-block" id="chart-scopus-block" aria-labelledby="trends-heading" data-reveal>
 <div class="section-heading">
 <div>
-<span class="hud-label chart-kicker">BIỂU ĐỒ 01 · NHÓM VAST-1 (7 TẠP CHÍ SCOPUS / WOS)</span>
+<span class="hud-label chart-kicker">BIỂU ĐỒ 01 · NHÓM VAST-1 (7 TẠP CHÍ ĐÃ CHỈ MỤC SCOPUS)</span>
 <h3 id="trends-heading">Diễn biến CiteScore chính thức (2015–2025) và CiteScore Tracker (2026)</h3>
 </div>
 <div class="inline-actions">
@@ -288,7 +304,7 @@
 <div class="section-heading">
 <div>
 <span class="hud-label chart-kicker">BIỂU ĐỒ 02 · NHÓM VAST-2 (5 TẠP CHÍ CHUYÊN NGÀNH)</span>
-<h3 id="candidates-heading">Diễn biến CiteScore dự kiến (2015–2026) và mốc đối chuẩn</h3>
+<h3 id="candidates-heading">CiteScore tự tính theo năm (2015–2026) và mốc tham khảo</h3>
 </div>
 <div class="inline-actions">
 <label class="checkbox-inline"><input id="toggle-cip-benchmark" type="checkbox" checked> Đường chuẩn CIP (2026: 0,7)</label>
@@ -406,7 +422,7 @@
 </div>
 <dl id="papers-tooltip-values" class="tooltip-values"></dl>
 </div>
-<figcaption class="chart-caption">Để xem biểu đồ lịch sử xuất bản toàn thời gian từ năm đầu tiên (ví dụ AMV từ 1976, VJMech từ 1979, JCC từ 1985), bấm vào từng tạp chí ở Phần 02 bên dưới.</figcaption>
+<figcaption class="chart-caption">Bấm vào từng tạp chí ở Phần 02 để xem số bài và số kỳ xuất bản qua các năm có dữ liệu (AMV từ 1976, VJMech từ 1979, JCC từ 1985).</figcaption>
 </figure>
 <aside class="comparison-card split-side" aria-label="Số bài đã xuất bản theo từng tạp chí">
 <div class="comparison-head">
@@ -433,9 +449,9 @@
 </div>
 
 <div class="section-intro-head" data-reveal>
-<p class="hud-label section-kicker">02 · HỒ SƠ NHẬN DIỆN &amp; LỊCH SỬ XUẤT BẢN TOÀN THỜI GIAN CỦA 12 TẠP CHÍ</p>
+<p class="hud-label section-kicker">02 · THÔNG TIN &amp; SỐ LIỆU XUẤT BẢN QUA CÁC NĂM CỦA 12 TẠP CHÍ</p>
 <h2 id="heading-catalog" class="section-display-title">Danh mục 12 tạp chí <em class="serif-italic">Khoa học VAST.</em></h2>
-<p class="section-lead">Mỗi tạp chí hiển thị trang bìa chính thức, biểu trưng đơn vị xuất bản (<strong>NXB Khoa học tự nhiên và Công nghệ</strong> hoặc <strong>Viện Toán học</strong> đối với <em>AMV</em>) và đối tác đồng xuất bản quốc tế. <strong>Bấm trực tiếp vào từng tạp chí</strong> để mở trang hồ sơ riêng kèm bảng lịch sử CiteScore và 3 biểu đồ toàn thời gian của tạp chí đó.</p>
+<p class="section-lead">Mỗi tạp chí có ảnh bìa, logo đơn vị xuất bản (<strong>NXB Khoa học tự nhiên và Công nghệ</strong> hoặc <strong>Viện Toán học</strong> đối với <em>AMV</em>) và đối tác đồng xuất bản. <strong>Bấm vào tên hoặc ảnh bìa tạp chí</strong> để xem thông tin chi tiết, bảng CiteScore và các biểu đồ xuất bản, trích dẫn qua các năm.</p>
 </div>
 
 <form id="portfolio-controls" class="filters" aria-label="Lọc và sắp xếp danh mục tạp chí">
@@ -447,7 +463,7 @@
 <label for="index-filter">Nhóm tạp chí</label>
 <select id="index-filter">
 <option value="all">Tất cả 12 tạp chí</option>
-<option value="VAST-1">Nhóm VAST-1 (7 tạp chí Scopus/WoS)</option>
+<option value="VAST-1">Nhóm VAST-1 (7 tạp chí đã vào Scopus)</option>
 <option value="VAST-2">Nhóm VAST-2 (5 tạp chí)</option>
 <option value="Scopus">Đã chỉ mục Scopus (7)</option>
 <option value="WoS">Web of Science (6)</option>
@@ -490,7 +506,7 @@
 <div class="section-intro-head" data-reveal>
 <p class="hud-label section-kicker">03 · NGUỒN ĐỐI CHIẾU HỌC THUẬT &amp; LƯU TRỮ TRỰC TUYẾN</p>
 <h2 id="heading-references" class="section-display-title">Danh mục tài liệu <em class="serif-italic">Tham khảo.</em></h2>
-<p class="section-lead">Danh mục trang chủ tạp chí, kho lưu trữ số toàn thời gian và hồ sơ chỉ mục quốc tế của 12 tạp chí khoa học thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam.</p>
+<p class="section-lead">Các liên kết đến trang chủ, kho lưu trữ các số đã xuất bản và nguồn thông tin chỉ mục của 12 tạp chí khoa học thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam.</p>
 </div>
 
 <ol id="source-links" class="reference-list" role="list"></ol>
@@ -499,7 +515,7 @@
 </div><!-- /#home-view -->
 
 <!-- =========================================================================
-     VIEW 2: TRANG CHI TIẾT TỪNG TẠP CHÍ & BỘ BIỂU ĐỒ LỊCH SỬ TOÀN THỜI GIAN (#journal/<id>)
+     VIEW 2: TRANG CHI TIẾT TỪNG TẠP CHÍ & BỘ BIỂU ĐỒ THEO NĂM (#journal/<id>)
      ========================================================================= -->
 <section id="detail-panel" class="view-panel" aria-labelledby="detail-heading" hidden></section>
 

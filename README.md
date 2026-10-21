@@ -1,29 +1,33 @@
-# VAST · Dashboard theo dõi danh mục tạp chí khoa học
+# VAST · Dashboard 12 tạp chí khoa học
 
-Dashboard công khai theo dõi **12 tạp chí thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)** được phân thành 2 nhóm:
+Website tĩnh giới thiệu 12 tạp chí thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST).
 
-- **Nhóm `VAST-1` (7 tạp chí đã vào Scopus / Web of Science Core Collection)**: `VJM`, `AMV`, `ANSN`, `VJC`, `VJES`, `VJST`, `CIP`. Sử dụng CiteScore (2015–2025) và CiteScoreTracker (2026) chính thức từ Scopus.
-- **Nhóm `VAST-2` (5 tạp chí chưa vào Scopus / Web of Science Core Collection)**: `VJMech`, `JCC`, `AJB`, `VJMST`, `VJBT`. Sử dụng chỉ số CiteScore dự kiến (4 năm tự tính theo cửa sổ trích dẫn).
-- **Quy mô xuất bản (2020–2026)**: đếm bài nghiên cứu, tổng quan và thông báo ngắn trong các số đã phát hành từ kho lưu trữ chính thức của cả 12 tạp chí (không đếm bìa, mục lục, xã luận, thông báo, đính chính hay bài Online First chưa vào số).
-- **50 giao diện thương hiệu quốc tế**: hỗ trợ chuyển đổi trực tiếp màu sắc, hệ font chữ, cấu trúc bố cục trang (10 Macro Layouts) và hình học biểu đồ (7 kiểu biểu đồ SVG + 5 kiểu bảng đối sánh).
+- **VAST-1**: 7 tạp chí có dữ liệu Scopus trong bản đối chiếu: VJM, AMV, ANSN, VJC, VJES, VJST, CIP. Trạng thái Web of Science phải xem riêng theo từng bộ chỉ mục, không suy ra từ nhóm này.
+- **VAST-2**: VJMech, JCC, AJB, VJMST, VJBT. Chỉ số 4 năm tự tính không phải CiteScore chính thức của Scopus.
+- `data-scopus.json`: bản lịch sử được bảo vệ bằng SHA-256, gồm 84 quan sát CiteScore và Tracker. Đúng công thức không đồng nghĩa đã xác minh lại nguồn trực tuyến.
+- `evidence/`: hồ sơ, nguồn kho lưu trữ, bằng chứng chỉ mục và đối soát dữ liệu. Khoảng năm và mức độ đầy đủ khác nhau giữa các tạp chí; năm hiện tại là số liệu đến ngày chốt, không phải cả năm.
+- `data/dashboard.json` và `data/snapshots/`: dữ liệu sinh từ các đầu vào nêu trên.
 
-## Quy trình cập nhật và kiểm tra
+## Giao diện
 
-1. Tạo lại `data/dashboard.json` và bản snapshot:
+Một hướng thiết kế tham khảo ArtCraft, hỗ trợ sáng/tối và font cục bộ. Hiệu ứng chữ theo vị trí cuộn có trên bốn phần trang chính và các mục trong hồ sơ tạp chí. Chế độ giảm chuyển động dùng chữ đứng yên; màn hình nhỏ ẩn lớp chữ bay.
+
+Danh mục không có bảng xếp hạng CiteScore riêng. Xem số liệu, biểu đồ và nguồn minh chứng trong hồ sơ từng tạp chí. Kỳ hạn xuất bản đọc từ `frequency.issuesPerYear`; thiếu dữ liệu thì hiện “Chưa có thông tin”. AMV có liên kết bổ sung đến mục lục và các số truy cập mở của Viện Toán học. Liên kết chỉ mục phân biệt nguồn cơ sở dữ liệu và thông tin do tạp chí công bố.
+
+## Tạo lại dữ liệu
 
 ```sh
 node tools/build-dashboard.mjs --write
-```
-
-2. Kiểm tra đồng bộ dữ liệu và cú pháp mã nguồn:
-
-```sh
 node tools/build-dashboard.mjs
 node --check assets/dashboard.js
 ```
 
-3. Mở thử giao diện qua máy chủ tĩnh cục bộ:
+**Điều kiện:** trình dựng hiện còn đọc các bộ sưu tập cục bộ bên ngoài repo tại đường dẫn `2026/09…` ghi trong `evidence/dashboard-local-*.json`, tính từ thư mục `Others`. Vì vậy bản clone riêng lẻ chưa đủ để dựng lại dữ liệu; không được thay dữ liệu thiếu bằng số 0 hoặc số ước tính.
+
+## Chạy thử
 
 ```sh
 python -m http.server 8765 --bind 127.0.0.1
 ```
+
+Mở `http://127.0.0.1:8765/`. Kiểm tra 12 hồ sơ, bộ lọc, nguồn chỉ mục, kho lưu trữ AMV và chuyển mục bằng menu góc phải. Thử cả sáng/tối, màn hình hẹp và tùy chọn giảm chuyển động. Các lỗi chất lượng dữ liệu cần được ghi nhận cùng nguồn và phạm vi, không chỉ kiểm tra đồng bộ JSON.

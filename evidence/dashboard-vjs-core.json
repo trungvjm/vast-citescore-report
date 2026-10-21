@@ -680,8 +680,8 @@
           "system": "ACI",
           "collection": null,
           "status": "listed",
-          "evidenceLevel": "journal",
-          "sourceUrl": "http://www.asean-cites.org/index.php?r=contents%2Findex&id=9",
+          "evidenceLevel": "vast",
+          "sourceUrl": "https://vast.gov.vn/web/guest/tap-chi-chi-tiet/-/chi-tiet/tap-chi-khoa-hoc-va-cong-nghe-20046-438.html",
           "checkedAt": "2026-10-21",
           "coverage": "since 2017"
         },
@@ -1823,7 +1823,7 @@
           "collection": null,
           "status": "listed",
           "evidenceLevel": "database",
-          "sourceUrl": "https://doaj.org/toc/0868-3166",
+          "sourceUrl": "https://doaj.org/toc/2815-5947",
           "checkedAt": "2026-10-21",
           "coverage": null
         }
@@ -2479,9 +2479,9 @@
           "system": "ACI",
           "collection": null,
           "status": "listed",
-          "evidenceLevel": "journal",
-          "sourceUrl": "https://vjs.ac.vn/vjmech/abstracting-and-indexing",
-          "checkedAt": "2026-10-21",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/journal_info?jid=10758",
+          "checkedAt": "2026-10-22",
           "coverage": null
         },
         {

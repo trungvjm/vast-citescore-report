@@ -35,7 +35,6 @@
       "profileSources": [
         "https://link.springer.com/journal/10013",
         "https://link.springer.com/journal/10013/volumes-and-issues",
-        "https://vjs.ac.vn/",
         "https://vast.gov.vn/tap-chi"
       ],
       "indexings": [
@@ -829,7 +828,13 @@
       "publisher": "Springer Nature & Institute of Mathematics, Vietnam Academy of Science and Technology",
       "issn": "0251-4184",
       "eissn": "2315-4144",
-      "formerTitles": [],
+      "formerTitles": [
+        {
+          "title": "Acta Scientiarum Vietnamicarum, Sectio Scientiarum Mathematicarum et Physicarum",
+          "issn": null,
+          "until": "1974"
+        }
+      ],
       "frequency": {
         "issuesPerYear": 4,
         "sourceUrl": "https://link.springer.com/journal/40306"
@@ -2419,7 +2424,7 @@
         {
           "title": "Tạp chí Hóa học",
           "issn": "0866-7144",
-          "until": "2024"
+          "until": "2018"
         }
       ],
       "frequency": {
@@ -2428,9 +2433,9 @@
       },
       "profileSources": [
         "https://onlinelibrary.wiley.com/journal/25728288",
+        "https://vjs.ac.vn/index.php/vjchem/issue/archive",
         "https://vjs.ac.vn/index.php/vjchem",
-        "https://vast.gov.vn/tap-chi",
-        "https://vjs.ac.vn/vjchem/statistic"
+        "https://vast.gov.vn/tap-chi"
       ],
       "indexings": [
         {

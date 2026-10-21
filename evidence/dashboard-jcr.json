@@ -1,0 +1,381 @@
+{
+  "schemaVersion": 1,
+  "sourceKind": "user-supplied-jcr-pdf",
+  "journals": [
+    {
+      "id": "amv",
+      "code": "AMV",
+      "title": "Acta Mathematica Vietnamica",
+      "metricYear": 2025,
+      "issn": "0251-4184",
+      "eissn": "2315-4144",
+      "wosCollection": "ESCI",
+      "jif": 0.6,
+      "jifWithoutSelfCitations": 0.5,
+      "jci": 0.42,
+      "fiveYearJif": 0.4,
+      "immediacyIndex": 0.5,
+      "eigenfactorScore": 0.00052,
+      "normalizedEigenfactor": 0.11903,
+      "articleInfluenceScore": 0.301,
+      "totalCitations": 395,
+      "jifNumerator": 38,
+      "jifWithoutSelfNumerator": 36,
+      "jifDenominator": 66,
+      "fiveYearNumerator": 97,
+      "fiveYearDenominator": 230,
+      "immediacyNumerator": 10,
+      "immediacyDenominator": 21,
+      "citedHalfLife": 10.0,
+      "citingHalfLife": 15.5,
+      "categories": [
+        {
+          "name": "MATHEMATICS",
+          "jif": { "rank": 313, "total": 492, "quartile": "Q3", "percentile": 36.5 },
+          "jci": { "rank": 353, "total": 492, "quartile": "Q3", "percentile": 28.35 },
+          "jifHistory": [
+            { "year": 2025, "rank": 313, "total": 492, "quartile": "Q3", "percentile": 36.5 },
+            { "year": 2024, "rank": 438, "total": 492, "quartile": "Q4", "percentile": 11.1 },
+            { "year": 2023, "rank": 432, "total": 490, "quartile": "Q4", "percentile": 11.9 }
+          ],
+          "jciHistory": [
+            { "year": 2025, "rank": 353, "total": 492, "quartile": "Q3", "percentile": 28.35 },
+            { "year": 2024, "rank": 446, "total": 496, "quartile": "Q4", "percentile": 10.18 },
+            { "year": 2023, "rank": 398, "total": 490, "quartile": "Q4", "percentile": 18.88 },
+            { "year": 2022, "rank": 346, "total": 485, "quartile": "Q3", "percentile": 28.76 },
+            { "year": 2021, "rank": 310, "total": 475, "quartile": "Q3", "percentile": 34.84 },
+            { "year": 2020, "rank": 236, "total": 471, "quartile": "Q3", "percentile": 50.0 },
+            { "year": 2019, "rank": 307, "total": 470, "quartile": "Q3", "percentile": 34.79 },
+            { "year": 2018, "rank": 326, "total": 469, "quartile": "Q3", "percentile": 30.6 },
+            { "year": 2017, "rank": 358, "total": 462, "quartile": "Q4", "percentile": 22.62 }
+          ]
+        }
+      ],
+      "source": {
+        "filename": "JCR_ACTA MATH VIETNAM_2025.pdf",
+        "sha256": "fac709f46e4fac2e5b54ba950a882f0be0226ffa348eda2aec6d6dbbd73ac037",
+        "pageCount": 23,
+        "downloadedAtRaw": "6/20/2026 13:55:59",
+        "pages": {
+          "identity": 1,
+          "jif": 2,
+          "jifCalculation": 3,
+          "jci": 6,
+          "rankJif": 10,
+          "rankJci": 11,
+          "totalCitations": 7,
+          "otherMetrics": { "fiveYearJif": 22, "immediacyIndex": 23, "eigenfactorScore": 20, "normalizedEigenfactor": 20, "articleInfluenceScore": 21 }
+        }
+      },
+      "notes": [
+        "Total Citations in JCR year 2025 is 395 (verified on PDF page 7 and corroborated on page 12 Citation Network: 386 non-self + 9 self citations).",
+        "JIF calculation: 38/66 = 0.5758..., which rounds to the printed one-decimal JIF 0.6; the printed JIF without self-citations is 36/66 = 0.5454..., rounding to 0.5."
+      ]
+    },
+    {
+      "id": "vjm",
+      "code": "VJM",
+      "title": "Vietnam Journal of Mathematics",
+      "metricYear": 2025,
+      "issn": "2305-221X",
+      "eissn": "2305-2228",
+      "wosCollection": "ESCI",
+      "jif": 0.9,
+      "jifWithoutSelfCitations": 0.9,
+      "jci": 0.68,
+      "fiveYearJif": 0.8,
+      "immediacyIndex": 0.2,
+      "eigenfactorScore": 0.00140,
+      "normalizedEigenfactor": 0.31705,
+      "articleInfluenceScore": 0.526,
+      "totalCitations": 568,
+      "jifNumerator": 113,
+      "jifWithoutSelfNumerator": 108,
+      "jifDenominator": 127,
+      "fiveYearNumerator": 292,
+      "fiveYearDenominator": 350,
+      "immediacyNumerator": 8,
+      "immediacyDenominator": 48,
+      "citedHalfLife": 5.8,
+      "citingHalfLife": 16.3,
+      "categories": [
+        {
+          "name": "MATHEMATICS",
+          "jif": { "rank": 179, "total": 492, "quartile": "Q2", "percentile": 63.7 },
+          "jci": { "rank": 197, "total": 492, "quartile": "Q2", "percentile": 60.06 },
+          "jifHistory": [
+            { "year": 2025, "rank": 179, "total": 492, "quartile": "Q2", "percentile": 63.7 },
+            { "year": 2024, "rank": 242, "total": 492, "quartile": "Q2", "percentile": 50.9 },
+            { "year": 2023, "rank": 179, "total": 490, "quartile": "Q2", "percentile": 63.6 }
+          ],
+          "jciHistory": [
+            { "year": 2025, "rank": 197, "total": 492, "quartile": "Q2", "percentile": 60.06 },
+            { "year": 2024, "rank": 198, "total": 496, "quartile": "Q2", "percentile": 60.18 },
+            { "year": 2023, "rank": 168, "total": 490, "quartile": "Q2", "percentile": 65.82 },
+            { "year": 2022, "rank": 208, "total": 485, "quartile": "Q2", "percentile": 57.22 },
+            { "year": 2021, "rank": 161, "total": 475, "quartile": "Q2", "percentile": 66.21 },
+            { "year": 2020, "rank": 169, "total": 471, "quartile": "Q2", "percentile": 64.23 },
+            { "year": 2019, "rank": 186, "total": 470, "quartile": "Q2", "percentile": 60.53 },
+            { "year": 2018, "rank": 255, "total": 469, "quartile": "Q3", "percentile": 45.74 },
+            { "year": 2017, "rank": 313, "total": 462, "quartile": "Q3", "percentile": 32.36 }
+          ]
+        }
+      ],
+      "source": {
+        "filename": "JCR_VIETNAM J MATH_2025.pdf",
+        "sha256": "2062d3d1d1fff6f15abefc4708f4b65a81233788ecda3e17df404c73d9b18388",
+        "pageCount": 23,
+        "downloadedAtRaw": "6/20/2026 13:53:51",
+        "pages": {
+          "identity": 1,
+          "jif": 2,
+          "jifCalculation": 3,
+          "jci": 6,
+          "rankJif": 10,
+          "rankJci": 11,
+          "totalCitations": 7,
+          "otherMetrics": { "fiveYearJif": 22, "immediacyIndex": 23, "eigenfactorScore": 20, "normalizedEigenfactor": 20, "articleInfluenceScore": 21 }
+        }
+      },
+      "notes": [
+        "Total Citations in JCR year 2025 is 568 (verified on PDF page 7 and corroborated on page 12 Citation Network: 559 non-self + 9 self citations).",
+        "JIF calculation: 113/127 = 0.8898..., which rounds to the printed one-decimal JIF 0.9. The without-self-citations numerator is 108, giving 108/127 = 0.8504..., also rounding to 0.9."
+      ]
+    },
+    {
+      "id": "vjc",
+      "code": "VJC",
+      "title": "Vietnam Journal of Chemistry",
+      "metricYear": 2025,
+      "issn": "0866-7144",
+      "eissn": "2572-8288",
+      "wosCollection": "ESCI",
+      "jif": 1.4,
+      "jifWithoutSelfCitations": 1.4,
+      "jci": 0.19,
+      "fiveYearJif": 1.3,
+      "immediacyIndex": 0.2,
+      "eigenfactorScore": 0.00072,
+      "normalizedEigenfactor": 0.16450,
+      "articleInfluenceScore": 0.148,
+      "totalCitations": 1079,
+      "jifNumerator": 433,
+      "jifWithoutSelfNumerator": 420,
+      "jifDenominator": 300,
+      "fiveYearNumerator": 834,
+      "fiveYearDenominator": 645,
+      "immediacyNumerator": 26,
+      "immediacyDenominator": 120,
+      "citedHalfLife": 3.5,
+      "citingHalfLife": 8.8,
+      "categories": [
+        {
+          "name": "CHEMISTRY, MULTIDISCIPLINARY",
+          "jif": { "rank": 184, "total": 250, "quartile": "Q3", "percentile": 26.6 },
+          "jci": { "rank": 186, "total": 251, "quartile": "Q3", "percentile": 26.10 },
+          "jifHistory": [
+            { "year": 2025, "rank": 184, "total": 250, "quartile": "Q3", "percentile": 26.6 },
+            { "year": 2024, "rank": 166, "total": 239, "quartile": "Q3", "percentile": 30.8 },
+            { "year": 2023, "rank": 160, "total": 231, "quartile": "Q3", "percentile": 31.0 }
+          ],
+          "jciHistory": [
+            { "year": 2025, "rank": 186, "total": 251, "quartile": "Q3", "percentile": 26.10 },
+            { "year": 2024, "rank": 174, "total": 241, "quartile": "Q3", "percentile": 28.01 },
+            { "year": 2023, "rank": 177, "total": 231, "quartile": "Q4", "percentile": 23.59 },
+            { "year": 2022, "rank": 183, "total": 230, "quartile": "Q4", "percentile": 20.65 },
+            { "year": 2021, "rank": 190, "total": 224, "quartile": "Q4", "percentile": 15.40 }
+          ]
+        }
+      ],
+      "source": {
+        "filename": "JCR_VIETNAM J CHEM_2025.pdf",
+        "sha256": "173b33954dbd64b061afff2c31794f5dbd10d27565e712839c9c71ca15df2aef",
+        "pageCount": 24,
+        "downloadedAtRaw": "6/20/2026 13:53:40",
+        "pages": {
+          "identity": 1,
+          "jif": 2,
+          "jifCalculation": 3,
+          "jci": 6,
+          "rankJif": 10,
+          "rankJci": 11,
+          "totalCitations": 7,
+          "otherMetrics": { "fiveYearJif": 23, "immediacyIndex": 24, "eigenfactorScore": 21, "normalizedEigenfactor": 21, "articleInfluenceScore": 22 }
+        }
+      },
+      "notes": [
+        "PDF prints ISSN 0866-7144; current dashboard identity uses ISSN 2525-2321 with 0866-7144 listed as former-title ISSN (through 2024). This is a historical ISSN mismatch, not silently reconciled.",
+        "JIF calculation: 433/300 = 1.4433..., which rounds to the printed one-decimal JIF 1.4; without self-citations, 420/300 = 1.4."
+      ]
+    },
+    {
+      "id": "vjes",
+      "code": "VJES",
+      "title": "Vietnam Journal of Earth Sciences",
+      "metricYear": 2025,
+      "issn": "0866-7187",
+      "eissn": "2615-9783",
+      "wosCollection": "ESCI",
+      "jif": 2.1,
+      "jifWithoutSelfCitations": 1.7,
+      "jci": 0.64,
+      "fiveYearJif": 1.7,
+      "immediacyIndex": 1.0,
+      "eigenfactorScore": 0.00028,
+      "normalizedEigenfactor": 0.06486,
+      "articleInfluenceScore": 0.245,
+      "totalCitations": 417,
+      "jifNumerator": 133,
+      "jifWithoutSelfNumerator": 105,
+      "jifDenominator": 63,
+      "fiveYearNumerator": 257,
+      "fiveYearDenominator": 154,
+      "immediacyNumerator": 25,
+      "immediacyDenominator": 24,
+      "citedHalfLife": 3.8,
+      "citingHalfLife": 8.4,
+      "categories": [
+        {
+          "name": "GEOSCIENCES, MULTIDISCIPLINARY",
+          "jif": { "rank": 143, "total": 259, "quartile": "Q3", "percentile": 45.0 },
+          "jci": { "rank": 117, "total": 259, "quartile": "Q2", "percentile": 55.02 },
+          "jifHistory": [
+            { "year": 2025, "rank": 143, "total": 259, "quartile": "Q3", "percentile": 45.0 },
+            { "year": 2024, "rank": 108, "total": 258, "quartile": "Q2", "percentile": 58.3 },
+            { "year": 2023, "rank": 111, "total": 254, "quartile": "Q2", "percentile": 56.5 }
+          ],
+          "jciHistory": [
+            { "year": 2025, "rank": 117, "total": 259, "quartile": "Q2", "percentile": 55.02 },
+            { "year": 2024, "rank": 107, "total": 258, "quartile": "Q2", "percentile": 58.72 },
+            { "year": 2023, "rank": 133, "total": 254, "quartile": "Q3", "percentile": 47.83 },
+            { "year": 2022, "rank": 174, "total": 249, "quartile": "Q3", "percentile": 30.32 },
+            { "year": 2021, "rank": 164, "total": 245, "quartile": "Q3", "percentile": 33.27 },
+            { "year": 2020, "rank": 192, "total": 239, "quartile": "Q4", "percentile": 19.87 },
+            { "year": 2019, "rank": 206, "total": 239, "quartile": "Q4", "percentile": 14.02 }
+          ]
+        }
+      ],
+      "source": {
+        "filename": "JCR_VIETNAM J EARTH SCI_2025.pdf",
+        "sha256": "29623c9c0c6c96e51d8266464234cc8ed53ed0863641ef8f454814eb9b366d8b",
+        "pageCount": 23,
+        "downloadedAtRaw": "6/20/2026 13:53:31",
+        "pages": {
+          "identity": 1,
+          "jif": 2,
+          "jifCalculation": 3,
+          "jci": 6,
+          "rankJif": 10,
+          "rankJci": 11,
+          "totalCitations": 7,
+          "otherMetrics": { "fiveYearJif": 22, "immediacyIndex": 23, "eigenfactorScore": 20, "normalizedEigenfactor": 20, "articleInfluenceScore": 21 }
+        }
+      },
+      "notes": [
+        "PDF prints ISSN 0866-7187 and EISSN 2615-9783; dashboard current ISSN is 2615-9783 and current EISSN is 2815-5890 (0866-7187 is recorded as former-title ISSN through 2017). The PDF's serial identifiers conflict with the dashboard current identity and are preserved exactly as printed.",
+        "Total Citations in JCR year 2025 is 417 (verified on PDF page 7 and corroborated on page 12 Citation Network: 352 non-self + 65 self citations).",
+        "JIF calculation: 133/63 = 2.1111..., which rounds to the printed one-decimal JIF 2.1; without self-citations, 105/63 = 1.6667..., rounding to 1.7."
+      ]
+    },
+    {
+      "id": "ansn",
+      "code": "ANSN",
+      "title": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
+      "metricYear": 2025,
+      "issn": "2043-6254",
+      "eissn": "2043-6262",
+      "wosCollection": "ESCI",
+      "jif": 2.4,
+      "jifWithoutSelfCitations": 1.9,
+      "jci": 0.31,
+      "fiveYearJif": 2.4,
+      "immediacyIndex": 0.8,
+      "eigenfactorScore": 0.00066,
+      "normalizedEigenfactor": 0.15122,
+      "articleInfluenceScore": 0.243,
+      "totalCitations": 2750,
+      "jifNumerator": 355,
+      "jifWithoutSelfNumerator": 288,
+      "jifDenominator": 148,
+      "fiveYearNumerator": 855,
+      "fiveYearDenominator": 362,
+      "immediacyNumerator": 58,
+      "immediacyDenominator": 77,
+      "citedHalfLife": 7.7,
+      "citingHalfLife": 5.8,
+      "categories": [
+        {
+          "name": "MATERIALS SCIENCE, MULTIDISCIPLINARY",
+          "jif": { "rank": 326, "total": 472, "quartile": "Q3", "percentile": 31.0 },
+          "jci": { "rank": 362, "total": 473, "quartile": "Q4", "percentile": 23.57 },
+          "jifHistory": [
+            { "year": 2025, "rank": 326, "total": 472, "quartile": "Q3", "percentile": 31.0 },
+            { "year": 2024, "rank": 318, "total": 461, "quartile": "Q3", "percentile": 31.1 },
+            { "year": 2023, "rank": 322, "total": 439, "quartile": "Q3", "percentile": 26.8 }
+          ],
+          "jciHistory": [
+            { "year": 2025, "rank": 362, "total": 473, "quartile": "Q4", "percentile": 23.57 },
+            { "year": 2024, "rank": 356, "total": 463, "quartile": "Q4", "percentile": 23.22 },
+            { "year": 2023, "rank": 332, "total": 439, "quartile": "Q4", "percentile": 24.49 },
+            { "year": 2022, "rank": 313, "total": 424, "quartile": "Q3", "percentile": 26.30 },
+            { "year": 2021, "rank": 309, "total": 414, "quartile": "Q3", "percentile": 25.48 }
+          ]
+        },
+        {
+          "name": "NANOSCIENCE & NANOTECHNOLOGY",
+          "jif": { "rank": 113, "total": 148, "quartile": "Q4", "percentile": 24.0 },
+          "jci": { "rank": 114, "total": 148, "quartile": "Q4", "percentile": 23.31 },
+          "jifHistory": [
+            { "year": 2025, "rank": 113, "total": 148, "quartile": "Q4", "percentile": 24.0 },
+            { "year": 2024, "rank": 116, "total": 147, "quartile": "Q4", "percentile": 21.4 },
+            { "year": 2023, "rank": 113, "total": 141, "quartile": "Q4", "percentile": 20.2 }
+          ],
+          "jciHistory": [
+            { "year": 2025, "rank": 114, "total": 148, "quartile": "Q4", "percentile": 23.31 },
+            { "year": 2024, "rank": 118, "total": 147, "quartile": "Q4", "percentile": 20.07 },
+            { "year": 2023, "rank": 112, "total": 141, "quartile": "Q4", "percentile": 20.92 },
+            { "year": 2022, "rank": 105, "total": 141, "quartile": "Q3", "percentile": 25.89 },
+            { "year": 2021, "rank": 102, "total": 138, "quartile": "Q3", "percentile": 26.45 }
+          ]
+        },
+        {
+          "name": "PHYSICS, APPLIED",
+          "jif": { "rank": 123, "total": 191, "quartile": "Q3", "percentile": 35.9 },
+          "jci": { "rank": 144, "total": 191, "quartile": "Q4", "percentile": 24.87 },
+          "jifHistory": [
+            { "year": 2025, "rank": 123, "total": 191, "quartile": "Q3", "percentile": 35.9 },
+            { "year": 2024, "rank": 123, "total": 187, "quartile": "Q3", "percentile": 34.5 },
+            { "year": 2023, "rank": 125, "total": 179, "quartile": "Q3", "percentile": 30.4 }
+          ],
+          "jciHistory": [
+            { "year": 2025, "rank": 144, "total": 191, "quartile": "Q4", "percentile": 24.87 },
+            { "year": 2024, "rank": 147, "total": 187, "quartile": "Q4", "percentile": 21.66 },
+            { "year": 2023, "rank": 138, "total": 179, "quartile": "Q4", "percentile": 23.18 },
+            { "year": 2022, "rank": 133, "total": 178, "quartile": "Q3", "percentile": 25.56 },
+            { "year": 2021, "rank": 126, "total": 178, "quartile": "Q3", "percentile": 29.49 }
+          ]
+        }
+      ],
+      "source": {
+        "filename": "JCR_ADV NAT SCI-NANOSCI_2025.pdf",
+        "sha256": "5039ef64c40608e67723e37f003396d8c0356a16aa562e50da572ec7ec792080",
+        "pageCount": 24,
+        "downloadedAtRaw": "6/20/2026 13:52:09",
+        "pages": {
+          "identity": 1,
+          "jif": 2,
+          "jifCalculation": 3,
+          "jci": 6,
+          "rankJif": [10, 11],
+          "rankJci": 12,
+          "totalCitations": 7,
+          "otherMetrics": { "fiveYearJif": 23, "immediacyIndex": 24, "eigenfactorScore": 21, "normalizedEigenfactor": 21, "articleInfluenceScore": 22 }
+        }
+      },
+      "notes": [
+        "All three printed JIF category rows and all three printed JCI category rows are captured separately. The Materials Science and Nanoscience historical tables before JCR year 2023 identify SCIE despite this report's current edition identifying ESCI; no pre-2023 rank history is included.",
+        "JIF calculation: 355/148 = 2.3986..., which rounds to the printed one-decimal JIF 2.4; without self-citations, 288/148 = 1.9459..., which rounds to the printed 1.9."
+      ]
+    }
+  ]
+}

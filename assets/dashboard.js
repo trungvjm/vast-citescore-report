@@ -119,222 +119,156 @@ function initThemeMode(){
 /* ==========================================================================
    2. ARTCRAFT SCROLLBAR RULER, SCROLL-FLIGHT LETTERS & KINETIC MARQUEE
    ========================================================================== */
-const flightSections=[
-  {id:'overview',elId:'section-overview',word:'TỔNG QUAN'},
-  {id:'citescore',elId:'section-citescore',word:'CITESCORE'},
-  {id:'catalog',elId:'section-catalog',word:'DANH MỤC'},
-  {id:'references',elId:'section-references',word:'THAM KHẢO'}
+const homeFlightSections=[
+  {id:'overview',elId:'section-overview',word:'TỔNG QUAN',navId:'overview'},
+  {id:'citescore',elId:'section-citescore',word:'CITESCORE',navId:'overview'},
+  {id:'catalog',elId:'section-catalog',word:'DANH MỤC',navId:'catalog'},
+  {id:'references',elId:'section-references',word:'THAM KHẢO',navId:'references'}
 ];
-
-let flightCharsBySec={};
+let flightSections=[];
+let flightRoute='';
+let flightBrand='VAST JOURNALS';
 let marqueeOffset=0;
 let marqueeVelocity=0.45;
 let lastScrollY=0;
+let scrollFrame=0;
+const clamp01=value=>Math.max(0,Math.min(1,value));
+
+function setFlightSections(sections,brand='VAST JOURNALS',route=''){
+  flightRoute=route;
+  flightBrand=brand;
+  const stage=$('#flight-letters-stage');
+  const anchors=$('.flight-corner-anchors');
+  stage.replaceChildren();
+  anchors.replaceChildren();
+  flightSections=sections.filter(s=>document.getElementById(s.elId)).map(section=>{
+    const anchor=document.createElement('a');
+    anchor.href=route?`#journal/${route}/${section.elId}`:`#${section.elId}`;
+    anchor.textContent=section.word;
+    anchor.dataset.flightLink=section.id;
+    anchors.append(anchor);
+    let width=0;
+    const chars=[...section.word].map((ch,index)=>{
+      const el=document.createElement('span');
+      el.className='flight-char';
+      el.textContent=ch;
+      el.dataset.flightSection=section.id;
+      el.style.opacity='0';
+      stage.append(el);
+      const charWidth=el.getBoundingClientRect().width;
+      const center=width+charWidth/2;
+      width+=charWidth+1.4;
+      return {el,center,index};
+    });
+    return {...section,element:document.getElementById(section.elId),anchor,chars,width};
+  });
+  $('#flight-brand-dock').textContent=brand;
+  $('#scroll-flight-layer').hidden=false;
+  lastScrollY=window.scrollY;
+  onScrollUpdate();
+}
+
+function scheduleScrollUpdate(){
+  if(scrollFrame)return;
+  scrollFrame=requestAnimationFrame(()=>{
+    scrollFrame=0;
+    onScrollUpdate();
+  });
+}
 
 function initRulerAndFlight(){
-  // 1. Build 0..100 ticks inside #ruler-track
   const track=$('#ruler-track');
-  if(track){
-    const totalHeight=2400;
-    track.style.height=`${totalHeight}px`;
-    let html='';
-    for(let i=0;i<=100;i++){
-      const y=(i/100)*totalHeight;
-      const isMajor=i%5===0;
-      html+=`<div style="position:absolute;left:0;right:0;top:${y.toFixed(1)}px;height:0">
-        <span class="ruler-tick ${isMajor?'is-major':'is-minor'}"></span>
-        ${isMajor?`<span class="ruler-tick-label">${i}</span>`:''}
-      </div>`;
-    }
-    track.innerHTML=html;
-  }
-
-  // Click on scrollbar to jump to scroll %
-  const sb=$('#artcraft-scrollbar');
-  if(sb){
-    sb.addEventListener('click',e=>{
-      const rect=sb.getBoundingClientRect();
-      const ratio=Math.max(0,Math.min(1,(e.clientY-rect.top)/Math.max(1,rect.height)));
-      const maxScroll=Math.max(0,document.documentElement.scrollHeight-window.innerHeight);
-      window.scrollTo({top:ratio*maxScroll,behavior:'smooth'});
+  track.style.height='2400px';
+  track.innerHTML=Array.from({length:101},(_,i)=>{
+    const major=i%5===0;
+    return `<div style="position:absolute;left:0;right:0;top:${i*24}px;height:0"><span class="ruler-tick ${major?'is-major':'is-minor'}"></span>${major?`<span class="ruler-tick-label">${i}</span>`:''}</div>`;
+  }).join('');
+  $('#artcraft-scrollbar').addEventListener('click',e=>{
+    const rect=e.currentTarget.getBoundingClientRect();
+    const ratio=clamp01((e.clientY-rect.top)/Math.max(1,rect.height));
+    window.scrollTo({top:ratio*Math.max(0,document.documentElement.scrollHeight-innerHeight),behavior:reducedMotion.matches?'instant':'smooth'});
+  });
+  if(!reducedMotion.matches&&'IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>{
+      for(const entry of entries)if(entry.isIntersecting)entry.target.classList.remove('is-pending');
+    },{threshold:0.08});
+    document.querySelectorAll('[data-reveal]').forEach((el,index)=>{
+      if(index>0)el.classList.add('is-pending');
+      observer.observe(el);
     });
   }
-
-  // 2. Build flight characters for each section word
-  const stage=$('#flight-letters-stage');
-  const dock=$('#flight-brand-dock');
-  if(dock)dock.textContent='VAST JOURNALS';
-  if(stage){
-    flightCharsBySec={};
-    let html='';
-    flightSections.forEach((sec,sIdx)=>{
-      const chars=[...sec.word];
-      flightCharsBySec[sec.id]=chars.map((ch,cIdx)=>{
-        const domId=`flight-c-${sec.id}-${cIdx}`;
-        html+=`<span id="${domId}" class="flight-char" style="opacity:0">${esc(ch)}</span>`;
-        return {ch,domId,cIdx,total:chars.length,sIdx};
-      });
-    });
-    stage.innerHTML=html;
-  }
-
-  // 3. Scroll reveal observer for [data-reveal]
-  if(!reducedMotion.matches && 'IntersectionObserver' in window){
-    const els=[...document.querySelectorAll('[data-reveal]')];
-    els.forEach((el,idx)=>{
-      if(idx>0)el.classList.add('is-pending');
-    });
-    const io=new IntersectionObserver(entries=>{
-      for(const ent of entries){
-        if(ent.isIntersecting){
-          ent.target.classList.remove('is-pending');
-        }
-      }
-    },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
-    els.forEach(el=>io.observe(el));
-  }
-
-  // 4. Scroll & resize listener + RAF marquee loop
-  window.addEventListener('scroll',onScrollUpdate,{passive:true});
-  window.addEventListener('resize',onScrollUpdate,{passive:true});
-  onScrollUpdate();
-  if(!reducedMotion.matches){
-    requestAnimationFrame(stepMarquee);
-  }
+  window.addEventListener('scroll',scheduleScrollUpdate,{passive:true});
+  window.addEventListener('resize',scheduleScrollUpdate,{passive:true});
+  reducedMotion.addEventListener('change',()=>{
+    document.querySelectorAll('.is-pending').forEach(el=>el.classList.remove('is-pending'));
+    scheduleScrollUpdate();
+  });
+  document.fonts.ready.then(()=>{
+    setFlightSections(flightSections,flightBrand,flightRoute);
+  });
+  requestAnimationFrame(stepMarquee);
 }
 
 function onScrollUpdate(){
-  const scrollY=window.scrollY||window.pageYOffset||0;
-  const dy=scrollY-lastScrollY;
+  const scrollY=window.scrollY;
+  marqueeVelocity=Math.max(-4.2,Math.min(4.8,0.45+(scrollY-lastScrollY)*0.08));
   lastScrollY=scrollY;
-  marqueeVelocity=Math.max(-4.2,Math.min(4.8,0.45+dy*0.08));
+  const vw=innerWidth,vh=innerHeight;
+  const progress=clamp01(scrollY/Math.max(1,document.documentElement.scrollHeight-vh));
+  const percent=Math.round(progress*100);
+  $('#artcraft-scrollbar').setAttribute('aria-valuenow',String(percent));
+  $('#ruler-percent').textContent=String(percent).padStart(3,'0')+'%';
+  $('#ruler-indicator').style.transform=`translateY(${24+progress*Math.max(10,vh-96)}px)`;
+  $('#ruler-track').style.transform=`translateY(${-progress*(2400-vh+48)}px)`;
 
-  const vw=window.innerWidth||1440;
-  const vh=window.innerHeight||900;
-  const maxScroll=Math.max(1,document.documentElement.scrollHeight-vh);
-  const progress=Math.max(0,Math.min(1,scrollY/maxScroll));
-  const pctInt=Math.round(progress*100);
+  const detail=Boolean(flightRoute);
+  const hero=$('#hero-wordmark');
+  const heroProgress=detail||reducedMotion.matches?0:clamp01(scrollY/380);
+  hero.style.transform=`translateY(${-heroProgress*34}px) scale(${1-heroProgress*0.32})`;
+  hero.style.opacity=String(1-heroProgress*0.85);
+  $('#flight-brand-dock').classList.toggle('is-docked',detail||scrollY>260);
+  if(!flightSections.length)return;
 
-  // Update right-hand ruler & blue percentage indicator
-  const sb=$('#artcraft-scrollbar');
-  const ind=$('#ruler-indicator');
-  const pctEl=$('#ruler-percent');
-  const track=$('#ruler-track');
-  if(sb&&ind&&pctEl&&track){
-    sb.setAttribute('aria-valuenow',String(pctInt));
-    const sbHeight=vh-48;
-    const indY=24+progress*Math.max(10,sbHeight-48);
-    ind.style.transform=`translate3d(0,${indY.toFixed(1)}px,0)`;
-    pctEl.textContent=String(pctInt).padStart(3,'0')+'%';
-    const trackShift=-progress*(2400-sbHeight);
-    track.style.transform=`translate3d(0,${trackShift.toFixed(1)}px,0)`;
-  }
-
-  // Hero wordmark scale & top-right brand dock
-  const heroWm=$('#hero-wordmark');
-  const dock=$('#flight-brand-dock');
-  const heroProgress=Math.max(0,Math.min(1,scrollY/380));
-  if(heroWm){
-    const s=1-heroProgress*0.32;
-    const op=1-heroProgress*0.85;
-    heroWm.style.transform=`translate3d(0,${(-heroProgress*34).toFixed(1)}px,0) scale(${s.toFixed(3)})`;
-    heroWm.style.opacity=op.toFixed(3);
-  }
-  if(dock){
-    dock.classList.toggle('is-docked',scrollY>260);
-  }
-
-  // Determine active section & animate character flight along right-hand curve
-  if(vw<768||!$('#home-view')||$('#home-view').hidden)return;
-  let activeSecIndex=0;
-  let secTransition=0;
-  const secTops=flightSections.map(s=>{
-    const el=document.getElementById(s.elId);
-    return el?el.getBoundingClientRect().top:99999;
+  const tops=flightSections.map(s=>s.element.getBoundingClientRect().top);
+  const entryY=detail?Math.min(vh*0.44,380):vh*0.82;
+  let active=detail?0:-1;
+  tops.forEach((top,index)=>{if(top<=entryY)active=index;});
+  if(progress>0.995)active=flightSections.length-1;
+  const current=flightSections[active];
+  document.querySelectorAll('.nav-pill').forEach(el=>{
+    el.classList.toggle('is-active',el.dataset.navSec===(detail?'catalog':current?.navId??'overview'));
   });
-
-  // Compute continuous section index (0..3) based on viewport position
-  const triggerY=vh*0.42;
-  for(let i=0;i<flightSections.length;i++){
-    if(secTops[i]<=triggerY){
-      activeSecIndex=i;
-      const nextTop=i+1<flightSections.length?secTops[i+1]:99999;
-      const span=Math.max(220,nextTop-secTops[i]);
-      secTransition=Math.max(0,Math.min(1,(triggerY-secTops[i])/span));
-    }
-  }
-
-  // Update navbar pills & corner anchors
-  const navSec=activeSecIndex<=1?'overview':flightSections[activeSecIndex].id;
-  for(const pill of document.querySelectorAll('.nav-pill')){
-    pill.classList.toggle('is-active',pill.dataset.navSec===navSec);
-  }
-  for(const a of document.querySelectorAll('[data-flight-link]')){
-    a.classList.toggle('is-current',a.dataset.flightLink===flightSections[activeSecIndex].id);
-  }
-
-  // Animate the active section's characters from bottom-right stack along curved arc to top-right HUD
-  const dockRightX=vw-76;
-  const dockTopY=86;
-  const bottomStackY=vh-105;
-
-  flightSections.forEach((sec,sIdx)=>{
-    const chars=flightCharsBySec[sec.id]||[];
-    const total=chars.length;
-    const charStep=21.5;
-    const wordWidth=(total-1)*charStep;
-
-    // Flight progress t in [0..1]: 0 = parked at bottom-right stack, 1 = assembled at top-right HUD
-    let flightT=0;
-    if(scrollY>120){
-      if(sIdx===activeSecIndex){
-        const entryT=Math.max(0,Math.min(1,( triggerY - secTops[sIdx] + 260 ) / 320));
-        flightT=entryT;
-      }else if(sIdx<activeSecIndex){
-        flightT=1;
-      }
-    }
-
-    chars.forEach(item=>{
-      const el=document.getElementById(item.domId);
-      if(!el)return;
-      if(sIdx!==activeSecIndex){
+  flightSections.forEach((section,index)=>{
+    section.anchor.classList.toggle('is-current',index===active);
+    if(index===active)section.anchor.setAttribute('aria-current','location');
+    else section.anchor.removeAttribute('aria-current');
+    const span=Math.max(120,entryY-96);
+    const t=reducedMotion.matches?1:(detail&&index===0?clamp01(scrollY/220):clamp01((entryY-tops[index])/span));
+    section.chars.forEach(({el,center,index:charIndex})=>{
+      if(index!==active||vw<768){
         el.style.opacity='0';
         return;
       }
-      // Stagger each character along the flight curve
-      const delay=(item.cIdx/Math.max(1,total))*0.32;
-      const u=Math.max(0,Math.min(1,(flightT-delay)/(1-0.32)));
-      // Smooth cubic ease
-      const ease=u<0.5?4*u*u*u:1-Math.pow(-2*u+2,3)/2;
-
-      const startX=dockRightX-wordWidth*0.48+item.cIdx*8.2;
-      const startY=bottomStackY+sIdx*20;
-      const endX=dockRightX-wordWidth+item.cIdx*charStep;
-      const endY=dockTopY;
-
-      // Quadratic arc bowing slightly inward along the right-hand spiral
-      const ctrlX=vw-26;
-      const ctrlY=(startY+endY)*0.5;
-      const oneMinus=1-ease;
-      const x=oneMinus*oneMinus*startX + 2*oneMinus*ease*ctrlX + ease*ease*endX;
-      const y=oneMinus*oneMinus*startY + 2*oneMinus*ease*ctrlY + ease*ease*endY;
-
-      // Rotation tangent while mid-flight (0 deg at start and 0 deg at top dock, -75 deg mid-arc)
-      const arcBell=Math.sin(ease*Math.PI);
-      const rot=-72*arcBell;
-      const scale=0.52+0.48*ease;
-      const opacity=scrollY<80?0:(0.35+0.65*ease);
-
-      el.style.opacity=opacity.toFixed(3);
-      el.style.transform=`translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0) translate(-50%,-50%) rotate(${rot.toFixed(1)}deg) scale(${scale.toFixed(3)})`;
+      const delay=charIndex/Math.max(1,section.chars.length)*0.18;
+      const u=clamp01((t-delay)/0.82);
+      const ease=u*u*(3-2*u);
+      const startX=vw-76-(section.width-center)*0.54;
+      const startY=vh-110+index*20;
+      const endX=vw-76-section.width+center;
+      const endY=96;
+      const inverse=1-ease;
+      const x=inverse*inverse*startX+2*inverse*ease*(vw-40)+ease*ease*endX;
+      const y=inverse*inverse*startY+2*inverse*ease*((startY+endY)/2)+ease*ease*endY;
+      const rotation=reducedMotion.matches?0:-65*Math.sin(ease*Math.PI);
+      el.style.opacity=String(0.4+ease*0.6);
+      el.style.transform=`translate3d(${x}px,${y}px,0) translate(-50%,-50%) rotate(${rotation}deg) scale(${0.54+ease*0.46})`;
     });
   });
 }
 
 function stepMarquee(){
   const track=$('#marquee-track');
-  if(track&&track.firstElementChild){
+  if(track&&track.firstElementChild&&!reducedMotion.matches&&!document.hidden&&!$('#home-view').hidden){
     marqueeVelocity+=(0.45-marqueeVelocity)*0.06;
     marqueeOffset-=marqueeVelocity;
     const halfWidth=track.scrollWidth/2;
@@ -361,7 +295,19 @@ function formatValue(value,metric=state.metric){
 function safeUrl(url){return /^https?:\/\//i.test(String(url??''))?String(url):'#';}
 function external(url,text){return `<a href="${esc(safeUrl(url))}" target="_blank" rel="noopener noreferrer">${esc(text??url)}</a>`;}
 function fullName(j){return j.title+` (${j.code})`;}
-function isScopusVerified(j){return j.indexings.some(i=>i.system==='Scopus'&&(i.status==='verified'||i.status==='listed'));}
+function publicationFrequency(j){
+  const issues=j.frequency?.issuesPerYear;
+  return Number.isInteger(issues)&&issues>0?`${issues} kỳ/năm`:'Chưa có thông tin';
+}
+function archiveLinks(j){
+  return [external(j.archiveUrl,'Các số đã xuất bản'),...(j.additionalArchives??[]).map(a=>external(a.url,a.label))].join(' · ');
+}
+function indexingStatusLabel(status){
+  if(status==='listed')return 'Đã có trong danh mục';
+  if(status==='not_listed')return 'Chưa có trong danh mục theo nguồn đã kiểm tra';
+  return 'Chưa xác minh';
+}
+function isScopusVerified(j){return j.indexings.some(i=>i.system==='Scopus'&&i.status==='listed');}
 function scopusRecord(j,year){return scopus.records.find(r=>r.journal===j.code&&r.year===year);}
 function annualRecord(j,year){return scopus.records.find(r=>r.journal===j.code&&r.year===year&&r.type==='annual');}
 function trackerRecord(j){return scopus.records.find(r=>r.journal===j.code&&r.year===scopus.trackerYear&&r.type==='tracker');}
@@ -384,10 +330,10 @@ function observation(j,metric,year){
 
 function indexingBadges(j){
   const groupBadge=`<span class="badge ${j.group==='VAST-1'?'is-vast1':'is-vast2'}">${esc(j.group)}</span>`;
-  const verified=j.indexings.filter(i=>i.status==='verified'||i.status==='listed').map(i=>{
+  const verified=j.indexings.filter(i=>i.status==='listed').map(i=>{
     const short=i.system==='WoS'?(i.collection?`WoS ${i.collection}`:'WoS'):i.system;
-    const mark=i.evidenceLevel==='database'?'':'*';
-    return `<span class="badge is-verified" title="${esc(i.notes||short)}">${esc(short+mark)}</span>`;
+    const source=i.evidenceLevel==='database'?'cơ sở dữ liệu':i.evidenceLevel==='vast'?'website VAST':'website tạp chí';
+    return `<a class="badge is-verified" href="${esc(safeUrl(i.sourceUrl))}" target="_blank" rel="noopener noreferrer" title="${esc(`${short}: đã có trong danh mục. Nguồn: ${source}.`)}">${esc(short)}</a>`;
   }).join('');
   return groupBadge+verified;
 }
@@ -454,19 +400,19 @@ function renderHeroAndOverview(){
   const totalCitingDocs=dashboard.journals.reduce((s,j)=>s+(j.localCitation?.totals?.citingDocs??0),0);
 
   const cells=[
-    ['Hệ thống tạp chí VAST','12 tạp chí','7 tạp chí VAST-1 (Scopus/WoS) · 5 tạp chí VAST-2'],
-    ['Tổng số bài lịch sử (1976–2026)',`${integer.format(totalAllTimePapers)} bài`,`${integer.format(totalAllTimeIssues)} kỳ phát hành trực tuyến đã lưu trữ`],
-    ['Tổng trích dẫn đã xác nhận',`${integer.format(totalConfirmedCitations)} lượt`,`Từ ${integer.format(totalCitingDocs)} bài báo quốc tế trích dẫn`],
-    ['Đỉnh CiteScore VAST-1','5,0 (VJES)','ANSN: 3,9 (Tracker 4,0) · VJC: 3,0 (Tracker 3,4)']
+    ['Hệ thống tạp chí VAST','12 tạp chí','7 tạp chí VAST-1 (Scopus; 5 tạp chí có JCR/ESCI) · 5 tạp chí VAST-2'],
+    ['Tổng số bài có dữ liệu (1976–2026)',`${integer.format(totalAllTimePapers)} bài`,`${integer.format(totalAllTimeIssues)} kỳ phát hành trực tuyến đã lưu trữ`],
+    ['Tổng trích dẫn đối soát OJS (9 tạp chí)',`${integer.format(totalConfirmedCitations)} lượt`,`Từ ${integer.format(totalCitingDocs)} bài trích dẫn (không gồm VJM, AMV, ANSN)`],
+    ['Đỉnh CiteScore & JIF 2025','CS 5,0 · JIF 2,4','CiteScore: VJES 5,0 · ANSN 3,9 | JIF (JCR): ANSN 2,4 · VJES 2,1']
   ];
   $('#summary-strip').innerHTML=cells.map(([l,v,d])=>`<div class="summary-item"><span class="summary-label">${esc(l)}</span><strong class="summary-value">${esc(v)}</strong><span class="summary-detail">${esc(d)}</span></div>`).join('');
 
   // 4. Key analytical remarks
   const remarks=[
-    '<strong>VJES</strong> dẫn đầu toàn khối với CiteScore 2025 đạt <strong>5,0</strong> (tăng từ 0,7 năm 2020; phân vị 86% ngành Khoa học Trái đất) và Tracker 2026 đạt <strong>4,6</strong>.',
+    '<strong>VJES</strong> dẫn đầu toàn khối với CiteScore 2025 đạt <strong>5,0</strong> (tăng từ 0,7 năm 2020; phân vị 77%, hạng 45/201 ngành Khoa học Trái đất) và Tracker 2026 đạt <strong>4,6</strong>.',
     '<strong>ANSN</strong> đạt CiteScore 2025 là <strong>3,9</strong> (1.143 trích dẫn / 292 tài liệu) và CiteScore Tracker 2026 tăng lên <strong>4,0</strong> (1.118 trích dẫn / 280 tài liệu).',
-    '<strong>VJC</strong> tăng liên tục 4 kỳ từ <strong>0,8</strong> (2022) lên <strong>3,0</strong> (2025) và <strong>3,4</strong> ở Tracker 2026; <strong>VJM</strong> đạt <strong>2,1</strong> (phân vị 83% Toán học); <strong>AMV</strong> trực thuộc <strong>Viện Toán học</strong> với chuỗi xuất bản 51 năm (1976–2026).',
-    'Trong nhóm <strong>VAST-2</strong>, <strong>VJMech</strong> (0,79 → 1,14) và <strong>JCC</strong> (0,70 → 1,12) có CiteScore dự kiến vượt mốc chuẩn 0,7 của <strong>CIP</strong>.'
+    '<strong>VJC</strong> tăng liên tục từ <strong>0,5</strong> (2021), <strong>1,4</strong> (2022) lên <strong>3,0</strong> (2025) và <strong>3,4</strong> ở Tracker 2026; <strong>VJM</strong> đạt <strong>2,1</strong> (phân vị 72%, hạng 115/414 Toán học); <strong>AMV</strong> trực thuộc <strong>Viện Toán học</strong>, có số liệu xuất bản từ 1976 đến 2026 (51 năm).',
+    'Trong nhóm <strong>VAST-2</strong>, <strong>VJMech</strong> (0,79 năm 2025 → 1,14 năm 2026) và <strong>JCC</strong> (0,70 năm 2025 → 1,12 năm 2026) có chỉ số 4 năm tự tính cao hơn mức Tracker 2026 (0,7) của <strong>CIP</strong>.'
   ];
   $('#remarks-list').innerHTML=remarks.map(item=>`<li>${item}</li>`).join('');
 }
@@ -522,6 +468,53 @@ function renderVast1MatrixTable(){
   }).join('');
 }
 
+function renderVast1JcrTable(){
+  const head=$('#vast1-jcr-head'),body=$('#vast1-jcr-body');
+  if(!head||!body)return;
+  const jcrJournals=dashboard.journals.filter(j=>j.jcr);
+  head.innerHTML=`<tr>
+    <th scope="col">Tạp chí VAST-1 (ESCI)</th>
+    <th scope="col">JIF 2025<br>(2 năm)</th>
+    <th scope="col">JIF không<br>tự trích dẫn</th>
+    <th scope="col">Tử số / Mẫu số JIF<br>(2023–2024)</th>
+    <th scope="col">5-Year<br>JIF</th>
+    <th scope="col">JCI<br>2025</th>
+    <th scope="col">Immediacy<br>Index</th>
+    <th scope="col">Tổng trích dẫn<br>JCR 2025</th>
+    <th scope="col">Xếp hạng &amp; Quartile JIF (JCR 2025)</th>
+    <th scope="col">Xếp hạng &amp; Quartile JCI (JCR 2025)</th>
+    <th scope="col">Nguồn hồ sơ JCR</th>
+  </tr>`;
+  body.innerHTML=jcrJournals.map(j=>{
+    const jr=j.jcr;
+    const jifCats=jr.categories.map(c=>`<div><strong>${esc(c.jif.quartile)}</strong> · hạng ${c.jif.rank}/${c.jif.total} (${oneDec.format(c.jif.percentile)}%)<small style="display:block;color:var(--muted)">${esc(c.name)}</small></div>`).join('');
+    const jciCats=jr.categories.map(c=>`<div><strong>${esc(c.jci.quartile)}</strong> · hạng ${c.jci.rank}/${c.jci.total} (${twoDec.format(c.jci.percentile)}%)<small style="display:block;color:var(--muted)">${esc(c.name)}</small></div>`).join('');
+    const issnNote=(jr.issn!==j.issn||jr.eissn!==j.eissn)?`<small style="display:block;color:var(--muted)">ISSN in trên JCR: ${esc(jr.issn||'—')} / ${esc(jr.eissn||'—')}</small>`:'';
+    return `<tr>
+      <td>
+        <div class="matrix-journal-cell">
+          <a href="#journal/${esc(j.id)}"><img class="matrix-cover" src="${esc(coverUrl(j))}" alt="Bìa ${esc(j.code)}" width="40" height="58"></a>
+          <div class="matrix-meta">
+            <a href="#journal/${esc(j.id)}">${esc(j.code)} · ${esc(j.title)}</a>
+            <small style="display:block;color:var(--muted)">WoS Core Collection (${esc(jr.wosCollection)}) · ISSN: ${esc(j.issn||'—')} / ${esc(j.eissn||'—')}</small>
+            ${issnNote}
+          </div>
+        </div>
+      </td>
+      <td class="matrix-score-annual"><strong>${oneDec.format(jr.jif)}</strong></td>
+      <td>${oneDec.format(jr.jifWithoutSelfCitations)}</td>
+      <td>${integer.format(jr.jifNumerator)} / ${integer.format(jr.jifDenominator)}<small style="display:block;color:var(--muted)">Không tự TD: ${integer.format(jr.jifWithoutSelfNumerator)}/${integer.format(jr.jifDenominator)}</small></td>
+      <td>${Number.isFinite(jr.fiveYearJif)?oneDec.format(jr.fiveYearJif):'—'}<small style="display:block;color:var(--muted)">${jr.fiveYearNumerator&&jr.fiveYearDenominator?`${integer.format(jr.fiveYearNumerator)}/${integer.format(jr.fiveYearDenominator)}`:''}</small></td>
+      <td><strong>${twoDec.format(jr.jci)}</strong></td>
+      <td>${Number.isFinite(jr.immediacyIndex)?oneDec.format(jr.immediacyIndex):'—'}<small style="display:block;color:var(--muted)">${jr.immediacyNumerator&&jr.immediacyDenominator?`${integer.format(jr.immediacyNumerator)}/${integer.format(jr.immediacyDenominator)}`:''}</small></td>
+      <td><strong>${Number.isFinite(jr.totalCitations)?integer.format(jr.totalCitations):'—'}</strong><small style="display:block;color:var(--muted)">Cited half-life: ${jr.citedHalfLife} năm</small></td>
+      <td>${jifCats}</td>
+      <td>${jciCats}</td>
+      <td><code style="font-size:11px">${esc(jr.source.filename)}</code><small style="display:block;color:var(--muted)">Tải: ${esc(jr.source.downloadedAtRaw)} · ${jr.source.pageCount} trang</small></td>
+    </tr>`;
+  }).join('');
+}
+
 /* ==========================================================================
    5. SECTION 02: ARTCRAFT 4x3 JOURNAL LINEUP CARDS (NO TABLE LIST BELOW)
    ========================================================================== */
@@ -544,7 +537,7 @@ function filteredJournals(){
     if(state.subject!=='all'&&j.subject!==state.subject)return false;
     if(state.index==='all')return true;
     if(state.index==='VAST-1'||state.index==='VAST-2')return j.group===state.index;
-    return j.indexings.some(i=>i.system===state.index&&i.status==='verified');
+    return j.indexings.some(i=>i.system===state.index&&i.status==='listed');
   });
   const totalHistPapers=j=>(j.annualHistory||[]).reduce((s,r)=>s+(r.papers||0),0);
   const scoreSort=j=>j.group==='VAST-1'?(annualRecord(j,2025)?.value??trackerRecord(j)?.value??-1):(localScore(j,2025)?.score??-1);
@@ -571,12 +564,12 @@ function renderCatalog(){
     const spanEnd=j.historyEndYear||2026;
     const totalHistPapers=(j.annualHistory||[]).reduce((s,r)=>s+(r.papers||0),0);
 
-    const m1Label=j.group==='VAST-1'?'CiteScore 25':'Dự kiến 25';
+    const m1Label=j.group==='VAST-1'?'CiteScore 25':'Tự tính 25';
     const m1Val=j.group==='VAST-1'?(Number.isFinite(a25?.value)?oneDec.format(a25.value):'N/A'):(loc25?twoDec.format(loc25.score)+'*':'N/A');
-    const m2Label=j.group==='VAST-1'?'Tracker 26':'Dự kiến 26';
-    const m2Val=j.group==='VAST-1'?(Number.isFinite(t26?.value)?oneDec.format(t26.value):'N/A'):(loc26?twoDec.format(loc26.score)+'*':'N/A');
-    const m3Label=`Tổng bài (${spanStart}–26)`;
-    const m3Val=totalHistPapers?`${integer.format(totalHistPapers)}`:(out25?`${out25.papers}/${out25.issues}`:'—');
+    const m2Label=j.jcr?'JIF 25 (WoS)':(j.group==='VAST-1'?'Tracker 26':'Tự tính 26');
+    const m2Val=j.jcr?`${oneDec.format(j.jcr.jif)} (${j.jcr.categories[0].jif.quartile})`:(j.group==='VAST-1'?(Number.isFinite(t26?.value)?oneDec.format(t26.value):'N/A'):(loc26?twoDec.format(loc26.score)+'*':'N/A'));
+    const m3Label=j.jcr?'Tracker 26':`Tổng bài (${spanStart}–26)`;
+    const m3Val=j.jcr?(Number.isFinite(t26?.value)?oneDec.format(t26.value):'N/A'):(totalHistPapers?`${integer.format(totalHistPapers)}`:(out25?`${out25.papers}/${out25.issues}`:'—'));
 
     return `<article class="lineup-card">
       <div class="lineup-card-top">
@@ -600,7 +593,7 @@ function renderCatalog(){
       <div class="lineup-body">
         <div>
           <h3 class="lineup-title"><a href="#journal/${esc(j.id)}">${esc(j.title)} <span class="lineup-code">(${esc(j.code)})</span></a></h3>
-          <p class="lineup-vi">${esc(j.titleVi)} · Chuỗi lịch sử: <strong>${spanStart}–${spanEnd}</strong> (${j.annualHistory?.length||0} năm)</p>
+          <p class="lineup-vi">${esc(j.titleVi)} · Số liệu giai đoạn <strong>${spanStart}–${spanEnd}</strong> (${j.annualHistory?.length||0} năm có dữ liệu)</p>
         </div>
         <div>
           <div class="lineup-metrics">
@@ -1115,7 +1108,7 @@ function renderReferences(){
     const spanStart=j.historyStartYear||j.annualHistory?.[0]?.year||2020;
     const spanEnd=j.historyEndYear||2026;
     const scopusLink=j.scopusSourceId?` · ${external(`https://www.scopus.com/sourceid/${j.scopusSourceId}`,`Scopus Source ID ${j.scopusSourceId}`)}`:'';
-    return`<li><p><strong>${esc(fullName(j))}</strong> — ${esc(j.titleVi)}. Đơn vị xuất bản: <em>${esc(inst.name)}${inst.coPublisher?` & ${esc(inst.coPublisher)}`:''}</em>. Dải năm lưu trữ: <strong>${spanStart}–${spanEnd}</strong>. Trang chủ: ${external(j.website,j.website)} · Kho lưu trữ: ${external(j.archiveUrl,j.archiveUrl)}${scopusLink}.</p></li>`;
+    return`<li><p><strong>${esc(fullName(j))}</strong> — ${esc(j.titleVi)}. Đơn vị xuất bản: <em>${esc(inst.name)}${inst.coPublisher?` & ${esc(inst.coPublisher)}`:''}</em>. Thời gian có dữ liệu: <strong>${spanStart}–${spanEnd}</strong>. Trang chủ: ${external(j.website,j.website)} · Kho lưu trữ: ${archiveLinks(j)}${scopusLink}.</p></li>`;
   }).join('');
 }
 
@@ -1139,18 +1132,23 @@ function renderDetail(id){
 
   const totalHistPapers=hist.reduce((s,r)=>s+(r.papers||0),0);
   const totalHistIssues=hist.reduce((s,r)=>s+(r.issues||0),0);
+  const histYearSet=new Set(hist.map(r=>r.year));
+  const missingYears=[];
+  for(let y=minYear;y<=maxYear;y++)if(!histYearSet.has(y))missingYears.push(y);
+  const jr=j.jcr||null;
 
   const profileRows=[
-    ['Phân nhóm VAST',j.group==='VAST-1'?'Nhóm VAST-1 (Đã chỉ mục Scopus / Web of Science Core Collection)':'Nhóm VAST-2 (Tạp chí chuyên ngành VAST)'],
+    ['Phân nhóm VAST',j.group==='VAST-1'?'Nhóm VAST-1 (Đã chỉ mục Scopus; xem thêm trạng thái Web of Science ở mục Chỉ mục)':'Nhóm VAST-2 (Tạp chí chuyên ngành VAST)'],
     ['Tên tiếng Việt',j.titleVi],
     ['Lĩnh vực',j.subject],
     ['Đơn vị chủ quản xuất bản',inst.name],
     ['Đối tác đồng xuất bản quốc tế',inst.coPublisher||'Xuất bản độc lập trên hệ thống VJS (VAST)'],
     ['ISSN bản in / điện tử',`${j.issn??'—'} / ${j.eissn??'—'}`],
-    ['Kỳ hạn công bố',`${j.frequency} (${j.issuesPerYear} kỳ/năm)`],
-    ['Dải lịch sử xuất bản trực tuyến',`${minYear}–${maxYear} (${hist.length} năm · ${integer.format(totalHistPapers)} bài / ${integer.format(totalHistIssues)} kỳ)`],
+    ...(jr?[['Chỉ số Web of Science (JCR 2025)',`JIF 2025: <strong>${oneDec.format(jr.jif)}</strong> (${jr.jifNumerator}/${jr.jifDenominator}) · 5-Year JIF: <strong>${oneDec.format(jr.fiveYearJif)}</strong> · JCI: <strong>${twoDec.format(jr.jci)}</strong> · Tổng trích dẫn JCR 2025: <strong>${integer.format(jr.totalCitations)}</strong>`]]:[]),
+    ['Kỳ hạn xuất bản',esc(publicationFrequency(j))],
+    ['Số liệu xuất bản trên trang',`${minYear}–${maxYear} (${hist.length} năm có dữ liệu · ${integer.format(totalHistPapers)} bài / ${integer.format(totalHistIssues)} kỳ${missingYears.length?`; chưa có số lưu trữ trực tuyến năm: ${missingYears.join(', ')}`:''})`],
     ['Trang chủ chính thức',external(j.website)],
-    ['Kho lưu trữ số (Archive)',external(j.archiveUrl)]
+    ['Các số đã xuất bản',archiveLinks(j)]
   ];
 
   const ownRecords=scopus.records.filter(r=>r.journal===j.code);
@@ -1159,18 +1157,20 @@ function renderDetail(id){
   let metricCards=[];
   if(j.group==='VAST-1'){
     metricCards=[
-      ['CiteScore 2025',a25&&Number.isFinite(a25.value)?oneDec.format(a25.value):'N/A',a25&&Number.isFinite(a25.citations)?`${integer.format(a25.citations)} trích dẫn / ${integer.format(a25.documents)} tài liệu`:'Mới chỉ mục Scopus (08/2026)'],
-      ['Tracker 2026',t26&&Number.isFinite(t26.value)?oneDec.format(t26.value):'N/A',t26&&Number.isFinite(t26.citations)?`${integer.format(t26.citations)} trích dẫn / ${integer.format(t26.documents)} tài liệu`:'Cập nhật 05/10/2026'],
-      [`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ phát hành (${hist.length} năm)`],
-      ['Tổng trích dẫn',j.localCitation?.totals?`${integer.format(j.localCitation.totals.citations)} lượt`:(a25&&Number.isFinite(a25.citations)?`${integer.format(a25.citations)} (2022–25)`:'Scopus Sources'),j.localCitation?.totals?`h-index: ${j.localCitation.totals.hIndex} · ${integer.format(j.localCitation.totals.citingDocs)} bài trích dẫn`:'Theo Scopus Source Details']
+      ['CiteScore 2025 (Scopus)',a25&&Number.isFinite(a25.value)?oneDec.format(a25.value):'N/A',a25&&Number.isFinite(a25.citations)?`${integer.format(a25.citations)} trích dẫn / ${integer.format(a25.documents)} tài liệu (2022–2025)`:'Mới chỉ mục Scopus (2022–2026)'],
+      ['CiteScore Tracker 2026',t26&&Number.isFinite(t26.value)?oneDec.format(t26.value):'N/A',t26&&Number.isFinite(t26.citations)?`${integer.format(t26.citations)} trích dẫn / ${integer.format(t26.documents)} tài liệu (cập nhật 05/10/2026)`:'Cập nhật 05/10/2026'],
+      jr
+        ?['JIF 2025 (WoS JCR)',`${oneDec.format(jr.jif)} (${jr.categories[0].jif.quartile})`,`${integer.format(jr.jifNumerator)} trích dẫn / ${integer.format(jr.jifDenominator)} bài (2023–2024) · JCI: ${twoDec.format(jr.jci)}`]
+        :[`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ phát hành (${hist.length} năm)`],
+      ['Tổng trích dẫn',j.localCitation?.totals?`${integer.format(j.localCitation.totals.citations)} lượt (OJS)`:(jr?`${integer.format(jr.totalCitations)} lượt (JCR 2025)`:'Scopus Sources'),j.localCitation?.totals?`h-index: ${j.localCitation.totals.hIndex} · ${integer.format(j.localCitation.totals.citingDocs)} bài trích dẫn${jr?` · JCR 2025: ${integer.format(jr.totalCitations)} lượt`:''}`:(jr?`Tổng bài (${minYear}–${maxYear}): ${integer.format(totalHistPapers)} bài / ${integer.format(totalHistIssues)} kỳ`:'Theo Scopus Source Details')]
     ];
   }else{
     const tot=j.localCitation?.totals;
     metricCards=[
-      ['CiteScore 2025 (dự kiến)',loc25?twoDec.format(loc25.score):'N/A',loc25?`${integer.format(loc25.numerator)} trích dẫn / ${integer.format(loc25.denominator)} bài (2022–2025)`:'—'],
-      ['CiteScore 2026 (dự kiến)',loc26?twoDec.format(loc26.score):'N/A',loc26?`${integer.format(loc26.numerator)} trích dẫn / ${integer.format(loc26.denominator)} bài (2023–2026)`:'—'],
+      ['Chỉ số 4 năm 2025 (tự tính)',loc25?twoDec.format(loc25.score):'N/A',loc25?`${integer.format(loc25.numerator)} trích dẫn / ${integer.format(loc25.denominator)} bài (2022–2025)`:'—'],
+      ['Chỉ số 4 năm 2026 (tự tính)',loc26?twoDec.format(loc26.score):'N/A',loc26?`${integer.format(loc26.numerator)} trích dẫn / ${integer.format(loc26.denominator)} bài (2023–2026)`:'—'],
       [`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ phát hành (${hist.length} năm)`],
-      ['Tổng trích dẫn tích lũy',tot?`${integer.format(tot.citations)} lượt`:'N/A',tot?`h-index: ${tot.hIndex} · ${integer.format(tot.citingDocs)} bài trích dẫn`:'—']
+      ['Tổng trích dẫn đối soát OJS',tot?`${integer.format(tot.citations)} lượt`:'N/A',tot?`h-index: ${tot.hIndex} · ${integer.format(tot.citingDocs)} bài trích dẫn`:'—']
     ];
   }
 
@@ -1182,7 +1182,7 @@ function renderDetail(id){
       <span class="hud-label">${esc(j.group)} · MÃ TẠP CHÍ: <strong>${esc(j.code)}</strong> · LỊCH SỬ ${minYear}–${maxYear}</span>
     </div>
 
-    <div class="detail-hero">
+    <div id="journal-info" class="detail-hero">
       <img class="detail-cover-img" src="${esc(coverUrl(j))}" alt="Bìa tạp chí ${esc(j.title)}" width="164" height="238">
       <div>
         <div class="lineup-tags">${indexingBadges(j)}</div>
@@ -1193,7 +1193,7 @@ function renderDetail(id){
           ${inst.coLogo?`<img class="${logoClass(inst.coLogo)}" src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}">`:''}
           <div>
             <strong style="display:block;font-size:13.5px">${esc(inst.name)}${inst.coPublisher?` · Đồng xuất bản với ${esc(inst.coPublisher)}`:''}</strong>
-            <span style="font-size:12px;color:var(--muted)">ISSN: ${esc(j.issn??'—')} · eISSN: ${esc(j.eissn??'—')} · ${esc(j.frequency)}</span>
+            <span style="font-size:12px;color:var(--muted)">ISSN: ${esc(j.issn??'—')} · eISSN: ${esc(j.eissn??'—')} · Kỳ hạn xuất bản: ${esc(publicationFrequency(j))}</span>
           </div>
         </div>
         <div class="detail-metrics">
@@ -1202,13 +1202,13 @@ function renderDetail(id){
       </div>
     </div>
 
-    <section class="detail-charts-section" aria-label="Biểu đồ lịch sử toàn thời gian của ${esc(j.code)}">
+    <section id="journal-charts" class="detail-charts-section" aria-label="Số liệu xuất bản và trích dẫn qua các năm của ${esc(j.code)}">
       <div class="detail-charts-head">
         <div>
-          <span class="hud-label chart-kicker">BIỂU ĐỒ LỊCH SỬ RIÊNG CỦA ${esc(j.code)} (${minYear}–${maxYear} · ${hist.length} NĂM)</span>
-          <h3>Diễn biến xuất bản, trích dẫn và CiteScore toàn thời gian của ${esc(j.code)}</h3>
+          <span class="hud-label chart-kicker">BIỂU ĐỒ CỦA ${esc(j.code)} (${minYear}–${maxYear} · ${hist.length} NĂM CÓ DỮ LIỆU)</span>
+          <h3>Số liệu xuất bản, trích dẫn và CiteScore theo năm của ${esc(j.code)}</h3>
         </div>
-        <form class="trend-controls" style="margin:0" aria-label="Chọn khoảng năm lịch sử">
+        <form class="trend-controls" style="margin:0" aria-label="Chọn khoảng năm hiển thị">
           <div class="field">
             <label for="detail-from-year">Từ năm</label>
             <select id="detail-from-year">${yearOptions}</select>
@@ -1223,27 +1223,27 @@ function renderDetail(id){
 
       <div class="detail-charts-grid">
         <div class="detail-chart-card">
-          <h4>1. Lịch sử số bài và số kỳ xuất bản theo năm (${minYear}–${maxYear})</h4>
+          <h4>1. Số bài và số kỳ xuất bản theo năm (${minYear}–${maxYear})</h4>
           <p id="j-pub-summary">Di chuột hoặc chạm vào biểu đồ để xem số bài nghiên cứu và số kỳ phát hành từng năm của ${esc(j.code)}.</p>
           <svg id="j-pub-chart" class="detail-svg" viewBox="0 0 860 270" role="img" aria-label="Biểu đồ lịch sử xuất bản của ${esc(j.code)}"></svg>
         </div>
         <div class="detail-chart-card">
-          <h4>2. Lịch sử lượt trích dẫn và bài trích dẫn theo năm</h4>
+          <h4>2. Lượt trích dẫn và bài trích dẫn theo năm</h4>
           <p id="j-cit-summary">Diễn biến số lượt trích dẫn và tài liệu trích dẫn qua các năm của ${esc(j.code)}.</p>
           <svg id="j-cit-chart" class="detail-svg" viewBox="0 0 860 260" role="img" aria-label="Biểu đồ lịch sử trích dẫn của ${esc(j.code)}"></svg>
         </div>
         <div class="detail-chart-card">
           <h4>3. Diễn biến ${j.group==='VAST-1'?'CiteScore chính thức & Tracker Scopus':'CiteScore dự kiến (4 năm)'} của ${esc(j.code)}</h4>
-          <p id="j-cs-summary">Chuỗi chỉ số CiteScore qua các năm kèm tử số trích dẫn và mẫu số tài liệu.</p>
+          <p id="j-cs-summary">Chỉ số CiteScore theo năm, kèm số lượt trích dẫn và số tài liệu dùng để tính chỉ số.</p>
           <svg id="j-cs-chart" class="detail-svg" viewBox="0 0 860 250" role="img" aria-label="Biểu đồ CiteScore của ${esc(j.code)}"></svg>
         </div>
       </div>
     </section>
 
-    <div class="detail-grid">
+    <div id="journal-data" class="detail-grid">
       <div>
         <section class="detail-section">
-          <h3>Bảng lịch sử xuất bản &amp; trích dẫn toàn thời gian (${minYear}–${maxYear})</h3>
+          <h3>Bảng số liệu xuất bản &amp; trích dẫn theo năm (${minYear}–${maxYear})</h3>
           <div class="table-scroll" style="max-height:520px;overflow-y:auto;border:1px solid var(--line)">
             <table class="detail-table">
               <thead>
@@ -1277,11 +1277,53 @@ function renderDetail(id){
         </section>
 
         ${ownRecords.length?`<section class="detail-section">
-          <h3>Chuỗi CiteScore Scopus (2015–2026)</h3>
+          <h3>CiteScore Scopus theo năm (2015–2026)</h3>
           <div class="table-scroll">
             <table class="detail-table">
               <thead><tr><th scope="col">Năm</th><th scope="col">Loại</th><th scope="col">CiteScore</th><th scope="col">Trích dẫn</th><th scope="col">Tài liệu</th><th scope="col">Cửa sổ</th></tr></thead>
               <tbody>${ownRecords.map(r=>`<tr><td>${r.year}</td><td>${r.type==='tracker'?'Tracker':'Chính thức'}</td><td><strong>${Number.isFinite(r.value)?oneDec.format(r.value):'N/A'}</strong></td><td>${Number.isFinite(r.citations)?integer.format(r.citations):'N/A'}</td><td>${Number.isFinite(r.documents)?integer.format(r.documents):'N/A'}</td><td>${esc(r.citationWindow??'—')}</td></tr>`).join('')}</tbody>
+            </table>
+          </div>
+        </section>`:''}
+        ${jr?`<section class="detail-section">
+          <h3>Báo cáo Web of Science — Clarivate JCR ${jr.metricYear} (${esc(jr.wosCollection)})</h3>
+          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">Nguồn: <code>${esc(jr.source.filename)}</code> (tải ngày ${esc(jr.source.downloadedAtRaw)}, ${jr.source.pageCount} trang; ISSN in trên báo cáo JCR: ${esc(jr.issn||'—')} / eISSN: ${esc(jr.eissn||'—')}). Chỉ số JIF 2 năm và JCI 3 năm của Clarivate hoàn toàn độc lập với CiteScore 4 năm của Scopus.</p>
+          <div class="table-scroll">
+            <table class="detail-table">
+              <thead><tr><th scope="col">Chỉ số JCR 2025</th><th scope="col">Giá trị</th><th scope="col">Chi tiết tính toán / Cửa sổ</th><th scope="col">Trang PDF</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Journal Impact Factor (JIF 2025)</strong></td><td><strong>${oneDec.format(jr.jif)}</strong></td><td>${integer.format(jr.jifNumerator)} trích dẫn năm 2025 / ${integer.format(jr.jifDenominator)} bài citable (2023–2024)</td><td>Tr. ${jr.source.pages.jif}–${jr.source.pages.jifCalculation}</td></tr>
+                <tr><td>JIF không tính tự trích dẫn</td><td><strong>${oneDec.format(jr.jifWithoutSelfCitations)}</strong></td><td>${integer.format(jr.jifWithoutSelfNumerator)} trích dẫn không tự TD / ${integer.format(jr.jifDenominator)} bài citable (2023–2024)</td><td>Tr. ${jr.source.pages.jif}–${jr.source.pages.jifCalculation}</td></tr>
+                <tr><td>5-Year Impact Factor</td><td><strong>${oneDec.format(jr.fiveYearJif)}</strong></td><td>${integer.format(jr.fiveYearNumerator)} trích dẫn năm 2025 / ${integer.format(jr.fiveYearDenominator)} bài citable (2020–2024)</td><td>Tr. ${jr.source.pages.otherMetrics.fiveYearJif}</td></tr>
+                <tr><td>Journal Citation Indicator (JCI 2025)</td><td><strong>${twoDec.format(jr.jci)}</strong></td><td>Chỉ số chuẩn hóa theo lĩnh vực (CNCI trung bình 3 năm)</td><td>Tr. ${jr.source.pages.jci}</td></tr>
+                <tr><td>Immediacy Index</td><td><strong>${oneDec.format(jr.immediacyIndex)}</strong></td><td>${integer.format(jr.immediacyNumerator)} trích dẫn năm 2025 / ${integer.format(jr.immediacyDenominator)} bài citable năm 2025</td><td>Tr. ${jr.source.pages.otherMetrics.immediacyIndex}</td></tr>
+                <tr><td>Tổng trích dẫn trong JCR 2025</td><td><strong>${integer.format(jr.totalCitations)} lượt</strong></td><td>Cited Half-life: ${jr.citedHalfLife} năm · Citing Half-life: ${jr.citingHalfLife} năm</td><td>Tr. ${jr.source.pages.totalCitations}</td></tr>
+                <tr><td>Eigenfactor / Normalized Eigenfactor / AIS</td><td><strong>${jr.eigenfactorScore.toFixed(5)}</strong></td><td>Normalized Eigenfactor: ${jr.normalizedEigenfactor.toFixed(5)} · Article Influence Score: ${jr.articleInfluenceScore.toFixed(3)}</td><td>Tr. ${jr.source.pages.otherMetrics.eigenfactorScore}–${jr.source.pages.otherMetrics.articleInfluenceScore}</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-scroll" style="margin-top:12px">
+            <table class="detail-table">
+              <thead><tr><th scope="col">Phân ngành Web of Science (JCR)</th><th scope="col">Năm</th><th scope="col">Hạng JIF</th><th scope="col">Quartile JIF</th><th scope="col">Phân vị JIF</th><th scope="col">Hạng JCI</th><th scope="col">Quartile JCI</th><th scope="col">Phân vị JCI</th></tr></thead>
+              <tbody>
+                ${jr.categories.flatMap(c=>{
+                  const years=[...new Set([...(c.jifHistory||[]).map(x=>x.year),...(c.jciHistory||[]).map(x=>x.year)])].sort((a,b)=>b-a);
+                  return years.map(yr=>{
+                    const jf=(c.jifHistory||[]).find(x=>x.year===yr);
+                    const jc=(c.jciHistory||[]).find(x=>x.year===yr);
+                    return `<tr>
+                      <td><strong>${esc(c.name)}</strong></td>
+                      <td>${yr}</td>
+                      <td>${jf?`${jf.rank}/${jf.total}`:'—'}</td>
+                      <td>${jf?`<strong>${esc(jf.quartile)}</strong>`:'—'}</td>
+                      <td>${jf?`${oneDec.format(jf.percentile)}%`:'—'}</td>
+                      <td>${jc?`${jc.rank}/${jc.total}`:'—'}</td>
+                      <td>${jc?`<strong>${esc(jc.quartile)}</strong>`:'—'}</td>
+                      <td>${jc?`${twoDec.format(jc.percentile)}%`:'—'}</td>
+                    </tr>`;
+                  });
+                }).join('')}
+              </tbody>
             </table>
           </div>
         </section>`:''}
@@ -1299,11 +1341,15 @@ function renderDetail(id){
           <h3>Phân ngành Scopus (CiteScore ${cats[0].year})</h3>
           <ul class="source-evidence">${cats.map(c=>`<li><strong>${esc(c.name)}</strong>: hạng ${esc(c.rank)}, phân vị <strong>${c.percentile}%</strong></li>`).join('')}</ul>
         </section>`:''}
+        ${jr?`<section class="detail-section">
+          <h3>Phân ngành Web of Science (JCR ${jr.metricYear} · ${esc(jr.wosCollection)})</h3>
+          <ul class="source-evidence">${jr.categories.map(c=>`<li><strong>${esc(c.name)}</strong> — JIF: hạng <strong>${c.jif.rank}/${c.jif.total}</strong> (<strong>${esc(c.jif.quartile)}</strong>, phân vị ${oneDec.format(c.jif.percentile)}%) · JCI: hạng <strong>${c.jci.rank}/${c.jci.total}</strong> (<strong>${esc(c.jci.quartile)}</strong>, phân vị ${twoDec.format(c.jci.percentile)}%)</li>`).join('')}</ul>
+        </section>`:''}
 
-        <section class="detail-section">
+        <section id="journal-indexing" class="detail-section">
           <h3>Chỉ mục khoa học</h3>
           <ul class="source-evidence">
-            ${j.indexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong> — ${i.status==='verified'?'Đã xác minh':'Chưa chỉ mục'}<small>${esc(i.coverage?`Phạm vi: ${i.coverage} · `:'')}${esc(i.notes)}</small></li>`).join('')}
+            ${j.indexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong> — ${indexingStatusLabel(i.status)}<small>${[i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',i.notes?esc(i.notes):'',external(i.sourceUrl,i.evidenceLevel==='database'?`Xem trên ${i.system}`:'Xem nguồn minh chứng')].filter(Boolean).join(' · ')}</small></li>`).join('')}
           </ul>
         </section>
       </div>
@@ -1475,27 +1521,42 @@ function syncRoute(){
   if(!dashboard)return;
   const raw=decodeURIComponent(location.hash.slice(1));
   const homeView=$('#home-view');
-  const detailPanel=$('#detail-panel');
-  const flightLayer=$('#scroll-flight-layer');
-
+  const panel=$('#detail-panel');
+  let target=null;
   if(raw.startsWith('journal/')){
-    const jId=raw.slice('journal/'.length);
+    const [,id,sectionId]=raw.split('/');
+    const changed=panel.hidden||panel.dataset.journalId!==id;
     homeView.hidden=true;
-    detailPanel.hidden=false;
-    if(flightLayer)flightLayer.hidden=true;
-    renderDetail(jId);
-    const j=dashboard.journals.find(item=>item.id===jId);
-    document.title=j?`${j.code} · Hồ sơ & Biểu đồ Lịch sử · VAST`:'Hồ sơ tạp chí · VAST';
-    window.scrollTo({top:0,behavior:'instant'});
-    return;
+    panel.hidden=false;
+    if(changed){
+      renderDetail(id);
+      panel.dataset.journalId=id;
+    }
+    const journal=dashboard.journals.find(j=>j.id===id);
+    document.title=journal?`${journal.code} · Thông tin & Biểu đồ · VAST`:'Thông tin tạp chí · VAST';
+    setFlightSections([
+      {id:'info',elId:'journal-info',word:'THÔNG TIN'},
+      {id:'charts',elId:'journal-charts',word:'BIỂU ĐỒ'},
+      {id:'data',elId:'journal-data',word:'SỐ LIỆU'},
+      {id:'indexing',elId:'journal-indexing',word:'CHỈ MỤC'}
+    ],journal?`${journal.code} · VAST JOURNALS`:'VAST JOURNALS',id);
+    target=sectionId?document.getElementById(sectionId):null;
+    if(!target)window.scrollTo({top:0,behavior:'instant'});
+  }else{
+    homeView.hidden=false;
+    panel.hidden=true;
+    document.title='VAST JOURNALS — Hệ thống 12 Tạp chí Khoa học (VAST-1 & VAST-2)';
+    setFlightSections(homeFlightSections);
+    renderAllCharts();
+    target=document.getElementById(raw);
   }
-
-  homeView.hidden=false;
-  detailPanel.hidden=true;
-  if(flightLayer)flightLayer.hidden=false;
-  document.title='VAST JOURNALS — Hệ thống 12 Tạp chí Khoa học (VAST-1 & VAST-2)';
-  renderAllCharts();
-  onScrollUpdate();
+  requestAnimationFrame(()=>{
+    if(target){
+      if(target.id==='journal-info')window.scrollTo({top:0,behavior:reducedMotion.matches?'instant':'smooth'});
+      else target.scrollIntoView({block:'start',behavior:reducedMotion.matches?'instant':'smooth'});
+    }
+    scheduleScrollUpdate();
+  });
 }
 
 function wireEvents(){
@@ -1543,7 +1604,7 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261021k'),fetch('data-scopus.json?v=20261021k')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022a'),fetch('data-scopus.json?v=20261022a')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     dashboard=await dRes.json();
     scopus=await sRes.json();
@@ -1554,6 +1615,7 @@ async function start(){
     populateControls();
     renderHeroAndOverview();
     renderVast1MatrixTable();
+    renderVast1JcrTable();
     renderCatalog();
     renderReferences();
     initRulerAndFlight();

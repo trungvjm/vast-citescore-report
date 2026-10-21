@@ -22,15 +22,25 @@ assert.equal(scopus.records.length,84,'Baseline must retain all 84 observations.
 assert.equal(new Set(scopus.records.map(r=>r.journal+'|'+r.year+'|'+r.type)).size,84,'Duplicate official observations.');
 const evidence=await Promise.all(profileFiles.map(f=>readJson(path.join(root,f))));
 const audits=await Promise.all(auditFiles.map(f=>readJson(path.join(root,f))));
-const [histIntl,histOjs,media]=await Promise.all([
+const [histIntl,histOjs,media,jcrData]=await Promise.all([
  readJson(path.join(root,'evidence/dashboard-history-intl.json')),
  readJson(path.join(root,'evidence/dashboard-history-ojs.json')),
- readJson(path.join(root,'evidence/dashboard-media.json'))
+ readJson(path.join(root,'evidence/dashboard-media.json')),
+ readJson(path.join(root,'evidence/dashboard-jcr.json'))
 ]);
 const collectedAt=evidence[0].collectedAt,currentYear=Number(collectedAt.slice(0,4)),outputYears=Array.from({length:currentYear-2019},(_,i)=>2020+i);
 assert(evidence.every(e=>e.collectedAt===collectedAt),'Profile evidence dates must agree.');
 const profiles=evidence.flatMap(e=>e.journals),localAudits=audits.flatMap(a=>a.journals);
 const historyMap=new Map([...histIntl.journals,...histOjs.journals].map(j=>[j.id,j]));
+const jcrMap=new Map((jcrData.journals||[]).map(j=>[j.id,j]));
+assert.deepEqual([...jcrMap.keys()].sort(),['amv','ansn','vjc','vjes','vjm'],'Need exact 5 JCR 2025 journal entries.');
+for(const jr of jcrMap.values()){
+ assert.equal(jr.metricYear,2025,jr.code+': JCR metricYear must be 2025.');
+ assert.equal(jr.wosCollection,'ESCI',jr.code+': JCR 2025 edition must be ESCI.');
+ assert(jr.jifDenominator>0&&Math.abs(jr.jif-jr.jifNumerator/jr.jifDenominator)<=0.05001,jr.code+': JIF ratio does not reconcile.');
+ assert(Array.isArray(jr.categories)&&jr.categories.length>=1,jr.code+': JCR categories required.');
+ assert.equal(typeof jr.source?.sha256,'string',jr.code+': JCR source sha256 required.');
+}
 assert.deepEqual(profiles.map(j=>j.id).sort(),[...order].sort(),'Need exactly the 12 agreed journal profiles.');
 assert.equal(new Set(localAudits.map(j=>j.id)).size,9,'Need nine distinct user collections.');
 
@@ -87,16 +97,20 @@ function buildAnnualHistory(j,hist,cat,verifiedOutputs){
  }else if(['vjm','amv','ansn','vjmech'].includes(j.id)){
   for(const r of hist.annualSeries)if(r.year<2020&&r.papers>0)byYear.set(r.year,{year:r.year,papers:r.papers,issues:r.issues,periodKind:'annual'});
  }else if(cat&&volOffsets[j.id]){
-  const offset=volOffsets[j.id],counts=new Map(),issueMap=new Map((hist?.annualSeries??[]).map(r=>[r.year,r.issues]));
+  const offset=volOffsets[j.id],counts=new Map(),issueSets=new Map(),issueMap=new Map((hist?.annualSeries??[]).map(r=>[r.year,r.issues]));
   for(const a of cat.articles){
    if(a.isOnlineFirst)continue;
    let vol=Number(a.volume);
    if(!vol&&a.doi){const m=String(a.doi).match(/10\.15625\/[^/]+\/(\d{1,2})\//);if(m)vol=Number(m[1]);}
    const yr=(vol&&vol>=1&&vol<=70)?(vol+offset):Number(a.year);
-   if(yr&&yr>=1985&&yr<2020&&(j.id!=='ajb'||yr>=2005))counts.set(yr,(counts.get(yr)||0)+1);
+   if(yr&&yr>=1985&&yr<2020&&(j.id!=='ajb'||yr>=2005)){
+    counts.set(yr,(counts.get(yr)||0)+1);
+    if(!issueSets.has(yr))issueSets.set(yr,new Set());
+    issueSets.get(yr).add(String(a.issue??a.issueId??'1'));
+   }
   }
   for(const [yr,papers] of [...counts.entries()].sort((a,b)=>a[0]-b[0])){
-   if(papers>0)byYear.set(yr,{year:yr,papers,issues:issueMap.get(yr)??4,periodKind:'annual'});
+   if(papers>0)byYear.set(yr,{year:yr,papers,issues:issueMap.get(yr)??issueSets.get(yr)?.size??null,periodKind:'annual'});
   }
  }
  for(const o of verifiedOutputs)byYear.set(o.year,{year:o.year,papers:o.papers,issues:o.issues,periodKind:o.periodKind});
@@ -118,18 +132,43 @@ function buildAnnualHistory(j,hist,cat,verifiedOutputs){
 
 const categories={VJM:['General Mathematics',72,115,414],AMV:['General Mathematics',18,338,414],ANSN:['Industrial and Manufacturing Engineering',61,164,425],VJC:['General Chemistry',43,227,402],VJES:['Earth and Planetary Sciences (miscellaneous)',77,45,201],VJST:['Electrical and Electronic Engineering',20,821,1030]};
 const coPublishers={vjm:['Springer Nature','assets/images/logos/springer.svg'],amv:['Springer Nature','assets/images/logos/springer.svg'],ansn:['IOP Publishing','assets/images/logos/iop.svg'],vjc:['Wiley-VCH','assets/images/logos/wiley.svg']};
+const archiveUrls={
+ vjm:'https://link.springer.com/journal/10013/volumes-and-issues',
+ amv:'https://link.springer.com/journal/40306/volumes-and-issues',
+ ansn:'https://iopscience.iop.org/journal/2043-6262',
+ vjc:'https://onlinelibrary.wiley.com/loi/25728288',
+ vjes:'https://vjs.ac.vn/index.php/jse/issue/archive',
+ vjst:'https://vjs.ac.vn/index.php/jst/issue/archive',
+ cip:'https://vjs.ac.vn/index.php/cip/issue/archive',
+ vjmech:'https://vjs.ac.vn/index.php/vjmech/issue/archive',
+ jcc:'https://vjs.ac.vn/jcc/issue/archive',
+ ajb:'https://vjs.ac.vn/vjbio/issue/archive',
+ vjmst:'https://vjs.ac.vn/jmst/issue/archive',
+ vjbt:'https://vjs.ac.vn/vjbt/issue/archive'
+};
 const journals=[];
 for(let index=0;index<order.length;index++){
  const j=structuredClone(profiles.find(p=>p.id===order[index]));
  assert.equal(j.code,codes[index],'Unexpected journal code.');
  j.subject=subjects[j.id];j.checkedAt=collectedAt;j.aliases=j.id==='amv'?['AVM']:[];
- j.profileSources=[...new Set([j.website,...j.profileSources])];
+ j.archiveUrl=archiveUrls[j.id]||j.profileSources.find(u=>u!==j.website)||j.website;
+ if(j.id==='amv'){
+  j.additionalArchives=[
+   {label:'Viện Toán học — mục lục AMV từ 1976',url:'https://math.ac.vn/acta/home'},
+   {label:'Viện Toán học — các số truy cập mở 1976–2012',url:'https://math.ac.vn/acta/open-access-issues'}
+  ];
+ }else if(j.id==='vjc'){
+  j.additionalArchives=[
+   {label:'Kho lưu trữ OJS VJS (các số 2014–2017)',url:'https://vjs.ac.vn/index.php/vjchem/issue/archive'}
+  ];
+ }
+ j.profileSources=[...new Set([j.website,j.archiveUrl,...j.profileSources,...(j.additionalArchives||[]).map(a=>a.url)])];
  assert(j.profileSources.every(url=>/^https?:\/\//.test(url)),j.code+': profileSources must use http(s) URLs.');
  const original=scopus.journals.find(s=>s.code===j.code);
  j.order=index+1;
  j.group=original?'VAST-1':'VAST-2';
  j.scopusSourceId=original?.sourceId??null;
- j.archiveUrl=j.profileSources.find(u=>u!==j.website)||j.website;
+ j.jcr=jcrMap.get(j.id)?structuredClone(jcrMap.get(j.id)):null;
  j.cover='assets/images/covers/'+j.id+'.png';
  j.coverImage=j.cover;
  assert(media.covers[j.id]?.path===j.cover,j.code+': missing verified cover asset.');
@@ -143,6 +182,14 @@ for(let index=0;index<order.length;index++){
   for(const key of ['issn','eissn'])if(original[key])assert.equal(j[key],original[key],j.code+': identity conflict.');
   j.indexings=j.indexings.filter(i=>i.system!=='Scopus');
   j.indexings.unshift({system:'Scopus',collection:null,status:'listed',evidenceLevel:'database',sourceUrl:'https://www.scopus.com/sourceid/'+original.sourceId,checkedAt:scopus.reportDate,coverage:original.coverage});
+ }
+ if(j.jcr){
+  const wosIdx=j.indexings.find(i=>i.system==='WoS'&&i.status==='listed');
+  if(wosIdx){
+   wosIdx.collection=j.jcr.wosCollection;
+   wosIdx.coverage=`JCR ${j.jcr.metricYear}: JIF ${j.jcr.jif.toFixed(1)} · JCI ${j.jcr.jci.toFixed(2)}`;
+   wosIdx.notes=`Báo cáo Clarivate JCR ${j.jcr.metricYear} (${j.jcr.source.filename}, tải ngày ${j.jcr.source.downloadedAtRaw})`;
+  }
  }
  for(const i of j.indexings){assert(['listed','not_listed','unverified'].includes(i.status),j.code+': invalid indexing status.');assert(['database','journal','vast'].includes(i.evidenceLevel),j.code+': invalid evidence level.');assert(/^https?:\/\//.test(i.sourceUrl),j.code+': indexing needs a source URL.');}
  assert.deepEqual(j.outputs.map(o=>o.year),outputYears,j.code+': need 2020-2026 reporting periods.');
@@ -159,7 +206,7 @@ for(let index=0;index<order.length;index++){
  journals.push(j);
 }
 const snapshotId=collectedAt+'-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
-const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.png',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, chuỗi số bài xuất bản lịch sử toàn thời gian và thống kê trích dẫn của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
+const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.png',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},officialJcr:{path:'evidence/dashboard-jcr.json',metricYear:2025,journalsCount:jcrMap.size,edition:'Emerging Sources Citation Index (ESCI)'},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
 const serialized=JSON.stringify(dataset,null,2)+'\n';
 if(process.argv.includes('--write')){
  await mkdir(path.join(root,'data/snapshots'),{recursive:true});
