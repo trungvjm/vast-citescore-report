@@ -22,18 +22,21 @@ assert.equal(scopus.records.length,84,'Baseline must retain all 84 observations.
 assert.equal(new Set(scopus.records.map(r=>r.journal+'|'+r.year+'|'+r.type)).size,84,'Duplicate official observations.');
 const evidence=await Promise.all(profileFiles.map(f=>readJson(path.join(root,f))));
 const audits=await Promise.all(auditFiles.map(f=>readJson(path.join(root,f))));
-const [histIntl,histOjs,media,jcrData]=await Promise.all([
+const [histIntl,histOjs,media,jcrData,scopusCatData]=await Promise.all([
  readJson(path.join(root,'evidence/dashboard-history-intl.json')),
  readJson(path.join(root,'evidence/dashboard-history-ojs.json')),
  readJson(path.join(root,'evidence/dashboard-media.json')),
- readJson(path.join(root,'evidence/dashboard-jcr.json'))
+ readJson(path.join(root,'evidence/dashboard-jcr.json')),
+ readJson(path.join(root,'evidence/scopus-categories.json'))
 ]);
 const collectedAt=evidence[0].collectedAt,currentYear=Number(collectedAt.slice(0,4)),outputYears=Array.from({length:currentYear-2019},(_,i)=>2020+i);
 assert(evidence.every(e=>e.collectedAt===collectedAt),'Profile evidence dates must agree.');
 const profiles=evidence.flatMap(e=>e.journals),localAudits=audits.flatMap(a=>a.journals);
 const historyMap=new Map([...histIntl.journals,...histOjs.journals].map(j=>[j.id,j]));
 const jcrMap=new Map((jcrData.journals||[]).map(j=>[j.id,j]));
+const scopusCatMap=new Map((scopusCatData.journals||[]).map(j=>[j.id,j.categories]));
 assert.deepEqual([...jcrMap.keys()].sort(),['amv','ansn','vjc','vjes','vjm'],'Need exact 5 JCR 2025 journal entries.');
+assert.deepEqual([...scopusCatMap.keys()].sort(),['amv','ansn','cip','vjc','vjes','vjm','vjst'],'Need exact 7 VAST-1 Scopus category entries.');
 for(const jr of jcrMap.values()){
  assert.equal(jr.metricYear,2025,jr.code+': JCR metricYear must be 2025.');
  assert.equal(jr.wosCollection,'ESCI',jr.code+': JCR 2025 edition must be ESCI.');
@@ -130,7 +133,7 @@ function buildAnnualHistory(j,hist,cat,verifiedOutputs){
  });
 }
 
-const categories={VJM:['General Mathematics',72,115,414],AMV:['General Mathematics',18,338,414],ANSN:['Industrial and Manufacturing Engineering',61,164,425],VJC:['General Chemistry',43,227,402],VJES:['Earth and Planetary Sciences (miscellaneous)',77,45,201],VJST:['Electrical and Electronic Engineering',20,821,1030]};
+const top2025Check={VJM:[72,115,414],AMV:[18,338,414],ANSN:[61,164,425],VJC:[43,227,402],VJES:[77,45,201],VJST:[20,821,1030]};
 const coPublishers={vjm:['Springer Nature','assets/images/logos/springer.svg'],amv:['Springer Nature','assets/images/logos/springer.svg'],ansn:['IOP Publishing','assets/images/logos/iop.svg'],vjc:['Wiley-VCH','assets/images/logos/wiley.svg']};
 const archiveUrls={
  vjm:'https://link.springer.com/journal/10013/volumes-and-issues',
@@ -194,8 +197,19 @@ for(let index=0;index<order.length;index++){
  for(const i of j.indexings){assert(['listed','not_listed','unverified'].includes(i.status),j.code+': invalid indexing status.');assert(['database','journal','vast'].includes(i.evidenceLevel),j.code+': invalid evidence level.');assert(/^https?:\/\//.test(i.sourceUrl),j.code+': indexing needs a source URL.');}
  assert.deepEqual(j.outputs.map(o=>o.year),outputYears,j.code+': need 2020-2026 reporting periods.');
  for(const o of j.outputs)validateOutput(j,o);
- const category=categories[j.code];
- if(category){const r=scopus.records.find(r=>r.journal===j.code&&r.type==='annual'&&r.year===2025);assert(r.evidenceQuote.includes(category[1]+'%')&&r.evidenceQuote.includes(category[2]+'/'+category[3]),j.code+': percentile not supported by baseline quote.');j.scopusCategories=[{year:2025,name:category[0],percentile:category[1],rank:category[2],total:category[3],sourceUrl:'https://www.scopus.com/sourceid/'+original.sourceId}];}
+ const scats=scopusCatMap.get(j.id);
+ if(scats){
+  assert(Array.isArray(scats)&&scats.length>=1,j.code+': missing Scopus categories.');
+  const topExpected=top2025Check[j.code];
+  if(topExpected){
+   const r=scopus.records.find(r=>r.journal===j.code&&r.type==='annual'&&r.year===2025);
+   assert(r.evidenceQuote.includes(topExpected[0]+'%')&&r.evidenceQuote.includes(topExpected[1]+'/'+topExpected[2]),j.code+': percentile not supported by baseline quote.');
+   assert.equal(scats[0].percentile,topExpected[0],j.code+': top Scopus category percentile mismatch.');
+   assert.equal(scats[0].rank,topExpected[1],j.code+': top Scopus category rank mismatch.');
+   assert.equal(scats[0].total,topExpected[2],j.code+': top Scopus category total mismatch.');
+  }
+  j.scopusCategories=structuredClone(scats);
+ }
  const audit=localAudits.find(a=>a.id===j.id);
  let cat=null;
  if(audit){const res=await localCollection(audit,Boolean(original));j.localCitation=res.local;cat=res.cat;}

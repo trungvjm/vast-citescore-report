@@ -1,0 +1,1149 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-10-21T23:57:09.115Z",
+  "sourceEndpoint": "https://www.scopus.com/source/citescore/<sourceId>.uri",
+  "journals": [
+    {
+      "id": "vjm",
+      "code": "VJM",
+      "scopusSourceId": "21100286934",
+      "categories": [
+        {
+          "code": "2600",
+          "parent": "Mathematics",
+          "name": "General Mathematics",
+          "year": 2025,
+          "isTrackerOnly": false,
+          "percentile": 72,
+          "rank": 115,
+          "total": 414,
+          "annual2025": {
+            "rank": 115,
+            "total": 414,
+            "percentile": 72
+          },
+          "tracker2026": {
+            "rank": 129,
+            "total": 419,
+            "percentile": 69
+          },
+          "history": [
+            {
+              "year": 2013,
+              "type": "annual",
+              "rank": 303,
+              "total": 309,
+              "percentile": 2
+            },
+            {
+              "year": 2014,
+              "type": "annual",
+              "rank": 292,
+              "total": 316,
+              "percentile": 7
+            },
+            {
+              "year": 2015,
+              "type": "annual",
+              "rank": 279,
+              "total": 321,
+              "percentile": 13
+            },
+            {
+              "year": 2016,
+              "type": "annual",
+              "rank": 254,
+              "total": 326,
+              "percentile": 22
+            },
+            {
+              "year": 2017,
+              "type": "annual",
+              "rank": 216,
+              "total": 335,
+              "percentile": 35
+            },
+            {
+              "year": 2018,
+              "type": "annual",
+              "rank": 183,
+              "total": 344,
+              "percentile": 46
+            },
+            {
+              "year": 2019,
+              "type": "annual",
+              "rank": 140,
+              "total": 368,
+              "percentile": 62
+            },
+            {
+              "year": 2020,
+              "type": "annual",
+              "rank": 138,
+              "total": 378,
+              "percentile": 63
+            },
+            {
+              "year": 2021,
+              "type": "annual",
+              "rank": 143,
+              "total": 391,
+              "percentile": 63
+            },
+            {
+              "year": 2022,
+              "type": "annual",
+              "rank": 152,
+              "total": 387,
+              "percentile": 60
+            },
+            {
+              "year": 2023,
+              "type": "annual",
+              "rank": 126,
+              "total": 399,
+              "percentile": 68
+            },
+            {
+              "year": 2024,
+              "type": "annual",
+              "rank": 96,
+              "total": 414,
+              "percentile": 76
+            },
+            {
+              "year": 2025,
+              "type": "annual",
+              "rank": 115,
+              "total": 414,
+              "percentile": 72
+            },
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 129,
+              "total": 419,
+              "percentile": 69
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286934"
+        }
+      ]
+    },
+    {
+      "id": "amv",
+      "code": "AMV",
+      "scopusSourceId": "21100199843",
+      "categories": [
+        {
+          "code": "2600",
+          "parent": "Mathematics",
+          "name": "General Mathematics",
+          "year": 2025,
+          "isTrackerOnly": false,
+          "percentile": 18,
+          "rank": 338,
+          "total": 414,
+          "annual2025": {
+            "rank": 338,
+            "total": 414,
+            "percentile": 18
+          },
+          "tracker2026": {
+            "rank": 318,
+            "total": 419,
+            "percentile": 24
+          },
+          "history": [
+            {
+              "year": 2011,
+              "type": "annual",
+              "rank": 271,
+              "total": 289,
+              "percentile": 6
+            },
+            {
+              "year": 2012,
+              "type": "annual",
+              "rank": 282,
+              "total": 303,
+              "percentile": 7
+            },
+            {
+              "year": 2013,
+              "type": "annual",
+              "rank": 278,
+              "total": 309,
+              "percentile": 10
+            },
+            {
+              "year": 2014,
+              "type": "annual",
+              "rank": 251,
+              "total": 316,
+              "percentile": 20
+            },
+            {
+              "year": 2015,
+              "type": "annual",
+              "rank": 238,
+              "total": 321,
+              "percentile": 26
+            },
+            {
+              "year": 2016,
+              "type": "annual",
+              "rank": 208,
+              "total": 326,
+              "percentile": 36
+            },
+            {
+              "year": 2017,
+              "type": "annual",
+              "rank": 244,
+              "total": 335,
+              "percentile": 27
+            },
+            {
+              "year": 2018,
+              "type": "annual",
+              "rank": 229,
+              "total": 344,
+              "percentile": 33
+            },
+            {
+              "year": 2019,
+              "type": "annual",
+              "rank": 211,
+              "total": 368,
+              "percentile": 42
+            },
+            {
+              "year": 2020,
+              "type": "annual",
+              "rank": 180,
+              "total": 378,
+              "percentile": 52
+            },
+            {
+              "year": 2021,
+              "type": "annual",
+              "rank": 198,
+              "total": 391,
+              "percentile": 49
+            },
+            {
+              "year": 2022,
+              "type": "annual",
+              "rank": 205,
+              "total": 387,
+              "percentile": 47
+            },
+            {
+              "year": 2023,
+              "type": "annual",
+              "rank": 271,
+              "total": 399,
+              "percentile": 32
+            },
+            {
+              "year": 2024,
+              "type": "annual",
+              "rank": 333,
+              "total": 414,
+              "percentile": 19
+            },
+            {
+              "year": 2025,
+              "type": "annual",
+              "rank": 338,
+              "total": 414,
+              "percentile": 18
+            },
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 318,
+              "total": 419,
+              "percentile": 24
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21100199843"
+        }
+      ]
+    },
+    {
+      "id": "ansn",
+      "code": "ANSN",
+      "scopusSourceId": "21100286862",
+      "categories": [
+        {
+          "code": "2209",
+          "parent": "Engineering",
+          "name": "Industrial and Manufacturing Engineering",
+          "year": 2025,
+          "isTrackerOnly": false,
+          "percentile": 61,
+          "rank": 164,
+          "total": 425,
+          "annual2025": {
+            "rank": 164,
+            "total": 425,
+            "percentile": 61
+          },
+          "tracker2026": {
+            "rank": 165,
+            "total": 437,
+            "percentile": 62
+          },
+          "history": [
+            {
+              "year": 2011,
+              "type": "annual",
+              "rank": 88,
+              "total": 269,
+              "percentile": 67
+            },
+            {
+              "year": 2012,
+              "type": "annual",
+              "rank": 53,
+              "total": 280,
+              "percentile": 81
+            },
+            {
+              "year": 2013,
+              "type": "annual",
+              "rank": 71,
+              "total": 288,
+              "percentile": 75
+            },
+            {
+              "year": 2014,
+              "type": "annual",
+              "rank": 70,
+              "total": 295,
+              "percentile": 76
+            },
+            {
+              "year": 2015,
+              "type": "annual",
+              "rank": 58,
+              "total": 303,
+              "percentile": 81
+            },
+            {
+              "year": 2016,
+              "type": "annual",
+              "rank": 65,
+              "total": 304,
+              "percentile": 78
+            },
+            {
+              "year": 2017,
+              "type": "annual",
+              "rank": 77,
+              "total": 328,
+              "percentile": 76
+            },
+            {
+              "year": 2018,
+              "type": "annual",
+              "rank": 66,
+              "total": 335,
+              "percentile": 80
+            },
+            {
+              "year": 2019,
+              "type": "annual",
+              "rank": 56,
+              "total": 340,
+              "percentile": 83
+            },
+            {
+              "year": 2020,
+              "type": "annual",
+              "rank": 70,
+              "total": 336,
+              "percentile": 79
+            },
+            {
+              "year": 2021,
+              "type": "annual",
+              "rank": 103,
+              "total": 338,
+              "percentile": 69
+            },
+            {
+              "year": 2022,
+              "type": "annual",
+              "rank": 132,
+              "total": 355,
+              "percentile": 62
+            },
+            {
+              "year": 2023,
+              "type": "annual",
+              "rank": 148,
+              "total": 384,
+              "percentile": 61
+            },
+            {
+              "year": 2024,
+              "type": "annual",
+              "rank": 164,
+              "total": 402,
+              "percentile": 59
+            },
+            {
+              "year": 2025,
+              "type": "annual",
+              "rank": 164,
+              "total": 425,
+              "percentile": 61
+            },
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 165,
+              "total": 437,
+              "percentile": 62
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286862"
+        },
+        {
+          "code": "2208",
+          "parent": "Engineering",
+          "name": "Electrical and Electronic Engineering",
+          "year": 2025,
+          "isTrackerOnly": false,
+          "percentile": 60,
+          "rank": 408,
+          "total": 1030,
+          "annual2025": {
+            "rank": 408,
+            "total": 1030,
+            "percentile": 60
+          },
+          "tracker2026": {
+            "rank": 390,
+            "total": 1050,
+            "percentile": 62
+          },
+          "history": [
+            {
+              "year": 2011,
+              "type": "annual",
+              "rank": 287,
+              "total": 589,
+              "percentile": 51
+            },
+            {
+              "year": 2012,
+              "type": "annual",
+              "rank": 218,
+              "total": 615,
+              "percentile": 64
+            },
+            {
+              "year": 2013,
+              "type": "annual",
+              "rank": 266,
+              "total": 631,
+              "percentile": 57
+            },
+            {
+              "year": 2014,
+              "type": "annual",
+              "rank": 243,
+              "total": 651,
+              "percentile": 62
+            },
+            {
+              "year": 2015,
+              "type": "annual",
+              "rank": 199,
+              "total": 660,
+              "percentile": 69
+            },
+            {
+              "year": 2016,
+              "type": "annual",
+              "rank": 205,
+              "total": 654,
+              "percentile": 68
+            },
+            {
+              "year": 2017,
+              "type": "annual",
+              "rank": 233,
+              "total": 666,
+              "percentile": 65
+            },
+            {
+              "year": 2018,
+              "type": "annual",
+              "rank": 181,
+              "total": 669,
+              "percentile": 73
+            },
+            {
+              "year": 2019,
+              "type": "annual",
+              "rank": 152,
+              "total": 670,
+              "percentile": 77
+            },
+            {
+              "year": 2020,
+              "type": "annual",
+              "rank": 176,
+              "total": 693,
+              "percentile": 74
+            },
+            {
+              "year": 2021,
+              "type": "annual",
+              "rank": 241,
+              "total": 708,
+              "percentile": 66
+            },
+            {
+              "year": 2022,
+              "type": "annual",
+              "rank": 332,
+              "total": 738,
+              "percentile": 55
+            },
+            {
+              "year": 2023,
+              "type": "annual",
+              "rank": 356,
+              "total": 797,
+              "percentile": 55
+            },
+            {
+              "year": 2024,
+              "type": "annual",
+              "rank": 426,
+              "total": 970,
+              "percentile": 56
+            },
+            {
+              "year": 2025,
+              "type": "annual",
+              "rank": 408,
+              "total": 1030,
+              "percentile": 60
+            },
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 390,
+              "total": 1050,
+              "percentile": 62
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286862"
+        },
+        {
+          "code": "2500",
+          "parent": "Materials Science",
+          "name": "General Materials Science",
+          "year": 2025,
+          "isTrackerOnly": false,
+          "percentile": 48,
+          "rank": 247,
+          "total": 475,
+          "annual2025": {
+            "rank": 247,
+            "total": 475,
+            "percentile": 48
+          },
+          "tracker2026": {
+            "rank": 247,
+            "total": 474,
+            "percentile": 47
+          },
+          "history": [
+            {
+              "year": 2011,
+              "type": "annual",
+              "rank": 183,
+              "total": 393,
+              "percentile": 53
+            },
+            {
+              "year": 2012,
+              "type": "annual",
+              "rank": 136,
+              "total": 408,
+              "percentile": 66
+            },
+            {
+              "year": 2013,
+              "type": "annual",
+              "rank": 164,
+              "total": 420,
+              "percentile": 60
+            },
+            {
+              "year": 2014,
+              "type": "annual",
+              "rank": 166,
+              "total": 430,
+              "percentile": 61
+            },
+            {
+              "year": 2015,
+              "type": "annual",
+              "rank": 145,
+              "total": 437,
+              "percentile": 66
+            },
+            {
+              "year": 2016,
+              "type": "annual",
+              "rank": 165,
+              "total": 435,
+              "percentile": 62
+            },
+            {
+              "year": 2017,
+              "type": "annual",
+              "rank": 179,
+              "total": 444,
+              "percentile": 59
+            },
+            {
+              "year": 2018,
+              "type": "annual",
+              "rank": 148,
+              "total": 440,
+              "percentile": 66
+            },
+            {
+              "year": 2019,
+              "type": "annual",
+              "rank": 121,
+              "total": 460,
+              "percentile": 73
+            },
+            {
+              "year": 2020,
+              "type": "annual",
+              "rank": 136,
+              "total": 455,
+              "percentile": 70
+            },
+            {
+              "year": 2021,
+              "type": "annual",
+              "rank": 193,
+              "total": 455,
+              "percentile": 57
+            },
+            {
+              "year": 2022,
+              "type": "annual",
+              "rank": 230,
+              "total": 453,
+              "percentile": 49
+            },
+            {
+              "year": 2023,
+              "type": "annual",
+              "rank": 243,
+              "total": 463,
+              "percentile": 47
+            },
+            {
+              "year": 2024,
+              "type": "annual",
+              "rank": 260,
+              "total": 460,
+              "percentile": 43
+            },
+            {
+              "year": 2025,
+              "type": "annual",
+              "rank": 247,
+              "total": 475,
+              "percentile": 48
+            },
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 247,
+              "total": 474,
+              "percentile": 47
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286862"
+        }
+      ]
+    },
+    {
+      "id": "vjc",
+      "code": "VJC",
+      "scopusSourceId": "21101043786",
+      "categories": [
+        {
+          "code": "1600",
+          "parent": "Chemistry",
+          "name": "General Chemistry",
+          "year": 2025,
+          "isTrackerOnly": false,
+          "percentile": 43,
+          "rank": 227,
+          "total": 402,
+          "annual2025": {
+            "rank": 227,
+            "total": 402,
+            "percentile": 43
+          },
+          "tracker2026": {
+            "rank": 203,
+            "total": 406,
+            "percentile": 50
+          },
+          "history": [
+            {
+              "year": 2021,
+              "type": "annual",
+              "rank": 363,
+              "total": 409,
+              "percentile": 11
+            },
+            {
+              "year": 2022,
+              "type": "annual",
+              "rank": 294,
+              "total": 407,
+              "percentile": 27
+            },
+            {
+              "year": 2023,
+              "type": "annual",
+              "rank": 274,
+              "total": 408,
+              "percentile": 32
+            },
+            {
+              "year": 2024,
+              "type": "annual",
+              "rank": 248,
+              "total": 404,
+              "percentile": 38
+            },
+            {
+              "year": 2025,
+              "type": "annual",
+              "rank": 227,
+              "total": 402,
+              "percentile": 43
+            },
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 203,
+              "total": 406,
+              "percentile": 50
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21101043786"
+        }
+      ]
+    },
+    {
+      "id": "vjes",
+      "code": "VJES",
+      "scopusSourceId": "21101039869",
+      "categories": [
+        {
+          "code": "1900",
+          "parent": "Earth and Planetary Sciences",
+          "name": "General Earth and Planetary Sciences",
+          "year": 2025,
+          "isTrackerOnly": false,
+          "percentile": 77,
+          "rank": 45,
+          "total": 201,
+          "annual2025": {
+            "rank": 45,
+            "total": 201,
+            "percentile": 77
+          },
+          "tracker2026": {
+            "rank": 52,
+            "total": 203,
+            "percentile": 74
+          },
+          "history": [
+            {
+              "year": 2020,
+              "type": "annual",
+              "rank": 139,
+              "total": 186,
+              "percentile": 25
+            },
+            {
+              "year": 2021,
+              "type": "annual",
+              "rank": 113,
+              "total": 191,
+              "percentile": 41
+            },
+            {
+              "year": 2022,
+              "type": "annual",
+              "rank": 71,
+              "total": 192,
+              "percentile": 63
+            },
+            {
+              "year": 2023,
+              "type": "annual",
+              "rank": 62,
+              "total": 195,
+              "percentile": 68
+            },
+            {
+              "year": 2024,
+              "type": "annual",
+              "rank": 60,
+              "total": 198,
+              "percentile": 69
+            },
+            {
+              "year": 2025,
+              "type": "annual",
+              "rank": 45,
+              "total": 201,
+              "percentile": 77
+            },
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 52,
+              "total": 203,
+              "percentile": 74
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21101039869"
+        }
+      ]
+    },
+    {
+      "id": "vjst",
+      "code": "VJST",
+      "scopusSourceId": "21101101853",
+      "categories": [
+        {
+          "code": "2208",
+          "parent": "Engineering",
+          "name": "Electrical and Electronic Engineering",
+          "year": 2025,
+          "isTrackerOnly": false,
+          "percentile": 20,
+          "rank": 821,
+          "total": 1030,
+          "annual2025": {
+            "rank": 821,
+            "total": 1030,
+            "percentile": 20
+          },
+          "tracker2026": {
+            "rank": 787,
+            "total": 1050,
+            "percentile": 25
+          },
+          "history": [
+            {
+              "year": 2023,
+              "type": "annual",
+              "rank": 717,
+              "total": 797,
+              "percentile": 10
+            },
+            {
+              "year": 2024,
+              "type": "annual",
+              "rank": 833,
+              "total": 970,
+              "percentile": 14
+            },
+            {
+              "year": 2025,
+              "type": "annual",
+              "rank": 821,
+              "total": 1030,
+              "percentile": 20
+            },
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 787,
+              "total": 1050,
+              "percentile": 25
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853"
+        },
+        {
+          "code": "2210",
+          "parent": "Engineering",
+          "name": "Mechanical Engineering",
+          "year": 2025,
+          "isTrackerOnly": false,
+          "percentile": 17,
+          "rank": 614,
+          "total": 740,
+          "annual2025": {
+            "rank": 614,
+            "total": 740,
+            "percentile": 17
+          },
+          "tracker2026": {
+            "rank": 581,
+            "total": 753,
+            "percentile": 22
+          },
+          "history": [
+            {
+              "year": 2023,
+              "type": "annual",
+              "rank": 589,
+              "total": 672,
+              "percentile": 12
+            },
+            {
+              "year": 2024,
+              "type": "annual",
+              "rank": 628,
+              "total": 720,
+              "percentile": 12
+            },
+            {
+              "year": 2025,
+              "type": "annual",
+              "rank": 614,
+              "total": 740,
+              "percentile": 17
+            },
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 581,
+              "total": 753,
+              "percentile": 22
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853"
+        },
+        {
+          "code": "2301",
+          "parent": "Environmental Science",
+          "name": "Environmental Science (miscellaneous)",
+          "year": 2025,
+          "isTrackerOnly": false,
+          "percentile": 16,
+          "rank": 258,
+          "total": 307,
+          "annual2025": {
+            "rank": 258,
+            "total": 307,
+            "percentile": 16
+          },
+          "tracker2026": {
+            "rank": 243,
+            "total": 320,
+            "percentile": 24
+          },
+          "history": [
+            {
+              "year": 2022,
+              "type": "annual",
+              "rank": 146,
+              "total": 163,
+              "percentile": 10
+            },
+            {
+              "year": 2023,
+              "type": "annual",
+              "rank": 196,
+              "total": 219,
+              "percentile": 10
+            },
+            {
+              "year": 2024,
+              "type": "annual",
+              "rank": 240,
+              "total": 271,
+              "percentile": 11
+            },
+            {
+              "year": 2025,
+              "type": "annual",
+              "rank": 258,
+              "total": 307,
+              "percentile": 16
+            },
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 243,
+              "total": 320,
+              "percentile": 24
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853"
+        },
+        {
+          "code": "2501",
+          "parent": "Materials Science",
+          "name": "Materials Science (miscellaneous)",
+          "year": 2025,
+          "isTrackerOnly": false,
+          "percentile": 15,
+          "rank": 218,
+          "total": 256,
+          "annual2025": {
+            "rank": 218,
+            "total": 256,
+            "percentile": 15
+          },
+          "tracker2026": {
+            "rank": 217,
+            "total": 269,
+            "percentile": 19
+          },
+          "history": [
+            {
+              "year": 2023,
+              "type": "annual",
+              "rank": 170,
+              "total": 196,
+              "percentile": 13
+            },
+            {
+              "year": 2024,
+              "type": "annual",
+              "rank": 202,
+              "total": 232,
+              "percentile": 13
+            },
+            {
+              "year": 2025,
+              "type": "annual",
+              "rank": 218,
+              "total": 256,
+              "percentile": 15
+            },
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 217,
+              "total": 269,
+              "percentile": 19
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853"
+        },
+        {
+          "code": "1601",
+          "parent": "Chemistry",
+          "name": "Chemistry (miscellaneous)",
+          "year": 2025,
+          "isTrackerOnly": false,
+          "percentile": 12,
+          "rank": 121,
+          "total": 137,
+          "annual2025": {
+            "rank": 121,
+            "total": 137,
+            "percentile": 12
+          },
+          "tracker2026": {
+            "rank": 123,
+            "total": 142,
+            "percentile": 13
+          },
+          "history": [
+            {
+              "year": 2022,
+              "type": "annual",
+              "rank": 56,
+              "total": 64,
+              "percentile": 13
+            },
+            {
+              "year": 2023,
+              "type": "annual",
+              "rank": 99,
+              "total": 111,
+              "percentile": 11
+            },
+            {
+              "year": 2024,
+              "type": "annual",
+              "rank": 114,
+              "total": 124,
+              "percentile": 8
+            },
+            {
+              "year": 2025,
+              "type": "annual",
+              "rank": 121,
+              "total": 137,
+              "percentile": 12
+            },
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 123,
+              "total": 142,
+              "percentile": 13
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853"
+        }
+      ]
+    },
+    {
+      "id": "cip",
+      "code": "CIP",
+      "scopusSourceId": "21101380177",
+      "categories": [
+        {
+          "code": "3100",
+          "parent": "Physics and Astronomy",
+          "name": "General Physics and Astronomy",
+          "year": 2026,
+          "isTrackerOnly": true,
+          "percentile": 17,
+          "rank": 204,
+          "total": 248,
+          "annual2025": null,
+          "tracker2026": {
+            "rank": 204,
+            "total": 248,
+            "percentile": 17
+          },
+          "history": [
+            {
+              "year": 2026,
+              "type": "tracker",
+              "rank": 204,
+              "total": 248,
+              "percentile": 17
+            }
+          ],
+          "sourceUrl": "https://www.scopus.com/sourceid/21101380177"
+        }
+      ]
+    }
+  ]
+}

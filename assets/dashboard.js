@@ -425,18 +425,30 @@ function renderVast1MatrixTable(){
     ${years.map(y=>`<th scope="col">${y}</th>`).join('')}
     <th scope="col">Tracker<br>${scopus.trackerYear}</th>
     <th scope="col">Trích dẫn / Tài liệu<br>(2022–2025)</th>
-    <th scope="col">Phân vị Scopus<br>(2025)</th>
+    <th scope="col">Phân ngành, Vị trí &amp; Phân vị Scopus<br>(2025 &amp; Tracker 2026)</th>
   </tr>`;
 
   $('#vast1-matrix-body').innerHTML=vast1.map(j=>{
     const inst=j.institution||{name:j.publisher,logo:'assets/images/logos/nxb.svg',coPublisher:null,coLogo:null};
     const a25=annualRecord(j,2025),t26=trackerRecord(j);
-    const bestCat=(j.scopusCategories||[]).slice().sort((a,b)=>(b.percentile||0)-(a.percentile||0))[0];
+    const scats=j.scopusCategories||[];
     const ratioCell=Number.isFinite(a25?.citations)&&Number.isFinite(a25?.documents)
       ?`${integer.format(a25.citations)} / ${integer.format(a25.documents)}`
       :(Number.isFinite(t26?.citations)&&Number.isFinite(t26?.documents)?`${integer.format(t26.citations)} / ${integer.format(t26.documents)} (T26)`:'N/A');
-    const pctCell=bestCat?`<strong>${bestCat.percentile}%</strong> <small style="display:block;color:var(--muted)">(${esc(bestCat.rank)})</small>`:'Mới chỉ mục (08/2026)';
-
+    const pctCell=scats.length
+      ?scats.map(c=>{
+        const a=c.annual2025,t=c.tracker2026;
+        const label=c.parent?`${c.parent}: ${c.name}`:c.name;
+        if(a){
+          const tTxt=t?` · <span style="color:var(--muted)">T26: ${t.percentile}% (${t.rank}/${t.total})</span>`:'';
+          return `<div style="margin-bottom:4px"><strong>${a.percentile}%</strong> · hạng <strong>${a.rank}/${a.total}</strong>${tTxt}<small style="display:block;color:var(--muted)">${esc(label)}</small></div>`;
+        }
+        if(t){
+          return `<div style="margin-bottom:4px"><strong>Tracker 26: ${t.percentile}%</strong> · hạng <strong>${t.rank}/${t.total}</strong><small style="display:block;color:var(--muted)">${esc(label)}</small></div>`;
+        }
+        return '';
+      }).join('')
+      :'Chưa có dữ liệu';
     const yearCells=years.map(y=>{
       const r=annualRecord(j,y);
       const val=r&&Number.isFinite(r.value)?oneDec.format(r.value):'—';
@@ -1285,6 +1297,24 @@ function renderDetail(id){
             </table>
           </div>
         </section>`:''}
+        ${cats.length?`<section class="detail-section">
+          <h3>Vị trí xếp hạng &amp; Phân vị theo từng phân ngành Scopus qua các năm</h3>
+          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">Hiển thị đầy đủ ${cats.length} phân ngành ASJC của <strong>${esc(j.code)}</strong> trên hệ thống Scopus (gồm thứ hạng <code>hạng / tổng số tạp chí</code> và phân vị <code>%</code> của từng năm và CiteScore Tracker 2026).</p>
+          <div class="table-scroll" style="max-height:420px;overflow-y:auto;border:1px solid var(--line)">
+            <table class="detail-table">
+              <thead><tr><th scope="col">Lĩnh vực &amp; Phân ngành Scopus (ASJC)</th><th scope="col">Năm</th><th scope="col">Loại</th><th scope="col">Vị trí (Hạng / Tổng)</th><th scope="col">Phân vị Scopus</th></tr></thead>
+              <tbody>
+                ${cats.flatMap(c=>(c.history||[{year:c.year,type:c.isTrackerOnly?'tracker':'annual',rank:c.rank,total:c.total,percentile:c.percentile}]).slice().sort((a,b)=>b.year-a.year).map(h=>`<tr>
+                  <td><strong>${esc(c.name)}</strong><small style="display:block;color:var(--muted)">${esc(c.parent||'')}${c.code?` · ASJC ${esc(c.code)}`:''}</small></td>
+                  <td><strong>${h.year}</strong></td>
+                  <td>${h.type==='tracker'?'Tracker 2026':'Chính thức'}</td>
+                  <td><strong>${h.rank}/${h.total}</strong></td>
+                  <td><strong>${h.percentile}%</strong></td>
+                </tr>`)).join('')}
+              </tbody>
+            </table>
+          </div>
+        </section>`:''}
         ${jr?`<section class="detail-section">
           <h3>Báo cáo Web of Science — Clarivate JCR ${jr.metricYear} (${esc(jr.wosCollection)})</h3>
           <p style="font-size:13px;color:var(--muted);margin:0 0 10px">Nguồn: <code>${esc(jr.source.filename)}</code> (tải ngày ${esc(jr.source.downloadedAtRaw)}, ${jr.source.pageCount} trang; ISSN in trên báo cáo JCR: ${esc(jr.issn||'—')} / eISSN: ${esc(jr.eissn||'—')}). Chỉ số JIF 2 năm và JCI 3 năm của Clarivate hoàn toàn độc lập với CiteScore 4 năm của Scopus.</p>
@@ -1338,8 +1368,14 @@ function renderDetail(id){
         </section>
 
         ${cats.length?`<section class="detail-section">
-          <h3>Phân ngành Scopus (CiteScore ${cats[0].year})</h3>
-          <ul class="source-evidence">${cats.map(c=>`<li><strong>${esc(c.name)}</strong>: hạng ${esc(c.rank)}, phân vị <strong>${c.percentile}%</strong></li>`).join('')}</ul>
+          <h3>Phân ngành Scopus (${cats.length} ngành · Vị trí &amp; Phân vị)</h3>
+          <ul class="source-evidence">${cats.map(c=>{
+            const a=c.annual2025,t=c.tracker2026;
+            const head=`<strong>${esc(c.parent?`${c.parent} — ${c.name}`:c.name)}</strong>${c.code?` <small style="display:inline;color:var(--muted)">(ASJC ${esc(c.code)})</small>`:''}`;
+            const aTxt=a?`CiteScore 2025: hạng <strong>${a.rank}/${a.total}</strong>, phân vị <strong>${a.percentile}%</strong>`:'CiteScore 2025: N/A';
+            const tTxt=t?`Tracker 2026: hạng <strong>${t.rank}/${t.total}</strong>, phân vị <strong>${t.percentile}%</strong>`:'';
+            return `<li>${head}<br>${[aTxt,tTxt].filter(Boolean).join(' · ')}</li>`;
+          }).join('')}</ul>
         </section>`:''}
         ${jr?`<section class="detail-section">
           <h3>Phân ngành Web of Science (JCR ${jr.metricYear} · ${esc(jr.wosCollection)})</h3>
