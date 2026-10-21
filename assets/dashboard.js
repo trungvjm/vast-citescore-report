@@ -174,7 +174,7 @@ function formatAxisTick(v,decimals){
 }
 function renderChart(){
  if(!dashboard)return;
- const width=chartWidth,height=matchMedia('(max-width:767px)').matches?270:360,left=48,right=26,top=32,bottom=34;
+ const width=chartWidth,height=matchMedia('(max-width:767px)').matches?270:360,left=48,right=34,top=32,bottom=34;
  const years=availableYears().filter(y=>y>=state.from&&y<=state.to),start=years[0],end=years.at(-1),plotWidth=width-left-right,plotHeight=height-top-bottom;
  const values=journals.flatMap(j=>years.map(y=>observation(j,state.metric,y).value)).filter(Number.isFinite),scale=niceScale(Math.max(0,...values),Boolean(metricInfo[state.metric].decimals));
  const x=year=>years.length===1?left+plotWidth/2:left+(year-start)/(end-start)*plotWidth,y=value=>top+(1-value/scale.max)*plotHeight;
@@ -182,7 +182,7 @@ function renderChart(){
  const chart=$('#trend-chart');chart.setAttribute('viewBox',`0 0 ${width} ${height}`);
  const currentYear=Number(dashboard.collectedAt.slice(0,4)),provisional=years.includes(currentYear);
  let svg=`<title id="chart-title">${esc(metricInfo[state.metric].label)} ${start}–${end}</title><desc id="chart-description">Đọc số liệu theo năm bằng chuột, chạm hoặc bàn phím. Giá trị chưa có nguồn không được vẽ thành 0. Năm ${currentYear} là ${metricInfo[state.metric].scopus?'Tracker tạm thời':'năm chưa kết thúc'}.</desc>`;
- if(provisional){const boundary=years.length===1?left:(x(currentYear-1)+x(currentYear))/2;svg+=`<rect x="${boundary}" y="${top-8}" width="${width-boundary}" height="${plotHeight+8}" fill="var(--surface)"/><text x="${x(currentYear)}" y="16" text-anchor="middle" fill="var(--muted)" font-size="11">${metricInfo[state.metric].scopus?'Tracker':metricInfo[state.metric].local?'Chưa đủ năm':'Đến ngày chốt'}</text>`;}
+ if(provisional){const boundary=years.length===1?left:(x(currentYear-1)+x(currentYear))/2;svg+=`<rect x="${boundary}" y="${top-8}" width="${width-boundary}" height="${plotHeight+8}" fill="var(--surface)"/><text x="${width-6}" y="16" text-anchor="end" fill="var(--muted)" font-size="11">${metricInfo[state.metric].scopus?'Tracker':metricInfo[state.metric].local?'Chưa đủ năm':'Đến ngày chốt'}</text>`;}
  for(let i=0;i<=Math.round(scale.max/scale.step);i++){const v=+(i*scale.step).toFixed(4);svg+=`<line x1="${left}" y1="${y(v)}" x2="${width}" y2="${y(v)}" stroke="var(--line)"/><text x="${left-10}" y="${y(v)+4}" text-anchor="end" fill="var(--muted)" font-size="11">${formatAxisTick(v,Boolean(metricInfo[state.metric].decimals))}</text>`;}
  const tickStep=years.length<=7?1:width<600?3:2;
  for(const year of years)if((year-start)%tickStep===0||year===end)svg+=`<text x="${x(year)}" y="${height-10}" text-anchor="middle" fill="var(--muted)" font-size="12">${year}</text>`;
@@ -233,7 +233,7 @@ function yearFromPointer(event,p=plot,svgEl=$('#trend-chart')){
 function renderCandidatesChart(){
  if(!dashboard)return;
  $('#candidates-legend').innerHTML=legendButtonsHtml(candidateIds,candidateSeries,'data-candidate');
- const width=subChartWidth,height=matchMedia('(max-width:767px)').matches?260:340,left=48,right=24,top=32,bottom=34;
+ const width=subChartWidth,height=matchMedia('(max-width:767px)').matches?260:340,left=48,right=34,top=34,bottom=34;
  const years=[2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],start=years[0],end=years.at(-1),plotWidth=width-left-right,plotHeight=height-top-bottom;
  const list=candidateIds.map(id=>journals.find(j=>j.id===id));
  const values=list.flatMap(j=>years.map(y=>observation(j,'localScore',y).value)).filter(Number.isFinite);
@@ -242,7 +242,7 @@ function renderCandidatesChart(){
  subState.candidates.plot={width,height,left,right,top,bottom,plotWidth,years,start,end,x,y};
  const boundary=(x(2025)+x(2026))/2,cipRef=0.67;
  let svg=`<title id="candidates-chart-title">CiteScore dự kiến của 5 tạp chí chưa vào Scopus (2015–2026)</title><desc id="candidates-chart-desc">So sánh chỉ số 4 năm tự tính của VJMech, JCC, AJB, VJMST, VJBT với mốc CIP (0,67 năm 2026).</desc>`;
- svg+=`<rect x="${boundary}" y="${top-8}" width="${width-boundary}" height="${plotHeight+8}" fill="var(--surface)"/><text x="${x(2026)}" y="16" text-anchor="middle" fill="var(--muted)" font-size="11">Dự kiến 2026</text>`;
+ svg+=`<rect x="${boundary}" y="${top-10}" width="${width-boundary}" height="${plotHeight+10}" fill="var(--surface)"/><text x="${width-6}" y="15" text-anchor="end" fill="var(--muted)" font-size="11">Dự kiến 2026</text>`;
  for(let i=0;i<=Math.round(scale.max/scale.step);i++){const v=+(i*scale.step).toFixed(4);svg+=`<line x1="${left}" y1="${y(v)}" x2="${width}" y2="${y(v)}" stroke="var(--line)"/><text x="${left-10}" y="${y(v)+4}" text-anchor="end" fill="var(--muted)" font-size="11">${formatAxisTick(v,true)}</text>`;}
  svg+=`<line x1="${left}" y1="${y(cipRef)}" x2="${width}" y2="${y(cipRef)}" stroke="var(--accent)" stroke-width="1.25" stroke-dasharray="4 4"/><text x="${left+6}" y="${y(cipRef)-6}" fill="var(--accent)" font-size="11" font-weight="500">Mốc CIP 2026: 0,67 (Scopus Tracker 0,7)</text>`;
  const tickStep=width<520?3:2;
@@ -297,7 +297,7 @@ function renderCitationsChart(){
  if(!dashboard)return;
  const poolIds=citationMode==='scopusCitations'?scopusIds:localIds;
  $('#citations-legend').innerHTML=legendButtonsHtml(poolIds,citationSeriesSet,'data-citation-journal');
- const width=subChartWidth,height=matchMedia('(max-width:767px)').matches?260:340,left=52,right=24,top=32,bottom=34;
+ const width=subChartWidth,height=matchMedia('(max-width:767px)').matches?260:340,left=52,right=34,top=34,bottom=34;
  const years=[2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026],start=years[0],end=years.at(-1),plotWidth=width-left-right,plotHeight=height-top-bottom;
  const list=poolIds.map(id=>journals.find(j=>j.id===id));
  const activeList=list.filter(j=>citationSeriesSet.has(j.id));
@@ -308,7 +308,7 @@ function renderCitationsChart(){
  const boundary=(x(2025)+x(2026))/2;
  const modeTitle=citationMode==='localEdges'?'Lượt trích dẫn đã xác nhận theo năm (2015–2026)':citationMode==='localDocs'?'Tài liệu trích dẫn đã xác nhận theo năm (2015–2026)':'Trích dẫn trong cửa sổ CiteScore 4 năm (2015–2026)';
  let svg=`<title id="citations-chart-title">${esc(modeTitle)}</title><desc id="citations-chart-desc">Biểu đồ diễn biến trích dẫn của các tạp chí VAST giai đoạn 2015–2026.</desc>`;
- svg+=`<rect x="${boundary}" y="${top-8}" width="${width-boundary}" height="${plotHeight+8}" fill="var(--surface)"/><text x="${x(2026)}" y="16" text-anchor="middle" fill="var(--muted)" font-size="11">${citationMode==='scopusCitations'?'Tracker 2026':'Năm 2026 (YTD)'}</text>`;
+ svg+=`<rect x="${boundary}" y="${top-10}" width="${width-boundary}" height="${plotHeight+10}" fill="var(--surface)"/><text x="${width-6}" y="15" text-anchor="end" fill="var(--muted)" font-size="11">${citationMode==='scopusCitations'?'Tracker 2026':'2026 YTD'}</text>`;
  for(let i=0;i<=Math.round(scale.max/scale.step);i++){const v=i*scale.step;svg+=`<line x1="${left}" y1="${y(v)}" x2="${width}" y2="${y(v)}" stroke="var(--line)"/><text x="${left-10}" y="${y(v)+4}" text-anchor="end" fill="var(--muted)" font-size="11">${integer.format(v)}</text>`;}
  const tickStep=width<520?3:2;
  for(const year of years)if((year-start)%tickStep===0||year===end)svg+=`<text x="${x(year)}" y="${height-10}" text-anchor="middle" fill="var(--muted)" font-size="12">${year}</text>`;
@@ -368,7 +368,7 @@ function renderPapersChart(){
  if(!dashboard)return;
  const allIds=journals.map(j=>j.id);
  $('#papers-legend').innerHTML=legendButtonsHtml(allIds,paperSeriesSet,'data-paper-journal');
- const width=subChartWidth,height=matchMedia('(max-width:767px)').matches?260:340,left=48,right=24,top=32,bottom=34;
+ const width=subChartWidth,height=matchMedia('(max-width:767px)').matches?260:340,left=48,right=34,top=40,bottom=34;
  const years=dashboard.outputYears,start=years[0],end=years.at(-1),plotWidth=width-left-right,plotHeight=height-top-bottom;
  const activeList=journals.filter(j=>paperSeriesSet.has(j.id));
  const values=(activeList.length?activeList:journals).flatMap(j=>years.map(y=>output(j,y)?.papers)).filter(Number.isFinite);
@@ -378,11 +378,11 @@ function renderPapersChart(){
  const boundary=(x(end-1)+x(end))/2;
  const yearTotals=years.map(yr=>({year:yr,papers:activeList.reduce((s,j)=>s+(output(j,yr)?.papers??0),0),issues:activeList.reduce((s,j)=>s+(output(j,yr)?.issues??0),0)}));
  let svg=`<title id="papers-chart-title">Số bài đã xuất bản của 12 tạp chí (2020–2026)</title><desc id="papers-chart-desc">Diễn biến số bài nghiên cứu đã phát hành chính thức của 12 tạp chí VAST từ 2020 đến 2026.</desc>`;
- svg+=`<rect x="${boundary}" y="${top-8}" width="${width-boundary}" height="${plotHeight+8}" fill="var(--surface)"/><text x="${x(end)}" y="16" text-anchor="middle" fill="var(--muted)" font-size="11">Đến 21/10/2026</text>`;
+ svg+=`<rect x="${boundary}" y="${top-14}" width="${width-boundary}" height="${plotHeight+14}" fill="var(--surface)"/><text x="${width-6}" y="14" text-anchor="end" fill="var(--muted)" font-size="10.5">2026 YTD</text>`;
  for(let i=0;i<=Math.round(scale.max/scale.step);i++){const v=i*scale.step;svg+=`<line x1="${left}" y1="${y(v)}" x2="${width}" y2="${y(v)}" stroke="var(--line)"/><text x="${left-10}" y="${y(v)+4}" text-anchor="end" fill="var(--muted)" font-size="11">${integer.format(v)}</text>`;}
  for(const {year,papers} of yearTotals){
   svg+=`<text x="${x(year)}" y="${height-10}" text-anchor="middle" fill="var(--muted)" font-size="12">${year}</text>`;
-  if(activeList.length>1)svg+=`<text x="${x(year)}" y="${top-12}" text-anchor="middle" fill="var(--ink)" font-size="10.5" font-weight="500">Σ ${integer.format(papers)}</text>`;
+  if(activeList.length>1)svg+=`<text x="${x(year)}" y="${top-4}" text-anchor="middle" fill="var(--ink)" font-size="10.5" font-weight="500">Σ ${integer.format(papers)}</text>`;
  }
  for(const j of journals){
   const style=styles[j.id],on=paperSeriesSet.has(j.id);let d='',connected=false;
