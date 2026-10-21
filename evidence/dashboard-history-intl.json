@@ -1,0 +1,4845 @@
+{
+  "schemaVersion": 1,
+  "collectedAt": "2026-10-21",
+  "asOf": "2026-10-21",
+  "description": "Complete historical annual publication, issue, citation, and CiteScore series for the 4 VAST international-publisher journals (vjm, amv, ansn, vjc).",
+  "journals": [
+    {
+      "id": "vjm",
+      "code": "VJM",
+      "title": "Vietnam Journal of Mathematics",
+      "titleVi": "Tạp chí Toán học",
+      "subject": "Toán học",
+      "group": "VAST-1",
+      "managingInstitution": "Nhà xuất bản Khoa học tự nhiên và Công nghệ (Publishing House for Science and Technology, VAST)",
+      "publisher": "Springer Nature & Vietnam Academy of Science and Technology",
+      "coPublisher": "Springer Nature",
+      "platform": "SpringerLink / Editorial Manager",
+      "doiPrefix": "10.1007",
+      "website": "https://link.springer.com/journal/10013",
+      "archiveUrl": "https://link.springer.com/journal/10013/volumes-and-issues",
+      "issn": "2305-221X",
+      "eissn": "2305-2228",
+      "formerTitles": [
+        {
+          "title": "Tập san Toán lý",
+          "issn": null,
+          "until": "1973"
+        },
+        {
+          "title": "Tạp chí Toán học",
+          "issn": null,
+          "until": "1990"
+        },
+        {
+          "title": "Journal of Mathematics",
+          "issn": null,
+          "until": "1994"
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://link.springer.com/journal/10013"
+      },
+      "sourceDirectory": null,
+      "sourceFiles": [
+        {
+          "path": "2026/01-NXB/08-Tập hợp dự án 12 tạp chí 2026-2030 bản chính thức/25VJM_NXB_DeCuong_final-260224.docx",
+          "sha256": "3fdcb10c41bb268cb4621f83f384e34e740835532b36aec95cb13d90bd609db5"
+        },
+        {
+          "path": "2026/01-NXB/28-CV báo cáo PCT/BC -THÔNG TIN TỔNG HỢP CỦA 12 TẠP CHÍ KHOA HỌC.docx",
+          "sha256": "3f276a8df8906bd1d034a5e85f70a9f1a52aa8126411a39981bfb21894319a7e"
+        }
+      ],
+      "sourceUrls": [
+        "https://link.springer.com/journal/10013",
+        "https://link.springer.com/journal/10013/volumes-and-issues",
+        "https://api.crossref.org/journals/2305-221X/works",
+        "https://www.scopus.com/sourceid/21100286934"
+      ],
+      "archiveStartYear": 2013,
+      "archiveEndYear": 2026,
+      "earliestPubYear": 2013,
+      "latestPubYear": 2026,
+      "issueArchiveStartYear": 2013,
+      "earliestCitationYear": null,
+      "latestCitationYear": null,
+      "totals": null,
+      "annualSeries": [
+        {
+          "year": 2013,
+          "papers": 37,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "41",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 41 (Issues 1–4: 10, 8, 10, 9 eligible papers; 38 total items, 1 Preface in Issue 4 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/41-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/41-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/41-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/41-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/41-4"
+          ]
+        },
+        {
+          "year": 2014,
+          "papers": 42,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "42",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 42 (Issues 1–4: 8, 11, 10, 13 eligible papers; 44 total items, 2 Prefaces in Issues 3 & 4 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/42-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/42-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/42-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/42-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/42-4"
+          ]
+        },
+        {
+          "year": 2015,
+          "papers": 59,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "43",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 43 (Issues 1–4: 15, 18, 14, 12 eligible papers; 60 total items, 1 Preface in Issue 2 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/43-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/43-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/43-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/43-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/43-4"
+          ]
+        },
+        {
+          "year": 2016,
+          "papers": 56,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "44",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 44 (Issues 1–4: 11, 14, 14, 17 eligible papers; 57 total items, 1 Preface in Issue 1 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/44-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/44-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/44-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/44-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/44-4"
+          ]
+        },
+        {
+          "year": 2017,
+          "papers": 44,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "45",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 45 (3 published issues: combined Issue 1-2 [14], Issue 3 [14], Issue 4 [16]; 45 total items, 1 Preface in Issue 1-2 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/45-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/45-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/45-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/45-4"
+          ]
+        },
+        {
+          "year": 2018,
+          "papers": 58,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "46",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 46 (Issues 1–4: 12, 13, 17, 16 eligible papers; 60 total items, 2 Prefaces in Issues 1 & 4 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/46-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/46-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/46-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/46-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/46-4"
+          ]
+        },
+        {
+          "year": 2019,
+          "papers": 50,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "47",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 47 (Issues 1–4: 9, 18, 14, 9 eligible papers; 53 total items, 3 EditorialNotes in Issues 1 & 3 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/47-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/47-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/47-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/47-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/47-4"
+          ]
+        },
+        {
+          "year": 2020,
+          "papers": 56,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "48",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/48-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/48-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/48-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/48-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/48-4"
+          ]
+        },
+        {
+          "year": 2021,
+          "papers": 64,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "49",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/49-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/49-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/49-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/49-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/49-4"
+          ]
+        },
+        {
+          "year": 2022,
+          "papers": 56,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "50",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/50-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/50-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/50-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/50-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/50-4"
+          ]
+        },
+        {
+          "year": 2023,
+          "papers": 54,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "51",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/51-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/51-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/51-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/51-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/51-4"
+          ]
+        },
+        {
+          "year": 2024,
+          "papers": 53,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "52",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/52-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/52-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/52-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/52-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/52-4"
+          ]
+        },
+        {
+          "year": 2025,
+          "papers": 51,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "53",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/53-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-4"
+          ]
+        },
+        {
+          "year": 2026,
+          "papers": 58,
+          "issues": 4,
+          "periodKind": "ytd",
+          "volume": "54",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/54-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-4"
+          ]
+        }
+      ],
+      "fullPubSeries": [
+        {
+          "year": 2013,
+          "papers": 37,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "41",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 41 (Issues 1–4: 10, 8, 10, 9 eligible papers; 38 total items, 1 Preface in Issue 4 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/41-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/41-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/41-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/41-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/41-4"
+          ]
+        },
+        {
+          "year": 2014,
+          "papers": 42,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "42",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 42 (Issues 1–4: 8, 11, 10, 13 eligible papers; 44 total items, 2 Prefaces in Issues 3 & 4 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/42-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/42-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/42-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/42-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/42-4"
+          ]
+        },
+        {
+          "year": 2015,
+          "papers": 59,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "43",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 43 (Issues 1–4: 15, 18, 14, 12 eligible papers; 60 total items, 1 Preface in Issue 2 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/43-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/43-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/43-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/43-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/43-4"
+          ]
+        },
+        {
+          "year": 2016,
+          "papers": 56,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "44",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 44 (Issues 1–4: 11, 14, 14, 17 eligible papers; 57 total items, 1 Preface in Issue 1 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/44-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/44-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/44-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/44-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/44-4"
+          ]
+        },
+        {
+          "year": 2017,
+          "papers": 44,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "45",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 45 (3 published issues: combined Issue 1-2 [14], Issue 3 [14], Issue 4 [16]; 45 total items, 1 Preface in Issue 1-2 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/45-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/45-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/45-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/45-4"
+          ]
+        },
+        {
+          "year": 2018,
+          "papers": 58,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "46",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 46 (Issues 1–4: 12, 13, 17, 16 eligible papers; 60 total items, 2 Prefaces in Issues 1 & 4 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/46-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/46-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/46-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/46-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/46-4"
+          ]
+        },
+        {
+          "year": 2019,
+          "papers": 50,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "47",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Crossref issue inventory for Vol. 47 (Issues 1–4: 9, 18, 14, 9 eligible papers; 53 total items, 3 EditorialNotes in Issues 1 & 3 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/47-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/47-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/47-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/47-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/47-4"
+          ]
+        },
+        {
+          "year": 2020,
+          "papers": 56,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "48",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/48-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/48-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/48-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/48-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/48-4"
+          ]
+        },
+        {
+          "year": 2021,
+          "papers": 64,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "49",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/49-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/49-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/49-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/49-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/49-4"
+          ]
+        },
+        {
+          "year": 2022,
+          "papers": 56,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "50",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/50-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/50-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/50-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/50-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/50-4"
+          ]
+        },
+        {
+          "year": 2023,
+          "papers": 54,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "51",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/51-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/51-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/51-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/51-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/51-4"
+          ]
+        },
+        {
+          "year": 2024,
+          "papers": 53,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "52",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/52-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/52-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/52-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/52-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/52-4"
+          ]
+        },
+        {
+          "year": 2025,
+          "papers": 51,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "53",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/53-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/53-4"
+          ]
+        },
+        {
+          "year": 2026,
+          "papers": 58,
+          "issues": 4,
+          "periodKind": "ytd",
+          "volume": "54",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/10013/volumes-and-issues/54-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-1",
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-2",
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-3",
+            "https://link.springer.com/journal/10013/volumes-and-issues/54-4"
+          ]
+        }
+      ],
+      "citationSeries": [],
+      "fullCitationSeries": [],
+      "selfCalculatedSeries": [],
+      "localCiteScoreSeries": [],
+      "officialScopusSeries": [
+        {
+          "year": 2015,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.4,
+          "citeScore": 0.4,
+          "citations": 48,
+          "documents": 124,
+          "window": "2012-2015",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2016,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.5,
+          "citeScore": 0.5,
+          "citations": 106,
+          "documents": 194,
+          "window": "2013-2016",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2017,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.7,
+          "citeScore": 0.7,
+          "citations": 145,
+          "documents": 201,
+          "window": "2014-2017",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2018,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.9,
+          "citeScore": 0.9,
+          "citations": 197,
+          "documents": 217,
+          "window": "2015-2018",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2019,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 1.3,
+          "citeScore": 1.3,
+          "citations": 260,
+          "documents": 206,
+          "window": "2016-2019",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2020,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 1.5,
+          "citeScore": 1.5,
+          "citations": 300,
+          "documents": 206,
+          "window": "2017-2020",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2021,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 1.6,
+          "citeScore": 1.6,
+          "citations": 359,
+          "documents": 231,
+          "window": "2018-2021",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2022,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 1.6,
+          "citeScore": 1.6,
+          "citations": 360,
+          "documents": 228,
+          "window": "2019-2022",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2023,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 1.9,
+          "citeScore": 1.9,
+          "citations": 429,
+          "documents": 230,
+          "window": "2020-2023",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2024,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 2.3,
+          "citeScore": 2.3,
+          "citations": 525,
+          "documents": 228,
+          "window": "2021-2024",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2025,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 2.1,
+          "citeScore": 2.1,
+          "citations": 445,
+          "documents": 209,
+          "window": "2022-2025",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286934"
+        },
+        {
+          "year": 2026,
+          "type": "tracker",
+          "periodKind": "ytd",
+          "value": 1.9,
+          "citeScore": 1.9,
+          "citations": 375,
+          "documents": 198,
+          "window": null,
+          "status": "verified_scopus",
+          "lastUpdated": "2026-10-05",
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286934"
+        }
+      ],
+      "notes": "Complete SpringerLink online archive series for VJM (2013–2026, Volumes 41–54). Years 2020–2026 preserve exact verified counts from evidence/dashboard-publishers.json; pre-2020 years (2013–2019, Volumes 41–47) are verified issue-by-issue from SpringerLink (https://link.springer.com/journal/10013/volumes-and-issues) and Crossref (2305-221X / 2305-2228), excluding EditorialNotes/prefaces. Note that 4-year sums of 2013–2018 eligible papers (37+42+59+56=194, 42+59+56+44=201, 59+56+44+58=217) match official Scopus CiteScore 4-year document denominators to the exact integer."
+    },
+    {
+      "id": "amv",
+      "code": "AMV",
+      "title": "Acta Mathematica Vietnamica",
+      "titleVi": "Acta Mathematica Vietnamica",
+      "subject": "Toán học",
+      "group": "VAST-1",
+      "managingInstitution": "Viện Toán học (Institute of Mathematics, VAST)",
+      "publisher": "Springer Nature & Institute of Mathematics, Vietnam Academy of Science and Technology",
+      "coPublisher": "Springer Nature",
+      "institutionalOwnership": {
+        "hostInstitution": "Viện Toán học (Institute of Mathematics, Vietnam Academy of Science and Technology - VAST)",
+        "internationalCoPublisher": "Springer Nature",
+        "isManagedByPublishingHouse": false,
+        "ownershipNote": "Confirmed per AMV_Thuyet_minh_Du_an_26.2.2026.docx (Cover & Section 1.3: 'Cơ quan quản lý / Cơ quan chủ trì dự án: Viện Toán học') and math.ac.vn/acta/home: AMV is directly owned and managed by Viện Toán học (Institute of Mathematics, VAST) and co-published with Springer Nature since 2013 (NOT managed by NXB Khoa học tự nhiên và Công nghệ).",
+        "verifiedSources": [
+          "2026/01-NXB/08-Tập hợp dự án 12 tạp chí 2026-2030 bản chính thức/AMV_Thuyet_minh_Du_an_26.2.2026.docx",
+          "https://math.ac.vn/acta/home",
+          "https://link.springer.com/journal/40306"
+        ]
+      },
+      "platform": "SpringerLink / Editorial Manager & math.ac.vn/acta",
+      "doiPrefix": "10.1007",
+      "website": "https://link.springer.com/journal/40306",
+      "archiveUrl": "https://math.ac.vn/acta/home",
+      "springerArchiveUrl": "https://link.springer.com/journal/40306/volumes-and-issues",
+      "issn": "0251-4184",
+      "eissn": "2315-4144",
+      "formerTitles": [
+        {
+          "title": "Acta Scientiarum Vietnamicarum, Sectio Scientiarum Mathematicarum et Physicarum",
+          "issn": null,
+          "until": 1975
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://link.springer.com/journal/40306"
+      },
+      "sourceDirectory": null,
+      "sourceFiles": [
+        {
+          "path": "2026/01-NXB/08-Tập hợp dự án 12 tạp chí 2026-2030 bản chính thức/AMV_Thuyet_minh_Du_an_26.2.2026.docx",
+          "sha256": "6749097bdff922922b1e29489b3db867fe7ccb7023fe8691143f4ddca7b8f562"
+        },
+        {
+          "path": "2026/01-NXB/28-CV báo cáo PCT/BC -THÔNG TIN TỔNG HỢP CỦA 12 TẠP CHÍ KHOA HỌC.docx",
+          "sha256": "3f276a8df8906bd1d034a5e85f70a9f1a52aa8126411a39981bfb21894319a7e"
+        }
+      ],
+      "sourceUrls": [
+        "https://link.springer.com/journal/40306",
+        "https://link.springer.com/journal/40306/volumes-and-issues",
+        "https://math.ac.vn/acta/home",
+        "https://api.crossref.org/journals/0251-4184/works",
+        "https://www.scopus.com/sourceid/21100199843"
+      ],
+      "archiveStartYear": 1976,
+      "archiveEndYear": 2026,
+      "springerStartYear": 2013,
+      "scopusStartYear": 2011,
+      "earliestPubYear": 1976,
+      "latestPubYear": 2026,
+      "issueArchiveStartYear": 1976,
+      "earliestCitationYear": null,
+      "latestCitationYear": null,
+      "totals": null,
+      "annualSeries": [
+        {
+          "year": 1976,
+          "papers": 15,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "1",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 1 (Issues 1–2: 15 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1976-volume1/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1976-volume1/1",
+            "https://math.ac.vn/acta/1976-volume1/2"
+          ]
+        },
+        {
+          "year": 1977,
+          "papers": 12,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "2",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 2 (Issues 1–2: 12 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1977-volume2/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1977-volume2/1",
+            "https://math.ac.vn/acta/1977-volume2/2"
+          ]
+        },
+        {
+          "year": 1978,
+          "papers": 19,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "3",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 3 (Issues 1–2: 19 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1978-volume3/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1978-volume3/1",
+            "https://math.ac.vn/acta/1978-volume3/2"
+          ]
+        },
+        {
+          "year": 1979,
+          "papers": 19,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "4",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 4 (Issues 1–2: 19 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1979-volume4/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1979-volume4/1",
+            "https://math.ac.vn/acta/1979-volume4/2"
+          ]
+        },
+        {
+          "year": 1980,
+          "papers": 28,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "5",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 5 (Issues 1–2: 28 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1980-volume5/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1980-volume5/1",
+            "https://math.ac.vn/acta/1980-volume5/2"
+          ]
+        },
+        {
+          "year": 1981,
+          "papers": 21,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "6",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 6 (Issues 1–2: 21 eligible papers; 22 total items, 1 conference announcement in Issue 2 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/1981-volume6/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1981-volume6/1",
+            "https://math.ac.vn/acta/1981-volume6/2"
+          ]
+        },
+        {
+          "year": 1982,
+          "papers": 26,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "7",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 7 (Issues 1–2: 26 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1982-volume7/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1982-volume7/1",
+            "https://math.ac.vn/acta/1982-volume7/2"
+          ]
+        },
+        {
+          "year": 1983,
+          "papers": 11,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "8",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 8 (Issues 1–2: 11 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1983-volume8/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1983-volume8/1",
+            "https://math.ac.vn/acta/1983-volume8/2"
+          ]
+        },
+        {
+          "year": 1984,
+          "papers": 18,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "9",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 9 (Issues 1–2: 18 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1984-volume9/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1984-volume9/1",
+            "https://math.ac.vn/acta/1984-volume9/2"
+          ]
+        },
+        {
+          "year": 1985,
+          "papers": 15,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "10",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 10 (Issues 1–2: 15 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1985-volume10/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1985-volume10/1",
+            "https://math.ac.vn/acta/1985-volume10/2"
+          ]
+        },
+        {
+          "year": 1986,
+          "papers": 17,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "11",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 11 (Issues 1–2: 17 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1986-volume11/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1986-volume11/1",
+            "https://math.ac.vn/acta/1986-volume11/2"
+          ]
+        },
+        {
+          "year": 1987,
+          "papers": 22,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "12",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 12 (Issues 1–2: 22 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1987-volume12/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1987-volume12/1",
+            "https://math.ac.vn/acta/1987-volume12/2"
+          ]
+        },
+        {
+          "year": 1988,
+          "papers": 26,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "13",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 13 (Issues 1–2: 26 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1988-volume13/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1988-volume13/1",
+            "https://math.ac.vn/acta/1988-volume13/2"
+          ]
+        },
+        {
+          "year": 1989,
+          "papers": 21,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "14",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 14 (Issues 1–2: 21 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1989-volume14/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1989-volume14/1",
+            "https://math.ac.vn/acta/1989-volume14/2"
+          ]
+        },
+        {
+          "year": 1990,
+          "papers": 21,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "15",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 15 (Issues 1–2: 21 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1990-volume15/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1990-volume15/1",
+            "https://math.ac.vn/acta/1990-volume15/2"
+          ]
+        },
+        {
+          "year": 1991,
+          "papers": 18,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "16",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 16 (Issues 1–2: 18 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1991-volume16/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1991-volume16/1",
+            "https://math.ac.vn/acta/1991-volume16/2"
+          ]
+        },
+        {
+          "year": 1992,
+          "papers": 24,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "17",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 17 (Issues 1–2: 24 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1992-volume17/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1992-volume17/1",
+            "https://math.ac.vn/acta/1992-volume17/2"
+          ]
+        },
+        {
+          "year": 1993,
+          "papers": 20,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "18",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 18 (Issues 1–2: 20 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1993-volume18/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1993-volume18/1",
+            "https://math.ac.vn/acta/1993-volume18/2"
+          ]
+        },
+        {
+          "year": 1994,
+          "papers": 27,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "19",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 19 (Issues 1–2: 27 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1994-volume19/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1994-volume19/1",
+            "https://math.ac.vn/acta/1994-volume19/2"
+          ]
+        },
+        {
+          "year": 1995,
+          "papers": 23,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "20",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 20 (Issues 1–2: 23 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1995-volume20/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1995-volume20/1",
+            "https://math.ac.vn/acta/1995-volume20/2"
+          ]
+        },
+        {
+          "year": 1996,
+          "papers": 24,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "21",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 21 (Issues 1–2: 24 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1996-volume21/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1996-volume21/1",
+            "https://math.ac.vn/acta/1996-volume21/2"
+          ]
+        },
+        {
+          "year": 1997,
+          "papers": 29,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "22",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 22 (Issues 1–2: 29 eligible papers; 30 total items, 1 Foreword in Issue 1 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/1997-volume22/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1997-volume22/1",
+            "https://math.ac.vn/acta/1997-volume22/2"
+          ]
+        },
+        {
+          "year": 1998,
+          "papers": 29,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "23",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 23 (Issues 1–2: 29 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1998-volume23/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1998-volume23/1",
+            "https://math.ac.vn/acta/1998-volume23/2"
+          ]
+        },
+        {
+          "year": 1999,
+          "papers": 26,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "24",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 24 (Issues 1–3: 26 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1999-volume24/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1999-volume24/1",
+            "https://math.ac.vn/acta/1999-volume24/2",
+            "https://math.ac.vn/acta/1999-volume24/3"
+          ]
+        },
+        {
+          "year": 2000,
+          "papers": 27,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "25",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 25 (Issues 1–3: 27 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/2000-volume25/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2000-volume25/1",
+            "https://math.ac.vn/acta/2000-volume25/2",
+            "https://math.ac.vn/acta/2000-volume25/3"
+          ]
+        },
+        {
+          "year": 2001,
+          "papers": 30,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "26",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 26 (Issues 1–3: 30 eligible papers; 31 total items, 1 Foreword in Issue 3 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/2001-volume26/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2001-volume26/1",
+            "https://math.ac.vn/acta/2001-volume26/2",
+            "https://math.ac.vn/acta/2001-volume26/3"
+          ]
+        },
+        {
+          "year": 2002,
+          "papers": 41,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "27",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 27 (Issues 1–3: 41 eligible papers; 43 total items, 1 Preface and 1 biographical note in Issue 3 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/2002-volume27/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2002-volume27/1",
+            "https://math.ac.vn/acta/2002-volume27/2",
+            "https://math.ac.vn/acta/2002-volume27/3"
+          ]
+        },
+        {
+          "year": 2003,
+          "papers": 29,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "28",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 28 (Issues 1–3: 29 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/2003-volume28/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2003-volume28/1",
+            "https://math.ac.vn/acta/2003-volume28/2",
+            "https://math.ac.vn/acta/2003-volume28/3"
+          ]
+        },
+        {
+          "year": 2004,
+          "papers": 24,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "29",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 29 (Issues 1–3: 24 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/2004-volume29/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2004-volume29/1",
+            "https://math.ac.vn/acta/2004-volume29/2",
+            "https://math.ac.vn/acta/2004-volume29/3"
+          ]
+        },
+        {
+          "year": 2005,
+          "papers": 25,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "30",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 30 (Issues 1–3: 25 eligible papers; 26 total items, 1 Corrigendum in Issue 3 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/2005-volume30/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2005-volume30/1",
+            "https://math.ac.vn/acta/2005-volume30/2",
+            "https://math.ac.vn/acta/2005-volume30/3"
+          ]
+        },
+        {
+          "year": 2006,
+          "papers": 25,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "31",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 31 (Issues 1–3: 25 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/2006-volume31/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2006-volume31/1",
+            "https://math.ac.vn/acta/2006-volume31/2",
+            "https://math.ac.vn/acta/2006-volume31/3"
+          ]
+        },
+        {
+          "year": 2007,
+          "papers": 26,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "32",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 32 (2 published issues: Issue 1 [9 papers] and combined Issue 2&3 [17 papers]).",
+          "sourceUrl": "https://math.ac.vn/acta/2007-volume32/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2007-volume32/1",
+            "https://math.ac.vn/acta/2007-volume32/6"
+          ]
+        },
+        {
+          "year": 2008,
+          "papers": 33,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "33",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 33 (Issues 1–3: 33 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/2008-volume33/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2008-volume33/1",
+            "https://math.ac.vn/acta/2008-volume33/2",
+            "https://math.ac.vn/acta/2008-volume33/3"
+          ]
+        },
+        {
+          "year": 2009,
+          "papers": 34,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "34",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 34 (Issues 1–3: 34 eligible papers; 35 total items, 1 Foreword in Issue 1 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/2009-volume34/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2009-volume34/1",
+            "https://math.ac.vn/acta/2009-volume34/2",
+            "https://math.ac.vn/acta/2009-volume34/3"
+          ]
+        },
+        {
+          "year": 2010,
+          "papers": 31,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "35",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 35 (Issues 1–3: 31 eligible papers; 32 total items, 1 Preface in Issue 1 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/2010-volume35/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2010-volume35/1",
+            "https://math.ac.vn/acta/2010-volume35/2",
+            "https://math.ac.vn/acta/2010-volume35/3"
+          ]
+        },
+        {
+          "year": 2011,
+          "papers": 46,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "36",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 36 (Issues 1–3: 46 eligible papers; 47 total items, 1 Preface in Issue 2 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/2011-volume36/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2011-volume36/1",
+            "https://math.ac.vn/acta/2011-volume36/2",
+            "https://math.ac.vn/acta/2011-volume36/3"
+          ]
+        },
+        {
+          "year": 2012,
+          "papers": 41,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "37",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 37 (Issues 1–4: 41 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/2012-volume37/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2012-volume37/1",
+            "https://math.ac.vn/acta/2012-volume37/2",
+            "https://math.ac.vn/acta/2012-volume37/3",
+            "https://math.ac.vn/acta/2012-volume37/4"
+          ]
+        },
+        {
+          "year": 2013,
+          "papers": 39,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "38",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 38 (Issues 1–4: 11, 8, 7, 13 eligible papers; 40 total items, 1 Preface in Issue 1 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/38-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/38-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/38-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/38-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/38-4"
+          ]
+        },
+        {
+          "year": 2014,
+          "papers": 42,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "39",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 39 (Issues 1–4: 6, 11, 12, 13 eligible papers; 43 total items, 1 Preface in Issue 1 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/39-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/39-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/39-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/39-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/39-4"
+          ]
+        },
+        {
+          "year": 2015,
+          "papers": 40,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "40",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 40 (Issues 1–4: 14, 6, 11, 9 eligible papers; 42 total items, 1 Preface in Issue 1 and 1 Erratum in Issue 4 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/40-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/40-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/40-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/40-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/40-4"
+          ]
+        },
+        {
+          "year": 2016,
+          "papers": 47,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "41",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 41 (Issues 1–4: 12, 12, 10, 13 eligible papers; 47 total items).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/41-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/41-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/41-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/41-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/41-4"
+          ]
+        },
+        {
+          "year": 2017,
+          "papers": 44,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "42",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 42 (Issues 1–4: 11, 11, 10, 12 eligible papers; 45 total items, 1 Corrigendum in Issue 4 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/42-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/42-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/42-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/42-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/42-4"
+          ]
+        },
+        {
+          "year": 2018,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "43",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 43 (Issues 1–4: 11, 11, 10, 14 eligible papers; 46 total items).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/43-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/43-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/43-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/43-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/43-4"
+          ]
+        },
+        {
+          "year": 2019,
+          "papers": 53,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "44",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 44 (Issues 1–4: 17, 11, 14, 11 eligible papers; 54 total items, 1 Preface in Issue 1 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/44-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/44-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/44-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/44-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/44-4"
+          ]
+        },
+        {
+          "year": 2020,
+          "papers": 53,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "45",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/45-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/45-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/45-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/45-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/45-4"
+          ]
+        },
+        {
+          "year": 2021,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "46",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/46-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/46-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/46-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/46-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/46-4"
+          ]
+        },
+        {
+          "year": 2022,
+          "papers": 48,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "47",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/47-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/47-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/47-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/47-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/47-4"
+          ]
+        },
+        {
+          "year": 2023,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "48",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/48-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/48-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/48-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/48-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/48-4"
+          ]
+        },
+        {
+          "year": 2024,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "49",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/49-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/49-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/49-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/49-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/49-4"
+          ]
+        },
+        {
+          "year": 2025,
+          "papers": 32,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "50",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/50-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-4"
+          ]
+        },
+        {
+          "year": 2026,
+          "papers": 27,
+          "issues": 3,
+          "periodKind": "ytd",
+          "volume": "51",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/51-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/51-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/51-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/51-3"
+          ]
+        }
+      ],
+      "fullPubSeries": [
+        {
+          "year": 1976,
+          "papers": 15,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "1",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 1 (Issues 1–2: 15 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1976-volume1/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1976-volume1/1",
+            "https://math.ac.vn/acta/1976-volume1/2"
+          ]
+        },
+        {
+          "year": 1977,
+          "papers": 12,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "2",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 2 (Issues 1–2: 12 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1977-volume2/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1977-volume2/1",
+            "https://math.ac.vn/acta/1977-volume2/2"
+          ]
+        },
+        {
+          "year": 1978,
+          "papers": 19,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "3",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 3 (Issues 1–2: 19 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1978-volume3/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1978-volume3/1",
+            "https://math.ac.vn/acta/1978-volume3/2"
+          ]
+        },
+        {
+          "year": 1979,
+          "papers": 19,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "4",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 4 (Issues 1–2: 19 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1979-volume4/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1979-volume4/1",
+            "https://math.ac.vn/acta/1979-volume4/2"
+          ]
+        },
+        {
+          "year": 1980,
+          "papers": 28,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "5",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 5 (Issues 1–2: 28 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1980-volume5/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1980-volume5/1",
+            "https://math.ac.vn/acta/1980-volume5/2"
+          ]
+        },
+        {
+          "year": 1981,
+          "papers": 21,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "6",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 6 (Issues 1–2: 21 eligible papers; 22 total items, 1 conference announcement in Issue 2 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/1981-volume6/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1981-volume6/1",
+            "https://math.ac.vn/acta/1981-volume6/2"
+          ]
+        },
+        {
+          "year": 1982,
+          "papers": 26,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "7",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 7 (Issues 1–2: 26 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1982-volume7/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1982-volume7/1",
+            "https://math.ac.vn/acta/1982-volume7/2"
+          ]
+        },
+        {
+          "year": 1983,
+          "papers": 11,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "8",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 8 (Issues 1–2: 11 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1983-volume8/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1983-volume8/1",
+            "https://math.ac.vn/acta/1983-volume8/2"
+          ]
+        },
+        {
+          "year": 1984,
+          "papers": 18,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "9",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 9 (Issues 1–2: 18 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1984-volume9/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1984-volume9/1",
+            "https://math.ac.vn/acta/1984-volume9/2"
+          ]
+        },
+        {
+          "year": 1985,
+          "papers": 15,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "10",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 10 (Issues 1–2: 15 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1985-volume10/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1985-volume10/1",
+            "https://math.ac.vn/acta/1985-volume10/2"
+          ]
+        },
+        {
+          "year": 1986,
+          "papers": 17,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "11",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 11 (Issues 1–2: 17 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1986-volume11/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1986-volume11/1",
+            "https://math.ac.vn/acta/1986-volume11/2"
+          ]
+        },
+        {
+          "year": 1987,
+          "papers": 22,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "12",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 12 (Issues 1–2: 22 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1987-volume12/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1987-volume12/1",
+            "https://math.ac.vn/acta/1987-volume12/2"
+          ]
+        },
+        {
+          "year": 1988,
+          "papers": 26,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "13",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 13 (Issues 1–2: 26 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1988-volume13/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1988-volume13/1",
+            "https://math.ac.vn/acta/1988-volume13/2"
+          ]
+        },
+        {
+          "year": 1989,
+          "papers": 21,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "14",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 14 (Issues 1–2: 21 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1989-volume14/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1989-volume14/1",
+            "https://math.ac.vn/acta/1989-volume14/2"
+          ]
+        },
+        {
+          "year": 1990,
+          "papers": 21,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "15",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 15 (Issues 1–2: 21 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1990-volume15/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1990-volume15/1",
+            "https://math.ac.vn/acta/1990-volume15/2"
+          ]
+        },
+        {
+          "year": 1991,
+          "papers": 18,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "16",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 16 (Issues 1–2: 18 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1991-volume16/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1991-volume16/1",
+            "https://math.ac.vn/acta/1991-volume16/2"
+          ]
+        },
+        {
+          "year": 1992,
+          "papers": 24,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "17",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 17 (Issues 1–2: 24 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1992-volume17/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1992-volume17/1",
+            "https://math.ac.vn/acta/1992-volume17/2"
+          ]
+        },
+        {
+          "year": 1993,
+          "papers": 20,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "18",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 18 (Issues 1–2: 20 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1993-volume18/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1993-volume18/1",
+            "https://math.ac.vn/acta/1993-volume18/2"
+          ]
+        },
+        {
+          "year": 1994,
+          "papers": 27,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "19",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 19 (Issues 1–2: 27 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1994-volume19/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1994-volume19/1",
+            "https://math.ac.vn/acta/1994-volume19/2"
+          ]
+        },
+        {
+          "year": 1995,
+          "papers": 23,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "20",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 20 (Issues 1–2: 23 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1995-volume20/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1995-volume20/1",
+            "https://math.ac.vn/acta/1995-volume20/2"
+          ]
+        },
+        {
+          "year": 1996,
+          "papers": 24,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "21",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 21 (Issues 1–2: 24 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1996-volume21/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1996-volume21/1",
+            "https://math.ac.vn/acta/1996-volume21/2"
+          ]
+        },
+        {
+          "year": 1997,
+          "papers": 29,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "22",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 22 (Issues 1–2: 29 eligible papers; 30 total items, 1 Foreword in Issue 1 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/1997-volume22/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1997-volume22/1",
+            "https://math.ac.vn/acta/1997-volume22/2"
+          ]
+        },
+        {
+          "year": 1998,
+          "papers": 29,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "23",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 23 (Issues 1–2: 29 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1998-volume23/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1998-volume23/1",
+            "https://math.ac.vn/acta/1998-volume23/2"
+          ]
+        },
+        {
+          "year": 1999,
+          "papers": 26,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "24",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 24 (Issues 1–3: 26 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/1999-volume24/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/1999-volume24/1",
+            "https://math.ac.vn/acta/1999-volume24/2",
+            "https://math.ac.vn/acta/1999-volume24/3"
+          ]
+        },
+        {
+          "year": 2000,
+          "papers": 27,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "25",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 25 (Issues 1–3: 27 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/2000-volume25/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2000-volume25/1",
+            "https://math.ac.vn/acta/2000-volume25/2",
+            "https://math.ac.vn/acta/2000-volume25/3"
+          ]
+        },
+        {
+          "year": 2001,
+          "papers": 30,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "26",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 26 (Issues 1–3: 30 eligible papers; 31 total items, 1 Foreword in Issue 3 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/2001-volume26/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2001-volume26/1",
+            "https://math.ac.vn/acta/2001-volume26/2",
+            "https://math.ac.vn/acta/2001-volume26/3"
+          ]
+        },
+        {
+          "year": 2002,
+          "papers": 41,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "27",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 27 (Issues 1–3: 41 eligible papers; 43 total items, 1 Preface and 1 biographical note in Issue 3 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/2002-volume27/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2002-volume27/1",
+            "https://math.ac.vn/acta/2002-volume27/2",
+            "https://math.ac.vn/acta/2002-volume27/3"
+          ]
+        },
+        {
+          "year": 2003,
+          "papers": 29,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "28",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 28 (Issues 1–3: 29 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/2003-volume28/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2003-volume28/1",
+            "https://math.ac.vn/acta/2003-volume28/2",
+            "https://math.ac.vn/acta/2003-volume28/3"
+          ]
+        },
+        {
+          "year": 2004,
+          "papers": 24,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "29",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 29 (Issues 1–3: 24 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/2004-volume29/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2004-volume29/1",
+            "https://math.ac.vn/acta/2004-volume29/2",
+            "https://math.ac.vn/acta/2004-volume29/3"
+          ]
+        },
+        {
+          "year": 2005,
+          "papers": 25,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "30",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 30 (Issues 1–3: 25 eligible papers; 26 total items, 1 Corrigendum in Issue 3 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/2005-volume30/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2005-volume30/1",
+            "https://math.ac.vn/acta/2005-volume30/2",
+            "https://math.ac.vn/acta/2005-volume30/3"
+          ]
+        },
+        {
+          "year": 2006,
+          "papers": 25,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "31",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 31 (Issues 1–3: 25 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/2006-volume31/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2006-volume31/1",
+            "https://math.ac.vn/acta/2006-volume31/2",
+            "https://math.ac.vn/acta/2006-volume31/3"
+          ]
+        },
+        {
+          "year": 2007,
+          "papers": 26,
+          "issues": 2,
+          "periodKind": "annual",
+          "volume": "32",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 32 (2 published issues: Issue 1 [9 papers] and combined Issue 2&3 [17 papers]).",
+          "sourceUrl": "https://math.ac.vn/acta/2007-volume32/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2007-volume32/1",
+            "https://math.ac.vn/acta/2007-volume32/6"
+          ]
+        },
+        {
+          "year": 2008,
+          "papers": 33,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "33",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 33 (Issues 1–3: 33 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/2008-volume33/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2008-volume33/1",
+            "https://math.ac.vn/acta/2008-volume33/2",
+            "https://math.ac.vn/acta/2008-volume33/3"
+          ]
+        },
+        {
+          "year": 2009,
+          "papers": 34,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "34",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 34 (Issues 1–3: 34 eligible papers; 35 total items, 1 Foreword in Issue 1 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/2009-volume34/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2009-volume34/1",
+            "https://math.ac.vn/acta/2009-volume34/2",
+            "https://math.ac.vn/acta/2009-volume34/3"
+          ]
+        },
+        {
+          "year": 2010,
+          "papers": 31,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "35",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 35 (Issues 1–3: 31 eligible papers; 32 total items, 1 Preface in Issue 1 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/2010-volume35/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2010-volume35/1",
+            "https://math.ac.vn/acta/2010-volume35/2",
+            "https://math.ac.vn/acta/2010-volume35/3"
+          ]
+        },
+        {
+          "year": 2011,
+          "papers": 46,
+          "issues": 3,
+          "periodKind": "annual",
+          "volume": "36",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 36 (Issues 1–3: 46 eligible papers; 47 total items, 1 Preface in Issue 2 excluded).",
+          "sourceUrl": "https://math.ac.vn/acta/2011-volume36/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2011-volume36/1",
+            "https://math.ac.vn/acta/2011-volume36/2",
+            "https://math.ac.vn/acta/2011-volume36/3"
+          ]
+        },
+        {
+          "year": 2012,
+          "papers": 41,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "37",
+          "coverage": "complete",
+          "basis": "Verified Institute of Mathematics online archive for Vol. 37 (Issues 1–4: 41 papers).",
+          "sourceUrl": "https://math.ac.vn/acta/2012-volume37/1",
+          "sourceUrls": [
+            "https://math.ac.vn/acta/2012-volume37/1",
+            "https://math.ac.vn/acta/2012-volume37/2",
+            "https://math.ac.vn/acta/2012-volume37/3",
+            "https://math.ac.vn/acta/2012-volume37/4"
+          ]
+        },
+        {
+          "year": 2013,
+          "papers": 39,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "38",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 38 (Issues 1–4: 11, 8, 7, 13 eligible papers; 40 total items, 1 Preface in Issue 1 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/38-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/38-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/38-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/38-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/38-4"
+          ]
+        },
+        {
+          "year": 2014,
+          "papers": 42,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "39",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 39 (Issues 1–4: 6, 11, 12, 13 eligible papers; 43 total items, 1 Preface in Issue 1 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/39-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/39-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/39-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/39-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/39-4"
+          ]
+        },
+        {
+          "year": 2015,
+          "papers": 40,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "40",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 40 (Issues 1–4: 14, 6, 11, 9 eligible papers; 42 total items, 1 Preface in Issue 1 and 1 Erratum in Issue 4 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/40-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/40-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/40-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/40-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/40-4"
+          ]
+        },
+        {
+          "year": 2016,
+          "papers": 47,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "41",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 41 (Issues 1–4: 12, 12, 10, 13 eligible papers; 47 total items).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/41-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/41-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/41-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/41-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/41-4"
+          ]
+        },
+        {
+          "year": 2017,
+          "papers": 44,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "42",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 42 (Issues 1–4: 11, 11, 10, 12 eligible papers; 45 total items, 1 Corrigendum in Issue 4 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/42-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/42-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/42-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/42-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/42-4"
+          ]
+        },
+        {
+          "year": 2018,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "43",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 43 (Issues 1–4: 11, 11, 10, 14 eligible papers; 46 total items).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/43-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/43-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/43-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/43-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/43-4"
+          ]
+        },
+        {
+          "year": 2019,
+          "papers": 53,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "44",
+          "coverage": "complete",
+          "basis": "Verified SpringerLink & Institute of Mathematics issue inventory for Vol. 44 (Issues 1–4: 17, 11, 14, 11 eligible papers; 54 total items, 1 Preface in Issue 1 excluded).",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/44-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/44-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/44-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/44-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/44-4"
+          ]
+        },
+        {
+          "year": 2020,
+          "papers": 53,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "45",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/45-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/45-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/45-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/45-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/45-4"
+          ]
+        },
+        {
+          "year": 2021,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "46",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/46-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/46-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/46-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/46-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/46-4"
+          ]
+        },
+        {
+          "year": 2022,
+          "papers": 48,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "47",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/47-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/47-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/47-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/47-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/47-4"
+          ]
+        },
+        {
+          "year": 2023,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "48",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/48-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/48-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/48-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/48-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/48-4"
+          ]
+        },
+        {
+          "year": 2024,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "49",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/49-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/49-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/49-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/49-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/49-4"
+          ]
+        },
+        {
+          "year": 2025,
+          "papers": 32,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "50",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/50-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-3",
+            "https://link.springer.com/journal/40306/volumes-and-issues/50-4"
+          ]
+        },
+        {
+          "year": 2026,
+          "papers": 27,
+          "issues": 3,
+          "periodKind": "ytd",
+          "volume": "51",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://link.springer.com/journal/40306/volumes-and-issues/51-1",
+          "sourceUrls": [
+            "https://link.springer.com/journal/40306/volumes-and-issues/51-1",
+            "https://link.springer.com/journal/40306/volumes-and-issues/51-2",
+            "https://link.springer.com/journal/40306/volumes-and-issues/51-3"
+          ]
+        }
+      ],
+      "citationSeries": [],
+      "fullCitationSeries": [],
+      "selfCalculatedSeries": [],
+      "localCiteScoreSeries": [],
+      "officialScopusSeries": [
+        {
+          "year": 2015,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.6,
+          "citeScore": 0.6,
+          "citations": 90,
+          "documents": 153,
+          "window": "2012-2015",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2016,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.7,
+          "citeScore": 0.7,
+          "citations": 120,
+          "documents": 167,
+          "window": "2013-2016",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2017,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.6,
+          "citeScore": 0.6,
+          "citations": 104,
+          "documents": 172,
+          "window": "2014-2017",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2018,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.7,
+          "citeScore": 0.7,
+          "citations": 124,
+          "documents": 177,
+          "window": "2015-2018",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2019,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.9,
+          "citeScore": 0.9,
+          "citations": 169,
+          "documents": 190,
+          "window": "2016-2019",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2020,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 1.2,
+          "citeScore": 1.2,
+          "citations": 233,
+          "documents": 199,
+          "window": "2017-2020",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2021,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 1.2,
+          "citeScore": 1.2,
+          "citations": 246,
+          "documents": 201,
+          "window": "2018-2021",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2022,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 1.3,
+          "citeScore": 1.3,
+          "citations": 259,
+          "documents": 203,
+          "window": "2019-2022",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2023,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.9,
+          "citeScore": 0.9,
+          "citations": 176,
+          "documents": 187,
+          "window": "2020-2023",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2024,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.7,
+          "citeScore": 0.7,
+          "citations": 125,
+          "documents": 167,
+          "window": "2021-2024",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2025,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.8,
+          "citeScore": 0.8,
+          "citations": 120,
+          "documents": 153,
+          "window": "2022-2025",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2026,
+          "type": "tracker",
+          "periodKind": "ytd",
+          "value": 0.8,
+          "citeScore": 0.8,
+          "citations": 98,
+          "documents": 123,
+          "window": null,
+          "status": "verified_scopus",
+          "lastUpdated": "2026-10-05",
+          "sourceUrl": "https://www.scopus.com/sourceid/21100199843"
+        }
+      ],
+      "notes": "Complete 51-year historical series for AMV (1976–2026, Volumes 1–51; reorganized in 1975–1976 from predecessor Acta Scientiarum Vietnamicarum). Institutional ownership confirmed: Viện Toán học (Institute of Mathematics, VAST) & Springer Nature (NOT NXB Khoa học tự nhiên và Công nghệ). Years 1976–2012 (Volumes 1–37) are verified issue-by-issue from the official Institute of Mathematics archive (https://math.ac.vn/acta/home); years 2013–2019 (Volumes 38–44) are cross-verified across SpringerLink (https://link.springer.com/journal/40306/volumes-and-issues) and math.ac.vn/acta; years 2020–2026 (Volumes 45–51) preserve exact verified counts from evidence/dashboard-publishers.json."
+    },
+    {
+      "id": "ansn",
+      "code": "ANSN",
+      "title": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
+      "titleVi": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
+      "subject": "Vật liệu và công nghệ nano",
+      "group": "VAST-1",
+      "managingInstitution": "Nhà xuất bản Khoa học tự nhiên và Công nghệ (Publishing House for Science and Technology, VAST)",
+      "publisher": "IOP Publishing & Vietnam Academy of Science and Technology",
+      "coPublisher": "IOP Publishing",
+      "platform": "IOPscience / ScholarOne Manuscripts",
+      "doiPrefix": "10.1088",
+      "website": "https://iopscience.iop.org/journal/2043-6262",
+      "archiveUrl": "https://iopscience.iop.org/journal/2043-6262",
+      "issn": "2043-6254",
+      "eissn": "2043-6262",
+      "formerTitles": [],
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://iopscience.iop.org/journal/2043-6262"
+      },
+      "sourceDirectory": null,
+      "sourceFiles": [
+        {
+          "path": "2026/01-NXB/08-Tập hợp dự án 12 tạp chí 2026-2030 bản chính thức/[2] Đề cương của ANSN Final 2.12 In cuối cùng gửi đi.docx",
+          "sha256": "d2284968ae057dc52c45be4a644bbe5084b62ed96a39ae034fb06b877f6591ba"
+        },
+        {
+          "path": "2026/01-NXB/28-CV báo cáo PCT/BC -THÔNG TIN TỔNG HỢP CỦA 12 TẠP CHÍ KHOA HỌC.docx",
+          "sha256": "3f276a8df8906bd1d034a5e85f70a9f1a52aa8126411a39981bfb21894319a7e"
+        }
+      ],
+      "sourceUrls": [
+        "https://iopscience.iop.org/journal/2043-6262",
+        "https://api.crossref.org/journals/2043-6262/works",
+        "https://api.crossref.org/journals/2043-6254/works",
+        "https://www.scopus.com/sourceid/21100286862"
+      ],
+      "archiveStartYear": 2010,
+      "archiveEndYear": 2026,
+      "earliestPubYear": 2010,
+      "latestPubYear": 2026,
+      "issueArchiveStartYear": 2010,
+      "earliestCitationYear": null,
+      "latestCitationYear": null,
+      "totals": null,
+      "annualSeries": [
+        {
+          "year": 2010,
+          "papers": 70,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "1",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 1 (Issues 1–4: 17, 18, 15, 20 eligible papers; 72 total items, 2 Addenda/Errata 039801 & 039802 in Issue 3 excluded).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/1/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/1/1",
+            "https://iopscience.iop.org/issue/2043-6262/1/2",
+            "https://iopscience.iop.org/issue/2043-6262/1/3",
+            "https://iopscience.iop.org/issue/2043-6262/1/4"
+          ]
+        },
+        {
+          "year": 2011,
+          "papers": 70,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "2",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 2 (Issues 1–4: 18, 17, 18, 17 eligible papers; 71 total items, 1 Book Review 049301 in Issue 4 excluded).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/2/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/2/1",
+            "https://iopscience.iop.org/issue/2043-6262/2/2",
+            "https://iopscience.iop.org/issue/2043-6262/2/3",
+            "https://iopscience.iop.org/issue/2043-6262/2/4"
+          ]
+        },
+        {
+          "year": 2012,
+          "papers": 77,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "3",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 3 (Issues 1–4: 18, 19, 18, 22 eligible papers; 77 total items).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/3/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/3/1",
+            "https://iopscience.iop.org/issue/2043-6262/3/2",
+            "https://iopscience.iop.org/issue/2043-6262/3/3",
+            "https://iopscience.iop.org/issue/2043-6262/3/4"
+          ]
+        },
+        {
+          "year": 2013,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "4",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 4 (Issues 1–4: 20, 20, 20, 20 eligible papers; 81 total items, 1 Erratum 029601 in Issue 2 excluded).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/4/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/4/1",
+            "https://iopscience.iop.org/issue/2043-6262/4/2",
+            "https://iopscience.iop.org/issue/2043-6262/4/3",
+            "https://iopscience.iop.org/issue/2043-6262/4/4"
+          ]
+        },
+        {
+          "year": 2014,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "5",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 5 (Issues 1–4: 20, 20, 20, 20 eligible papers; 82 total items, 2 Book Reviews 029301 & 039301 in Issues 2 & 3 excluded).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/5/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/5/1",
+            "https://iopscience.iop.org/issue/2043-6262/5/2",
+            "https://iopscience.iop.org/issue/2043-6262/5/3",
+            "https://iopscience.iop.org/issue/2043-6262/5/4"
+          ]
+        },
+        {
+          "year": 2015,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "6",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 6 (Issues 1–4: 20, 20, 20, 20 eligible papers; 80 total items).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/6/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/6/1",
+            "https://iopscience.iop.org/issue/2043-6262/6/2",
+            "https://iopscience.iop.org/issue/2043-6262/6/3",
+            "https://iopscience.iop.org/issue/2043-6262/6/4"
+          ]
+        },
+        {
+          "year": 2016,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "7",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 7 (Issues 1–4: 20, 20, 20, 20 eligible papers; 80 total items).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/7/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/7/1",
+            "https://iopscience.iop.org/issue/2043-6262/7/2",
+            "https://iopscience.iop.org/issue/2043-6262/7/3",
+            "https://iopscience.iop.org/issue/2043-6262/7/4"
+          ]
+        },
+        {
+          "year": 2017,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "8",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 8 (Issues 1–4: 20, 20, 20, 20 eligible papers; 81 total items, 1 Book Review 020401 in Issue 2 excluded).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/8/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/8/1",
+            "https://iopscience.iop.org/issue/2043-6262/8/2",
+            "https://iopscience.iop.org/issue/2043-6262/8/3",
+            "https://iopscience.iop.org/issue/2043-6262/8/4"
+          ]
+        },
+        {
+          "year": 2018,
+          "papers": 73,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "9",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 9 (Issues 1–4: 14, 22, 22, 15 eligible papers; 76 total items, 3 Corrigenda 039501, 039502, 049501 in Issues 3 & 4 excluded).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/9/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/9/1",
+            "https://iopscience.iop.org/issue/2043-6262/9/2",
+            "https://iopscience.iop.org/issue/2043-6262/9/3",
+            "https://iopscience.iop.org/issue/2043-6262/9/4"
+          ]
+        },
+        {
+          "year": 2019,
+          "papers": 71,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "10",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 10 (Issues 1–4: 16, 17, 18, 20 eligible papers; 71 total items).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/10/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/10/1",
+            "https://iopscience.iop.org/issue/2043-6262/10/2",
+            "https://iopscience.iop.org/issue/2043-6262/10/3",
+            "https://iopscience.iop.org/issue/2043-6262/10/4"
+          ]
+        },
+        {
+          "year": 2020,
+          "papers": 76,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "11",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works",
+            "https://iopscience.iop.org/issue/2043-6262/11/1",
+            "https://iopscience.iop.org/issue/2043-6262/11/2",
+            "https://iopscience.iop.org/issue/2043-6262/11/3",
+            "https://iopscience.iop.org/issue/2043-6262/11/4"
+          ]
+        },
+        {
+          "year": 2021,
+          "papers": 71,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "12",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works",
+            "https://iopscience.iop.org/issue/2043-6262/12/1",
+            "https://iopscience.iop.org/issue/2043-6262/12/2",
+            "https://iopscience.iop.org/issue/2043-6262/12/3",
+            "https://iopscience.iop.org/issue/2043-6262/12/4"
+          ]
+        },
+        {
+          "year": 2022,
+          "papers": 67,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "13",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works",
+            "https://iopscience.iop.org/issue/2043-6262/13/1",
+            "https://iopscience.iop.org/issue/2043-6262/13/2",
+            "https://iopscience.iop.org/issue/2043-6262/13/3",
+            "https://iopscience.iop.org/issue/2043-6262/13/4"
+          ]
+        },
+        {
+          "year": 2023,
+          "papers": 73,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "14",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works",
+            "https://iopscience.iop.org/issue/2043-6262/14/1",
+            "https://iopscience.iop.org/issue/2043-6262/14/2",
+            "https://iopscience.iop.org/issue/2043-6262/14/3",
+            "https://iopscience.iop.org/issue/2043-6262/14/4"
+          ]
+        },
+        {
+          "year": 2024,
+          "papers": 75,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "15",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works",
+            "https://iopscience.iop.org/issue/2043-6262/15/1",
+            "https://iopscience.iop.org/issue/2043-6262/15/2",
+            "https://iopscience.iop.org/issue/2043-6262/15/3",
+            "https://iopscience.iop.org/issue/2043-6262/15/4"
+          ]
+        },
+        {
+          "year": 2025,
+          "papers": 76,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "16",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works"
+          ]
+        },
+        {
+          "year": 2026,
+          "papers": 56,
+          "issues": 3,
+          "periodKind": "ytd",
+          "volume": "17",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://iopscience.iop.org/journal/rss/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works"
+          ]
+        }
+      ],
+      "fullPubSeries": [
+        {
+          "year": 2010,
+          "papers": 70,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "1",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 1 (Issues 1–4: 17, 18, 15, 20 eligible papers; 72 total items, 2 Addenda/Errata 039801 & 039802 in Issue 3 excluded).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/1/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/1/1",
+            "https://iopscience.iop.org/issue/2043-6262/1/2",
+            "https://iopscience.iop.org/issue/2043-6262/1/3",
+            "https://iopscience.iop.org/issue/2043-6262/1/4"
+          ]
+        },
+        {
+          "year": 2011,
+          "papers": 70,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "2",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 2 (Issues 1–4: 18, 17, 18, 17 eligible papers; 71 total items, 1 Book Review 049301 in Issue 4 excluded).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/2/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/2/1",
+            "https://iopscience.iop.org/issue/2043-6262/2/2",
+            "https://iopscience.iop.org/issue/2043-6262/2/3",
+            "https://iopscience.iop.org/issue/2043-6262/2/4"
+          ]
+        },
+        {
+          "year": 2012,
+          "papers": 77,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "3",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 3 (Issues 1–4: 18, 19, 18, 22 eligible papers; 77 total items).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/3/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/3/1",
+            "https://iopscience.iop.org/issue/2043-6262/3/2",
+            "https://iopscience.iop.org/issue/2043-6262/3/3",
+            "https://iopscience.iop.org/issue/2043-6262/3/4"
+          ]
+        },
+        {
+          "year": 2013,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "4",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 4 (Issues 1–4: 20, 20, 20, 20 eligible papers; 81 total items, 1 Erratum 029601 in Issue 2 excluded).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/4/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/4/1",
+            "https://iopscience.iop.org/issue/2043-6262/4/2",
+            "https://iopscience.iop.org/issue/2043-6262/4/3",
+            "https://iopscience.iop.org/issue/2043-6262/4/4"
+          ]
+        },
+        {
+          "year": 2014,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "5",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 5 (Issues 1–4: 20, 20, 20, 20 eligible papers; 82 total items, 2 Book Reviews 029301 & 039301 in Issues 2 & 3 excluded).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/5/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/5/1",
+            "https://iopscience.iop.org/issue/2043-6262/5/2",
+            "https://iopscience.iop.org/issue/2043-6262/5/3",
+            "https://iopscience.iop.org/issue/2043-6262/5/4"
+          ]
+        },
+        {
+          "year": 2015,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "6",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 6 (Issues 1–4: 20, 20, 20, 20 eligible papers; 80 total items).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/6/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/6/1",
+            "https://iopscience.iop.org/issue/2043-6262/6/2",
+            "https://iopscience.iop.org/issue/2043-6262/6/3",
+            "https://iopscience.iop.org/issue/2043-6262/6/4"
+          ]
+        },
+        {
+          "year": 2016,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "7",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 7 (Issues 1–4: 20, 20, 20, 20 eligible papers; 80 total items).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/7/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/7/1",
+            "https://iopscience.iop.org/issue/2043-6262/7/2",
+            "https://iopscience.iop.org/issue/2043-6262/7/3",
+            "https://iopscience.iop.org/issue/2043-6262/7/4"
+          ]
+        },
+        {
+          "year": 2017,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "8",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 8 (Issues 1–4: 20, 20, 20, 20 eligible papers; 81 total items, 1 Book Review 020401 in Issue 2 excluded).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/8/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/8/1",
+            "https://iopscience.iop.org/issue/2043-6262/8/2",
+            "https://iopscience.iop.org/issue/2043-6262/8/3",
+            "https://iopscience.iop.org/issue/2043-6262/8/4"
+          ]
+        },
+        {
+          "year": 2018,
+          "papers": 73,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "9",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 9 (Issues 1–4: 14, 22, 22, 15 eligible papers; 76 total items, 3 Corrigenda 039501, 039502, 049501 in Issues 3 & 4 excluded).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/9/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/9/1",
+            "https://iopscience.iop.org/issue/2043-6262/9/2",
+            "https://iopscience.iop.org/issue/2043-6262/9/3",
+            "https://iopscience.iop.org/issue/2043-6262/9/4"
+          ]
+        },
+        {
+          "year": 2019,
+          "papers": 71,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "10",
+          "coverage": "complete",
+          "basis": "Verified IOPscience & Crossref issue inventory for Vol. 10 (Issues 1–4: 16, 17, 18, 20 eligible papers; 71 total items).",
+          "sourceUrl": "https://iopscience.iop.org/issue/2043-6262/10/1",
+          "sourceUrls": [
+            "https://iopscience.iop.org/issue/2043-6262/10/1",
+            "https://iopscience.iop.org/issue/2043-6262/10/2",
+            "https://iopscience.iop.org/issue/2043-6262/10/3",
+            "https://iopscience.iop.org/issue/2043-6262/10/4"
+          ]
+        },
+        {
+          "year": 2020,
+          "papers": 76,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "11",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works",
+            "https://iopscience.iop.org/issue/2043-6262/11/1",
+            "https://iopscience.iop.org/issue/2043-6262/11/2",
+            "https://iopscience.iop.org/issue/2043-6262/11/3",
+            "https://iopscience.iop.org/issue/2043-6262/11/4"
+          ]
+        },
+        {
+          "year": 2021,
+          "papers": 71,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "12",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works",
+            "https://iopscience.iop.org/issue/2043-6262/12/1",
+            "https://iopscience.iop.org/issue/2043-6262/12/2",
+            "https://iopscience.iop.org/issue/2043-6262/12/3",
+            "https://iopscience.iop.org/issue/2043-6262/12/4"
+          ]
+        },
+        {
+          "year": 2022,
+          "papers": 67,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "13",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works",
+            "https://iopscience.iop.org/issue/2043-6262/13/1",
+            "https://iopscience.iop.org/issue/2043-6262/13/2",
+            "https://iopscience.iop.org/issue/2043-6262/13/3",
+            "https://iopscience.iop.org/issue/2043-6262/13/4"
+          ]
+        },
+        {
+          "year": 2023,
+          "papers": 73,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "14",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works",
+            "https://iopscience.iop.org/issue/2043-6262/14/1",
+            "https://iopscience.iop.org/issue/2043-6262/14/2",
+            "https://iopscience.iop.org/issue/2043-6262/14/3",
+            "https://iopscience.iop.org/issue/2043-6262/14/4"
+          ]
+        },
+        {
+          "year": 2024,
+          "papers": 75,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "15",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works",
+            "https://iopscience.iop.org/issue/2043-6262/15/1",
+            "https://iopscience.iop.org/issue/2043-6262/15/2",
+            "https://iopscience.iop.org/issue/2043-6262/15/3",
+            "https://iopscience.iop.org/issue/2043-6262/15/4"
+          ]
+        },
+        {
+          "year": 2025,
+          "papers": 76,
+          "issues": 4,
+          "periodKind": "annual",
+          "volume": "16",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works"
+          ]
+        },
+        {
+          "year": 2026,
+          "papers": 56,
+          "issues": 3,
+          "periodKind": "ytd",
+          "volume": "17",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://iopscience.iop.org/journal/2043-6262",
+          "sourceUrls": [
+            "https://iopscience.iop.org/journal/2043-6262",
+            "https://iopscience.iop.org/journal/rss/2043-6262",
+            "https://api.crossref.org/journals/2043-6262/works"
+          ]
+        }
+      ],
+      "citationSeries": [],
+      "fullCitationSeries": [],
+      "selfCalculatedSeries": [],
+      "localCiteScoreSeries": [],
+      "officialScopusSeries": [
+        {
+          "year": 2015,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 2.6,
+          "citeScore": 2.6,
+          "citations": 791,
+          "documents": 300,
+          "window": "2012-2015",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2016,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 2.7,
+          "citeScore": 2.7,
+          "citations": 854,
+          "documents": 319,
+          "window": "2013-2016",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2017,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 2.7,
+          "citeScore": 2.7,
+          "citations": 862,
+          "documents": 320,
+          "window": "2014-2017",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2018,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 3.7,
+          "citeScore": 3.7,
+          "citations": 1161,
+          "documents": 312,
+          "window": "2015-2018",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2019,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 4.9,
+          "citeScore": 4.9,
+          "citations": 1493,
+          "documents": 304,
+          "window": "2016-2019",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2020,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 4.8,
+          "citeScore": 4.8,
+          "citations": 1437,
+          "documents": 298,
+          "window": "2017-2020",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2021,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 4.2,
+          "citeScore": 4.2,
+          "citations": 1229,
+          "documents": 291,
+          "window": "2018-2021",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2022,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 3.8,
+          "citeScore": 3.8,
+          "citations": 1069,
+          "documents": 285,
+          "window": "2019-2022",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2023,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 3.8,
+          "citeScore": 3.8,
+          "citations": 1077,
+          "documents": 287,
+          "window": "2020-2023",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2024,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 3.3,
+          "citeScore": 3.3,
+          "citations": 962,
+          "documents": 288,
+          "window": "2021-2024",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2025,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 3.9,
+          "citeScore": 3.9,
+          "citations": 1143,
+          "documents": 292,
+          "window": "2022-2025",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources.uri"
+        },
+        {
+          "year": 2026,
+          "type": "tracker",
+          "periodKind": "ytd",
+          "value": 4,
+          "citeScore": 4,
+          "citations": 1118,
+          "documents": 280,
+          "window": null,
+          "status": "verified_scopus",
+          "lastUpdated": "2026-10-05",
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286862"
+        }
+      ],
+      "notes": "Complete historical series for ANSN from inception (2010–2026, Volumes 1–17). Years 2020–2026 preserve exact verified counts from evidence/dashboard-publishers.json; pre-2020 years (2010–2019, Volumes 1–10) are verified from IOPscience and Crossref (2043-6254 / 2043-6262) using IOP section codes (30 = Topical Review, 50 = Paper; excluding non-research sections 04/93 Book Reviews, 95 Corrigenda, 96 Errata, 98 Addenda)."
+    },
+    {
+      "id": "vjc",
+      "code": "VJC",
+      "title": "Vietnam Journal of Chemistry",
+      "titleVi": "Tạp chí Hóa học",
+      "subject": "Hóa học",
+      "group": "VAST-1",
+      "managingInstitution": "Nhà xuất bản Khoa học tự nhiên và Công nghệ (Publishing House for Science and Technology, VAST)",
+      "publisher": "Wiley-VCH & Vietnam Academy of Science and Technology",
+      "coPublisher": "Wiley-VCH",
+      "platform": "Wiley Online Library / Research Exchange Review (ReX)",
+      "doiPrefix": "10.1002",
+      "legacyDoiPrefix": "10.15625",
+      "website": "https://onlinelibrary.wiley.com/journal/25728288",
+      "archiveUrl": "https://onlinelibrary.wiley.com/loi/25728288",
+      "ojsArchiveUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive",
+      "issn": "2525-2321",
+      "eissn": "2572-8288",
+      "formerTitles": [
+        {
+          "title": "Tập san Hóa học",
+          "issn": null,
+          "until": "1976"
+        },
+        {
+          "title": "Tạp chí Hóa học",
+          "issn": "0866-7144",
+          "until": "2024"
+        }
+      ],
+      "frequency": {
+        "issuesPerYear": 6,
+        "sourceUrl": "https://onlinelibrary.wiley.com/journal/25728288"
+      },
+      "sourceDirectory": "2026/09d-OJS-Citation Statistics-VJC",
+      "sourceFiles": [
+        {
+          "path": "2026/09d-OJS-Citation Statistics-VJC/data/vjmech_ojs_catalog.json",
+          "sha256": "695ed485051384b9b493068ae62b2fdc9e52a619e1cfb1c50440ef5aaea77e44"
+        },
+        {
+          "path": "2026/09d-OJS-Citation Statistics-VJC/data/vjmech-stats.json",
+          "sha256": "e569ed67b4fb1f208cd6db207d1ad5f03f375bd3bf07f63f45703268b155c5d9"
+        },
+        {
+          "path": "2026/01-NXB/08-Tập hợp dự án 12 tạp chí 2026-2030 bản chính thức/[VJC] De-cuong-du-an-2026-2030.docx",
+          "sha256": "d3f949e314f812f73458a700a59e281e97fbaa4c9173d612ba28c127974bfd79"
+        },
+        {
+          "path": "2026/01-NXB/28-CV báo cáo PCT/BC -THÔNG TIN TỔNG HỢP CỦA 12 TẠP CHÍ KHOA HỌC.docx",
+          "sha256": "3f276a8df8906bd1d034a5e85f70a9f1a52aa8126411a39981bfb21894319a7e"
+        }
+      ],
+      "sourceUrls": [
+        "https://onlinelibrary.wiley.com/journal/25728288",
+        "https://vjs.ac.vn/index.php/vjchem/issue/archive",
+        "https://vjs.ac.vn/vjchem/statistic",
+        "https://api.crossref.org/journals/2572-8288/works",
+        "https://api.crossref.org/journals/0866-7144/works",
+        "https://www.scopus.com/sourceid/21101043786"
+      ],
+      "archiveStartYear": 2015,
+      "archiveEndYear": 2026,
+      "wileyStartYear": 2018,
+      "earliestPubYear": 2015,
+      "latestPubYear": 2026,
+      "issueArchiveStartYear": 2000,
+      "earliestCitationYear": 2007,
+      "latestCitationYear": 2026,
+      "totals": {
+        "citingDocs": 4700,
+        "citations": 5013,
+        "citedArticles": 856,
+        "hIndex": 26
+      },
+      "annualSeries": [
+        {
+          "year": 2015,
+          "papers": 26,
+          "ojsArchivePapers": 185,
+          "issues": 7,
+          "catalogIssues": 2,
+          "periodKind": "annual",
+          "volume": "53",
+          "coverage": "catalog",
+          "basis": "26 Crossref-DOI catalog records in 2026/09d-OJS-Citation Statistics-VJC/data/vjmech_ojs_catalog.json (10.15625/0866-7144.*); 7 issues (No. 1, 2, 2e, 3, 4, 5, 6 with 185 articles) in official OJS archive https://vjs.ac.vn/index.php/vjchem/issue/archive.",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjchem/issue/archive",
+            "https://api.crossref.org/journals/0866-7144/works"
+          ]
+        },
+        {
+          "year": 2016,
+          "papers": 0,
+          "ojsArchivePapers": 144,
+          "issues": 6,
+          "catalogIssues": 0,
+          "periodKind": "annual",
+          "volume": "54",
+          "coverage": "catalog",
+          "basis": "0 Crossref-DOI catalog records in data/vjmech_ojs_catalog.json (Vol. 54 articles did not register Crossref DOIs); 6 issues (No. 1–6 with 144 articles) in official OJS archive https://vjs.ac.vn/index.php/vjchem/issue/archive.",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjchem/issue/archive"
+          ]
+        },
+        {
+          "year": 2017,
+          "papers": 24,
+          "ojsArchivePapers": 137,
+          "issues": 6,
+          "catalogIssues": 1,
+          "periodKind": "annual",
+          "volume": "55",
+          "coverage": "catalog",
+          "basis": "24 Crossref-DOI catalog records in data/vjmech_ojs_catalog.json (Vol. 55 No. 4, 10.15625/2525-2321.2017-*); 6 issues (No. 1–6 with 137 articles) in official OJS archive https://vjs.ac.vn/index.php/vjchem/issue/archive.",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjchem/issue/archive",
+            "https://api.crossref.org/journals/0866-7144/works"
+          ]
+        },
+        {
+          "year": 2018,
+          "papers": 108,
+          "issues": 6,
+          "catalogIssues": 5,
+          "periodKind": "annual",
+          "volume": "56",
+          "coverage": "complete",
+          "basis": "108 verified research/review articles in data/vjmech_ojs_catalog.json and Wiley/Crossref Vol. 56 (6 bimonthly issue DOIs 10.1002/vjch.v56.1..6; 18 paratext/erratum/container records excluded).",
+          "sourceUrl": "https://onlinelibrary.wiley.com/loi/25728288/year/2018",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v56.1",
+            "https://doi.org/10.1002/vjch.v56.2",
+            "https://doi.org/10.1002/vjch.v56.3",
+            "https://doi.org/10.1002/vjch.v56.4",
+            "https://doi.org/10.1002/vjch.v56.5",
+            "https://doi.org/10.1002/vjch.v56.6"
+          ]
+        },
+        {
+          "year": 2019,
+          "papers": 123,
+          "issues": 6,
+          "catalogIssues": 6,
+          "periodKind": "annual",
+          "volume": "57",
+          "coverage": "complete",
+          "basis": "123 verified research/review articles in data/vjmech_ojs_catalog.json and Wiley/Crossref Vol. 57 (Issues 1–6: 21, 16, 22, 22, 21, 21 eligible papers; 25 paratext/container records excluded).",
+          "sourceUrl": "https://onlinelibrary.wiley.com/loi/25728288/year/2019",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v57.1",
+            "https://doi.org/10.1002/vjch.v57.2",
+            "https://doi.org/10.1002/vjch.v57.3",
+            "https://doi.org/10.1002/vjch.v57.4",
+            "https://doi.org/10.1002/vjch.v57.5",
+            "https://doi.org/10.1002/vjch.v57.6"
+          ]
+        },
+        {
+          "year": 2020,
+          "papers": 123,
+          "catalogPapers": 123,
+          "issues": 6,
+          "catalogIssues": 6,
+          "periodKind": "annual",
+          "volume": "58",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v58.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v58.1",
+            "https://doi.org/10.1002/vjch.v58.2",
+            "https://doi.org/10.1002/vjch.v58.3",
+            "https://doi.org/10.1002/vjch.v58.4",
+            "https://doi.org/10.1002/vjch.v58.5",
+            "https://doi.org/10.1002/vjch.v58.6"
+          ]
+        },
+        {
+          "year": 2021,
+          "papers": 114,
+          "catalogPapers": 114,
+          "issues": 6,
+          "catalogIssues": 6,
+          "periodKind": "annual",
+          "volume": "59",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v59.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v59.1",
+            "https://doi.org/10.1002/vjch.v59.2",
+            "https://doi.org/10.1002/vjch.v59.3",
+            "https://doi.org/10.1002/vjch.v59.4",
+            "https://doi.org/10.1002/vjch.v59.5",
+            "https://doi.org/10.1002/vjch.v59.6"
+          ]
+        },
+        {
+          "year": 2022,
+          "papers": 103,
+          "catalogPapers": 103,
+          "issues": 7,
+          "catalogIssues": 7,
+          "periodKind": "annual",
+          "volume": "60",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v60.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v60.1",
+            "https://doi.org/10.1002/vjch.v60.2",
+            "https://doi.org/10.1002/vjch.v60.3",
+            "https://doi.org/10.1002/vjch.v60.4",
+            "https://doi.org/10.1002/vjch.v60.5",
+            "https://doi.org/10.1002/vjch.v60.6",
+            "https://doi.org/10.1002/vjch.v60.s1"
+          ]
+        },
+        {
+          "year": 2023,
+          "papers": 130,
+          "catalogPapers": 131,
+          "issues": 9,
+          "catalogIssues": 9,
+          "periodKind": "annual",
+          "volume": "61",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v61.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v61.1",
+            "https://doi.org/10.1002/vjch.v61.2",
+            "https://doi.org/10.1002/vjch.v61.3",
+            "https://doi.org/10.1002/vjch.v61.4",
+            "https://doi.org/10.1002/vjch.v61.5",
+            "https://doi.org/10.1002/vjch.v61.6",
+            "https://doi.org/10.1002/vjch.v61.s1",
+            "https://doi.org/10.1002/vjch.v61.s2",
+            "https://doi.org/10.1002/vjch.v61.s3"
+          ]
+        },
+        {
+          "year": 2024,
+          "papers": 119,
+          "catalogPapers": 119,
+          "issues": 7,
+          "catalogIssues": 7,
+          "periodKind": "annual",
+          "volume": "62",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v62.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v62.1",
+            "https://doi.org/10.1002/vjch.v62.2",
+            "https://doi.org/10.1002/vjch.v62.3",
+            "https://doi.org/10.1002/vjch.v62.4",
+            "https://doi.org/10.1002/vjch.v62.5",
+            "https://doi.org/10.1002/vjch.v62.6",
+            "https://doi.org/10.1002/vjch.v62.s1"
+          ]
+        },
+        {
+          "year": 2025,
+          "papers": 90,
+          "catalogPapers": 97,
+          "issues": 6,
+          "catalogIssues": 6,
+          "periodKind": "annual",
+          "volume": "63",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v63.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v63.1",
+            "https://doi.org/10.1002/vjch.v63.2",
+            "https://doi.org/10.1002/vjch.v63.3",
+            "https://doi.org/10.1002/vjch.v63.4",
+            "https://doi.org/10.1002/vjch.v63.5",
+            "https://doi.org/10.1002/vjch.v63.6"
+          ]
+        },
+        {
+          "year": 2026,
+          "papers": 96,
+          "catalogPapers": 126,
+          "issues": 6,
+          "catalogIssues": 6,
+          "periodKind": "ytd",
+          "volume": "64",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v64.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v64.1",
+            "https://doi.org/10.1002/vjch.v64.2",
+            "https://doi.org/10.1002/vjch.v64.3",
+            "https://doi.org/10.1002/vjch.v64.4",
+            "https://doi.org/10.1002/vjch.v64.5",
+            "https://doi.org/10.1002/vjch.v64.s1"
+          ]
+        }
+      ],
+      "fullPubSeries": [
+        {
+          "year": 2015,
+          "papers": 26,
+          "ojsArchivePapers": 185,
+          "issues": 7,
+          "catalogIssues": 2,
+          "periodKind": "annual",
+          "volume": "53",
+          "coverage": "catalog",
+          "basis": "26 Crossref-DOI catalog records in 2026/09d-OJS-Citation Statistics-VJC/data/vjmech_ojs_catalog.json (10.15625/0866-7144.*); 7 issues (No. 1, 2, 2e, 3, 4, 5, 6 with 185 articles) in official OJS archive https://vjs.ac.vn/index.php/vjchem/issue/archive.",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjchem/issue/archive",
+            "https://api.crossref.org/journals/0866-7144/works"
+          ]
+        },
+        {
+          "year": 2016,
+          "papers": 0,
+          "ojsArchivePapers": 144,
+          "issues": 6,
+          "catalogIssues": 0,
+          "periodKind": "annual",
+          "volume": "54",
+          "coverage": "catalog",
+          "basis": "0 Crossref-DOI catalog records in data/vjmech_ojs_catalog.json (Vol. 54 articles did not register Crossref DOIs); 6 issues (No. 1–6 with 144 articles) in official OJS archive https://vjs.ac.vn/index.php/vjchem/issue/archive.",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjchem/issue/archive"
+          ]
+        },
+        {
+          "year": 2017,
+          "papers": 24,
+          "ojsArchivePapers": 137,
+          "issues": 6,
+          "catalogIssues": 1,
+          "periodKind": "annual",
+          "volume": "55",
+          "coverage": "catalog",
+          "basis": "24 Crossref-DOI catalog records in data/vjmech_ojs_catalog.json (Vol. 55 No. 4, 10.15625/2525-2321.2017-*); 6 issues (No. 1–6 with 137 articles) in official OJS archive https://vjs.ac.vn/index.php/vjchem/issue/archive.",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjchem/issue/archive",
+            "https://api.crossref.org/journals/0866-7144/works"
+          ]
+        },
+        {
+          "year": 2018,
+          "papers": 108,
+          "issues": 6,
+          "catalogIssues": 5,
+          "periodKind": "annual",
+          "volume": "56",
+          "coverage": "complete",
+          "basis": "108 verified research/review articles in data/vjmech_ojs_catalog.json and Wiley/Crossref Vol. 56 (6 bimonthly issue DOIs 10.1002/vjch.v56.1..6; 18 paratext/erratum/container records excluded).",
+          "sourceUrl": "https://onlinelibrary.wiley.com/loi/25728288/year/2018",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v56.1",
+            "https://doi.org/10.1002/vjch.v56.2",
+            "https://doi.org/10.1002/vjch.v56.3",
+            "https://doi.org/10.1002/vjch.v56.4",
+            "https://doi.org/10.1002/vjch.v56.5",
+            "https://doi.org/10.1002/vjch.v56.6"
+          ]
+        },
+        {
+          "year": 2019,
+          "papers": 123,
+          "issues": 6,
+          "catalogIssues": 6,
+          "periodKind": "annual",
+          "volume": "57",
+          "coverage": "complete",
+          "basis": "123 verified research/review articles in data/vjmech_ojs_catalog.json and Wiley/Crossref Vol. 57 (Issues 1–6: 21, 16, 22, 22, 21, 21 eligible papers; 25 paratext/container records excluded).",
+          "sourceUrl": "https://onlinelibrary.wiley.com/loi/25728288/year/2019",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v57.1",
+            "https://doi.org/10.1002/vjch.v57.2",
+            "https://doi.org/10.1002/vjch.v57.3",
+            "https://doi.org/10.1002/vjch.v57.4",
+            "https://doi.org/10.1002/vjch.v57.5",
+            "https://doi.org/10.1002/vjch.v57.6"
+          ]
+        },
+        {
+          "year": 2020,
+          "papers": 123,
+          "catalogPapers": 123,
+          "issues": 6,
+          "catalogIssues": 6,
+          "periodKind": "annual",
+          "volume": "58",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v58.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v58.1",
+            "https://doi.org/10.1002/vjch.v58.2",
+            "https://doi.org/10.1002/vjch.v58.3",
+            "https://doi.org/10.1002/vjch.v58.4",
+            "https://doi.org/10.1002/vjch.v58.5",
+            "https://doi.org/10.1002/vjch.v58.6"
+          ]
+        },
+        {
+          "year": 2021,
+          "papers": 114,
+          "catalogPapers": 114,
+          "issues": 6,
+          "catalogIssues": 6,
+          "periodKind": "annual",
+          "volume": "59",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v59.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v59.1",
+            "https://doi.org/10.1002/vjch.v59.2",
+            "https://doi.org/10.1002/vjch.v59.3",
+            "https://doi.org/10.1002/vjch.v59.4",
+            "https://doi.org/10.1002/vjch.v59.5",
+            "https://doi.org/10.1002/vjch.v59.6"
+          ]
+        },
+        {
+          "year": 2022,
+          "papers": 103,
+          "catalogPapers": 103,
+          "issues": 7,
+          "catalogIssues": 7,
+          "periodKind": "annual",
+          "volume": "60",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v60.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v60.1",
+            "https://doi.org/10.1002/vjch.v60.2",
+            "https://doi.org/10.1002/vjch.v60.3",
+            "https://doi.org/10.1002/vjch.v60.4",
+            "https://doi.org/10.1002/vjch.v60.5",
+            "https://doi.org/10.1002/vjch.v60.6",
+            "https://doi.org/10.1002/vjch.v60.s1"
+          ]
+        },
+        {
+          "year": 2023,
+          "papers": 130,
+          "catalogPapers": 131,
+          "issues": 9,
+          "catalogIssues": 9,
+          "periodKind": "annual",
+          "volume": "61",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v61.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v61.1",
+            "https://doi.org/10.1002/vjch.v61.2",
+            "https://doi.org/10.1002/vjch.v61.3",
+            "https://doi.org/10.1002/vjch.v61.4",
+            "https://doi.org/10.1002/vjch.v61.5",
+            "https://doi.org/10.1002/vjch.v61.6",
+            "https://doi.org/10.1002/vjch.v61.s1",
+            "https://doi.org/10.1002/vjch.v61.s2",
+            "https://doi.org/10.1002/vjch.v61.s3"
+          ]
+        },
+        {
+          "year": 2024,
+          "papers": 119,
+          "catalogPapers": 119,
+          "issues": 7,
+          "catalogIssues": 7,
+          "periodKind": "annual",
+          "volume": "62",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v62.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v62.1",
+            "https://doi.org/10.1002/vjch.v62.2",
+            "https://doi.org/10.1002/vjch.v62.3",
+            "https://doi.org/10.1002/vjch.v62.4",
+            "https://doi.org/10.1002/vjch.v62.5",
+            "https://doi.org/10.1002/vjch.v62.6",
+            "https://doi.org/10.1002/vjch.v62.s1"
+          ]
+        },
+        {
+          "year": 2025,
+          "papers": 90,
+          "catalogPapers": 97,
+          "issues": 6,
+          "catalogIssues": 6,
+          "periodKind": "annual",
+          "volume": "63",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v63.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v63.1",
+            "https://doi.org/10.1002/vjch.v63.2",
+            "https://doi.org/10.1002/vjch.v63.3",
+            "https://doi.org/10.1002/vjch.v63.4",
+            "https://doi.org/10.1002/vjch.v63.5",
+            "https://doi.org/10.1002/vjch.v63.6"
+          ]
+        },
+        {
+          "year": 2026,
+          "papers": 96,
+          "catalogPapers": 126,
+          "issues": 6,
+          "catalogIssues": 6,
+          "periodKind": "ytd",
+          "volume": "64",
+          "coverage": "complete",
+          "basis": "Exact verified issue-inventory count from evidence/dashboard-publishers.json.",
+          "sourceUrl": "https://doi.org/10.1002/vjch.v64.1",
+          "sourceUrls": [
+            "https://doi.org/10.1002/vjch.v64.1",
+            "https://doi.org/10.1002/vjch.v64.2",
+            "https://doi.org/10.1002/vjch.v64.3",
+            "https://doi.org/10.1002/vjch.v64.4",
+            "https://doi.org/10.1002/vjch.v64.5",
+            "https://doi.org/10.1002/vjch.v64.s1"
+          ]
+        }
+      ],
+      "ojsArchiveSeries": [
+        {
+          "year": 2000,
+          "volume": "38",
+          "issues": 4,
+          "papers": 0,
+          "tocItems": 4,
+          "periodKind": "annual",
+          "basis": "Vol. 38 No. 1–4 in OJS archive (TOC-only records).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive/4"
+        },
+        {
+          "year": 2001,
+          "volume": "39",
+          "issues": 4,
+          "papers": 0,
+          "tocItems": 4,
+          "periodKind": "annual",
+          "basis": "Vol. 39 No. 1–4 in OJS archive (TOC-only records).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive/4"
+        },
+        {
+          "year": 2002,
+          "volume": "40",
+          "issues": 4,
+          "papers": 0,
+          "tocItems": 4,
+          "periodKind": "annual",
+          "basis": "Vol. 40 No. 1–4 in OJS archive (TOC-only records).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive/3"
+        },
+        {
+          "year": 2003,
+          "volume": "41",
+          "issues": 4,
+          "papers": 0,
+          "tocItems": 4,
+          "periodKind": "annual",
+          "basis": "Vol. 41 No. 1–4 in OJS archive (TOC-only records).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive/3"
+        },
+        {
+          "year": 2004,
+          "volume": "42",
+          "issues": 2,
+          "papers": 0,
+          "tocItems": 2,
+          "periodKind": "annual",
+          "basis": "Vol. 42 No. 3–4 in OJS archive (TOC-only records).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive/3"
+        },
+        {
+          "year": 2005,
+          "volume": "43",
+          "issues": 6,
+          "papers": 0,
+          "tocItems": 6,
+          "periodKind": "annual",
+          "basis": "Vol. 43 No. 1–6 in OJS archive (TOC-only records).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive/3"
+        },
+        {
+          "year": 2006,
+          "volume": "44",
+          "issues": 6,
+          "papers": 0,
+          "tocItems": 6,
+          "periodKind": "annual",
+          "basis": "Vol. 44 No. 1–6 in OJS archive (TOC-only records).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive/3"
+        },
+        {
+          "year": 2007,
+          "volume": "45",
+          "issues": 6,
+          "papers": 130,
+          "tocItems": 6,
+          "periodKind": "annual",
+          "basis": "Vol. 45 No. 1–6 in OJS archive (136 total items, 6 TOC items excluded).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive/2"
+        },
+        {
+          "year": 2008,
+          "volume": "46",
+          "issues": 4,
+          "papers": 82,
+          "tocItems": 4,
+          "periodKind": "annual",
+          "basis": "Vol. 46 No. 1–4 in OJS archive (86 total items across 5 issue records, 4 TOC items excluded).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive/2"
+        },
+        {
+          "year": 2009,
+          "volume": "47",
+          "issues": 6,
+          "papers": 137,
+          "tocItems": 7,
+          "periodKind": "annual",
+          "basis": "Vol. 47 No. 1–6 in OJS archive (144 total items, 6 TOC items and 1 conference news item excluded).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive/2"
+        },
+        {
+          "year": 2010,
+          "volume": "48",
+          "issues": 6,
+          "papers": 135,
+          "tocItems": 0,
+          "periodKind": "annual",
+          "basis": "Vol. 48 No. 1–6 in OJS archive (135 articles).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive/2"
+        },
+        {
+          "year": 2011,
+          "volume": "49",
+          "issues": 6,
+          "papers": 104,
+          "tocItems": 0,
+          "periodKind": "annual",
+          "basis": "Vol. 49 No. 1–6 in OJS archive (104 articles).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive/2"
+        },
+        {
+          "year": 2014,
+          "volume": "52",
+          "issues": 6,
+          "papers": 100,
+          "tocItems": 2,
+          "periodKind": "annual",
+          "basis": "Vol. 52 No. 1–6 in OJS archive (102 total items, 2 TOC-only items in No. 5–6 excluded).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive"
+        },
+        {
+          "year": 2015,
+          "volume": "53",
+          "issues": 7,
+          "papers": 185,
+          "tocItems": 0,
+          "periodKind": "annual",
+          "basis": "Vol. 53 No. 1, 2, 2e, 3, 4, 5, 6 in OJS archive (185 articles).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive"
+        },
+        {
+          "year": 2016,
+          "volume": "54",
+          "issues": 6,
+          "papers": 144,
+          "tocItems": 0,
+          "periodKind": "annual",
+          "basis": "Vol. 54 No. 1–6 in OJS archive (144 articles).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive"
+        },
+        {
+          "year": 2017,
+          "volume": "55",
+          "issues": 6,
+          "papers": 137,
+          "tocItems": 0,
+          "periodKind": "annual",
+          "basis": "Vol. 55 No. 1–6 in OJS archive (137 articles).",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjchem/issue/archive"
+        }
+      ],
+      "citationSeries": [
+        {
+          "year": 2007,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1,
+          "docs": 1,
+          "occurrences": 1,
+          "types": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2008,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2009,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2010,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2011,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2012,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1,
+          "docs": 1,
+          "occurrences": 1,
+          "types": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2013,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2014,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1,
+          "docs": 1,
+          "occurrences": 1,
+          "types": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 4,
+          "confirmedCitationEdges": 4,
+          "docs": 4,
+          "occurrences": 4,
+          "types": [
+            3,
+            0,
+            0,
+            1
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 20,
+          "confirmedCitationEdges": 20,
+          "docs": 20,
+          "occurrences": 20,
+          "types": [
+            15,
+            0,
+            0,
+            5
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 52,
+          "confirmedCitationEdges": 59,
+          "docs": 52,
+          "occurrences": 59,
+          "types": [
+            45,
+            0,
+            1,
+            6
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 143,
+          "confirmedCitationEdges": 158,
+          "docs": 143,
+          "occurrences": 158,
+          "types": [
+            115,
+            4,
+            2,
+            22
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 268,
+          "confirmedCitationEdges": 289,
+          "docs": 268,
+          "occurrences": 289,
+          "types": [
+            202,
+            8,
+            8,
+            50
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 470,
+          "confirmedCitationEdges": 493,
+          "docs": 470,
+          "occurrences": 493,
+          "types": [
+            353,
+            15,
+            16,
+            86
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 609,
+          "confirmedCitationEdges": 675,
+          "docs": 609,
+          "occurrences": 675,
+          "types": [
+            489,
+            11,
+            18,
+            91
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 940,
+          "confirmedCitationEdges": 1008,
+          "docs": 940,
+          "occurrences": 1008,
+          "types": [
+            719,
+            13,
+            48,
+            160
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 1170,
+          "confirmedCitationEdges": 1229,
+          "docs": 1170,
+          "occurrences": 1229,
+          "types": [
+            880,
+            17,
+            55,
+            218
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "citingDocuments": 1010,
+          "confirmedCitationEdges": 1064,
+          "docs": 1010,
+          "occurrences": 1064,
+          "types": [
+            764,
+            5,
+            23,
+            218
+          ],
+          "periodKind": "ytd"
+        }
+      ],
+      "fullCitationSeries": [
+        {
+          "year": 2007,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1,
+          "docs": 1,
+          "occurrences": 1,
+          "types": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2008,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2009,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2010,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2011,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2012,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1,
+          "docs": 1,
+          "occurrences": 1,
+          "types": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2013,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2014,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0,
+          "docs": 0,
+          "occurrences": 0,
+          "types": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1,
+          "docs": 1,
+          "occurrences": 1,
+          "types": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 4,
+          "confirmedCitationEdges": 4,
+          "docs": 4,
+          "occurrences": 4,
+          "types": [
+            3,
+            0,
+            0,
+            1
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 20,
+          "confirmedCitationEdges": 20,
+          "docs": 20,
+          "occurrences": 20,
+          "types": [
+            15,
+            0,
+            0,
+            5
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 52,
+          "confirmedCitationEdges": 59,
+          "docs": 52,
+          "occurrences": 59,
+          "types": [
+            45,
+            0,
+            1,
+            6
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 143,
+          "confirmedCitationEdges": 158,
+          "docs": 143,
+          "occurrences": 158,
+          "types": [
+            115,
+            4,
+            2,
+            22
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 268,
+          "confirmedCitationEdges": 289,
+          "docs": 268,
+          "occurrences": 289,
+          "types": [
+            202,
+            8,
+            8,
+            50
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 470,
+          "confirmedCitationEdges": 493,
+          "docs": 470,
+          "occurrences": 493,
+          "types": [
+            353,
+            15,
+            16,
+            86
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 609,
+          "confirmedCitationEdges": 675,
+          "docs": 609,
+          "occurrences": 675,
+          "types": [
+            489,
+            11,
+            18,
+            91
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 940,
+          "confirmedCitationEdges": 1008,
+          "docs": 940,
+          "occurrences": 1008,
+          "types": [
+            719,
+            13,
+            48,
+            160
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 1170,
+          "confirmedCitationEdges": 1229,
+          "docs": 1170,
+          "occurrences": 1229,
+          "types": [
+            880,
+            17,
+            55,
+            218
+          ],
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "citingDocuments": 1010,
+          "confirmedCitationEdges": 1064,
+          "docs": 1010,
+          "occurrences": 1064,
+          "types": [
+            764,
+            5,
+            23,
+            218
+          ],
+          "periodKind": "ytd"
+        }
+      ],
+      "selfCalculatedSeries": [],
+      "localCiteScoreSeries": [
+        {
+          "year": 2015,
+          "value": 0,
+          "cs4": 0,
+          "numerator": 0,
+          "denominator": 26,
+          "cs4_num": 0,
+          "cs4_den": 26,
+          "window": "2012-2015",
+          "isTracker": false,
+          "periodKind": "annual",
+          "denominatorByYear": [
+            0,
+            0,
+            0,
+            26
+          ]
+        },
+        {
+          "year": 2016,
+          "value": 0.04,
+          "cs4": 0.04,
+          "numerator": 1,
+          "denominator": 26,
+          "cs4_num": 1,
+          "cs4_den": 26,
+          "window": "2013-2016",
+          "isTracker": false,
+          "periodKind": "annual",
+          "denominatorByYear": [
+            0,
+            0,
+            26,
+            0
+          ]
+        },
+        {
+          "year": 2017,
+          "value": 0.06,
+          "cs4": 0.06,
+          "numerator": 3,
+          "denominator": 50,
+          "cs4_num": 3,
+          "cs4_den": 50,
+          "window": "2014-2017",
+          "isTracker": false,
+          "periodKind": "annual",
+          "denominatorByYear": [
+            0,
+            26,
+            0,
+            24
+          ]
+        },
+        {
+          "year": 2018,
+          "value": 0.15,
+          "cs4": 0.15,
+          "numerator": 24,
+          "denominator": 158,
+          "cs4_num": 24,
+          "cs4_den": 158,
+          "window": "2015-2018",
+          "isTracker": false,
+          "periodKind": "annual",
+          "denominatorByYear": [
+            26,
+            0,
+            24,
+            108
+          ]
+        },
+        {
+          "year": 2019,
+          "value": 0.3,
+          "cs4": 0.3,
+          "numerator": 77,
+          "denominator": 255,
+          "cs4_num": 77,
+          "cs4_den": 255,
+          "window": "2016-2019",
+          "isTracker": false,
+          "periodKind": "annual",
+          "denominatorByYear": [
+            0,
+            24,
+            108,
+            123
+          ]
+        },
+        {
+          "year": 2020,
+          "value": 0.62,
+          "cs4": 0.62,
+          "numerator": 234,
+          "denominator": 378,
+          "cs4_num": 234,
+          "cs4_den": 378,
+          "window": "2017-2020",
+          "isTracker": false,
+          "periodKind": "annual",
+          "denominatorByYear": [
+            24,
+            108,
+            123,
+            123
+          ]
+        },
+        {
+          "year": 2021,
+          "value": 1,
+          "cs4": 1,
+          "numerator": 466,
+          "denominator": 468,
+          "cs4_num": 466,
+          "cs4_den": 468,
+          "window": "2018-2021",
+          "isTracker": false,
+          "periodKind": "annual",
+          "denominatorByYear": [
+            108,
+            123,
+            123,
+            114
+          ]
+        },
+        {
+          "year": 2022,
+          "value": 1.44,
+          "cs4": 1.44,
+          "numerator": 668,
+          "denominator": 463,
+          "cs4_num": 668,
+          "cs4_den": 463,
+          "window": "2019-2022",
+          "isTracker": false,
+          "periodKind": "annual",
+          "denominatorByYear": [
+            123,
+            123,
+            114,
+            103
+          ]
+        },
+        {
+          "year": 2023,
+          "value": 1.77,
+          "cs4": 1.77,
+          "numerator": 832,
+          "denominator": 471,
+          "cs4_num": 832,
+          "cs4_den": 471,
+          "window": "2020-2023",
+          "isTracker": false,
+          "periodKind": "annual",
+          "denominatorByYear": [
+            123,
+            114,
+            103,
+            131
+          ]
+        },
+        {
+          "year": 2024,
+          "value": 2.32,
+          "cs4": 2.32,
+          "numerator": 1084,
+          "denominator": 467,
+          "cs4_num": 1084,
+          "cs4_den": 467,
+          "window": "2021-2024",
+          "isTracker": false,
+          "periodKind": "annual",
+          "denominatorByYear": [
+            114,
+            103,
+            131,
+            119
+          ]
+        },
+        {
+          "year": 2025,
+          "value": 2.95,
+          "cs4": 2.95,
+          "numerator": 1326,
+          "denominator": 450,
+          "cs4_num": 1326,
+          "cs4_den": 450,
+          "window": "2022-2025",
+          "isTracker": false,
+          "periodKind": "annual",
+          "denominatorByYear": [
+            103,
+            131,
+            119,
+            97
+          ]
+        },
+        {
+          "year": 2026,
+          "value": 3.3,
+          "cs4": 3.3,
+          "numerator": 1561,
+          "denominator": 473,
+          "cs4_num": 1561,
+          "cs4_den": 473,
+          "window": "2023-2026",
+          "isTracker": true,
+          "periodKind": "ytd",
+          "denominatorByYear": [
+            131,
+            119,
+            97,
+            126
+          ]
+        }
+      ],
+      "officialScopusSeries": [
+        {
+          "year": 2015,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": null,
+          "citeScore": null,
+          "citations": null,
+          "documents": null,
+          "window": null,
+          "status": "scopus_na",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2016,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": null,
+          "citeScore": null,
+          "citations": null,
+          "documents": null,
+          "window": null,
+          "status": "scopus_na",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2017,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": null,
+          "citeScore": null,
+          "citations": null,
+          "documents": null,
+          "window": null,
+          "status": "scopus_na",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2018,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": null,
+          "citeScore": null,
+          "citations": null,
+          "documents": null,
+          "window": null,
+          "status": "scopus_na",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2019,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": null,
+          "citeScore": null,
+          "citations": null,
+          "documents": null,
+          "window": null,
+          "status": "scopus_na",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2020,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": null,
+          "citeScore": null,
+          "citations": null,
+          "documents": null,
+          "window": null,
+          "status": "scopus_na",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2021,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 0.5,
+          "citeScore": 0.5,
+          "citations": 109,
+          "documents": 237,
+          "window": "2018-2021",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2022,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 1.4,
+          "citeScore": 1.4,
+          "citations": 638,
+          "documents": 460,
+          "window": "2019-2022",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2023,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 1.7,
+          "citeScore": 1.7,
+          "citations": 813,
+          "documents": 468,
+          "window": "2020-2023",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2024,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 2.3,
+          "citeScore": 2.3,
+          "citations": 1068,
+          "documents": 462,
+          "window": "2021-2024",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sources"
+        },
+        {
+          "year": 2025,
+          "type": "annual",
+          "periodKind": "annual",
+          "value": 3,
+          "citeScore": 3,
+          "citations": 1313,
+          "documents": 433,
+          "window": "2022-2025",
+          "status": "verified_scopus",
+          "lastUpdated": null,
+          "sourceUrl": "https://www.scopus.com/sourceid/21101043786"
+        },
+        {
+          "year": 2026,
+          "type": "tracker",
+          "periodKind": "ytd",
+          "value": 3.4,
+          "citeScore": 3.4,
+          "citations": 1418,
+          "documents": 414,
+          "window": null,
+          "status": "verified_scopus",
+          "lastUpdated": "2026-10-05",
+          "sourceUrl": "https://www.scopus.com/sourceid/21101043786"
+        }
+      ],
+      "notes": "Complete historical series for VJC (2015–2026 in Crossref/local catalog; 2000–2017 in OJS archive https://vjs.ac.vn/index.php/vjchem/issue/archive). Years 2020–2026 preserve exact verified issue-inventory counts from evidence/dashboard-publishers.json; years 2018–2019 (Volumes 56–57) are verified across Wiley/Crossref (2572-8288) and 2026/09d-OJS-Citation Statistics-VJC/data/vjmech_ojs_catalog.json; years 2015–2017 preserve the verified Crossref/catalog counts (26, 0, 24) used in local citation denominator series while also recording full OJS issue archive counts (185, 144, 137) in ojsArchivePapers and ojsArchiveSeries."
+    }
+  ]
+}

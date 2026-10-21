@@ -1,0 +1,136 @@
+{
+  "specVersion": 1,
+  "specId": "vast-12-journal-artcraft-dashboard",
+  "title": "VAST 12-journal dashboard — ArtCraft single-page design specification",
+  "basis": {
+    "inspectedFiles": [
+      "2026/13/index.html",
+      "2026/13/assets/dashboard.css",
+      "2026/13/assets/dashboard.js"
+    ],
+    "observedCurrentStructure": "The entry page currently has separate hash-routed overview, trends, journals, updates, and detail panels; overview and trends also contain publication and citation charts. The catalog is currently a table, and the numbered source list is in the updates panel. This specification consolidates the public dashboard into one continuous page and defines additional catalog and per-journal chart presentation."
+  },
+  "page": {
+    "mode": "single-page-continuous-scroll",
+    "hiddenTabs": true,
+    "sectionOrder": [
+      {
+        "number": "01",
+        "id": "citescore-matrix",
+        "title": "VAST-1 CiteScore Matrix Table (2015–2025 + Tracker 2026) & Overview Charts",
+        "content": [
+          "VAST-1 CiteScore matrix table with annual CiteScore columns 2015–2025 and a 2026 Tracker column",
+          "Overview charts for the VAST-1 CiteScore/Tracker series",
+          "Keep the official CiteScore annual series and current-year Tracker visibly distinct"
+        ]
+      },
+      {
+        "number": "02",
+        "id": "journal-catalog",
+        "title": "12-Journal Catalog with Official Covers & Publisher/Institute Logos",
+        "content": [
+          "A 4-column by 3-row hero/catalog grid containing all 12 journals",
+          "Each journal entry includes its official cover image and the relevant publisher or institute logo",
+          "Journal identity and publisher/institute attribution must be explicit and linked to evidence"
+        ],
+        "specialPublisherMapping": {
+          "journalCode": "AMV",
+          "institute": "Viện Toán học (Institute of Mathematics, VAST)",
+          "publisher": "Springer Nature",
+          "mustNotMapTo": "NXB KHTN&CN"
+        }
+      },
+      {
+        "number": "03",
+        "id": "numbered-references",
+        "title": "Numbered Reference List ([1]..[12])",
+        "content": "The 12 official journal and publisher/institute references, presented as a numbered list [1] through [12]. Each item links to its authoritative source."
+      }
+    ],
+    "journalDetailRoute": {
+      "pattern": "#journal/<id>",
+      "description": "A dedicated per-journal detail view on the same page, addressable by journal id; provide a visible route back to the catalog.",
+      "charts": [
+        {
+          "id": "chart-a-publications-and-issues",
+          "label": "Chart A",
+          "title": "Annual published papers & issues",
+          "series": ["published papers", "issues"],
+          "yearRange": "From the journal's actual earliest year of publication in available source data through 2026, inclusive.",
+          "rangeRule": "Determine the lower bound separately for each journal from its earliest actual publication record; do not impose a 2020 lower bound. The year 2026 may be year-to-date and must be marked as such when coverage is incomplete."
+        },
+        {
+          "id": "chart-b-citations",
+          "label": "Chart B",
+          "title": "Annual citations",
+          "series": ["annual citations"],
+          "yearRange": "From the earliest citation year available for that journal through 2026, inclusive.",
+          "rangeRule": "Determine the lower bound from that journal's actual earliest citation-year record; do not impose a shared 2020 lower bound. Distinguish verified annual counts from year-to-date or incomplete coverage."
+        },
+        {
+          "id": "chart-c-score",
+          "label": "Chart C",
+          "title": "CiteScore and Tracker / projected four-year CiteScore",
+          "vast1": "Show the official annual CiteScore history and the 2026 CiteScore Tracker as a distinct current-year observation.",
+          "vast2": "Show the projected four-year CiteScore series, clearly labeled as a locally calculated projection rather than an official Scopus CiteScore."
+        }
+      ]
+    }
+  },
+  "visualTokens": {
+    "referenceAesthetic": "getartcraft.com",
+    "colors": {
+      "canvas": "#f2f1ee",
+      "ink": "#101014",
+      "craftBlue": "#1858e8"
+    },
+    "typography": {
+      "display": "Archivo",
+      "body": "Inter",
+      "dataAndRuler": "JetBrains Mono",
+      "fallbacks": "Use appropriate sans-serif fallbacks while preserving the specified font roles."
+    },
+    "borders": {
+      "style": "Architectural drafting grid",
+      "width": "1px",
+      "pattern": "1px solid",
+      "application": "Use consistent thin grid lines to define tables, cards, and section divisions; avoid rounded, soft-card styling."
+    },
+    "rightMarginRuler": {
+      "placement": "Fixed to or aligned with the right edge of the page composition",
+      "orientation": "Vertical",
+      "tickLabels": {
+        "start": 0,
+        "end": 30,
+        "step": 1,
+        "format": "Integer labels 0, 1, 2, ... 30"
+      },
+      "font": "JetBrains Mono"
+    },
+    "sectionBadges": {
+      "shape": "Square",
+      "labels": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+      "use": "Numbered section or journal markers, retaining two-digit zero-padded labels."
+    },
+    "sectionHeadings": {
+      "format": "NN / SECTION TITLE",
+      "examples": ["01 / VAST-1 CITESCORE MATRIX TABLE & OVERVIEW CHARTS", "02 / 12-JOURNAL CATALOG", "03 / NUMBERED REFERENCE LIST"]
+    }
+  },
+  "dataAndPresentationRules": {
+    "journalCount": 12,
+    "catalogLayout": "4 columns × 3 rows on desktop; preserve the complete 12-journal sequence responsively.",
+    "officialAssets": "Use official cover images and publisher/institute logos; retain source attribution for each asset.",
+    "metricIntegrity": [
+      "Do not present a projected VAST-2 value as an official Scopus CiteScore.",
+      "Label 2026 values as Tracker or year-to-date where applicable.",
+      "Do not truncate journal-specific historical charts to 2020–2026 when earlier records are available."
+    ],
+    "references": {
+      "count": 12,
+      "numbering": "[1] through [12]",
+      "order": "Follow the catalog's journal order.",
+      "linkRequirement": "Each numbered citation must link to an official journal website or authoritative publisher/institute record."
+    }
+  }
+}

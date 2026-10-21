@@ -1,0 +1,789 @@
+{
+  "generatedAt": "2026-10-21T00:00:00Z",
+  "logos": {
+    "vast": {
+      "path": "assets/images/logos/vast.png",
+      "width": 1016,
+      "height": 572,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 157119,
+      "sha256": "6396a141f36903b882dc3d4661b788bdbeffb74f7641743e3e34c8fd03b25045",
+      "name": "Vietnam Academy of Science and Technology (VAST)",
+      "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/Logo VAST.png"
+    },
+    "nxb": {
+      "path": "assets/images/logos/nxb.png",
+      "width": 803,
+      "height": 453,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 120850,
+      "sha256": "684139fbb32f3a1a52ca1c404706f11aaa4438d37aca01498208b3a3bc449c40",
+      "name": "Publishing House for Science and Technology (PST)",
+      "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/Logo NXB.png"
+    },
+    "im-vast": {
+      "path": "assets/images/logos/im-vast.png",
+      "width": 648,
+      "height": 638,
+      "format": "PNG",
+      "mode": "RGBA",
+      "bytes": 49306,
+      "sha256": "d86bf3a78b396cc2b83fae002e311555eb8f0f39cbe51f7b749e11aeb56a82ee",
+      "name": "Institute of Mathematics, VAST",
+      "nameVi": "Viện Toán học - Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
+      "source": "2025/[25] Anh Thành (IM)/Logo_Hoinghi/logo_IM_VAST.png"
+    },
+    "im-vast-svg": {
+      "path": "assets/images/logos/im-vast.svg",
+      "width": 200,
+      "height": 200,
+      "format": "SVG",
+      "mode": "VECTOR",
+      "bytes": 7576,
+      "sha256": "9613c60b862329b7f7758efd337b8eefcc18c97dbb78654f4e9967274ae08590",
+      "name": "Institute of Mathematics, VAST (SVG)",
+      "nameVi": "Viện Toán học - Viện Hàn lâm Khoa học và Công nghệ Việt Nam (SVG)",
+      "source": "2021/Chị Khuyên/Logo Vien Toan.cdr.svg"
+    },
+    "springer": {
+      "path": "assets/images/logos/springer.svg",
+      "width": 185,
+      "height": 48,
+      "format": "SVG",
+      "mode": "VECTOR",
+      "bytes": 703,
+      "sha256": "12664d8e7fffb33042829c9d31d28f862a81bb431831df4464713ead25dc0f1b",
+      "name": "Springer Nature",
+      "nameVi": "Nhà xuất bản Springer Nature",
+      "source": "Generated clean vector badge for Springer Nature"
+    },
+    "iop": {
+      "path": "assets/images/logos/iop.svg",
+      "width": 195,
+      "height": 48,
+      "format": "SVG",
+      "mode": "VECTOR",
+      "bytes": 729,
+      "sha256": "3272fbe732dfbeb1e13eebd99cbadfd8eeeecff5cf2aeec73415621b75c05459",
+      "name": "IOP Publishing",
+      "nameVi": "Nhà xuất bản IOP Publishing",
+      "source": "Generated clean vector badge for IOP Publishing"
+    },
+    "wiley": {
+      "path": "assets/images/logos/wiley.svg",
+      "width": 190,
+      "height": 48,
+      "format": "SVG",
+      "mode": "VECTOR",
+      "bytes": 450,
+      "sha256": "10c19ea148ba0428e5048027e6e696596c007e6cf61ebd7cc06aeec68e5cbb72",
+      "name": "Wiley-VCH",
+      "nameVi": "Nhà xuất bản Wiley-VCH",
+      "source": "Generated clean vector badge for Wiley-VCH"
+    }
+  },
+  "covers": {
+    "vjm": {
+      "path": "assets/images/covers/vjm.png",
+      "width": 700,
+      "height": 1056,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 79028,
+      "sha256": "00a8c93fba1f2729fa651f4f7e8b3f757a137cb971d02d3443fe88728e5e289f",
+      "name": "Vietnam Journal of Mathematics",
+      "nameVi": "Tạp chí Toán học",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJM.png"
+    },
+    "amv": {
+      "path": "assets/images/covers/amv.png",
+      "width": 694,
+      "height": 1056,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 95381,
+      "sha256": "d611daa286bb6a75f7bc826b3a6d6bc1fefaadeba321da29fb8cb776101081e0",
+      "name": "Acta Mathematica Vietnamica",
+      "nameVi": "Acta Mathematica Vietnamica",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/AMV.png"
+    },
+    "ansn": {
+      "path": "assets/images/covers/ansn.png",
+      "width": 775,
+      "height": 1056,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 390740,
+      "sha256": "5c785d4c45777761acbb7d83defb3cc647229c150d3e57c64f9c6c1e020ccbf9",
+      "name": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
+      "nameVi": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/ANSN.png"
+    },
+    "vjc": {
+      "path": "assets/images/covers/vjc.png",
+      "width": 794,
+      "height": 1031,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 783900,
+      "sha256": "d239f6b6dad9aae3aadb5efb871f3043c4eddb793be4cc200b3ddf1c96f325b0",
+      "name": "Vietnam Journal of Chemistry",
+      "nameVi": "Tạp chí Hóa học",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJC.png"
+    },
+    "vjes": {
+      "path": "assets/images/covers/vjes.png",
+      "width": 784,
+      "height": 1056,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 651129,
+      "sha256": "b5b9ca6d07a19874850bfa7b60c11659032d0d722b1a46a940c0fbf5645de350",
+      "name": "Vietnam Journal of Earth Sciences",
+      "nameVi": "Tạp chí Các Khoa học về Trái đất",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJES.png"
+    },
+    "vjst": {
+      "path": "assets/images/covers/vjst.png",
+      "width": 756,
+      "height": 1056,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 925253,
+      "sha256": "94fcbd2024fba5e2b67bfa2d2cb7f6c95b0df035d8475920f1661d67fe99968a",
+      "name": "Vietnam Journal of Science and Technology",
+      "nameVi": "Tạp chí Khoa học và Công nghệ",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJST.png"
+    },
+    "cip": {
+      "path": "assets/images/covers/cip.png",
+      "width": 762,
+      "height": 1056,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 91819,
+      "sha256": "b8fc4d3e4aa40404bb462d3acacec6b6e6a4c1ed9200e7dc2510d1368c3f1f96",
+      "name": "Communications in Physics",
+      "nameVi": "Tạp chí Vật lý",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/CIP.png"
+    },
+    "vjmech": {
+      "path": "assets/images/covers/vjmech.png",
+      "width": 744,
+      "height": 1056,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 93723,
+      "sha256": "56a340e850aa6ed823fcb1fe850b8a6c4ee8358105f9e7732ec3b9ab75d3501d",
+      "name": "Vietnam Journal of Mechanics",
+      "nameVi": "Tạp chí Cơ học",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJMech.png"
+    },
+    "jcc": {
+      "path": "assets/images/covers/jcc.png",
+      "width": 769,
+      "height": 1056,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 99365,
+      "sha256": "570fabfb2f871aff30699df66278d1d132ce57b6b71f46be9426beaf25fa8567",
+      "name": "Journal of Computer Science and Cybernetics",
+      "nameVi": "Tạp chí Tin học và Điều khiển học",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/JCC.png"
+    },
+    "ajb": {
+      "path": "assets/images/covers/ajb.png",
+      "width": 734,
+      "height": 1043,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 421695,
+      "sha256": "68e57cad854df4f58f1eb5c705dc1ddb43eefff53e4e1e3735088dd3719b1218",
+      "name": "Academia Journal of Biology",
+      "nameVi": "Tạp chí Sinh học",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/AJB.png"
+    },
+    "vjmst": {
+      "path": "assets/images/covers/vjmst.png",
+      "width": 765,
+      "height": 1056,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 99421,
+      "sha256": "bf595b236047ba7f95476fe832f9f4ecf1b427671731b804e825b8f64567363c",
+      "name": "Vietnam Journal of Marine Science and Technology",
+      "nameVi": "Tạp chí Khoa học và Công nghệ biển",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJMST.png"
+    },
+    "vjbt": {
+      "path": "assets/images/covers/vjbt.png",
+      "width": 756,
+      "height": 1056,
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 661791,
+      "sha256": "cd3582def3e47a9314042cc8377528228a2f1043564afb4d07f25a7534a90a5a",
+      "name": "Vietnam Journal of Biotechnology",
+      "nameVi": "Tạp chí Công nghệ Sinh học",
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJBT.png"
+    }
+  },
+  "journals": {
+    "vjm": {
+      "id": "vjm",
+      "code": "VJM",
+      "title": "Vietnam Journal of Mathematics",
+      "titleVi": "Tạp chí Toán học",
+      "cover": "assets/images/covers/vjm.png",
+      "coverDimensions": {
+        "width": 700,
+        "height": 1056
+      },
+      "governingBody": {
+        "id": "vast",
+        "name": "Vietnam Academy of Science and Technology (VAST)",
+        "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+        "logo": "assets/images/logos/vast.png"
+      },
+      "publishingUnit": {
+        "id": "nxb",
+        "name": "Publishing House for Science and Technology (PST)",
+        "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "logoSvg": null
+      },
+      "coPublisher": {
+        "id": "springer",
+        "name": "Springer Nature",
+        "nameVi": "Nhà xuất bản Springer Nature",
+        "logo": "assets/images/logos/springer.svg"
+      },
+      "logos": [
+        {
+          "role": "governingBody",
+          "id": "vast",
+          "path": "assets/images/logos/vast.png",
+          "name": "Vietnam Academy of Science and Technology (VAST)",
+          "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)"
+        },
+        {
+          "role": "publishingUnit",
+          "id": "nxb",
+          "path": "assets/images/logos/nxb.png",
+          "svgPath": null,
+          "name": "Publishing House for Science and Technology (PST)",
+          "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
+        },
+        {
+          "role": "coPublisher",
+          "id": "springer",
+          "path": "assets/images/logos/springer.svg",
+          "name": "Springer Nature",
+          "nameVi": "Nhà xuất bản Springer Nature"
+        }
+      ]
+    },
+    "amv": {
+      "id": "amv",
+      "code": "AMV",
+      "title": "Acta Mathematica Vietnamica",
+      "titleVi": "Acta Mathematica Vietnamica",
+      "cover": "assets/images/covers/amv.png",
+      "coverDimensions": {
+        "width": 694,
+        "height": 1056
+      },
+      "governingBody": {
+        "id": "vast",
+        "name": "Vietnam Academy of Science and Technology (VAST)",
+        "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+        "logo": "assets/images/logos/vast.png"
+      },
+      "publishingUnit": {
+        "id": "im-vast",
+        "name": "Institute of Mathematics, VAST",
+        "nameVi": "Viện Toán học - Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
+        "logo": "assets/images/logos/im-vast.png",
+        "logoSvg": "assets/images/logos/im-vast.svg"
+      },
+      "coPublisher": {
+        "id": "springer",
+        "name": "Springer Nature",
+        "nameVi": "Nhà xuất bản Springer Nature",
+        "logo": "assets/images/logos/springer.svg"
+      },
+      "logos": [
+        {
+          "role": "governingBody",
+          "id": "vast",
+          "path": "assets/images/logos/vast.png",
+          "name": "Vietnam Academy of Science and Technology (VAST)",
+          "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)"
+        },
+        {
+          "role": "publishingUnit",
+          "id": "im-vast",
+          "path": "assets/images/logos/im-vast.png",
+          "svgPath": "assets/images/logos/im-vast.svg",
+          "name": "Institute of Mathematics, VAST",
+          "nameVi": "Viện Toán học - Viện Hàn lâm Khoa học và Công nghệ Việt Nam"
+        },
+        {
+          "role": "coPublisher",
+          "id": "springer",
+          "path": "assets/images/logos/springer.svg",
+          "name": "Springer Nature",
+          "nameVi": "Nhà xuất bản Springer Nature"
+        }
+      ]
+    },
+    "ansn": {
+      "id": "ansn",
+      "code": "ANSN",
+      "title": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
+      "titleVi": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
+      "cover": "assets/images/covers/ansn.png",
+      "coverDimensions": {
+        "width": 775,
+        "height": 1056
+      },
+      "governingBody": {
+        "id": "vast",
+        "name": "Vietnam Academy of Science and Technology (VAST)",
+        "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+        "logo": "assets/images/logos/vast.png"
+      },
+      "publishingUnit": {
+        "id": "nxb",
+        "name": "Publishing House for Science and Technology (PST)",
+        "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "logoSvg": null
+      },
+      "coPublisher": {
+        "id": "iop",
+        "name": "IOP Publishing",
+        "nameVi": "Nhà xuất bản IOP Publishing",
+        "logo": "assets/images/logos/iop.svg"
+      },
+      "logos": [
+        {
+          "role": "governingBody",
+          "id": "vast",
+          "path": "assets/images/logos/vast.png",
+          "name": "Vietnam Academy of Science and Technology (VAST)",
+          "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)"
+        },
+        {
+          "role": "publishingUnit",
+          "id": "nxb",
+          "path": "assets/images/logos/nxb.png",
+          "svgPath": null,
+          "name": "Publishing House for Science and Technology (PST)",
+          "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
+        },
+        {
+          "role": "coPublisher",
+          "id": "iop",
+          "path": "assets/images/logos/iop.svg",
+          "name": "IOP Publishing",
+          "nameVi": "Nhà xuất bản IOP Publishing"
+        }
+      ]
+    },
+    "vjc": {
+      "id": "vjc",
+      "code": "VJC",
+      "title": "Vietnam Journal of Chemistry",
+      "titleVi": "Tạp chí Hóa học",
+      "cover": "assets/images/covers/vjc.png",
+      "coverDimensions": {
+        "width": 794,
+        "height": 1031
+      },
+      "governingBody": {
+        "id": "vast",
+        "name": "Vietnam Academy of Science and Technology (VAST)",
+        "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+        "logo": "assets/images/logos/vast.png"
+      },
+      "publishingUnit": {
+        "id": "nxb",
+        "name": "Publishing House for Science and Technology (PST)",
+        "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "logoSvg": null
+      },
+      "coPublisher": {
+        "id": "wiley",
+        "name": "Wiley-VCH",
+        "nameVi": "Nhà xuất bản Wiley-VCH",
+        "logo": "assets/images/logos/wiley.svg"
+      },
+      "logos": [
+        {
+          "role": "governingBody",
+          "id": "vast",
+          "path": "assets/images/logos/vast.png",
+          "name": "Vietnam Academy of Science and Technology (VAST)",
+          "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)"
+        },
+        {
+          "role": "publishingUnit",
+          "id": "nxb",
+          "path": "assets/images/logos/nxb.png",
+          "svgPath": null,
+          "name": "Publishing House for Science and Technology (PST)",
+          "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
+        },
+        {
+          "role": "coPublisher",
+          "id": "wiley",
+          "path": "assets/images/logos/wiley.svg",
+          "name": "Wiley-VCH",
+          "nameVi": "Nhà xuất bản Wiley-VCH"
+        }
+      ]
+    },
+    "vjes": {
+      "id": "vjes",
+      "code": "VJES",
+      "title": "Vietnam Journal of Earth Sciences",
+      "titleVi": "Tạp chí Các Khoa học về Trái đất",
+      "cover": "assets/images/covers/vjes.png",
+      "coverDimensions": {
+        "width": 784,
+        "height": 1056
+      },
+      "governingBody": {
+        "id": "vast",
+        "name": "Vietnam Academy of Science and Technology (VAST)",
+        "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+        "logo": "assets/images/logos/vast.png"
+      },
+      "publishingUnit": {
+        "id": "nxb",
+        "name": "Publishing House for Science and Technology (PST)",
+        "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "logoSvg": null
+      },
+      "coPublisher": null,
+      "logos": [
+        {
+          "role": "governingBody",
+          "id": "vast",
+          "path": "assets/images/logos/vast.png",
+          "name": "Vietnam Academy of Science and Technology (VAST)",
+          "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)"
+        },
+        {
+          "role": "publishingUnit",
+          "id": "nxb",
+          "path": "assets/images/logos/nxb.png",
+          "svgPath": null,
+          "name": "Publishing House for Science and Technology (PST)",
+          "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
+        }
+      ]
+    },
+    "vjst": {
+      "id": "vjst",
+      "code": "VJST",
+      "title": "Vietnam Journal of Science and Technology",
+      "titleVi": "Tạp chí Khoa học và Công nghệ",
+      "cover": "assets/images/covers/vjst.png",
+      "coverDimensions": {
+        "width": 756,
+        "height": 1056
+      },
+      "governingBody": {
+        "id": "vast",
+        "name": "Vietnam Academy of Science and Technology (VAST)",
+        "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+        "logo": "assets/images/logos/vast.png"
+      },
+      "publishingUnit": {
+        "id": "nxb",
+        "name": "Publishing House for Science and Technology (PST)",
+        "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "logoSvg": null
+      },
+      "coPublisher": null,
+      "logos": [
+        {
+          "role": "governingBody",
+          "id": "vast",
+          "path": "assets/images/logos/vast.png",
+          "name": "Vietnam Academy of Science and Technology (VAST)",
+          "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)"
+        },
+        {
+          "role": "publishingUnit",
+          "id": "nxb",
+          "path": "assets/images/logos/nxb.png",
+          "svgPath": null,
+          "name": "Publishing House for Science and Technology (PST)",
+          "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
+        }
+      ]
+    },
+    "cip": {
+      "id": "cip",
+      "code": "CIP",
+      "title": "Communications in Physics",
+      "titleVi": "Tạp chí Vật lý",
+      "cover": "assets/images/covers/cip.png",
+      "coverDimensions": {
+        "width": 762,
+        "height": 1056
+      },
+      "governingBody": {
+        "id": "vast",
+        "name": "Vietnam Academy of Science and Technology (VAST)",
+        "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+        "logo": "assets/images/logos/vast.png"
+      },
+      "publishingUnit": {
+        "id": "nxb",
+        "name": "Publishing House for Science and Technology (PST)",
+        "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "logoSvg": null
+      },
+      "coPublisher": null,
+      "logos": [
+        {
+          "role": "governingBody",
+          "id": "vast",
+          "path": "assets/images/logos/vast.png",
+          "name": "Vietnam Academy of Science and Technology (VAST)",
+          "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)"
+        },
+        {
+          "role": "publishingUnit",
+          "id": "nxb",
+          "path": "assets/images/logos/nxb.png",
+          "svgPath": null,
+          "name": "Publishing House for Science and Technology (PST)",
+          "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
+        }
+      ]
+    },
+    "vjmech": {
+      "id": "vjmech",
+      "code": "VJMech",
+      "title": "Vietnam Journal of Mechanics",
+      "titleVi": "Tạp chí Cơ học",
+      "cover": "assets/images/covers/vjmech.png",
+      "coverDimensions": {
+        "width": 744,
+        "height": 1056
+      },
+      "governingBody": {
+        "id": "vast",
+        "name": "Vietnam Academy of Science and Technology (VAST)",
+        "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+        "logo": "assets/images/logos/vast.png"
+      },
+      "publishingUnit": {
+        "id": "nxb",
+        "name": "Publishing House for Science and Technology (PST)",
+        "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "logoSvg": null
+      },
+      "coPublisher": null,
+      "logos": [
+        {
+          "role": "governingBody",
+          "id": "vast",
+          "path": "assets/images/logos/vast.png",
+          "name": "Vietnam Academy of Science and Technology (VAST)",
+          "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)"
+        },
+        {
+          "role": "publishingUnit",
+          "id": "nxb",
+          "path": "assets/images/logos/nxb.png",
+          "svgPath": null,
+          "name": "Publishing House for Science and Technology (PST)",
+          "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
+        }
+      ]
+    },
+    "jcc": {
+      "id": "jcc",
+      "code": "JCC",
+      "title": "Journal of Computer Science and Cybernetics",
+      "titleVi": "Tạp chí Tin học và Điều khiển học",
+      "cover": "assets/images/covers/jcc.png",
+      "coverDimensions": {
+        "width": 769,
+        "height": 1056
+      },
+      "governingBody": {
+        "id": "vast",
+        "name": "Vietnam Academy of Science and Technology (VAST)",
+        "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+        "logo": "assets/images/logos/vast.png"
+      },
+      "publishingUnit": {
+        "id": "nxb",
+        "name": "Publishing House for Science and Technology (PST)",
+        "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "logoSvg": null
+      },
+      "coPublisher": null,
+      "logos": [
+        {
+          "role": "governingBody",
+          "id": "vast",
+          "path": "assets/images/logos/vast.png",
+          "name": "Vietnam Academy of Science and Technology (VAST)",
+          "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)"
+        },
+        {
+          "role": "publishingUnit",
+          "id": "nxb",
+          "path": "assets/images/logos/nxb.png",
+          "svgPath": null,
+          "name": "Publishing House for Science and Technology (PST)",
+          "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
+        }
+      ]
+    },
+    "ajb": {
+      "id": "ajb",
+      "code": "AJB",
+      "title": "Academia Journal of Biology",
+      "titleVi": "Tạp chí Sinh học",
+      "cover": "assets/images/covers/ajb.png",
+      "coverDimensions": {
+        "width": 734,
+        "height": 1043
+      },
+      "governingBody": {
+        "id": "vast",
+        "name": "Vietnam Academy of Science and Technology (VAST)",
+        "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+        "logo": "assets/images/logos/vast.png"
+      },
+      "publishingUnit": {
+        "id": "nxb",
+        "name": "Publishing House for Science and Technology (PST)",
+        "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "logoSvg": null
+      },
+      "coPublisher": null,
+      "logos": [
+        {
+          "role": "governingBody",
+          "id": "vast",
+          "path": "assets/images/logos/vast.png",
+          "name": "Vietnam Academy of Science and Technology (VAST)",
+          "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)"
+        },
+        {
+          "role": "publishingUnit",
+          "id": "nxb",
+          "path": "assets/images/logos/nxb.png",
+          "svgPath": null,
+          "name": "Publishing House for Science and Technology (PST)",
+          "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
+        }
+      ]
+    },
+    "vjmst": {
+      "id": "vjmst",
+      "code": "VJMST",
+      "title": "Vietnam Journal of Marine Science and Technology",
+      "titleVi": "Tạp chí Khoa học và Công nghệ biển",
+      "cover": "assets/images/covers/vjmst.png",
+      "coverDimensions": {
+        "width": 765,
+        "height": 1056
+      },
+      "governingBody": {
+        "id": "vast",
+        "name": "Vietnam Academy of Science and Technology (VAST)",
+        "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+        "logo": "assets/images/logos/vast.png"
+      },
+      "publishingUnit": {
+        "id": "nxb",
+        "name": "Publishing House for Science and Technology (PST)",
+        "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "logoSvg": null
+      },
+      "coPublisher": null,
+      "logos": [
+        {
+          "role": "governingBody",
+          "id": "vast",
+          "path": "assets/images/logos/vast.png",
+          "name": "Vietnam Academy of Science and Technology (VAST)",
+          "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)"
+        },
+        {
+          "role": "publishingUnit",
+          "id": "nxb",
+          "path": "assets/images/logos/nxb.png",
+          "svgPath": null,
+          "name": "Publishing House for Science and Technology (PST)",
+          "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
+        }
+      ]
+    },
+    "vjbt": {
+      "id": "vjbt",
+      "code": "VJBT",
+      "title": "Vietnam Journal of Biotechnology",
+      "titleVi": "Tạp chí Công nghệ Sinh học",
+      "cover": "assets/images/covers/vjbt.png",
+      "coverDimensions": {
+        "width": 756,
+        "height": 1056
+      },
+      "governingBody": {
+        "id": "vast",
+        "name": "Vietnam Academy of Science and Technology (VAST)",
+        "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+        "logo": "assets/images/logos/vast.png"
+      },
+      "publishingUnit": {
+        "id": "nxb",
+        "name": "Publishing House for Science and Technology (PST)",
+        "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "logoSvg": null
+      },
+      "coPublisher": null,
+      "logos": [
+        {
+          "role": "governingBody",
+          "id": "vast",
+          "path": "assets/images/logos/vast.png",
+          "name": "Vietnam Academy of Science and Technology (VAST)",
+          "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)"
+        },
+        {
+          "role": "publishingUnit",
+          "id": "nxb",
+          "path": "assets/images/logos/nxb.png",
+          "svgPath": null,
+          "name": "Publishing House for Science and Technology (PST)",
+          "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
+        }
+      ]
+    }
+  }
+}

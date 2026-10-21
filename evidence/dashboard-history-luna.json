@@ -1,0 +1,2175 @@
+{
+  "asOf": "2026-10-21",
+  "definition": "Pre-2020 counts use local catalog article.year groupings or Scopus annual source-details document counts where available; issues are null when no historical issue count is supported. 2020-2026 papers/issues exactly match reviewed dashboard outputs. Local catalog counts may include Online First or non-eligible records. Citation counts are local verified distinct citing documents and catalog-confirmed citation-edge occurrences; Scopus total citations are not substituted for confirmed edges. Years above 2026 excluded.",
+  "journals": [
+    {
+      "id": "vjm",
+      "earliestPubYear": 2015,
+      "latestPubYear": 2026,
+      "fullPubSeries": [
+        {
+          "year": 2015,
+          "papers": 124,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2016,
+          "papers": 194,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2017,
+          "papers": 201,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2018,
+          "papers": 217,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2019,
+          "papers": 206,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2020,
+          "papers": 56,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2021,
+          "papers": 64,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2022,
+          "papers": 56,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2023,
+          "papers": 54,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2024,
+          "papers": 53,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2025,
+          "papers": 51,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2026,
+          "papers": 58,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        }
+      ],
+      "fullCitationSeries": []
+    },
+    {
+      "id": "amv",
+      "earliestPubYear": 2015,
+      "latestPubYear": 2026,
+      "fullPubSeries": [
+        {
+          "year": 2015,
+          "papers": 153,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2016,
+          "papers": 167,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2017,
+          "papers": 172,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2018,
+          "papers": 177,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2019,
+          "papers": 190,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2020,
+          "papers": 53,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2021,
+          "papers": 46,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2022,
+          "papers": 48,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2023,
+          "papers": 36,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2024,
+          "papers": 36,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2025,
+          "papers": 32,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2026,
+          "papers": 27,
+          "issues": 3,
+          "basis": "Exact official dashboard issue-output count."
+        }
+      ],
+      "fullCitationSeries": [],
+      "institutionalOwnership": "Viện Toán học (Institute of Mathematics, VAST) & Springer Nature; NOT NXB Khoa học tự nhiên và Công nghệ."
+    },
+    {
+      "id": "ansn",
+      "earliestPubYear": 2015,
+      "latestPubYear": 2026,
+      "fullPubSeries": [
+        {
+          "year": 2015,
+          "papers": 300,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2016,
+          "papers": 319,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2017,
+          "papers": 320,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2018,
+          "papers": 312,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2019,
+          "papers": 304,
+          "issues": null,
+          "basis": "Scopus annual source-details document count."
+        },
+        {
+          "year": 2020,
+          "papers": 76,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2021,
+          "papers": 71,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2022,
+          "papers": 67,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2023,
+          "papers": 73,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2024,
+          "papers": 75,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2025,
+          "papers": 76,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2026,
+          "papers": 56,
+          "issues": 3,
+          "basis": "Exact official dashboard issue-output count."
+        }
+      ],
+      "fullCitationSeries": []
+    },
+    {
+      "id": "vjc",
+      "earliestPubYear": 2015,
+      "latestPubYear": 2026,
+      "fullPubSeries": [
+        {
+          "year": 2015,
+          "papers": 26,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2016,
+          "papers": 0,
+          "issues": null,
+          "basis": "No matching pre-2020 catalog article.year or Scopus annual document records in the reviewed source snapshot."
+        },
+        {
+          "year": 2017,
+          "papers": 24,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2018,
+          "papers": 108,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2019,
+          "papers": 123,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2020,
+          "papers": 123,
+          "issues": 6,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2021,
+          "papers": 114,
+          "issues": 6,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2022,
+          "papers": 103,
+          "issues": 7,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2023,
+          "papers": 130,
+          "issues": 9,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2024,
+          "papers": 119,
+          "issues": 7,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2025,
+          "papers": 90,
+          "issues": 6,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2026,
+          "papers": 96,
+          "issues": 6,
+          "basis": "Exact official dashboard issue-output count."
+        }
+      ],
+      "fullCitationSeries": [
+        {
+          "year": 2007,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2008,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2009,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2010,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2011,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2012,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2013,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2014,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 4,
+          "confirmedCitationEdges": 4
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 20,
+          "confirmedCitationEdges": 20
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 52,
+          "confirmedCitationEdges": 59
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 143,
+          "confirmedCitationEdges": 158
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 268,
+          "confirmedCitationEdges": 289
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 470,
+          "confirmedCitationEdges": 493
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 609,
+          "confirmedCitationEdges": 675
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 940,
+          "confirmedCitationEdges": 1008
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 1170,
+          "confirmedCitationEdges": 1229
+        },
+        {
+          "year": 2026,
+          "citingDocuments": 1010,
+          "confirmedCitationEdges": 1064
+        }
+      ]
+    },
+    {
+      "id": "vjes",
+      "earliestPubYear": 2003,
+      "latestPubYear": 2026,
+      "fullPubSeries": [
+        {
+          "year": 2003,
+          "papers": 22,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2004,
+          "papers": 0,
+          "issues": null,
+          "basis": "No matching pre-2020 catalog article.year or Scopus annual document records in the reviewed source snapshot."
+        },
+        {
+          "year": 2005,
+          "papers": 0,
+          "issues": null,
+          "basis": "No matching pre-2020 catalog article.year or Scopus annual document records in the reviewed source snapshot."
+        },
+        {
+          "year": 2006,
+          "papers": 7,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2007,
+          "papers": 0,
+          "issues": null,
+          "basis": "No matching pre-2020 catalog article.year or Scopus annual document records in the reviewed source snapshot."
+        },
+        {
+          "year": 2008,
+          "papers": 50,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2009,
+          "papers": 1,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2010,
+          "papers": 0,
+          "issues": null,
+          "basis": "No matching pre-2020 catalog article.year or Scopus annual document records in the reviewed source snapshot."
+        },
+        {
+          "year": 2011,
+          "papers": 14,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2012,
+          "papers": 0,
+          "issues": null,
+          "basis": "No matching pre-2020 catalog article.year or Scopus annual document records in the reviewed source snapshot."
+        },
+        {
+          "year": 2013,
+          "papers": 0,
+          "issues": null,
+          "basis": "No matching pre-2020 catalog article.year or Scopus annual document records in the reviewed source snapshot."
+        },
+        {
+          "year": 2014,
+          "papers": 31,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2015,
+          "papers": 44,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2016,
+          "papers": 52,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2017,
+          "papers": 36,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2018,
+          "papers": 64,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2019,
+          "papers": 30,
+          "issues": null,
+          "basis": "Articles enumerated in data/vjmech_ojs_catalog.json"
+        },
+        {
+          "year": 2020,
+          "papers": 31,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2021,
+          "papers": 31,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2022,
+          "papers": 31,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2023,
+          "papers": 32,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2024,
+          "papers": 31,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2025,
+          "papers": 31,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2026,
+          "papers": 24,
+          "issues": 3,
+          "basis": "Exact official dashboard issue-output count."
+        }
+      ],
+      "fullCitationSeries": [
+        {
+          "year": 2014,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 2,
+          "confirmedCitationEdges": 2
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 5,
+          "confirmedCitationEdges": 7
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 31,
+          "confirmedCitationEdges": 38
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 57,
+          "confirmedCitationEdges": 97
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 92,
+          "confirmedCitationEdges": 187
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 170,
+          "confirmedCitationEdges": 293
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 209,
+          "confirmedCitationEdges": 340
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 224,
+          "confirmedCitationEdges": 358
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 317,
+          "confirmedCitationEdges": 500
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 332,
+          "confirmedCitationEdges": 473
+        },
+        {
+          "year": 2026,
+          "citingDocuments": 317,
+          "confirmedCitationEdges": 459
+        }
+      ]
+    },
+    {
+      "id": "vjst",
+      "earliestPubYear": 2015,
+      "latestPubYear": 2026,
+      "fullPubSeries": [
+        {
+          "year": 2015,
+          "papers": 27,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2016,
+          "papers": 79,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2017,
+          "papers": 93,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2018,
+          "papers": 663,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2019,
+          "papers": 113,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2020,
+          "papers": 85,
+          "issues": 6,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2021,
+          "papers": 75,
+          "issues": 6,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2022,
+          "papers": 97,
+          "issues": 6,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2023,
+          "papers": 87,
+          "issues": 6,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2024,
+          "papers": 93,
+          "issues": 6,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2025,
+          "papers": 89,
+          "issues": 6,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2026,
+          "papers": 76,
+          "issues": 5,
+          "basis": "Exact official dashboard issue-output count."
+        }
+      ],
+      "fullCitationSeries": [
+        {
+          "year": 2014,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 2,
+          "confirmedCitationEdges": 2
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 20,
+          "confirmedCitationEdges": 22
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 94,
+          "confirmedCitationEdges": 101
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 189,
+          "confirmedCitationEdges": 199
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 239,
+          "confirmedCitationEdges": 259
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 264,
+          "confirmedCitationEdges": 295
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 312,
+          "confirmedCitationEdges": 328
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 394,
+          "confirmedCitationEdges": 419
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 540,
+          "confirmedCitationEdges": 563
+        },
+        {
+          "year": 2026,
+          "citingDocuments": 524,
+          "confirmedCitationEdges": 557
+        }
+      ]
+    },
+    {
+      "id": "cip",
+      "earliestPubYear": 2007,
+      "latestPubYear": 2026,
+      "fullPubSeries": [
+        {
+          "year": 2007,
+          "papers": 24,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2008,
+          "papers": 14,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2009,
+          "papers": 16,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2010,
+          "papers": 3,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2011,
+          "papers": 47,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2012,
+          "papers": 80,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2013,
+          "papers": 53,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2014,
+          "papers": 73,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2015,
+          "papers": 39,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2016,
+          "papers": 42,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2017,
+          "papers": 51,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2018,
+          "papers": 38,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2019,
+          "papers": 52,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2020,
+          "papers": 40,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2021,
+          "papers": 39,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2022,
+          "papers": 40,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2023,
+          "papers": 40,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2024,
+          "papers": 36,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2025,
+          "papers": 34,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2026,
+          "papers": 30,
+          "issues": 3,
+          "basis": "Exact official dashboard issue-output count."
+        }
+      ],
+      "fullCitationSeries": [
+        {
+          "year": 2007,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2008,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2009,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2010,
+          "citingDocuments": 2,
+          "confirmedCitationEdges": 2
+        },
+        {
+          "year": 2011,
+          "citingDocuments": 4,
+          "confirmedCitationEdges": 4
+        },
+        {
+          "year": 2012,
+          "citingDocuments": 3,
+          "confirmedCitationEdges": 3
+        },
+        {
+          "year": 2013,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2014,
+          "citingDocuments": 3,
+          "confirmedCitationEdges": 5
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 3,
+          "confirmedCitationEdges": 5
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 4,
+          "confirmedCitationEdges": 4
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 4,
+          "confirmedCitationEdges": 4
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 4,
+          "confirmedCitationEdges": 4
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 4,
+          "confirmedCitationEdges": 4
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 4,
+          "confirmedCitationEdges": 4
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 6,
+          "confirmedCitationEdges": 6
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 12,
+          "confirmedCitationEdges": 12
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 14,
+          "confirmedCitationEdges": 16
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 38,
+          "confirmedCitationEdges": 47
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 48,
+          "confirmedCitationEdges": 53
+        },
+        {
+          "year": 2026,
+          "citingDocuments": 66,
+          "confirmedCitationEdges": 76
+        }
+      ]
+    },
+    {
+      "id": "vjmech",
+      "earliestPubYear": 1979,
+      "latestPubYear": 2026,
+      "fullPubSeries": [
+        {
+          "year": 1979,
+          "papers": 14,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1980,
+          "papers": 18,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1981,
+          "papers": 20,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1982,
+          "papers": 20,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1983,
+          "papers": 17,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1984,
+          "papers": 20,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1985,
+          "papers": 22,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1986,
+          "papers": 18,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1987,
+          "papers": 19,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1988,
+          "papers": 17,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1989,
+          "papers": 28,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1990,
+          "papers": 18,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1991,
+          "papers": 21,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1992,
+          "papers": 19,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1993,
+          "papers": 29,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1994,
+          "papers": 31,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1995,
+          "papers": 29,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1996,
+          "papers": 28,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1997,
+          "papers": 29,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1998,
+          "papers": 25,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 1999,
+          "papers": 23,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2000,
+          "papers": 24,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2001,
+          "papers": 23,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2002,
+          "papers": 21,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2003,
+          "papers": 24,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2004,
+          "papers": 25,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2005,
+          "papers": 27,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2006,
+          "papers": 27,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2007,
+          "papers": 41,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2008,
+          "papers": 36,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2009,
+          "papers": 25,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2010,
+          "papers": 23,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2011,
+          "papers": 23,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2012,
+          "papers": 30,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2013,
+          "papers": 26,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2014,
+          "papers": 23,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2015,
+          "papers": 25,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2016,
+          "papers": 24,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2017,
+          "papers": 27,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2018,
+          "papers": 28,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2019,
+          "papers": 26,
+          "issues": null,
+          "basis": "Local catalog article.year count; not issue-verified/eligibility-filtered."
+        },
+        {
+          "year": 2020,
+          "papers": 35,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2021,
+          "papers": 26,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2022,
+          "papers": 36,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2023,
+          "papers": 23,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2024,
+          "papers": 28,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2025,
+          "papers": 24,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2026,
+          "papers": 20,
+          "issues": 3,
+          "basis": "Exact official dashboard issue-output count."
+        }
+      ],
+      "fullCitationSeries": [
+        {
+          "year": 2002,
+          "citingDocuments": 2,
+          "confirmedCitationEdges": 2
+        },
+        {
+          "year": 2003,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 2
+        },
+        {
+          "year": 2004,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2005,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2006,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2007,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2008,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2009,
+          "citingDocuments": 3,
+          "confirmedCitationEdges": 6
+        },
+        {
+          "year": 2010,
+          "citingDocuments": 5,
+          "confirmedCitationEdges": 5
+        },
+        {
+          "year": 2011,
+          "citingDocuments": 7,
+          "confirmedCitationEdges": 9
+        },
+        {
+          "year": 2012,
+          "citingDocuments": 18,
+          "confirmedCitationEdges": 20
+        },
+        {
+          "year": 2013,
+          "citingDocuments": 19,
+          "confirmedCitationEdges": 26
+        },
+        {
+          "year": 2014,
+          "citingDocuments": 19,
+          "confirmedCitationEdges": 21
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 24,
+          "confirmedCitationEdges": 27
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 36,
+          "confirmedCitationEdges": 40
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 30,
+          "confirmedCitationEdges": 31
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 37,
+          "confirmedCitationEdges": 46
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 41,
+          "confirmedCitationEdges": 52
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 47,
+          "confirmedCitationEdges": 53
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 87,
+          "confirmedCitationEdges": 93
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 103,
+          "confirmedCitationEdges": 113
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 103,
+          "confirmedCitationEdges": 109
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 129,
+          "confirmedCitationEdges": 137
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 149,
+          "confirmedCitationEdges": 179
+        },
+        {
+          "year": 2026,
+          "citingDocuments": 161,
+          "confirmedCitationEdges": 182
+        }
+      ]
+    },
+    {
+      "id": "jcc",
+      "earliestPubYear": 2012,
+      "latestPubYear": 2026,
+      "fullPubSeries": [
+        {
+          "year": 2012,
+          "papers": 461,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2013,
+          "papers": 78,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2014,
+          "papers": 34,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2015,
+          "papers": 70,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2016,
+          "papers": 238,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2017,
+          "papers": 21,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2018,
+          "papers": 103,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2019,
+          "papers": 31,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2020,
+          "papers": 23,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2021,
+          "papers": 28,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2022,
+          "papers": 22,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2023,
+          "papers": 24,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2024,
+          "papers": 24,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2025,
+          "papers": 25,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2026,
+          "papers": 18,
+          "issues": 3,
+          "basis": "Exact official dashboard issue-output count."
+        }
+      ],
+      "fullCitationSeries": [
+        {
+          "year": 2001,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2002,
+          "citingDocuments": 5,
+          "confirmedCitationEdges": 7
+        },
+        {
+          "year": 2003,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2004,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2005,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2006,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2007,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2008,
+          "citingDocuments": 4,
+          "confirmedCitationEdges": 4
+        },
+        {
+          "year": 2009,
+          "citingDocuments": 2,
+          "confirmedCitationEdges": 2
+        },
+        {
+          "year": 2010,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2011,
+          "citingDocuments": 6,
+          "confirmedCitationEdges": 6
+        },
+        {
+          "year": 2012,
+          "citingDocuments": 10,
+          "confirmedCitationEdges": 11
+        },
+        {
+          "year": 2013,
+          "citingDocuments": 4,
+          "confirmedCitationEdges": 4
+        },
+        {
+          "year": 2014,
+          "citingDocuments": 7,
+          "confirmedCitationEdges": 7
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 13,
+          "confirmedCitationEdges": 14
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 18,
+          "confirmedCitationEdges": 18
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 23,
+          "confirmedCitationEdges": 26
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 50,
+          "confirmedCitationEdges": 52
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 114,
+          "confirmedCitationEdges": 131
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 138,
+          "confirmedCitationEdges": 150
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 198,
+          "confirmedCitationEdges": 222
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 251,
+          "confirmedCitationEdges": 268
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 304,
+          "confirmedCitationEdges": 320
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 325,
+          "confirmedCitationEdges": 340
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 317,
+          "confirmedCitationEdges": 325
+        },
+        {
+          "year": 2026,
+          "citingDocuments": 274,
+          "confirmedCitationEdges": 290
+        }
+      ]
+    },
+    {
+      "id": "ajb",
+      "earliestPubYear": 2012,
+      "latestPubYear": 2026,
+      "fullPubSeries": [
+        {
+          "year": 2012,
+          "papers": 265,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2013,
+          "papers": 80,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2014,
+          "papers": 345,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2015,
+          "papers": 106,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2016,
+          "papers": 114,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2017,
+          "papers": 24,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2018,
+          "papers": 58,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2019,
+          "papers": 104,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2020,
+          "papers": 51,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2021,
+          "papers": 53,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2022,
+          "papers": 55,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2023,
+          "papers": 47,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2024,
+          "papers": 49,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2025,
+          "papers": 52,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2026,
+          "papers": 41,
+          "issues": 3,
+          "basis": "Exact official dashboard issue-output count."
+        }
+      ],
+      "fullCitationSeries": [
+        {
+          "year": 2009,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 2
+        },
+        {
+          "year": 2010,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2011,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2012,
+          "citingDocuments": 3,
+          "confirmedCitationEdges": 3
+        },
+        {
+          "year": 2013,
+          "citingDocuments": 5,
+          "confirmedCitationEdges": 13
+        },
+        {
+          "year": 2014,
+          "citingDocuments": 6,
+          "confirmedCitationEdges": 7
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 8,
+          "confirmedCitationEdges": 8
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 11,
+          "confirmedCitationEdges": 14
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 34,
+          "confirmedCitationEdges": 42
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 40,
+          "confirmedCitationEdges": 50
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 44,
+          "confirmedCitationEdges": 48
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 72,
+          "confirmedCitationEdges": 91
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 98,
+          "confirmedCitationEdges": 130
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 104,
+          "confirmedCitationEdges": 127
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 119,
+          "confirmedCitationEdges": 134
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 132,
+          "confirmedCitationEdges": 163
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 178,
+          "confirmedCitationEdges": 199
+        },
+        {
+          "year": 2026,
+          "citingDocuments": 151,
+          "confirmedCitationEdges": 162
+        }
+      ]
+    },
+    {
+      "id": "vjmst",
+      "earliestPubYear": 2007,
+      "latestPubYear": 2026,
+      "fullPubSeries": [
+        {
+          "year": 2007,
+          "papers": 33,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2008,
+          "papers": 32,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2009,
+          "papers": 25,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2010,
+          "papers": 0,
+          "issues": null,
+          "basis": "No matching pre-2020 catalog article.year or Scopus annual document records in the reviewed source snapshot."
+        },
+        {
+          "year": 2011,
+          "papers": 0,
+          "issues": null,
+          "basis": "No matching pre-2020 catalog article.year or Scopus annual document records in the reviewed source snapshot."
+        },
+        {
+          "year": 2012,
+          "papers": 90,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2013,
+          "papers": 50,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2014,
+          "papers": 50,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2015,
+          "papers": 45,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2016,
+          "papers": 52,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2017,
+          "papers": 63,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2018,
+          "papers": 49,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2019,
+          "papers": 119,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2020,
+          "papers": 60,
+          "issues": 5,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2021,
+          "papers": 46,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2022,
+          "papers": 38,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2023,
+          "papers": 36,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2024,
+          "papers": 36,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2025,
+          "papers": 39,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2026,
+          "papers": 20,
+          "issues": 3,
+          "basis": "Exact official dashboard issue-output count."
+        }
+      ],
+      "fullCitationSeries": [
+        {
+          "year": 2014,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 2,
+          "confirmedCitationEdges": 2
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 0,
+          "confirmedCitationEdges": 0
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 2,
+          "confirmedCitationEdges": 3
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 15,
+          "confirmedCitationEdges": 17
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 20,
+          "confirmedCitationEdges": 27
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 36,
+          "confirmedCitationEdges": 66
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 45,
+          "confirmedCitationEdges": 61
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 79,
+          "confirmedCitationEdges": 93
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 88,
+          "confirmedCitationEdges": 128
+        },
+        {
+          "year": 2026,
+          "citingDocuments": 100,
+          "confirmedCitationEdges": 148
+        }
+      ]
+    },
+    {
+      "id": "vjbt",
+      "earliestPubYear": 2016,
+      "latestPubYear": 2026,
+      "fullPubSeries": [
+        {
+          "year": 2016,
+          "papers": 70,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2017,
+          "papers": 4,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2018,
+          "papers": 168,
+          "issues": null,
+          "basis": "Local catalog count; issue total unavailable."
+        },
+        {
+          "year": 2019,
+          "papers": 0,
+          "issues": null,
+          "basis": "No matching pre-2020 catalog article.year or Scopus annual document records in the reviewed source snapshot."
+        },
+        {
+          "year": 2020,
+          "papers": 73,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2021,
+          "papers": 75,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2022,
+          "papers": 79,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2023,
+          "papers": 69,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2024,
+          "papers": 50,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2025,
+          "papers": 45,
+          "issues": 4,
+          "basis": "Exact official dashboard issue-output count."
+        },
+        {
+          "year": 2026,
+          "papers": 33,
+          "issues": 3,
+          "basis": "Exact official dashboard issue-output count."
+        }
+      ],
+      "fullCitationSeries": [
+        {
+          "year": 2018,
+          "citingDocuments": 2,
+          "confirmedCitationEdges": 2
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 5,
+          "confirmedCitationEdges": 5
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 8,
+          "confirmedCitationEdges": 8
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 15,
+          "confirmedCitationEdges": 15
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 32,
+          "confirmedCitationEdges": 39
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 43,
+          "confirmedCitationEdges": 48
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 99,
+          "confirmedCitationEdges": 118
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 127,
+          "confirmedCitationEdges": 134
+        },
+        {
+          "year": 2026,
+          "citingDocuments": 126,
+          "confirmedCitationEdges": 137
+        }
+      ]
+    }
+  ]
+}

@@ -13,6 +13,11 @@
     2026
   ],
   "defaultOutputYear": 2025,
+  "logos": {
+    "vast": "assets/images/logos/vast.png",
+    "nxb": "assets/images/logos/nxb.png",
+    "im": "assets/images/logos/im-vast.png"
+  },
   "officialScopus": {
     "path": "data-scopus.json",
     "sha256": "113f67b7de073007741f9bb3a1a2f4948df7098f520a434649d151bb2be10d89",
@@ -23,8 +28,8 @@
   "history": [
     {
       "date": "2026-10-21",
-      "title": "Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2, 2020–2026)",
-      "description": "Tổng hợp hồ sơ, chỉ mục, số lượng bài và kỳ xuất bản giai đoạn 2020–2026 của 12 tạp chí (7 tạp chí nhóm VAST-1 thuộc Scopus/WoS và 5 tạp chí nhóm VAST-2), kèm thống kê trích dẫn và CiteScore dự kiến cho nhóm VAST-2.",
+      "title": "Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)",
+      "description": "Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, chuỗi số bài xuất bản lịch sử toàn thời gian và thống kê trích dẫn của 12 tạp chí.",
       "url": "data/snapshots/2026-10-21-v1.json"
     },
     {
@@ -42,7 +47,7 @@
       "titleVi": "Tạp chí Toán học",
       "subject": "Toán học",
       "website": "https://link.springer.com/journal/10013",
-      "publisher": "Springer Nature & Vietnam Academy of Science and Technology",
+      "publisher": "NXB Khoa học tự nhiên và Công nghệ (VAST) & Springer Nature",
       "issn": "2305-221X",
       "eissn": "2305-2228",
       "formerTitles": [
@@ -848,6 +853,13 @@
       "checkedAt": "2026-10-21",
       "aliases": [],
       "group": "VAST-1",
+      "cover": "assets/images/covers/vjm.png",
+      "institution": {
+        "name": "NXB Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "coPublisher": "Springer Nature",
+        "coLogo": "assets/images/logos/springer.svg"
+      },
       "scopusCategories": [
         {
           "year": 2025,
@@ -856,6 +868,92 @@
           "rank": 115,
           "total": 414,
           "sourceUrl": "https://www.scopus.com/sourceid/21100286934"
+        }
+      ],
+      "annualHistory": [
+        {
+          "year": 2013,
+          "papers": 37,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2014,
+          "papers": 42,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "papers": 59,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "papers": 56,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "papers": 44,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "papers": 58,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "papers": 50,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "papers": 56,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "papers": 64,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "papers": 56,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "papers": 54,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "papers": 53,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "papers": 51,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "papers": 58,
+          "issues": 4,
+          "periodKind": "ytd"
         }
       ]
     },
@@ -866,7 +964,7 @@
       "titleVi": "Acta Mathematica Vietnamica",
       "subject": "Toán học",
       "website": "https://link.springer.com/journal/40306",
-      "publisher": "Springer Nature & Institute of Mathematics, Vietnam Academy of Science and Technology",
+      "publisher": "Viện Toán học (VAST) & Springer Nature",
       "issn": "0251-4184",
       "eissn": "2315-4144",
       "formerTitles": [],
@@ -1535,6 +1633,13 @@
         "AVM"
       ],
       "group": "VAST-1",
+      "cover": "assets/images/covers/amv.png",
+      "institution": {
+        "name": "Viện Toán học (VAST)",
+        "logo": "assets/images/logos/im-vast.png",
+        "coPublisher": "Springer Nature",
+        "coLogo": "assets/images/logos/springer.svg"
+      },
       "scopusCategories": [
         {
           "year": 2025,
@@ -1543,6 +1648,314 @@
           "rank": 338,
           "total": 414,
           "sourceUrl": "https://www.scopus.com/sourceid/21100199843"
+        }
+      ],
+      "annualHistory": [
+        {
+          "year": 1976,
+          "papers": 15,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1977,
+          "papers": 12,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1978,
+          "papers": 19,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1979,
+          "papers": 19,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1980,
+          "papers": 28,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1981,
+          "papers": 21,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1982,
+          "papers": 26,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1983,
+          "papers": 11,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1984,
+          "papers": 18,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1985,
+          "papers": 15,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1986,
+          "papers": 17,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1987,
+          "papers": 22,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1988,
+          "papers": 26,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1989,
+          "papers": 21,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1990,
+          "papers": 21,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1991,
+          "papers": 18,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1992,
+          "papers": 24,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1993,
+          "papers": 20,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1994,
+          "papers": 27,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1995,
+          "papers": 23,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1996,
+          "papers": 24,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1997,
+          "papers": 29,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1998,
+          "papers": 29,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1999,
+          "papers": 26,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2000,
+          "papers": 27,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2001,
+          "papers": 30,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2002,
+          "papers": 41,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2003,
+          "papers": 29,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2004,
+          "papers": 24,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2005,
+          "papers": 25,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2006,
+          "papers": 25,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2007,
+          "papers": 26,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2008,
+          "papers": 33,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2009,
+          "papers": 34,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2010,
+          "papers": 31,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2011,
+          "papers": 46,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2012,
+          "papers": 41,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2013,
+          "papers": 39,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2014,
+          "papers": 42,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "papers": 40,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "papers": 47,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "papers": 44,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "papers": 53,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "papers": 53,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "papers": 48,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "papers": 32,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "papers": 27,
+          "issues": 3,
+          "periodKind": "ytd"
         }
       ]
     },
@@ -1553,7 +1966,7 @@
       "titleVi": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
       "subject": "Vật liệu và công nghệ nano",
       "website": "https://iopscience.iop.org/journal/2043-6262",
-      "publisher": "IOP Publishing & Vietnam Academy of Science and Technology",
+      "publisher": "NXB Khoa học tự nhiên và Công nghệ (VAST) & IOP Publishing",
       "issn": "2043-6254",
       "eissn": "2043-6262",
       "formerTitles": [],
@@ -2443,6 +2856,13 @@
       "checkedAt": "2026-10-21",
       "aliases": [],
       "group": "VAST-1",
+      "cover": "assets/images/covers/ansn.png",
+      "institution": {
+        "name": "NXB Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "coPublisher": "IOP Publishing",
+        "coLogo": "assets/images/logos/iop.svg"
+      },
       "scopusCategories": [
         {
           "year": 2025,
@@ -2451,6 +2871,110 @@
           "rank": 164,
           "total": 425,
           "sourceUrl": "https://www.scopus.com/sourceid/21100286862"
+        }
+      ],
+      "annualHistory": [
+        {
+          "year": 2010,
+          "papers": 70,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2011,
+          "papers": 70,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2012,
+          "papers": 77,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2013,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2014,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "papers": 80,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "papers": 73,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "papers": 71,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "papers": 76,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "papers": 71,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "papers": 67,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "papers": 73,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "papers": 75,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "papers": 76,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "papers": 56,
+          "issues": 3,
+          "periodKind": "ytd"
         }
       ]
     },
@@ -2461,7 +2985,7 @@
       "titleVi": "Tạp chí Hóa học",
       "subject": "Hóa học",
       "website": "https://onlinelibrary.wiley.com/journal/25728288",
-      "publisher": "Wiley-VCH & Vietnam Academy of Science and Technology",
+      "publisher": "NXB Khoa học tự nhiên và Công nghệ (VAST) & Wiley-VCH",
       "issn": "2525-2321",
       "eissn": "2572-8288",
       "formerTitles": [
@@ -3816,6 +4340,13 @@
       "checkedAt": "2026-10-21",
       "aliases": [],
       "group": "VAST-1",
+      "cover": "assets/images/covers/vjc.png",
+      "institution": {
+        "name": "NXB Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "coPublisher": "Wiley-VCH",
+        "coLogo": "assets/images/logos/wiley.svg"
+      },
       "scopusCategories": [
         {
           "year": 2025,
@@ -3843,39 +4374,9 @@
             "confirmedCitationEdges": 1
           },
           {
-            "year": 2008,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
-          },
-          {
-            "year": 2009,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
-          },
-          {
-            "year": 2010,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
-          },
-          {
-            "year": 2011,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
-          },
-          {
             "year": 2012,
             "citingDocuments": 1,
             "confirmedCitationEdges": 1
-          },
-          {
-            "year": 2013,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
-          },
-          {
-            "year": 2014,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
           },
           {
             "year": 2015,
@@ -3939,7 +4440,117 @@
           }
         ],
         "selfCalculatedSeries": []
-      }
+      },
+      "annualHistory": [
+        {
+          "year": 2007,
+          "papers": 130,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2008,
+          "papers": 82,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2009,
+          "papers": 137,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2010,
+          "papers": 135,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2011,
+          "papers": 104,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2014,
+          "papers": 100,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "papers": 185,
+          "issues": 7,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "papers": 144,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "papers": 137,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "papers": 108,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "papers": 123,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "papers": 123,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "papers": 114,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "papers": 103,
+          "issues": 7,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "papers": 130,
+          "issues": 9,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "papers": 119,
+          "issues": 7,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "papers": 90,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "papers": 96,
+          "issues": 6,
+          "periodKind": "ytd"
+        }
+      ]
     },
     {
       "id": "vjes",
@@ -3948,7 +4559,7 @@
       "titleVi": "Tạp chí Các Khoa học về Trái đất",
       "subject": "Khoa học Trái đất",
       "website": "https://vjs.ac.vn/index.php/jse",
-      "publisher": "Publishing House for Science and Technology, Vietnam Academy of Science and Technology",
+      "publisher": "NXB Khoa học tự nhiên và Công nghệ, Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
       "issn": "2615-9783",
       "eissn": "2815-5890",
       "formerTitles": [
@@ -4559,6 +5170,23 @@
       "checkedAt": "2026-10-21",
       "aliases": [],
       "group": "VAST-1",
+      "cover": "assets/images/covers/vjes.png",
+      "institution": {
+        "name": "NXB Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "coPublisher": null,
+        "coLogo": null
+      },
+      "scopusCategories": [
+        {
+          "year": 2025,
+          "name": "Earth and Planetary Sciences (miscellaneous)",
+          "percentile": 77,
+          "rank": 45,
+          "total": 201,
+          "sourceUrl": "https://www.scopus.com/sourceid/21101039869"
+        }
+      ],
       "localCitation": {
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/jse/statistic",
@@ -4637,7 +5265,117 @@
           }
         ],
         "selfCalculatedSeries": []
-      }
+      },
+      "annualHistory": [
+        {
+          "year": 2003,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2006,
+          "papers": 38,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2008,
+          "papers": 50,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2009,
+          "papers": 1,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2011,
+          "papers": 14,
+          "issues": 5,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2014,
+          "papers": 53,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "papers": 41,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "papers": 33,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "papers": 28,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "papers": 27,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "papers": 30,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "papers": 31,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "papers": 31,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "papers": 31,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "papers": 32,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "papers": 31,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "papers": 31,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "papers": 24,
+          "issues": 3,
+          "periodKind": "ytd"
+        }
+      ]
     },
     {
       "id": "vjst",
@@ -4646,7 +5384,7 @@
       "titleVi": "Tạp chí Khoa học và Công nghệ",
       "subject": "Khoa học và công nghệ",
       "website": "https://vjs.ac.vn/index.php/jst",
-      "publisher": "Publishing House for Science and Technology, Vietnam Academy of Science and Technology",
+      "publisher": "NXB Khoa học tự nhiên và Công nghệ, Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
       "issn": "2525-2518",
       "eissn": "2815-5874",
       "formerTitles": [
@@ -5771,6 +6509,13 @@
       "checkedAt": "2026-10-21",
       "aliases": [],
       "group": "VAST-1",
+      "cover": "assets/images/covers/vjst.png",
+      "institution": {
+        "name": "NXB Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "coPublisher": null,
+        "coLogo": null
+      },
       "scopusCategories": [
         {
           "year": 2025,
@@ -5859,7 +6604,87 @@
           }
         ],
         "selfCalculatedSeries": []
-      }
+      },
+      "annualHistory": [
+        {
+          "year": 2013,
+          "papers": 27,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "papers": 27,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "papers": 328,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "papers": 257,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "papers": 223,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "papers": 129,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "papers": 85,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "papers": 75,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "papers": 97,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "papers": 87,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "papers": 93,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "papers": 89,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "papers": 76,
+          "issues": 5,
+          "periodKind": "ytd"
+        }
+      ]
     },
     {
       "id": "cip",
@@ -5868,7 +6693,7 @@
       "titleVi": "Tạp chí Vật lý",
       "subject": "Vật lý",
       "website": "https://vjs.ac.vn/index.php/cip",
-      "publisher": "Publishing House for Science and Technology, Vietnam Academy of Science and Technology",
+      "publisher": "NXB Khoa học tự nhiên và Công nghệ, Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
       "issn": "0868-3166",
       "eissn": "2815-5947",
       "formerTitles": [
@@ -6524,6 +7349,13 @@
       "checkedAt": "2026-10-21",
       "aliases": [],
       "group": "VAST-1",
+      "cover": "assets/images/covers/cip.png",
+      "institution": {
+        "name": "NXB Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "coPublisher": null,
+        "coLogo": null
+      },
       "localCitation": {
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/cip/statistic",
@@ -6541,16 +7373,6 @@
             "confirmedCitationEdges": 1
           },
           {
-            "year": 2008,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
-          },
-          {
-            "year": 2009,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
-          },
-          {
             "year": 2010,
             "citingDocuments": 2,
             "confirmedCitationEdges": 2
@@ -6564,11 +7386,6 @@
             "year": 2012,
             "citingDocuments": 3,
             "confirmedCitationEdges": 3
-          },
-          {
-            "year": 2013,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
           },
           {
             "year": 2014,
@@ -6637,7 +7454,135 @@
           }
         ],
         "selfCalculatedSeries": []
-      }
+      },
+      "annualHistory": [
+        {
+          "year": 2004,
+          "papers": 31,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2007,
+          "papers": 3,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2008,
+          "papers": 9,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2009,
+          "papers": 17,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2010,
+          "papers": 47,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2011,
+          "papers": 48,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2012,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2013,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2014,
+          "papers": 85,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "papers": 41,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "papers": 40,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "papers": 35,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "papers": 50,
+          "issues": 5,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "papers": 40,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "papers": 39,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "papers": 40,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "papers": 40,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "papers": 34,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "papers": 30,
+          "issues": 3,
+          "periodKind": "ytd"
+        }
+      ]
     },
     {
       "id": "vjmech",
@@ -6646,7 +7591,7 @@
       "titleVi": "Tạp chí Cơ học",
       "subject": "Cơ học",
       "website": "https://vjs.ac.vn/index.php/vjmech",
-      "publisher": "Publishing House for Science and Technology, Vietnam Academy of Science and Technology",
+      "publisher": "NXB Khoa học tự nhiên và Công nghệ, Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
       "issn": "0866-7136",
       "eissn": "2815-5882",
       "formerTitles": [
@@ -7233,6 +8178,13 @@
       "checkedAt": "2026-10-21",
       "aliases": [],
       "group": "VAST-2",
+      "cover": "assets/images/covers/vjmech.png",
+      "institution": {
+        "name": "NXB Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "coPublisher": null,
+        "coLogo": null
+      },
       "localCitation": {
         "processedAt": "2026-10-20",
         "publicSourceUrl": "https://vjs.ac.vn/vjmech/statistic",
@@ -7263,11 +8215,6 @@
             "year": 2005,
             "citingDocuments": 1,
             "confirmedCitationEdges": 1
-          },
-          {
-            "year": 2006,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
           },
           {
             "year": 2007,
@@ -7456,7 +8403,297 @@
             "window": "2023-2026"
           }
         ]
-      }
+      },
+      "annualHistory": [
+        {
+          "year": 1979,
+          "papers": 14,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1980,
+          "papers": 18,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1981,
+          "papers": 20,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1982,
+          "papers": 20,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1983,
+          "papers": 17,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1984,
+          "papers": 20,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1985,
+          "papers": 22,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1986,
+          "papers": 18,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1987,
+          "papers": 19,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1988,
+          "papers": 17,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1989,
+          "papers": 28,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1990,
+          "papers": 18,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1991,
+          "papers": 21,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1992,
+          "papers": 19,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1993,
+          "papers": 29,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1994,
+          "papers": 31,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1995,
+          "papers": 29,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1996,
+          "papers": 28,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1997,
+          "papers": 29,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1998,
+          "papers": 25,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1999,
+          "papers": 23,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2000,
+          "papers": 24,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2001,
+          "papers": 23,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2002,
+          "papers": 21,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2003,
+          "papers": 24,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2004,
+          "papers": 25,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2005,
+          "papers": 27,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2006,
+          "papers": 27,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2007,
+          "papers": 41,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2008,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2009,
+          "papers": 25,
+          "issues": 3,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2010,
+          "papers": 23,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2011,
+          "papers": 23,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2012,
+          "papers": 30,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2013,
+          "papers": 26,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2014,
+          "papers": 23,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "papers": 25,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "papers": 24,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "papers": 27,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "papers": 28,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "papers": 26,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "papers": 35,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "papers": 26,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "papers": 23,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "papers": 28,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "papers": 24,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "papers": 20,
+          "issues": 3,
+          "periodKind": "ytd"
+        }
+      ]
     },
     {
       "id": "jcc",
@@ -7465,7 +8702,7 @@
       "titleVi": "Tạp chí Tin học và Điều khiển học",
       "subject": "Tin học và điều khiển học",
       "website": "https://vjs.ac.vn/index.php/jcc",
-      "publisher": "Vietnam Academy of Science and Technology",
+      "publisher": "NXB Khoa học tự nhiên và Công nghệ, Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
       "issn": "1813-9663",
       "eissn": null,
       "formerTitles": [],
@@ -8006,6 +9243,13 @@
       "checkedAt": "2026-10-21",
       "aliases": [],
       "group": "VAST-2",
+      "cover": "assets/images/covers/jcc.png",
+      "institution": {
+        "name": "NXB Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "coPublisher": null,
+        "coLogo": null
+      },
       "localCitation": {
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/jcc/statistic",
@@ -8026,26 +9270,6 @@
             "year": 2002,
             "citingDocuments": 5,
             "confirmedCitationEdges": 7
-          },
-          {
-            "year": 2003,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
-          },
-          {
-            "year": 2004,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
-          },
-          {
-            "year": 2005,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
-          },
-          {
-            "year": 2006,
-            "citingDocuments": 0,
-            "confirmedCitationEdges": 0
           },
           {
             "year": 2007,
@@ -8234,7 +9458,249 @@
             "window": "2023-2026"
           }
         ]
-      }
+      },
+      "annualHistory": [
+        {
+          "year": 1985,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1987,
+          "papers": 13,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1988,
+          "papers": 18,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1989,
+          "papers": 21,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1990,
+          "papers": 20,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1991,
+          "papers": 21,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1992,
+          "papers": 13,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1993,
+          "papers": 14,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1994,
+          "papers": 21,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1995,
+          "papers": 24,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1997,
+          "papers": 41,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1998,
+          "papers": 38,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 1999,
+          "papers": 40,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2000,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2001,
+          "papers": 52,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2002,
+          "papers": 53,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2003,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2004,
+          "papers": 42,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2005,
+          "papers": 37,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2006,
+          "papers": 37,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2007,
+          "papers": 37,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2008,
+          "papers": 35,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2009,
+          "papers": 31,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2010,
+          "papers": 32,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2011,
+          "papers": 34,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2012,
+          "papers": 33,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2013,
+          "papers": 33,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2014,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "papers": 27,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "papers": 23,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "papers": 23,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "papers": 26,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "papers": 23,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "papers": 23,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "papers": 28,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "papers": 22,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "papers": 24,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "papers": 24,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "papers": 25,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "papers": 18,
+          "issues": 3,
+          "periodKind": "ytd"
+        }
+      ]
     },
     {
       "id": "ajb",
@@ -8243,7 +9709,7 @@
       "titleVi": "Tạp chí Sinh học",
       "subject": "Sinh học",
       "website": "https://vjs.ac.vn/index.php/vjbio",
-      "publisher": "Vietnam Academy of Science and Technology",
+      "publisher": "NXB Khoa học tự nhiên và Công nghệ, Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
       "issn": "2615-9023",
       "eissn": "2815-5920",
       "formerTitles": [
@@ -8982,6 +10448,13 @@
       "checkedAt": "2026-10-21",
       "aliases": [],
       "group": "VAST-2",
+      "cover": "assets/images/covers/ajb.png",
+      "institution": {
+        "name": "NXB Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "coPublisher": null,
+        "coLogo": null
+      },
       "localCitation": {
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/vjbio/statistic",
@@ -9170,7 +10643,141 @@
             "window": "2023-2026"
           }
         ]
-      }
+      },
+      "annualHistory": [
+        {
+          "year": 2005,
+          "papers": 50,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2006,
+          "papers": 64,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2007,
+          "papers": 57,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2008,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2009,
+          "papers": 50,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2010,
+          "papers": 62,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2011,
+          "papers": 57,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2012,
+          "papers": 123,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2013,
+          "papers": 100,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2014,
+          "papers": 105,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "papers": 108,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "papers": 67,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "papers": 44,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "papers": 58,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "papers": 104,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "papers": 51,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "papers": 53,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "papers": 55,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "papers": 47,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "papers": 49,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "papers": 52,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "papers": 41,
+          "issues": 3,
+          "periodKind": "ytd"
+        }
+      ]
     },
     {
       "id": "vjmst",
@@ -9179,7 +10786,7 @@
       "titleVi": "Tạp chí Khoa học và Công nghệ biển",
       "subject": "Khoa học và công nghệ biển",
       "website": "https://vjs.ac.vn/index.php/jmst",
-      "publisher": "Vietnam Academy of Science and Technology",
+      "publisher": "NXB Khoa học tự nhiên và Công nghệ, Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
       "issn": "1859-3097",
       "eissn": "2815-5904",
       "formerTitles": [],
@@ -9839,6 +11446,13 @@
       "checkedAt": "2026-10-21",
       "aliases": [],
       "group": "VAST-2",
+      "cover": "assets/images/covers/vjmst.png",
+      "institution": {
+        "name": "NXB Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "coPublisher": null,
+        "coLogo": null
+      },
       "localCitation": {
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/jmst/statistic",
@@ -10002,7 +11616,129 @@
             "window": "2023-2026"
           }
         ]
-      }
+      },
+      "annualHistory": [
+        {
+          "year": 2007,
+          "papers": 33,
+          "issues": 5,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2008,
+          "papers": 33,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2009,
+          "papers": 25,
+          "issues": 5,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2010,
+          "papers": 28,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2011,
+          "papers": 26,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2012,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2013,
+          "papers": 52,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2014,
+          "papers": 48,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2015,
+          "papers": 44,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2016,
+          "papers": 52,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "papers": 77,
+          "issues": 5,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "papers": 67,
+          "issues": 5,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "papers": 103,
+          "issues": 6,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "papers": 60,
+          "issues": 5,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "papers": 46,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "papers": 38,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "papers": 36,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "papers": 39,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "papers": 20,
+          "issues": 3,
+          "periodKind": "ytd"
+        }
+      ]
     },
     {
       "id": "vjbt",
@@ -10011,7 +11747,7 @@
       "titleVi": "Tạp chí Công nghệ Sinh học",
       "subject": "Công nghệ sinh học",
       "website": "https://vjs.ac.vn/index.php/vjbt",
-      "publisher": "Vietnam Academy of Science and Technology",
+      "publisher": "NXB Khoa học tự nhiên và Công nghệ, Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
       "issn": "2815-5955",
       "eissn": "2815-5912",
       "formerTitles": [
@@ -10817,6 +12553,13 @@
       "checkedAt": "2026-10-21",
       "aliases": [],
       "group": "VAST-2",
+      "cover": "assets/images/covers/vjbt.png",
+      "institution": {
+        "name": "NXB Khoa học tự nhiên và Công nghệ",
+        "logo": "assets/images/logos/nxb.png",
+        "coPublisher": null,
+        "coLogo": null
+      },
       "localCitation": {
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/vjbt/statistic",
@@ -10960,7 +12703,75 @@
             "window": "2023-2026"
           }
         ]
-      }
+      },
+      "annualHistory": [
+        {
+          "year": 2016,
+          "papers": 92,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2017,
+          "papers": 86,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2018,
+          "papers": 86,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2019,
+          "papers": 43,
+          "issues": 2,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2020,
+          "papers": 73,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2021,
+          "papers": 75,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2022,
+          "papers": 79,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2023,
+          "papers": 69,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2024,
+          "papers": 50,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2025,
+          "papers": 45,
+          "issues": 4,
+          "periodKind": "annual"
+        },
+        {
+          "year": 2026,
+          "papers": 33,
+          "issues": 3,
+          "periodKind": "ytd"
+        }
+      ]
     }
   ]
 }
