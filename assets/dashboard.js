@@ -143,9 +143,9 @@ function renderChart(){
  const chart=$('#trend-chart');chart.setAttribute('viewBox',`0 0 ${width} ${height}`);
  const currentYear=Number(dashboard.collectedAt.slice(0,4)),provisional=years.includes(currentYear);
  let svg=`<title id="chart-title">${esc(metricInfo[state.metric].label)} ${start}–${end}</title><desc id="chart-description">Đọc số liệu theo năm bằng chuột, chạm hoặc bàn phím. Giá trị chưa có nguồn không được vẽ thành 0. Năm ${currentYear} là ${metricInfo[state.metric].scopus?'Tracker tạm thời':'năm chưa kết thúc'}.</desc>`;
- if(provisional){const boundary=years.length===1?left:(x(currentYear-1)+x(currentYear))/2;svg+=`<rect x="${boundary}" y="${top-8}" width="${width-boundary}" height="${plotHeight+8}" fill="var(--surface)"/><text x="${x(currentYear)}" y="16" text-anchor="middle" fill="var(--muted)" font-size="11">${metricInfo[state.metric].scopus?'Tracker':metricInfo[state.metric].local?'Chưa đủ năm':'Đến ngày chốt'}</text>`;}
+ if(provisional){const boundary=years.length===1?left:(x(currentYear-1)+x(currentYear))/2;svg+=`<rect x="${boundary}" y="${top-8}" width="${width-boundary}" height="${plotHeight+8}" fill="var(--surface)"/><text x="${width-6}" y="16" text-anchor="end" fill="var(--muted)" font-size="11">${metricInfo[state.metric].scopus?'Tracker':metricInfo[state.metric].local?'Chưa đủ năm':'Đến ngày chốt'}</text>`;}
  for(let i=0;i<=Math.round(scale.max/scale.step);i++){const v=i*scale.step;svg+=`<line x1="${left}" y1="${y(v)}" x2="${width}" y2="${y(v)}" stroke="var(--line)"/><text x="${left-10}" y="${y(v)+4}" text-anchor="end" fill="var(--muted)" font-size="11">${integer.format(v)}</text>`;}
- const tickStep=years.length<=4?1:width<600?3:2;
+ const tickStep=years.length<=8&&width>=600?1:years.length<=4?1:width<600?3:2;
  for(const year of years)if((year-start)%tickStep===0||year===end)svg+=`<text x="${x(year)}" y="${height-10}" text-anchor="middle" fill="var(--muted)" font-size="12">${year}</text>`;
  for(const j of journals){
  const style=styles[j.id];let d='',connected=false;svg+=`<g class="journal-series" data-journal="${j.id}" aria-hidden="true">`;

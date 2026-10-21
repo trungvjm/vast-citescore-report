@@ -11,18 +11,745 @@
       "publisher": "Vietnam Academy of Science and Technology",
       "issn": "2615-9023",
       "eissn": "2815-5920",
-      "formerTitles": [{"title": "Tạp chí Sinh học (Tap chi Sinh hoc)", "issn": "0866-7160", "until": "2019"}],
-      "frequency": {"issuesPerYear": 4, "sourceUrl": "https://vjs.ac.vn/index.php/vjbio"},
-      "profileSources": ["https://vjs.ac.vn/index.php/vjbio", "https://vjs.ac.vn/vjbio/issue/archive"],
-      "indexings": [
-        {"system": "WoS", "collection": "Zoological Record", "status": "listed", "evidenceLevel": "journal", "sourceUrl": "https://vjs.ac.vn/index.php/vjbio", "checkedAt": "2026-10-21", "coverage": null},
-        {"system": "WoS", "collection": "Core Collection", "status": "not_listed", "evidenceLevel": "journal", "sourceUrl": "https://vjs.ac.vn/index.php/vjbio", "checkedAt": "2026-10-21", "coverage": null},
-        {"system": "ACI", "collection": null, "status": "listed", "evidenceLevel": "journal", "sourceUrl": "https://vjs.ac.vn/index.php/vjbio", "checkedAt": "2026-10-21", "coverage": null}
+      "formerTitles": [
+        {
+          "title": "Tạp chí Sinh học (Tap chi Sinh hoc)",
+          "issn": "0866-7160",
+          "until": "2019"
+        }
       ],
-      "latestIssue": {"title": "Vol. 48 No. 3 (2026)", "published": "2026-09-23", "url": "https://vjs.ac.vn/vjbio/issue/view/1413"},
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vjs.ac.vn/index.php/vjbio"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/vjbio",
+        "https://vjs.ac.vn/vjbio/issue/archive"
+      ],
+      "indexings": [
+        {
+          "system": "WoS",
+          "collection": "Zoological Record",
+          "status": "listed",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbio",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "WoS",
+          "collection": "Core Collection",
+          "status": "not_listed",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbio",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "listed",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbio",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 48 No. 3 (2026)",
+        "published": "2026-09-23",
+        "url": "https://vjs.ac.vn/vjbio/issue/view/1413"
+      },
       "outputs": [
-        {"year": 2025, "papers": 52, "issues": 4, "coverage": "complete", "asOf": "2026-10-21", "periodKind": "annual", "sourceUrls": ["https://vjs.ac.vn/vjbio/issue/archive", "https://vjs.ac.vn/vjbio/issue/view/1396", "https://vjs.ac.vn/vjbio/issue/view/1395", "https://vjs.ac.vn/vjbio/issue/view/1378", "https://vjs.ac.vn/vjbio/issue/view/1377"], "issueItems": [{"id": "vol47n1", "title": "Vol. 47 No. 1 (2025)", "published": "2025-03-28", "url": "https://vjs.ac.vn/vjbio/issue/view/1377", "paperKeys": ["doi:10.15625/2615-9023/21690", "doi:10.15625/2615-9023/21657", "doi:10.15625/2615-9023/20517", "doi:10.15625/2615-9023/22384", "doi:10.15625/2615-9023/21459", "doi:10.15625/2615-9023/21635", "doi:10.15625/2615-9023/20952", "doi:10.15625/2615-9023/20121", "doi:10.15625/2615-9023/21232", "doi:10.15625/2615-9023/21433", "doi:10.15625/2615-9023/21153", "doi:10.15625/2615-9023/21328"]}, {"id": "vol47n2", "title": "Vol. 47 No. 2 (2025)", "published": "2025-06-24", "url": "https://vjs.ac.vn/vjbio/issue/view/1378", "paperKeys": ["doi:10.15625/2615-9023/22083", "doi:10.15625/2615-9023/22551", "doi:10.15625/2615-9023/21702", "doi:10.15625/2615-9023/22372", "doi:10.15625/2615-9023/22401", "doi:10.15625/2615-9023/21776", "doi:10.15625/2615-9023/21558", "doi:10.15625/2615-9023/22482", "doi:10.15625/2615-9023/20512", "doi:10.15625/2615-9023/22761", "doi:10.15625/2615-9023/22816", "doi:10.15625/2615-9023/20939", "doi:10.15625/2615-9023/22003", "doi:10.15625/2615-9023/21734"]}, {"id": "vol47n3", "title": "Vol. 47 No. 3 (2025)", "published": "2025-09-26", "url": "https://vjs.ac.vn/vjbio/issue/view/1395", "paperKeys": ["doi:10.15625/2615-9023/21386", "doi:10.15625/2615-9023/22573", "doi:10.15625/2615-9023/21771", "doi:10.15625/2615-9023/21287", "doi:10.15625/2615-9023/21422", "doi:10.15625/2615-9023/21479", "doi:10.15625/2615-9023/22925", "doi:10.15625/2615-9023/22600", "doi:10.15625/2615-9023/21799", "doi:10.15625/2615-9023/22091", "doi:10.15625/2615-9023/21729", "doi:10.15625/2615-9023/21663", "doi:10.15625/2615-9023/21897"]}, {"id": "vol47n4", "title": "Vol. 47 No. 4 (2025)", "published": "2025-12-25", "url": "https://vjs.ac.vn/vjbio/issue/view/1396", "paperKeys": ["doi:10.15625/2615-9023/23104", "doi:10.15625/2615-9023/22468", "doi:10.15625/2615-9023/21414", "doi:10.15625/2615-9023/22912", "doi:10.15625/2615-9023/22836", "doi:10.15625/2615-9023/20802", "doi:10.15625/2615-9023/22493", "doi:10.15625/2615-9023/22798", "doi:10.15625/2615-9023/22680", "doi:10.15625/2615-9023/22947", "doi:10.15625/2615-9023/22414", "doi:10.15625/2615-9023/22662", "doi:10.15625/2615-9023/22978"]}], "note": "All four issue pages were read. The article section entries are enumerated as unique DOI paper keys; 52 eligible article records across the 2025 archive."},
-        {"year": 2026, "papers": 41, "issues": 3, "coverage": "complete", "asOf": "2026-10-21", "periodKind": "ytd", "sourceUrls": ["https://vjs.ac.vn/vjbio/issue/archive", "https://vjs.ac.vn/vjbio/issue/view/1413", "https://vjs.ac.vn/vjbio/issue/view/1412", "https://vjs.ac.vn/vjbio/issue/view/1411"], "issueItems": [{"id": "vol48n1", "title": "Vol. 48 No. 1 (2026)", "published": "2026-03-25", "url": "https://vjs.ac.vn/vjbio/issue/view/1411", "paperKeys": ["doi:10.15625/2615-9023/23236", "doi:10.15625/2615-9023/23026", "doi:10.15625/2615-9023/23224", "doi:10.15625/2615-9023/22417", "doi:10.15625/2615-9023/23050", "doi:10.15625/2615-9023/21739", "doi:10.15625/2615-9023/23033", "doi:10.15625/2615-9023/22919", "doi:10.15625/2615-9023/21339", "doi:10.15625/2615-9023/23298", "doi:10.15625/2615-9023/24262", "doi:10.15625/2615-9023/23526", "doi:10.15625/2615-9023/23267"]}, {"id": "vol48n2", "title": "Vol. 48 No. 2 (2026)", "published": "2026-06-17", "url": "https://vjs.ac.vn/vjbio/issue/view/1412", "paperKeys": ["doi:10.15625/2615-9023/23951", "doi:10.15625/2615-9023/23849", "doi:10.15625/2615-9023/23637", "doi:10.15625/2615-9023/23670", "doi:10.15625/2615-9023/22899", "doi:10.15625/2615-9023/23491", "doi:10.15625/2615-9023/23056", "doi:10.15625/2615-9023/22547", "doi:10.15625/2615-9023/23405", "doi:10.15625/2615-9023/24318", "doi:10.15625/2615-9023/23521", "doi:10.15625/2615-9023/22380", "doi:10.15625/2615-9023/23321", "doi:10.15625/2615-9023/23329"]}, {"id": "vol48n3", "title": "Vol. 48 No. 3 (2026)", "published": "2026-09-23", "url": "https://vjs.ac.vn/vjbio/issue/view/1413", "paperKeys": ["doi:10.15625/2615-9023/24342", "doi:10.15625/2615-9023/22586", "doi:10.15625/2615-9023/21560", "doi:10.15625/2615-9023/22598", "doi:10.15625/2615-9023/9311", "doi:10.15625/2615-9023/23323", "doi:10.15625/2615-9023/23339", "doi:10.15625/2615-9023/23295", "doi:10.15625/2615-9023/23883", "doi:10.15625/2615-9023/24511", "doi:10.15625/2615-9023/23857", "doi:10.15625/2615-9023/23528", "doi:10.15625/2615-9023/24395", "doi:10.15625/2615-9023/24288"]}], "note": "All three 2026 issue pages were read and the 41 listed article records enumerated by DOI. Window is through 2026-09-23, not a full-year total."}
+        {
+          "year": 2020,
+          "papers": 51,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjbio/issue/archive",
+            "https://vjs.ac.vn/vjbio/issue/view/1159",
+            "https://vjs.ac.vn/vjbio/issue/view/1160",
+            "https://vjs.ac.vn/vjbio/issue/view/1184",
+            "https://vjs.ac.vn/vjbio/issue/view/1185"
+          ],
+          "issueItems": [
+            {
+              "id": "vol42n1",
+              "title": "Vol. 42 No. 1 (2020)",
+              "published": "2020-03-18",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1159",
+              "paperKeys": [
+                "doi:10.15625/0866-7160/v42n1.14435",
+                "doi:10.15625/0866-7160/v42n1.13906",
+                "doi:10.15625/0866-7160/v42n1.13833",
+                "doi:10.15625/0866-7160/v42n1.14418",
+                "doi:10.15625/0866-7160/v42n1.13839",
+                "doi:10.15625/0866-7160/v42n1.14504",
+                "doi:10.15625/0866-7160/v42n1.14762",
+                "doi:10.15625/0866-7160/v42n1.14455",
+                "doi:10.15625/0866-7160/v42n1.14508",
+                "doi:10.15625/0866-7160/v42n1.14737",
+                "doi:10.15625/0866-7160/v42n1.14677",
+                "doi:10.15625/0866-7160/v42n1.13790",
+                "doi:10.15625/0866-7160/v42n1.14863"
+              ]
+            },
+            {
+              "id": "vol42n2",
+              "title": "Vol. 42 No. 2 (2020)",
+              "published": "2020-06-10",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1160",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/v42n2.14819",
+                "doi:10.15625/2615-9023/v42n2.14716",
+                "doi:10.15625/2615-9023/v42n2.14846",
+                "doi:10.15625/2615-9023/v42n2.14782",
+                "doi:10.15625/2615-9023/v42n2.14668",
+                "url:https://vjs.ac.vn/vjbio/article/view/13864",
+                "doi:10.15625/2615-9023/v42n2.14985",
+                "doi:10.15625/2615-9023/v42n2.14830",
+                "doi:10.15625/2615-9023/v42n2.14898",
+                "doi:10.15625/2615-9023/v42n2.14913",
+                "doi:10.15625/2615-9023/v42n2.15006",
+                "doi:10.15625/2615-9023/v42n2.14859",
+                "doi:10.15625/2615-9023/v42n2.14992"
+              ]
+            },
+            {
+              "id": "vol42n3",
+              "title": "Vol. 42 No. 3 (2020)",
+              "published": "2020-08-26",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1184",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/v42n3.13747",
+                "doi:10.15625/2615-9023/v42n3.14847",
+                "doi:10.15625/2615-9023/v42n3.14546",
+                "doi:10.15625/2615-9023/v42n3.15036",
+                "doi:10.15625/2615-9023/v42n3.13900",
+                "doi:10.15625/2615-9023/v42n3.13916",
+                "doi:10.15625/2615-9023/v42n3.14869",
+                "doi:10.15625/2615-9023/v42n3.14781",
+                "doi:10.15625/2615-9023/v42n3.14739",
+                "doi:10.15625/2615-9023/v42n3.14824",
+                "doi:10.15625/2615-9023/v42n3.14883"
+              ]
+            },
+            {
+              "id": "vol42n4",
+              "title": "Vol. 42 No. 4 (2020)",
+              "published": "2020-10-01",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1185",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/v42n4.15310",
+                "doi:10.15625/2615-9023/v42n4.15354",
+                "doi:10.15625/2615-9023/v42n4.15124",
+                "doi:10.15625/2615-9023/v42n4.15244",
+                "doi:10.15625/2615-9023/v42n4.15122",
+                "doi:10.15625/2615-9023/v42n4.14990",
+                "doi:10.15625/2615-9023/v42n4.15339",
+                "doi:10.15625/2615-9023/v42n4.14978",
+                "doi:10.15625/2615-9023/v42n4.15068",
+                "doi:10.15625/2615-9023/v42n4.14613",
+                "doi:10.15625/2615-9023/v42n4.15095",
+                "doi:10.15625/2615-9023/v42n4.15170",
+                "doi:10.15625/2615-9023/v42n4.14919",
+                "doi:10.15625/2615-9023/v42n4.14932"
+              ]
+            }
+          ],
+          "note": "2020 complete: 4 issues, 51 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2021,
+          "papers": 53,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjbio/issue/archive",
+            "https://vjs.ac.vn/vjbio/issue/view/1217",
+            "https://vjs.ac.vn/vjbio/issue/view/1229",
+            "https://vjs.ac.vn/vjbio/issue/view/1242",
+            "https://vjs.ac.vn/vjbio/issue/view/1251"
+          ],
+          "issueItems": [
+            {
+              "id": "vol43n1",
+              "title": "Vol. 43 No. 1 (2021)",
+              "published": "2021-03-29",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1217",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/15616",
+                "doi:10.15625/2615-9023/15559",
+                "doi:10.15625/2615-9023/15716",
+                "doi:10.15625/2615-9023/15404",
+                "doi:10.15625/2615-9023/15295",
+                "doi:10.15625/2615-9023/14450",
+                "doi:10.15625/2615-9023/15457",
+                "doi:10.15625/2615-9023/15686",
+                "doi:10.15625/2615-9023/13973",
+                "doi:10.15625/2615-9023/14923",
+                "doi:10.15625/2615-9023/15798",
+                "doi:10.15625/2615-9023/15829",
+                "doi:10.15625/2615-9023/15551",
+                "doi:10.15625/2615-9023/v43n1.15711"
+              ]
+            },
+            {
+              "id": "vol43n2",
+              "title": "Vol. 43 No. 2 (2021)",
+              "published": "2021-06-28",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1229",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/15920",
+                "doi:10.15625/2615-9023/15727",
+                "doi:10.15625/2615-9023/15870",
+                "doi:10.15625/2615-9023/15634",
+                "doi:10.15625/2615-9023/15761",
+                "doi:10.15625/2615-9023/16006",
+                "doi:10.15625/2615-9023/16018",
+                "doi:10.15625/2615-9023/15741",
+                "doi:10.15625/2615-9023/15814",
+                "doi:10.15625/2615-9023/15846",
+                "doi:10.15625/2615-9023/15906",
+                "doi:10.15625/2615-9023/14669",
+                "doi:10.15625/2615-9023/15303",
+                "doi:10.15625/2615-9023/15693"
+              ]
+            },
+            {
+              "id": "vol43n3",
+              "title": "Vol. 43 No. 3 (2021)",
+              "published": "2021-09-30",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1242",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/15888",
+                "doi:10.15625/2615-9023/15950",
+                "doi:10.15625/2615-9023/15915",
+                "doi:10.15625/2615-9023/15820",
+                "doi:10.15625/2615-9023/15360",
+                "doi:10.15625/2615-9023/15763",
+                "doi:10.15625/2615-9023/15836",
+                "doi:10.15625/2615-9023/15908",
+                "doi:10.15625/2615-9023/16146",
+                "doi:10.15625/2615-9023/16161",
+                "doi:10.15625/2615-9023/14941",
+                "doi:10.15625/2615-9023/15595",
+                "doi:10.15625/2615-9023/16143"
+              ]
+            },
+            {
+              "id": "vol43n4",
+              "title": "Vol. 43 No. 4 (2021)",
+              "published": "2021-12-30",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1251",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/16509",
+                "doi:10.15625/2615-9023/16301",
+                "doi:10.15625/2615-9023/16320",
+                "doi:10.15625/2615-9023/16153",
+                "doi:10.15625/2615-9023/16352",
+                "doi:10.15625/2615-9023/16351",
+                "doi:10.15625/2615-9023/15946",
+                "doi:10.15625/2615-9023/16062",
+                "doi:10.15625/2615-9023/16356",
+                "doi:10.15625/2615-9023/15864",
+                "doi:10.15625/2615-9023/16280",
+                "doi:10.15625/2615-9023/16624"
+              ]
+            }
+          ],
+          "note": "2021 complete: 4 issues, 53 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2022,
+          "papers": 55,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjbio/issue/archive",
+            "https://vjs.ac.vn/vjbio/issue/view/1263",
+            "https://vjs.ac.vn/vjbio/issue/view/1275",
+            "https://vjs.ac.vn/vjbio/issue/view/1285",
+            "https://vjs.ac.vn/vjbio/issue/view/1298"
+          ],
+          "issueItems": [
+            {
+              "id": "vol44n1",
+              "title": "Vol. 44 No. 1 (2022)",
+              "published": "2022-03-30",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1263",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/16646",
+                "doi:10.15625/2615-9023/16208",
+                "doi:10.15625/2615-9023/16757",
+                "doi:10.15625/2615-9023/16742",
+                "doi:10.15625/2615-9023/16319",
+                "doi:10.15625/2615-9023/16305",
+                "doi:10.15625/2615-9023/16120",
+                "doi:10.15625/2615-9023/16628",
+                "doi:10.15625/2615-9023/15941",
+                "doi:10.15625/2615-9023/16327",
+                "doi:10.15625/2615-9023/16665",
+                "doi:10.15625/2615-9023/16009",
+                "doi:10.15625/2615-9023/16538",
+                "doi:10.15625/2615-9023/15742",
+                "doi:10.15625/2615-9023/16207"
+              ]
+            },
+            {
+              "id": "vol44n2",
+              "title": "Vol. 44 No. 2 (2022)",
+              "published": "2022-06-23",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1275",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/16952",
+                "doi:10.15625/2615-9023/16668",
+                "doi:10.15625/2615-9023/17115",
+                "doi:10.15625/2615-9023/17099",
+                "doi:10.15625/2615-9023/16202",
+                "doi:10.15625/2615-9023/16546",
+                "doi:10.15625/2615-9023/16550",
+                "doi:10.15625/2615-9023/16820",
+                "doi:10.15625/2615-9023/16769",
+                "doi:10.15625/2615-9023/17136",
+                "doi:10.15625/2615-9023/15101",
+                "doi:10.15625/2615-9023/16836",
+                "doi:10.15625/2615-9023/16690",
+                "doi:10.15625/2615-9023/16833"
+              ]
+            },
+            {
+              "id": "vol44n3",
+              "title": "Vol. 44 No. 3 (2022)",
+              "published": "2022-09-28",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1285",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/16935",
+                "doi:10.15625/2615-9023/16983",
+                "doi:10.15625/2615-9023/16648",
+                "doi:10.15625/2615-9023/16887",
+                "doi:10.15625/2615-9023/17087",
+                "doi:10.15625/2615-9023/16759",
+                "doi:10.15625/2615-9023/16953",
+                "doi:10.15625/2615-9023/17080",
+                "doi:10.15625/2615-9023/17492",
+                "doi:10.15625/2615-9023/16548",
+                "doi:10.15625/2615-9023/17102",
+                "doi:10.15625/2615-9023/17222",
+                "doi:10.15625/2615-9023/17079",
+                "doi:10.15625/2615-9023/17066"
+              ]
+            },
+            {
+              "id": "vol44n4",
+              "title": "Vol. 44 No. 4 (2022)",
+              "published": "2022-12-29",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1298",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/17499",
+                "doi:10.15625/2615-9023/17594",
+                "doi:10.15625/2615-9023/17487",
+                "doi:10.15625/2615-9023/17512",
+                "doi:10.15625/2615-9023/17184",
+                "doi:10.15625/2615-9023/17577",
+                "doi:10.15625/2615-9023/17534",
+                "doi:10.15625/2615-9023/17621",
+                "doi:10.15625/2615-9023/17209",
+                "doi:10.15625/2615-9023/17470",
+                "doi:10.15625/2615-9023/17544",
+                "doi:10.15625/2615-9023/17433"
+              ]
+            }
+          ],
+          "note": "2022 complete: 4 issues, 55 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2023,
+          "papers": 47,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjbio/issue/archive",
+            "https://vjs.ac.vn/vjbio/issue/view/1306",
+            "https://vjs.ac.vn/vjbio/issue/view/1321",
+            "https://vjs.ac.vn/vjbio/issue/view/1330",
+            "https://vjs.ac.vn/vjbio/issue/view/739"
+          ],
+          "issueItems": [
+            {
+              "id": "vol45n1",
+              "title": "Vol. 45 No. 1 (2023)",
+              "published": "2023-03-30",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1306",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/17562",
+                "doi:10.15625/2615-9023/17596",
+                "doi:10.15625/2615-9023/17607",
+                "doi:10.15625/2615-9023/17614",
+                "doi:10.15625/2615-9023/17902",
+                "doi:10.15625/2615-9023/17706",
+                "doi:10.15625/2615-9023/17940",
+                "doi:10.15625/2615-9023/18002",
+                "doi:10.15625/2615-9023/17555",
+                "doi:10.15625/2615-9023/18127",
+                "doi:10.15625/2615-9023/17617",
+                "doi:10.15625/2615-9023/17521"
+              ]
+            },
+            {
+              "id": "vol45n2",
+              "title": "Vol. 45 No. 2 (2023)",
+              "published": "2023-06-30",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1321",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/17556",
+                "doi:10.15625/2615-9023/18123",
+                "doi:10.15625/2615-9023/18193",
+                "doi:10.15625/2615-9023/18027",
+                "doi:10.15625/2615-9023/18118",
+                "doi:10.15625/2615-9023/17155",
+                "doi:10.15625/2615-9023/18054",
+                "doi:10.15625/2615-9023/17557",
+                "doi:10.15625/2615-9023/18300",
+                "doi:10.15625/2615-9023/18142",
+                "doi:10.15625/2615-9023/18359",
+                "doi:10.15625/2615-9023/18228"
+              ]
+            },
+            {
+              "id": "vol45n3",
+              "title": "Vol. 45 No. 3 (2023)",
+              "published": "2023-09-29",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1330",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/18360",
+                "doi:10.15625/2615-9023/18231",
+                "doi:10.15625/2615-9023/18295",
+                "doi:10.15625/2615-9023/18681",
+                "doi:10.15625/2615-9023/18095",
+                "doi:10.15625/2615-9023/18301",
+                "doi:10.15625/2615-9023/18041",
+                "doi:10.15625/2615-9023/18594",
+                "doi:10.15625/2615-9023/18156",
+                "doi:10.15625/2615-9023/18230",
+                "doi:10.15625/2615-9023/18621",
+                "doi:10.15625/2615-9023/18612",
+                "doi:10.15625/2615-9023/18600"
+              ]
+            },
+            {
+              "id": "vol45n4",
+              "title": "Vol. 45 No. 4 (2023)",
+              "published": "2023-12-28",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/739",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/19228",
+                "doi:10.15625/2615-9023/18712",
+                "doi:10.15625/2615-9023/18647",
+                "doi:10.15625/2615-9023/18664",
+                "doi:10.15625/2615-9023/18488",
+                "doi:10.15625/2615-9023/18777",
+                "doi:10.15625/2615-9023/18944",
+                "doi:10.15625/2615-9023/18765",
+                "doi:10.15625/2615-9023/18913",
+                "doi:10.15625/2615-9023/19053"
+              ]
+            }
+          ],
+          "note": "2023 complete: 4 issues, 47 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2024,
+          "papers": 49,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjbio/issue/archive",
+            "https://vjs.ac.vn/vjbio/issue/view/1337",
+            "https://vjs.ac.vn/vjbio/issue/view/1338",
+            "https://vjs.ac.vn/vjbio/issue/view/1339",
+            "https://vjs.ac.vn/vjbio/issue/view/1340"
+          ],
+          "issueItems": [
+            {
+              "id": "vol46n1",
+              "title": "Vol. 46 No. 1 (2024)",
+              "published": "2024-03-29",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1337",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/19103",
+                "doi:10.15625/2615-9023/17945",
+                "doi:10.15625/2615-9023/19265",
+                "doi:10.15625/2615-9023/19255",
+                "doi:10.15625/2615-9023/18999",
+                "doi:10.15625/2615-9023/18899",
+                "doi:10.15625/2615-9023/19064",
+                "doi:10.15625/2615-9023/18907",
+                "doi:10.15625/2615-9023/19453",
+                "doi:10.15625/2615-9023/19721",
+                "doi:10.15625/2615-9023/20181",
+                "doi:10.15625/2615-9023/18908"
+              ]
+            },
+            {
+              "id": "vol46n2",
+              "title": "Vol. 46 No. 2 (2024)",
+              "published": "2024-06-23",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1338",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/19870",
+                "doi:10.15625/2615-9023/20583",
+                "doi:10.15625/2615-9023/20534",
+                "doi:10.15625/2615-9023/19995",
+                "doi:10.15625/2615-9023/19644",
+                "doi:10.15625/2615-9023/19316",
+                "doi:10.15625/2615-9023/20165",
+                "doi:10.15625/2615-9023/18984",
+                "doi:10.15625/2615-9023/20070",
+                "doi:10.15625/2615-9023/20446",
+                "doi:10.15625/2615-9023/20535",
+                "doi:10.15625/2615-9023/20547",
+                "doi:10.15625/2615-9023/20722"
+              ]
+            },
+            {
+              "id": "vol46n3",
+              "title": "Vol. 46 No. 3 (2024)",
+              "published": "2024-09-27",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1339",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/20322",
+                "doi:10.15625/2615-9023/20228",
+                "doi:10.15625/2615-9023/20976",
+                "doi:10.15625/2615-9023/20624",
+                "doi:10.15625/2615-9023/18604",
+                "doi:10.15625/2615-9023/21146",
+                "doi:10.15625/2615-9023/20212",
+                "doi:10.15625/2615-9023/20404",
+                "doi:10.15625/2615-9023/19149",
+                "doi:10.15625/2615-9023/20923",
+                "doi:10.15625/2615-9023/21197",
+                "doi:10.15625/2615-9023/20915",
+                "doi:10.15625/2615-9023/21260"
+              ]
+            },
+            {
+              "id": "vol46n4",
+              "title": "Vol. 46 No. 4 (2024)",
+              "published": "2024-12-27",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1340",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/20866",
+                "doi:10.15625/2615-9023/20200",
+                "doi:10.15625/2615-9023/21117",
+                "doi:10.15625/2615-9023/21074",
+                "doi:10.15625/2615-9023/21150",
+                "doi:10.15625/2615-9023/21119",
+                "doi:10.15625/2615-9023/21070",
+                "doi:10.15625/2615-9023/20779",
+                "doi:10.15625/2615-9023/20476",
+                "doi:10.15625/2615-9023/21574",
+                "doi:10.15625/2615-9023/21763"
+              ]
+            }
+          ],
+          "note": "2024 complete: 4 issues, 49 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2025,
+          "papers": 52,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/vjbio/issue/archive",
+            "https://vjs.ac.vn/vjbio/issue/view/1396",
+            "https://vjs.ac.vn/vjbio/issue/view/1395",
+            "https://vjs.ac.vn/vjbio/issue/view/1378",
+            "https://vjs.ac.vn/vjbio/issue/view/1377"
+          ],
+          "issueItems": [
+            {
+              "id": "vol47n1",
+              "title": "Vol. 47 No. 1 (2025)",
+              "published": "2025-03-28",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1377",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/21690",
+                "doi:10.15625/2615-9023/21657",
+                "doi:10.15625/2615-9023/20517",
+                "doi:10.15625/2615-9023/22384",
+                "doi:10.15625/2615-9023/21459",
+                "doi:10.15625/2615-9023/21635",
+                "doi:10.15625/2615-9023/20952",
+                "doi:10.15625/2615-9023/20121",
+                "doi:10.15625/2615-9023/21232",
+                "doi:10.15625/2615-9023/21433",
+                "doi:10.15625/2615-9023/21153",
+                "doi:10.15625/2615-9023/21328"
+              ]
+            },
+            {
+              "id": "vol47n2",
+              "title": "Vol. 47 No. 2 (2025)",
+              "published": "2025-06-24",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1378",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/22083",
+                "doi:10.15625/2615-9023/22551",
+                "doi:10.15625/2615-9023/21702",
+                "doi:10.15625/2615-9023/22372",
+                "doi:10.15625/2615-9023/22401",
+                "doi:10.15625/2615-9023/21776",
+                "doi:10.15625/2615-9023/21558",
+                "doi:10.15625/2615-9023/22482",
+                "doi:10.15625/2615-9023/20512",
+                "doi:10.15625/2615-9023/22761",
+                "doi:10.15625/2615-9023/22816",
+                "doi:10.15625/2615-9023/20939",
+                "doi:10.15625/2615-9023/22003",
+                "doi:10.15625/2615-9023/21734"
+              ]
+            },
+            {
+              "id": "vol47n3",
+              "title": "Vol. 47 No. 3 (2025)",
+              "published": "2025-09-26",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1395",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/21386",
+                "doi:10.15625/2615-9023/22573",
+                "doi:10.15625/2615-9023/21771",
+                "doi:10.15625/2615-9023/21287",
+                "doi:10.15625/2615-9023/21422",
+                "doi:10.15625/2615-9023/21479",
+                "doi:10.15625/2615-9023/22925",
+                "doi:10.15625/2615-9023/22600",
+                "doi:10.15625/2615-9023/21799",
+                "doi:10.15625/2615-9023/22091",
+                "doi:10.15625/2615-9023/21729",
+                "doi:10.15625/2615-9023/21663",
+                "doi:10.15625/2615-9023/21897"
+              ]
+            },
+            {
+              "id": "vol47n4",
+              "title": "Vol. 47 No. 4 (2025)",
+              "published": "2025-12-25",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1396",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/23104",
+                "doi:10.15625/2615-9023/22468",
+                "doi:10.15625/2615-9023/21414",
+                "doi:10.15625/2615-9023/22912",
+                "doi:10.15625/2615-9023/22836",
+                "doi:10.15625/2615-9023/20802",
+                "doi:10.15625/2615-9023/22493",
+                "doi:10.15625/2615-9023/22798",
+                "doi:10.15625/2615-9023/22680",
+                "doi:10.15625/2615-9023/22947",
+                "doi:10.15625/2615-9023/22414",
+                "doi:10.15625/2615-9023/22662",
+                "doi:10.15625/2615-9023/22978"
+              ]
+            }
+          ],
+          "note": "All four issue pages were read. The article section entries are enumerated as unique DOI paper keys; 52 eligible article records across the 2025 archive."
+        },
+        {
+          "year": 2026,
+          "papers": 41,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/vjbio/issue/archive",
+            "https://vjs.ac.vn/vjbio/issue/view/1413",
+            "https://vjs.ac.vn/vjbio/issue/view/1412",
+            "https://vjs.ac.vn/vjbio/issue/view/1411"
+          ],
+          "issueItems": [
+            {
+              "id": "vol48n1",
+              "title": "Vol. 48 No. 1 (2026)",
+              "published": "2026-03-25",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1411",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/23236",
+                "doi:10.15625/2615-9023/23026",
+                "doi:10.15625/2615-9023/23224",
+                "doi:10.15625/2615-9023/22417",
+                "doi:10.15625/2615-9023/23050",
+                "doi:10.15625/2615-9023/21739",
+                "doi:10.15625/2615-9023/23033",
+                "doi:10.15625/2615-9023/22919",
+                "doi:10.15625/2615-9023/21339",
+                "doi:10.15625/2615-9023/23298",
+                "doi:10.15625/2615-9023/24262",
+                "doi:10.15625/2615-9023/23526",
+                "doi:10.15625/2615-9023/23267"
+              ]
+            },
+            {
+              "id": "vol48n2",
+              "title": "Vol. 48 No. 2 (2026)",
+              "published": "2026-06-17",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1412",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/23951",
+                "doi:10.15625/2615-9023/23849",
+                "doi:10.15625/2615-9023/23637",
+                "doi:10.15625/2615-9023/23670",
+                "doi:10.15625/2615-9023/22899",
+                "doi:10.15625/2615-9023/23491",
+                "doi:10.15625/2615-9023/23056",
+                "doi:10.15625/2615-9023/22547",
+                "doi:10.15625/2615-9023/23405",
+                "doi:10.15625/2615-9023/24318",
+                "doi:10.15625/2615-9023/23521",
+                "doi:10.15625/2615-9023/22380",
+                "doi:10.15625/2615-9023/23321",
+                "doi:10.15625/2615-9023/23329"
+              ]
+            },
+            {
+              "id": "vol48n3",
+              "title": "Vol. 48 No. 3 (2026)",
+              "published": "2026-09-23",
+              "url": "https://vjs.ac.vn/vjbio/issue/view/1413",
+              "paperKeys": [
+                "doi:10.15625/2615-9023/24342",
+                "doi:10.15625/2615-9023/22586",
+                "doi:10.15625/2615-9023/21560",
+                "doi:10.15625/2615-9023/22598",
+                "doi:10.15625/2615-9023/9311",
+                "doi:10.15625/2615-9023/23323",
+                "doi:10.15625/2615-9023/23339",
+                "doi:10.15625/2615-9023/23295",
+                "doi:10.15625/2615-9023/23883",
+                "doi:10.15625/2615-9023/24511",
+                "doi:10.15625/2615-9023/23857",
+                "doi:10.15625/2615-9023/23528",
+                "doi:10.15625/2615-9023/24395",
+                "doi:10.15625/2615-9023/24288"
+              ]
+            }
+          ],
+          "note": "All three 2026 issue pages were read and the 41 listed article records enumerated by DOI. Window is through 2026-09-23, not a full-year total."
+        }
       ]
     },
     {
@@ -36,16 +763,546 @@
       "issn": "1813-9663",
       "eissn": null,
       "formerTitles": [],
-      "frequency": {"issuesPerYear": 4, "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/journal-of-computer-sciences-and-cybernetics-tap-chi-tin-hoc-va-%C4%91ieu-khien-hoc--20047-438.html"},
-      "profileSources": ["https://vjs.ac.vn/index.php/jcc", "https://vjs.ac.vn/jcc/issue/archive", "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/journal-of-computer-sciences-and-cybernetics-tap-chi-tin-hoc-va-%C4%91ieu-khien-hoc--20047-438.html"],
-      "indexings": [
-        {"system": "Scopus", "collection": null, "status": "unverified", "evidenceLevel": "journal", "sourceUrl": "https://vjs.ac.vn/index.php/jcc", "checkedAt": "2026-10-21", "coverage": null},
-        {"system": "WoS", "collection": null, "status": "unverified", "evidenceLevel": "journal", "sourceUrl": "https://vjs.ac.vn/index.php/jcc", "checkedAt": "2026-10-21", "coverage": null}
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/journal-of-computer-sciences-and-cybernetics-tap-chi-tin-hoc-va-%C4%91ieu-khien-hoc--20047-438.html"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/jcc",
+        "https://vjs.ac.vn/jcc/issue/archive",
+        "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/journal-of-computer-sciences-and-cybernetics-tap-chi-tin-hoc-va-%C4%91ieu-khien-hoc--20047-438.html"
       ],
-      "latestIssue": {"title": "Vol. 42 No. 3 (2026)", "published": "2026-06-24", "url": "https://vjs.ac.vn/jcc/issue/view/1430"},
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jcc",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "WoS",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jcc",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 42 No. 3 (2026)",
+        "published": "2026-06-24",
+        "url": "https://vjs.ac.vn/jcc/issue/view/1430"
+      },
       "outputs": [
-        {"year": 2025, "papers": 25, "issues": 4, "coverage": "complete", "asOf": "2026-10-21", "periodKind": "annual", "sourceUrls": ["https://vjs.ac.vn/jcc/issue/archive", "https://vjs.ac.vn/jcc/issue/view/1404", "https://vjs.ac.vn/jcc/issue/view/1391", "https://vjs.ac.vn/jcc/issue/view/1387", "https://vjs.ac.vn/jcc/issue/view/1381"], "issueItems": [{"id": "vol41n1", "title": "Vol. 41 No. 1 (2025)", "published": "2025-03-28", "url": "https://vjs.ac.vn/jcc/issue/view/1381", "paperKeys": ["doi:10.15625/1813-9663/21668", "doi:10.15625/1813-9663/21653", "doi:10.15625/1813-9663/21637", "doi:10.15625/1813-9663/21613", "doi:10.15625/1813-9663/21537", "doi:10.15625/1813-9663/20607", "doi:10.15625/1813-9663/22140"]}, {"id": "vol41n2", "title": "Vol. 41 No. 2 (2025)", "published": "2025-06-28", "url": "https://vjs.ac.vn/jcc/issue/view/1391", "paperKeys": ["doi:10.15625/1813-9663/22317", "doi:10.15625/1813-9663/22522", "doi:10.15625/1813-9663/21945", "doi:10.15625/1813-9663/20349", "doi:10.15625/1813-9663/21964", "doi:10.15625/1813-9663/22071"]}, {"id": "vol41n3", "title": "Vol. 41 No. 3 (2025)", "published": "2025-06-06", "url": "https://vjs.ac.vn/jcc/issue/view/1387", "paperKeys": ["doi:10.15625/1813-9663/22487", "doi:10.15625/1813-9663/22770", "doi:10.15625/1813-9663/23018", "doi:10.15625/1813-9663/21055", "doi:10.15625/1813-9663/20618", "doi:10.15625/1813-9663/20525"]}, {"id": "vol41n4", "title": "Vol. 41 No. 4 (2025)", "published": "2025-11-07", "url": "https://vjs.ac.vn/jcc/issue/view/1404", "paperKeys": ["doi:10.15625/1813-9663/22005", "doi:10.15625/1813-9663/22535", "doi:10.15625/1813-9663/23150", "doi:10.15625/1813-9663/22884", "doi:10.15625/1813-9663/23278", "doi:10.15625/1813-9663/21772"]}], "note": "All four 2025 issue pages were read. Each page lists six or seven Articles entries, represented by DOI paper keys; total is 25 unique papers."},
-        {"year": 2026, "papers": 18, "issues": 3, "coverage": "complete", "asOf": "2026-10-21", "periodKind": "ytd", "sourceUrls": ["https://vjs.ac.vn/jcc/issue/archive", "https://vjs.ac.vn/jcc/issue/view/1430", "https://vjs.ac.vn/jcc/issue/view/1426", "https://vjs.ac.vn/jcc/issue/view/1417"], "issueItems": [{"id": "vol42n1", "title": "Vol. 42 No. 1 (2026)", "published": "2026-02-28", "url": "https://vjs.ac.vn/jcc/issue/view/1417", "paperKeys": ["doi:10.15625/1813-9663/23021", "doi:10.15625/1813-9663/22518", "doi:10.15625/1813-9663/22392", "doi:10.15625/1813-9663/23095", "doi:10.15625/1813-9663/23407", "doi:10.15625/1813-9663/23414"]}, {"id": "vol42n2", "title": "Vol. 42 No. 2 (2026)", "published": "2026-05-07", "url": "https://vjs.ac.vn/jcc/issue/view/1426", "paperKeys": ["doi:10.15625/1813-9663/23647", "doi:10.15625/1813-9663/21114", "doi:10.15625/1813-9663/24322", "doi:10.15625/1813-9663/21899", "doi:10.15625/1813-9663/22428", "doi:10.15625/1813-9663/24199"]}, {"id": "vol42n3", "title": "Vol. 42 No. 3 (2026)", "published": "2026-06-24", "url": "https://vjs.ac.vn/jcc/issue/view/1430", "paperKeys": ["doi:10.15625/1813-9663/23599", "doi:10.15625/1813-9663/24229", "doi:10.15625/1813-9663/23101", "doi:10.15625/1813-9663/24220", "doi:10.15625/1813-9663/24272", "doi:10.15625/1813-9663/22832"]}], "note": "All three 2026 issue pages were read; six Articles entries per page yield 18 unique DOI paper keys. This is publication through 2026-06-24, not a full-year output."}
+        {
+          "year": 2020,
+          "papers": 23,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jcc/issue/archive",
+            "https://vjs.ac.vn/jcc/issue/view/1141",
+            "https://vjs.ac.vn/jcc/issue/view/1170",
+            "https://vjs.ac.vn/jcc/issue/view/1186",
+            "https://vjs.ac.vn/jcc/issue/view/1209"
+          ],
+          "issueItems": [
+            {
+              "id": "vol36n1",
+              "title": "Vol. 36 No. 1 (2020)",
+              "published": "2020-02-27",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1141",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/36/1/14398",
+                "doi:10.15625/1813-9663/36/1/13188",
+                "doi:10.15625/1813-9663/36/1/14368",
+                "doi:10.15625/1813-9663/36/1/14347",
+                "doi:10.15625/1813-9663/36/1/13749",
+                "doi:10.15625/1813-9663/36/1/14557"
+              ]
+            },
+            {
+              "id": "vol36n2",
+              "title": "Vol. 36 No. 2 (2020)",
+              "published": "2020-05-11",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1170",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/36/2/14353",
+                "doi:10.15625/1813-9663/36/2/14396",
+                "doi:10.15625/1813-9663/36/2/14084",
+                "doi:10.15625/1813-9663/36/2/14578",
+                "doi:10.15625/1813-9663/36/2/14786",
+                "doi:10.15625/1813-9663/36/2/14807"
+              ]
+            },
+            {
+              "id": "vol36n3",
+              "title": "Vol. 36 No. 3 (2020)",
+              "published": "2020-08-18",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1186",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/36/3/14987",
+                "doi:10.15625/1813-9663/36/3/14770",
+                "doi:10.15625/1813-9663/36/3/13940",
+                "doi:10.15625/1813-9663/36/3/14349",
+                "doi:10.15625/1813-9663/36/3/14968"
+              ]
+            },
+            {
+              "id": "vol36n4",
+              "title": "Vol. 36 No. 4 (2020)",
+              "published": "2020-12-14",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1209",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/36/4/15555",
+                "doi:10.15625/1813-9663/36/4/14829",
+                "doi:10.15625/1813-9663/36/4/14424",
+                "doi:10.15625/1813-9663/36/4/15105",
+                "doi:10.15625/1813-9663/36/4/14650",
+                "doi:10.15625/1813-9663/36/4/15317"
+              ]
+            }
+          ],
+          "note": "2020 complete: 4 issues, 23 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2021,
+          "papers": 28,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jcc/issue/archive",
+            "https://vjs.ac.vn/jcc/issue/view/1215",
+            "https://vjs.ac.vn/jcc/issue/view/1216",
+            "https://vjs.ac.vn/jcc/issue/view/1226",
+            "https://vjs.ac.vn/jcc/issue/view/1246"
+          ],
+          "issueItems": [
+            {
+              "id": "vol37n1",
+              "title": "Vol. 37 No. 1 (2021)",
+              "published": "2021-03-29",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1215",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/37/1/15418",
+                "doi:10.15625/1813-9663/37/1/15852",
+                "doi:10.15625/1813-9663/37/1/15396",
+                "doi:10.15625/1813-9663/37/1/15858",
+                "doi:10.15625/1813-9663/37/1/15773"
+              ]
+            },
+            {
+              "id": "vol37n2",
+              "title": "Vol. 37 No. 2 (2021)",
+              "published": "2021-06-22",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1216",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/37/2/15917",
+                "doi:10.15625/1813-9663/37/2/15889",
+                "doi:10.15625/1813-9663/37/2/15980",
+                "doi:10.15625/1813-9663/37/2/15346",
+                "doi:10.15625/1813-9663/37/2/15340"
+              ]
+            },
+            {
+              "id": "vol37n3",
+              "title": "Vol. 37 No. 3 (2021)",
+              "published": "2021-09-28",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1226",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/37/3/15955",
+                "doi:10.15625/1813-9663/37/3/16253",
+                "doi:10.15625/1813-9663/37/3/16263",
+                "doi:10.15625/1813-9663/37/3/16129",
+                "doi:10.15625/1813-9663/37/3/16106",
+                "doi:10.15625/1813-9663/37/3/15962",
+                "doi:10.15625/1813-9663/37/3/15902",
+                "doi:10.15625/1813-9663/37/3/16245",
+                "doi:10.15625/1813-9663/37/3/16063"
+              ]
+            },
+            {
+              "id": "vol37n4",
+              "title": "Vol. 37 No. 4 (2021)",
+              "published": "2021-10-16",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1246",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/37/4/15937",
+                "doi:10.15625/1813-9663/37/4/16151",
+                "doi:10.15625/1813-9663/37/4/15892",
+                "doi:10.15625/1813-9663/37/4/16104",
+                "doi:10.15625/1813-9663/37/4/16126",
+                "doi:10.15625/1813-9663/37/4/16180",
+                "doi:10.15625/1813-9663/37/4/16023",
+                "doi:10.15625/1813-9663/37/4/15844",
+                "doi:10.15625/1813-9663/37/4/16001"
+              ]
+            }
+          ],
+          "note": "2021 complete: 4 issues, 28 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2022,
+          "papers": 22,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jcc/issue/archive",
+            "https://vjs.ac.vn/jcc/issue/view/1258",
+            "https://vjs.ac.vn/jcc/issue/view/1259",
+            "https://vjs.ac.vn/jcc/issue/view/1289",
+            "https://vjs.ac.vn/jcc/issue/view/1292"
+          ],
+          "issueItems": [
+            {
+              "id": "vol38n1",
+              "title": "Vol. 38 No. 1 (2022)",
+              "published": "2022-03-21",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1258",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/38/1/15992",
+                "doi:10.15625/1813-9663/38/1/16309",
+                "doi:10.15625/1813-9663/38/1/16537",
+                "doi:10.15625/1813-9663/38/1/16720",
+                "doi:10.15625/1813-9663/38/1/15961"
+              ]
+            },
+            {
+              "id": "vol38n2",
+              "title": "Vol. 38 No. 2 (2022)",
+              "published": "2022-06-26",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1259",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/38/2/16125",
+                "doi:10.15625/1813-9663/38/2/16252",
+                "doi:10.15625/1813-9663/38/2/16749",
+                "doi:10.15625/1813-9663/38/2/16880",
+                "doi:10.15625/1813-9663/38/2/16912",
+                "doi:10.15625/1813-9663/38/2/16786"
+              ]
+            },
+            {
+              "id": "vol38n3",
+              "title": "Vol. 38 No. 3 (2022)",
+              "published": "2022-10-16",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1289",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/38/3/17039",
+                "doi:10.15625/1813-9663/38/3/17220",
+                "doi:10.15625/1813-9663/38/3/17094",
+                "doi:10.15625/1813-9663/38/3/17424",
+                "doi:10.15625/1813-9663/38/3/17450"
+              ]
+            },
+            {
+              "id": "vol38n4",
+              "title": "Vol. 38 No. 4 (2022)",
+              "published": "2023-01-13",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1292",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/38/4/17462",
+                "doi:10.15625/1813-9663/38/4/16873",
+                "doi:10.15625/1813-9663/38/4/17548",
+                "doi:10.15625/1813-9663/38/3/17012",
+                "doi:10.15625/1813-9663/38/4/17226",
+                "doi:10.15625/1813-9663/38/4/17592"
+              ]
+            }
+          ],
+          "note": "2022 complete: 4 issues, 22 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2023,
+          "papers": 24,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jcc/issue/archive",
+            "https://vjs.ac.vn/jcc/issue/view/1310",
+            "https://vjs.ac.vn/jcc/issue/view/1311",
+            "https://vjs.ac.vn/jcc/issue/view/1328",
+            "https://vjs.ac.vn/jcc/issue/view/1313"
+          ],
+          "issueItems": [
+            {
+              "id": "vol39n1",
+              "title": "Vol. 39 No. 1 (2023)",
+              "published": "2023-04-13",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1310",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/16675",
+                "doi:10.15625/1813-9663/16629",
+                "doi:10.15625/1813-9663/18028",
+                "doi:10.15625/1813-9663/18081",
+                "doi:10.15625/1813-9663/17641",
+                "doi:10.15625/1813-9663/17591"
+              ]
+            },
+            {
+              "id": "vol39n2",
+              "title": "Vol. 39 No. 2 (2023)",
+              "published": "2023-06-20",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1311",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/17589",
+                "doi:10.15625/1813-9663/18067",
+                "doi:10.15625/1813-9663/18025",
+                "doi:10.15625/1813-9663/18136",
+                "doi:10.15625/1813-9663/18099",
+                "doi:10.15625/1813-9663/18172"
+              ]
+            },
+            {
+              "id": "vol39n3",
+              "title": "Vol. 39 No. 3 (2023)",
+              "published": "2023-09-22",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1328",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/18363",
+                "doi:10.15625/1813-9663/18144",
+                "doi:10.15625/1813-9663/18157",
+                "doi:10.15625/1813-9663/18568",
+                "doi:10.15625/1813-9663/18015",
+                "doi:10.15625/1813-9663/18259"
+              ]
+            },
+            {
+              "id": "vol39n4",
+              "title": "Vol. 39 No. 4 (2023)",
+              "published": "2023-11-21",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1313",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/18680",
+                "doi:10.15625/1813-9663/19018",
+                "doi:10.15625/1813-9663/18043",
+                "doi:10.15625/1813-9663/18236",
+                "doi:10.15625/1813-9663/18122",
+                "doi:10.15625/1813-9663/18833"
+              ]
+            }
+          ],
+          "note": "2023 complete: 4 issues, 24 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2024,
+          "papers": 24,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jcc/issue/archive",
+            "https://vjs.ac.vn/jcc/issue/view/1351",
+            "https://vjs.ac.vn/jcc/issue/view/1312",
+            "https://vjs.ac.vn/jcc/issue/view/1363",
+            "https://vjs.ac.vn/jcc/issue/view/1367"
+          ],
+          "issueItems": [
+            {
+              "id": "vol40n1",
+              "title": "Vol. 40 No. 1 (2024)",
+              "published": "2024-03-29",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1351",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/19218",
+                "doi:10.15625/1813-9663/19160",
+                "doi:10.15625/1813-9663/19696",
+                "doi:10.15625/1813-9663/19324",
+                "doi:10.15625/1813-9663/18248",
+                "doi:10.15625/1813-9663/19102"
+              ]
+            },
+            {
+              "id": "vol40n2",
+              "title": "Vol. 40 No. 2 (2024)",
+              "published": "2024-05-29",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1312",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/20014",
+                "doi:10.15625/1813-9663/18155",
+                "doi:10.15625/1813-9663/18655",
+                "doi:10.15625/1813-9663/20361",
+                "doi:10.15625/1813-9663/19694",
+                "doi:10.15625/1813-9663/18058"
+              ]
+            },
+            {
+              "id": "vol40n3",
+              "title": "Vol. 40 No. 3 (2024)",
+              "published": "2024-08-23",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1363",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/18353",
+                "doi:10.15625/1813-9663/20178",
+                "doi:10.15625/1813-9663/20741",
+                "doi:10.15625/1813-9663/18677",
+                "doi:10.15625/1813-9663/19558",
+                "doi:10.15625/1813-9663/18320"
+              ]
+            },
+            {
+              "id": "vol40n4",
+              "title": "Vol. 40 No. 4 (2024)",
+              "published": "2024-12-09",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1367",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/21095",
+                "doi:10.15625/1813-9663/19626",
+                "doi:10.15625/1813-9663/20929",
+                "doi:10.15625/1813-9663/18291",
+                "doi:10.15625/1813-9663/21185",
+                "doi:10.15625/1813-9663/21174"
+              ]
+            }
+          ],
+          "note": "2024 complete: 4 issues, 24 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2025,
+          "papers": 25,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/jcc/issue/archive",
+            "https://vjs.ac.vn/jcc/issue/view/1404",
+            "https://vjs.ac.vn/jcc/issue/view/1391",
+            "https://vjs.ac.vn/jcc/issue/view/1387",
+            "https://vjs.ac.vn/jcc/issue/view/1381"
+          ],
+          "issueItems": [
+            {
+              "id": "vol41n1",
+              "title": "Vol. 41 No. 1 (2025)",
+              "published": "2025-03-28",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1381",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/21668",
+                "doi:10.15625/1813-9663/21653",
+                "doi:10.15625/1813-9663/21637",
+                "doi:10.15625/1813-9663/21613",
+                "doi:10.15625/1813-9663/21537",
+                "doi:10.15625/1813-9663/20607",
+                "doi:10.15625/1813-9663/22140"
+              ]
+            },
+            {
+              "id": "vol41n2",
+              "title": "Vol. 41 No. 2 (2025)",
+              "published": "2025-06-28",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1391",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/22317",
+                "doi:10.15625/1813-9663/22522",
+                "doi:10.15625/1813-9663/21945",
+                "doi:10.15625/1813-9663/20349",
+                "doi:10.15625/1813-9663/21964",
+                "doi:10.15625/1813-9663/22071"
+              ]
+            },
+            {
+              "id": "vol41n3",
+              "title": "Vol. 41 No. 3 (2025)",
+              "published": "2025-06-06",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1387",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/22487",
+                "doi:10.15625/1813-9663/22770",
+                "doi:10.15625/1813-9663/23018",
+                "doi:10.15625/1813-9663/21055",
+                "doi:10.15625/1813-9663/20618",
+                "doi:10.15625/1813-9663/20525"
+              ]
+            },
+            {
+              "id": "vol41n4",
+              "title": "Vol. 41 No. 4 (2025)",
+              "published": "2025-11-07",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1404",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/22005",
+                "doi:10.15625/1813-9663/22535",
+                "doi:10.15625/1813-9663/23150",
+                "doi:10.15625/1813-9663/22884",
+                "doi:10.15625/1813-9663/23278",
+                "doi:10.15625/1813-9663/21772"
+              ]
+            }
+          ],
+          "note": "All four 2025 issue pages were read. Each page lists six or seven Articles entries, represented by DOI paper keys; total is 25 unique papers."
+        },
+        {
+          "year": 2026,
+          "papers": 18,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/jcc/issue/archive",
+            "https://vjs.ac.vn/jcc/issue/view/1430",
+            "https://vjs.ac.vn/jcc/issue/view/1426",
+            "https://vjs.ac.vn/jcc/issue/view/1417"
+          ],
+          "issueItems": [
+            {
+              "id": "vol42n1",
+              "title": "Vol. 42 No. 1 (2026)",
+              "published": "2026-02-28",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1417",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/23021",
+                "doi:10.15625/1813-9663/22518",
+                "doi:10.15625/1813-9663/22392",
+                "doi:10.15625/1813-9663/23095",
+                "doi:10.15625/1813-9663/23407",
+                "doi:10.15625/1813-9663/23414"
+              ]
+            },
+            {
+              "id": "vol42n2",
+              "title": "Vol. 42 No. 2 (2026)",
+              "published": "2026-05-07",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1426",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/23647",
+                "doi:10.15625/1813-9663/21114",
+                "doi:10.15625/1813-9663/24322",
+                "doi:10.15625/1813-9663/21899",
+                "doi:10.15625/1813-9663/22428",
+                "doi:10.15625/1813-9663/24199"
+              ]
+            },
+            {
+              "id": "vol42n3",
+              "title": "Vol. 42 No. 3 (2026)",
+              "published": "2026-06-24",
+              "url": "https://vjs.ac.vn/jcc/issue/view/1430",
+              "paperKeys": [
+                "doi:10.15625/1813-9663/23599",
+                "doi:10.15625/1813-9663/24229",
+                "doi:10.15625/1813-9663/23101",
+                "doi:10.15625/1813-9663/24220",
+                "doi:10.15625/1813-9663/24272",
+                "doi:10.15625/1813-9663/22832"
+              ]
+            }
+          ],
+          "note": "All three 2026 issue pages were read; six Articles entries per page yield 18 unique DOI paper keys. This is publication through 2026-06-24, not a full-year output."
+        }
       ]
     },
     {
@@ -59,16 +1316,665 @@
       "issn": "1859-3097",
       "eissn": "2815-5904",
       "formerTitles": [],
-      "frequency": {"issuesPerYear": 4, "sourceUrl": "https://vjs.ac.vn/index.php/jmst"},
-      "profileSources": ["https://vjs.ac.vn/index.php/jmst", "https://vjs.ac.vn/jmst/issue/archive"],
-      "indexings": [
-        {"system": "Scopus", "collection": null, "status": "unverified", "evidenceLevel": "journal", "sourceUrl": "https://vjs.ac.vn/index.php/jmst", "checkedAt": "2026-10-21", "coverage": null},
-        {"system": "ACI", "collection": null, "status": "unverified", "evidenceLevel": "journal", "sourceUrl": "https://vjs.ac.vn/index.php/jmst", "checkedAt": "2026-10-21", "coverage": null}
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vjs.ac.vn/index.php/jmst"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/jmst",
+        "https://vjs.ac.vn/jmst/issue/archive"
       ],
-      "latestIssue": {"title": "Vol. 26 No. 3 (2026)", "published": "2026-09-22", "url": "https://vjs.ac.vn/jmst/issue/view/1445"},
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jmst",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/jmst",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 26 No. 3 (2026)",
+        "published": "2026-09-22",
+        "url": "https://vjs.ac.vn/jmst/issue/view/1445"
+      },
       "outputs": [
-        {"year": 2025, "papers": 39, "issues": 4, "coverage": "complete", "asOf": "2026-10-21", "periodKind": "annual", "sourceUrls": ["https://vjs.ac.vn/jmst/issue/archive", "https://vjs.ac.vn/jmst/issue/view/1409", "https://vjs.ac.vn/jmst/issue/view/1403", "https://vjs.ac.vn/jmst/issue/view/1385", "https://vjs.ac.vn/jmst/issue/view/1382"], "issueItems": [{"id": "vol25n1", "title": "Vol. 25 No. 1 (2025)", "published": "2025-03-31", "url": "https://vjs.ac.vn/jmst/issue/view/1382", "paperKeys": ["doi:10.15625/1859-3097/22492", "doi:10.15625/1859-3097/22634", "doi:10.15625/1859-3097/20808", "doi:10.15625/1859-3097/20912", "doi:10.15625/1859-3097/22636", "doi:10.15625/1859-3097/22149", "doi:10.15625/1859-3097/18632", "doi:10.15625/1859-3097/20503", "doi:10.15625/1859-3097/21581", "doi:10.15625/1859-3097/20770"]}, {"id": "vol25n2", "title": "Vol. 25 No. 2 (2025)", "published": "2025-04-17", "url": "https://vjs.ac.vn/jmst/issue/view/1385", "paperKeys": ["doi:10.15625/1859-3097/22728", "doi:10.15625/1859-3097/22729", "doi:10.15625/1859-3097/22730", "doi:10.15625/1859-3097/22731", "doi:10.15625/1859-3097/22732", "doi:10.15625/1859-3097/22733", "doi:10.15625/1859-3097/22734", "doi:10.15625/1859-3097/22735", "doi:10.15625/1859-3097/22736", "doi:10.15625/1859-3097/22737", "doi:10.15625/1859-3097/22739"]}, {"id": "vol25n3", "title": "Vol. 25 No. 3 (2025)", "published": "2025-09-30", "url": "https://vjs.ac.vn/jmst/issue/view/1403", "paperKeys": ["doi:10.15625/1859-3097/21842", "doi:10.15625/1859-3097/23555", "doi:10.15625/1859-3097/23556", "doi:10.15625/1859-3097/22161", "doi:10.15625/1859-3097/23498", "doi:10.15625/1859-3097/21871", "doi:10.15625/1859-3097/21566", "doi:10.15625/1859-3097/20434", "doi:10.15625/1859-3097/23497", "doi:10.15625/1859-3097/21290"]}, {"id": "vol25n4", "title": "Vol. 25 No. 4 (2025)", "published": "2025-12-30", "url": "https://vjs.ac.vn/jmst/issue/view/1409", "paperKeys": ["doi:10.15625/1859-3097/20339", "doi:10.15625/1859-3097/23573", "doi:10.15625/1859-3097/22329", "doi:10.15625/1859-3097/22534", "doi:10.15625/1859-3097/20415", "doi:10.15625/1859-3097/21882", "doi:10.15625/1859-3097/23413", "doi:10.15625/1859-3097/23078"]}], "note": "All four archive issues including the special issue Vol. 25 No. 2 were read and all listed eligible article/review entries enumerated by DOI; total 39 unique paper keys."},
-        {"year": 2026, "papers": 20, "issues": 3, "coverage": "complete", "asOf": "2026-10-21", "periodKind": "ytd", "sourceUrls": ["https://vjs.ac.vn/jmst/issue/archive", "https://vjs.ac.vn/jmst/issue/view/1445", "https://vjs.ac.vn/jmst/issue/view/1431", "https://vjs.ac.vn/jmst/issue/view/1422"], "issueItems": [{"id": "vol26n1", "title": "Vol. 26 No. 1 (2026)", "published": "2026-03-30", "url": "https://vjs.ac.vn/jmst/issue/view/1422", "paperKeys": ["doi:10.15625/1859-3097/22266", "doi:10.15625/1859-3097/23504", "doi:10.15625/1859-3097/21704", "doi:10.15625/1859-3097/23495", "doi:10.15625/1859-3097/20012", "doi:10.15625/1859-3097/22217", "doi:10.15625/1859-3097/23492"]}, {"id": "vol26n2", "title": "Vol. 26 No. 2 (2026)", "published": "2026-06-25", "url": "https://vjs.ac.vn/jmst/issue/view/1431", "paperKeys": ["doi:10.15625/1859-3097/23788", "doi:10.15625/1859-3097/22789", "doi:10.15625/1859-3097/22471", "doi:10.15625/1859-3097/22740", "doi:10.15625/1859-3097/23490", "doi:10.15625/1859-3097/22402"]}, {"id": "vol26n3", "title": "Vol. 26 No. 3 (2026)", "published": "2026-09-22", "url": "https://vjs.ac.vn/jmst/issue/view/1445", "paperKeys": ["doi:10.15625/1859-3097/23988", "doi:10.15625/1859-3097/23098", "doi:10.15625/1859-3097/24029", "doi:10.15625/1859-3097/23221", "doi:10.15625/1859-3097/22152", "doi:10.15625/1859-3097/23910", "doi:10.15625/1859-3097/22691"]}], "note": "All three 2026 archive issues read; 20 DOI-keyed eligible records enumerated through 2026-09-22."}
+        {
+          "year": 2020,
+          "papers": 60,
+          "issues": 5,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jmst/issue/archive",
+            "https://vjs.ac.vn/jmst/issue/view/1171",
+            "https://vjs.ac.vn/jmst/issue/view/1173",
+            "https://vjs.ac.vn/jmst/issue/view/1182",
+            "https://vjs.ac.vn/jmst/issue/view/1211",
+            "https://vjs.ac.vn/jmst/issue/view/1220"
+          ],
+          "issueItems": [
+            {
+              "id": "vol20n1",
+              "title": "Vol. 20 No. 1 (2020)",
+              "published": "2020-03-30",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1171",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/20/1/15038",
+                "doi:10.15625/1859-3097/20/1/15037",
+                "doi:10.15625/1859-3097/20/1/15039",
+                "doi:10.15625/1859-3097/20/1/12668",
+                "doi:10.15625/1859-3097/20/1/12892",
+                "doi:10.15625/1859-3097/20/1/12548",
+                "doi:10.15625/1859-3097/20/1/14023",
+                "doi:10.15625/1859-3097/20/1/13335",
+                "doi:10.15625/1859-3097/20/1/13301",
+                "doi:10.15625/1859-3097/20/1/13553",
+                "doi:10.15625/1859-3097/20/1/13294"
+              ]
+            },
+            {
+              "id": "vol20n2",
+              "title": "Vol. 20 No. 2 (2020)",
+              "published": "2020-05-22",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1173",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/20/2/14173",
+                "doi:10.15625/1859-3097/20/2/14714",
+                "doi:10.15625/1859-3097/20/2/15087",
+                "doi:10.15625/1859-3097/20/2/14071",
+                "doi:10.15625/1859-3097/20/2/13490",
+                "doi:10.15625/1859-3097/20/2/12965",
+                "doi:10.15625/1859-3097/20/2/15089",
+                "doi:10.15625/1859-3097/20/2/15088",
+                "doi:10.15625/1859-3097/20/2/15066"
+              ]
+            },
+            {
+              "id": "vol20n3",
+              "title": "Vol. 20 No. 3 (2020)",
+              "published": "2020-09-30",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1182",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/20/3/12958",
+                "doi:10.15625/1859-3097/20/3/15250",
+                "doi:10.15625/1859-3097/20/3/15247",
+                "doi:10.15625/1859-3097/20/3/15154",
+                "doi:10.15625/1859-3097/20/3/15076",
+                "doi:10.15625/1859-3097/20/3/15002",
+                "doi:10.15625/1859-3097/20/3/15248",
+                "doi:10.15625/1859-3097/20/3/14880",
+                "doi:10.15625/1859-3097/20/3/14789",
+                "doi:10.15625/1859-3097/20/3/15064",
+                "doi:10.15625/1859-3097/20/3/15249"
+              ]
+            },
+            {
+              "id": "vol20n4",
+              "title": "Vol. 20 No. 4 (2020)",
+              "published": "2020-12-29",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1211",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/15785",
+                "doi:10.15625/1859-3097/15316",
+                "doi:10.15625/1859-3097/15775",
+                "doi:10.15625/1859-3097/15137",
+                "doi:10.15625/1859-3097/15307",
+                "doi:10.15625/1859-3097/15786",
+                "doi:10.15625/1859-3097/15787",
+                "doi:10.15625/1859-3097/15725",
+                "doi:10.15625/1859-3097/15788",
+                "doi:10.15625/1859-3097/15789",
+                "doi:10.15625/1859-3097/15790"
+              ]
+            },
+            {
+              "id": "vol20n4a",
+              "title": "Vol. 20 No. 4A (2020)",
+              "published": "2020-11-30",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1220",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/15642",
+                "doi:10.15625/1859-3097/15640",
+                "doi:10.15625/1859-3097/15652",
+                "doi:10.15625/1859-3097/15645",
+                "doi:10.15625/1859-3097/15646",
+                "doi:10.15625/1859-3097/15647",
+                "doi:10.15625/1859-3097/15614",
+                "doi:10.15625/1859-3097/15650",
+                "doi:10.15625/1859-3097/15651",
+                "doi:10.15625/1859-3097/15653",
+                "doi:10.15625/1859-3097/15655",
+                "doi:10.15625/1859-3097/15656",
+                "doi:10.15625/1859-3097/15657",
+                "doi:10.15625/1859-3097/15658",
+                "doi:10.15625/1859-3097/15644",
+                "doi:10.15625/1859-3097/15659",
+                "doi:10.15625/1859-3097/15660",
+                "doi:10.15625/1859-3097/15661"
+              ]
+            }
+          ],
+          "note": "2020 complete: 5 issues, 60 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2021,
+          "papers": 46,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jmst/issue/archive",
+            "https://vjs.ac.vn/jmst/issue/view/1225",
+            "https://vjs.ac.vn/jmst/issue/view/1238",
+            "https://vjs.ac.vn/jmst/issue/view/1239",
+            "https://vjs.ac.vn/jmst/issue/view/1248"
+          ],
+          "issueItems": [
+            {
+              "id": "vol21n1",
+              "title": "Vol. 21 No. 1 (2021)",
+              "published": "2021-03-30",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1225",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/15685",
+                "doi:10.15625/1859-3097/15114",
+                "doi:10.15625/1859-3097/15091",
+                "doi:10.15625/1859-3097/16050",
+                "doi:10.15625/1859-3097/16051",
+                "doi:10.15625/1859-3097/15883",
+                "doi:10.15625/1859-3097/16052",
+                "doi:10.15625/1859-3097/15939",
+                "doi:10.15625/1859-3097/15260"
+              ]
+            },
+            {
+              "id": "vol21n2",
+              "title": "Vol. 21 No. 2 (2021)",
+              "published": "2021-06-30",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1238",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/16407",
+                "doi:10.15625/1859-3097/16408",
+                "doi:10.15625/1859-3097/16401",
+                "doi:10.15625/1859-3097/16402",
+                "doi:10.15625/1859-3097/16409",
+                "doi:10.15625/1859-3097/15735",
+                "doi:10.15625/1859-3097/16404",
+                "doi:10.15625/1859-3097/16405",
+                "doi:10.15625/1859-3097/15063",
+                "doi:10.15625/1859-3097/15078",
+                "doi:10.15625/1859-3097/16243",
+                "doi:10.15625/1859-3097/16406"
+              ]
+            },
+            {
+              "id": "vol21n3",
+              "title": "Vol. 21 No. 3 (2021)",
+              "published": "2021-09-30",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1239",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/15875",
+                "doi:10.15625/1859-3097/16653",
+                "doi:10.15625/1859-3097/16074",
+                "doi:10.15625/1859-3097/16076",
+                "doi:10.15625/1859-3097/15995",
+                "doi:10.15625/1859-3097/16431",
+                "doi:10.15625/1859-3097/15942",
+                "doi:10.15625/1859-3097/16655",
+                "doi:10.15625/1859-3097/15951",
+                "doi:10.15625/1859-3097/16031",
+                "doi:10.15625/1859-3097/16339",
+                "doi:10.15625/1859-3097/15975"
+              ]
+            },
+            {
+              "id": "vol21n4",
+              "title": "Vol. 21 No. 4 (2021)",
+              "published": "2021-12-31",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1248",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/16855",
+                "doi:10.15625/1859-3097/16856",
+                "doi:10.15625/1859-3097/16858",
+                "doi:10.15625/1859-3097/16860",
+                "doi:10.15625/1859-3097/17023",
+                "doi:10.15625/1859-3097/15784",
+                "doi:10.15625/1859-3097/15164",
+                "doi:10.15625/1859-3097/15663",
+                "doi:10.15625/1859-3097/16861",
+                "doi:10.15625/1859-3097/15575",
+                "doi:10.15625/1859-3097/16448",
+                "doi:10.15625/1859-3097/17020",
+                "doi:10.15625/1859-3097/17022"
+              ]
+            }
+          ],
+          "note": "2021 complete: 4 issues, 46 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2022,
+          "papers": 38,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jmst/issue/archive",
+            "https://vjs.ac.vn/jmst/issue/view/1265",
+            "https://vjs.ac.vn/jmst/issue/view/1274",
+            "https://vjs.ac.vn/jmst/issue/view/1281",
+            "https://vjs.ac.vn/jmst/issue/view/1299"
+          ],
+          "issueItems": [
+            {
+              "id": "vol22n1",
+              "title": "Vol. 22 No. 1 (2022)",
+              "published": "2022-03-31",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1265",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/17034",
+                "doi:10.15625/1859-3097/16354",
+                "doi:10.15625/1859-3097/16072",
+                "doi:10.15625/1859-3097/16573",
+                "doi:10.15625/1859-3097/16631",
+                "doi:10.15625/1859-3097/17036",
+                "doi:10.15625/1859-3097/16061",
+                "doi:10.15625/1859-3097/17037",
+                "doi:10.15625/1859-3097/16928",
+                "doi:10.15625/1859-3097/17038"
+              ]
+            },
+            {
+              "id": "vol22n2",
+              "title": "Vol. 22 No. 2 (2022)",
+              "published": "2022-06-21",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1274",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/17231",
+                "doi:10.15625/1859-3097/16127",
+                "doi:10.15625/1859-3097/17233",
+                "doi:10.15625/1859-3097/16519",
+                "doi:10.15625/1859-3097/17234",
+                "doi:10.15625/1859-3097/16689",
+                "doi:10.15625/1859-3097/17235",
+                "doi:10.15625/1859-3097/17061",
+                "doi:10.15625/1859-3097/17075",
+                "doi:10.15625/1859-3097/16544"
+              ]
+            },
+            {
+              "id": "vol22n3",
+              "title": "Vol. 22 No. 3 (2022)",
+              "published": "2022-08-19",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1281",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/17435",
+                "doi:10.15625/1859-3097/17229",
+                "doi:10.15625/1859-3097/16956",
+                "doi:10.15625/1859-3097/17093",
+                "doi:10.15625/1859-3097/16975",
+                "doi:10.15625/1859-3097/17157",
+                "doi:10.15625/1859-3097/16905",
+                "doi:10.15625/1859-3097/15824"
+              ]
+            },
+            {
+              "id": "vol22n4",
+              "title": "Vol. 22 No. 4 (2022)",
+              "published": "2022-12-28",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1299",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/17398",
+                "doi:10.15625/1859-3097/17968",
+                "doi:10.15625/1859-3097/18016",
+                "doi:10.15625/1859-3097/18019",
+                "doi:10.15625/1859-3097/17142",
+                "doi:10.15625/1859-3097/17931",
+                "doi:10.15625/1859-3097/18020",
+                "doi:10.15625/1859-3097/17208",
+                "doi:10.15625/1859-3097/16607",
+                "doi:10.15625/1859-3097/16490"
+              ]
+            }
+          ],
+          "note": "2022 complete: 4 issues, 38 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2023,
+          "papers": 36,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jmst/issue/archive",
+            "https://vjs.ac.vn/jmst/issue/view/1315",
+            "https://vjs.ac.vn/jmst/issue/view/1320",
+            "https://vjs.ac.vn/jmst/issue/view/1324",
+            "https://vjs.ac.vn/jmst/issue/view/1278"
+          ],
+          "issueItems": [
+            {
+              "id": "vol23n1",
+              "title": "Vol. 23 No. 1 (2023)",
+              "published": "2023-03-25",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1315",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/18263",
+                "doi:10.15625/1859-3097/18265",
+                "doi:10.15625/1859-3097/17309",
+                "doi:10.15625/1859-3097/15964",
+                "doi:10.15625/1859-3097/16621",
+                "doi:10.15625/1859-3097/18275",
+                "doi:10.15625/1859-3097/16501",
+                "doi:10.15625/1859-3097/17076",
+                "doi:10.15625/1859-3097/17430"
+              ]
+            },
+            {
+              "id": "vol23n2",
+              "title": "Vol. 23 No. 2 (2023)",
+              "published": "2023-06-08",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1320",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/17558",
+                "doi:10.15625/1859-3097/17997",
+                "doi:10.15625/1859-3097/18418",
+                "doi:10.15625/1859-3097/17506",
+                "doi:10.15625/1859-3097/17523",
+                "doi:10.15625/1859-3097/18414",
+                "doi:10.15625/1859-3097/17458",
+                "doi:10.15625/1859-3097/18080",
+                "doi:10.15625/1859-3097/18413"
+              ]
+            },
+            {
+              "id": "vol23n3",
+              "title": "Vol. 23 No. 3 (2023)",
+              "published": "2023-08-08",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1324",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/18174",
+                "doi:10.15625/1859-3097/18634",
+                "doi:10.15625/1859-3097/18633",
+                "doi:10.15625/1859-3097/18635",
+                "doi:10.15625/1859-3097/17966",
+                "doi:10.15625/1859-3097/17612",
+                "doi:10.15625/1859-3097/18184",
+                "doi:10.15625/1859-3097/18252",
+                "doi:10.15625/1859-3097/18053"
+              ]
+            },
+            {
+              "id": "vol23n4",
+              "title": "Vol. 23 No. 4 (2023)",
+              "published": "2023-11-11",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1278",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/18836",
+                "doi:10.15625/1859-3097/18583",
+                "doi:10.15625/1859-3097/18732",
+                "doi:10.15625/1859-3097/18227",
+                "doi:10.15625/1859-3097/18234",
+                "doi:10.15625/1859-3097/18245",
+                "doi:10.15625/1859-3097/18638",
+                "doi:10.15625/1859-3097/18293",
+                "doi:10.15625/1859-3097/18617"
+              ]
+            }
+          ],
+          "note": "2023 complete: 4 issues, 36 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2024,
+          "papers": 36,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/jmst/issue/archive",
+            "https://vjs.ac.vn/jmst/issue/view/1344",
+            "https://vjs.ac.vn/jmst/issue/view/1355",
+            "https://vjs.ac.vn/jmst/issue/view/1360",
+            "https://vjs.ac.vn/jmst/issue/view/1373"
+          ],
+          "issueItems": [
+            {
+              "id": "vol24n1",
+              "title": "Vol. 24 No. 1 (2024)",
+              "published": "2024-02-22",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1344",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/16520",
+                "doi:10.15625/1859-3097/18976",
+                "doi:10.15625/1859-3097/18364",
+                "doi:10.15625/1859-3097/20177",
+                "doi:10.15625/1859-3097/18415",
+                "doi:10.15625/1859-3097/18449",
+                "doi:10.15625/1859-3097/18690",
+                "doi:10.15625/1859-3097/18686"
+              ]
+            },
+            {
+              "id": "vol24n2",
+              "title": "Vol. 24 No. 2 (2024)",
+              "published": "2024-05-21",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1355",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/18309",
+                "doi:10.15625/1859-3097/20805",
+                "doi:10.15625/1859-3097/20790",
+                "doi:10.15625/1859-3097/18763",
+                "doi:10.15625/1859-3097/18610",
+                "doi:10.15625/1859-3097/20614",
+                "doi:10.15625/1859-3097/19564",
+                "doi:10.15625/1859-3097/20795",
+                "doi:10.15625/1859-3097/18436"
+              ]
+            },
+            {
+              "id": "vol24n3",
+              "title": "Vol. 24 No. 3 (2024)",
+              "published": "2024-08-07",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1360",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/18342",
+                "doi:10.15625/1859-3097/18654",
+                "doi:10.15625/1859-3097/18898",
+                "doi:10.15625/1859-3097/21298",
+                "doi:10.15625/1859-3097/19709",
+                "doi:10.15625/1859-3097/21301",
+                "doi:10.15625/1859-3097/21302",
+                "doi:10.15625/1859-3097/18869",
+                "doi:10.15625/1859-3097/21111"
+              ]
+            },
+            {
+              "id": "vol24n4",
+              "title": "Vol. 24 No. 4 (2024)",
+              "published": "2024-12-10",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1373",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/20393",
+                "doi:10.15625/1859-3097/21326",
+                "doi:10.15625/1859-3097/22043",
+                "doi:10.15625/1859-3097/21968",
+                "doi:10.15625/1859-3097/21471",
+                "doi:10.15625/1859-3097/20455",
+                "doi:10.15625/1859-3097/22126",
+                "doi:10.15625/1859-3097/22128",
+                "doi:10.15625/1859-3097/21791",
+                "doi:10.15625/1859-3097/21795"
+              ]
+            }
+          ],
+          "note": "2024 complete: 4 issues, 36 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2025,
+          "papers": 39,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/jmst/issue/archive",
+            "https://vjs.ac.vn/jmst/issue/view/1409",
+            "https://vjs.ac.vn/jmst/issue/view/1403",
+            "https://vjs.ac.vn/jmst/issue/view/1385",
+            "https://vjs.ac.vn/jmst/issue/view/1382"
+          ],
+          "issueItems": [
+            {
+              "id": "vol25n1",
+              "title": "Vol. 25 No. 1 (2025)",
+              "published": "2025-03-31",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1382",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/22492",
+                "doi:10.15625/1859-3097/22634",
+                "doi:10.15625/1859-3097/20808",
+                "doi:10.15625/1859-3097/20912",
+                "doi:10.15625/1859-3097/22636",
+                "doi:10.15625/1859-3097/22149",
+                "doi:10.15625/1859-3097/18632",
+                "doi:10.15625/1859-3097/20503",
+                "doi:10.15625/1859-3097/21581",
+                "doi:10.15625/1859-3097/20770"
+              ]
+            },
+            {
+              "id": "vol25n2",
+              "title": "Vol. 25 No. 2 (2025)",
+              "published": "2025-04-17",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1385",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/22728",
+                "doi:10.15625/1859-3097/22729",
+                "doi:10.15625/1859-3097/22730",
+                "doi:10.15625/1859-3097/22731",
+                "doi:10.15625/1859-3097/22732",
+                "doi:10.15625/1859-3097/22733",
+                "doi:10.15625/1859-3097/22734",
+                "doi:10.15625/1859-3097/22735",
+                "doi:10.15625/1859-3097/22736",
+                "doi:10.15625/1859-3097/22737",
+                "doi:10.15625/1859-3097/22739"
+              ]
+            },
+            {
+              "id": "vol25n3",
+              "title": "Vol. 25 No. 3 (2025)",
+              "published": "2025-09-30",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1403",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/21842",
+                "doi:10.15625/1859-3097/23555",
+                "doi:10.15625/1859-3097/23556",
+                "doi:10.15625/1859-3097/22161",
+                "doi:10.15625/1859-3097/23498",
+                "doi:10.15625/1859-3097/21871",
+                "doi:10.15625/1859-3097/21566",
+                "doi:10.15625/1859-3097/20434",
+                "doi:10.15625/1859-3097/23497",
+                "doi:10.15625/1859-3097/21290"
+              ]
+            },
+            {
+              "id": "vol25n4",
+              "title": "Vol. 25 No. 4 (2025)",
+              "published": "2025-12-30",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1409",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/20339",
+                "doi:10.15625/1859-3097/23573",
+                "doi:10.15625/1859-3097/22329",
+                "doi:10.15625/1859-3097/22534",
+                "doi:10.15625/1859-3097/20415",
+                "doi:10.15625/1859-3097/21882",
+                "doi:10.15625/1859-3097/23413",
+                "doi:10.15625/1859-3097/23078"
+              ]
+            }
+          ],
+          "note": "All four archive issues including the special issue Vol. 25 No. 2 were read and all listed eligible article/review entries enumerated by DOI; total 39 unique paper keys."
+        },
+        {
+          "year": 2026,
+          "papers": 20,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/jmst/issue/archive",
+            "https://vjs.ac.vn/jmst/issue/view/1445",
+            "https://vjs.ac.vn/jmst/issue/view/1431",
+            "https://vjs.ac.vn/jmst/issue/view/1422"
+          ],
+          "issueItems": [
+            {
+              "id": "vol26n1",
+              "title": "Vol. 26 No. 1 (2026)",
+              "published": "2026-03-30",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1422",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/22266",
+                "doi:10.15625/1859-3097/23504",
+                "doi:10.15625/1859-3097/21704",
+                "doi:10.15625/1859-3097/23495",
+                "doi:10.15625/1859-3097/20012",
+                "doi:10.15625/1859-3097/22217",
+                "doi:10.15625/1859-3097/23492"
+              ]
+            },
+            {
+              "id": "vol26n2",
+              "title": "Vol. 26 No. 2 (2026)",
+              "published": "2026-06-25",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1431",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/23788",
+                "doi:10.15625/1859-3097/22789",
+                "doi:10.15625/1859-3097/22471",
+                "doi:10.15625/1859-3097/22740",
+                "doi:10.15625/1859-3097/23490",
+                "doi:10.15625/1859-3097/22402"
+              ]
+            },
+            {
+              "id": "vol26n3",
+              "title": "Vol. 26 No. 3 (2026)",
+              "published": "2026-09-22",
+              "url": "https://vjs.ac.vn/jmst/issue/view/1445",
+              "paperKeys": [
+                "doi:10.15625/1859-3097/23988",
+                "doi:10.15625/1859-3097/23098",
+                "doi:10.15625/1859-3097/24029",
+                "doi:10.15625/1859-3097/23221",
+                "doi:10.15625/1859-3097/22152",
+                "doi:10.15625/1859-3097/23910",
+                "doi:10.15625/1859-3097/22691"
+              ]
+            }
+          ],
+          "note": "All three 2026 archive issues read; 20 DOI-keyed eligible records enumerated through 2026-09-22."
+        }
       ]
     },
     {
@@ -81,17 +1987,812 @@
       "publisher": "Vietnam Academy of Science and Technology",
       "issn": "2815-5955",
       "eissn": "2815-5912",
-      "formerTitles": [{"title": "Tạp chí Công nghệ Sinh học (Journal of Biotechnology)", "issn": "1811-4989", "until": null}],
-      "frequency": {"issuesPerYear": 4, "sourceUrl": "https://vjs.ac.vn/index.php/vjbt"},
-      "profileSources": ["https://vjs.ac.vn/index.php/vjbt", "https://vjs.ac.vn/vjbt/issue/archive"],
-      "indexings": [
-        {"system": "Scopus", "collection": null, "status": "unverified", "evidenceLevel": "journal", "sourceUrl": "https://vjs.ac.vn/index.php/vjbt", "checkedAt": "2026-10-21", "coverage": null},
-        {"system": "ACI", "collection": null, "status": "unverified", "evidenceLevel": "journal", "sourceUrl": "https://vjs.ac.vn/index.php/vjbt", "checkedAt": "2026-10-21", "coverage": null}
+      "formerTitles": [
+        {
+          "title": "Tạp chí Công nghệ Sinh học (Journal of Biotechnology)",
+          "issn": "1811-4989",
+          "until": null
+        }
       ],
-      "latestIssue": {"title": "Vol. 24 No. 3 (2026)", "published": "2026-09-29", "url": "https://vjs.ac.vn/vjbt/issue/view/1442"},
+      "frequency": {
+        "issuesPerYear": 4,
+        "sourceUrl": "https://vjs.ac.vn/index.php/vjbt"
+      },
+      "profileSources": [
+        "https://vjs.ac.vn/index.php/vjbt",
+        "https://vjs.ac.vn/vjbt/issue/archive"
+      ],
+      "indexings": [
+        {
+          "system": "Scopus",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbt",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        },
+        {
+          "system": "ACI",
+          "collection": null,
+          "status": "unverified",
+          "evidenceLevel": "journal",
+          "sourceUrl": "https://vjs.ac.vn/index.php/vjbt",
+          "checkedAt": "2026-10-21",
+          "coverage": null
+        }
+      ],
+      "latestIssue": {
+        "title": "Vol. 24 No. 3 (2026)",
+        "published": "2026-09-29",
+        "url": "https://vjs.ac.vn/vjbt/issue/view/1442"
+      },
       "outputs": [
-        {"year": 2025, "papers": 45, "issues": 4, "coverage": "complete", "asOf": "2026-10-21", "periodKind": "annual", "sourceUrls": ["https://vjs.ac.vn/vjbt/issue/archive", "https://vjs.ac.vn/vjbt/issue/view/1406", "https://vjs.ac.vn/vjbt/issue/view/1398", "https://vjs.ac.vn/vjbt/issue/view/1390", "https://vjs.ac.vn/vjbt/issue/view/pdf"], "issueItems": [{"id": "vol23n1", "title": "Vol. 23 No. 1 (2025)", "published": "2025-03-31", "url": "https://vjs.ac.vn/vjbt/issue/view/pdf", "paperKeys": ["doi:10.15625/vjbt-21323", "doi:10.15625/vjbt-22379", "doi:10.15625/vjbt-21785", "doi:10.15625/vjbt-22093", "doi:10.15625/vjbt-22200", "doi:10.15625/vjbt-21997", "doi:10.15625/vjbt-21868", "doi:10.15625/vjbt-21940", "doi:10.15625/vjbt-21957", "doi:10.15625/vjbt-21914", "doi:10.15625/vjbt-21792"]}, {"id": "vol23n2", "title": "Vol. 23 No. 2 (2025)", "published": "2025-06-30", "url": "https://vjs.ac.vn/vjbt/issue/view/1390", "paperKeys": ["doi:10.15625/vjbt-22325", "doi:10.15625/vjbt-21990", "doi:10.15625/vjbt-21644", "doi:10.15625/vjbt-22132", "doi:10.15625/vjbt-21902", "doi:10.15625/vjbt-22344", "doi:10.15625/vjbt-22299", "doi:10.15625/vjbt-21721", "doi:10.15625/vjbt-22589", "doi:10.15625/vjbt-22858"]}, {"id": "vol23n3", "title": "Vol. 23 No. 3 (2025)", "published": "2025-09-30", "url": "https://vjs.ac.vn/vjbt/issue/view/1398", "paperKeys": ["doi:10.15625/vjbt-22794", "doi:10.15625/vjbt-22102", "doi:10.15625/vjbt-22326", "doi:10.15625/vjbt-21060", "doi:10.15625/vjbt-23222", "doi:10.15625/vjbt-21904", "doi:10.15625/vjbt-22112", "doi:10.15625/vjbt-22856", "doi:10.15625/vjbt-22577", "doi:10.15625/vjbt-22437", "doi:10.15625/vjbt-23144"]}, {"id": "vol23n4", "title": "Vol. 23 No. 4 (2025)", "published": "2025-12-30", "url": "https://vjs.ac.vn/vjbt/issue/view/1406", "paperKeys": ["doi:10.15625/vjbt-22572", "doi:10.15625/vjbt-23169", "doi:10.15625/vjbt-23276", "doi:10.15625/vjbt-22771", "doi:10.15625/vjbt-23481", "doi:10.15625/vjbt-22415", "doi:10.15625/vjbt-22037", "doi:10.15625/vjbt-22546", "doi:10.15625/vjbt-22681", "doi:10.15625/vjbt-22699", "doi:10.15625/vjbt-23226", "doi:10.15625/vjbt-23378", "doi:10.15625/vjbt-23121"]}], "note": "All four official issue pages including the /issue/view/pdf route were opened. Enumerated 45 unique DOI paper keys across their review/article sections."},
-        {"year": 2026, "papers": 33, "issues": 3, "coverage": "complete", "asOf": "2026-10-21", "periodKind": "ytd", "sourceUrls": ["https://vjs.ac.vn/vjbt/issue/archive", "https://vjs.ac.vn/vjbt/issue/view/1442", "https://vjs.ac.vn/vjbt/issue/view/1427", "https://vjs.ac.vn/vjbt/issue/view/vol24n1"], "issueItems": [{"id": "vol24n1", "title": "Vol. 24 No. 1 (2026)", "published": "2026-03-27", "url": "https://vjs.ac.vn/vjbt/issue/view/vol24n1", "paperKeys": ["doi:10.15625/vjbt-23543", "doi:10.15625/vjbt-24015", "doi:10.15625/vjbt-23336", "doi:10.15625/vjbt-21946", "doi:10.15625/vjbt-23273", "doi:10.15625/vjbt-21874", "doi:10.15625/vjbt-23376", "doi:10.15625/vjbt-22971", "doi:10.15625/vjbt-23173", "doi:10.15625/vjbt-22443", "doi:10.15625/vjbt-22393"]}, {"id": "vol24n2", "title": "Vol. 24 No. 2 (2026)", "published": "2026-06-24", "url": "https://vjs.ac.vn/vjbt/issue/view/1427", "paperKeys": ["doi:10.15625/vjbt-23474", "doi:10.15625/vjbt-23261", "doi:10.15625/vjbt-24007", "doi:10.15625/vjbt-23548", "doi:10.15625/vjbt-24452", "doi:10.15625/vjbt-23386", "doi:10.15625/vjbt-23946", "doi:10.15625/vjbt-23764", "doi:10.15625/vjbt-23338", "doi:10.15625/vjbt-22442", "doi:10.15625/vjbt-23418"]}, {"id": "vol24n3", "title": "Vol. 24 No. 3 (2026)", "published": "2026-09-29", "url": "https://vjs.ac.vn/vjbt/issue/view/1442", "paperKeys": ["doi:10.15625/vjbt-24869", "doi:10.15625/vjbt-24585", "doi:10.15625/vjbt-23884", "doi:10.15625/vjbt-21694", "doi:10.15625/vjbt-24204", "doi:10.15625/vjbt-24706", "doi:10.15625/vjbt-25046", "doi:10.15625/vjbt-24362", "doi:10.15625/vjbt-24914", "doi:10.15625/vjbt-23327", "doi:10.15625/vjbt-24422"]}], "note": "All three 2026 issue pages were read; review/article entries yield 33 unique DOI paper keys through 2026-09-29."}
+        {
+          "year": 2020,
+          "papers": 73,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjbt/issue/archive",
+            "https://vjs.ac.vn/vjbt/issue/view/1181",
+            "https://vjs.ac.vn/vjbt/issue/view/1203",
+            "https://vjs.ac.vn/vjbt/issue/view/1206",
+            "https://vjs.ac.vn/vjbt/issue/view/1224"
+          ],
+          "issueItems": [
+            {
+              "id": "vol18n1",
+              "title": "Vol. 18 No. 1 (2020)",
+              "published": "2020-03-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1181",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/18/1/15257",
+                "doi:10.15625/1811-4989/18/1/15258",
+                "doi:10.15625/1811-4989/18/1/15264",
+                "doi:10.15625/1811-4989/18/1/15263",
+                "doi:10.15625/1811-4989/18/1/15265",
+                "doi:10.15625/1811-4989/18/1/15266",
+                "doi:10.15625/1811-4989/18/1/15267",
+                "doi:10.15625/1811-4989/18/1/15268",
+                "doi:10.15625/1811-4989/18/1/15269",
+                "doi:10.15625/1811-4989/18/1/15270",
+                "doi:10.15625/1811-4989/18/1/15271",
+                "doi:10.15625/1811-4989/18/1/15272",
+                "doi:10.15625/1811-4989/18/1/15273",
+                "doi:10.15625/1811-4989/18/1/15274",
+                "doi:10.15625/1811-4989/18/1/15275",
+                "doi:10.15625/1811-4989/18/1/15276",
+                "doi:10.15625/1811-4989/18/1/15277"
+              ]
+            },
+            {
+              "id": "vol18n2",
+              "title": "Vol. 18 No. 2 (2020)",
+              "published": "2020-06-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1203",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/18/2/15082",
+                "doi:10.15625/1811-4989/18/2/14841",
+                "doi:10.15625/1811-4989/18/2/15638",
+                "doi:10.15625/1811-4989/18/2/15136",
+                "doi:10.15625/1811-4989/18/2/14908",
+                "doi:10.15625/1811-4989/18/2/15020",
+                "doi:10.15625/1811-4989/18/2/15639",
+                "doi:10.15625/1811-4989/18/2/14948",
+                "doi:10.15625/1811-4989/18/2/14375",
+                "doi:10.15625/1811-4989/18/2/15395",
+                "doi:10.15625/1811-4989/18/2/14479",
+                "doi:10.15625/1811-4989/18/2/14646",
+                "doi:10.15625/1811-4989/18/2/15196",
+                "doi:10.15625/1811-4989/18/2/13807",
+                "doi:10.15625/1811-4989/18/2/15280",
+                "doi:10.15625/1811-4989/18/2/14868",
+                "doi:10.15625/1811-4989/18/2/14886",
+                "doi:10.15625/1811-4989/18/2/15086",
+                "doi:10.15625/1811-4989/18/2/15641"
+              ]
+            },
+            {
+              "id": "vol18n3",
+              "title": "Vol. 18 No. 3 (2020)",
+              "published": "2020-09-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1206",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/18/3/14972",
+                "doi:10.15625/1811-4989/18/3/15709",
+                "doi:10.15625/1811-4989/18/3/15710",
+                "doi:10.15625/1811-4989/18/3/14920",
+                "doi:10.15625/1811-4989/18/3/13901",
+                "doi:10.15625/1811-4989/18/3/14449",
+                "doi:10.15625/1811-4989/18/3/15712",
+                "doi:10.15625/1811-4989/18/3/14483",
+                "doi:10.15625/1811-4989/18/3/14484",
+                "doi:10.15625/1811-4989/18/3/11089",
+                "doi:10.15625/1811-4989/18/3/15713",
+                "doi:10.15625/1811-4989/18/3/12712",
+                "doi:10.15625/1811-4989/18/3/14634",
+                "doi:10.15625/1811-4989/18/3/13892",
+                "doi:10.15625/1811-4989/18/3/13426",
+                "doi:10.15625/1811-4989/18/3/15322",
+                "doi:10.15625/1811-4989/18/3/15003",
+                "doi:10.15625/1811-4989/18/3/15714"
+              ]
+            },
+            {
+              "id": "vol18n4",
+              "title": "Vol. 18 No. 4 (2020)",
+              "published": "2020-12-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1224",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/18/4/15326",
+                "doi:10.15625/1811-4989/18/4/15728",
+                "doi:10.15625/1811-4989/18/4/16082",
+                "doi:10.15625/1811-4989/18/4/16083",
+                "doi:10.15625/1811-4989/18/4/15311",
+                "doi:10.15625/1811-4989/18/4/16085",
+                "doi:10.15625/1811-4989/18/4/15673",
+                "doi:10.15625/1811-4989/18/4/15398",
+                "doi:10.15625/1811-4989/18/4/16086",
+                "doi:10.15625/1811-4989/18/4/15130",
+                "doi:10.15625/1811-4989/18/4/16087",
+                "doi:10.15625/1811-4989/18/4/15115",
+                "doi:10.15625/1811-4989/18/4/14970",
+                "doi:10.15625/1811-4989/18/4/15256",
+                "doi:10.15625/1811-4989/18/4/15320",
+                "doi:10.15625/1811-4989/18/4/16089",
+                "doi:10.15625/1811-4989/18/4/15393",
+                "doi:10.15625/1811-4989/18/4/14700",
+                "doi:10.15625/1811-4989/18/4/15799"
+              ]
+            }
+          ],
+          "note": "2020 complete: 4 issues, 73 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2021,
+          "papers": 75,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjbt/issue/archive",
+            "https://vjs.ac.vn/vjbt/issue/view/1235",
+            "https://vjs.ac.vn/vjbt/issue/view/1237",
+            "https://vjs.ac.vn/vjbt/issue/view/1247",
+            "https://vjs.ac.vn/vjbt/issue/view/1269"
+          ],
+          "issueItems": [
+            {
+              "id": "vol19n1",
+              "title": "Vol. 19 No. 1 (2021)",
+              "published": "2021-03-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1235",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/15386",
+                "doi:10.15625/1811-4989/15464",
+                "doi:10.15625/1811-4989/14350",
+                "doi:10.15625/1811-4989/14672",
+                "doi:10.15625/1811-4989/14671",
+                "doi:10.15625/1811-4989/15493",
+                "doi:10.15625/1811-4989/14451",
+                "doi:10.15625/1811-4989/14614",
+                "doi:10.15625/1811-4989/16084",
+                "doi:10.15625/1811-4989/14892",
+                "doi:10.15625/1811-4989/15204",
+                "doi:10.15625/1811-4989/15291",
+                "doi:10.15625/1811-4989/14550",
+                "doi:10.15625/1811-4989/13295",
+                "doi:10.15625/1811-4989/14441",
+                "doi:10.15625/1811-4989/14774"
+              ]
+            },
+            {
+              "id": "vol19n2",
+              "title": "Vol. 19 No. 2 (2021)",
+              "published": "2021-06-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1237",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/15370",
+                "doi:10.15625/1811-4989/16157",
+                "doi:10.15625/1811-4989/16111",
+                "doi:10.15625/1811-4989/15293",
+                "doi:10.15625/1811-4989/16332",
+                "doi:10.15625/1811-4989/14858",
+                "doi:10.15625/1811-4989/16128",
+                "doi:10.15625/1811-4989/13652",
+                "doi:10.15625/1811-4989/14884",
+                "doi:10.15625/1811-4989/15722",
+                "doi:10.15625/1811-4989/16019",
+                "doi:10.15625/1811-4989/15361",
+                "doi:10.15625/1811-4989/14543",
+                "doi:10.15625/1811-4989/15872",
+                "doi:10.15625/1811-4989/15202",
+                "doi:10.15625/1811-4989/16333",
+                "doi:10.15625/1811-4989/15882",
+                "doi:10.15625/1811-4989/15549"
+              ]
+            },
+            {
+              "id": "vol19n3",
+              "title": "Vol. 19 No. 3 (2021)",
+              "published": "2021-10-13",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1247",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/16158",
+                "doi:10.15625/1811-4989/15439",
+                "doi:10.15625/1811-4989/15666",
+                "doi:10.15625/1811-4989/15000",
+                "doi:10.15625/1811-4989/14453",
+                "doi:10.15625/1811-4989/15421",
+                "doi:10.15625/1811-4989/15286",
+                "doi:10.15625/1811-4989/15491",
+                "doi:10.15625/1811-4989/15621",
+                "doi:10.15625/1811-4989/15058",
+                "doi:10.15625/1811-4989/16632",
+                "doi:10.15625/1811-4989/16633",
+                "doi:10.15625/1811-4989/13897",
+                "doi:10.15625/1811-4989/14989",
+                "doi:10.15625/1811-4989/15009",
+                "doi:10.15625/1811-4989/15126",
+                "doi:10.15625/1811-4989/15521"
+              ]
+            },
+            {
+              "id": "vol19n4",
+              "title": "Vol. 19 No. 4 (2021)",
+              "published": "2021-12-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1269",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/15085",
+                "doi:10.15625/1811-4989/15584",
+                "doi:10.15625/1811-4989/17105",
+                "doi:10.15625/1811-4989/16358",
+                "doi:10.15625/1811-4989/15556",
+                "url:https://vjs.ac.vn/vjbt/article/view/17106",
+                "doi:10.15625/1811-4989/15869",
+                "doi:10.15625/1811-4989/15850",
+                "doi:10.15625/1811-4989/15681",
+                "doi:10.15625/1811-4989/15806",
+                "doi:10.15625/1811-4989/15374",
+                "doi:10.15625/1811-4989/14949",
+                "doi:10.15625/1811-4989/15090",
+                "doi:10.15625/1811-4989/15672",
+                "doi:10.15625/1811-4989/13776",
+                "doi:10.15625/1811-4989/17107",
+                "doi:10.15625/1811-4989/17108",
+                "doi:10.15625/1811-4989/15251",
+                "doi:10.15625/1811-4989/17109",
+                "doi:10.15625/1811-4989/15613",
+                "doi:10.15625/1811-4989/15633",
+                "doi:10.15625/1811-4989/15738",
+                "doi:10.15625/1811-4989/17110",
+                "url:https://vjs.ac.vn/vjbt/article/view/17112"
+              ]
+            }
+          ],
+          "note": "2021 complete: 4 issues, 75 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2022,
+          "papers": 79,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjbt/issue/archive",
+            "https://vjs.ac.vn/vjbt/issue/view/1272",
+            "https://vjs.ac.vn/vjbt/issue/view/vol20n2",
+            "https://vjs.ac.vn/vjbt/issue/view/1291",
+            "https://vjs.ac.vn/vjbt/issue/view/1309"
+          ],
+          "issueItems": [
+            {
+              "id": "vol20n1",
+              "title": "Vol. 20 No. 1 (2022)",
+              "published": "2022-03-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1272",
+              "paperKeys": [
+                "url:https://vjs.ac.vn/vjbt/article/view/17203",
+                "doi:10.15625/1811-4989/17090",
+                "doi:10.15625/1811-4989/16853",
+                "doi:10.15625/1811-4989/16138",
+                "doi:10.15625/1811-4989/15675",
+                "doi:10.15625/1811-4989/17199",
+                "doi:10.15625/1811-4989/15706",
+                "doi:10.15625/1811-4989/17200",
+                "doi:10.15625/1811-4989/14751",
+                "doi:10.15625/1811-4989/15682",
+                "doi:10.15625/1811-4989/16361",
+                "doi:10.15625/1811-4989/15688",
+                "doi:10.15625/1811-4989/16372",
+                "doi:10.15625/1811-4989/14384",
+                "doi:10.15625/1811-4989/17202",
+                "doi:10.15625/1811-4989/15781",
+                "doi:10.15625/1811-4989/16154",
+                "doi:10.15625/1811-4989/16075",
+                "doi:10.15625/1811-4989/16073",
+                "doi:10.15625/1811-4989/15367",
+                "doi:10.15625/1811-4989/16056",
+                "doi:10.15625/1811-4989/13509",
+                "url:https://vjs.ac.vn/vjbt/article/view/17207"
+              ]
+            },
+            {
+              "id": "vol20n2",
+              "title": "Vol. 20 No. 2 (2022)",
+              "published": "2022-06-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/vol20n2",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/16265",
+                "doi:10.15625/1811-4989/15886",
+                "doi:10.15625/1811-4989/17243",
+                "doi:10.15625/1811-4989/17000",
+                "doi:10.15625/1811-4989/15325",
+                "doi:10.15625/1811-4989/16677",
+                "doi:10.15625/1811-4989/16903",
+                "doi:10.15625/1811-4989/15969",
+                "doi:10.15625/1811-4989/15909",
+                "doi:10.15625/1811-4989/16149",
+                "doi:10.15625/1811-4989/16190",
+                "doi:10.15625/1811-4989/15930",
+                "doi:10.15625/1811-4989/16033",
+                "doi:10.15625/1811-4989/16365",
+                "doi:10.15625/1811-4989/16059",
+                "doi:10.15625/1811-4989/16117",
+                "doi:10.15625/1811-4989/16344",
+                "doi:10.15625/1811-4989/16027",
+                "doi:10.15625/1811-4989/15863",
+                "doi:10.15625/1811-4989/16984"
+              ]
+            },
+            {
+              "id": "vol20n3",
+              "title": "Vol. 20 No. 3 (2022)",
+              "published": "2024-03-06",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1291",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/16664",
+                "doi:10.15625/1811-4989/16428",
+                "doi:10.15625/1811-4989/16671",
+                "doi:10.15625/1811-4989/15982",
+                "doi:10.15625/1811-4989/16585",
+                "doi:10.15625/1811-4989/16510",
+                "doi:10.15625/1811-4989/15819",
+                "doi:10.15625/1811-4989/16043",
+                "doi:10.15625/1811-4989/16478",
+                "doi:10.15625/1811-4989/17059",
+                "doi:10.15625/1811-4989/17191",
+                "doi:10.15625/1811-4989/16373",
+                "doi:10.15625/1811-4989/16673",
+                "doi:10.15625/1811-4989/17056",
+                "doi:10.15625/1811-4989/16571",
+                "doi:10.15625/1811-4989/16835",
+                "doi:10.15625/1811-4989/16604",
+                "doi:10.15625/1811-4989/16645"
+              ]
+            },
+            {
+              "id": "vol20n4",
+              "title": "Vol. 20 No. 4 (2022)",
+              "published": "2022-12-28",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1309",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/16863",
+                "doi:10.15625/1811-4989/16518",
+                "doi:10.15625/1811-4989/17508",
+                "doi:10.15625/1811-4989/16659",
+                "doi:10.15625/1811-4989/17138",
+                "doi:10.15625/1811-4989/16963",
+                "doi:10.15625/1811-4989/17475",
+                "doi:10.15625/1811-4989/16221",
+                "doi:10.15625/1811-4989/15746",
+                "doi:10.15625/1811-4989/18221",
+                "doi:10.15625/1811-4989/17172",
+                "doi:10.15625/1811-4989/17495",
+                "doi:10.15625/1811-4989/16934",
+                "doi:10.15625/1811-4989/16917",
+                "doi:10.15625/1811-4989/17024",
+                "doi:10.15625/1811-4989/17070",
+                "doi:10.15625/1811-4989/16889",
+                "doi:10.15625/1811-4989/16871"
+              ]
+            }
+          ],
+          "note": "2022 complete: 4 issues, 79 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2023,
+          "papers": 69,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjbt/issue/archive",
+            "https://vjs.ac.vn/vjbt/issue/view/1327",
+            "https://vjs.ac.vn/vjbt/issue/view/1345",
+            "https://vjs.ac.vn/vjbt/issue/view/1348",
+            "https://vjs.ac.vn/vjbt/issue/view/1352"
+          ],
+          "issueItems": [
+            {
+              "id": "vol21n1",
+              "title": "Vol. 21 No. 1 (2023)",
+              "published": "2023-03-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1327",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/16025",
+                "doi:10.15625/1811-4989/18086",
+                "doi:10.15625/1811-4989/17399",
+                "doi:10.15625/1811-4989/17519",
+                "doi:10.15625/1811-4989/17650",
+                "doi:10.15625/1811-4989/17647",
+                "doi:10.15625/1811-4989/17963",
+                "doi:10.15625/1811-4989/17661",
+                "doi:10.15625/1811-4989/18093",
+                "doi:10.15625/1811-4989/17310",
+                "doi:10.15625/1811-4989/17967",
+                "doi:10.15625/1811-4989/17053",
+                "doi:10.15625/1811-4989/18126",
+                "doi:10.15625/1811-4989/17984",
+                "doi:10.15625/1811-4989/18018",
+                "doi:10.15625/1811-4989/18102",
+                "doi:10.15625/1811-4989/17659",
+                "doi:10.15625/1811-4989/17406"
+              ]
+            },
+            {
+              "id": "vol21n2",
+              "title": "Vol. 21 No. 2 (2023)",
+              "published": "2023-06-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1345",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/18199",
+                "doi:10.15625/1811-4989/18276",
+                "doi:10.15625/1811-4989/18087",
+                "doi:10.15625/1811-4989/18124",
+                "doi:10.15625/1811-4989/18256",
+                "doi:10.15625/1811-4989/18036",
+                "doi:10.15625/1811-4989/18065",
+                "doi:10.15625/1811-4989/18177",
+                "doi:10.15625/1811-4989/18240",
+                "doi:10.15625/1811-4989/18671",
+                "doi:10.15625/1811-4989/19381",
+                "doi:10.15625/1811-4989/18370",
+                "doi:10.15625/1811-4989/18607",
+                "doi:10.15625/1811-4989/18412",
+                "doi:10.15625/1811-4989/18344",
+                "doi:10.15625/1811-4989/19476",
+                "doi:10.15625/1811-4989/18201"
+              ]
+            },
+            {
+              "id": "vol21n3",
+              "title": "Vol. 21 No. 3 (2023)",
+              "published": "2023-09-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1348",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/19451",
+                "doi:10.15625/1811-4989/19383",
+                "doi:10.15625/1811-4989/19504",
+                "doi:10.15625/1811-4989/19530",
+                "doi:10.15625/1811-4989/20291",
+                "doi:10.15625/1811-4989/18423",
+                "doi:10.15625/1811-4989/17315",
+                "doi:10.15625/1811-4989/19532",
+                "doi:10.15625/1811-4989/17637",
+                "doi:10.15625/1811-4989/19650",
+                "doi:10.15625/1811-4989/19534",
+                "doi:10.15625/1811-4989/19173",
+                "doi:10.15625/1811-4989/19591",
+                "doi:10.15625/1811-4989/19494",
+                "doi:10.15625/1811-4989/19755",
+                "doi:10.15625/1811-4989/19611",
+                "doi:10.15625/1811-4989/18163"
+              ]
+            },
+            {
+              "id": "vol21n4",
+              "title": "Vol. 21 No. 4 (2023)",
+              "published": "2023-12-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1352",
+              "paperKeys": [
+                "doi:10.15625/1811-4989/19500",
+                "doi:10.15625/1811-4989/19541",
+                "doi:10.15625/1811-4989/20426",
+                "doi:10.15625/1811-4989/20464",
+                "doi:10.15625/1811-4989/19661",
+                "doi:10.15625/1811-4989/19002",
+                "doi:10.15625/1811-4989/19651",
+                "doi:10.15625/1811-4989/20288",
+                "doi:10.15625/1811-4989/18629",
+                "doi:10.15625/1811-4989/20567",
+                "doi:10.15625/1811-4989/19961",
+                "doi:10.15625/1811-4989/20340",
+                "doi:10.15625/1811-4989/19801",
+                "doi:10.15625/1811-4989/20283",
+                "doi:10.15625/1811-4989/19552",
+                "doi:10.15625/1811-4989/19673",
+                "doi:10.15625/1811-4989/20412"
+              ]
+            }
+          ],
+          "note": "2023 complete: 4 issues, 69 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2024,
+          "papers": 50,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/index.php/vjbt/issue/archive",
+            "https://vjs.ac.vn/vjbt/issue/view/vol22n1",
+            "https://vjs.ac.vn/vjbt/issue/view/vol22n2",
+            "https://vjs.ac.vn/vjbt/issue/view/vol22n3",
+            "https://vjs.ac.vn/vjbt/issue/view/vol22n4"
+          ],
+          "issueItems": [
+            {
+              "id": "vol22n1",
+              "title": "Vol. 22 No. 1 (2024)",
+              "published": "2024-03-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/vol22n1",
+              "paperKeys": [
+                "doi:10.15625/vjbt-20713",
+                "doi:10.15625/vjbt-19470",
+                "doi:10.15625/vjbt-19664",
+                "doi:10.15625/vjbt-20645",
+                "doi:10.15625/vjbt-20641",
+                "doi:10.15625/vjbt-19539",
+                "doi:10.15625/vjbt-19892",
+                "doi:10.15625/vjbt-20792",
+                "doi:10.15625/vjbt-20368",
+                "doi:10.15625/vjbt-20234",
+                "doi:10.15625/vjbt-19542",
+                "doi:10.15625/vjbt-19612",
+                "doi:10.15625/vjbt-19787",
+                "doi:10.15625/vjbt-19502"
+              ]
+            },
+            {
+              "id": "vol22n2",
+              "title": "Vol. 22 No. 2 (2024)",
+              "published": "2024-06-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/vol22n2",
+              "paperKeys": [
+                "doi:10.15625/vjbt-21031",
+                "doi:10.15625/vjbt-19499",
+                "doi:10.15625/vjbt-20720",
+                "doi:10.15625/vjbt-20996",
+                "doi:10.15625/vjbt-19815",
+                "doi:10.15625/vjbt-20139",
+                "doi:10.15625/vjbt-19569",
+                "doi:10.15625/vjbt-19680",
+                "doi:10.15625/vjbt-18581",
+                "doi:10.15625/vjbt-19545",
+                "doi:10.15625/vjbt-19597",
+                "doi:10.15625/vjbt-17561",
+                "doi:10.15625/vjbt-20167",
+                "doi:10.15625/vjbt-21015",
+                "doi:10.15625/vjbt-21245",
+                "doi:10.15625/vjbt-19874"
+              ]
+            },
+            {
+              "id": "vol22n3",
+              "title": "Vol. 22 No. 3 (2024)",
+              "published": "2024-09-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/vol22n3",
+              "paperKeys": [
+                "doi:10.15625/vjbt-20532",
+                "doi:10.15625/vjbt-21236",
+                "doi:10.15625/vjbt-21295",
+                "doi:10.15625/vjbt-21395",
+                "doi:10.15625/vjbt-19559",
+                "doi:10.15625/vjbt-20876",
+                "doi:10.15625/vjbt-21438",
+                "doi:10.15625/vjbt-21493",
+                "doi:10.15625/vjbt-21211"
+              ]
+            },
+            {
+              "id": "vol22n4",
+              "title": "Vol. 22 No. 4 (2024)",
+              "published": "2024-12-31",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/vol22n4",
+              "paperKeys": [
+                "doi:10.15625/vjbt-21531",
+                "doi:10.15625/vjbt-21736",
+                "doi:10.15625/vjbt-21656",
+                "doi:10.15625/vjbt-21452",
+                "doi:10.15625/vjbt-21592",
+                "doi:10.15625/vjbt-20765",
+                "doi:10.15625/vjbt-21585",
+                "doi:10.15625/vjbt-21610",
+                "doi:10.15625/vjbt-21649",
+                "doi:10.15625/vjbt-21562",
+                "doi:10.15625/vjbt-21878"
+              ]
+            }
+          ],
+          "note": "2024 complete: 4 issues, 50 eligible research/review articles enumerated from official VJS OJS issue tables of contents."
+        },
+        {
+          "year": 2025,
+          "papers": 45,
+          "issues": 4,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "annual",
+          "sourceUrls": [
+            "https://vjs.ac.vn/vjbt/issue/archive",
+            "https://vjs.ac.vn/vjbt/issue/view/1406",
+            "https://vjs.ac.vn/vjbt/issue/view/1398",
+            "https://vjs.ac.vn/vjbt/issue/view/1390",
+            "https://vjs.ac.vn/vjbt/issue/view/pdf"
+          ],
+          "issueItems": [
+            {
+              "id": "vol23n1",
+              "title": "Vol. 23 No. 1 (2025)",
+              "published": "2025-03-31",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/pdf",
+              "paperKeys": [
+                "doi:10.15625/vjbt-21323",
+                "doi:10.15625/vjbt-22379",
+                "doi:10.15625/vjbt-21785",
+                "doi:10.15625/vjbt-22093",
+                "doi:10.15625/vjbt-22200",
+                "doi:10.15625/vjbt-21997",
+                "doi:10.15625/vjbt-21868",
+                "doi:10.15625/vjbt-21940",
+                "doi:10.15625/vjbt-21957",
+                "doi:10.15625/vjbt-21914",
+                "doi:10.15625/vjbt-21792"
+              ]
+            },
+            {
+              "id": "vol23n2",
+              "title": "Vol. 23 No. 2 (2025)",
+              "published": "2025-06-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1390",
+              "paperKeys": [
+                "doi:10.15625/vjbt-22325",
+                "doi:10.15625/vjbt-21990",
+                "doi:10.15625/vjbt-21644",
+                "doi:10.15625/vjbt-22132",
+                "doi:10.15625/vjbt-21902",
+                "doi:10.15625/vjbt-22344",
+                "doi:10.15625/vjbt-22299",
+                "doi:10.15625/vjbt-21721",
+                "doi:10.15625/vjbt-22589",
+                "doi:10.15625/vjbt-22858"
+              ]
+            },
+            {
+              "id": "vol23n3",
+              "title": "Vol. 23 No. 3 (2025)",
+              "published": "2025-09-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1398",
+              "paperKeys": [
+                "doi:10.15625/vjbt-22794",
+                "doi:10.15625/vjbt-22102",
+                "doi:10.15625/vjbt-22326",
+                "doi:10.15625/vjbt-21060",
+                "doi:10.15625/vjbt-23222",
+                "doi:10.15625/vjbt-21904",
+                "doi:10.15625/vjbt-22112",
+                "doi:10.15625/vjbt-22856",
+                "doi:10.15625/vjbt-22577",
+                "doi:10.15625/vjbt-22437",
+                "doi:10.15625/vjbt-23144"
+              ]
+            },
+            {
+              "id": "vol23n4",
+              "title": "Vol. 23 No. 4 (2025)",
+              "published": "2025-12-30",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1406",
+              "paperKeys": [
+                "doi:10.15625/vjbt-22572",
+                "doi:10.15625/vjbt-23169",
+                "doi:10.15625/vjbt-23276",
+                "doi:10.15625/vjbt-22771",
+                "doi:10.15625/vjbt-23481",
+                "doi:10.15625/vjbt-22415",
+                "doi:10.15625/vjbt-22037",
+                "doi:10.15625/vjbt-22546",
+                "doi:10.15625/vjbt-22681",
+                "doi:10.15625/vjbt-22699",
+                "doi:10.15625/vjbt-23226",
+                "doi:10.15625/vjbt-23378",
+                "doi:10.15625/vjbt-23121"
+              ]
+            }
+          ],
+          "note": "All four official issue pages including the /issue/view/pdf route were opened. Enumerated 45 unique DOI paper keys across their review/article sections."
+        },
+        {
+          "year": 2026,
+          "papers": 33,
+          "issues": 3,
+          "coverage": "complete",
+          "asOf": "2026-10-21",
+          "periodKind": "ytd",
+          "sourceUrls": [
+            "https://vjs.ac.vn/vjbt/issue/archive",
+            "https://vjs.ac.vn/vjbt/issue/view/1442",
+            "https://vjs.ac.vn/vjbt/issue/view/1427",
+            "https://vjs.ac.vn/vjbt/issue/view/vol24n1"
+          ],
+          "issueItems": [
+            {
+              "id": "vol24n1",
+              "title": "Vol. 24 No. 1 (2026)",
+              "published": "2026-03-27",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/vol24n1",
+              "paperKeys": [
+                "doi:10.15625/vjbt-23543",
+                "doi:10.15625/vjbt-24015",
+                "doi:10.15625/vjbt-23336",
+                "doi:10.15625/vjbt-21946",
+                "doi:10.15625/vjbt-23273",
+                "doi:10.15625/vjbt-21874",
+                "doi:10.15625/vjbt-23376",
+                "doi:10.15625/vjbt-22971",
+                "doi:10.15625/vjbt-23173",
+                "doi:10.15625/vjbt-22443",
+                "doi:10.15625/vjbt-22393"
+              ]
+            },
+            {
+              "id": "vol24n2",
+              "title": "Vol. 24 No. 2 (2026)",
+              "published": "2026-06-24",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1427",
+              "paperKeys": [
+                "doi:10.15625/vjbt-23474",
+                "doi:10.15625/vjbt-23261",
+                "doi:10.15625/vjbt-24007",
+                "doi:10.15625/vjbt-23548",
+                "doi:10.15625/vjbt-24452",
+                "doi:10.15625/vjbt-23386",
+                "doi:10.15625/vjbt-23946",
+                "doi:10.15625/vjbt-23764",
+                "doi:10.15625/vjbt-23338",
+                "doi:10.15625/vjbt-22442",
+                "doi:10.15625/vjbt-23418"
+              ]
+            },
+            {
+              "id": "vol24n3",
+              "title": "Vol. 24 No. 3 (2026)",
+              "published": "2026-09-29",
+              "url": "https://vjs.ac.vn/vjbt/issue/view/1442",
+              "paperKeys": [
+                "doi:10.15625/vjbt-24869",
+                "doi:10.15625/vjbt-24585",
+                "doi:10.15625/vjbt-23884",
+                "doi:10.15625/vjbt-21694",
+                "doi:10.15625/vjbt-24204",
+                "doi:10.15625/vjbt-24706",
+                "doi:10.15625/vjbt-25046",
+                "doi:10.15625/vjbt-24362",
+                "doi:10.15625/vjbt-24914",
+                "doi:10.15625/vjbt-23327",
+                "doi:10.15625/vjbt-24422"
+              ]
+            }
+          ],
+          "note": "All three 2026 issue pages were read; review/article entries yield 33 unique DOI paper keys through 2026-09-29."
+        }
       ]
     }
   ],

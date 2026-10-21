@@ -21,7 +21,7 @@ assert.equal(scopus.records.length,84,'Baseline must retain all 84 observations.
 assert.equal(new Set(scopus.records.map(r=>r.journal+'|'+r.year+'|'+r.type)).size,84,'Duplicate official observations.');
 const evidence=await Promise.all(profileFiles.map(f=>readJson(path.join(root,f))));
 const audits=await Promise.all(auditFiles.map(f=>readJson(path.join(root,f))));
-const collectedAt=evidence[0].collectedAt,currentYear=Number(collectedAt.slice(0,4));
+const collectedAt=evidence[0].collectedAt,currentYear=Number(collectedAt.slice(0,4)),outputYears=Array.from({length:currentYear-2019},(_,i)=>2020+i);
 assert(evidence.every(e=>e.collectedAt===collectedAt),'Profile evidence dates must agree.');
 const profiles=evidence.flatMap(e=>e.journals),localAudits=audits.flatMap(a=>a.journals);
 assert.deepEqual(profiles.map(j=>j.id).sort(),[...order].sort(),'Need exactly the 12 agreed journal profiles.');
@@ -83,7 +83,7 @@ for(let index=0;index<order.length;index++){
   j.indexings.unshift({system:'Scopus',collection:null,status:'listed',evidenceLevel:'database',sourceUrl:'https://www.scopus.com/sourceid/'+original.sourceId,checkedAt:scopus.reportDate,coverage:original.coverage});
  }
  for(const i of j.indexings){assert(['listed','not_listed','unverified'].includes(i.status),j.code+': invalid indexing status.');assert(['database','journal','vast'].includes(i.evidenceLevel),j.code+': invalid evidence level.');assert(/^https?:\/\//.test(i.sourceUrl),j.code+': indexing needs a source URL.');}
- assert.equal(j.outputs.length,2,j.code+': need both reporting periods.');
+ assert.deepEqual(j.outputs.map(o=>o.year),outputYears,j.code+': need 2020-2026 reporting periods.');
  for(const o of j.outputs)validateOutput(j,o);
  const category=categories[j.code];
  if(category){const r=scopus.records.find(r=>r.journal===j.code&&r.type==='annual'&&r.year===2025);assert(r.evidenceQuote.includes(category[0])&&r.evidenceQuote.includes(category[1]+'%')&&r.evidenceQuote.includes(category[2]+'/'+category[3]),j.code+': percentile not supported by baseline quote.');j.scopusCategories=[{year:2025,name:category[0],percentile:category[1],rank:category[2],total:category[3],sourceUrl:'https://www.scopus.com/sourceid/'+original.sourceId}];}
@@ -92,7 +92,7 @@ for(let index=0;index<order.length;index++){
  journals.push(j);
 }
 const snapshotId=collectedAt+'-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
-const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears:[currentYear-1,currentYear],defaultOutputYear:currentYear-1,officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},sources,history:[{date:collectedAt,title:'Danh mục 12 tạp chí và bộ thống kê đã thu thập',description:'Bổ sung hồ sơ, nguồn chỉ mục, sản lượng theo số đã phát hành và số liệu trích dẫn từ 9 bộ thu thập. Các chỉ số tự tính được tách khỏi Scopus chính thức.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
+const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},sources,history:[{date:collectedAt,title:'Danh mục 12 tạp chí và bộ thống kê đã thu thập (2020–2026)',description:'Bổ sung hồ sơ, nguồn chỉ mục, sản lượng theo số đã phát hành giai đoạn 2020–2026 cho cả 12 tạp chí và số liệu trích dẫn từ 9 bộ thu thập. Các chỉ số tự tính được tách khỏi Scopus chính thức.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
 const serialized=JSON.stringify(dataset,null,2)+'\n';
 if(process.argv.includes('--write')){
  await mkdir(path.join(root,'data/snapshots'),{recursive:true});
