@@ -3908,6 +3908,13 @@
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/vjchem/statistic",
         "officialScopusMetric": false,
+        "totals": {
+          "sourceRows": 5853,
+          "citingDocs": 4700,
+          "citations": 5013,
+          "citedArticles": 856,
+          "hIndex": 26
+        },
         "citationSeries": [
           {
             "year": 2007,
@@ -4755,6 +4762,13 @@
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/jse/statistic",
         "officialScopusMetric": false,
+        "totals": {
+          "sourceRows": 1884,
+          "citingDocs": 1761,
+          "citations": 2759,
+          "citedArticles": 347,
+          "hIndex": 23
+        },
         "citationSeries": [
           {
             "year": 2014,
@@ -6079,6 +6093,13 @@
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/jst/statistic",
         "officialScopusMetric": false,
+        "totals": {
+          "sourceRows": 3524,
+          "citingDocs": 2591,
+          "citations": 2759,
+          "citedArticles": 856,
+          "hIndex": 16
+        },
         "citationSeries": [
           {
             "year": 2014,
@@ -6924,6 +6945,13 @@
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/cip/statistic",
         "officialScopusMetric": false,
+        "totals": {
+          "sourceRows": 342,
+          "citingDocs": 220,
+          "citations": 250,
+          "citedArticles": 140,
+          "hIndex": 5
+        },
         "citationSeries": [
           {
             "year": 2007,
@@ -7735,6 +7763,13 @@
         "processedAt": "2026-10-20",
         "publicSourceUrl": "https://vjs.ac.vn/vjmech/statistic",
         "officialScopusMetric": false,
+        "totals": {
+          "sourceRows": 1040,
+          "citingDocs": 1028,
+          "citations": 1160,
+          "citedArticles": 319,
+          "hIndex": 12
+        },
         "citationSeries": [
           {
             "year": 2002,
@@ -8525,6 +8560,13 @@
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/jcc/statistic",
         "officialScopusMetric": false,
+        "totals": {
+          "sourceRows": 2123,
+          "citingDocs": 2074,
+          "citations": 2208,
+          "citedArticles": 229,
+          "hIndex": 14
+        },
         "citationSeries": [
           {
             "year": 2001,
@@ -9518,6 +9560,13 @@
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/vjbio/statistic",
         "officialScopusMetric": false,
+        "totals": {
+          "sourceRows": 2954,
+          "citingDocs": 1011,
+          "citations": 1199,
+          "citedArticles": 443,
+          "hIndex": 11
+        },
         "citationSeries": [
           {
             "year": 2009,
@@ -10392,6 +10441,13 @@
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/jmst/statistic",
         "officialScopusMetric": false,
+        "totals": {
+          "sourceRows": 442,
+          "citingDocs": 392,
+          "citations": 558,
+          "citedArticles": 290,
+          "hIndex": 7
+        },
         "citationSeries": [
           {
             "year": 2014,
@@ -11387,6 +11443,13 @@
         "processedAt": "2026-10-19",
         "publicSourceUrl": "https://vjs.ac.vn/vjbt/statistic",
         "officialScopusMetric": false,
+        "totals": {
+          "sourceRows": 520,
+          "citingDocs": 459,
+          "citations": 508,
+          "citedArticles": 242,
+          "hIndex": 7
+        },
         "citationSeries": [
           {
             "year": 2018,
