@@ -1,0 +1,267 @@
+{
+  "reportDate": "2026-10-21",
+  "accessDate": "2026-10-21",
+  "method": "Doc truc tiep tren Scopus Preview (www.scopus.com) bang trinh duyet managed: (a) trang Source details /sourceid/<ID>; (b) trang /sources, loc theo ISSN, doi 'View metrics for year' bang dropdown that (click chuot), moi nam doc dong ket qua (CiteScore, Citations, Documents). Header cot Citations/Documents doi cua so nam (vd 2021-24) xac nhan bang da tai lai theo nam. Khong dung publisher/VAST/Resurchify/SCImago/AI-search lam so lieu; chi dung de nhan dien tap chi. Khong noi suy. Khong tron SJR/SNIP/JIF. Khong gap chan Cloudflare trong tab cua worker nay (Main bao tab cua Main bi 429/Cloudflare).",
+  "sourceURLs": {
+    "sourcesList": "https://www.scopus.com/sources (title: 'Scopus preview - Scopus - Sources'; ISSN search; URL sau khi doi nam hien https://www.scopus.com/sources.uri)",
+    "VJES": "https://www.scopus.com/sourceid/21101039869",
+    "CIP": "https://www.scopus.com/sourceid/21101380177"
+  },
+  "journals": {
+    "VJES": {
+      "title": "Vietnam Journal of Earth Sciences",
+      "scopusSourceId": "21101039869",
+      "sourceIdVerified": "Co. Link ket qua tren Scopus Sources (tim theo ISSN 2615-9783) va trang sourceid/21101039869 tieu de 'Scopus preview - Scopus - Vietnam Journal of Earth Sciences'; jMetrics.sourceID = 21101039869.",
+      "issn": "2615-9783",
+      "eissn": "2815-5890",
+      "publisher": "Publishing House of Natural Science and Technology, VAST",
+      "scopusCoverage": "2018-2026 (Years currently covered by Scopus: from 2018 to 2026)",
+      "subjectArea": "Earth and Planetary Sciences: General Earth and Planetary Sciences",
+      "citeScoreSeries": [
+        {
+          "metricYear": 2025,
+          "value": 5,
+          "citations": 604,
+          "documents": 122,
+          "window": "2022-2025",
+          "rank": "45/201",
+          "percentile": "77th",
+          "status": "verified_scopus_direct",
+          "calculatedOn": "05 May 2026",
+          "sourceURL": "https://www.scopus.com/sourceid/21101039869 va https://www.scopus.com/sources (nam 2025)",
+          "sourceTitle": "Scopus preview - Scopus - Vietnam Journal of Earth Sciences / Sources",
+          "evidenceQuote": "CiteScore year 2025 5.0 = 604 Citations 2022 - through 2025 divided by 122 Documents 2022 - through 2025. Calculated on 05 May, 2026 | Sources row: Vietnam Journal of Earth Sciences 5.0 77% 45/201 ... 604 122 75 0.706 0.404"
+        },
+        {
+          "metricYear": 2024,
+          "value": 4,
+          "citations": 479,
+          "documents": 119,
+          "window": "2021-2024",
+          "rank": "60/198",
+          "percentile": "69%",
+          "status": "verified_scopus_direct",
+          "sourceURL": "https://www.scopus.com/sources (View metrics for year 2024, loc ISSN 2615-9783)",
+          "sourceTitle": "Scopus preview - Scopus - Sources",
+          "evidenceQuote": "View metrics for year: 2024 ... Citations 2021-24 Documents 2021-24 ... Vietnam Journal of Earth Sciences 4.0 69% 60/198 General Earth and Planetary Sciences 479 119 76 0.816 0.452"
+        },
+        {
+          "metricYear": 2023,
+          "value": 3.6,
+          "citations": 421,
+          "documents": 117,
+          "window": "2020-2023",
+          "rank": "62/195",
+          "percentile": "68%",
+          "status": "verified_scopus_direct",
+          "sourceURL": "https://www.scopus.com/sources (nam 2023)",
+          "sourceTitle": "Scopus preview - Scopus - Sources",
+          "evidenceQuote": "View metrics for year: 2023 ... Citations 2020-23 Documents 2020-23 ... Vietnam Journal of Earth Sciences 3.6 68% 62/195 General Earth and Planetary Sciences 421 117 74 0.505 0.389"
+        },
+        {
+          "metricYear": 2022,
+          "value": 3.1,
+          "citations": 357,
+          "documents": 115,
+          "window": "2019-2022",
+          "rank": "71/192",
+          "percentile": "63%",
+          "status": "verified_scopus_direct",
+          "sourceURL": "https://www.scopus.com/sources (nam 2022)",
+          "sourceTitle": "Scopus preview - Scopus - Sources",
+          "evidenceQuote": "View metrics for year: 2022 ... Citations 2019-22 Documents 2019-22 ... Vietnam Journal of Earth Sciences 3.1 63% 71/192 General Earth and Planetary Sciences 357 115 68 0.548 0.311"
+        },
+        {
+          "metricYear": 2021,
+          "value": 1.5,
+          "citations": 83,
+          "documents": 54,
+          "window": "2018-2021",
+          "rank": "113/191",
+          "percentile": "41%",
+          "status": "verified_scopus_direct",
+          "sourceURL": "https://www.scopus.com/sources (nam 2021)",
+          "sourceTitle": "Scopus preview - Scopus - Sources",
+          "evidenceQuote": "View metrics for year: 2021 ... Citations 2018-21 Documents 2018-21 ... Vietnam Journal of Earth Sciences 1.5 41% 113/191 General Earth and Planetary Sciences 83 54 46 0.647 0.414"
+        },
+        {
+          "metricYear": 2020,
+          "value": 0.7,
+          "citations": 23,
+          "documents": 31,
+          "window": "2017-2020",
+          "rank": "139/186",
+          "percentile": "25%",
+          "status": "verified_scopus_direct",
+          "sourceURL": "https://www.scopus.com/sources (nam 2020)",
+          "sourceTitle": "Scopus preview - Scopus - Sources",
+          "evidenceQuote": "View metrics for year: 2020 ... Citations 2017-20 Documents 2017-20 ... Vietnam Journal of Earth Sciences 0.7 25% 139/186 General Earth and Planetary Sciences 23 31 23 0.761 N/A"
+        },
+        {
+          "metricYear": 2019,
+          "value": null,
+          "status": "scopus_na_no_citescore",
+          "sourceURL": "https://www.scopus.com/sources (nam 2019)",
+          "sourceTitle": "Scopus preview - Scopus - Sources",
+          "evidenceQuote": "View metrics for year: 2019 ... Vietnam Journal of Earth Sciences N/A N/A N/A N/A N/A 0.786 N/A",
+          "note": "Scopus hien CiteScore N/A cho 2019 (chi co SNIP 0.786, khong dung). Day khong phai 0; chi nghia la Scopus khong cong bo CiteScore."
+        },
+        {
+          "metricYear": 2018,
+          "value": null,
+          "status": "scopus_na_no_citescore",
+          "sourceURL": "https://www.scopus.com/sources (nam 2018)",
+          "evidenceQuote": "View metrics for year: 2018 ... Vietnam Journal of Earth Sciences N/A N/A N/A N/A N/A N/A N/A"
+        },
+        {
+          "metricYear": 2017,
+          "value": null,
+          "status": "scopus_na_no_citescore",
+          "evidenceQuote": "View metrics for year: 2017 ... N/A N/A N/A N/A N/A N/A N/A (ngoai coverage 2018+)"
+        },
+        {
+          "metricYear": 2016,
+          "value": null,
+          "status": "scopus_na_no_citescore",
+          "evidenceQuote": "View metrics for year: 2016 ... N/A x7"
+        },
+        {
+          "metricYear": 2015,
+          "value": null,
+          "status": "scopus_na_no_citescore",
+          "evidenceQuote": "View metrics for year: 2015 ... N/A x7"
+        }
+      ],
+      "citeScoreTracker": {
+        "trackerYear": 2026,
+        "value": 4.6,
+        "citations": 502,
+        "documents": 108,
+        "lastUpdated": "05 October, 2026 (updated monthly)",
+        "status": "verified_scopus_direct_tracker_not_annual",
+        "sourceURL": "https://www.scopus.com/sourceid/21101039869",
+        "evidenceQuote": "CiteScoreTracker 2026 4.6 = 502 Citations to date divided by 108 Documents to date. Last updated on 05 October, 2026"
+      },
+      "separatedMetrics_notUsedAsCiteScore": {
+        "SJR": {
+          "2021": 0.414,
+          "2022": 0.311,
+          "2023": 0.389,
+          "2024": 0.452,
+          "2025": 0.404
+        },
+        "SNIP": {
+          "2019": 0.786,
+          "2020": 0.761,
+          "2021": 0.647,
+          "2022": 0.548,
+          "2023": 0.505,
+          "2024": 0.816,
+          "2025": 0.706
+        },
+        "note": "Chi de tham khao, doc cung dong Scopus Sources; KHONG phai CiteScore."
+      },
+      "uncheckedNote": "Source details preview chi cho dropdown 2020-2025 va khong cap nhat so khi doi nam trong tab cua worker (jQuery selectmenu, khong goi AJAX); chuoi 2020-2025 lay tu /sources thay the."
+    },
+    "CIP": {
+      "title": "Communications in Physics",
+      "scopusSourceId": "21101380177",
+      "sourceIdVerified": "Co. Ket qua Scopus Sources tim theo ISSN 0868-3166 co link https://www.scopus.com/sourceid/21101380177; trang do tieu de 'Scopus preview - Scopus - Communications in Physics'.",
+      "issn": "0868-3166",
+      "eissn": "2815-5947",
+      "publisher": "Vietnam Academy of Science and Technology",
+      "openAccess": true,
+      "scopusCoverage": "2022-2026 (Years currently covered by Scopus: from 2022 to 2026)",
+      "subjectArea": "Physics and Astronomy: General Physics and Astronomy",
+      "citeScoreSeries": [
+        {
+          "metricYear": 2025,
+          "value": null,
+          "status": "scopus_na_no_annual_citescore",
+          "sourceURL": "https://www.scopus.com/sources (nam 2025, loc ISSN 0868-3166)",
+          "sourceTitle": "Scopus preview - Scopus - Sources",
+          "evidenceQuote": "View metrics for year: 2025 ... 1 Communications in PhysicsOpen Access N/A N/A N/A N/A N/A N/A N/A Vietnam Academy of Science and Technology"
+        },
+        {
+          "metricYear": 2024,
+          "value": null,
+          "status": "scopus_na_no_annual_citescore",
+          "evidenceQuote": "View metrics for year: 2024 ... Communications in PhysicsOpen Access N/A N/A N/A N/A N/A N/A N/A"
+        },
+        {
+          "metricYear": 2023,
+          "value": null,
+          "status": "scopus_na_no_annual_citescore",
+          "evidenceQuote": "View metrics for year: 2023 ... N/A x7"
+        },
+        {
+          "metricYear": 2022,
+          "value": null,
+          "status": "scopus_na_no_annual_citescore",
+          "evidenceQuote": "View metrics for year: 2022 ... N/A x7"
+        },
+        {
+          "metricYear": 2021,
+          "value": null,
+          "status": "scopus_na_no_annual_citescore",
+          "evidenceQuote": "View metrics for year: 2021 ... N/A x7 (ngoai coverage)"
+        },
+        {
+          "metricYear": 2020,
+          "value": null,
+          "status": "scopus_na_no_annual_citescore",
+          "evidenceQuote": "View metrics for year: 2020 ... N/A x7"
+        },
+        {
+          "metricYear": 2019,
+          "value": null,
+          "status": "scopus_na_no_annual_citescore",
+          "evidenceQuote": "View metrics for year: 2019 ... N/A x7"
+        },
+        {
+          "metricYear": 2018,
+          "value": null,
+          "status": "scopus_na_no_annual_citescore",
+          "evidenceQuote": "View metrics for year: 2018 ... N/A x7"
+        },
+        {
+          "metricYear": 2017,
+          "value": null,
+          "status": "scopus_na_no_annual_citescore",
+          "evidenceQuote": "View metrics for year: 2017 ... N/A x7"
+        },
+        {
+          "metricYear": 2016,
+          "value": null,
+          "status": "scopus_na_no_annual_citescore",
+          "evidenceQuote": "View metrics for year: 2016 ... N/A x7"
+        },
+        {
+          "metricYear": 2015,
+          "value": null,
+          "status": "scopus_na_no_annual_citescore",
+          "evidenceQuote": "View metrics for year: 2015 ... N/A x7"
+        }
+      ],
+      "citeScoreTracker": {
+        "trackerYear": 2026,
+        "value": 0.7,
+        "citations": 97,
+        "documents": 130,
+        "lastUpdated": "05 October, 2026 (updated monthly)",
+        "status": "verified_scopus_direct_tracker_not_annual",
+        "sourceURL": "https://www.scopus.com/sourceid/21101380177",
+        "sourceTitle": "Scopus preview - Scopus - Communications in Physics",
+        "evidenceQuote": "CiteScoreTracker 2026 0.7 = fraction 97 Citations to date divided by 130 Documents to date Last updated on 05 October, 2026 • Updated monthly"
+      },
+      "notes": "Scopus Source details khong hien o CiteScore nam nao (khong co the 'CiteScore 20xx', khong dropdown nam, jMetrics.metrics value rong year -1), chi co CiteScoreTracker 2026. KHONG phai 0: la 'chua co CiteScore nam chinh thuc'. Tracker 0.7 la gia tri tam thoi, khong dua vao chuoi nam. Thoi diem ghi nhan vao Scopus theo VAST: ban tin 11/09/2026 dan Scopus Source Title List thang 8/2026 (nguon thu cap, chi nhan dien, khong phai so lieu CiteScore); trang Scopus cho coverage 2022-2026."
+    }
+  },
+  "limits": [
+    "Tab cua Main bi 429 / Cloudflare block tren /sources; tab cua worker nay khong bi chan nhung chi dung truy cap toi thieu (khong goi API, khong lach).",
+    "VJES 2019 CiteScore N/A tren Scopus Sources: khong co gia tri de dien; khong noi suy.",
+    "Chua doc bang CSV export chinh thuc (Download Scopus Source List); so lieu lay tu giao dien Scopus Preview, co the truy xuat lai bang cung thao tac.",
+    "Gia tri Scopus Preview co the doi khi Scopus cap nhat; thoi diem doc 21/10/2026."
+  ],
+  "chiefSummary": "VJES (ID 21101039869): 2020=0.7, 2021=1.5, 2022=3.1, 2023=3.6, 2024=4.0, 2025=5.0 (moi diem co citations/documents va cua so 4 nam), Tracker 2026=4.6 (502/108); 2015-2019 N/A (2019 co SNIP nhung CiteScore N/A). CIP (ID 21101380177): coverage 2022-2026, CiteScore nam 2015-2025 deu N/A tren Scopus (null, khong phai 0), chi co Tracker 2026=0.7 (97/130, cap nhat 05/10/2026)."
+}

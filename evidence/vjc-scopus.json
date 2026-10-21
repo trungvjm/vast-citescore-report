@@ -1,0 +1,144 @@
+{
+  "reportDate": "2026-10-21",
+  "method": "Doc truc tiep tren Scopus Preview: trang /sourceid/21101043786 (Source details, Tracker) va /sources (loc ISSN 2572-8288, doi 'View metrics for year' bang click dropdown that; header Citations/Documents doi cua so nam xac nhan). Khong dung nguon ngoai lam so lieu. Khong bi block trong tab nay.",
+  "journal": {
+    "title": "Vietnam Journal of Chemistry",
+    "scopusSourceId": "21101043786",
+    "sourceIdVerified": "Co. Ket qua /sources theo E-ISSN 2572-8288 co link https://www.scopus.com/sourceid/21101043786; jMetrics.sourceID=21101043786; title 'Scopus preview - Scopus - Vietnam Journal of Chemistry'",
+    "issn": null,
+    "eissn": "2572-8288",
+    "publisher": "John Wiley & Sons",
+    "scopusCoverage": "2018-2026",
+    "subjectArea": "Chemistry: General Chemistry",
+    "sourceURL": "https://www.scopus.com/sourceid/21101043786",
+    "citeScoreSeries": [
+      {
+        "metricYear": 2025,
+        "value": 3,
+        "citations": 1313,
+        "documents": 433,
+        "window": "2022-2025",
+        "rank": "227/402",
+        "percentile": "43%",
+        "status": "verified_scopus_direct",
+        "calculatedOn": "05 May 2026",
+        "sourceTitle": "Scopus preview - Scopus - Sources / Vietnam Journal of Chemistry",
+        "evidenceQuote": "Vietnam Journal of Chemistry 3.0 43% 227/402 General Chemistry 1,313 433 72 0.438 0.303 John Wiley & Sons | source details: CiteScore year 2025 3.0 = 1,313 Citations 2022 - through 2025 divided by 433 Documents 2022 - through 2025 Calculated on 05 May, 2026"
+      },
+      {
+        "metricYear": 2024,
+        "value": 2.3,
+        "citations": 1068,
+        "documents": 462,
+        "window": "2021-2024",
+        "rank": "248/404",
+        "percentile": "38%",
+        "status": "verified_scopus_direct",
+        "sourceTitle": "Scopus preview - Scopus - Sources",
+        "evidenceQuote": "View metrics for year: 2024 ... Citations 2021-24 Documents 2021-24 ... Vietnam Journal of Chemistry 2.3 38% 248/404 General Chemistry 1,068 462 61 0.414 0.285"
+      },
+      {
+        "metricYear": 2023,
+        "value": 1.7,
+        "citations": 813,
+        "documents": 468,
+        "window": "2020-2023",
+        "rank": "274/408",
+        "percentile": "32%",
+        "status": "verified_scopus_direct",
+        "evidenceQuote": "View metrics for year: 2023 ... Citations 2020-23 Documents 2020-23 ... Vietnam Journal of Chemistry 1.7 32% 274/408 General Chemistry 813 468 57 0.395 0.23"
+      },
+      {
+        "metricYear": 2022,
+        "value": 1.4,
+        "citations": 638,
+        "documents": 460,
+        "window": "2019-2022",
+        "rank": "294/407",
+        "percentile": "27%",
+        "status": "verified_scopus_direct",
+        "evidenceQuote": "View metrics for year: 2022 ... Citations 2019-22 Documents 2019-22 ... Vietnam Journal of Chemistry 1.4 27% 294/407 General Chemistry 638 460 55 0.336 0.204"
+      },
+      {
+        "metricYear": 2021,
+        "value": 0.5,
+        "citations": 109,
+        "documents": 237,
+        "window": "2018-2021",
+        "rank": "363/409",
+        "percentile": "11%",
+        "status": "verified_scopus_direct",
+        "evidenceQuote": "View metrics for year: 2021 ... Citations 2018-21 Documents 2018-21 ... Vietnam Journal of Chemistry 0.5 11% 363/409 General Chemistry 109 237 28 0.283 0.173"
+      },
+      {
+        "metricYear": 2020,
+        "value": null,
+        "status": "scopus_na_no_citescore",
+        "evidenceQuote": "View metrics for year: 2020 ... Vietnam Journal of Chemistry N/A N/A N/A N/A N/A 0.232 N/A",
+        "note": "CiteScore N/A tren Scopus (chi SNIP 0.232); khong phai 0."
+      },
+      {
+        "metricYear": 2019,
+        "value": null,
+        "status": "scopus_na_no_citescore",
+        "evidenceQuote": "View metrics for year: 2019 ... Vietnam Journal of Chemistry N/A N/A N/A N/A N/A 0.101 N/A"
+      },
+      {
+        "metricYear": 2018,
+        "value": null,
+        "status": "scopus_na_no_citescore",
+        "evidenceQuote": "View metrics for year: 2018 ... N/A x7"
+      },
+      {
+        "metricYear": 2017,
+        "value": null,
+        "status": "scopus_na_no_citescore",
+        "evidenceQuote": "View metrics for year: 2017 ... N/A x7"
+      },
+      {
+        "metricYear": 2016,
+        "value": null,
+        "status": "scopus_na_no_citescore",
+        "evidenceQuote": "View metrics for year: 2016 ... N/A x7"
+      },
+      {
+        "metricYear": 2015,
+        "value": null,
+        "status": "scopus_na_no_citescore",
+        "evidenceQuote": "View metrics for year: 2015 ... N/A x7"
+      }
+    ],
+    "citeScoreTracker": {
+      "trackerYear": 2026,
+      "value": 3.4,
+      "citations": 1418,
+      "documents": 414,
+      "lastUpdated": "05 October, 2026 (updated monthly)",
+      "status": "verified_scopus_direct_tracker_not_annual",
+      "sourceURL": "https://www.scopus.com/sourceid/21101043786",
+      "evidenceQuote": "CiteScoreTracker 2026 3.4 = fraction 1,418 Citations to date divided by 414 Documents to date Last updated on 05 October, 2026"
+    },
+    "separatedMetrics_notUsedAsCiteScore": {
+      "SJR": {
+        "2021": 0.173,
+        "2022": 0.204,
+        "2023": 0.23,
+        "2024": 0.285,
+        "2025": 0.303
+      },
+      "SNIP": {
+        "2019": 0.101,
+        "2020": 0.232,
+        "2021": 0.283,
+        "2022": 0.336,
+        "2023": 0.395,
+        "2024": 0.414,
+        "2025": 0.438
+      }
+    }
+  },
+  "limits": [
+    "Doc tu giao dien Scopus Preview, chua dung file export Scopus Source List.",
+    "Thoi diem doc 21/10/2026."
+  ]
+}
