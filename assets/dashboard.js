@@ -14,16 +14,16 @@ const fullName=j=>j.title+' ('+j.code+')';
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 
 const brandThemes=[
- {id:'nature',name:'1. Nature Portfolio',short:'Nature',accent:'#a31d32',paper:'#ffffff',desc:'Nature Portfolio (Springer Nature) — Trắng học thuật, đỏ crimson & serif cổ điển'},
- {id:'economist',name:'2. The Economist',short:'Economist',accent:'#e3120b',paper:'#f9f8f5',desc:'The Economist — Viền đỏ đặc trưng, nền giấy ấm & bảng màu Data Team'},
- {id:'ft',name:'3. Financial Times',short:'Financial Times',accent:'#990f3d',paper:'#fff1e5',desc:'Financial Times — Giấy hồng salmon đặc trưng, đỏ claret & xanh Oxford'},
- {id:'scopus',name:'4. Elsevier Scopus',short:'Scopus',accent:'#ff6c00',paper:'#f7f9fc',desc:'Elsevier Scopus — Cam phân tích, xanh hải quân đậm & kiểu chữ hiện đại'},
- {id:'clarivate',name:'5. Clarivate WoS',short:'Clarivate WoS',accent:'#5e33bf',paper:'#f9f8fc',desc:'Clarivate Web of Science — Tím hoàng gia, chàm đậm & bố cục chỉ mục'},
- {id:'science',name:'6. Science (AAAS)',short:'Science AAAS',accent:'#c5001a',paper:'#ffffff',desc:'Science (AAAS) — Đỏ tươi AAAS, đường kẻ đen sắc nét & tương phản cao'},
- {id:'springer',name:'7. SpringerLink',short:'SpringerLink',accent:'#025e8d',paper:'#f6f9fb',desc:'SpringerLink — Thanh tiêu đề xanh navy học thuật & lam cerulean'},
- {id:'wiley',name:'8. Wiley Library',short:'Wiley',accent:'#00594f',paper:'#f7fbfa',desc:'Wiley Online Library — Xanh ngọc lục bảo, xanh lục nhạt & bo góc mềm'},
- {id:'nytimes',name:'9. NYT The Upshot',short:'NYT Upshot',accent:'#326891',paper:'#fdfdfc',desc:'The New York Times (The Upshot) — Viền kép nhật báo, chữ serif & xanh thép'},
- {id:'bloomberg',name:'10. Bloomberg Dark',short:'Bloomberg',accent:'#ff8000',paper:'#0d1219',desc:'Bloomberg Terminal — Nền tối carbon, cam hổ phách, xanh lục & font số kỹ thuật'}
+ {id:'nature',name:'1. Nature Portfolio',layoutTag:'Tạp chí Khoa học',kicker:'NATURE PORTFOLIO · SCIENTIFIC JOURNAL REPORT',spec:'Font: Source Serif 4 + Geist · Bố cục: Tạp chí học thuật 2 cột bất đối xứng',accent:'#a31d32',paper:'#ffffff',desc:'Nature Portfolio — Tiêu đề Serif cổ điển, dải chỉ số mở và bố cục bài báo khoa học'},
+ {id:'economist',name:'2. The Economist',layoutTag:'Hero Chia đôi & Đảo cột',kicker:'THE ECONOMIST · GRAPHIC DETAIL & BRIEFING',spec:'Font: Merriweather + IBM Plex Sans · Bố cục: Hero 2×2 trái + Xếp hạng dẫn trước biểu đồ',accent:'#e3120b',paper:'#f9f8f5',desc:'The Economist — Tag đỏ đỉnh trang, cụm KPI 2×2 bên trái Nhận xét, cột xếp hạng đặt trước biểu đồ'},
+ {id:'ft',name:'3. Financial Times',layoutTag:'Nhật báo Chính tâm',kicker:'FINANCIAL TIMES · FT DATA & MARKETS JOURNALISM',spec:'Font: Libre Baskerville + IBM Plex · Bố cục: Masthead chính tâm & cột ngăn dọc báo in',accent:'#990f3d',paper:'#fff1e5',desc:'Financial Times — Quốc huy chính tâm, giấy hồng salmon, vạch ngăn dọc giữa các chỉ số'},
+ {id:'scopus',name:'4. Elsevier Scopus',layoutTag:'Bento Cards 2×2',kicker:'ELSEVIER SCOPUS · RESEARCH ANALYTICS ENGINE',spec:'Font: Plus Jakarta Sans + JetBrains Mono · Bố cục: Thẻ nổi Bento SaaS & lưới biểu đồ đóng khung',accent:'#ff6c00',paper:'#f7f9fc',desc:'Elsevier Scopus — Thanh điều hướng xanh hải quân, thẻ KPI nổi viền cam và khung phân tích Bento'},
+ {id:'clarivate',name:'5. Clarivate WoS',layoutTag:'Cổng Chỉ mục & Lưới ngang',kicker:'CLARIVATE ANALYTICS · WEB OF SCIENCE MASTER PORTAL',spec:'Font: Outfit + Plus Jakarta Sans · Bố cục: Banner tím gradient, tab viên thuốc & lưới thẻ 2 cột dưới biểu đồ',accent:'#5e33bf',paper:'#f9f8fc',desc:'Clarivate WoS — Banner tím hoàng gia, điều hướng dạng pill và biểu đồ toàn chiều ngang kèm lưới thẻ 2 cột'},
+ {id:'science',name:'6. Science (AAAS)',layoutTag:'Tạp chí Brutalist Đan xen',kicker:'SCIENCE · AAAS EDITORIAL & METRICS DOSSIER',spec:'Font: Oswald In hoa + Source Serif 4 · Bố cục: Khung viền đen đổ bóng cứng & đảo chiều biểu đồ chẵn/lẻ',accent:'#c5001a',paper:'#ffffff',desc:'Science (AAAS) — Chữ Oswald in hoa cô đọng, viền đen 4px, khung đổ bóng brutalist và đảo vị trí biểu đồ'},
+ {id:'springer',name:'7. SpringerLink',layoutTag:'Cổng Học thuật Đóng khung',kicker:'SPRINGER NATURE LINK · ACADEMIC PUBLISHING PORTAL',spec:'Font: Merriweather + IBM Plex Sans · Bố cục: Header 2 tầng xanh navy, dải tóm tắt 3 cột & bảng kẻ sọc',accent:'#025e8d',paper:'#f6f9fb',desc:'SpringerLink — Thanh tiêu đề xanh navy đậm, tiêu đề khối nền xanh nhạt và bảng dữ liệu kẻ sọc học thuật'},
+ {id:'wiley',name:'8. Wiley Library',layoutTag:'Thẻ Mềm & Hàng Bảng Nổi',kicker:'WILEY ONLINE LIBRARY · RESEARCH METRICS HUB',spec:'Font: Newsreader + Plus Jakarta Sans · Bố cục: Thẻ bo tròn 12px, lưới so sánh 2 cột & hàng bảng tách rời',accent:'#00594f',paper:'#f7fbfa',desc:'Wiley Online Library — Chữ Newsreader mềm mại, thẻ bo góc lớn, bảng danh mục tách từng hàng nổi'},
+ {id:'nytimes',name:'9. NYT The Upshot',layoutTag:'Báo in Đa cột Tufte',kicker:'THE NEW YORK TIMES · THE UPSHOT STATISTICAL REVIEW',spec:'Font: Playfair Display + Newsreader · Bố cục: Báo in 3 cột không khung hộp, tiêu đề nghiêng & biểu đồ Tufte',accent:'#326891',paper:'#fdfdfc',desc:'The New York Times — Masthead viền kép, văn bản chia cột báo in, lược bỏ hoàn toàn khung hộp thừa'},
+ {id:'bloomberg',name:'10. Bloomberg Dark',layoutTag:'Ma trận Terminal <GO>',kicker:'BLOOMBERG TERMINAL · VAST JOURNALS ANALYTICS <GO>',spec:'Font: 100% JetBrains Mono · Bố cục: Ma trận dữ liệu mật độ cao, ô kẻ lưới 4 cạnh & nhãn lệnh [F1–F4]',accent:'#ff8000',paper:'#0d1219',desc:'Bloomberg Terminal — Toàn bộ chữ Monospace kỹ thuật, nền tối carbon, ô ma trận sắc nét & màu neon'}
 ];
 
 const metricInfo={citescore:{label:'CiteScore & Tracker chính thức',short:'CiteScore',scopus:true,decimals:1},citations:{label:'Trích dẫn trong cửa sổ CiteScore',short:'Trích dẫn',scopus:true},documents:{label:'Tài liệu trong cửa sổ CiteScore',short:'Tài liệu',scopus:true},papers:{label:'Bài đã xuất bản',short:'Bài xuất bản'},issues:{label:'Kỳ đã xuất bản',short:'Kỳ xuất bản'},localDocs:{label:'Tài liệu trích dẫn đã xác nhận',short:'Tài liệu trích dẫn',local:true},localEdges:{label:'Lượt trích dẫn đã xác nhận',short:'Lượt trích dẫn',local:true},localScore:{label:'CiteScore dự kiến 4 năm tự tính (5 tạp chí chưa vào Scopus)',short:'CiteScore dự kiến',local:true,decimals:2}};
@@ -70,14 +70,25 @@ function applyTheme(themeId,persist=true){
  document.querySelector('meta[name="theme-color"]')?.setAttribute('content',found.paper);
  if($('#theme-select'))$('#theme-select').value=currentTheme;
  if($('#theme-active-desc'))$('#theme-active-desc').textContent=found.desc;
+ if($('#brand-kicker'))$('#brand-kicker').textContent=found.kicker;
+ if($('#theme-spec-badge'))$('#theme-spec-badge').textContent=found.spec;
  for(const btn of document.querySelectorAll('.theme-pill'))btn.setAttribute('aria-pressed',String(btn.dataset.theme===currentTheme));
+ if(dashboard){
+  requestAnimationFrame(()=>{
+   const w1=Math.round($('.chart-area')?.getBoundingClientRect().width||0);
+   const w2=Math.round($('#candidates-chart-area')?.getBoundingClientRect().width||0);
+   if(w1>0)chartWidth=w1;
+   if(w2>0)subChartWidth=w2;
+   renderAllCharts();
+  });
+ }
  if(persist){
   try{localStorage.setItem('vast-dashboard-theme',currentTheme);}catch{}
   if(state)saveState();
  }
 }
 function renderThemeBar(){
- $('#theme-pills').innerHTML=brandThemes.map(t=>`<button type="button" class="theme-pill" data-theme="${t.id}" aria-pressed="${t.id===currentTheme}" title="${esc(t.desc)}"><span class="theme-swatch" style="background:linear-gradient(135deg,${t.accent} 55%,${t.paper} 55%)"></span><span class="theme-pill-name">${esc(t.name)}</span></button>`).join('');
+ $('#theme-pills').innerHTML=brandThemes.map(t=>`<button type="button" class="theme-pill" data-theme="${t.id}" aria-pressed="${t.id===currentTheme}" title="${esc(t.desc)}"><span class="theme-swatch" style="background:linear-gradient(135deg,${t.accent} 55%,${t.paper} 55%)"></span><span class="theme-pill-text"><strong class="theme-pill-name">${esc(t.name)}</strong><small class="theme-pill-sub">${esc(t.layoutTag)}</small></span></button>`).join('');
 }
 function readState(){
  const p=new URLSearchParams(location.search),years=dashboard.outputYears;
