@@ -11,8 +11,8 @@
 <link rel="preload" href="assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/dashboard.css?v=20261022m">
-<script type="module" src="assets/dashboard.js?v=20261022n"></script>
+<link rel="stylesheet" href="assets/dashboard.css?v=20261022p">
+<script type="module" src="assets/dashboard.js?v=20261022p"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Đến nội dung chính</a>
@@ -32,10 +32,10 @@
 <div id="flight-brand-dock" class="flight-brand-dock" aria-hidden="true"></div>
 <div id="flight-letters-stage" class="flight-letters-stage" aria-hidden="true"></div>
 <nav class="flight-corner-anchors" aria-label="Mục lục góc phải">
-<a href="#section-overview" data-flight-link="overview">TỔNG QUAN</a>
-<a href="#section-citescore" data-flight-link="citescore">CITESCORE</a>
-<a href="#section-catalog" data-flight-link="catalog">DANH MỤC</a>
-<a href="#section-references" data-flight-link="references">THAM KHẢO</a>
+<a href="#section-overview" data-flight-link="overview">01 TỔNG QUAN</a>
+<a href="#section-catalog" data-flight-link="catalog">02 DANH MỤC</a>
+<a href="#section-citescore" data-flight-link="citescore">03 BIỂU ĐỒ</a>
+<a href="#section-references" data-flight-link="references">04 TÀI LIỆU THAM KHẢO</a>
 </nav>
 </div>
 
@@ -50,9 +50,10 @@
 <span class="brand-cell-title">VAST JOURNALS</span>
 </a>
 <nav class="main-nav" aria-label="Điều hướng phần chính">
-<a class="nav-pill is-active" href="#section-overview" data-nav-sec="overview"><span class="nav-idx">01</span>TỔNG QUAN &amp; CITESCORE</a>
-<a class="nav-pill" href="#section-catalog" data-nav-sec="catalog"><span class="nav-idx">02</span>DANH MỤC 12 TẠP CHÍ</a>
-<a class="nav-pill" href="#section-references" data-nav-sec="references"><span class="nav-idx">03</span>TÀI LIỆU THAM KHẢO</a>
+<a class="nav-pill is-active" href="#section-overview" data-nav-sec="overview"><span class="nav-idx">01</span>TỔNG QUAN</a>
+<a class="nav-pill" href="#section-catalog" data-nav-sec="catalog"><span class="nav-idx">02</span>DANH MỤC</a>
+<a class="nav-pill" href="#section-citescore" data-nav-sec="citescore"><span class="nav-idx">03</span>BIỂU ĐỒ</a>
+<a class="nav-pill" href="#section-references" data-nav-sec="references"><span class="nav-idx">04</span>TÀI LIỆU THAM KHẢO</a>
 </nav>
 </div>
 <div class="site-nav-right">
@@ -71,14 +72,15 @@
 <main id="main-content">
 
 <!-- =========================================================================
-     VIEW 1: TRANG CHÍNH LIỀN MẠCH (01 TỔNG QUAN & CITESCORE · 02 DANH MỤC · 03 THAM KHẢO)
+     VIEW 1: TRANG CHÍNH LIỀN MẠCH (01 TỔNG QUAN · 02 DANH MỤC · 03 BIỂU ĐỒ · 04 TÀI LIỆU THAM KHẢO)
      ========================================================================= -->
 <div id="home-view">
 
 <!-- ARTCRAFT ARCHITECTURAL ORBITAL HERO -->
 <section id="hero" class="artcraft-hero" aria-labelledby="hero-title">
 <div class="hero-orbital-bg" aria-hidden="true">
-<img class="hero-galaxy" src="assets/images/milky-way-eso0932a.jpg" alt="" fetchpriority="high" decoding="async">
+<img class="hero-galaxy hero-galaxy-dark" src="assets/images/milky-way-eso0932a.jpg" alt="" fetchpriority="high" decoding="async">
+<img class="hero-galaxy hero-galaxy-light" src="assets/images/hero-carina-nebula.webp" alt="" decoding="async">
 <svg class="orbital-svg" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice">
 <g fill="none" stroke="currentColor" stroke-width="1">
 <ellipse cx="720" cy="380" rx="250" ry="155" opacity="0.22"/>
@@ -102,11 +104,12 @@
 <h1 id="hero-title" class="hero-display-title">12 tạp chí <em class="serif-italic">khoa học.</em></h1>
 <p class="hero-lead">CiteScore, chỉ mục và hoạt động xuất bản của 12 tạp chí VAST.</p>
 <div class="hero-cta-group">
-<a class="btn-solid" href="#section-citescore">01 · XEM BIỂU ĐỒ CITESCORE</a>
-<a class="btn-outline" href="#section-catalog">02 · DANH MỤC 12 TẠP CHÍ</a>
+<a class="btn-solid" href="#section-catalog">02 · XEM DANH MỤC TẠP CHÍ</a>
+<a class="btn-outline" href="#section-citescore">03 · XEM BIỂU ĐỒ</a>
 </div>
 </div>
-<p class="hero-photo-credit">Ảnh: <a href="https://www.eso.org/public/images/eso0932a/" target="_blank" rel="noopener noreferrer" title="Ảnh Dải Ngân Hà của ESO/S. Brunier">ESO/S. Brunier</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p>
+<p class="hero-photo-credit hero-photo-credit-dark">Ảnh: <a href="https://www.eso.org/public/images/eso0932a/" target="_blank" rel="noopener noreferrer" title="Ảnh Dải Ngân Hà của ESO/S. Brunier">ESO/S. Brunier</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p>
+<p class="hero-photo-credit hero-photo-credit-light">Ảnh: <a href="https://commons.wikimedia.org/wiki/File:Eta_Carinae_Nebula_1.jpg" target="_blank" rel="noopener noreferrer" title="Ảnh ghép tinh vân Carina từ Hubble và CTIO/NOIRLab">Hubble: NASA, ESA, N. Smith, Hubble Heritage Team; CTIO: N. Smith, NOAO/AURA/NSF</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0 (dữ liệu CTIO)</a> · cắt khung và phủ màu bằng CSS</p>
 </section>
 
 <!-- SCROLL-VELOCITY KINETIC MARQUEE TICKER (getartcraft.com .marquee border-y border-line) -->
@@ -115,12 +118,12 @@
 </div>
 
 <!-- =========================================================================
-     PHẦN 01: TỔNG QUAN HỆ THỐNG 12 TẠP CHÍ & BIỂU ĐỒ CITESCORE
+     PHẦN 01: TỔNG QUAN HỆ THỐNG 12 TẠP CHÍ
      ========================================================================= -->
 <section id="section-overview" class="craft-section" aria-labelledby="heading-overview">
 <div class="sticky-hud-ribbon">
 <div class="sticky-hud-inner">
-<p class="hud-label"><span class="hud-num">01</span><span class="hud-slash">/</span>TỔNG QUAN HỆ THỐNG 12 TẠP CHÍ &amp; PHÂN TÍCH CITESCORE</p>
+<p class="hud-label"><span class="hud-num">01</span><span class="hud-slash">/</span>TỔNG QUAN HỆ THỐNG 12 TẠP CHÍ</p>
 </div>
 </div>
 
@@ -201,6 +204,20 @@
 </article>
 </div>
 
+<div class="matrix-scroll" id="vast-hdgsnn-wrap" data-reveal>
+<div class="section-heading" style="padding:18px 0 10px">
+<div>
+<span class="hud-label chart-kicker">01.B · HỘI ĐỒNG GIÁO SƯ NHÀ NƯỚC · QUYẾT ĐỊNH SỐ 26/QĐ-HĐGSNN (11/07/2025)</span>
+<h3 style="margin:4px 0 0;font-size:20px">Điểm công trình khoa học tại các Hội đồng Giáo sư ngành, liên ngành năm 2025</h3>
+<p id="hdgsnn-table-description" class="section-lead">Mức điểm tối đa của 12 tạp chí VAST tại 17 Hội đồng Giáo sư ngành, liên ngành năm 2025.</p>
+</div>
+</div>
+<table class="citescore-matrix-table" id="vast-hdgsnn-table" aria-describedby="hdgsnn-table-description">
+<thead id="vast-hdgsnn-head"></thead>
+<tbody id="vast-hdgsnn-body"></tbody>
+</table>
+</div>
+
 
 <p id="load-status" class="status-banner" role="status" aria-live="polite">Đang tải dữ liệu…</p>
 <div id="load-error" class="status-banner error-banner" role="alert" hidden>
@@ -208,11 +225,72 @@
 <button id="retry-load" type="button">Thử tải lại</button>
 </div>
 
-<!-- SUBSECTION 01.B: BẢNG MA TRẬN CITESCORE VAST-1 & 4 BIỂU ĐỒ TƯƠNG TÁC -->
-<div id="section-citescore" class="citescore-subsection">
+</section>
+
+<!-- =========================================================================
+     PHẦN 02: DANH MỤC 12 TẠP CHÍ KHOA HỌC (CHỈ LƯỚI THẺ ARTCRAFT 4x3, BẤM ĐỂ XEM CHI TIẾT)
+     ========================================================================= -->
+<section id="section-catalog" class="craft-section" aria-labelledby="heading-catalog">
+<div class="sticky-hud-ribbon">
+<div class="sticky-hud-inner">
+<p class="hud-label"><span class="hud-num">02</span><span class="hud-slash">/</span>DANH MỤC 12 TẠP CHÍ KHOA HỌC VAST</p>
+</div>
+</div>
+
 <div class="section-intro-head" data-reveal>
-<p class="hud-label section-kicker">01.B · BẢNG TỔNG HỢP &amp; BIỂU ĐỒ CITESCORE</p>
-<h2 class="section-display-title">Biến động CiteScore <em class="serif-italic">&amp; Trích dẫn.</em></h2>
+<p class="hud-label section-kicker">02 · DANH MỤC TẠP CHÍ</p>
+<h2 id="heading-catalog" class="section-display-title">Danh mục 12 tạp chí <em class="serif-italic">Khoa học VAST.</em></h2>
+</div>
+
+<form id="portfolio-controls" class="filters" aria-label="Lọc và sắp xếp danh mục tạp chí">
+<div class="field search-field">
+<label for="journal-search">Tìm tạp chí</label>
+<input id="journal-search" type="search" placeholder="Mã, tên tiếng Anh, tiếng Việt, ISSN…">
+</div>
+<div class="field">
+<label for="index-filter">Nhóm tạp chí</label>
+<select id="index-filter">
+<option value="all">Tất cả 12 tạp chí</option>
+<option value="VAST-1">Nhóm VAST-1 (7 tạp chí đã vào Scopus)</option>
+<option value="VAST-2">Nhóm VAST-2 (5 tạp chí)</option>
+<option value="Scopus">Đã chỉ mục Scopus (7)</option>
+<option value="WoS">Web of Science (6)</option>
+</select>
+</div>
+<div class="field">
+<label for="subject-filter">Lĩnh vực</label>
+<select id="subject-filter">
+<option value="all">Tất cả lĩnh vực</option>
+</select>
+</div>
+<div class="field">
+<label for="sort-select">Sắp xếp</label>
+<select id="sort-select">
+<option value="default">Thứ tự mặc định (VAST-1 → VAST-2)</option>
+<option value="citescore">CiteScore 2025 cao đến thấp</option>
+<option value="papers">Tổng số bài từ 2015 cao đến thấp</option>
+<option value="name">Tên tạp chí (A–Z)</option>
+</select>
+</div>
+<button id="reset-filters" class="text-button" type="button">Đặt lại</button>
+<p id="Filter-status" class="scope-count hud-label" role="status" aria-live="polite"></p>
+</form>
+
+<!-- ARTCRAFT 4x3 JOURNAL LINEUP GRID (NO DUPLICATE TABLE LIST BELOW) -->
+<div id="artcraft-lineup-grid" class="craft-lineup-grid" aria-label="Lưới 12 tạp chí khoa học VAST"></div>
+</section>
+<!-- =========================================================================
+     PHẦN 03: BẢNG CHỈ SỐ VÀ BIỂU ĐỒ
+     ========================================================================= -->
+<section id="section-citescore" class="craft-section citescore-subsection" aria-labelledby="heading-citescore">
+<div class="sticky-hud-ribbon">
+<div class="sticky-hud-inner">
+<p class="hud-label"><span class="hud-num">03</span><span class="hud-slash">/</span>BIỂU ĐỒ &amp; BẢNG CHỈ SỐ</p>
+</div>
+</div>
+<div class="section-intro-head" data-reveal>
+<p class="hud-label section-kicker">03 · BIỂU ĐỒ &amp; BẢNG CHỈ SỐ</p>
+<h2 id="heading-citescore" class="section-display-title">Biến động CiteScore <em class="serif-italic">&amp; Trích dẫn.</em></h2>
 </div>
 
 <div class="matrix-scroll" data-reveal>
@@ -427,79 +505,27 @@
 </div>
 </section>
 </div>
-</div>
 </section>
 
 <!-- =========================================================================
-     PHẦN 02: DANH MỤC 12 TẠP CHÍ KHOA HỌC (CHỈ LƯỚI THẺ ARTCRAFT 4x3, BẤM ĐỂ XEM CHI TIẾT)
-     ========================================================================= -->
-<section id="section-catalog" class="craft-section" aria-labelledby="heading-catalog">
-<div class="sticky-hud-ribbon">
-<div class="sticky-hud-inner">
-<p class="hud-label"><span class="hud-num">02</span><span class="hud-slash">/</span>DANH MỤC 12 TẠP CHÍ KHOA HỌC VAST</p>
-</div>
-</div>
-
-<div class="section-intro-head" data-reveal>
-<p class="hud-label section-kicker">02 · DANH MỤC TẠP CHÍ</p>
-<h2 id="heading-catalog" class="section-display-title">Danh mục 12 tạp chí <em class="serif-italic">Khoa học VAST.</em></h2>
-</div>
-
-<form id="portfolio-controls" class="filters" aria-label="Lọc và sắp xếp danh mục tạp chí">
-<div class="field search-field">
-<label for="journal-search">Tìm tạp chí</label>
-<input id="journal-search" type="search" placeholder="Mã, tên tiếng Anh, tiếng Việt, ISSN…">
-</div>
-<div class="field">
-<label for="index-filter">Nhóm tạp chí</label>
-<select id="index-filter">
-<option value="all">Tất cả 12 tạp chí</option>
-<option value="VAST-1">Nhóm VAST-1 (7 tạp chí đã vào Scopus)</option>
-<option value="VAST-2">Nhóm VAST-2 (5 tạp chí)</option>
-<option value="Scopus">Đã chỉ mục Scopus (7)</option>
-<option value="WoS">Web of Science (6)</option>
-</select>
-</div>
-<div class="field">
-<label for="subject-filter">Lĩnh vực</label>
-<select id="subject-filter">
-<option value="all">Tất cả lĩnh vực</option>
-</select>
-</div>
-<div class="field">
-<label for="sort-select">Sắp xếp</label>
-<select id="sort-select">
-<option value="default">Thứ tự mặc định (VAST-1 → VAST-2)</option>
-<option value="citescore">CiteScore 2025 cao đến thấp</option>
-<option value="papers">Tổng số bài từ 2015 cao đến thấp</option>
-<option value="name">Tên tạp chí (A–Z)</option>
-</select>
-</div>
-<button id="reset-filters" class="text-button" type="button">Đặt lại</button>
-<p id="Filter-status" class="scope-count hud-label" role="status" aria-live="polite"></p>
-</form>
-
-<!-- ARTCRAFT 4x3 JOURNAL LINEUP GRID (NO DUPLICATE TABLE LIST BELOW) -->
-<div id="artcraft-lineup-grid" class="craft-lineup-grid" aria-label="Lưới 12 tạp chí khoa học VAST"></div>
-</section>
-
-<!-- =========================================================================
-     PHẦN 03: DANH MỤC TÀI LIỆU THAM KHẢO
+     PHẦN 04: TÀI LIỆU THAM KHẢO
      ========================================================================= -->
 <section id="section-references" class="craft-section" aria-labelledby="heading-references">
 <div class="sticky-hud-ribbon">
 <div class="sticky-hud-inner">
-<p class="hud-label"><span class="hud-num">03</span><span class="hud-slash">/</span>DANH MỤC TÀI LIỆU THAM KHẢO &amp; NGUỒN DỮ LIỆU</p>
+<p class="hud-label"><span class="hud-num">04</span><span class="hud-slash">/</span>TÀI LIỆU THAM KHẢO &amp; NGUỒN DỮ LIỆU</p>
 <p class="hud-label hud-right">SCOPUS SOURCES · SPRINGER NATURE · IOP PUBLISHING · WILEY-VCH · VJS OJS</p>
 </div>
 </div>
 
 <div class="section-intro-head" data-reveal>
-<p class="hud-label section-kicker">03 · NGUỒN ĐỐI CHIẾU HỌC THUẬT</p>
+<p class="hud-label section-kicker">04 · NGUỒN ĐỐI CHIẾU HỌC THUẬT</p>
 <h2 id="heading-references" class="section-display-title">Danh mục tài liệu <em class="serif-italic">Tham khảo.</em></h2>
+</div>
 
 <ol id="source-links" class="reference-list" role="list"></ol>
 </section>
+
 
 </div><!-- /#home-view -->
 

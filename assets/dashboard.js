@@ -116,8 +116,8 @@ function initThemeMode(){
    ========================================================================== */
 const homeFlightSections=[
   {id:'overview',elId:'section-overview',word:'TỔNG QUAN',navId:'overview'},
-  {id:'citescore',elId:'section-citescore',word:'CITESCORE',navId:'overview'},
   {id:'catalog',elId:'section-catalog',word:'DANH MỤC',navId:'catalog'},
+  {id:'citescore',elId:'section-citescore',word:'BIỂU ĐỒ',navId:'citescore'},
   {id:'references',elId:'section-references',word:'THAM KHẢO',navId:'references'}
 ];
 let flightSections=[];
@@ -299,6 +299,17 @@ function publicationFrequency(j){
 }
 function archiveLinks(j){
   return [external(j.archiveUrl,'Các số đã xuất bản'),...(j.additionalArchives??[]).map(a=>external(a.url,a.label))].join(' · ');
+}
+function formatHdgsnnScore(score){
+  return String(score??'').split('-').map(p=>decimal.format(Number(p))).join('–');
+}
+function hdgsnnRangeText(j){
+  const rows=j.hdgsnn2025||[];
+  if(!rows.length)return'—';
+  const nums=rows.flatMap(r=>String(r.score).split('-').map(Number)).filter(Number.isFinite);
+  const min=Math.min(...nums),max=Math.max(...nums);
+  const range=min===max?decimal.format(max):`${decimal.format(min)}–${decimal.format(max)}`;
+  return `0–${range} điểm (${rows.length} hội đồng)`;
 }
 function isScopusVerified(j){return j.indexings.some(i=>i.system==='Scopus'&&i.status==='listed');}
 function scopusRecord(j,year){return scopus.records.find(r=>r.journal===j.code&&r.year===year);}
@@ -519,6 +530,38 @@ function renderVast1JcrTable(){
       <td>${jifCats}</td>
       <td>${jciCats}</td>
       <td>Clarivate JCR ${jr.metricYear}<br>${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed').sourceUrl,'Xem chỉ mục trên Clarivate MJL')}</td>
+    </tr>`;
+  }).join('');
+}
+
+function renderHdgsnnOverviewTable(){
+  const head=$('#vast-hdgsnn-head'),body=$('#vast-hdgsnn-body');
+  if(!head||!body||!dashboard.hdgsnn)return;
+  head.innerHTML=`<tr>
+    <th scope="col">Tạp chí VAST</th>
+    <th scope="col">Số HĐGS<br>tính điểm</th>
+    <th scope="col">Khung điểm<br>tối đa (2025)</th>
+    <th scope="col">Điểm tối đa theo từng Hội đồng Giáo sư ngành, liên ngành (QĐ 26/QĐ-HĐGSNN)</th>
+  </tr>`;
+  body.innerHTML=dashboard.journals.map(j=>{
+    const rows=j.hdgsnn2025||[];
+    const nums=rows.flatMap(r=>String(r.score).split('-').map(Number)).filter(Number.isFinite);
+    const min=Math.min(...nums),max=Math.max(...nums);
+    const range=min===max?`0–${decimal.format(max)}`:`0–${decimal.format(min)} đến 0–${decimal.format(max)}`;
+    const details=rows.map(r=>`<span style="display:inline-block;margin:2px 10px 2px 0">${external(r.sourceUrl,r.councilShort)}: <strong>${esc(formatHdgsnnScore(r.score))}</strong></span>`).join('');
+    return `<tr>
+      <td>
+        <div class="matrix-journal-cell">
+          <a href="#journal/${esc(j.id)}"><img class="matrix-cover" src="${esc(coverUrl(j))}" alt="Bìa ${esc(j.code)}" width="40" height="58"></a>
+          <div class="matrix-meta">
+            <a href="#journal/${esc(j.id)}">${esc(j.code)} · ${esc(j.title)}</a>
+            <small style="display:block;color:var(--muted)">${esc(j.group)} · ISSN: ${esc(j.issn||'—')} / ${esc(j.eissn||'—')}</small>
+          </div>
+        </div>
+      </td>
+      <td><strong>${rows.length}</strong> hội đồng</td>
+      <td class="matrix-score-annual"><strong>${esc(range)}</strong></td>
+      <td style="text-align:left;white-space:normal;line-height:1.55">${details}</td>
     </tr>`;
   }).join('');
 }
@@ -1115,16 +1158,38 @@ function renderAllCharts(){
 }
 
 /* ==========================================================================
-   7. SECTION 03: NUMBERED REFERENCE LIST
+   7. SECTION 04: NUMBERED ACADEMIC REFERENCES
    ========================================================================== */
 function renderReferences(){
-  $('#source-links').innerHTML=dashboard.journals.map(j=>{
-    const scopusLink=j.scopusSourceId?` · ${external(`https://www.scopus.com/sourceid/${j.scopusSourceId}`,'Scopus Sources')}`:'';
-    const wos=j.indexings.find(i=>i.system==='WoS'&&i.status==='listed');
-    const wosLink=wos?` · ${external(wos.sourceUrl,'Clarivate MJL')}`:'';
-    return`<li><strong>${esc(fullName(j))}</strong> — ${external(j.website,'Trang chủ')} · ${archiveLinks(j)}${scopusLink}${wosLink}</li>`;
-  }).join('');
-  $('#source-links').insertAdjacentHTML('beforeend',dashboard.historySources.filter(source=>source.url).map(source=>`<li><p>${external(source.url,source.title)}</p></li>`).join(''));
+  const indexAuthors={Scopus:'Elsevier',WoS:'Clarivate',DOAJ:'Directory of Open Access Journals',ACI:'ASEAN Citation Index'};
+  const references=dashboard.journals.flatMap(j=>{
+    const institution=j.institution?.name||j.publisher;
+    const publisher=j.institution?.coPublisher||institution;
+    return [
+      {author:publisher,title:j.title,url:j.website},
+      {author:publisher,title:`${j.title}: Các số đã xuất bản`,url:j.archiveUrl},
+      ...(j.additionalArchives??[]).map(a=>({author:institution,title:a.label,url:a.url})),
+      ...j.indexings.filter(i=>i.status==='listed').map(i=>({
+        author:indexAuthors[i.system]||i.system,
+        title:`${i.system}${i.collection?` — ${i.collection}`:''}: ${fullName(j)}`,
+        url:i.sourceUrl
+      }))
+    ];
+  });
+  references.push(...dashboard.historySources.filter(source=>source.url).map(source=>({
+    author:new URL(source.url).hostname==='math.ac.vn'?'Viện Toán học, VAST':null,
+    title:source.title,url:source.url
+  })));
+  if(dashboard.hdgsnn){
+    references.push(
+      {author:'Hội đồng Giáo sư nhà nước',title:dashboard.hdgsnn.decision.title,year:dashboard.hdgsnn.year,url:dashboard.hdgsnn.decision.url},
+      ...dashboard.hdgsnn.councils.map(c=>({author:c.name,title:`Danh mục tạp chí khoa học được tính điểm năm ${dashboard.hdgsnn.year}`,year:dashboard.hdgsnn.year,url:c.sourceUrl})),
+      {author:null,title:dashboard.hdgsnn.notion.title,url:dashboard.hdgsnn.notion.url}
+    );
+  }
+  const unique=new Map();
+  for(const ref of references)if(ref.url&&!unique.has(ref.url))unique.set(ref.url,ref);
+  $('#source-links').innerHTML=[...unique.values()].map(ref=>`<li><p>${ref.author?`${esc(ref.author)}, `:''}“<em>${esc(ref.title)}</em>”${ref.year?`, ${ref.year}`:''}. [Trực tuyến]. Có tại: ${external(ref.url,ref.url)}.</p></li>`).join('');
 }
 
 
@@ -1183,6 +1248,7 @@ function renderDetail(id){
     ['ISSN bản in / điện tử',`${j.issn??'—'} / ${j.eissn??'—'}`],
     ...(jr?[['Chỉ số Web of Science (JCR 2025)',`JIF 2025: <strong>${oneDec.format(jr.jif)}</strong> (${jr.jifNumerator}/${jr.jifDenominator}) · 5-Year JIF: <strong>${oneDec.format(jr.fiveYearJif)}</strong> · JCI: <strong>${twoDec.format(jr.jci)}</strong> · Tổng trích dẫn JCR 2025: <strong>${integer.format(jr.totalCitations)}</strong>`]]:[]),
     ['Kỳ hạn xuất bản',esc(publicationFrequency(j))],
+    ...(j.hdgsnn2025?.length?[['Điểm HĐGSNN 2025 (QĐ 26/QĐ-HĐGSNN)',esc(hdgsnnRangeText(j))]]:[]),
     ['Số liệu xuất bản',`${minYear}–${maxYear} · ${integer.format(totalHistPapers)} bài / ${integer.format(totalHistIssues)} kỳ${missingYears.length?`; năm chưa có số liệu: ${missingYears.join(', ')}`:''}`],
     ['Trang chủ chính thức',external(j.website)],
     ['Các số đã xuất bản',archiveLinks(j)]
@@ -1414,6 +1480,23 @@ function renderDetail(id){
           <ul class="source-evidence">
             ${listedIndexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong><small>${[i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',external(i.sourceUrl,i.system==='WoS'?'Clarivate MJL':`Thông tin ${i.system}`)].filter(Boolean).join(' · ')}</small></li>`).join('')}
           </ul>
+        </section>`:''}
+
+        ${j.hdgsnn2025?.length?`<section id="journal-hdgsnn" class="detail-section">
+          <h3>Điểm tính tại HĐGSNN năm 2025 (${j.hdgsnn2025.length} hội đồng)</h3>
+          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">${external(dashboard.hdgsnn.decision.pdfUrl,'Quyết định 26/QĐ-HĐGSNN (11/07/2025)')} · ${external(dashboard.hdgsnn.notion.url,'Bảng tổng hợp Notion')}</p>
+          <div class="table-scroll">
+            <table class="detail-table">
+              <thead><tr><th scope="col">Hội đồng Giáo sư ngành, liên ngành</th><th scope="col">Điểm tối đa 2025</th><th scope="col">Quy định trong danh mục</th></tr></thead>
+              <tbody>
+                ${j.hdgsnn2025.map(r=>`<tr>
+                  <td>${external(r.sourceUrl,r.council)}</td>
+                  <td><strong>${esc(formatHdgsnnScore(r.score))}</strong></td>
+                  <td>${esc(r.conditions)}</td>
+                </tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
         </section>`:''}
       </div>
     </div>`;
@@ -1682,7 +1765,7 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022n'),fetch('data-scopus.json?v=20261022a')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022p'),fetch('data-scopus.json?v=20261022a')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     dashboard=await dRes.json();
     scopus=await sRes.json();
@@ -1694,6 +1777,7 @@ async function start(){
     renderHeroAndOverview();
     renderVast1MatrixTable();
     renderVast1JcrTable();
+    renderHdgsnnOverviewTable();
     renderCatalog();
     renderReferences();
     initRulerAndFlight();

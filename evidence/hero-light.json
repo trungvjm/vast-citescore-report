@@ -1,0 +1,21 @@
+{
+  "asset": "assets/images/hero-carina-nebula.webp",
+  "title": "Eta Carinae Nebula (NGC 3372), Hubble and CTIO composite",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Eta_Carinae_Nebula_1.jpg",
+  "sourceImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Eta_Carinae_Nebula_1.jpg/1280px-Eta_Carinae_Nebula_1.jpg",
+  "originalSources": [
+    "https://hubblesite.org/contents/media/images/2007/16/2099-Image.html",
+    "https://noirlab.edu/public/images/noaoann07017a/"
+  ],
+  "credit": "Hubble image: NASA, ESA, N. Smith (University of California, Berkeley), and The Hubble Heritage Team (STScI/AURA). CTIO data: N. Smith (University of California, Berkeley) and NOAO/AURA/NSF.",
+  "license": "Hubble portion: public domain under the cited NASA/ESA Hubble terms. CTIO/NOAO portion: Creative Commons Attribution 4.0 International (CC BY 4.0); the composite is attributed under this license on Wikimedia Commons.",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "usage": "Decorative light-theme hero. Resized to 1280 x 620 and converted to WebP (quality 82); CSS crops and overlays the image. Attribution and modifications are shown with the hero credit.",
+  "dimensions": {
+    "width": 1280,
+    "height": 620
+  },
+  "format": "WebP",
+  "bytes": 123260,
+  "sha256": "4c6c4e047bb82d8a1dbfdf5d05176293341fa9011adf796a2d17104ce063a9fe"
+}
