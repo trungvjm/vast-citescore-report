@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 1,
+  "retrievedAt": "2026-10-22T02:13:21.587Z",
+  "sourceEndpoint": "https://www.scopus.com/source/retrieveDocs.uri?sourceId=<sourceId>&year=<2011..2025>&docType=cc&pg=<1..Pages>",
+  "methodology": "Distinct Scopus citing documents (deduplicated by Scopus EID across all published CiteScore windows 2011–2025) grouped by citing document pubyear. Represents confirmed Scopus citing documents within 4-year CiteScore windows; full all-time Cited-By (/source/citedby.uri) requires an authenticated Scopus session.",
+  "journals": [
+    {
+      "id": "vjm",
+      "code": "VJM",
+      "scopusSourceId": "21100286934",
+      "totalDistinctCitingDocs": 1570,
+      "citationSeries": [
+        {
+          "year": 2012,
+          "citingDocuments": 1,
+          "confirmedCitationEdges": 1
+        },
+        {
+          "year": 2013,
+          "citingDocuments": 6,
+          "confirmedCitationEdges": 6
+        },
+        {
+          "year": 2014,
+          "citingDocuments": 13,
+          "confirmedCitationEdges": 13
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 35,
+          "confirmedCitationEdges": 35
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 60,
+          "confirmedCitationEdges": 60
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 87,
+          "confirmedCitationEdges": 87
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 102,
+          "confirmedCitationEdges": 102
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 129,
+          "confirmedCitationEdges": 129
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 167,
+          "confirmedCitationEdges": 167
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 188,
+          "confirmedCitationEdges": 188
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 173,
+          "confirmedCitationEdges": 173
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 206,
+          "confirmedCitationEdges": 206
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 226,
+          "confirmedCitationEdges": 226
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 177,
+          "confirmedCitationEdges": 177
+        }
+      ],
+      "windowCounts": {
+        "2013": {
+          "reported": 5,
+          "fetched": 5
+        },
+        "2014": {
+          "reported": 18,
+          "fetched": 18
+        },
+        "2015": {
+          "reported": 48,
+          "fetched": 48
+        },
+        "2016": {
+          "reported": 106,
+          "fetched": 106
+        },
+        "2017": {
+          "reported": 145,
+          "fetched": 145
+        },
+        "2018": {
+          "reported": 197,
+          "fetched": 197
+        },
+        "2019": {
+          "reported": 260,
+          "fetched": 260
+        },
+        "2020": {
+          "reported": 300,
+          "fetched": 300
+        },
+        "2021": {
+          "reported": 359,
+          "fetched": 359
+        },
+        "2022": {
+          "reported": 360,
+          "fetched": 360
+        },
+        "2023": {
+          "reported": 429,
+          "fetched": 429
+        },
+        "2024": {
+          "reported": 525,
+          "fetched": 525
+        },
+        "2025": {
+          "reported": 445,
+          "fetched": 445
+        }
+      }
+    },
+    {
+      "id": "amv",
+      "code": "AMV",
+      "scopusSourceId": "21100199843",
+      "totalDistinctCitingDocs": 910,
+      "citationSeries": [
+        {
+          "year": 2011,
+          "citingDocuments": 4,
+          "confirmedCitationEdges": 4
+        },
+        {
+          "year": 2012,
+          "citingDocuments": 10,
+          "confirmedCitationEdges": 10
+        },
+        {
+          "year": 2013,
+          "citingDocuments": 22,
+          "confirmedCitationEdges": 22
+        },
+        {
+          "year": 2014,
+          "citingDocuments": 33,
+          "confirmedCitationEdges": 33
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 54,
+          "confirmedCitationEdges": 54
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 53,
+          "confirmedCitationEdges": 53
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 65,
+          "confirmedCitationEdges": 65
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 61,
+          "confirmedCitationEdges": 61
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 105,
+          "confirmedCitationEdges": 105
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 111,
+          "confirmedCitationEdges": 111
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 106,
+          "confirmedCitationEdges": 106
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 94,
+          "confirmedCitationEdges": 94
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 84,
+          "confirmedCitationEdges": 84
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 49,
+          "confirmedCitationEdges": 49
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 59,
+          "confirmedCitationEdges": 59
+        }
+      ],
+      "windowCounts": {
+        "2011": {
+          "reported": 3,
+          "fetched": 3
+        },
+        "2012": {
+          "reported": 10,
+          "fetched": 10
+        },
+        "2013": {
+          "reported": 34,
+          "fetched": 34
+        },
+        "2014": {
+          "reported": 68,
+          "fetched": 68
+        },
+        "2015": {
+          "reported": 90,
+          "fetched": 90
+        },
+        "2016": {
+          "reported": 120,
+          "fetched": 120
+        },
+        "2017": {
+          "reported": 104,
+          "fetched": 104
+        },
+        "2018": {
+          "reported": 124,
+          "fetched": 124
+        },
+        "2019": {
+          "reported": 169,
+          "fetched": 169
+        },
+        "2020": {
+          "reported": 233,
+          "fetched": 233
+        },
+        "2021": {
+          "reported": 246,
+          "fetched": 246
+        },
+        "2022": {
+          "reported": 259,
+          "fetched": 259
+        },
+        "2023": {
+          "reported": 176,
+          "fetched": 176
+        },
+        "2024": {
+          "reported": 125,
+          "fetched": 125
+        },
+        "2025": {
+          "reported": 120,
+          "fetched": 120
+        }
+      }
+    },
+    {
+      "id": "ansn",
+      "code": "ANSN",
+      "scopusSourceId": "21100286862",
+      "totalDistinctCitingDocs": 6583,
+      "citationSeries": [
+        {
+          "year": 2010,
+          "citingDocuments": 13,
+          "confirmedCitationEdges": 13
+        },
+        {
+          "year": 2011,
+          "citingDocuments": 71,
+          "confirmedCitationEdges": 71
+        },
+        {
+          "year": 2012,
+          "citingDocuments": 126,
+          "confirmedCitationEdges": 126
+        },
+        {
+          "year": 2013,
+          "citingDocuments": 239,
+          "confirmedCitationEdges": 239
+        },
+        {
+          "year": 2014,
+          "citingDocuments": 366,
+          "confirmedCitationEdges": 366
+        },
+        {
+          "year": 2015,
+          "citingDocuments": 406,
+          "confirmedCitationEdges": 406
+        },
+        {
+          "year": 2016,
+          "citingDocuments": 386,
+          "confirmedCitationEdges": 386
+        },
+        {
+          "year": 2017,
+          "citingDocuments": 410,
+          "confirmedCitationEdges": 410
+        },
+        {
+          "year": 2018,
+          "citingDocuments": 528,
+          "confirmedCitationEdges": 528
+        },
+        {
+          "year": 2019,
+          "citingDocuments": 746,
+          "confirmedCitationEdges": 746
+        },
+        {
+          "year": 2020,
+          "citingDocuments": 652,
+          "confirmedCitationEdges": 652
+        },
+        {
+          "year": 2021,
+          "citingDocuments": 635,
+          "confirmedCitationEdges": 635
+        },
+        {
+          "year": 2022,
+          "citingDocuments": 524,
+          "confirmedCitationEdges": 524
+        },
+        {
+          "year": 2023,
+          "citingDocuments": 474,
+          "confirmedCitationEdges": 474
+        },
+        {
+          "year": 2024,
+          "citingDocuments": 457,
+          "confirmedCitationEdges": 457
+        },
+        {
+          "year": 2025,
+          "citingDocuments": 550,
+          "confirmedCitationEdges": 550
+        }
+      ],
+      "windowCounts": {
+        "2011": {
+          "reported": 22,
+          "fetched": 22
+        },
+        "2012": {
+          "reported": 112,
+          "fetched": 112
+        },
+        "2013": {
+          "reported": 545,
+          "fetched": 545
+        },
+        "2014": {
+          "reported": 641,
+          "fetched": 641
+        },
+        "2015": {
+          "reported": 791,
+          "fetched": 791
+        },
+        "2016": {
+          "reported": 854,
+          "fetched": 854
+        },
+        "2017": {
+          "reported": 862,
+          "fetched": 862
+        },
+        "2018": {
+          "reported": 1161,
+          "fetched": 1161
+        },
+        "2019": {
+          "reported": 1493,
+          "fetched": 1493
+        },
+        "2020": {
+          "reported": 1437,
+          "fetched": 1437
+        },
+        "2021": {
+          "reported": 1229,
+          "fetched": 1229
+        },
+        "2022": {
+          "reported": 1069,
+          "fetched": 1069
+        },
+        "2023": {
+          "reported": 1077,
+          "fetched": 1077
+        },
+        "2024": {
+          "reported": 962,
+          "fetched": 962
+        },
+        "2025": {
+          "reported": 1143,
+          "fetched": 1143
+        }
+      }
+    }
+  ]
+}

@@ -321,7 +321,7 @@ function localScore(j,year=2025){
   const s=r.score??r.value;
   return {...r,score:s,value:s};
 }
-function citationRecord(j,year){return j.localCitation?.citationSeries?.find(r=>r.year===year)??null;}
+function citationRecord(j,year){return (j.localCitation?.citationSeries||j.scopusCitingDocs?.citationSeries)?.find(r=>r.year===year)??null;}
 function historyRecord(j,year){return (j.annualHistory||j.outputs||[]).find(r=>r.year===year)??null;}
 
 function observation(j,metric,year){
@@ -400,12 +400,12 @@ function renderHeroAndOverview(){
   const totalAllTimePapers=dashboard.journals.reduce((s,j)=>s+(j.annualHistory||[]).reduce((a,r)=>a+(r.papers||0),0),0);
   const totalAllTimeIssues=dashboard.journals.reduce((s,j)=>s+(j.annualHistory||[]).reduce((a,r)=>a+(r.issues||0),0),0);
   const totalConfirmedCitations=dashboard.journals.reduce((s,j)=>s+(j.localCitation?.totals?.citations??0),0);
-  const totalCitingDocs=dashboard.journals.reduce((s,j)=>s+(j.localCitation?.totals?.citingDocs??0),0);
+  const totalCitingDocs=dashboard.journals.reduce((s,j)=>s+(j.localCitation?.totals?.citingDocs??j.scopusCitingDocs?.totalDistinctCitingDocs??0),0);
 
   const cells=[
     ['Hệ thống tạp chí VAST','12 tạp chí','7 tạp chí VAST-1 (Scopus; 5 tạp chí có JCR/ESCI) · 5 tạp chí VAST-2'],
     ['Tổng số bài có dữ liệu (1976–2026)',`${integer.format(totalAllTimePapers)} bài`,`${integer.format(totalAllTimeIssues)} kỳ phát hành trực tuyến đã lưu trữ`],
-    ['Tổng trích dẫn đối soát OJS (9 tạp chí)',`${integer.format(totalConfirmedCitations)} lượt`,`Từ ${integer.format(totalCitingDocs)} bài trích dẫn (không gồm VJM, AMV, ANSN)`],
+    ['Bài trích dẫn Scopus (12 tạp chí)',`${integer.format(totalCitingDocs)} bài`,`9 tạp chí OJS (${integer.format(totalConfirmedCitations)} lượt) + VJM, AMV, ANSN (Scopus CS)`],
     ['Đỉnh CiteScore & JIF 2025','CS 5,0 · JIF 2,4','CiteScore: VJES 5,0 · ANSN 3,9 | JIF (JCR): ANSN 2,4 · VJES 2,1']
   ];
   $('#summary-strip').innerHTML=cells.map(([l,v,d])=>`<div class="summary-item"><span class="summary-label">${esc(l)}</span><strong class="summary-value">${esc(v)}</strong><span class="summary-detail">${esc(d)}</span></div>`).join('');
@@ -637,7 +637,7 @@ function citationJournals(){
   if(state.citationMode==='scopus-window'){
     return scopusJournals().filter(j=>state.citationGroup==='all'||j.group===state.citationGroup);
   }
-  return dashboard.journals.filter(j=>j.localCitation?.citationSeries?.length&&(state.citationGroup==='all'||j.group===state.citationGroup));
+  return dashboard.journals.filter(j=>(j.localCitation?.citationSeries?.length||j.scopusCitingDocs?.citationSeries?.length)&&(state.citationGroup==='all'||j.group===state.citationGroup));
 }
 
 function buildLegend(containerSelector,journalsList,selectedSet,onChange){
@@ -1019,19 +1019,28 @@ function renderCitationsSection(){
 
   const barsEl=$('#citations-bars');
   if(barsEl){
-    const withTotals=dashboard.journals.filter(j=>j.localCitation?.totals&&(state.citationGroup==='all'||j.group===state.citationGroup))
-      .sort((a,b)=>b.localCitation.totals.citations-a.localCitation.totals.citations);
-    const maxC=Math.max(100,...withTotals.map(j=>j.localCitation.totals.citations));
+    const withTotals=dashboard.journals.filter(j=>(j.localCitation?.totals||j.scopusCitingDocs)&&(state.citationGroup==='all'||j.group===state.citationGroup))
+      .map(j=>({
+        j,
+        citations:j.localCitation?.totals?.citations??j.scopusCitingDocs?.totalDistinctCitingDocs??0,
+        citingDocs:j.localCitation?.totals?.citingDocs??j.scopusCitingDocs?.totalDistinctCitingDocs??0,
+        hIndex:j.localCitation?.totals?.hIndex??null,
+        isScopusWindowDocs:!j.localCitation?.totals&&Boolean(j.scopusCitingDocs)
+      }))
+      .sort((a,b)=>b.citations-a.citations);
+    const maxC=Math.max(100,...withTotals.map(x=>x.citations));
     const pct=v=>Math.max(2,Math.min(100,(v/maxC)*100)).toFixed(1);
-    barsEl.innerHTML=withTotals.map(j=>{
-      const t=j.localCitation.totals,color=styles[j.id]?.color||'#2d81ff';
+    barsEl.innerHTML=withTotals.map(x=>{
+      const color=styles[x.j.id]?.color||'#2d81ff';
+      const sub=x.hIndex!==null?`h-index: <strong>${x.hIndex}</strong>`:'Scopus CS (2011–25)';
+      const rightLabel=x.isScopusWindowDocs?`<strong>${integer.format(x.citingDocs)}</strong> bài TD Scopus`:`<strong>${integer.format(x.citations)}</strong> trích dẫn`;
       return`<div class="bar-item">
         <div class="bar-top">
-          <div><a href="#journal/${esc(j.id)}">${esc(j.code)}</a><small>h-index: <strong>${t.hIndex}</strong></small></div>
-          <div class="bar-metrics"><strong>${integer.format(t.citations)}</strong> trích dẫn</div>
+          <div><a href="#journal/${esc(x.j.id)}">${esc(x.j.code)}</a><small>${sub}</small></div>
+          <div class="bar-metrics">${rightLabel}</div>
         </div>
         <div class="bar-track">
-          <div class="bar-row"><span>Lượt</span><div class="bar-rail"><div class="bar-fill" style="width:${pct(t.citations)}%;background:${color}"></div></div><span>${integer.format(t.citingDocs)} bài trích dẫn</span></div>
+          <div class="bar-row"><span>${x.isScopusWindowDocs?'Scopus':'Lượt'}</span><div class="bar-rail"><div class="bar-fill" style="width:${pct(x.citations)}%;background:${color}"></div></div><span>${integer.format(x.citingDocs)} bài trích dẫn</span></div>
         </div>
       </div>`;
     }).join('');
@@ -1177,7 +1186,7 @@ function renderDetail(id){
       jr
         ?['JIF 2025 (WoS JCR)',`${oneDec.format(jr.jif)} (${jr.categories[0].jif.quartile})`,`${integer.format(jr.jifNumerator)} trích dẫn / ${integer.format(jr.jifDenominator)} bài (2023–2024) · JCI: ${twoDec.format(jr.jci)}`]
         :[`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ phát hành (${hist.length} năm)`],
-      ['Tổng trích dẫn',j.localCitation?.totals?`${integer.format(j.localCitation.totals.citations)} lượt (OJS)`:(jr?`${integer.format(jr.totalCitations)} lượt (JCR 2025)`:'Scopus Sources'),j.localCitation?.totals?`h-index: ${j.localCitation.totals.hIndex} · ${integer.format(j.localCitation.totals.citingDocs)} bài trích dẫn${jr?` · JCR 2025: ${integer.format(jr.totalCitations)} lượt`:''}`:(jr?`Tổng bài (${minYear}–${maxYear}): ${integer.format(totalHistPapers)} bài / ${integer.format(totalHistIssues)} kỳ`:'Theo Scopus Source Details')]
+      ['Tổng trích dẫn',j.localCitation?.totals?`${integer.format(j.localCitation.totals.citations)} lượt (OJS)`:(j.scopusCitingDocs?`${integer.format(j.scopusCitingDocs.totalDistinctCitingDocs)} bài TD (Scopus)`:(jr?`${integer.format(jr.totalCitations)} lượt (JCR 2025)`:'Scopus Sources')),j.localCitation?.totals?`h-index: ${j.localCitation.totals.hIndex} · ${integer.format(j.localCitation.totals.citingDocs)} bài trích dẫn${jr?` · JCR 2025: ${integer.format(jr.totalCitations)} lượt`:''}`:(j.scopusCitingDocs?`Khử trùng theo EID cửa sổ CS Scopus${jr?` · JCR 2025: ${integer.format(jr.totalCitations)} lượt`:''} · ${integer.format(totalHistPapers)} bài xuất bản`:'Theo Scopus Source Details')]
     ];
   }else{
     const tot=j.localCitation?.totals;

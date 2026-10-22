@@ -22,12 +22,13 @@ assert.equal(scopus.records.length,84,'Baseline must retain all 84 observations.
 assert.equal(new Set(scopus.records.map(r=>r.journal+'|'+r.year+'|'+r.type)).size,84,'Duplicate official observations.');
 const evidence=await Promise.all(profileFiles.map(f=>readJson(path.join(root,f))));
 const audits=await Promise.all(auditFiles.map(f=>readJson(path.join(root,f))));
-const [histIntl,histOjs,media,jcrData,scopusCatData]=await Promise.all([
+const [histIntl,histOjs,media,jcrData,scopusCatData,intlCitData]=await Promise.all([
  readJson(path.join(root,'evidence/dashboard-history-intl.json')),
  readJson(path.join(root,'evidence/dashboard-history-ojs.json')),
  readJson(path.join(root,'evidence/dashboard-media.json')),
  readJson(path.join(root,'evidence/dashboard-jcr.json')),
- readJson(path.join(root,'evidence/scopus-categories.json'))
+ readJson(path.join(root,'evidence/scopus-categories.json')),
+ readJson(path.join(root,'evidence/scopus-citing-docs-intl.json'))
 ]);
 const collectedAt=evidence[0].collectedAt,currentYear=Number(collectedAt.slice(0,4)),outputYears=Array.from({length:currentYear-2019},(_,i)=>2020+i);
 assert(evidence.every(e=>e.collectedAt===collectedAt),'Profile evidence dates must agree.');
@@ -35,8 +36,18 @@ const profiles=evidence.flatMap(e=>e.journals),localAudits=audits.flatMap(a=>a.j
 const historyMap=new Map([...histIntl.journals,...histOjs.journals].map(j=>[j.id,j]));
 const jcrMap=new Map((jcrData.journals||[]).map(j=>[j.id,j]));
 const scopusCatMap=new Map((scopusCatData.journals||[]).map(j=>[j.id,j.categories]));
+const intlCitMap=new Map((intlCitData.journals||[]).map(j=>[j.id,j]));
 assert.deepEqual([...jcrMap.keys()].sort(),['amv','ansn','vjc','vjes','vjm'],'Need exact 5 JCR 2025 journal entries.');
 assert.deepEqual([...scopusCatMap.keys()].sort(),['amv','ansn','cip','vjc','vjes','vjm','vjst'],'Need exact 7 VAST-1 Scopus category entries.');
+assert.deepEqual([...intlCitMap.keys()].sort(),['amv','ansn','vjm'],'Need exact 3 international Scopus citing-doc entries.');
+for(const ic of intlCitMap.values()){
+ const sumDocs=ic.citationSeries.reduce((s,r)=>s+r.citingDocuments,0);
+ assert.equal(sumDocs,ic.totalDistinctCitingDocs,ic.code+': distinct citing docs sum mismatch.');
+ for(const yr of [2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025]){
+  const sr=scopus.records.find(r=>r.journal===ic.code&&r.year===yr&&r.type==='annual');
+  assert.equal(ic.windowCounts[yr]?.fetched,sr.citations,ic.code+' '+yr+': window citing-doc count mismatch with baseline.');
+ }
+}
 for(const jr of jcrMap.values()){
  assert.equal(jr.metricYear,2025,jr.code+': JCR metricYear must be 2025.');
  assert.equal(jr.wosCollection,'ESCI',jr.code+': JCR 2025 edition must be ESCI.');
@@ -117,7 +128,7 @@ function buildAnnualHistory(j,hist,cat,verifiedOutputs){
   }
  }
  for(const o of verifiedOutputs)byYear.set(o.year,{year:o.year,papers:o.papers,issues:o.issues,periodKind:o.periodKind});
- const citMap=new Map((j.localCitation?.citationSeries||hist?.fullCitationSeries||[]).map(c=>[c.year,c]));
+ const citMap=new Map((j.localCitation?.citationSeries||j.scopusCitingDocs?.citationSeries||hist?.fullCitationSeries||[]).map(c=>[c.year,c]));
  const csMap=new Map((j.localCitation?.selfCalculatedSeries||[]).map(c=>[c.year,c]));
  return [...byYear.values()].sort((a,b)=>a.year-b.year).map(r=>{
   const cit=citMap.get(r.year);
@@ -213,6 +224,7 @@ for(let index=0;index<order.length;index++){
  const audit=localAudits.find(a=>a.id===j.id);
  let cat=null;
  if(audit){const res=await localCollection(audit,Boolean(original));j.localCitation=res.local;cat=res.cat;}
+ else if(intlCitMap.has(j.id)){j.scopusCitingDocs=structuredClone(intlCitMap.get(j.id));}
  j.annualHistory=buildAnnualHistory(j,historyMap.get(j.id),cat,j.outputs);
  j.historyStartYear=j.annualHistory[0]?.year??2020;
  j.historyEndYear=j.annualHistory.at(-1)?.year??2026;
