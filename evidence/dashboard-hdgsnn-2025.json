@@ -10,12 +10,6 @@
     "pdfSha256": "405e7c401a6bdf072d0321d16f17017ca6f144b51dbb20349f21eb7bd9ed4eee",
     "mirrorIndexUrl": "https://research.vnuhcm.edu.vn/index.php/vi/2026/01/05/dhqg-hcm-thong-bao-danh-muc-cac-tap-chi-trong-nuoc-va-quoc-te-uy-tin-nam-2025/"
   },
-  "notion": {
-    "title": "Bảng tính điểm các tạp chí VAST tại HĐGSNN năm 2025",
-    "url": "https://trungvjm.notion.site/B-ng-t-nh-i-m-c-c-t-p-ch-VAST-t-i-H-GSNN-n-m-2025-2450d3d417d480f8b723c05cf80465e1",
-    "scoreGroupsCount": 41,
-    "journalCouncilPairsCount": 65
-  },
   "councils": [
     {
       "officialNumber": 1,
@@ -23,8 +17,7 @@
       "name": "Hội đồng Giáo sư liên ngành Chăn nuôi - Thú y - Thuỷ sản",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/1-HD%20CN-TY-TS-DMTC%202025_0001.pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/1-HD-CN-TY-TS-DMTC-2025_0001.pdf",
-      "sha256": "fdb7fbd08de41b0bc30a537836e12a399924bd5b45b9a9e5a56439abf15a577f",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-li-n-ng-nh-Ch-n-nu-i-Th-y-Thu-s-n-2450d3d417d48179815bc0499a67998d?pvs=25"
+      "sha256": "fdb7fbd08de41b0bc30a537836e12a399924bd5b45b9a9e5a56439abf15a577f"
     },
     {
       "officialNumber": 2,
@@ -32,8 +25,7 @@
       "name": "Hội đồng Giáo sư ngành Cơ học",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/2-HD%20Co%20hoc-DMTC%202025_0001(1).pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/2-HD-Co-hoc-DMTC-2025_0001.pdf",
-      "sha256": "2de2b5126cf14ca953f9cb1edbf2c519b3c205f3279b6e251abf11a925b46b8c",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-C-h-c-2450d3d417d481349553ca7e415bfff7?pvs=25"
+      "sha256": "2de2b5126cf14ca953f9cb1edbf2c519b3c205f3279b6e251abf11a925b46b8c"
     },
     {
       "officialNumber": 3,
@@ -41,8 +33,7 @@
       "name": "Hội đồng Giáo sư liên ngành Cơ khí - Động lực",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/3-HD%20CK-DL-DMTC%202025_0001.pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/3-HD-CK-DL-DMTC-2025_0001.pdf",
-      "sha256": "646a31d0f13a04a11e82f430549c06fdb28b6c1e029646e482f951cdf39c0ad8",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-li-n-ng-nh-C-kh-ng-l-c-2450d3d417d481f5a099f7f9c6fae86e?pvs=25"
+      "sha256": "646a31d0f13a04a11e82f430549c06fdb28b6c1e029646e482f951cdf39c0ad8"
     },
     {
       "officialNumber": 4,
@@ -50,8 +41,7 @@
       "name": "Hội đồng Giáo sư ngành Công nghệ thông tin",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/4-HD%20CNTT-DMTC%202025_0001.pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/4-HD-CNTT-DMTC-2025_0001.pdf",
-      "sha256": "f070de7ac4462a53e9c7b1a70fce917ac9c17267d72951800d36b471cf1a4e84",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-C-ng-ngh-th-ng-tin-2450d3d417d4817aa98ac1599e3c2e4e?pvs=25"
+      "sha256": "f070de7ac4462a53e9c7b1a70fce917ac9c17267d72951800d36b471cf1a4e84"
     },
     {
       "officialNumber": 5,
@@ -59,8 +49,7 @@
       "name": "Hội đồng Giáo sư ngành Dược học",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/5-HD%20Duoc%20hoc-DMTC%202025_0001.pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/5-HD-Duoc-hoc-DMTC-2025_0001.pdf",
-      "sha256": "54399f996033b390f6ccbefe58bd982c9d132ded8dbf9264324476a66f596c91",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-D-c-h-c-2450d3d417d481e2a7e4e161169a220a?pvs=25"
+      "sha256": "54399f996033b390f6ccbefe58bd982c9d132ded8dbf9264324476a66f596c91"
     },
     {
       "officialNumber": 6,
@@ -68,8 +57,7 @@
       "name": "Hội đồng Giáo sư liên ngành Điện - Điện tử - Tự động hoá",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/6-HD%20Dien-DT-TDH-DMTC%202025_0001.pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/6-HD-Dien-DT-TDH-DMTC-2025_0001.pdf",
-      "sha256": "8832f4c21e23e73d1624a421a5b7cbb6bb70a287aaa9f0e491cae43e259318c9",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-li-n-ng-nh-i-n-i-n-t-T-ng-ho-2450d3d417d4819d9d62d745b1a10649?pvs=25"
+      "sha256": "8832f4c21e23e73d1624a421a5b7cbb6bb70a287aaa9f0e491cae43e259318c9"
     },
     {
       "officialNumber": 7,
@@ -77,8 +65,7 @@
       "name": "Hội đồng Giáo sư ngành Giao thông vận tải",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/7-HD%20GTVT-DMTC%202025_0001.pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/7-HD-GTVT-DMTC-2025_0001.pdf",
-      "sha256": "604f9415689b5da16757f44ef03f9384799082d87b2fc5de97c76216ac30c7e6",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-Giao-th-ng-v-n-t-i-2450d3d417d481e8bc0bdd3ef6a59c15?pvs=25"
+      "sha256": "604f9415689b5da16757f44ef03f9384799082d87b2fc5de97c76216ac30c7e6"
     },
     {
       "officialNumber": 9,
@@ -86,8 +73,7 @@
       "name": "Hội đồng Giáo sư ngành Hoá học - Công nghệ thực phẩm",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/9-HD%20Hoa%20hoc-CNTP-DMTC%202025_0001(2).pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/9-HD-Hoa-hoc-CNTP-DMTC-2025_0001.pdf",
-      "sha256": "89e8a9dce9df7092e0c69c6c1434adfc9c99d6b3b6d9067e61902109eb0b9a03",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-Ho-h-c-C-ng-ngh-th-c-ph-m-2450d3d417d4813aa434fed6ae5af436?pvs=25"
+      "sha256": "89e8a9dce9df7092e0c69c6c1434adfc9c99d6b3b6d9067e61902109eb0b9a03"
     },
     {
       "officialNumber": 12,
@@ -95,8 +81,7 @@
       "name": "Hội đồng Giáo sư ngành Khoa học Trái đất - Mỏ",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/12-HD%20KHTD-Mo-DMTC%202025_0001.pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/12-HD-KHTD-Mo-DMTC-2025_0001.pdf",
-      "sha256": "f0b9e22e775522091f16ace2452d58533f99791a2af4ec037361da8b99fa49d6",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-Khoa-h-c-Tr-i-t-M-2450d3d417d4817f8066e4c9ba4219e3?pvs=25"
+      "sha256": "f0b9e22e775522091f16ace2452d58533f99791a2af4ec037361da8b99fa49d6"
     },
     {
       "officialNumber": 15,
@@ -104,8 +89,7 @@
       "name": "Hội đồng Giáo sư ngành Luyện kim",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/15-HD%20Luyen%20kim-DMTC%202025_0001(1).pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/15-HD-Luyen-kim-DMTC-2025_0001.pdf",
-      "sha256": "f01af1807240bc2f9dca4f89778c1505fb885b5da8dbb9e502812b6ca0b9e1a6",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-Luy-n-kim-2450d3d417d481f2b198ef7e12c2a82c?pvs=25"
+      "sha256": "f01af1807240bc2f9dca4f89778c1505fb885b5da8dbb9e502812b6ca0b9e1a6"
     },
     {
       "officialNumber": 17,
@@ -113,8 +97,7 @@
       "name": "Hội đồng Giáo sư liên ngành Nông nghiệp - Lâm nghiệp",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/17-HD%20Nong%20nghiep-LN-DMTC%202025_0001(1).pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/17-HD-Nong-nghiep-LN-DMTC-2025_0001.pdf",
-      "sha256": "8e85db39c08c02d924bf8a97aa950fabbee62514e6bcac3bc5abe6ab0d206e53",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-li-n-ng-nh-N-ng-nghi-p-L-m-nghi-p-2450d3d417d481758f68ea9429261504?pvs=25"
+      "sha256": "8e85db39c08c02d924bf8a97aa950fabbee62514e6bcac3bc5abe6ab0d206e53"
     },
     {
       "officialNumber": 18,
@@ -122,8 +105,7 @@
       "name": "Hội đồng Giáo sư ngành Sinh học",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/18-HD%20Sinh%20hoc-DMTC%202025_0001.pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/18-HD-Sinh-hoc-DMTC-2025_0001.pdf",
-      "sha256": "140b71350ed8822d0cd9a073bdc130d71bba46ccca71ad66e7c8571381205aff",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-Sinh-h-c-2450d3d417d4811e89c1c8b4e6daee6e?pvs=25"
+      "sha256": "140b71350ed8822d0cd9a073bdc130d71bba46ccca71ad66e7c8571381205aff"
     },
     {
       "officialNumber": 21,
@@ -131,8 +113,7 @@
       "name": "Hội đồng Giáo sư ngành Thuỷ lợi",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/21-HD%20Thuy%20loi-DMTC%202025_0001.pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/21-HD-Thuy-loi-DMTC-2025_0001.pdf",
-      "sha256": "764c7cd8104ba0da6a6bea7ed44f30055b844e7a6e93b9de3af8a4b990e67ae4",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-Thu-l-i-2450d3d417d481bcabcfe10d541daaf4?pvs=25"
+      "sha256": "764c7cd8104ba0da6a6bea7ed44f30055b844e7a6e93b9de3af8a4b990e67ae4"
     },
     {
       "officialNumber": 22,
@@ -140,8 +121,7 @@
       "name": "Hội đồng Giáo sư ngành Toán học",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/22-HD%20Toan%20hoc-DMTC%202025_0001.pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/22-HD-Toan-hoc-DMTC-2025_0001.pdf",
-      "sha256": "f6b1cc971de5949c28de8de3f4ca247df187f2c703ca7982294f8ecae1788c49",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-To-n-h-c-2450d3d417d4818c8f54fe400f743d7b?pvs=25"
+      "sha256": "f6b1cc971de5949c28de8de3f4ca247df187f2c703ca7982294f8ecae1788c49"
     },
     {
       "officialNumber": 26,
@@ -149,8 +129,7 @@
       "name": "Hội đồng Giáo sư ngành Vật lý",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/26-HD%20Vat%20ly-DMTC%202025_0001.pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/26-HD-Vat-ly-DMTC-2025_0001.pdf",
-      "sha256": "a57b995d13a2d38d3968da11696cc0fc818e44bcf20ff6e249b3f1f3f7c8dc8b",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-V-t-l-2450d3d417d48164820fd7d74ca7e769?pvs=25"
+      "sha256": "a57b995d13a2d38d3968da11696cc0fc818e44bcf20ff6e249b3f1f3f7c8dc8b"
     },
     {
       "officialNumber": 27,
@@ -158,8 +137,7 @@
       "name": "Hội đồng Giáo sư ngành Xây dựng - Kiến trúc",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/27-HD%20XD-KT-DMTC%202025_0001.pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/27-HD-XD-KT-DMTC-2025_0001.pdf",
-      "sha256": "f3e0839c2715d134985d4b62ac5d71f882bdff6e8fc600a848006975bb2edc5f",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-X-y-d-ng-Ki-n-tr-c-2450d3d417d4818e8fc7f2c3f2bf2179?pvs=25"
+      "sha256": "f3e0839c2715d134985d4b62ac5d71f882bdff6e8fc600a848006975bb2edc5f"
     },
     {
       "officialNumber": 28,
@@ -167,8 +145,7 @@
       "name": "Hội đồng Giáo sư ngành Y học",
       "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/28-HD%20Y%20hoc-DMTC%202025_0001(2).pdf",
       "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/28-HD-Y-hoc-DMTC-2025_0001.pdf",
-      "sha256": "c8d2be348702b55dde18e01c3ff39ceb6b6b2839713154fb12c2acda95dedffc",
-      "notionUrl": "https://trungvjm.notion.site/H-i-ng-Gi-o-s-ng-nh-Y-h-c-2450d3d417d481759573cd0d82678042?pvs=25"
+      "sha256": "c8d2be348702b55dde18e01c3ff39ceb6b6b2839713154fb12c2acda95dedffc"
     }
   ],
   "journals": [
@@ -245,7 +222,7 @@
     {
       "id": "ansn",
       "code": "ANSN",
-      "councilsCount": 2,
+      "councilsCount": 1,
       "scores": [
         {
           "councilNumber": 12,
@@ -260,27 +237,13 @@
           "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/12-HD-KHTD-Mo-DMTC-2025_0001.pdf",
           "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/12-HD%20KHTD-Mo-DMTC%202025_0001.pdf",
           "notes": "Đạt điểm tối đa 1.5 từ năm 2022 (trước 2020 là 1.0)."
-        },
-        {
-          "councilNumber": 26,
-          "council": "Hội đồng Giáo sư ngành Vật lý",
-          "councilShort": "Vật lý",
-          "score": "1.0",
-          "maxScore": 1.0,
-          "conditions": "Tên cũ: Proceedings of the National Centre for Scientific Research of Vietnam",
-          "sourcePage": 2,
-          "sourceRow": 5,
-          "sourceQuote": "5 | Advances in Natural Sciences (Tên cũ: Proceedings of the National Centre for Scientific Research of Vietnam) | 1859-221X | Tạp chí | Viện Hàn lâm Khoc học và Công nghệ Việt Nam | 0 - 1,0",
-          "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/26-HD-Vat-ly-DMTC-2025_0001.pdf",
-          "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/26-HD%20Vat%20ly-DMTC%202025_0001.pdf",
-          "notes": "Ghi tên 'Advances in Natural Sciences' (ISSN 1859-221X), cơ quan xuất bản gõ nhầm 'Khoc học'. Khung điểm 0 - 1,0."
         }
       ]
     },
     {
       "id": "vjc",
       "code": "VJC",
-      "councilsCount": 6,
+      "councilsCount": 5,
       "scores": [
         {
           "councilNumber": 5,
@@ -337,20 +300,6 @@
           "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/15-HD-Luyen-kim-DMTC-2025_0001.pdf",
           "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/15-HD%20Luyen%20kim-DMTC%202025_0001(1).pdf",
           "notes": "Tên trong bảng: Hoá học (Vietnam Journal of Chemisty). Đạt 1.5 từ năm 2022."
-        },
-        {
-          "councilNumber": 17,
-          "council": "Hội đồng Giáo sư liên ngành Nông nghiệp - Lâm nghiệp",
-          "councilShort": "Nông nghiệp - Lâm nghiệp",
-          "score": "0.75",
-          "maxScore": 0.75,
-          "conditions": "0 - 0,75 từ 2017 đến hết 2018",
-          "sourcePage": 2,
-          "sourceRow": 10,
-          "sourceQuote": "10 | Hóa học (Vietnam Journal of Chemistry) | 0866-7144 (2572-8288) | Tạp chí | Viện Hàn lâm Khoa học và Công nghệ Việt Nam | 0 - 0,75 từ 2017 đến hết 2018",
-          "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/17-HD-Nong-nghiep-LN-DMTC-2025_0001.pdf",
-          "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/17-HD%20Nong%20nghiep-LN-DMTC%202025_0001(1).pdf",
-          "notes": "Ghi chú điều kiện giới hạn thời gian: '0 - 0,75 từ 2017 đến hết 2018'. Notion ghi nhận điểm 0.75."
         },
         {
           "councilNumber": 18,
@@ -518,7 +467,7 @@
           "sourceQuote": "38 | Khoa học và Công nghệ | p-2525-2518 e-2815-5874 0866-708X | Tạp chí | Viện Hàn lâm Khoa học và Công nghệ Việt Nam | 0 - 1,0 ; 0 - 1,25 từ 2021 (LV Vật liệu, Môi trường) ; 0 - 1,5 từ 2024 (LV Vật liệu) ; 0 - 1,25 từ 2024 (LV HCTNhiên, CNTP)",
           "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/9-HD-Hoa-hoc-CNTP-DMTC-2025_0001.pdf",
           "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/9-HD%20Hoa%20hoc-CNTP-DMTC%202025_0001(2).pdf",
-          "notes": "Tên trong bảng: Khoa học và Công nghệ. Đạt 1.5 từ năm 2024 đối với lĩnh vực Vật liệu; đạt 1.25 từ năm 2024 đối với lĩnh vực Hợp chất thiên nhiên (HCTNhiên) và Công nghệ thực phẩm (CNTP). Khung điểm 2 mức 1.25 - 1.5 đúng như ghi nhận trong Notion."
+          "notes": "Tên trong bảng: Khoa học và Công nghệ. Đạt 1.5 từ năm 2024 đối với lĩnh vực Vật liệu; đạt 1.25 từ năm 2024 đối với lĩnh vực Hợp chất thiên nhiên (HCTNhiên) và Công nghệ thực phẩm (CNTP)."
         },
         {
           "councilNumber": 12,

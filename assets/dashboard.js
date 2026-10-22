@@ -372,6 +372,9 @@ function markerShape(marker,x,y,r,fill,stroke='var(--bg)'){
    ========================================================================== */
 function renderHeroAndOverview(){
   $('#snapshot-date').textContent=formatDate(dashboard.collectedAt);
+  for(const [group,selector] of [['VAST-1','#overview-international-journals'],['VAST-2','#overview-national-journals']]){
+    $(selector).innerHTML=dashboard.journals.filter(j=>j.group===group).map(j=>`<li><a href="#journal/${esc(j.id)}">${esc(fullName(j))}</a></li>`).join('');
+  }
 
   // 1. Place 12 journal covers around the Hero orbital ellipses
   const orbitPositions=[
@@ -1147,14 +1150,13 @@ function renderReferences(){
     ];
   });
   references.push(...dashboard.historySources.filter(source=>source.url).map(source=>({
-    author:new URL(source.url).hostname==='math.ac.vn'?'Viện Toán học, VAST':null,
+    author:source.author||(new URL(source.url).hostname==='math.ac.vn'?'Viện Toán học, VAST':null),
     title:source.title,url:source.url
   })));
   if(dashboard.hdgsnn){
     references.push(
       {author:'Hội đồng Giáo sư nhà nước',title:dashboard.hdgsnn.decision.title,year:dashboard.hdgsnn.year,url:dashboard.hdgsnn.decision.url},
-      ...dashboard.hdgsnn.councils.map(c=>({author:c.name,title:`Danh mục tạp chí khoa học được tính điểm năm ${dashboard.hdgsnn.year}`,year:dashboard.hdgsnn.year,url:c.sourceUrl})),
-      {author:null,title:dashboard.hdgsnn.notion.title,url:dashboard.hdgsnn.notion.url}
+      ...dashboard.hdgsnn.councils.map(c=>({author:c.name,title:`Danh mục tạp chí khoa học được tính điểm năm ${dashboard.hdgsnn.year}`,year:dashboard.hdgsnn.year,url:c.sourceUrl}))
     );
   }
   const unique=new Map();
@@ -1210,7 +1212,7 @@ function renderDetail(id){
   const listedIndexings=j.indexings.filter(i=>i.status==='listed');
 
   const profileRows=[
-    ['Phân nhóm VAST',j.group==='VAST-1'?'VAST-1 · Scopus':'VAST-2 · Tạp chí chuyên ngành VAST'],
+    ['Phân nhóm VAST',j.group==='VAST-1'?'VAST-1 · Tạp chí quốc tế':'VAST-2 · Tạp chí quốc gia'],
     ['Tên tiếng Việt',j.titleVi],
     ['Lĩnh vực',j.subject],
     ['Đơn vị chủ quản xuất bản',inst.name],
@@ -1451,7 +1453,7 @@ function renderDetail(id){
 
         ${j.hdgsnn2025?.length?`<section id="journal-hdgsnn" class="detail-section">
           <h3>Điểm tính tại HĐGSNN năm 2025 (${j.hdgsnn2025.length} hội đồng)</h3>
-          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">${external(dashboard.hdgsnn.decision.pdfUrl,'Quyết định 26/QĐ-HĐGSNN (11/07/2025)')} · ${external(dashboard.hdgsnn.notion.url,'Bảng tổng hợp Notion')}</p>
+          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">${external(dashboard.hdgsnn.decision.pdfUrl,'Quyết định 26/QĐ-HĐGSNN (11/07/2025)')}</p>
           <div class="table-scroll">
             <table class="detail-table">
               <thead><tr><th scope="col">Hội đồng Giáo sư ngành, liên ngành</th><th scope="col">Điểm tối đa 2025</th><th scope="col">Quy định trong danh mục</th></tr></thead>
@@ -1732,10 +1734,9 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022p'),fetch('data-scopus.json?v=20261022a')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022r'),fetch('data-scopus.json?v=20261022a')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
-    dashboard=await dRes.json();
-    scopus=await sRes.json();
+    [dashboard,scopus]=await Promise.all([dRes.json(),sRes.json()]);
     syncPaletteColors();
     state.selected=new Set(scopusJournals().map(j=>j.id));
     state.selectedCandidates=new Set(candidateJournals().map(j=>j.id));

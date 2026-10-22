@@ -11,8 +11,8 @@
 <link rel="preload" href="assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/dashboard.css?v=20261022q">
-<script type="module" src="assets/dashboard.js?v=20261022q"></script>
+<link rel="stylesheet" href="assets/dashboard.css?v=20261022r">
+<script type="module" src="assets/dashboard.js?v=20261022r"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Đến nội dung chính</a>
@@ -79,8 +79,6 @@
 <!-- ARTCRAFT ARCHITECTURAL ORBITAL HERO -->
 <section id="hero" class="artcraft-hero" aria-labelledby="hero-title">
 <div class="hero-orbital-bg" aria-hidden="true">
-<img class="hero-galaxy hero-galaxy-dark" src="assets/images/milky-way-eso0932a.jpg" alt="" fetchpriority="high" decoding="async">
-<img class="hero-galaxy hero-galaxy-light" src="assets/images/hero-carina-nebula.webp" alt="" decoding="async">
 <svg class="orbital-svg" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice">
 <g fill="none" stroke="currentColor" stroke-width="1">
 <ellipse cx="720" cy="380" rx="250" ry="155" opacity="0.22"/>
@@ -108,8 +106,6 @@
 <a class="btn-outline" href="#section-citescore">03 · XEM BIỂU ĐỒ</a>
 </div>
 </div>
-<p class="hero-photo-credit hero-photo-credit-dark">Ảnh: <a href="https://www.eso.org/public/images/eso0932a/" target="_blank" rel="noopener noreferrer" title="Ảnh Dải Ngân Hà của ESO/S. Brunier">ESO/S. Brunier</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></p>
-<p class="hero-photo-credit hero-photo-credit-light">Ảnh: <a href="https://commons.wikimedia.org/wiki/File:Eta_Carinae_Nebula_1.jpg" target="_blank" rel="noopener noreferrer" title="Ảnh ghép tinh vân Carina từ Hubble và CTIO/NOIRLab">Hubble: NASA, ESA, N. Smith, Hubble Heritage Team; CTIO: N. Smith, NOAO/AURA/NSF</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0 (dữ liệu CTIO)</a> · cắt khung và phủ màu bằng CSS</p>
 </section>
 
 <!-- SCROLL-VELOCITY KINETIC MARQUEE TICKER (getartcraft.com .marquee border-y border-line) -->
@@ -140,36 +136,22 @@
 <div class="overview-arch-grid" data-reveal>
 <article class="arch-cell">
 <div class="arch-cell-head">
-<span class="hud-label">NHÓM CHỈ MỤC QUỐC TẾ</span>
+<span class="hud-label">NHÓM TẠP CHÍ QUỐC TẾ</span>
 <span class="hud-label arch-cell-num">01</span>
 </div>
 <h3>Nhóm VAST-1 — 7 tạp chí</h3>
 <p>7 tạp chí thuộc <strong>Scopus</strong>; 5 thuộc <strong>Web of Science · ESCI</strong> và có chỉ số <strong>JCR 2025</strong>.</p>
-<div class="arch-pill-list">
-<a href="#journal/vjm">VJM</a>
-<a href="#journal/amv">AMV</a>
-<a href="#journal/ansn">ANSN</a>
-<a href="#journal/vjc">VJC</a>
-<a href="#journal/vjes">VJES</a>
-<a href="#journal/vjst">VJST</a>
-<a href="#journal/cip">CIP</a>
-</div>
+<ul id="overview-international-journals" class="overview-journal-list" aria-label="Các tạp chí quốc tế"></ul>
 </article>
 
 <article class="arch-cell">
 <div class="arch-cell-head">
-<span class="hud-label">NHÓM TẠP CHÍ CHUYÊN NGÀNH</span>
+<span class="hud-label">NHÓM TẠP CHÍ QUỐC GIA</span>
 <span class="hud-label arch-cell-num">02</span>
 </div>
-<h3>Nhóm VAST-2 — 5 tạp chí chuyên ngành</h3>
+<h3>Nhóm VAST-2 — 5 tạp chí</h3>
 <p><em>AJB</em> thuộc <em>Web of Science Zoological Record</em>. <strong>CiteScore tự tính</strong> không phải chỉ số Scopus chính thức.</p>
-<div class="arch-pill-list">
-<a href="#journal/vjmech">VJMech</a>
-<a href="#journal/jcc">JCC</a>
-<a href="#journal/ajb">AJB</a>
-<a href="#journal/vjmst">VJMST</a>
-<a href="#journal/vjbt">VJBT</a>
-</div>
+<ul id="overview-national-journals" class="overview-journal-list" aria-label="Các tạp chí quốc gia"></ul>
 </article>
 
 <article class="arch-cell">
@@ -236,8 +218,8 @@
 <label for="index-filter">Nhóm tạp chí</label>
 <select id="index-filter">
 <option value="all">Tất cả 12 tạp chí</option>
-<option value="VAST-1">Nhóm VAST-1 (7 tạp chí đã vào Scopus)</option>
-<option value="VAST-2">Nhóm VAST-2 (5 tạp chí)</option>
+<option value="VAST-1">Tạp chí quốc tế · VAST-1 (7)</option>
+<option value="VAST-2">Tạp chí quốc gia · VAST-2 (5)</option>
 <option value="Scopus">Đã chỉ mục Scopus (7)</option>
 <option value="WoS">Web of Science Core Collection (5)</option>
 </select>

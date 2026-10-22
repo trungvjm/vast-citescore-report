@@ -28,6 +28,15 @@
       "id": "user-editor-portraits",
       "kind": "user-supplied-images",
       "title": "Ảnh chân dung Tổng biên tập AMV do người dùng cung cấp"
+    },
+    {
+      "id": "jcc-pham-thuong-cat-portrait",
+      "kind": "published-photograph",
+      "author": "Trà Giang",
+      "title": "Nhớ mãi trong tôi, Người gây dựng VCCA",
+      "url": "https://tudonghoangaynay.vn/nho-mai-trong-toi-nguoi-gay-dung-vcca-6130.html",
+      "publishedAt": "2022-04-08",
+      "checkedAt": "2026-10-22"
     }
   ],
   "journals": [
@@ -1822,7 +1831,22 @@
                 1604
               ]
             }
-          ]
+          ],
+          "portrait": {
+            "path": "assets/images/editors/jcc-pham-thuong-cat.webp",
+            "width": 270,
+            "height": 360,
+            "bytes": 17514,
+            "sha256": "7e5ec13b4e464b8ba1a6c587e856af320f534b54cdc264e14e8ec7e74a5cf1c9",
+            "sourceId": "jcc-pham-thuong-cat-portrait",
+            "sourceImageUrl": "https://tudonghoangaynay.vn/stores/news_dataimages/vnautomate/nho-mai-trong-toi-nguoi-gay-dung-vcca-20240803125926-1008-0.jpg",
+            "sourceImageSha256": "2b706d2bd83c4ad64ea91472fce53633509da3ff4434422da5173e3da9537c7f",
+            "sourceWidth": 600,
+            "sourceHeight": 666,
+            "crop": [150, 145, 420, 505],
+            "caption": "PGS.TSKH. Phạm Thượng Cát tại phòng làm việc năm 2007. Ảnh: Trà Giang.",
+            "treatment": "Cắt chân dung tỉ lệ 3:4 từ ảnh có chú thích định danh; chuyển WebP, không phóng lớn hoặc chỉnh sửa khuôn mặt."
+          }
         },
         {
           "name": "Đặng Quang Á",

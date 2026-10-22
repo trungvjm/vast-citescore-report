@@ -23,7 +23,7 @@ assert.equal(new Set(scopus.records.map(r=>r.journal+'|'+r.year+'|'+r.type)).siz
 const officialAnnualCodes=new Set(scopus.records.filter(r=>r.type==='annual'&&Number.isFinite(r.value)).map(r=>r.journal));
 const evidence=await Promise.all(profileFiles.map(f=>readJson(path.join(root,f))));
 const audits=await Promise.all(auditFiles.map(f=>readJson(path.join(root,f))));
-const [histIntl,histOjs,media,jcrData,scopusCatData,intlCitData,originData,hdgsnnData,heroLight]=await Promise.all([
+const [histIntl,histOjs,media,jcrData,scopusCatData,intlCitData,originData,hdgsnnData]=await Promise.all([
  readJson(path.join(root,'evidence/dashboard-history-intl.json')),
  readJson(path.join(root,'evidence/dashboard-history-ojs.json')),
  readJson(path.join(root,'evidence/dashboard-media.json')),
@@ -31,10 +31,8 @@ const [histIntl,histOjs,media,jcrData,scopusCatData,intlCitData,originData,hdgsn
  readJson(path.join(root,'evidence/scopus-categories.json')),
  readJson(path.join(root,'evidence/scopus-citing-docs-intl.json')),
  readJson(path.join(root,'evidence/dashboard-journal-origins.json')),
- readJson(path.join(root,'evidence/dashboard-hdgsnn-2025.json')),
- readJson(path.join(root,'evidence/hero-light.json'))
+ readJson(path.join(root,'evidence/dashboard-hdgsnn-2025.json'))
 ]);
-assert.equal(sha(await readFile(path.join(root,heroLight.asset))),heroLight.sha256,'Light hero asset differs from its manifest.');
 for(const logo of Object.values(media.logos)){
  if(!logo.darkVariant)continue;
  assert.equal(logo.darkVariant.sourceSha256,logo.sha256,'Dark artwork must reference its original logo.');
@@ -52,7 +50,14 @@ const originSourceIds=new Set(originData.sources.map(s=>s.id));
 const hdgsnnMap=new Map((hdgsnnData.journals||[]).map(j=>[j.id,j]));
 assert.deepEqual([...hdgsnnMap.keys()].sort(),[...order].sort(),'Need 2025 HĐGSNN scoring for all 12 journals.');
 assert.equal(hdgsnnData.councils?.length,17,'Need exact 17 HĐGSNN 2025 councils.');
-assert.equal([...hdgsnnMap.values()].reduce((s,j)=>s+j.scores.length,0),65,'Need exact 65 verified HĐGSNN 2025 journal-council score pairs.');
+for(const journal of hdgsnnData.journals){
+ assert.equal(journal.councilsCount,journal.scores.length,journal.code+': council count differs from sourced records.');
+ for(const score of journal.scores){
+  const council=hdgsnnData.councils.find(c=>c.officialNumber===score.councilNumber);
+  assert(council&&score.sourceUrl===council.sourceUrl&&score.officialUrl===council.officialUrl,journal.code+': score must cite its council document.');
+  assert(Number.isInteger(score.sourcePage)&&score.sourcePage>0&&Number.isInteger(score.sourceRow)&&score.sourceRow>0&&score.sourceQuote?.trim(),journal.code+': score needs a document page, row and quotation.');
+ }
+}
 assert.deepEqual([...originMap.keys()].sort(),[...order].sort(),'Need sourced histories for all 12 journals.');
 assert.deepEqual([...jcrMap.keys()].sort(),['amv','ansn','vjc','vjes','vjm'],'Need exact 5 JCR 2025 journal entries.');
 assert.deepEqual([...scopusCatMap.keys()].sort(),['amv','ansn','cip','vjc','vjes','vjm','vjst'],'Need exact 7 VAST-1 Scopus category entries.');
@@ -278,7 +283,7 @@ for(let index=0;index<order.length;index++){
 const snapshotId=collectedAt+'-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
 const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.png',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},officialJcr:{path:'evidence/dashboard-jcr.json',metricYear:2025,journalsCount:jcrMap.size,edition:'Emerging Sources Citation Index (ESCI)'},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
 dataset.historySources=structuredClone(originData.sources);
-dataset.hdgsnn={year:hdgsnnData.year,collectedAt:hdgsnnData.collectedAt,decision:structuredClone(hdgsnnData.decision),notion:structuredClone(hdgsnnData.notion),councils:structuredClone(hdgsnnData.councils)};
+dataset.hdgsnn={year:hdgsnnData.year,collectedAt:hdgsnnData.collectedAt,decision:structuredClone(hdgsnnData.decision),councils:structuredClone(hdgsnnData.councils)};
 const serialized=JSON.stringify(dataset,null,2)+'\n';
 if(process.argv.includes('--write')){
  await mkdir(path.join(root,'data/snapshots'),{recursive:true});
