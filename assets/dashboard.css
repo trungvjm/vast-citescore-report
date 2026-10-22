@@ -1577,7 +1577,7 @@ figure{margin:0;min-width:0}
   font-weight:600;
   font-size:11px;
   letter-spacing:0.1em;
-  text-transform:uppercase;
+  text-transform:none;
   color:var(--ink-strong);
   text-decoration:none;
   display:inline-flex;

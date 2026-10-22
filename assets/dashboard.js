@@ -589,7 +589,7 @@ function renderCatalog(){
       <div class="lineup-body">
         <div>
           <h3 class="lineup-title"><a href="#journal/${esc(j.id)}">${esc(j.title)} <span class="lineup-code">(${esc(j.code)})</span></a></h3>
-          <p class="lineup-vi">${esc(j.titleVi)}</p>
+          ${j.titleVi&&j.titleVi!==j.title?`<p class="lineup-vi">${esc(j.titleVi)}</p>`:''}
         </div>
         <div>
           <div class="lineup-metrics${j.jcr?' has-third-metric':''}">
@@ -598,7 +598,7 @@ function renderCatalog(){
             ${j.jcr?`<div class="lineup-metric-cell"><span>Tracker 26</span><strong>${esc(m3Val)}</strong></div>`:''}
           </div>
           <div class="lineup-tags">${indexingBadges(j)}</div>
-          <a class="lineup-explore" href="#journal/${esc(j.id)}"><span>XEM CITESCORE &amp; BIỂU ĐỒ</span><span aria-hidden="true">↗</span></a>
+          <a class="lineup-explore" href="#journal/${esc(j.id)}">Xem chi tiết</a>
         </div>
       </div>
     </article>`;

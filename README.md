@@ -24,6 +24,8 @@ Nhãn chỉ số tự tính trên thẻ VAST-2 dùng đầy đủ “CiteScore 2
 
 Thẻ danh mục không hiển thị tổng số bài. Thẻ có JCR giữ ba ô chỉ số (CiteScore, JIF, Tracker); các thẻ còn lại có hai ô, tự chia đều chiều rộng. Tổng số bài và bảng xuất bản vẫn có trong hồ sơ chi tiết.
 
+Tên phụ trên thẻ chỉ hiển thị khi có tên tiếng Việt khác tên chính; AMV và ANSN không lặp lại tên nguyên bản ở dòng nhỏ. Liên kết mở hồ sơ dùng nhãn “Xem chi tiết”, không kèm mũi tên.
+
 Bảng “CiteScore Scopus theo năm” chỉ hiển thị năm có giá trị CiteScore hữu hạn; giá trị 0 vẫn hợp lệ. Các bản ghi thiếu chỉ số vẫn giữ trong dữ liệu nguồn nhưng không tạo dòng N/A trên bảng này. Tiêu đề bảng CiteScore và bảng số liệu xuất bản/trích dẫn không lặp lại khoảng năm; các năm vẫn có ở từng dòng.
 
 CIP chưa có CiteScore thường niên chính thức nên không hiển thị thứ hạng, phân vị hoặc Quartile Scopus, không suy diễn Q từ Tracker. Dữ liệu phân ngành có xếp hạng của CIP được để trống; các hồ sơ khác giữ nguyên. Trình dựng từ chối xếp hạng phân ngành cho tạp chí chỉ có Tracker mà chưa có CiteScore thường niên chính thức. CiteScore Tracker 2026 và các số liệu trích dẫn/tài liệu của CIP vẫn dùng nguồn Scopus riêng, không bị sửa.
