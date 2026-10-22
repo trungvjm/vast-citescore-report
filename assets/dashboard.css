@@ -1507,6 +1507,7 @@ figure{margin:0;min-width:0}
   font-weight:600;
   font-size:10.5px;
   line-height:1.3;
+  text-wrap:balance;
   color:var(--ink);
 }
 .lineup-body{
