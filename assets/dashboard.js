@@ -1130,7 +1130,7 @@ function renderReferences(){
   $('#source-links').innerHTML=dashboard.journals.map(j=>{
     const inst=j.institution||{name:j.publisher};
     const scopusLink=j.scopusSourceId?` · ${external(`https://www.scopus.com/sourceid/${j.scopusSourceId}`,'Scopus Sources')}`:'';
-    const wos=j.indexings.find(i=>i.system==='WoS');
+    const wos=j.indexings.find(i=>i.system==='WoS'&&i.status==='listed');
     const wosLink=wos?` · ${external(wos.sourceUrl,'Clarivate Master Journal List')}`:'';
     return`<li><p><strong>${esc(fullName(j))}</strong> — ${esc(j.titleVi)}. Đơn vị xuất bản: <em>${esc(inst.name)}${inst.coPublisher?` & ${esc(inst.coPublisher)}`:''}</em>. Trang chủ: ${external(j.website,j.website)} · Kho lưu trữ: ${archiveLinks(j)}${scopusLink}${wosLink}.</p></li>`;
   }).join('');
@@ -1148,7 +1148,7 @@ function renderJournalHistory(j){
       <ol class="history-timeline">${history.events.map(event=>`<li><strong class="history-date">${esc(event.dateLabel)}</strong><div><p>${esc(event.text)}</p></div></li>`).join('')}</ol>
     </section>
     <section id="journal-editors" class="history-section" aria-labelledby="journal-editors-heading">
-      <p class="hud-label chart-kicker">LÃNH ĐẠO TÒA SOẠN · ${esc(j.code)}</p>
+      <p class="hud-label chart-kicker">LÃNH ĐẠO TẠP CHÍ · ${esc(j.code)}</p>
       <h3 id="journal-editors-heading">Tổng biên tập qua các thời kỳ</h3>
       <div class="editor-grid">${history.editors.map(editor=>`<article class="editor-card${editor.portrait?'':' is-text-only'}">
         ${editor.portrait?`<img class="editor-portrait" src="${esc(editor.portrait.path)}" alt="Chân dung ${esc(editor.name)}" width="${editor.portrait.width}" height="${editor.portrait.height}" loading="lazy" decoding="async">`:''}
@@ -1182,9 +1182,10 @@ function renderDetail(id){
   const missingYears=[];
   for(let y=minYear;y<=maxYear;y++)if(!histYearSet.has(y))missingYears.push(y);
   const jr=j.jcr||null;
+  const listedIndexings=j.indexings.filter(i=>i.status==='listed');
 
   const profileRows=[
-    ['Phân nhóm VAST',j.group==='VAST-1'?'Nhóm VAST-1 (Đã chỉ mục Scopus; xem thêm trạng thái Web of Science ở mục Chỉ mục)':'Nhóm VAST-2 (Tạp chí chuyên ngành VAST)'],
+    ['Phân nhóm VAST',j.group==='VAST-1'?'Nhóm VAST-1 (Đã chỉ mục Scopus; xem thêm ở mục Chỉ mục)':'Nhóm VAST-2 (Tạp chí chuyên ngành VAST)'],
     ['Tên tiếng Việt',j.titleVi],
     ['Lĩnh vực',j.subject],
     ['Đơn vị chủ quản xuất bản',inst.name],
@@ -1236,7 +1237,7 @@ function renderDetail(id){
         <a href="#journal/${esc(j.id)}/journal-editors">Tổng biên tập</a>
         <a href="#journal/${esc(j.id)}/journal-charts">Biểu đồ</a>
         <a href="#journal/${esc(j.id)}/journal-data">Số liệu</a>
-        <a href="#journal/${esc(j.id)}/journal-indexing">Chỉ mục</a>
+        ${listedIndexings.length?`<a href="#journal/${esc(j.id)}/journal-indexing">Chỉ mục</a>`:''}
       </nav>
     </div>
 
@@ -1435,12 +1436,12 @@ function renderDetail(id){
           <ul class="source-evidence">${jr.categories.map(c=>`<li><strong>${esc(c.name)}</strong> — JIF: hạng <strong>${c.jif.rank}/${c.jif.total}</strong> (<strong>${esc(c.jif.quartile)}</strong>, phân vị ${oneDec.format(c.jif.percentile)}%) · JCI: hạng <strong>${c.jci.rank}/${c.jci.total}</strong> (<strong>${esc(c.jci.quartile)}</strong>, phân vị ${twoDec.format(c.jci.percentile)}%)</li>`).join('')}</ul>
         </section>`:''}
 
-        <section id="journal-indexing" class="detail-section">
+        ${listedIndexings.length?`<section id="journal-indexing" class="detail-section">
           <h3>Chỉ mục khoa học</h3>
           <ul class="source-evidence">
-            ${j.indexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong> — ${indexingStatusLabel(i.status,i.system)}<small>${[i.status==='listed'&&i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',external(i.sourceUrl,i.system==='WoS'?'Clarivate Master Journal List':`Thông tin ${i.system}`)].filter(Boolean).join(' · ')}</small></li>`).join('')}
+            ${listedIndexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong> — ${indexingStatusLabel(i.status,i.system)}<small>${[i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',external(i.sourceUrl,i.system==='WoS'?'Clarivate Master Journal List':`Thông tin ${i.system}`)].filter(Boolean).join(' · ')}</small></li>`).join('')}
           </ul>
-        </section>
+        </section>`:''}
       </div>
     </div>`;
 
@@ -1629,7 +1630,7 @@ function syncRoute(){
       {id:'editors',elId:'journal-editors',word:'TỔNG BIÊN TẬP'},
       {id:'charts',elId:'journal-charts',word:'BIỂU ĐỒ'},
       {id:'data',elId:'journal-data',word:'SỐ LIỆU'},
-      {id:'indexing',elId:'journal-indexing',word:'CHỈ MỤC'}
+      ...(journal?.indexings?.some(i=>i.status==='listed')?[{id:'indexing',elId:'journal-indexing',word:'CHỈ MỤC'}]:[])
     ],journal?`${journal.code} · VAST JOURNALS`:'VAST JOURNALS',id);
     target=sectionId?document.getElementById(sectionId):null;
     if(!target)window.scrollTo({top:0,behavior:'instant'});
