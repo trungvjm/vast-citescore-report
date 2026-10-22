@@ -405,7 +405,7 @@ function renderHeroAndOverview(){
     '<strong>VJES</strong> dẫn đầu toàn khối với CiteScore 2025 đạt <strong>5,0</strong> (<strong>Q1 Scopus</strong>, phân vị 77%, hạng 45/201 ngành Khoa học Trái đất; JIF 2025 = 2,1 · Q3 JIF / Q2 JCI) và Tracker 2026 đạt <strong>4,6</strong> (Q2, 74%).',
     '<strong>ANSN</strong> đạt CiteScore 2025 là <strong>3,9</strong> (<strong>Q2 Scopus</strong> ở 2 ngành Kỹ thuật với phân vị 61% &amp; 60%, <strong>Q3</strong> Khoa học Vật liệu 48%; JIF 2025 = <strong>2,4 · Q3</strong>) và Tracker 2026 tăng lên <strong>4,0</strong> (Q2, 62%).',
     '<strong>VJC</strong> tăng liên tục từ <strong>0,5</strong> (2021 · Q4), <strong>1,4</strong> (2022 · Q3) lên <strong>3,0</strong> (2025 · <strong>Q3 Scopus</strong>, 43%) và lên <strong>Q2 Scopus (50%)</strong> ở Tracker 2026 (3,4); <strong>VJM</strong> đạt <strong>2,1</strong> (<strong>Q2 Scopus</strong>, phân vị 72%, hạng 115/414 Toán học; năm 2024 đạt <strong>Q1 Scopus</strong> với 76%; JIF 2025 = 0,9 · <strong>Q2 WoS</strong>); <strong>AMV</strong> do <strong>Viện Toán học</strong> trực tiếp chủ quản.',
-    'Trong nhóm <strong>VAST-2</strong>, <strong>VJMech</strong> (0,79 năm 2025 → 1,14 năm 2026) và <strong>JCC</strong> (0,70 năm 2025 → 1,12 năm 2026) có chỉ số 4 năm tự tính cao hơn mức Tracker 2026 (0,7 · Q4 Scopus) của <strong>CIP</strong>.'
+    'Trong nhóm <strong>VAST-2</strong>, <strong>VJMech</strong> (0,79 năm 2025 → 1,14 năm 2026) và <strong>JCC</strong> (0,70 năm 2025 → 1,12 năm 2026) có CiteScore tự tính cao hơn mức Tracker 2026 (0,7 · Q4 Scopus) của <strong>CIP</strong>.'
   ];
   $('#remarks-list').innerHTML=remarks.map(item=>`<li>${item}</li>`).join('');
 }
@@ -1211,8 +1211,8 @@ function renderDetail(id){
   }else{
     const tot=j.localCitation?.totals;
     metricCards=[
-      ['Chỉ số 4 năm 2025 (tự tính)',loc25?twoDec.format(loc25.score):'N/A',loc25?`${integer.format(loc25.numerator)} trích dẫn / ${integer.format(loc25.denominator)} bài (2022–2025)`:'—'],
-      ['Chỉ số 4 năm 2026 (tự tính)',loc26?twoDec.format(loc26.score):'N/A',loc26?`${integer.format(loc26.numerator)} trích dẫn / ${integer.format(loc26.denominator)} bài (2023–2026)`:'—'],
+      ['CiteScore 2025 (tự tính)',loc25?twoDec.format(loc25.score):'N/A',loc25?`${integer.format(loc25.numerator)} trích dẫn / ${integer.format(loc25.denominator)} bài (2022–2025)`:'—'],
+      ['CiteScore 2026 (tự tính)',loc26?twoDec.format(loc26.score):'N/A',loc26?`${integer.format(loc26.numerator)} trích dẫn / ${integer.format(loc26.denominator)} bài (2023–2026)`:'—'],
       [`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ xuất bản`],
       ['Tổng trích dẫn',tot?`${integer.format(tot.citations)} lượt`:'N/A',tot?`h-index: ${tot.hIndex} · ${integer.format(tot.citingDocs)} bài trích dẫn`:'—']
     ];
@@ -1288,7 +1288,7 @@ function renderDetail(id){
           <svg id="j-cit-chart" class="detail-svg" viewBox="0 0 860 260" role="img" aria-label="Biểu đồ lịch sử trích dẫn của ${esc(j.code)}"></svg>
         </div>
         <div class="detail-chart-card">
-          <h4>3. Diễn biến ${j.group==='VAST-1'?'CiteScore chính thức & Tracker Scopus':'CiteScore dự kiến (4 năm)'} của ${esc(j.code)}</h4>
+          <h4>3. Diễn biến ${j.group==='VAST-1'?'CiteScore chính thức & Tracker Scopus':'CiteScore tự tính'} của ${esc(j.code)}</h4>
           <p id="j-cs-summary">Chỉ số CiteScore theo năm, kèm số lượt trích dẫn và số tài liệu dùng để tính chỉ số.</p>
           <svg id="j-cs-chart" class="detail-svg" viewBox="0 0 860 250" role="img" aria-label="Biểu đồ CiteScore của ${esc(j.code)}"></svg>
         </div>
@@ -1308,7 +1308,7 @@ function renderDetail(id){
                   <th scope="col">Số kỳ</th>
                   <th scope="col">Bài trích dẫn</th>
                   <th scope="col">Lượt trích dẫn</th>
-                  <th scope="col">${j.group==='VAST-1'?'CiteScore Scopus':'CiteScore dự kiến'}</th>
+                  <th scope="col">${j.group==='VAST-1'?'CiteScore Scopus':'CiteScore tự tính'}</th>
                 </tr>
               </thead>
               <tbody>
