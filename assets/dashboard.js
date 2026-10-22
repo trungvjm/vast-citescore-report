@@ -569,14 +569,13 @@ function renderCatalog(){
     const out25=historyRecord(j,2025);
     const hist=statisticalHistory(j);
     const spanStart=hist[0]?.year??CHART_START_YEAR;
-    const spanEnd=hist.at(-1)?.year??2026;
     const totalHistPapers=hist.reduce((s,r)=>s+(r.papers||0),0);
 
     const topScopus25=j.scopusCategories?.find(c=>c.annual2025)?.annual2025||null;
     const topScopusT26=j.scopusCategories?.[0]?.tracker2026||null;
-    const m1Label=j.group==='VAST-1'?'CiteScore 25':'Tự tính 25';
+    const m1Label=j.group==='VAST-1'?'CiteScore 25':'CiteScore 2025 (tự tính)';
     const m1Val=j.group==='VAST-1'?(Number.isFinite(a25?.value)?`${oneDec.format(a25.value)}${topScopus25?` (${topScopus25.quartile||scopusQuartile(topScopus25.percentile)})`:''}`:'N/A'):(loc25?twoDec.format(loc25.score)+'*':'N/A');
-    const m2Label=j.jcr?'JIF 25 (WoS)':(j.group==='VAST-1'?'Tracker 26':'Tự tính 26');
+    const m2Label=j.jcr?'JIF 25 (WoS)':(j.group==='VAST-1'?'Tracker 26':'CiteScore 2026 (tự tính)');
     const m2Val=j.jcr?`${oneDec.format(j.jcr.jif)} (${j.jcr.categories[0].jif.quartile})`:(j.group==='VAST-1'?(Number.isFinite(t26?.value)?`${oneDec.format(t26.value)}${topScopusT26?` (${topScopusT26.quartile||scopusQuartile(topScopusT26.percentile)})`:''}`:'N/A'):(loc26?twoDec.format(loc26.score)+'*':'N/A'));
     const m3Label=j.jcr?'Tracker 26':`Tổng bài (${spanStart}–26)`;
     const m3Val=j.jcr?(Number.isFinite(t26?.value)?`${oneDec.format(t26.value)}${topScopusT26?` (${topScopusT26.quartile||scopusQuartile(topScopusT26.percentile)})`:''}`:'N/A'):(totalHistPapers?`${integer.format(totalHistPapers)}`:(out25?`${out25.papers}/${out25.issues}`:'—'));
@@ -603,7 +602,7 @@ function renderCatalog(){
       <div class="lineup-body">
         <div>
           <h3 class="lineup-title"><a href="#journal/${esc(j.id)}">${esc(j.title)} <span class="lineup-code">(${esc(j.code)})</span></a></h3>
-          <p class="lineup-vi">${esc(j.titleVi)} · Thống kê <strong>${spanStart}–${spanEnd}</strong></p>
+          <p class="lineup-vi">${esc(j.titleVi)}</p>
         </div>
         <div>
           <div class="lineup-metrics">
@@ -612,7 +611,7 @@ function renderCatalog(){
             <div class="lineup-metric-cell"><span>${esc(m3Label)}</span><strong>${esc(m3Val)}</strong></div>
           </div>
           <div class="lineup-tags">${indexingBadges(j)}</div>
-          <a class="lineup-explore" href="#journal/${esc(j.id)}"><span>XEM CITESCORE &amp; BIỂU ĐỒ (${spanStart}–${spanEnd})</span><span aria-hidden="true">↗</span></a>
+          <a class="lineup-explore" href="#journal/${esc(j.id)}"><span>XEM CITESCORE &amp; BIỂU ĐỒ</span><span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </article>`;
@@ -1224,7 +1223,7 @@ function renderDetail(id){
     <div class="detail-top-bar">
       <div class="detail-top-main">
         <a class="detail-back" href="#section-catalog">← QUAY LẠI DANH MỤC 12 TẠP CHÍ</a>
-        <span class="hud-label">${esc(j.group)} · MÃ TẠP CHÍ: <strong>${esc(j.code)}</strong> · THỐNG KÊ ${minYear}–${maxYear}</span>
+        <span class="hud-label">${esc(j.group)} · MÃ TẠP CHÍ: <strong>${esc(j.code)}</strong></span>
       </div>
       <nav class="detail-mobile-nav" aria-label="Chuyển nhanh mục trong hồ sơ tạp chí">
         <a href="#journal/${esc(j.id)}/journal-info">Thông tin</a>
@@ -1702,7 +1701,7 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022g'),fetch('data-scopus.json?v=20261022a')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022j'),fetch('data-scopus.json?v=20261022a')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     dashboard=await dRes.json();
     scopus=await sRes.json();

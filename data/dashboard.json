@@ -5790,11 +5790,12 @@
         {
           "system": "ACI",
           "collection": null,
-          "status": "unverified",
+          "status": "listed",
           "evidenceLevel": "database",
-          "sourceUrl": "https://asean-cites.org/",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "sourceUrl": "https://asean-cites.org/journal_info?jid=11299",
+          "checkedAt": "2026-10-22",
+          "coverage": null,
+          "notes": "Hồ sơ ACI jid=11299: Vietnam Journal of Chemistry, trạng thái Active; pISSN 2525-2321, eISSN 2572-8288. Chỉ cập nhật trạng thái và liên kết ACI; không lấy thông tin ban biên tập từ hồ sơ này để ghi đè hồ sơ hiện tại."
         }
       ],
       "latestIssue": {
@@ -7891,11 +7892,12 @@
         {
           "system": "ACI",
           "collection": null,
-          "status": "unverified",
+          "status": "listed",
           "evidenceLevel": "database",
-          "sourceUrl": "https://asean-cites.org/",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "sourceUrl": "https://asean-cites.org/journal_info?jid=10629",
+          "checkedAt": "2026-10-22",
+          "coverage": null,
+          "notes": "Hồ sơ ACI jid=10629: Vietnam Journal of Earth Sciences, trạng thái Active; pISSN 2615-9783, eISSN 2815-5890. Chỉ cập nhật trạng thái và liên kết ACI; không lấy thông tin ban biên tập từ hồ sơ này để ghi đè hồ sơ hiện tại."
         },
         {
           "system": "DOAJ",
