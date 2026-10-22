@@ -192,9 +192,14 @@ html.theme-anim .lineup-card{
   transition:background-color 0.32s ease,color 0.32s ease,border-color 0.32s ease;
 }
 
-/* Monochrome dark logos (NXB, Springer, Wiley) invert cleanly in dark mode with zero background box */
-:root[data-theme="dark"] .themed-mono-logo{
+/* Transparent light artwork stays unchanged; dark mode adjusts only the logo foregrounds. */
+:root[data-theme="dark"] .themed-mono-logo,
+:root[data-theme="dark"] img[src$="/logos/im-vast.png"]{
   filter:brightness(0) invert(0.94);
+}
+:root[data-theme="dark"] img[src$="/logos/vast.png"],
+:root[data-theme="dark"] img[src$="/logos/nxb.png"]{
+  filter:brightness(2.25) saturate(0.75);
 }
 
 *{box-sizing:border-box}
