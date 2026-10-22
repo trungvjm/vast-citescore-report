@@ -14,7 +14,7 @@ Một hướng thiết kế tham khảo ArtCraft, hỗ trợ sáng/tối và fon
 
 Bìa tạp chí trong quỹ đạo mở đầu, bảng chỉ số, danh mục và hồ sơ dùng chiều cao tự động theo tỷ lệ ảnh gốc, nền khung trong suốt; không ép chung chiều cao gây dải trắng trên/dưới, không kéo méo hoặc cắt bìa. Quy tắc này áp dụng cả desktop và mobile.
 
-Ở giao diện tối, VAST và NXB được tăng độ sáng riêng, logo Viện Toán học hiển thị đơn sắc sáng; chữ IOP Publishing trong SVG tự đổi sáng theo `color-scheme` của giao diện, giữ nguyên biểu tượng đỏ. Các ảnh vẫn trong suốt, không thêm nền trắng hoặc sửa màu ảnh gốc. Giao diện sáng giữ nguyên cách hiển thị.
+Logo VAST, NXB, IOP và Viện Toán học giữ màu ảnh gốc ở cả giao diện sáng/tối, không áp dụng bộ lọc đổi màu tự động; người dùng tự xử lý artwork bên ngoài.
 
 Danh mục không có bảng xếp hạng CiteScore riêng. Xem số liệu, biểu đồ và nguồn minh chứng trong hồ sơ từng tạp chí. Kỳ hạn xuất bản đọc từ `frequency.issuesPerYear`; thiếu dữ liệu thì hiện “Chưa có thông tin”. AMV có liên kết bổ sung đến mục lục và các số truy cập mở của Viện Toán học. Liên kết chỉ mục phân biệt nguồn cơ sở dữ liệu và thông tin do tạp chí công bố.
 
