@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "snapshotId": "2026-10-23-scopus-cited-by-v1",
+  "snapshotId": "2026-10-23-hdgsnn-corrections-v1",
   "collectedAt": "2026-10-21",
   "reviewAfterDays": 45,
   "outputYears": [
@@ -43,7 +43,7 @@
       "date": "2026-10-21",
       "title": "Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)",
       "description": "Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.",
-      "url": "data/snapshots/2026-10-23-scopus-cited-by-v1.json"
+      "url": "data/snapshots/2026-10-23-hdgsnn-corrections-v1.json"
     },
     {
       "date": "2026-10-21",
@@ -4875,6 +4875,20 @@
           "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/12-HD-KHTD-Mo-DMTC-2025_0001.pdf",
           "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/12-HD%20KHTD-Mo-DMTC%202025_0001.pdf",
           "notes": "Đạt điểm tối đa 1.5 từ năm 2022 (trước 2020 là 1.0)."
+        },
+        {
+          "councilNumber": 26,
+          "council": "Hội đồng Giáo sư ngành Vật lý",
+          "councilShort": "Vật lý",
+          "score": "1.0",
+          "maxScore": 1,
+          "conditions": "0 - 1,0 (danh mục ghi Advances in Natural Sciences, ISSN 1859-221X)",
+          "sourcePage": 2,
+          "sourceRow": 5,
+          "sourceQuote": "5 | Advances in Natural Sciences (Tên cũ: Proceedings of the National Centre for Scientific Research of Vietnam) | 1859-221X | Tạp chí | Viện Hàn lâm Khoa học và Công nghệ Việt Nam | 0 - 1,0",
+          "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/26-HD-Vat-ly-DMTC-2025_0001.pdf",
+          "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/26-HD%20Vat%20ly-DMTC%202025_0001.pdf",
+          "notes": "Bổ sung mục điểm ngành Vật lý theo rà soát biên tập. Giữ nguyên tên và ISSN mà danh mục 2025 sử dụng; không thay bằng ISSN 2043-6254/2043-6262 trong trích dẫn nguồn."
         }
       ],
       "cover": "assets/images/covers/ansn.png",
@@ -7424,6 +7438,20 @@
           "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/15-HD-Luyen-kim-DMTC-2025_0001.pdf",
           "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/15-HD%20Luyen%20kim-DMTC%202025_0001(1).pdf",
           "notes": "Tên trong bảng: Hoá học (Vietnam Journal of Chemisty). Đạt 1.5 từ năm 2022."
+        },
+        {
+          "councilNumber": 17,
+          "council": "Hội đồng Giáo sư liên ngành Nông nghiệp - Lâm nghiệp",
+          "councilShort": "Nông nghiệp - Lâm nghiệp",
+          "score": "0.75",
+          "maxScore": 0.75,
+          "conditions": "0 - 0,75; áp dụng bài xuất bản từ 2017 đến 2018",
+          "sourcePage": 2,
+          "sourceRow": 10,
+          "sourceQuote": "10 | Hóa học (Vietnam Journal of Chemistry) | 0866-7144 (2572-8288) | Tạp chí | Viện Hàn lâm Khoa học và Công nghệ Việt Nam | 0 - 0,75 từ 2017 đến 2018",
+          "sourceUrl": "https://research.vnuhcm.edu.vn/wp-content/uploads/2026/01/17-HD-Nong-nghiep-LN-DMTC-2025_0001.pdf",
+          "officialUrl": "http://hdgsnn.gov.vn/files/anhbaiviet/files/DMTC%202025/17-HD%20Nong%20nghiep-LN-DMTC%202025_0001(1).pdf",
+          "notes": "Mục 10 vẫn được liệt kê trong danh mục xét năm 2025; điều kiện 2017–2018 giới hạn năm xuất bản của bài được tính điểm, không phải lý do để bỏ mục khỏi danh mục."
         },
         {
           "councilNumber": 18,
