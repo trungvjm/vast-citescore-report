@@ -1338,7 +1338,7 @@ function renderDetail(id){
     <div id="journal-data" class="detail-data-section">
         <section class="detail-section">
           <h3>Bảng số liệu xuất bản &amp; trích dẫn theo năm</h3>
-          <div class="table-scroll" style="max-height:520px;overflow-y:auto;border:1px solid var(--line)">
+          <div class="table-scroll" style="max-height:520px;overflow-y:auto">
             <table class="detail-table">
               <thead>
                 <tr>
@@ -1382,7 +1382,7 @@ function renderDetail(id){
         ${cats.length?`<section class="detail-section">
           <h3>Thứ hạng Scopus theo phân ngành qua các năm</h3>
           <p style="font-size:13px;color:var(--muted);margin:0 0 10px">Phân ngành ASJC · dữ liệu lịch sử Scopus.</p>
-          <div class="table-scroll" style="max-height:420px;overflow-y:auto;border:1px solid var(--line)">
+          <div class="table-scroll" style="max-height:420px;overflow-y:auto">
             <table class="detail-table">
               <thead><tr><th scope="col">Lĩnh vực &amp; Phân ngành Scopus (ASJC)</th><th scope="col">Năm</th><th scope="col">Loại</th><th scope="col">Vị trí (Hạng / Tổng)</th><th scope="col">Quartile Scopus</th><th scope="col">Phân vị Scopus</th></tr></thead>
               <tbody>

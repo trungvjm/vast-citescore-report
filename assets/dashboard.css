@@ -1014,12 +1014,12 @@ input[type="search"]::placeholder{color:var(--faint)}
   border-collapse:collapse;
   font-variant-numeric:tabular-nums;
   background:var(--bg);
-  border:1px solid var(--line);
+  border:0;
 }
 .citescore-matrix-table th,
 .citescore-matrix-table td{
   padding:11px 10px;
-  border:1px solid var(--line);
+  border-bottom:1px solid var(--line);
   text-align:right;
   font-size:13px;
   vertical-align:middle;
@@ -1988,7 +1988,6 @@ table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
     left:0;
     z-index:2;
     background:var(--bg);
-    box-shadow:1px 0 0 var(--line);
   }
   .citescore-matrix-table thead th:first-child{background:var(--bg-raised);z-index:3}
   .citescore-matrix-table th:last-child,.citescore-matrix-table td:last-child{
