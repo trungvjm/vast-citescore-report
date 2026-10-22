@@ -571,7 +571,7 @@ function renderCatalog(){
     const st=styles[j.id]||{color:'#2d81ff'};
     const num=String(j.order).padStart(2,'0');
     const inst=j.institution||{name:j.publisher,logo:'assets/images/logos/nxb.png',coPublisher:null,coLogo:null};
-    const publisherName=inst.name==='NXB Khoa học tự nhiên và Công nghệ'?'NXB Khoa học<br>tự nhiên<br>và Công nghệ':esc(inst.name);
+    const publisherName=inst.name==='NXB Khoa học tự nhiên và Công nghệ'?'<span class="publisher-name-line">NXB Khoa học tự nhiên</span><br><span class="publisher-name-line">và Công nghệ</span>':esc(inst.name);
     const a25=annualRecord(j,2025),t26=trackerRecord(j);
     const loc25=localScore(j,2025),loc26=localScore(j,2026);
     const out25=historyRecord(j,2025);

@@ -1516,6 +1516,7 @@ figure{margin:0;min-width:0}
   text-wrap:balance;
   color:var(--ink);
 }
+.publisher-name-line{white-space:nowrap}
 .lineup-body{
   padding:18px 18px 16px;
   display:flex;
