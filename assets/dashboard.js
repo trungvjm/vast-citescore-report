@@ -743,36 +743,8 @@ function renderChart(){
   bindChartEvents(svg,years,x,plot);
   if(state.activeYear&&years.includes(state.activeYear))showYearTooltip(state.activeYear,years,x,plot);
   else hideTooltip();
-  renderScopusBars();
 }
 
-function renderScopusBars(){
-  const el=$('#scopus-bars');
-  if(!el||!dashboard)return;
-  const rows=scopusJournals().map(j=>{
-    const a25=annualRecord(j,2025),t26=trackerRecord(j);
-    return{j,s25:a25?.value??null,n25:a25?.citations??null,d25:a25?.documents??null,s26:t26?.value??null,n26:t26?.citations??null,d26:t26?.documents??null};
-  }).sort((a,b)=>(b.s25??b.s26??0)-(a.s25??a.s26??0));
-  const maxVal=Math.max(5,...rows.flatMap(r=>[r.s25||0,r.s26||0]));
-  const pct=v=>Math.max(0,Math.min(100,((v||0)/maxVal)*100)).toFixed(1);
-  el.innerHTML=rows.map(r=>{
-    const color=styles[r.j.id]?.color||'#2d81ff';
-    const v25=Number.isFinite(r.s25)?oneDec.format(r.s25):'N/A';
-    const v26=Number.isFinite(r.s26)?oneDec.format(r.s26):'N/A';
-    const r25=Number.isFinite(r.n25)?`${integer.format(r.n25)}/${integer.format(r.d25)}`:'Chưa có CS 2025';
-    const r26=Number.isFinite(r.n26)?`${integer.format(r.n26)}/${integer.format(r.d26)}`:'—';
-    return `<div class="bar-item">
-      <div class="bar-top">
-        <div><a href="#journal/${esc(r.j.id)}">${esc(r.j.code)}</a><small>${esc(r.j.subject)}</small></div>
-        <div class="bar-metrics">2025: <strong>${v25}</strong> · T26: <strong>${v26}</strong></div>
-      </div>
-      <div class="bar-track">
-        <div class="bar-row"><span>2025</span><div class="bar-rail"><div class="bar-fill" style="width:${pct(r.s25)}%;background:${color}"></div></div><span>${esc(r25)}</span></div>
-        <div class="bar-row"><span>2026*</span><div class="bar-rail"><div class="bar-fill" style="width:${pct(r.s26)}%;background:${color};opacity:.68"></div></div><span>${esc(r26)}</span></div>
-      </div>
-    </div>`;
-  }).join('');
-}
 
 function bindChartEvents(svg,years,x,plot){
   const idxFromEvent=e=>{
@@ -914,25 +886,6 @@ function renderCandidatesSection(){
     if(ln)ln.hidden=true;if(tip)tip.hidden=true;
   };
 
-  const barsEl=$('#candidates-bars');
-  if(barsEl){
-    const rows=cands.map(j=>({j,r25:localScore(j,2025),r26:localScore(j,2026)})).sort((a,b)=>(b.r26?.score??0)-(a.r26?.score??0));
-    const maxS=Math.max(1.2,...rows.flatMap(r=>[r.r25?.score||0,r.r26?.score||0]));
-    const pct=v=>Math.max(0,Math.min(100,((v||0)/maxS)*100)).toFixed(1);
-    barsEl.innerHTML=rows.map(({j,r25,r26})=>{
-      const color=styles[j.id]?.color||'#2d81ff';
-      return`<div class="bar-item">
-        <div class="bar-top">
-          <div><a href="#journal/${esc(j.id)}">${esc(j.code)}</a><small>${esc(j.subject)}</small></div>
-          <div class="bar-metrics">2025: <strong>${r25?twoDec.format(r25.score):'N/A'}</strong> · 2026*: <strong>${r26?twoDec.format(r26.score):'N/A'}</strong></div>
-        </div>
-        <div class="bar-track">
-          <div class="bar-row"><span>2025</span><div class="bar-rail"><div class="bar-fill" style="width:${pct(r25?.score)}%;background:${color}"></div></div><span>${r25?`${r25.numerator}/${r25.denominator}`:'—'}</span></div>
-          <div class="bar-row"><span>2026*</span><div class="bar-rail"><div class="bar-fill" style="width:${pct(r26?.score)}%;background:${color};opacity:.72"></div></div><span>${r26?`${r26.numerator}/${r26.denominator}`:'—'}</span></div>
-        </div>
-      </div>`;
-    }).join('');
-  }
 }
 
 /* CHART 3: CITATIONS */
@@ -1024,34 +977,6 @@ function renderCitationsSection(){
     if(ln)ln.hidden=true;if(tip)tip.hidden=true;
   };
 
-  const barsEl=$('#citations-bars');
-  if(barsEl){
-    const withTotals=dashboard.journals.filter(j=>(j.localCitation?.totals||j.scopusCitingDocs)&&(state.citationGroup==='all'||j.group===state.citationGroup))
-      .map(j=>({
-        j,
-        citations:j.localCitation?.totals?.citations??j.scopusCitingDocs?.totalDistinctCitingDocs??0,
-        citingDocs:j.localCitation?.totals?.citingDocs??j.scopusCitingDocs?.totalDistinctCitingDocs??0,
-        hIndex:j.localCitation?.totals?.hIndex??null,
-        isScopusWindowDocs:!j.localCitation?.totals&&Boolean(j.scopusCitingDocs)
-      }))
-      .sort((a,b)=>b.citations-a.citations);
-    const maxC=Math.max(100,...withTotals.map(x=>x.citations));
-    const pct=v=>Math.max(2,Math.min(100,(v/maxC)*100)).toFixed(1);
-    barsEl.innerHTML=withTotals.map(x=>{
-      const color=styles[x.j.id]?.color||'#2d81ff';
-      const sub=x.hIndex!==null?`h-index: <strong>${x.hIndex}</strong>`:'Tài liệu trích dẫn trong các cửa sổ CiteScore';
-      const rightLabel=x.isScopusWindowDocs?`<strong>${integer.format(x.citingDocs)}</strong> bài TD Scopus`:`<strong>${integer.format(x.citations)}</strong> trích dẫn`;
-      return`<div class="bar-item">
-        <div class="bar-top">
-          <div><a href="#journal/${esc(x.j.id)}">${esc(x.j.code)}</a><small>${sub}</small></div>
-          <div class="bar-metrics">${rightLabel}</div>
-        </div>
-        <div class="bar-track">
-          <div class="bar-row"><span>${x.isScopusWindowDocs?'Scopus':'Lượt'}</span><div class="bar-rail"><div class="bar-fill" style="width:${pct(x.citations)}%;background:${color}"></div></div><span>${integer.format(x.citingDocs)} bài trích dẫn</span></div>
-        </div>
-      </div>`;
-    }).join('');
-  }
 }
 
 /* CHART 4: PUBLISHED PAPERS */
@@ -1096,29 +1021,6 @@ function renderPapersSection(){
   out+=`<rect x="${plot.left}" y="${plot.top}" width="${plot.width}" height="${plot.height}" fill="transparent"/>`;
   svg.innerHTML=out;
 
-  const focusYear=Number(state.papersFocusYear)||2025;
-  $('#papers-bars-title').textContent=`Số bài đã xuất bản năm ${focusYear} & năm 2026`;
-  const barsEl=$('#papers-bars');
-  if(barsEl){
-    const sorted=[...journals].sort((a,b)=>(historyRecord(b,focusYear)?.papers??-1)-(historyRecord(a,focusYear)?.papers??-1));
-    const maxP=Math.max(20,...journals.flatMap(j=>[historyRecord(j,focusYear)?.papers||0,historyRecord(j,2026)?.papers||0]));
-    const pct=v=>Math.max(0,Math.min(100,((v||0)/maxP)*100)).toFixed(1);
-    barsEl.innerHTML=sorted.map(j=>{
-      const oFocus=historyRecord(j,focusYear),o26=historyRecord(j,2026),color=styles[j.id]?.color||'#2d81ff';
-      const fTxt=Number.isFinite(oFocus?.papers)?`${oFocus.papers} bài (${oFocus.issues} kỳ)`:'N/A';
-      const y26Txt=Number.isFinite(o26?.papers)?`${o26.papers} bài (${o26.issues} kỳ)`:'N/A';
-      return`<div class="bar-item">
-        <div class="bar-top">
-          <div><a href="#journal/${esc(j.id)}">${esc(j.code)}</a><small>${esc(j.group)}</small></div>
-          <div class="bar-metrics">${focusYear}: <strong>${Number.isFinite(oFocus?.papers)?oFocus.papers:'N/A'}</strong> · 2026*: <strong>${Number.isFinite(o26?.papers)?o26.papers:'N/A'}</strong></div>
-        </div>
-        <div class="bar-track">
-          <div class="bar-row"><span>${focusYear}</span><div class="bar-rail"><div class="bar-fill" style="width:${pct(oFocus?.papers)}%;background:${color}"></div></div><span>${esc(fTxt)}</span></div>
-          <div class="bar-row"><span>2026*</span><div class="bar-rail"><div class="bar-fill" style="width:${pct(o26?.papers)}%;background:${color};opacity:.68"></div></div><span>${esc(y26Txt)}</span></div>
-        </div>
-      </div>`;
-    }).join('');
-  }
 }
 
 function renderAllCharts(){
@@ -1149,7 +1051,7 @@ function renderReferences(){
       }))
     ];
   });
-  references.push(...dashboard.historySources.filter(source=>source.url).map(source=>({
+  references.push(...dashboard.historySources.filter(source=>source.url&&source.kind!=='published-photograph').map(source=>({
     author:source.author||(new URL(source.url).hostname==='math.ac.vn'?'Viện Toán học, VAST':null),
     title:source.title,url:source.url
   })));

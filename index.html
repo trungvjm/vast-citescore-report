@@ -11,8 +11,8 @@
 <link rel="preload" href="assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/dashboard.css?v=20261022s">
-<script type="module" src="assets/dashboard.js?v=20261022s"></script>
+<link rel="stylesheet" href="assets/dashboard.css?v=20261023a">
+<script type="module" src="assets/dashboard.js?v=20261023a"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Đến nội dung chính</a>
@@ -314,7 +314,6 @@
 </div>
 </form>
 <div id="trend-legend" class="legend" role="group" aria-label="Bật hoặc tắt tạp chí VAST-1"></div>
-<div class="chart-split">
 <figure class="chart-area">
 <svg id="trend-chart" class="interactive-svg" viewBox="0 0 820 360" tabindex="0" role="img" aria-labelledby="chart-title chart-desc"></svg>
 <div id="chart-tooltip" class="chart-tooltip" role="status" aria-live="polite" hidden>
@@ -327,13 +326,6 @@
 </div>
 <figcaption id="trend-caption" class="chart-caption"></figcaption>
 </figure>
-<aside class="comparison-card split-side" aria-label="So sánh CiteScore 2025 và Tracker 2026 của 7 tạp chí VAST-1">
-<div class="comparison-head">
-<h3>Đối chiếu CiteScore 2025 &amp; Tracker 2026</h3>
-</div>
-<div id="scopus-bars" class="bar-list"></div>
-</aside>
-</div>
 </section>
 
 <!-- BIỂU ĐỒ 2: CITESCORE DỰ KIẾN NHÓM VAST-2 -->
@@ -348,7 +340,6 @@
 </div>
 </div>
 <div id="candidates-legend" class="legend" role="group" aria-label="Bật hoặc tắt tạp chí nhóm VAST-2"></div>
-<div class="chart-split">
 <figure class="chart-area">
 <svg id="candidates-chart" class="interactive-svg" viewBox="0 0 820 350" tabindex="0" role="img" aria-label="Biểu đồ đường CiteScore dự kiến của 5 tạp chí nhóm VAST-2"></svg>
 <div id="candidates-tooltip" class="chart-tooltip" role="status" aria-live="polite" hidden>
@@ -359,13 +350,6 @@
 <dl id="candidates-tooltip-values" class="tooltip-values"></dl>
 </div>
 </figure>
-<aside class="comparison-card split-side" aria-label="So sánh CiteScore dự kiến 2025 và 2026 của 5 tạp chí VAST-2">
-<div class="comparison-head">
-<h3>CiteScore 2025 &amp; 2026 (tự tính)</h3>
-</div>
-<div id="candidates-bars" class="bar-list"></div>
-</aside>
-</div>
 </section>
 
 <!-- BIỂU ĐỒ 3: TRÍCH DẪN CỦA CÁC TẠP CHÍ -->
@@ -395,7 +379,6 @@
 </div>
 </form>
 <div id="citations-legend" class="legend" role="group" aria-label="Bật hoặc tắt tạp chí trên biểu đồ trích dẫn"></div>
-<div class="chart-split">
 <figure class="chart-area">
 <svg id="citations-chart" class="interactive-svg" viewBox="0 0 820 350" tabindex="0" role="img" aria-label="Biểu đồ diễn biến trích dẫn theo năm"></svg>
 <div id="citations-tooltip" class="chart-tooltip" role="status" aria-live="polite" hidden>
@@ -407,13 +390,6 @@
 </div>
 <figcaption id="citations-caption" class="chart-caption"></figcaption>
 </figure>
-<aside class="comparison-card split-side" aria-label="Tổng hợp trích dẫn tích lũy và h-index">
-<div class="comparison-head">
-<h3>Tổng trích dẫn tích lũy &amp; h-index</h3>
-</div>
-<div id="citations-bars" class="bar-list"></div>
-</aside>
-</div>
 </section>
 
 <!-- BIỂU ĐỒ 4: SỐ BÀI ĐÃ XUẤT BẢN -->
@@ -434,7 +410,7 @@
 </select>
 </div>
 <div class="field">
-<label for="papers-focus-year">Năm đối chiếu chi tiết</label>
+<label for="papers-focus-year">Năm nổi bật</label>
 <select id="papers-focus-year">
 <option value="2026">Năm 2026 (đến 21/10/2026)</option>
 <option value="2025" selected>Năm 2025 (trọn năm)</option>
@@ -451,7 +427,6 @@
 </select>
 </div>
 </form>
-<div class="chart-split">
 <figure class="chart-area">
 <svg id="papers-chart" class="interactive-svg" viewBox="0 0 820 350" tabindex="0" role="img" aria-label="Biểu đồ tổng số bài đã xuất bản của 12 tạp chí giai đoạn 2015–2026"></svg>
 <div id="papers-tooltip" class="chart-tooltip" role="status" aria-live="polite" hidden>
@@ -461,15 +436,8 @@
 </div>
 <dl id="papers-tooltip-values" class="tooltip-values"></dl>
 </div>
-<figcaption class="chart-caption">Dữ liệu năm 2026 tính đến ngày cập nhật; “—” hoặc “N/A”: chưa có dữ liệu.</figcaption>
+<figcaption class="chart-caption">Dữ liệu năm 2026 tính đến ngày cập nhật.</figcaption>
 </figure>
-<aside class="comparison-card split-side" aria-label="Số bài đã xuất bản theo từng tạp chí">
-<div class="comparison-head">
-<h3 id="papers-bars-title">Số bài đã xuất bản năm 2025 &amp; 2026</h3>
-</div>
-<div id="papers-bars" class="bar-list"></div>
-</aside>
-</div>
 </section>
 </div>
 </section>

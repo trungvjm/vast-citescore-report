@@ -1206,12 +1206,6 @@ input[type="search"]::placeholder{color:var(--faint)}
 }
 .chart-caption{margin-top:12px}
 
-.chart-split{
-  display:grid;
-  grid-template-columns:minmax(0,1.55fr) minmax(300px,1fr);
-  gap:26px;
-  align-items:start;
-}
 figure{margin:0;min-width:0}
 .chart-area{
   position:relative;
@@ -1223,7 +1217,7 @@ figure{margin:0;min-width:0}
 .interactive-svg{
   display:block;
   width:100%;
-  height:350px;
+  height:auto;
   cursor:crosshair;
   touch-action:pan-y pinch-zoom;
 }
@@ -1278,74 +1272,6 @@ figure{margin:0;min-width:0}
 .tooltip-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
 .tooltip-note{font-size:11px;line-height:1.55;color:var(--muted);margin:10px 0 0}
 
-.comparison-card{
-  background:var(--bg-raised);
-  padding:18px 20px;
-  border:1px solid var(--line);
-  min-width:0;
-}
-.comparison-head h3{
-  font-family:var(--font-display);
-  font-weight:620;
-  font-size:16.5px;
-  margin:0 0 6px;
-}
-.comparison-head p{
-  font-size:12.5px;
-  color:var(--muted);
-  margin:0 0 14px;
-  line-height:1.55;
-}
-.bar-list{display:grid;gap:10px}
-.bar-item{
-  background:var(--bg);
-  padding:10px 12px;
-  border:1px solid var(--line);
-  min-width:0;
-}
-.bar-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:baseline;
-  gap:10px;
-  margin-bottom:6px;
-  font-size:12.5px;
-}
-.bar-top a{
-  font-family:var(--font-display);
-  color:var(--ink-strong);
-  font-weight:620;
-  text-decoration:none;
-}
-.bar-top small{color:var(--muted);font-size:11px;margin-left:5px}
-.bar-metrics{
-  font-family:var(--font-mono);
-  font-variant-numeric:tabular-nums;
-  font-size:12px;
-  color:var(--muted);
-  text-align:right;
-  flex-shrink:0;
-}
-.bar-metrics strong{color:var(--ink-strong);font-size:14px;font-weight:700}
-.bar-track{display:grid;gap:4px}
-.bar-row{
-  display:grid;
-  grid-template-columns:46px minmax(0,1fr) auto;
-  align-items:center;
-  gap:8px;
-  font-size:11px;
-  color:var(--muted);
-  font-family:var(--font-mono);
-  font-variant-numeric:tabular-nums;
-}
-.bar-rail{
-  height:8px;
-  background:var(--bg-sunken);
-  border-radius:1px;
-  overflow:hidden;
-  position:relative;
-}
-.bar-fill{height:100%;border-radius:1px}
 
 /* ==========================================================================
    10. PHẦN 02: DANH MỤC 12 TẠP CHÍ (ARTCRAFT 4x3 LINEUP CARDS, NO LIST TABLE)
@@ -1870,7 +1796,7 @@ table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
 @media(max-width:1180px){
   .nav-status-cell,.nav-cta-cell{display:none}
   .orbit-cover-node{display:none}
-  .chart-split,.overview-arch-grid{grid-template-columns:minmax(0,1fr)}
+  .overview-arch-grid{grid-template-columns:minmax(0,1fr)}
   .arch-cell{border-right:0!important;border-bottom:1px solid var(--line)!important}
   .craft-lineup-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .lineup-card:nth-child(2n){border-right:0}
@@ -2040,7 +1966,6 @@ table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
     margin-top:10px;
     box-shadow:none;
   }
-  .comparison-card{padding:14px 12px}
   #section-catalog .filters{
     display:grid;
     grid-template-columns:1fr;
