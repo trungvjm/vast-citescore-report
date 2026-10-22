@@ -192,9 +192,8 @@ html.theme-anim .lineup-card{
   transition:background-color 0.32s ease,color 0.32s ease,border-color 0.32s ease;
 }
 
-/* Monochrome Springer and Wiley logos retain their existing dark-mode treatment. */
-:root[data-theme="dark"] .themed-mono-logo{
-  filter:brightness(0) invert(0.94);
+:root[data-theme="dark"] img[src$="/logos/im-vast.png"]{
+  filter:brightness(0) invert(1);
 }
 
 *{box-sizing:border-box}

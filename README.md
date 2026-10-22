@@ -10,11 +10,11 @@ Website tĩnh giới thiệu 12 tạp chí thuộc Viện Hàn lâm Khoa học v
 
 ## Giao diện
 
-Một hướng thiết kế tham khảo ArtCraft, hỗ trợ sáng/tối và font cục bộ. Hiệu ứng chữ theo vị trí cuộn có trên bốn phần trang chính và các mục trong hồ sơ tạp chí. Chế độ giảm chuyển động dùng chữ đứng yên; màn hình nhỏ ẩn lớp chữ bay.
+Một hướng thiết kế tham khảo ArtCraft, hỗ trợ sáng/tối và font cục bộ. Hiệu ứng chữ theo vị trí cuộn có trên bốn phần trang chính và các mục trong hồ sơ tạp chí. Chế độ giảm chuyển động dùng chữ đứng yên; màn hình nhỏ ẩn lớp chữ bay. Các biểu đồ thống kê và bộ chọn năm chỉ hiển thị từ năm 2015 trở đi; ba biểu đồ trong hồ sơ cùng tuân theo khoảng năm đã chọn. Bảng dữ liệu lịch sử và số liệu tổng toàn kỳ vẫn giữ các năm trước 2015, không xóa dữ liệu nguồn.
 
 Bìa tạp chí trong quỹ đạo mở đầu, bảng chỉ số, danh mục và hồ sơ dùng chiều cao tự động theo tỷ lệ ảnh gốc, nền khung trong suốt; không ép chung chiều cao gây dải trắng trên/dưới, không kéo méo hoặc cắt bìa. Quy tắc này áp dụng cả desktop và mobile.
 
-Logo VAST, NXB, IOP và Viện Toán học giữ màu ảnh gốc ở cả giao diện sáng/tối, không áp dụng bộ lọc đổi màu tự động; người dùng tự xử lý artwork bên ngoài.
+Sáu logo VAST, NXB, Viện Toán học, Springer, IOP và Wiley dùng các file PNG do người dùng cung cấp trong `assets/images/logos/`. Chỉ logo Viện Toán học chuyển thành màu trắng ở giao diện tối bằng CSS; giao diện sáng dùng màu ảnh gốc. Các logo còn lại giữ nguyên màu ở cả hai giao diện. Khi thay artwork, cập nhật đường dẫn, kích thước và SHA-256 trong `evidence/dashboard-media.json`, sau đó dựng lại dữ liệu dashboard.
 
 Danh mục không có bảng xếp hạng CiteScore riêng. Xem số liệu, biểu đồ và nguồn minh chứng trong hồ sơ từng tạp chí. Tên đơn vị xuất bản trên thẻ tạp chí dùng `text-wrap: balance` để cân dòng, tránh chữ cuối đứng lẻ mà không giảm cỡ chữ. Kỳ hạn xuất bản đọc từ `frequency.issuesPerYear`; thiếu dữ liệu thì hiện “Chưa có thông tin”. AMV có liên kết bổ sung đến mục lục và các số truy cập mở của Viện Toán học. Liên kết chỉ mục phân biệt nguồn cơ sở dữ liệu và thông tin do tạp chí công bố.
 

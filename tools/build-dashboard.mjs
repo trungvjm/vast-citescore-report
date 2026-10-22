@@ -145,7 +145,7 @@ function buildAnnualHistory(j,hist,cat,verifiedOutputs){
 }
 
 const top2025Check={VJM:[72,115,414],AMV:[18,338,414],ANSN:[61,164,425],VJC:[43,227,402],VJES:[77,45,201],VJST:[20,821,1030]};
-const coPublishers={vjm:['Springer Nature','assets/images/logos/springer.svg'],amv:['Springer Nature','assets/images/logos/springer.svg'],ansn:['IOP Publishing','assets/images/logos/iop.svg'],vjc:['Wiley-VCH','assets/images/logos/wiley.svg']};
+const coPublishers={vjm:['Springer Nature','assets/images/logos/springer.png'],amv:['Springer Nature','assets/images/logos/springer.png'],ansn:['IOP Publishing','assets/images/logos/iop.png'],vjc:['Wiley-VCH','assets/images/logos/wiley.png']};
 const archiveUrls={
  vjm:'https://link.springer.com/journal/10013/volumes-and-issues',
  amv:'https://link.springer.com/journal/40306/volumes-and-issues',

@@ -3,87 +3,75 @@
   "logos": {
     "vast": {
       "path": "assets/images/logos/vast.png",
-      "width": 1016,
-      "height": 572,
+      "width": 6912,
+      "height": 3312,
       "format": "PNG",
-      "mode": "RGB",
-      "bytes": 72340,
-      "sha256": "c449fb708ad92542f38409db09abbd2300434723f1bdd0c87405a98dc24aec76",
+      "mode": "RGBA",
+      "bytes": 597159,
+      "sha256": "98e77bdfa452d3a2900d91245e00e609e510e55700a71c202ddfa4c1d84ecabf",
       "name": "Vietnam Academy of Science and Technology (VAST)",
       "nameVi": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/Logo VAST.png"
+      "source": "User-supplied PNG artwork: assets/images/logos/vast.png"
     },
     "nxb": {
       "path": "assets/images/logos/nxb.png",
-      "width": 803,
-      "height": 453,
+      "width": 7680,
+      "height": 4320,
       "format": "PNG",
-      "mode": "RGB",
-      "bytes": 53653,
-      "sha256": "ede104e85b04cf40be9503401a6a8b2ecf405c8bb4c375019bdf6effabe70eed",
+      "mode": "RGBA",
+      "bytes": 452923,
+      "sha256": "19c2821068550e210e690809d7c3aa51dd346f8f798306e60843e75e30edcf32",
       "name": "Publishing House for Science and Technology (PST)",
       "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/Logo NXB.png"
+      "source": "User-supplied PNG artwork: assets/images/logos/nxb.png"
     },
     "im-vast": {
       "path": "assets/images/logos/im-vast.png",
-      "width": 648,
-      "height": 638,
+      "width": 1751,
+      "height": 1663,
       "format": "PNG",
       "mode": "RGBA",
-      "bytes": 49306,
-      "sha256": "d86bf3a78b396cc2b83fae002e311555eb8f0f39cbe51f7b749e11aeb56a82ee",
+      "bytes": 103802,
+      "sha256": "9a05d6742bebb0148bafe948244be0e4bf63984c67fc8729ae288f2cb9df467e",
       "name": "Institute of Mathematics, VAST",
       "nameVi": "Viện Toán học - Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
-      "source": "2025/[25] Anh Thành (IM)/Logo_Hoinghi/logo_IM_VAST.png"
-    },
-    "im-vast-svg": {
-      "path": "assets/images/logos/im-vast.svg",
-      "width": 200,
-      "height": 200,
-      "format": "SVG",
-      "mode": "VECTOR",
-      "bytes": 7576,
-      "sha256": "9613c60b862329b7f7758efd337b8eefcc18c97dbb78654f4e9967274ae08590",
-      "name": "Institute of Mathematics, VAST (SVG)",
-      "nameVi": "Viện Toán học - Viện Hàn lâm Khoa học và Công nghệ Việt Nam (SVG)",
-      "source": "2021/Chị Khuyên/Logo Vien Toan.cdr.svg"
+      "source": "User-supplied PNG artwork: assets/images/logos/im-vast.png"
     },
     "springer": {
-      "path": "assets/images/logos/springer.svg",
-      "width": 185,
-      "height": 48,
-      "format": "SVG",
-      "mode": "VECTOR",
-      "bytes": 5106,
-      "sha256": "fa23ff8cdb48ff5d673309dd348228349ba8c72ff6c26ca02d93f6f035206a48",
+      "path": "assets/images/logos/springer.png",
+      "width": 800,
+      "height": 214,
+      "format": "PNG",
+      "mode": "RGBA",
+      "bytes": 28637,
+      "sha256": "383e220a394c4f9b2b7a8d5cea5b2c992d946168695d3facc48b9c5eca486cf2",
       "name": "Springer Nature",
       "nameVi": "Nhà xuất bản Springer Nature",
-      "source": "Generated clean vector badge for Springer Nature"
+      "source": "User-supplied PNG artwork: assets/images/logos/springer.png"
     },
     "iop": {
-      "path": "assets/images/logos/iop.svg",
-      "width": 195,
-      "height": 48,
-      "format": "SVG",
-      "mode": "VECTOR",
-      "bytes": 729,
-      "sha256": "3272fbe732dfbeb1e13eebd99cbadfd8eeeecff5cf2aeec73415621b75c05459",
+      "path": "assets/images/logos/iop.png",
+      "width": 1027,
+      "height": 194,
+      "format": "PNG",
+      "mode": "RGBA",
+      "bytes": 41983,
+      "sha256": "07d518fb9f95f02e9b7faa732aa1fd1c22f476f530d8272bba74a9d2b2ca554f",
       "name": "IOP Publishing",
       "nameVi": "Nhà xuất bản IOP Publishing",
-      "source": "Generated clean vector badge for IOP Publishing"
+      "source": "User-supplied PNG artwork: assets/images/logos/iop.png"
     },
     "wiley": {
-      "path": "assets/images/logos/wiley.svg",
-      "width": 190,
-      "height": 48,
-      "format": "SVG",
-      "mode": "VECTOR",
-      "bytes": 3523,
-      "sha256": "3e991c4cc890229eebcadd3dfaf870c3fed187553619e68772a00ba7e65c9682",
+      "path": "assets/images/logos/wiley.png",
+      "width": 1280,
+      "height": 272,
+      "format": "PNG",
+      "mode": "RGBA",
+      "bytes": 21273,
+      "sha256": "fe65f00b4253d15e2e5146ba72a854b5a1ba58d1bda631bc1fc46688552bb4d9",
       "name": "Wiley-VCH",
       "nameVi": "Nhà xuất bản Wiley-VCH",
-      "source": "Generated clean vector badge for Wiley-VCH"
+      "source": "User-supplied PNG artwork: assets/images/logos/wiley.png"
     }
   },
   "covers": {
@@ -260,7 +248,7 @@
         "id": "springer",
         "name": "Springer Nature",
         "nameVi": "Nhà xuất bản Springer Nature",
-        "logo": "assets/images/logos/springer.svg"
+        "logo": "assets/images/logos/springer.png"
       },
       "logos": [
         {
@@ -281,7 +269,7 @@
         {
           "role": "coPublisher",
           "id": "springer",
-          "path": "assets/images/logos/springer.svg",
+          "path": "assets/images/logos/springer.png",
           "name": "Springer Nature",
           "nameVi": "Nhà xuất bản Springer Nature"
         }
@@ -308,13 +296,13 @@
         "name": "Institute of Mathematics, VAST",
         "nameVi": "Viện Toán học - Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
         "logo": "assets/images/logos/im-vast.png",
-        "logoSvg": "assets/images/logos/im-vast.svg"
+        "logoSvg": null
       },
       "coPublisher": {
         "id": "springer",
         "name": "Springer Nature",
         "nameVi": "Nhà xuất bản Springer Nature",
-        "logo": "assets/images/logos/springer.svg"
+        "logo": "assets/images/logos/springer.png"
       },
       "logos": [
         {
@@ -328,14 +316,14 @@
           "role": "publishingUnit",
           "id": "im-vast",
           "path": "assets/images/logos/im-vast.png",
-          "svgPath": "assets/images/logos/im-vast.svg",
+          "svgPath": null,
           "name": "Institute of Mathematics, VAST",
           "nameVi": "Viện Toán học - Viện Hàn lâm Khoa học và Công nghệ Việt Nam"
         },
         {
           "role": "coPublisher",
           "id": "springer",
-          "path": "assets/images/logos/springer.svg",
+          "path": "assets/images/logos/springer.png",
           "name": "Springer Nature",
           "nameVi": "Nhà xuất bản Springer Nature"
         }
@@ -368,7 +356,7 @@
         "id": "iop",
         "name": "IOP Publishing",
         "nameVi": "Nhà xuất bản IOP Publishing",
-        "logo": "assets/images/logos/iop.svg"
+        "logo": "assets/images/logos/iop.png"
       },
       "logos": [
         {
@@ -389,7 +377,7 @@
         {
           "role": "coPublisher",
           "id": "iop",
-          "path": "assets/images/logos/iop.svg",
+          "path": "assets/images/logos/iop.png",
           "name": "IOP Publishing",
           "nameVi": "Nhà xuất bản IOP Publishing"
         }
@@ -422,7 +410,7 @@
         "id": "wiley",
         "name": "Wiley-VCH",
         "nameVi": "Nhà xuất bản Wiley-VCH",
-        "logo": "assets/images/logos/wiley.svg"
+        "logo": "assets/images/logos/wiley.png"
       },
       "logos": [
         {
@@ -443,7 +431,7 @@
         {
           "role": "coPublisher",
           "id": "wiley",
-          "path": "assets/images/logos/wiley.svg",
+          "path": "assets/images/logos/wiley.png",
           "name": "Wiley-VCH",
           "nameVi": "Nhà xuất bản Wiley-VCH"
         }

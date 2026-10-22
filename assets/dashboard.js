@@ -5,6 +5,7 @@ const decimal=new Intl.NumberFormat('vi-VN',{minimumFractionDigits:1,maximumFrac
 const oneDec=new Intl.NumberFormat('vi-VN',{minimumFractionDigits:1,maximumFractionDigits:1});
 const twoDec=new Intl.NumberFormat('vi-VN',{minimumFractionDigits:2,maximumFractionDigits:2});
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+const CHART_START_YEAR=2015;
 
 const baseStyles={
   vjm:{color:'#2d81ff',dash:'',marker:'circle'},
@@ -36,7 +37,7 @@ const state={
   subject:'all',
   sort:'default',
   metric:'citescore',
-  fromYear:2015,
+  fromYear:CHART_START_YEAR,
   toYear:2026,
   selected:new Set(),
   selectedCandidates:new Set(),
@@ -57,12 +58,6 @@ const state={
 
 let dashboard=null,scopus=null;
 
-function isMonoDarkLogo(src){
-  return /\/(springer|wiley)\.svg$/i.test(String(src||''));
-}
-function logoClass(src,extra=''){
-  return `${extra}${isMonoDarkLogo(src)?(extra?' ':'')+'themed-mono-logo':''}`;
-}
 function coverUrl(j){
   return j?.cover||j?.coverImage||`assets/images/covers/${j?.id}.png`;
 }
@@ -432,7 +427,7 @@ function renderVast1MatrixTable(){
   </tr>`;
 
   $('#vast1-matrix-body').innerHTML=vast1.map(j=>{
-    const inst=j.institution||{name:j.publisher,logo:'assets/images/logos/nxb.svg',coPublisher:null,coLogo:null};
+    const inst=j.institution||{name:j.publisher,logo:'assets/images/logos/nxb.png',coPublisher:null,coLogo:null};
     const a25=annualRecord(j,2025),t26=trackerRecord(j);
     const scats=j.scopusCategories||[];
     const ratioCell=Number.isFinite(a25?.citations)&&Number.isFinite(a25?.documents)
@@ -471,8 +466,8 @@ function renderVast1MatrixTable(){
           <div class="matrix-meta">
             <a href="#journal/${esc(j.id)}">${esc(j.code)} · ${esc(j.title)}</a>
             <div class="matrix-pub-row">
-              <img class="${logoClass(inst.logo,'mini-inst-logo')}" src="${esc(inst.logo)}" alt="${esc(inst.name)}">
-              ${inst.coLogo?`<img class="${logoClass(inst.coLogo,'mini-inst-logo')}" src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}">`:''}
+              <img class="mini-inst-logo" src="${esc(inst.logo)}" alt="${esc(inst.name)}">
+              ${inst.coLogo?`<img class="mini-inst-logo" src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}">`:''}
               <span>${esc(inst.name)}${inst.coPublisher?` &amp; ${esc(inst.coPublisher)}`:''}</span>
             </div>
           </div>
@@ -539,7 +534,7 @@ function renderVast1JcrTable(){
 function populateControls(){
   const subjects=[...new Set(dashboard.journals.map(j=>j.subject))];
   $('#subject-filter').innerHTML='<option value="all">Tất cả lĩnh vực</option>'+subjects.map(s=>`<option value="${esc(s)}">${esc(s)}</option>`).join('');
-  const allYears=[...scopus.annualYears,scopus.trackerYear];
+  const allYears=[...scopus.annualYears,scopus.trackerYear].filter(y=>y>=CHART_START_YEAR);
   $('#trend-from').innerHTML=allYears.map(y=>`<option value="${y}">${y}</option>`).join('');
   $('#trend-to').innerHTML=allYears.map(y=>`<option value="${y}">${y}</option>`).join('');
   $('#trend-from').value=String(state.fromYear);
@@ -574,7 +569,7 @@ function renderCatalog(){
   $('#artcraft-lineup-grid').innerHTML=rows.map(j=>{
     const st=styles[j.id]||{color:'#2d81ff'};
     const num=String(j.order).padStart(2,'0');
-    const inst=j.institution||{name:j.publisher,logo:'assets/images/logos/nxb.svg',coPublisher:null,coLogo:null};
+    const inst=j.institution||{name:j.publisher,logo:'assets/images/logos/nxb.png',coPublisher:null,coLogo:null};
     const a25=annualRecord(j,2025),t26=trackerRecord(j);
     const loc25=localScore(j,2025),loc26=localScore(j,2026);
     const out25=historyRecord(j,2025);
@@ -603,8 +598,8 @@ function renderCatalog(){
         <div class="lineup-logos">
           <div class="lineup-inst-badge">
             <div class="lineup-inst-logos">
-              <img class="${logoClass(inst.logo)}" src="${esc(inst.logo)}" alt="${esc(inst.name)}" title="${esc(inst.name)}">
-              ${inst.coLogo?`<img class="${logoClass(inst.coLogo)}" src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}" title="${esc(inst.coPublisher||'')}">`:''}
+              <img src="${esc(inst.logo)}" alt="${esc(inst.name)}" title="${esc(inst.name)}">
+              ${inst.coLogo?`<img src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}" title="${esc(inst.coPublisher||'')}">`:''}
             </div>
             <span class="lineup-inst-name">${esc(inst.name)}${inst.coPublisher?` &amp; ${esc(inst.coPublisher)}`:''}</span>
           </div>
@@ -673,7 +668,7 @@ function renderLegend(){
 
 function currentTrendYears(){
   const all=[...scopus.annualYears,scopus.trackerYear];
-  const a=Math.min(state.fromYear,state.toYear),b=Math.max(state.fromYear,state.toYear);
+  const a=Math.max(CHART_START_YEAR,Math.min(state.fromYear,state.toYear)),b=Math.max(state.fromYear,state.toYear);
   return all.filter(y=>y>=a&&y<=b);
 }
 
@@ -828,7 +823,7 @@ function renderCandidatesSection(){
   const years=[2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026];
   const active=cands.filter(j=>state.selectedCandidates.has(j.id));
   const vals=[0.8];
-  for(const j of active)for(const r of j.localCitation?.selfCalculatedSeries||[]){const s=r.score??r.value;if(Number.isFinite(s))vals.push(s);}
+  for(const j of active)for(const r of j.localCitation?.selfCalculatedSeries||[]){if(r.year<CHART_START_YEAR)continue;const s=r.score??r.value;if(Number.isFinite(s))vals.push(s);}
   const scale=niceScale(Math.max(...vals));
   const width=820,height=350,plot={left:56,right:84,top:24,bottom:42};
   plot.width=width-plot.left-plot.right;plot.height=height-plot.top-plot.bottom;
@@ -1056,7 +1051,7 @@ function renderCitationsSection(){
 function renderPapersSection(){
   const svg=$('#papers-chart');
   if(!svg||!dashboard)return;
-  const years=dashboard.outputYears;
+  const years=dashboard.outputYears.filter(y=>y>=CHART_START_YEAR);
   const journals=dashboard.journals.filter(j=>state.papersGroup==='all'||j.group===state.papersGroup);
   const yearTotals=years.map(yr=>{
     const rows=journals.map(j=>({j,o:historyRecord(j,yr)})).filter(x=>Number.isFinite(x.o?.papers));
@@ -1153,12 +1148,14 @@ function renderDetail(id){
     panel.innerHTML=`<div class="detail-top-bar"><a class="detail-back" href="#section-catalog">← QUAY LẠI DANH MỤC 12 TẠP CHÍ</a></div><div style="padding:28px"><h2 id="detail-heading">Không tìm thấy tạp chí</h2></div>`;
     return;
   }
-  const inst=j.institution||{name:j.publisher,logo:'assets/images/logos/nxb.svg',coPublisher:null,coLogo:null};
+  const inst=j.institution||{name:j.publisher,logo:'assets/images/logos/nxb.png',coPublisher:null,coLogo:null};
   const a25=annualRecord(j,2025),t26=trackerRecord(j);
   const loc25=localScore(j,2025),loc26=localScore(j,2026);
   const hist=j.annualHistory||j.outputs||[];
   const minYear=hist[0]?.year||2020,maxYear=hist.at(-1)?.year||2026;
-  state.detailFromYear=minYear;
+  const chartHist=hist.filter(r=>r.year>=CHART_START_YEAR);
+  const chartMinYear=chartHist[0]?.year??Math.max(CHART_START_YEAR,minYear);
+  state.detailFromYear=chartMinYear;
   state.detailToYear=maxYear;
 
   const totalHistPapers=hist.reduce((s,r)=>s+(r.papers||0),0);
@@ -1207,7 +1204,7 @@ function renderDetail(id){
     ];
   }
 
-  const yearOptions=hist.map(r=>`<option value="${r.year}">${r.year}</option>`).join('');
+  const yearOptions=chartHist.map(r=>`<option value="${r.year}">${r.year}</option>`).join('');
 
   panel.innerHTML=`
     <div class="detail-top-bar">
@@ -1230,8 +1227,8 @@ function renderDetail(id){
         <h2 id="detail-heading" class="detail-heading">${esc(fullName(j))}</h2>
         <p class="detail-subtitle">${esc(j.titleVi)} · ${esc(j.subject)}</p>
         <div class="detail-inst-row">
-          <img class="${logoClass(inst.logo)}" src="${esc(inst.logo)}" alt="${esc(inst.name)}">
-          ${inst.coLogo?`<img class="${logoClass(inst.coLogo)}" src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}">`:''}
+          <img src="${esc(inst.logo)}" alt="${esc(inst.name)}">
+          ${inst.coLogo?`<img src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}">`:''}
           <div>
             <strong style="display:block;font-size:13.5px">${esc(inst.name)}${inst.coPublisher?` · Đồng xuất bản với ${esc(inst.coPublisher)}`:''}</strong>
             <span style="font-size:12px;color:var(--muted)">ISSN: ${esc(j.issn??'—')} · eISSN: ${esc(j.eissn??'—')} · Kỳ hạn xuất bản: ${esc(publicationFrequency(j))}</span>
@@ -1246,7 +1243,7 @@ function renderDetail(id){
     <section id="journal-charts" class="detail-charts-section" aria-label="Số liệu xuất bản và trích dẫn qua các năm của ${esc(j.code)}">
       <div class="detail-charts-head">
         <div>
-          <span class="hud-label chart-kicker">BIỂU ĐỒ CỦA ${esc(j.code)} (${minYear}–${maxYear} · ${hist.length} NĂM CÓ DỮ LIỆU)</span>
+          <span class="hud-label chart-kicker">BIỂU ĐỒ CỦA ${esc(j.code)} (${chartMinYear}–${maxYear} · ${chartHist.length} NĂM CÓ DỮ LIỆU)</span>
           <h3>Số liệu xuất bản, trích dẫn và CiteScore theo năm của ${esc(j.code)}</h3>
         </div>
         <form class="trend-controls" style="margin:0" aria-label="Chọn khoảng năm hiển thị">
@@ -1258,13 +1255,13 @@ function renderDetail(id){
             <label for="detail-to-year">Đến năm</label>
             <select id="detail-to-year">${yearOptions}</select>
           </div>
-          <button id="detail-reset-years" class="text-button" type="button">Toàn bộ (${minYear}–${maxYear})</button>
+          <button id="detail-reset-years" class="text-button" type="button">Toàn bộ (${chartMinYear}–${maxYear})</button>
         </form>
       </div>
 
       <div class="detail-charts-grid">
         <div class="detail-chart-card">
-          <h4>1. Số bài và số kỳ xuất bản theo năm (${minYear}–${maxYear})</h4>
+          <h4>1. Số bài và số kỳ xuất bản theo năm (${chartMinYear}–${maxYear})</h4>
           <p id="j-pub-summary">Di chuột hoặc chạm vào biểu đồ để xem số bài nghiên cứu và số kỳ phát hành từng năm của ${esc(j.code)}.</p>
           <svg id="j-pub-chart" class="detail-svg" viewBox="0 0 860 270" role="img" aria-label="Biểu đồ lịch sử xuất bản của ${esc(j.code)}"></svg>
         </div>
@@ -1428,7 +1425,7 @@ function renderDetail(id){
 
   const fromSel=$('#detail-from-year'),toSel=$('#detail-to-year');
   if(fromSel&&toSel){
-    fromSel.value=String(minYear);
+    fromSel.value=String(chartMinYear);
     toSel.value=String(maxYear);
     const updateRange=()=>{
       state.detailFromYear=Math.min(Number(fromSel.value),Number(toSel.value));
@@ -1438,7 +1435,7 @@ function renderDetail(id){
     fromSel.addEventListener('change',updateRange);
     toSel.addEventListener('change',updateRange);
     $('#detail-reset-years')?.addEventListener('click',()=>{
-      fromSel.value=String(minYear);
+      fromSel.value=String(chartMinYear);
       toSel.value=String(maxYear);
       updateRange();
     });
@@ -1449,7 +1446,7 @@ function renderDetail(id){
 function renderDetailCharts(j){
   const color=styles[j.id]?.color||'#2d81ff';
   const allHist=j.annualHistory||j.outputs||[];
-  const a=state.detailFromYear??allHist[0]?.year??2020;
+  const a=Math.max(CHART_START_YEAR,state.detailFromYear??allHist[0]?.year??2020);
   const b=state.detailToYear??allHist.at(-1)?.year??2026;
   const hist=allHist.filter(r=>r.year>=a&&r.year<=b);
   if(!hist.length)return;
@@ -1548,8 +1545,8 @@ function renderDetailCharts(j){
   const csSvg=$('#j-cs-chart');
   if(csSvg){
     const csRows=j.group==='VAST-1'
-      ?scopus.records.filter(r=>r.journal===j.code&&Number.isFinite(r.value)).map(r=>({year:r.year,score:r.value,num:r.citations,den:r.documents,isTracker:r.type==='tracker'}))
-      :(j.localCitation?.selfCalculatedSeries||[]).map(r=>({year:r.year,score:r.score??r.value,num:r.numerator,den:r.denominator,isTracker:r.year===2026})).filter(r=>Number.isFinite(r.score));
+      ?scopus.records.filter(r=>r.journal===j.code&&r.year>=a&&r.year<=b&&Number.isFinite(r.value)).map(r=>({year:r.year,score:r.value,num:r.citations,den:r.documents,isTracker:r.type==='tracker'}))
+      :(j.localCitation?.selfCalculatedSeries||[]).filter(r=>r.year>=a&&r.year<=b).map(r=>({year:r.year,score:r.score??r.value,num:r.numerator,den:r.denominator,isTracker:r.year===2026})).filter(r=>Number.isFinite(r.score));
     const maxS=Math.max(1,...csRows.map(r=>r.score));
     const scale=niceScale(maxS);
     const W=860,H=250,p={left:52,right:32,top:24,bottom:36};

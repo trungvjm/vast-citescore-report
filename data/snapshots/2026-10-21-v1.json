@@ -1026,7 +1026,7 @@
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
         "coPublisher": "Springer Nature",
-        "coLogo": "assets/images/logos/springer.svg"
+        "coLogo": "assets/images/logos/springer.png"
       },
       "scopusCategories": [
         {
@@ -2321,7 +2321,7 @@
         "name": "Viện Toán học (VAST)",
         "logo": "assets/images/logos/im-vast.png",
         "coPublisher": "Springer Nature",
-        "coLogo": "assets/images/logos/springer.svg"
+        "coLogo": "assets/images/logos/springer.png"
       },
       "scopusCategories": [
         {
@@ -4380,7 +4380,7 @@
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
         "coPublisher": "IOP Publishing",
-        "coLogo": "assets/images/logos/iop.svg"
+        "coLogo": "assets/images/logos/iop.png"
       },
       "scopusCategories": [
         {
@@ -6697,7 +6697,7 @@
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
         "coPublisher": "Wiley-VCH",
-        "coLogo": "assets/images/logos/wiley.svg"
+        "coLogo": "assets/images/logos/wiley.png"
       },
       "scopusCategories": [
         {
