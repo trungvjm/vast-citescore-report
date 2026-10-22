@@ -208,9 +208,16 @@ for(let index=0;index<order.length;index++){
  for(const i of j.indexings){assert(['listed','not_listed','unverified'].includes(i.status),j.code+': invalid indexing status.');assert(['database','journal','vast'].includes(i.evidenceLevel),j.code+': invalid evidence level.');assert(/^https?:\/\//.test(i.sourceUrl),j.code+': indexing needs a source URL.');}
  assert.deepEqual(j.outputs.map(o=>o.year),outputYears,j.code+': need 2020-2026 reporting periods.');
  for(const o of j.outputs)validateOutput(j,o);
+ const scopusQuarter=p=>p>=75?'Q1':(p>=50?'Q2':(p>=25?'Q3':'Q4'));
  const scats=scopusCatMap.get(j.id);
  if(scats){
   assert(Array.isArray(scats)&&scats.length>=1,j.code+': missing Scopus categories.');
+  for(const c of scats){
+   assert.equal(c.quartile,scopusQuarter(c.percentile),j.code+' '+c.name+': Scopus quartile mismatch.');
+   if(c.annual2025)assert.equal(c.annual2025.quartile,scopusQuarter(c.annual2025.percentile),j.code+' '+c.name+': 2025 Scopus quartile mismatch.');
+   if(c.tracker2026)assert.equal(c.tracker2026.quartile,scopusQuarter(c.tracker2026.percentile),j.code+' '+c.name+': 2026 Scopus quartile mismatch.');
+   for(const h of (c.history||[]))assert.equal(h.quartile,scopusQuarter(h.percentile),j.code+' '+c.name+' '+h.year+': historical Scopus quartile mismatch.');
+  }
   const topExpected=top2025Check[j.code];
   if(topExpected){
    const r=scopus.records.find(r=>r.journal===j.code&&r.type==='annual'&&r.year===2025);

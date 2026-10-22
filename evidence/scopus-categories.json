@@ -20,12 +20,14 @@
           "annual2025": {
             "rank": 115,
             "total": 414,
-            "percentile": 72
+            "percentile": 72,
+            "quartile": "Q2"
           },
           "tracker2026": {
             "rank": 129,
             "total": 419,
-            "percentile": 69
+            "percentile": 69,
+            "quartile": "Q2"
           },
           "history": [
             {
@@ -33,101 +35,116 @@
               "type": "annual",
               "rank": 303,
               "total": 309,
-              "percentile": 2
+              "percentile": 2,
+              "quartile": "Q4"
             },
             {
               "year": 2014,
               "type": "annual",
               "rank": 292,
               "total": 316,
-              "percentile": 7
+              "percentile": 7,
+              "quartile": "Q4"
             },
             {
               "year": 2015,
               "type": "annual",
               "rank": 279,
               "total": 321,
-              "percentile": 13
+              "percentile": 13,
+              "quartile": "Q4"
             },
             {
               "year": 2016,
               "type": "annual",
               "rank": 254,
               "total": 326,
-              "percentile": 22
+              "percentile": 22,
+              "quartile": "Q4"
             },
             {
               "year": 2017,
               "type": "annual",
               "rank": 216,
               "total": 335,
-              "percentile": 35
+              "percentile": 35,
+              "quartile": "Q3"
             },
             {
               "year": 2018,
               "type": "annual",
               "rank": 183,
               "total": 344,
-              "percentile": 46
+              "percentile": 46,
+              "quartile": "Q3"
             },
             {
               "year": 2019,
               "type": "annual",
               "rank": 140,
               "total": 368,
-              "percentile": 62
+              "percentile": 62,
+              "quartile": "Q2"
             },
             {
               "year": 2020,
               "type": "annual",
               "rank": 138,
               "total": 378,
-              "percentile": 63
+              "percentile": 63,
+              "quartile": "Q2"
             },
             {
               "year": 2021,
               "type": "annual",
               "rank": 143,
               "total": 391,
-              "percentile": 63
+              "percentile": 63,
+              "quartile": "Q2"
             },
             {
               "year": 2022,
               "type": "annual",
               "rank": 152,
               "total": 387,
-              "percentile": 60
+              "percentile": 60,
+              "quartile": "Q2"
             },
             {
               "year": 2023,
               "type": "annual",
               "rank": 126,
               "total": 399,
-              "percentile": 68
+              "percentile": 68,
+              "quartile": "Q2"
             },
             {
               "year": 2024,
               "type": "annual",
               "rank": 96,
               "total": 414,
-              "percentile": 76
+              "percentile": 76,
+              "quartile": "Q1"
             },
             {
               "year": 2025,
               "type": "annual",
               "rank": 115,
               "total": 414,
-              "percentile": 72
+              "percentile": 72,
+              "quartile": "Q2"
             },
             {
               "year": 2026,
               "type": "tracker",
               "rank": 129,
               "total": 419,
-              "percentile": 69
+              "percentile": 69,
+              "quartile": "Q2"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21100286934"
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286934",
+          "quartile": "Q2"
         }
       ]
     },
@@ -148,12 +165,14 @@
           "annual2025": {
             "rank": 338,
             "total": 414,
-            "percentile": 18
+            "percentile": 18,
+            "quartile": "Q4"
           },
           "tracker2026": {
             "rank": 318,
             "total": 419,
-            "percentile": 24
+            "percentile": 24,
+            "quartile": "Q4"
           },
           "history": [
             {
@@ -161,115 +180,132 @@
               "type": "annual",
               "rank": 271,
               "total": 289,
-              "percentile": 6
+              "percentile": 6,
+              "quartile": "Q4"
             },
             {
               "year": 2012,
               "type": "annual",
               "rank": 282,
               "total": 303,
-              "percentile": 7
+              "percentile": 7,
+              "quartile": "Q4"
             },
             {
               "year": 2013,
               "type": "annual",
               "rank": 278,
               "total": 309,
-              "percentile": 10
+              "percentile": 10,
+              "quartile": "Q4"
             },
             {
               "year": 2014,
               "type": "annual",
               "rank": 251,
               "total": 316,
-              "percentile": 20
+              "percentile": 20,
+              "quartile": "Q4"
             },
             {
               "year": 2015,
               "type": "annual",
               "rank": 238,
               "total": 321,
-              "percentile": 26
+              "percentile": 26,
+              "quartile": "Q3"
             },
             {
               "year": 2016,
               "type": "annual",
               "rank": 208,
               "total": 326,
-              "percentile": 36
+              "percentile": 36,
+              "quartile": "Q3"
             },
             {
               "year": 2017,
               "type": "annual",
               "rank": 244,
               "total": 335,
-              "percentile": 27
+              "percentile": 27,
+              "quartile": "Q3"
             },
             {
               "year": 2018,
               "type": "annual",
               "rank": 229,
               "total": 344,
-              "percentile": 33
+              "percentile": 33,
+              "quartile": "Q3"
             },
             {
               "year": 2019,
               "type": "annual",
               "rank": 211,
               "total": 368,
-              "percentile": 42
+              "percentile": 42,
+              "quartile": "Q3"
             },
             {
               "year": 2020,
               "type": "annual",
               "rank": 180,
               "total": 378,
-              "percentile": 52
+              "percentile": 52,
+              "quartile": "Q2"
             },
             {
               "year": 2021,
               "type": "annual",
               "rank": 198,
               "total": 391,
-              "percentile": 49
+              "percentile": 49,
+              "quartile": "Q3"
             },
             {
               "year": 2022,
               "type": "annual",
               "rank": 205,
               "total": 387,
-              "percentile": 47
+              "percentile": 47,
+              "quartile": "Q3"
             },
             {
               "year": 2023,
               "type": "annual",
               "rank": 271,
               "total": 399,
-              "percentile": 32
+              "percentile": 32,
+              "quartile": "Q3"
             },
             {
               "year": 2024,
               "type": "annual",
               "rank": 333,
               "total": 414,
-              "percentile": 19
+              "percentile": 19,
+              "quartile": "Q4"
             },
             {
               "year": 2025,
               "type": "annual",
               "rank": 338,
               "total": 414,
-              "percentile": 18
+              "percentile": 18,
+              "quartile": "Q4"
             },
             {
               "year": 2026,
               "type": "tracker",
               "rank": 318,
               "total": 419,
-              "percentile": 24
+              "percentile": 24,
+              "quartile": "Q4"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21100199843"
+          "sourceUrl": "https://www.scopus.com/sourceid/21100199843",
+          "quartile": "Q4"
         }
       ]
     },
@@ -290,12 +326,14 @@
           "annual2025": {
             "rank": 164,
             "total": 425,
-            "percentile": 61
+            "percentile": 61,
+            "quartile": "Q2"
           },
           "tracker2026": {
             "rank": 165,
             "total": 437,
-            "percentile": 62
+            "percentile": 62,
+            "quartile": "Q2"
           },
           "history": [
             {
@@ -303,115 +341,132 @@
               "type": "annual",
               "rank": 88,
               "total": 269,
-              "percentile": 67
+              "percentile": 67,
+              "quartile": "Q2"
             },
             {
               "year": 2012,
               "type": "annual",
               "rank": 53,
               "total": 280,
-              "percentile": 81
+              "percentile": 81,
+              "quartile": "Q1"
             },
             {
               "year": 2013,
               "type": "annual",
               "rank": 71,
               "total": 288,
-              "percentile": 75
+              "percentile": 75,
+              "quartile": "Q1"
             },
             {
               "year": 2014,
               "type": "annual",
               "rank": 70,
               "total": 295,
-              "percentile": 76
+              "percentile": 76,
+              "quartile": "Q1"
             },
             {
               "year": 2015,
               "type": "annual",
               "rank": 58,
               "total": 303,
-              "percentile": 81
+              "percentile": 81,
+              "quartile": "Q1"
             },
             {
               "year": 2016,
               "type": "annual",
               "rank": 65,
               "total": 304,
-              "percentile": 78
+              "percentile": 78,
+              "quartile": "Q1"
             },
             {
               "year": 2017,
               "type": "annual",
               "rank": 77,
               "total": 328,
-              "percentile": 76
+              "percentile": 76,
+              "quartile": "Q1"
             },
             {
               "year": 2018,
               "type": "annual",
               "rank": 66,
               "total": 335,
-              "percentile": 80
+              "percentile": 80,
+              "quartile": "Q1"
             },
             {
               "year": 2019,
               "type": "annual",
               "rank": 56,
               "total": 340,
-              "percentile": 83
+              "percentile": 83,
+              "quartile": "Q1"
             },
             {
               "year": 2020,
               "type": "annual",
               "rank": 70,
               "total": 336,
-              "percentile": 79
+              "percentile": 79,
+              "quartile": "Q1"
             },
             {
               "year": 2021,
               "type": "annual",
               "rank": 103,
               "total": 338,
-              "percentile": 69
+              "percentile": 69,
+              "quartile": "Q2"
             },
             {
               "year": 2022,
               "type": "annual",
               "rank": 132,
               "total": 355,
-              "percentile": 62
+              "percentile": 62,
+              "quartile": "Q2"
             },
             {
               "year": 2023,
               "type": "annual",
               "rank": 148,
               "total": 384,
-              "percentile": 61
+              "percentile": 61,
+              "quartile": "Q2"
             },
             {
               "year": 2024,
               "type": "annual",
               "rank": 164,
               "total": 402,
-              "percentile": 59
+              "percentile": 59,
+              "quartile": "Q2"
             },
             {
               "year": 2025,
               "type": "annual",
               "rank": 164,
               "total": 425,
-              "percentile": 61
+              "percentile": 61,
+              "quartile": "Q2"
             },
             {
               "year": 2026,
               "type": "tracker",
               "rank": 165,
               "total": 437,
-              "percentile": 62
+              "percentile": 62,
+              "quartile": "Q2"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21100286862"
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286862",
+          "quartile": "Q2"
         },
         {
           "code": "2208",
@@ -425,12 +480,14 @@
           "annual2025": {
             "rank": 408,
             "total": 1030,
-            "percentile": 60
+            "percentile": 60,
+            "quartile": "Q2"
           },
           "tracker2026": {
             "rank": 390,
             "total": 1050,
-            "percentile": 62
+            "percentile": 62,
+            "quartile": "Q2"
           },
           "history": [
             {
@@ -438,115 +495,132 @@
               "type": "annual",
               "rank": 287,
               "total": 589,
-              "percentile": 51
+              "percentile": 51,
+              "quartile": "Q2"
             },
             {
               "year": 2012,
               "type": "annual",
               "rank": 218,
               "total": 615,
-              "percentile": 64
+              "percentile": 64,
+              "quartile": "Q2"
             },
             {
               "year": 2013,
               "type": "annual",
               "rank": 266,
               "total": 631,
-              "percentile": 57
+              "percentile": 57,
+              "quartile": "Q2"
             },
             {
               "year": 2014,
               "type": "annual",
               "rank": 243,
               "total": 651,
-              "percentile": 62
+              "percentile": 62,
+              "quartile": "Q2"
             },
             {
               "year": 2015,
               "type": "annual",
               "rank": 199,
               "total": 660,
-              "percentile": 69
+              "percentile": 69,
+              "quartile": "Q2"
             },
             {
               "year": 2016,
               "type": "annual",
               "rank": 205,
               "total": 654,
-              "percentile": 68
+              "percentile": 68,
+              "quartile": "Q2"
             },
             {
               "year": 2017,
               "type": "annual",
               "rank": 233,
               "total": 666,
-              "percentile": 65
+              "percentile": 65,
+              "quartile": "Q2"
             },
             {
               "year": 2018,
               "type": "annual",
               "rank": 181,
               "total": 669,
-              "percentile": 73
+              "percentile": 73,
+              "quartile": "Q2"
             },
             {
               "year": 2019,
               "type": "annual",
               "rank": 152,
               "total": 670,
-              "percentile": 77
+              "percentile": 77,
+              "quartile": "Q1"
             },
             {
               "year": 2020,
               "type": "annual",
               "rank": 176,
               "total": 693,
-              "percentile": 74
+              "percentile": 74,
+              "quartile": "Q2"
             },
             {
               "year": 2021,
               "type": "annual",
               "rank": 241,
               "total": 708,
-              "percentile": 66
+              "percentile": 66,
+              "quartile": "Q2"
             },
             {
               "year": 2022,
               "type": "annual",
               "rank": 332,
               "total": 738,
-              "percentile": 55
+              "percentile": 55,
+              "quartile": "Q2"
             },
             {
               "year": 2023,
               "type": "annual",
               "rank": 356,
               "total": 797,
-              "percentile": 55
+              "percentile": 55,
+              "quartile": "Q2"
             },
             {
               "year": 2024,
               "type": "annual",
               "rank": 426,
               "total": 970,
-              "percentile": 56
+              "percentile": 56,
+              "quartile": "Q2"
             },
             {
               "year": 2025,
               "type": "annual",
               "rank": 408,
               "total": 1030,
-              "percentile": 60
+              "percentile": 60,
+              "quartile": "Q2"
             },
             {
               "year": 2026,
               "type": "tracker",
               "rank": 390,
               "total": 1050,
-              "percentile": 62
+              "percentile": 62,
+              "quartile": "Q2"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21100286862"
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286862",
+          "quartile": "Q2"
         },
         {
           "code": "2500",
@@ -560,12 +634,14 @@
           "annual2025": {
             "rank": 247,
             "total": 475,
-            "percentile": 48
+            "percentile": 48,
+            "quartile": "Q3"
           },
           "tracker2026": {
             "rank": 247,
             "total": 474,
-            "percentile": 47
+            "percentile": 47,
+            "quartile": "Q3"
           },
           "history": [
             {
@@ -573,115 +649,132 @@
               "type": "annual",
               "rank": 183,
               "total": 393,
-              "percentile": 53
+              "percentile": 53,
+              "quartile": "Q2"
             },
             {
               "year": 2012,
               "type": "annual",
               "rank": 136,
               "total": 408,
-              "percentile": 66
+              "percentile": 66,
+              "quartile": "Q2"
             },
             {
               "year": 2013,
               "type": "annual",
               "rank": 164,
               "total": 420,
-              "percentile": 60
+              "percentile": 60,
+              "quartile": "Q2"
             },
             {
               "year": 2014,
               "type": "annual",
               "rank": 166,
               "total": 430,
-              "percentile": 61
+              "percentile": 61,
+              "quartile": "Q2"
             },
             {
               "year": 2015,
               "type": "annual",
               "rank": 145,
               "total": 437,
-              "percentile": 66
+              "percentile": 66,
+              "quartile": "Q2"
             },
             {
               "year": 2016,
               "type": "annual",
               "rank": 165,
               "total": 435,
-              "percentile": 62
+              "percentile": 62,
+              "quartile": "Q2"
             },
             {
               "year": 2017,
               "type": "annual",
               "rank": 179,
               "total": 444,
-              "percentile": 59
+              "percentile": 59,
+              "quartile": "Q2"
             },
             {
               "year": 2018,
               "type": "annual",
               "rank": 148,
               "total": 440,
-              "percentile": 66
+              "percentile": 66,
+              "quartile": "Q2"
             },
             {
               "year": 2019,
               "type": "annual",
               "rank": 121,
               "total": 460,
-              "percentile": 73
+              "percentile": 73,
+              "quartile": "Q2"
             },
             {
               "year": 2020,
               "type": "annual",
               "rank": 136,
               "total": 455,
-              "percentile": 70
+              "percentile": 70,
+              "quartile": "Q2"
             },
             {
               "year": 2021,
               "type": "annual",
               "rank": 193,
               "total": 455,
-              "percentile": 57
+              "percentile": 57,
+              "quartile": "Q2"
             },
             {
               "year": 2022,
               "type": "annual",
               "rank": 230,
               "total": 453,
-              "percentile": 49
+              "percentile": 49,
+              "quartile": "Q3"
             },
             {
               "year": 2023,
               "type": "annual",
               "rank": 243,
               "total": 463,
-              "percentile": 47
+              "percentile": 47,
+              "quartile": "Q3"
             },
             {
               "year": 2024,
               "type": "annual",
               "rank": 260,
               "total": 460,
-              "percentile": 43
+              "percentile": 43,
+              "quartile": "Q3"
             },
             {
               "year": 2025,
               "type": "annual",
               "rank": 247,
               "total": 475,
-              "percentile": 48
+              "percentile": 48,
+              "quartile": "Q3"
             },
             {
               "year": 2026,
               "type": "tracker",
               "rank": 247,
               "total": 474,
-              "percentile": 47
+              "percentile": 47,
+              "quartile": "Q3"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21100286862"
+          "sourceUrl": "https://www.scopus.com/sourceid/21100286862",
+          "quartile": "Q3"
         }
       ]
     },
@@ -702,12 +795,14 @@
           "annual2025": {
             "rank": 227,
             "total": 402,
-            "percentile": 43
+            "percentile": 43,
+            "quartile": "Q3"
           },
           "tracker2026": {
             "rank": 203,
             "total": 406,
-            "percentile": 50
+            "percentile": 50,
+            "quartile": "Q2"
           },
           "history": [
             {
@@ -715,45 +810,52 @@
               "type": "annual",
               "rank": 363,
               "total": 409,
-              "percentile": 11
+              "percentile": 11,
+              "quartile": "Q4"
             },
             {
               "year": 2022,
               "type": "annual",
               "rank": 294,
               "total": 407,
-              "percentile": 27
+              "percentile": 27,
+              "quartile": "Q3"
             },
             {
               "year": 2023,
               "type": "annual",
               "rank": 274,
               "total": 408,
-              "percentile": 32
+              "percentile": 32,
+              "quartile": "Q3"
             },
             {
               "year": 2024,
               "type": "annual",
               "rank": 248,
               "total": 404,
-              "percentile": 38
+              "percentile": 38,
+              "quartile": "Q3"
             },
             {
               "year": 2025,
               "type": "annual",
               "rank": 227,
               "total": 402,
-              "percentile": 43
+              "percentile": 43,
+              "quartile": "Q3"
             },
             {
               "year": 2026,
               "type": "tracker",
               "rank": 203,
               "total": 406,
-              "percentile": 50
+              "percentile": 50,
+              "quartile": "Q2"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21101043786"
+          "sourceUrl": "https://www.scopus.com/sourceid/21101043786",
+          "quartile": "Q3"
         }
       ]
     },
@@ -774,12 +876,14 @@
           "annual2025": {
             "rank": 45,
             "total": 201,
-            "percentile": 77
+            "percentile": 77,
+            "quartile": "Q1"
           },
           "tracker2026": {
             "rank": 52,
             "total": 203,
-            "percentile": 74
+            "percentile": 74,
+            "quartile": "Q2"
           },
           "history": [
             {
@@ -787,52 +891,60 @@
               "type": "annual",
               "rank": 139,
               "total": 186,
-              "percentile": 25
+              "percentile": 25,
+              "quartile": "Q3"
             },
             {
               "year": 2021,
               "type": "annual",
               "rank": 113,
               "total": 191,
-              "percentile": 41
+              "percentile": 41,
+              "quartile": "Q3"
             },
             {
               "year": 2022,
               "type": "annual",
               "rank": 71,
               "total": 192,
-              "percentile": 63
+              "percentile": 63,
+              "quartile": "Q2"
             },
             {
               "year": 2023,
               "type": "annual",
               "rank": 62,
               "total": 195,
-              "percentile": 68
+              "percentile": 68,
+              "quartile": "Q2"
             },
             {
               "year": 2024,
               "type": "annual",
               "rank": 60,
               "total": 198,
-              "percentile": 69
+              "percentile": 69,
+              "quartile": "Q2"
             },
             {
               "year": 2025,
               "type": "annual",
               "rank": 45,
               "total": 201,
-              "percentile": 77
+              "percentile": 77,
+              "quartile": "Q1"
             },
             {
               "year": 2026,
               "type": "tracker",
               "rank": 52,
               "total": 203,
-              "percentile": 74
+              "percentile": 74,
+              "quartile": "Q2"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21101039869"
+          "sourceUrl": "https://www.scopus.com/sourceid/21101039869",
+          "quartile": "Q1"
         }
       ]
     },
@@ -853,12 +965,14 @@
           "annual2025": {
             "rank": 821,
             "total": 1030,
-            "percentile": 20
+            "percentile": 20,
+            "quartile": "Q4"
           },
           "tracker2026": {
             "rank": 787,
             "total": 1050,
-            "percentile": 25
+            "percentile": 25,
+            "quartile": "Q3"
           },
           "history": [
             {
@@ -866,31 +980,36 @@
               "type": "annual",
               "rank": 717,
               "total": 797,
-              "percentile": 10
+              "percentile": 10,
+              "quartile": "Q4"
             },
             {
               "year": 2024,
               "type": "annual",
               "rank": 833,
               "total": 970,
-              "percentile": 14
+              "percentile": 14,
+              "quartile": "Q4"
             },
             {
               "year": 2025,
               "type": "annual",
               "rank": 821,
               "total": 1030,
-              "percentile": 20
+              "percentile": 20,
+              "quartile": "Q4"
             },
             {
               "year": 2026,
               "type": "tracker",
               "rank": 787,
               "total": 1050,
-              "percentile": 25
+              "percentile": 25,
+              "quartile": "Q3"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21101101853"
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853",
+          "quartile": "Q4"
         },
         {
           "code": "2210",
@@ -904,12 +1023,14 @@
           "annual2025": {
             "rank": 614,
             "total": 740,
-            "percentile": 17
+            "percentile": 17,
+            "quartile": "Q4"
           },
           "tracker2026": {
             "rank": 581,
             "total": 753,
-            "percentile": 22
+            "percentile": 22,
+            "quartile": "Q4"
           },
           "history": [
             {
@@ -917,31 +1038,36 @@
               "type": "annual",
               "rank": 589,
               "total": 672,
-              "percentile": 12
+              "percentile": 12,
+              "quartile": "Q4"
             },
             {
               "year": 2024,
               "type": "annual",
               "rank": 628,
               "total": 720,
-              "percentile": 12
+              "percentile": 12,
+              "quartile": "Q4"
             },
             {
               "year": 2025,
               "type": "annual",
               "rank": 614,
               "total": 740,
-              "percentile": 17
+              "percentile": 17,
+              "quartile": "Q4"
             },
             {
               "year": 2026,
               "type": "tracker",
               "rank": 581,
               "total": 753,
-              "percentile": 22
+              "percentile": 22,
+              "quartile": "Q4"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21101101853"
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853",
+          "quartile": "Q4"
         },
         {
           "code": "2301",
@@ -955,12 +1081,14 @@
           "annual2025": {
             "rank": 258,
             "total": 307,
-            "percentile": 16
+            "percentile": 16,
+            "quartile": "Q4"
           },
           "tracker2026": {
             "rank": 243,
             "total": 320,
-            "percentile": 24
+            "percentile": 24,
+            "quartile": "Q4"
           },
           "history": [
             {
@@ -968,38 +1096,44 @@
               "type": "annual",
               "rank": 146,
               "total": 163,
-              "percentile": 10
+              "percentile": 10,
+              "quartile": "Q4"
             },
             {
               "year": 2023,
               "type": "annual",
               "rank": 196,
               "total": 219,
-              "percentile": 10
+              "percentile": 10,
+              "quartile": "Q4"
             },
             {
               "year": 2024,
               "type": "annual",
               "rank": 240,
               "total": 271,
-              "percentile": 11
+              "percentile": 11,
+              "quartile": "Q4"
             },
             {
               "year": 2025,
               "type": "annual",
               "rank": 258,
               "total": 307,
-              "percentile": 16
+              "percentile": 16,
+              "quartile": "Q4"
             },
             {
               "year": 2026,
               "type": "tracker",
               "rank": 243,
               "total": 320,
-              "percentile": 24
+              "percentile": 24,
+              "quartile": "Q4"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21101101853"
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853",
+          "quartile": "Q4"
         },
         {
           "code": "2501",
@@ -1013,12 +1147,14 @@
           "annual2025": {
             "rank": 218,
             "total": 256,
-            "percentile": 15
+            "percentile": 15,
+            "quartile": "Q4"
           },
           "tracker2026": {
             "rank": 217,
             "total": 269,
-            "percentile": 19
+            "percentile": 19,
+            "quartile": "Q4"
           },
           "history": [
             {
@@ -1026,31 +1162,36 @@
               "type": "annual",
               "rank": 170,
               "total": 196,
-              "percentile": 13
+              "percentile": 13,
+              "quartile": "Q4"
             },
             {
               "year": 2024,
               "type": "annual",
               "rank": 202,
               "total": 232,
-              "percentile": 13
+              "percentile": 13,
+              "quartile": "Q4"
             },
             {
               "year": 2025,
               "type": "annual",
               "rank": 218,
               "total": 256,
-              "percentile": 15
+              "percentile": 15,
+              "quartile": "Q4"
             },
             {
               "year": 2026,
               "type": "tracker",
               "rank": 217,
               "total": 269,
-              "percentile": 19
+              "percentile": 19,
+              "quartile": "Q4"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21101101853"
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853",
+          "quartile": "Q4"
         },
         {
           "code": "1601",
@@ -1064,12 +1205,14 @@
           "annual2025": {
             "rank": 121,
             "total": 137,
-            "percentile": 12
+            "percentile": 12,
+            "quartile": "Q4"
           },
           "tracker2026": {
             "rank": 123,
             "total": 142,
-            "percentile": 13
+            "percentile": 13,
+            "quartile": "Q4"
           },
           "history": [
             {
@@ -1077,38 +1220,44 @@
               "type": "annual",
               "rank": 56,
               "total": 64,
-              "percentile": 13
+              "percentile": 13,
+              "quartile": "Q4"
             },
             {
               "year": 2023,
               "type": "annual",
               "rank": 99,
               "total": 111,
-              "percentile": 11
+              "percentile": 11,
+              "quartile": "Q4"
             },
             {
               "year": 2024,
               "type": "annual",
               "rank": 114,
               "total": 124,
-              "percentile": 8
+              "percentile": 8,
+              "quartile": "Q4"
             },
             {
               "year": 2025,
               "type": "annual",
               "rank": 121,
               "total": 137,
-              "percentile": 12
+              "percentile": 12,
+              "quartile": "Q4"
             },
             {
               "year": 2026,
               "type": "tracker",
               "rank": 123,
               "total": 142,
-              "percentile": 13
+              "percentile": 13,
+              "quartile": "Q4"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21101101853"
+          "sourceUrl": "https://www.scopus.com/sourceid/21101101853",
+          "quartile": "Q4"
         }
       ]
     },
@@ -1130,7 +1279,8 @@
           "tracker2026": {
             "rank": 204,
             "total": 248,
-            "percentile": 17
+            "percentile": 17,
+            "quartile": "Q4"
           },
           "history": [
             {
@@ -1138,10 +1288,12 @@
               "type": "tracker",
               "rank": 204,
               "total": 248,
-              "percentile": 17
+              "percentile": 17,
+              "quartile": "Q4"
             }
           ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21101380177"
+          "sourceUrl": "https://www.scopus.com/sourceid/21101380177",
+          "quartile": "Q4"
         }
       ]
     }

@@ -322,8 +322,8 @@ function localScore(j,year=2025){
   return {...r,score:s,value:s};
 }
 function citationRecord(j,year){return (j.localCitation?.citationSeries||j.scopusCitingDocs?.citationSeries)?.find(r=>r.year===year)??null;}
+function scopusQuartile(percentile){return Number.isFinite(percentile)?(percentile>=75?'Q1':(percentile>=50?'Q2':(percentile>=25?'Q3':'Q4'))):null;}
 function historyRecord(j,year){return (j.annualHistory||j.outputs||[]).find(r=>r.year===year)??null;}
-
 function observation(j,metric,year){
   const r=scopusRecord(j,year);
   if(!r)return{value:null,isProvisional:false,kind:'missing'};
@@ -412,10 +412,10 @@ function renderHeroAndOverview(){
 
   // 4. Key analytical remarks
   const remarks=[
-    '<strong>VJES</strong> dẫn đầu toàn khối với CiteScore 2025 đạt <strong>5,0</strong> (tăng từ 0,7 năm 2020; phân vị 77%, hạng 45/201 ngành Khoa học Trái đất) và Tracker 2026 đạt <strong>4,6</strong>.',
-    '<strong>ANSN</strong> đạt CiteScore 2025 là <strong>3,9</strong> (1.143 trích dẫn / 292 tài liệu) và CiteScore Tracker 2026 tăng lên <strong>4,0</strong> (1.118 trích dẫn / 280 tài liệu).',
-    '<strong>VJC</strong> tăng liên tục từ <strong>0,5</strong> (2021), <strong>1,4</strong> (2022) lên <strong>3,0</strong> (2025) và <strong>3,4</strong> ở Tracker 2026; <strong>VJM</strong> đạt <strong>2,1</strong> (phân vị 72%, hạng 115/414 Toán học); <strong>AMV</strong> trực thuộc <strong>Viện Toán học</strong>, có số liệu xuất bản từ 1976 đến 2026 (51 năm).',
-    'Trong nhóm <strong>VAST-2</strong>, <strong>VJMech</strong> (0,79 năm 2025 → 1,14 năm 2026) và <strong>JCC</strong> (0,70 năm 2025 → 1,12 năm 2026) có chỉ số 4 năm tự tính cao hơn mức Tracker 2026 (0,7) của <strong>CIP</strong>.'
+    '<strong>VJES</strong> dẫn đầu toàn khối với CiteScore 2025 đạt <strong>5,0</strong> (<strong>Q1 Scopus</strong>, phân vị 77%, hạng 45/201 ngành Khoa học Trái đất; JIF 2025 = 2,1 · Q3 JIF / Q2 JCI) và Tracker 2026 đạt <strong>4,6</strong> (Q2, 74%).',
+    '<strong>ANSN</strong> đạt CiteScore 2025 là <strong>3,9</strong> (<strong>Q2 Scopus</strong> ở 2 ngành Kỹ thuật với phân vị 61% &amp; 60%, <strong>Q3</strong> Khoa học Vật liệu 48%; JIF 2025 = <strong>2,4 · Q3</strong>) và Tracker 2026 tăng lên <strong>4,0</strong> (Q2, 62%).',
+    '<strong>VJC</strong> tăng liên tục từ <strong>0,5</strong> (2021 · Q4), <strong>1,4</strong> (2022 · Q3) lên <strong>3,0</strong> (2025 · <strong>Q3 Scopus</strong>, 43%) và lên <strong>Q2 Scopus (50%)</strong> ở Tracker 2026 (3,4); <strong>VJM</strong> đạt <strong>2,1</strong> (<strong>Q2 Scopus</strong>, phân vị 72%, hạng 115/414 Toán học; năm 2024 đạt <strong>Q1 Scopus</strong> với 76%; JIF 2025 = 0,9 · <strong>Q2 WoS</strong>); <strong>AMV</strong> trực thuộc <strong>Viện Toán học</strong>, có dữ liệu xuất bản 51 năm (1976–2026).',
+    'Trong nhóm <strong>VAST-2</strong>, <strong>VJMech</strong> (0,79 năm 2025 → 1,14 năm 2026) và <strong>JCC</strong> (0,70 năm 2025 → 1,12 năm 2026) có chỉ số 4 năm tự tính cao hơn mức Tracker 2026 (0,7 · Q4 Scopus) của <strong>CIP</strong>.'
   ];
   $('#remarks-list').innerHTML=remarks.map(item=>`<li>${item}</li>`).join('');
 }
@@ -428,7 +428,7 @@ function renderVast1MatrixTable(){
     ${years.map(y=>`<th scope="col">${y}</th>`).join('')}
     <th scope="col">Tracker<br>${scopus.trackerYear}</th>
     <th scope="col">Trích dẫn / Tài liệu<br>(2022–2025)</th>
-    <th scope="col">Phân ngành, Vị trí &amp; Phân vị Scopus<br>(2025 &amp; Tracker 2026)</th>
+    <th scope="col">Phân ngành, Quartile, Vị trí &amp; Phân vị Scopus<br>(2025 &amp; Tracker 2026)</th>
   </tr>`;
 
   $('#vast1-matrix-body').innerHTML=vast1.map(j=>{
@@ -443,11 +443,14 @@ function renderVast1MatrixTable(){
         const a=c.annual2025,t=c.tracker2026;
         const label=c.parent?`${c.parent}: ${c.name}`:c.name;
         if(a){
-          const tTxt=t?` · <span style="color:var(--muted)">T26: ${t.percentile}% (${t.rank}/${t.total})</span>`:'';
-          return `<div style="margin-bottom:4px"><strong>${a.percentile}%</strong> · hạng <strong>${a.rank}/${a.total}</strong>${tTxt}<small style="display:block;color:var(--muted)">${esc(label)}</small></div>`;
+          const aq=a.quartile||scopusQuartile(a.percentile);
+          const tq=t?(t.quartile||scopusQuartile(t.percentile)):null;
+          const tTxt=t?` · <span style="color:var(--muted)">T26: <strong>${esc(tq)}</strong> · ${t.percentile}% (${t.rank}/${t.total})</span>`:'';
+          return `<div style="margin-bottom:4px"><strong>${esc(aq)}</strong> · <strong>${a.percentile}%</strong> · hạng <strong>${a.rank}/${a.total}</strong>${tTxt}<small style="display:block;color:var(--muted)">${esc(label)}</small></div>`;
         }
         if(t){
-          return `<div style="margin-bottom:4px"><strong>Tracker 26: ${t.percentile}%</strong> · hạng <strong>${t.rank}/${t.total}</strong><small style="display:block;color:var(--muted)">${esc(label)}</small></div>`;
+          const tq=t.quartile||scopusQuartile(t.percentile);
+          return `<div style="margin-bottom:4px"><strong>Tracker 26: ${esc(tq)}</strong> · <strong>${t.percentile}%</strong> · hạng <strong>${t.rank}/${t.total}</strong><small style="display:block;color:var(--muted)">${esc(label)}</small></div>`;
         }
         return '';
       }).join('')
@@ -579,12 +582,14 @@ function renderCatalog(){
     const spanEnd=j.historyEndYear||2026;
     const totalHistPapers=(j.annualHistory||[]).reduce((s,r)=>s+(r.papers||0),0);
 
+    const topScopus25=j.scopusCategories?.find(c=>c.annual2025)?.annual2025||null;
+    const topScopusT26=j.scopusCategories?.[0]?.tracker2026||null;
     const m1Label=j.group==='VAST-1'?'CiteScore 25':'Tự tính 25';
-    const m1Val=j.group==='VAST-1'?(Number.isFinite(a25?.value)?oneDec.format(a25.value):'N/A'):(loc25?twoDec.format(loc25.score)+'*':'N/A');
+    const m1Val=j.group==='VAST-1'?(Number.isFinite(a25?.value)?`${oneDec.format(a25.value)}${topScopus25?` (${topScopus25.quartile||scopusQuartile(topScopus25.percentile)})`:''}`:'N/A'):(loc25?twoDec.format(loc25.score)+'*':'N/A');
     const m2Label=j.jcr?'JIF 25 (WoS)':(j.group==='VAST-1'?'Tracker 26':'Tự tính 26');
-    const m2Val=j.jcr?`${oneDec.format(j.jcr.jif)} (${j.jcr.categories[0].jif.quartile})`:(j.group==='VAST-1'?(Number.isFinite(t26?.value)?oneDec.format(t26.value):'N/A'):(loc26?twoDec.format(loc26.score)+'*':'N/A'));
+    const m2Val=j.jcr?`${oneDec.format(j.jcr.jif)} (${j.jcr.categories[0].jif.quartile})`:(j.group==='VAST-1'?(Number.isFinite(t26?.value)?`${oneDec.format(t26.value)}${topScopusT26?` (${topScopusT26.quartile||scopusQuartile(topScopusT26.percentile)})`:''}`:'N/A'):(loc26?twoDec.format(loc26.score)+'*':'N/A'));
     const m3Label=j.jcr?'Tracker 26':`Tổng bài (${spanStart}–26)`;
-    const m3Val=j.jcr?(Number.isFinite(t26?.value)?oneDec.format(t26.value):'N/A'):(totalHistPapers?`${integer.format(totalHistPapers)}`:(out25?`${out25.papers}/${out25.issues}`:'—'));
+    const m3Val=j.jcr?(Number.isFinite(t26?.value)?`${oneDec.format(t26.value)}${topScopusT26?` (${topScopusT26.quartile||scopusQuartile(topScopusT26.percentile)})`:''}`:'N/A'):(totalHistPapers?`${integer.format(totalHistPapers)}`:(out25?`${out25.papers}/${out25.issues}`:'—'));
 
     return `<article class="lineup-card">
       <div class="lineup-card-top">
@@ -1180,9 +1185,11 @@ function renderDetail(id){
 
   let metricCards=[];
   if(j.group==='VAST-1'){
+    const bestS25=cats.find(c=>c.annual2025)?.annual2025||null;
+    const bestT26=cats[0]?.tracker2026||null;
     metricCards=[
-      ['CiteScore 2025 (Scopus)',a25&&Number.isFinite(a25.value)?oneDec.format(a25.value):'N/A',a25&&Number.isFinite(a25.citations)?`${integer.format(a25.citations)} trích dẫn / ${integer.format(a25.documents)} tài liệu (2022–2025)`:'Mới chỉ mục Scopus (2022–2026)'],
-      ['CiteScore Tracker 2026',t26&&Number.isFinite(t26.value)?oneDec.format(t26.value):'N/A',t26&&Number.isFinite(t26.citations)?`${integer.format(t26.citations)} trích dẫn / ${integer.format(t26.documents)} tài liệu (cập nhật 05/10/2026)`:'Cập nhật 05/10/2026'],
+      ['CiteScore 2025 (Scopus)',a25&&Number.isFinite(a25.value)?`${oneDec.format(a25.value)}${bestS25?` (${bestS25.quartile||scopusQuartile(bestS25.percentile)})`:''}`:'N/A',a25&&Number.isFinite(a25.citations)?`${integer.format(a25.citations)} trích dẫn / ${integer.format(a25.documents)} tài liệu (2022–2025)${bestS25?` · phân vị ${bestS25.percentile}% (${bestS25.rank}/${bestS25.total})`:''}`:'Mới chỉ mục Scopus (2022–2026)'],
+      ['CiteScore Tracker 2026',t26&&Number.isFinite(t26.value)?`${oneDec.format(t26.value)}${bestT26?` (${bestT26.quartile||scopusQuartile(bestT26.percentile)})`:''}`:'N/A',t26&&Number.isFinite(t26.citations)?`${integer.format(t26.citations)} trích dẫn / ${integer.format(t26.documents)} tài liệu${bestT26?` · phân vị ${bestT26.percentile}% (${bestT26.rank}/${bestT26.total})`:' (cập nhật 05/10/2026)'}`:'Cập nhật 05/10/2026'],
       jr
         ?['JIF 2025 (WoS JCR)',`${oneDec.format(jr.jif)} (${jr.categories[0].jif.quartile})`,`${integer.format(jr.jifNumerator)} trích dẫn / ${integer.format(jr.jifDenominator)} bài (2023–2024) · JCI: ${twoDec.format(jr.jci)}`]
         :[`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ phát hành (${hist.length} năm)`],
@@ -1318,19 +1325,23 @@ function renderDetail(id){
           </div>
         </section>`:''}
         ${cats.length?`<section class="detail-section">
-          <h3>Vị trí xếp hạng &amp; Phân vị theo từng phân ngành Scopus qua các năm</h3>
-          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">Hiển thị đầy đủ ${cats.length} phân ngành ASJC của <strong>${esc(j.code)}</strong> trên hệ thống Scopus (gồm thứ hạng <code>hạng / tổng số tạp chí</code> và phân vị <code>%</code> của từng năm và CiteScore Tracker 2026).</p>
+          <h3>Vị trí xếp hạng, Quartile &amp; Phân vị theo từng phân ngành Scopus qua các năm</h3>
+          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">Hiển thị đầy đủ ${cats.length} phân ngành ASJC của <strong>${esc(j.code)}</strong> trên hệ thống Scopus (gồm thứ hạng <code>hạng / tổng số tạp chí</code>, <strong>Quartile Scopus (Q1–Q4 theo phân vị: ≥75% Q1 · 50–74% Q2 · 25–49% Q3 · &lt;25% Q4)</strong> và phân vị <code>%</code> qua các năm).</p>
           <div class="table-scroll" style="max-height:420px;overflow-y:auto;border:1px solid var(--line)">
             <table class="detail-table">
-              <thead><tr><th scope="col">Lĩnh vực &amp; Phân ngành Scopus (ASJC)</th><th scope="col">Năm</th><th scope="col">Loại</th><th scope="col">Vị trí (Hạng / Tổng)</th><th scope="col">Phân vị Scopus</th></tr></thead>
+              <thead><tr><th scope="col">Lĩnh vực &amp; Phân ngành Scopus (ASJC)</th><th scope="col">Năm</th><th scope="col">Loại</th><th scope="col">Vị trí (Hạng / Tổng)</th><th scope="col">Quartile Scopus</th><th scope="col">Phân vị Scopus</th></tr></thead>
               <tbody>
-                ${cats.flatMap(c=>(c.history||[{year:c.year,type:c.isTrackerOnly?'tracker':'annual',rank:c.rank,total:c.total,percentile:c.percentile}]).slice().sort((a,b)=>b.year-a.year).map(h=>`<tr>
+                ${cats.flatMap(c=>(c.history||[{year:c.year,type:c.isTrackerOnly?'tracker':'annual',rank:c.rank,total:c.total,percentile:c.percentile,quartile:c.quartile}]).slice().sort((a,b)=>b.year-a.year).map(h=>{
+                  const q=h.quartile||scopusQuartile(h.percentile);
+                  return `<tr>
                   <td><strong>${esc(c.name)}</strong><small style="display:block;color:var(--muted)">${esc(c.parent||'')}${c.code?` · ASJC ${esc(c.code)}`:''}</small></td>
                   <td><strong>${h.year}</strong></td>
                   <td>${h.type==='tracker'?'Tracker 2026':'Chính thức'}</td>
                   <td><strong>${h.rank}/${h.total}</strong></td>
+                  <td><strong>${esc(q||'—')}</strong></td>
                   <td><strong>${h.percentile}%</strong></td>
-                </tr>`)).join('')}
+                </tr>`;
+                })).join('')}
               </tbody>
             </table>
           </div>
@@ -1388,12 +1399,14 @@ function renderDetail(id){
         </section>
 
         ${cats.length?`<section class="detail-section">
-          <h3>Phân ngành Scopus (${cats.length} ngành · Vị trí &amp; Phân vị)</h3>
+          <h3>Phân ngành Scopus (${cats.length} ngành · Quartile, Vị trí &amp; Phân vị)</h3>
           <ul class="source-evidence">${cats.map(c=>{
             const a=c.annual2025,t=c.tracker2026;
+            const aq=a?(a.quartile||scopusQuartile(a.percentile)):null;
+            const tq=t?(t.quartile||scopusQuartile(t.percentile)):null;
             const head=`<strong>${esc(c.parent?`${c.parent} — ${c.name}`:c.name)}</strong>${c.code?` <small style="display:inline;color:var(--muted)">(ASJC ${esc(c.code)})</small>`:''}`;
-            const aTxt=a?`CiteScore 2025: hạng <strong>${a.rank}/${a.total}</strong>, phân vị <strong>${a.percentile}%</strong>`:'CiteScore 2025: N/A';
-            const tTxt=t?`Tracker 2026: hạng <strong>${t.rank}/${t.total}</strong>, phân vị <strong>${t.percentile}%</strong>`:'';
+            const aTxt=a?`CiteScore 2025: <strong>${esc(aq)}</strong> · hạng <strong>${a.rank}/${a.total}</strong>, phân vị <strong>${a.percentile}%</strong>`:'CiteScore 2025: N/A';
+            const tTxt=t?`Tracker 2026: <strong>${esc(tq)}</strong> · hạng <strong>${t.rank}/${t.total}</strong>, phân vị <strong>${t.percentile}%</strong>`:'';
             return `<li>${head}<br>${[aTxt,tTxt].filter(Boolean).join(' · ')}</li>`;
           }).join('')}</ul>
         </section>`:''}
