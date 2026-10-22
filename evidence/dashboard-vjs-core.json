@@ -671,12 +671,12 @@
         {
           "system": "WoS",
           "collection": null,
-          "status": "unverified",
+          "status": "not_listed",
           "evidenceLevel": "database",
-          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=2525-2518&hide_exact_match_fl=true",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=2525-2518&hide_exact_match_fl=true&index=Science%20Citation%20Index%20Expanded%20(SCIE)|Social%20Sciences%20Citation%20Index%20(SSCI)|Arts%20%26%20Humanities%20Citation%20Index%20(AHCI)|Emerging%20Sources%20Citation%20Index%20(ESCI)|Agriculture,%20Biology%20%26%20Environmental%20Sciences|Arts%20%26%20Humanities|Business%20Collection|Clinical%20Medicine|Electronics%20%26%20Telecommunications%20Collection|Engineering,%20Computing%20%26%20Technology|Life%20Sciences|Physical,%20Chemical%20%26%20Earth%20Sciences|Social%20And%20Behavioral%20Sciences|BIOSIS|Current%20Chemical%20Reactions|Essential%20Science%20Indicators|Index%20Chemicus|Zoological%20Record",
           "checkedAt": "2026-10-22",
-          "coverage": null,
-          "notes": "Liên kết tra cứu MJL theo ISSN. Chưa xác minh đầy đủ mọi định danh và bộ chỉ mục; không suy ra không được chỉ mục từ một truy vấn không có kết quả."
+          "coverage": "Chưa được chỉ mục WoS theo tra cứu Clarivate MJL ngày 22/10/2026",
+          "notes": "Đã chọn cả 18 bộ chỉ mục trên giao diện MJL. Các truy vấn ISSN 2525-2518, eISSN 2815-5874 và ISSN cũ 0866-708X đều trả về 0 kết quả."
         },
         {
           "system": "ACI",
@@ -1805,12 +1805,12 @@
         {
           "system": "WoS",
           "collection": null,
-          "status": "unverified",
+          "status": "not_listed",
           "evidenceLevel": "database",
-          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=0868-3166&hide_exact_match_fl=true",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=0868-3166&hide_exact_match_fl=true&index=Science%20Citation%20Index%20Expanded%20(SCIE)|Social%20Sciences%20Citation%20Index%20(SSCI)|Arts%20%26%20Humanities%20Citation%20Index%20(AHCI)|Emerging%20Sources%20Citation%20Index%20(ESCI)|Agriculture,%20Biology%20%26%20Environmental%20Sciences|Arts%20%26%20Humanities|Business%20Collection|Clinical%20Medicine|Electronics%20%26%20Telecommunications%20Collection|Engineering,%20Computing%20%26%20Technology|Life%20Sciences|Physical,%20Chemical%20%26%20Earth%20Sciences|Social%20And%20Behavioral%20Sciences|BIOSIS|Current%20Chemical%20Reactions|Essential%20Science%20Indicators|Index%20Chemicus|Zoological%20Record",
           "checkedAt": "2026-10-22",
-          "coverage": null,
-          "notes": "Liên kết tra cứu MJL theo ISSN. Chưa xác minh đầy đủ mọi định danh và bộ chỉ mục; không suy ra không được chỉ mục từ một truy vấn không có kết quả."
+          "coverage": "Chưa được chỉ mục WoS theo tra cứu Clarivate MJL ngày 22/10/2026",
+          "notes": "Đã chọn cả 18 bộ chỉ mục trên giao diện MJL. Các truy vấn ISSN 0868-3166 và eISSN 2815-5947 đều trả về 0 kết quả."
         },
         {
           "system": "ACI",
@@ -2472,12 +2472,12 @@
         {
           "system": "WoS",
           "collection": null,
-          "status": "unverified",
+          "status": "not_listed",
           "evidenceLevel": "database",
-          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=0866-7136&hide_exact_match_fl=true",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=0866-7136&hide_exact_match_fl=true&index=Science%20Citation%20Index%20Expanded%20(SCIE)|Social%20Sciences%20Citation%20Index%20(SSCI)|Arts%20%26%20Humanities%20Citation%20Index%20(AHCI)|Emerging%20Sources%20Citation%20Index%20(ESCI)|Agriculture,%20Biology%20%26%20Environmental%20Sciences|Arts%20%26%20Humanities|Business%20Collection|Clinical%20Medicine|Electronics%20%26%20Telecommunications%20Collection|Engineering,%20Computing%20%26%20Technology|Life%20Sciences|Physical,%20Chemical%20%26%20Earth%20Sciences|Social%20And%20Behavioral%20Sciences|BIOSIS|Current%20Chemical%20Reactions|Essential%20Science%20Indicators|Index%20Chemicus|Zoological%20Record",
           "checkedAt": "2026-10-22",
-          "coverage": null,
-          "notes": "Liên kết tra cứu MJL theo ISSN. Chưa xác minh đầy đủ mọi định danh và bộ chỉ mục; không suy ra không được chỉ mục từ một truy vấn không có kết quả."
+          "coverage": "Chưa được chỉ mục WoS theo tra cứu Clarivate MJL ngày 22/10/2026",
+          "notes": "Đã chọn cả 18 bộ chỉ mục trên giao diện MJL. Các truy vấn ISSN 0866-7136 và eISSN 2815-5882 đều trả về 0 kết quả."
         },
         {
           "system": "ACI",

@@ -305,9 +305,9 @@ function publicationFrequency(j){
 function archiveLinks(j){
   return [external(j.archiveUrl,'Các số đã xuất bản'),...(j.additionalArchives??[]).map(a=>external(a.url,a.label))].join(' · ');
 }
-function indexingStatusLabel(status){
+function indexingStatusLabel(status,system){
   if(status==='listed')return 'Đã có trong danh mục';
-  if(status==='not_listed')return 'Chưa có trong danh mục theo nguồn đã kiểm tra';
+  if(status==='not_listed')return system==='WoS'?'Chưa được chỉ mục':'Chưa có trong danh mục theo nguồn đã kiểm tra';
   return 'Chưa xác minh';
 }
 function isScopusVerified(j){return j.indexings.some(i=>i.system==='Scopus'&&i.status==='listed');}
@@ -1420,7 +1420,7 @@ function renderDetail(id){
         <section id="journal-indexing" class="detail-section">
           <h3>Chỉ mục khoa học</h3>
           <ul class="source-evidence">
-            ${j.indexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong> — ${indexingStatusLabel(i.status)}<small>${[i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',i.notes?esc(i.notes):'',external(i.sourceUrl,i.system==='WoS'?(i.status==='unverified'?'Tra cứu tại Clarivate MJL (chưa xác minh đầy đủ)':'Xem minh chứng trên Clarivate MJL'):i.evidenceLevel==='database'?`Xem trên ${i.system}`:'Xem nguồn minh chứng')].filter(Boolean).join(' · ')}</small></li>`).join('')}
+            ${j.indexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong> — ${indexingStatusLabel(i.status,i.system)}<small>${[i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',i.notes?esc(i.notes):'',external(i.sourceUrl,i.system==='WoS'?(i.status==='unverified'?'Tra cứu tại Clarivate MJL (chưa xác minh đầy đủ)':'Xem minh chứng trên Clarivate MJL'):i.evidenceLevel==='database'?`Xem trên ${i.system}`:'Xem nguồn minh chứng')].filter(Boolean).join(' · ')}</small></li>`).join('')}
           </ul>
         </section>
       </div>
