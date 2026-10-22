@@ -11,8 +11,8 @@
 <link rel="preload" href="assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/dashboard.css?v=20261023a">
-<script type="module" src="assets/dashboard.js?v=20261023a"></script>
+<link rel="stylesheet" href="assets/dashboard.css?v=20261023b">
+<script type="module" src="assets/dashboard.js?v=20261023b"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Đến nội dung chính</a>
@@ -357,16 +357,17 @@
 <div class="section-heading">
 <div>
 <span class="hud-label chart-kicker">BIỂU ĐỒ 03 · TRÍCH DẪN</span>
-<h3 id="citations-heading">Diễn biến trích dẫn theo năm và tổng tích lũy</h3>
+<h3 id="citations-heading">Trích dẫn theo năm</h3>
 </div>
 </div>
 <form class="trend-controls" aria-label="Tùy chọn biểu đồ trích dẫn">
 <div class="field">
 <label for="citation-mode">Chế độ chỉ số trích dẫn</label>
 <select id="citation-mode">
-<option value="edges">Lượt trích dẫn theo năm (9 tạp chí)</option>
-<option value="docs">Tài liệu trích dẫn theo năm (9 tạp chí)</option>
-<option value="scopus-window">Trích dẫn trong cửa sổ CiteScore (VAST-1)</option>
+<option value="scopus-cited-by" selected>Tài liệu trích dẫn Scopus theo năm (7 tạp chí VAST-1)</option>
+<option value="scopus-window">Trích dẫn trong cửa sổ CiteScore (7 tạp chí VAST-1)</option>
+<option value="local-edges">Lượt trích dẫn theo năm (dữ liệu OJS · 9 tạp chí)</option>
+<option value="local-docs">Tài liệu trích dẫn theo năm (dữ liệu OJS · 9 tạp chí)</option>
 </select>
 </div>
 <div class="field">

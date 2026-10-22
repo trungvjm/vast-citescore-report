@@ -23,15 +23,15 @@ assert.equal(new Set(scopus.records.map(r=>r.journal+'|'+r.year+'|'+r.type)).siz
 const officialAnnualCodes=new Set(scopus.records.filter(r=>r.type==='annual'&&Number.isFinite(r.value)).map(r=>r.journal));
 const evidence=await Promise.all(profileFiles.map(f=>readJson(path.join(root,f))));
 const audits=await Promise.all(auditFiles.map(f=>readJson(path.join(root,f))));
-const [histIntl,histOjs,media,jcrData,scopusCatData,intlCitData,originData,hdgsnnData]=await Promise.all([
+const [histIntl,histOjs,media,jcrData,scopusCatData,originData,hdgsnnData,scopusCitedByData]=await Promise.all([
  readJson(path.join(root,'evidence/dashboard-history-intl.json')),
  readJson(path.join(root,'evidence/dashboard-history-ojs.json')),
  readJson(path.join(root,'evidence/dashboard-media.json')),
  readJson(path.join(root,'evidence/dashboard-jcr.json')),
  readJson(path.join(root,'evidence/scopus-categories.json')),
- readJson(path.join(root,'evidence/scopus-citing-docs-intl.json')),
  readJson(path.join(root,'evidence/dashboard-journal-origins.json')),
- readJson(path.join(root,'evidence/dashboard-hdgsnn-2025.json'))
+ readJson(path.join(root,'evidence/dashboard-hdgsnn-2025.json')),
+ readJson(path.join(root,'evidence/scopus-cited-by.json'))
 ]);
 for(const logo of Object.values(media.logos)){
  if(!logo.darkVariant)continue;
@@ -44,7 +44,7 @@ const profiles=evidence.flatMap(e=>e.journals),localAudits=audits.flatMap(a=>a.j
 const historyMap=new Map([...histIntl.journals,...histOjs.journals].map(j=>[j.id,j]));
 const jcrMap=new Map((jcrData.journals||[]).map(j=>[j.id,j]));
 const scopusCatMap=new Map((scopusCatData.journals||[]).map(j=>[j.id,j.categories]));
-const intlCitMap=new Map((intlCitData.journals||[]).map(j=>[j.id,j]));
+const scopusCitedByMap=new Map((scopusCitedByData.journals||[]).map(j=>[j.id,j]));
 const originMap=new Map(originData.journals.map(j=>[j.id,j]));
 const originSourceIds=new Set(originData.sources.map(s=>s.id));
 const hdgsnnMap=new Map((hdgsnnData.journals||[]).map(j=>[j.id,j]));
@@ -64,14 +64,39 @@ assert.deepEqual([...scopusCatMap.keys()].sort(),['amv','ansn','cip','vjc','vjes
 for(const journal of scopusCatData.journals){
  assert(officialAnnualCodes.has(journal.code)||journal.categories.length===0,journal.code+': Scopus category rankings require a published official annual CiteScore; Tracker alone is insufficient.');
 }
-assert.deepEqual([...intlCitMap.keys()].sort(),['amv','ansn','vjm'],'Need exact 3 international Scopus citing-doc entries.');
-for(const ic of intlCitMap.values()){
- const sumDocs=ic.citationSeries.reduce((s,r)=>s+r.citingDocuments,0);
- assert.equal(sumDocs,ic.totalDistinctCitingDocs,ic.code+': distinct citing docs sum mismatch.');
- for(const yr of [2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025]){
-  const sr=scopus.records.find(r=>r.journal===ic.code&&r.year===yr&&r.type==='annual');
-  assert.equal(ic.windowCounts[yr]?.fetched,sr.citations,ic.code+' '+yr+': window citing-doc count mismatch with baseline.');
+assert.equal(scopusCitedByData.schemaVersion,1,'scopus-cited-by.json schemaVersion must be 1.');
+assert.equal(scopusCitedByData.metric,'distinct-citing-documents-by-publication-year','Unexpected scopus-cited-by metric.');
+assert(/^\d{4}-\d{2}-\d{2}$/.test(scopusCitedByData.collectedAt)&&Number.isFinite(Date.parse(scopusCitedByData.collectedAt)),'Invalid scopus-cited-by collection date.');
+assert.deepEqual([...scopusCitedByMap.keys()].sort(),['amv','ansn','cip','vjc','vjes','vjm','vjst'],'Need exact 7 VAST-1 Scopus cited-by entries.');
+for(const cb of scopusCitedByMap.values()){
+ assert(Number.isInteger(cb.sourceDocuments)&&cb.sourceDocuments>0,cb.code+': invalid sourceDocuments.');
+ assert(Number.isInteger(cb.citingDocuments)&&cb.citingDocuments>=0,cb.code+': invalid citingDocuments.');
+ assert(Array.isArray(cb.sourceReferencedEids)&&cb.sourceReferencedEids.length===cb.sourceDocuments,cb.code+': sourceReferencedEids count must match sourceDocuments.');
+ const sumDocs=cb.citationSeries.reduce((s,r)=>s+r.citingDocuments,0);
+ assert.equal(sumDocs,cb.citingDocuments,cb.code+': distinct citing docs sum mismatch with citingDocuments.');
+ const years=new Set();
+ for(const r of cb.citationSeries){
+  assert(Number.isInteger(r.year)&&r.year>=1950&&r.year<=currentYear+1,cb.code+': invalid citation year '+r.year);
+  assert(Number.isInteger(r.citingDocuments)&&r.citingDocuments>=0,cb.code+': invalid annual citingDocuments count.');
+  assert(!years.has(r.year),cb.code+': duplicate year in citationSeries: '+r.year);
+  years.add(r.year);
  }
+ assert.equal(cb.export?.path,'evidence/scopus-cited-by/'+scopusCitedByData.collectedAt+'/'+cb.id+'-analyze-year.csv',cb.code+': original export path required.');
+ const rawExport=await readFile(path.join(root,cb.export.path));
+ assert.equal(rawExport.length,cb.export.bytes,cb.code+': export bytes mismatch.');
+ assert.equal(sha(rawExport),cb.export.sha256,cb.code+': export sha256 mismatch.');
+ const exportText=rawExport.toString('utf8');
+ assert(/^"YEAR",\s*$/m.test(exportText),cb.code+': export must use the YEAR dimension.');
+ const exportSeries=exportText.split(/\r?\n/).flatMap(line=>{
+  const row=line.match(/^"(\d{4})","([\d,]+)"\s*$/);
+  return row?[{year:Number(row[1]),citingDocuments:Number(row[2].replaceAll(',',''))}]:[];
+ });
+ const sortYears=rows=>[...rows].sort((a,b)=>a.year-b.year);
+ assert.deepEqual(sortYears(cb.citationSeries),sortYears(exportSeries),cb.code+': annual counts differ from original CSV.');
+ const exportEids=[...new Set(exportText.match(/2-s2\.0-\d+/g))].sort();
+ assert.equal(exportEids.length,cb.sourceDocuments,cb.code+': CSV must reference every selected source document.');
+ assert.deepEqual([...cb.sourceReferencedEids].sort(),exportEids,cb.code+': referenced source EIDs differ from original CSV.');
+ assert.equal(cb.sourceQuery,'SOURCE-ID ( '+cb.sourceId+' )',cb.code+': unexpected source query.');
 }
 for(const jr of jcrMap.values()){
  assert.equal(jr.metricYear,2025,jr.code+': JCR metricYear must be 2025.');
@@ -170,7 +195,7 @@ function buildAnnualHistory(j,hist,cat,verifiedOutputs){
   }
  }
  for(const o of verifiedOutputs)byYear.set(o.year,{year:o.year,papers:o.papers,issues:o.issues,periodKind:o.periodKind});
- const citMap=new Map((j.localCitation?.citationSeries||j.scopusCitingDocs?.citationSeries||hist?.fullCitationSeries||[]).map(c=>[c.year,c]));
+ const citMap=new Map((j.scopusCitedBy?.citationSeries||j.localCitation?.citationSeries||hist?.fullCitationSeries||[]).map(c=>[c.year,c]));
  const csMap=new Map((j.localCitation?.selfCalculatedSeries||[]).map(c=>[c.year,c]));
  return [...byYear.values()].sort((a,b)=>a.year-b.year).map(r=>{
   const cit=citMap.get(r.year);
@@ -178,7 +203,7 @@ function buildAnnualHistory(j,hist,cat,verifiedOutputs){
   return {
    ...r,
    citingDocs:cit?(cit.citingDocuments??cit.docs??null):null,
-   citationEdges:cit?(cit.confirmedCitationEdges??cit.occurrences??null):null,
+   citationEdges:j.scopusCitedBy?null:(cit?(cit.confirmedCitationEdges??cit.occurrences??null):null),
    selfCalcScore:cs?(cs.value??cs.score??null):null,
    selfCalcNum:cs?(cs.numerator??null):null,
    selfCalcDen:cs?(cs.denominator??null):null
@@ -273,15 +298,27 @@ for(let index=0;index<order.length;index++){
  const audit=localAudits.find(a=>a.id===j.id);
  let cat=null;
  if(audit){const res=await localCollection(audit,Boolean(original));j.localCitation=res.local;cat=res.cat;}
- else if(intlCitMap.has(j.id)){j.scopusCitingDocs=structuredClone(intlCitMap.get(j.id));}
+ if(scopusCitedByMap.has(j.id)){
+  const scb=scopusCitedByMap.get(j.id);
+  j.scopusCitedBy={
+   sourceId:scb.sourceId,
+   sourceUrl:scb.sourceUrl,
+   sourceDocuments:scb.sourceDocuments,
+   citingDocuments:scb.citingDocuments,
+   analysisYearFrom:scb.analysisYearFrom,
+   analysisYearTo:scb.analysisYearTo,
+   collectedAt:scopusCitedByData.collectedAt,
+   citationSeries:scb.citationSeries
+  };
+ }
  j.annualHistory=buildAnnualHistory(j,historyMap.get(j.id),cat,j.outputs);
  j.historyStartYear=j.annualHistory[0]?.year??2020;
  j.historyEndYear=j.annualHistory.at(-1)?.year??2026;
  assert(j.annualHistory.length>=7,j.code+': annualHistory must include at least 2020-2026.');
  journals.push(j);
 }
-const snapshotId=collectedAt+'-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
-const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.png',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},officialJcr:{path:'evidence/dashboard-jcr.json',metricYear:2025,journalsCount:jcrMap.size,edition:'Emerging Sources Citation Index (ESCI)'},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
+const snapshotId=scopusCitedByData.collectedAt+'-scopus-cited-by-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
+const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.png',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},scopusCitedBy:{path:'evidence/scopus-cited-by.json',metric:scopusCitedByData.metric,method:scopusCitedByData.method,collectedAt:scopusCitedByData.collectedAt,journalsCount:scopusCitedByMap.size},officialJcr:{path:'evidence/dashboard-jcr.json',metricYear:2025,journalsCount:jcrMap.size,edition:'Emerging Sources Citation Index (ESCI)'},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'},{date:scopusCitedByData.collectedAt,title:'Báo cáo trích dẫn Scopus (View cited by → Analyze results) của 7 tạp chí VAST-1',description:'Dữ liệu trích dẫn theo tài liệu riêng biệt (distinct citing documents) phân theo năm xuất bản của tài liệu trích dẫn từ năm bắt đầu đến năm 2026/2027.',url:'evidence/scopus-cited-by.json'}],journals};
 dataset.historySources=structuredClone(originData.sources);
 dataset.hdgsnn={year:hdgsnnData.year,collectedAt:hdgsnnData.collectedAt,decision:structuredClone(hdgsnnData.decision),councils:structuredClone(hdgsnnData.councils)};
 const serialized=JSON.stringify(dataset,null,2)+'\n';

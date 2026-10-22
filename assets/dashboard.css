@@ -1529,7 +1529,7 @@ figure{margin:0;min-width:0}
   background:var(--bg);
   padding:0 0 36px;
 }
-#journal-info,#journal-history,#journal-editors,#journal-charts,#journal-data,#journal-indexing,
+#journal-info,#journal-profile,#journal-history,#journal-editors,#journal-charts,#journal-data,#journal-indexing,#journal-hdgsnn,
 #section-overview,#section-citescore,#section-catalog,#section-references{
   scroll-margin-top:148px;
 }
@@ -1729,6 +1729,17 @@ figure{margin:0;min-width:0}
 }
 .profile-list dt{color:var(--muted);font-size:13px}
 .profile-list dd{margin:0;font-size:13px;overflow-wrap:anywhere}
+.detail-indexing-block{
+  margin-top:20px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+}
+.detail-indexing-block .profile-subheading{
+  margin:0 0 10px;
+  font-family:var(--font-display);
+  font-size:16px;
+  font-weight:600;
+}
 .table-scroll{overflow-x:auto}
 table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
 .detail-table th,.detail-table td{
@@ -1867,7 +1878,7 @@ table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
     border-left:0;
     border-right:0;
   }
-  #journal-info,#journal-history,#journal-editors,#journal-charts,#journal-data,#journal-indexing,
+  #journal-info,#journal-profile,#journal-history,#journal-editors,#journal-charts,#journal-data,#journal-indexing,#journal-hdgsnn,
   #section-overview,#section-citescore,#section-catalog,#section-references{
     scroll-margin-top:92px;
   }

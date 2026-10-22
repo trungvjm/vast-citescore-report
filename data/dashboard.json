@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "snapshotId": "2026-10-21-v1",
+  "snapshotId": "2026-10-23-scopus-cited-by-v1",
   "collectedAt": "2026-10-21",
   "reviewAfterDays": 45,
   "outputYears": [
@@ -25,6 +25,13 @@
     "reportDate": "2026-10-21",
     "trackerSourceUpdatedAt": "2026-10-05"
   },
+  "scopusCitedBy": {
+    "path": "evidence/scopus-cited-by.json",
+    "metric": "distinct-citing-documents-by-publication-year",
+    "method": "Scopus Source → View all documents → More → View cited by → First N results (all source documents) → View → Analyze results → Documents by year → Export CSV",
+    "collectedAt": "2026-10-23",
+    "journalsCount": 7
+  },
   "officialJcr": {
     "path": "evidence/dashboard-jcr.json",
     "metricYear": 2025,
@@ -36,13 +43,19 @@
       "date": "2026-10-21",
       "title": "Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)",
       "description": "Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.",
-      "url": "data/snapshots/2026-10-21-v1.json"
+      "url": "data/snapshots/2026-10-23-scopus-cited-by-v1.json"
     },
     {
       "date": "2026-10-21",
       "title": "Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1",
       "description": "Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.",
       "url": "data-scopus.json"
+    },
+    {
+      "date": "2026-10-23",
+      "title": "Báo cáo trích dẫn Scopus (View cited by → Analyze results) của 7 tạp chí VAST-1",
+      "description": "Dữ liệu trích dẫn theo tài liệu riêng biệt (distinct citing documents) phân theo năm xuất bản của tài liệu trích dẫn từ năm bắt đầu đến năm 2026/2027.",
+      "url": "evidence/scopus-cited-by.json"
     }
   ],
   "journals": [
@@ -1476,137 +1489,80 @@
           "quartile": "Q2"
         }
       ],
-      "scopusCitingDocs": {
-        "id": "vjm",
-        "code": "VJM",
-        "scopusSourceId": "21100286934",
-        "totalDistinctCitingDocs": 1570,
+      "scopusCitedBy": {
+        "sourceId": "21100286934",
+        "sourceUrl": "https://www.scopus.com/sourceid/21100286934",
+        "sourceDocuments": 819,
+        "citingDocuments": 3361,
+        "analysisYearFrom": 2012,
+        "analysisYearTo": 2027,
+        "collectedAt": "2026-10-23",
         "citationSeries": [
           {
-            "year": 2012,
-            "citingDocuments": 1,
-            "confirmedCitationEdges": 1
+            "year": 2027,
+            "citingDocuments": 19
           },
           {
-            "year": 2013,
-            "citingDocuments": 6,
-            "confirmedCitationEdges": 6
-          },
-          {
-            "year": 2014,
-            "citingDocuments": 13,
-            "confirmedCitationEdges": 13
-          },
-          {
-            "year": 2015,
-            "citingDocuments": 35,
-            "confirmedCitationEdges": 35
-          },
-          {
-            "year": 2016,
-            "citingDocuments": 60,
-            "confirmedCitationEdges": 60
-          },
-          {
-            "year": 2017,
-            "citingDocuments": 87,
-            "confirmedCitationEdges": 87
-          },
-          {
-            "year": 2018,
-            "citingDocuments": 102,
-            "confirmedCitationEdges": 102
-          },
-          {
-            "year": 2019,
-            "citingDocuments": 129,
-            "confirmedCitationEdges": 129
-          },
-          {
-            "year": 2020,
-            "citingDocuments": 167,
-            "confirmedCitationEdges": 167
-          },
-          {
-            "year": 2021,
-            "citingDocuments": 188,
-            "confirmedCitationEdges": 188
-          },
-          {
-            "year": 2022,
-            "citingDocuments": 173,
-            "confirmedCitationEdges": 173
-          },
-          {
-            "year": 2023,
-            "citingDocuments": 206,
-            "confirmedCitationEdges": 206
-          },
-          {
-            "year": 2024,
-            "citingDocuments": 226,
-            "confirmedCitationEdges": 226
+            "year": 2026,
+            "citingDocuments": 397
           },
           {
             "year": 2025,
-            "citingDocuments": 177,
-            "confirmedCitationEdges": 177
+            "citingDocuments": 476
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 464
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 421
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 361
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 353
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 284
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 197
+          },
+          {
+            "year": 2018,
+            "citingDocuments": 155
+          },
+          {
+            "year": 2017,
+            "citingDocuments": 113
+          },
+          {
+            "year": 2016,
+            "citingDocuments": 63
+          },
+          {
+            "year": 2015,
+            "citingDocuments": 36
+          },
+          {
+            "year": 2014,
+            "citingDocuments": 14
+          },
+          {
+            "year": 2013,
+            "citingDocuments": 7
+          },
+          {
+            "year": 2012,
+            "citingDocuments": 1
           }
-        ],
-        "windowCounts": {
-          "2013": {
-            "reported": 5,
-            "fetched": 5
-          },
-          "2014": {
-            "reported": 18,
-            "fetched": 18
-          },
-          "2015": {
-            "reported": 48,
-            "fetched": 48
-          },
-          "2016": {
-            "reported": 106,
-            "fetched": 106
-          },
-          "2017": {
-            "reported": 145,
-            "fetched": 145
-          },
-          "2018": {
-            "reported": 197,
-            "fetched": 197
-          },
-          "2019": {
-            "reported": 260,
-            "fetched": 260
-          },
-          "2020": {
-            "reported": 300,
-            "fetched": 300
-          },
-          "2021": {
-            "reported": 359,
-            "fetched": 359
-          },
-          "2022": {
-            "reported": 360,
-            "fetched": 360
-          },
-          "2023": {
-            "reported": 429,
-            "fetched": 429
-          },
-          "2024": {
-            "reported": 525,
-            "fetched": 525
-          },
-          "2025": {
-            "reported": 445,
-            "fetched": 445
-          }
-        }
+        ]
       },
       "annualHistory": [
         {
@@ -1614,8 +1570,8 @@
           "papers": 37,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 6,
-          "citationEdges": 6,
+          "citingDocs": 7,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1625,8 +1581,8 @@
           "papers": 42,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 13,
-          "citationEdges": 13,
+          "citingDocs": 14,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1636,8 +1592,8 @@
           "papers": 59,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 35,
-          "citationEdges": 35,
+          "citingDocs": 36,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1647,8 +1603,8 @@
           "papers": 56,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 60,
-          "citationEdges": 60,
+          "citingDocs": 63,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1658,8 +1614,8 @@
           "papers": 44,
           "issues": 3,
           "periodKind": "annual",
-          "citingDocs": 87,
-          "citationEdges": 87,
+          "citingDocs": 113,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1669,8 +1625,8 @@
           "papers": 58,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 102,
-          "citationEdges": 102,
+          "citingDocs": 155,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1680,8 +1636,8 @@
           "papers": 50,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 129,
-          "citationEdges": 129,
+          "citingDocs": 197,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1691,8 +1647,8 @@
           "papers": 56,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 167,
-          "citationEdges": 167,
+          "citingDocs": 284,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1702,8 +1658,8 @@
           "papers": 64,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 188,
-          "citationEdges": 188,
+          "citingDocs": 353,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1713,8 +1669,8 @@
           "papers": 56,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 173,
-          "citationEdges": 173,
+          "citingDocs": 361,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1724,8 +1680,8 @@
           "papers": 54,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 206,
-          "citationEdges": 206,
+          "citingDocs": 421,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1735,8 +1691,8 @@
           "papers": 53,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 226,
-          "citationEdges": 226,
+          "citingDocs": 464,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1746,8 +1702,8 @@
           "papers": 51,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 177,
-          "citationEdges": 177,
+          "citingDocs": 476,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -1757,7 +1713,7 @@
           "papers": 58,
           "issues": 4,
           "periodKind": "ytd",
-          "citingDocs": null,
+          "citingDocs": 397,
           "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
@@ -2991,150 +2947,84 @@
           "quartile": "Q4"
         }
       ],
-      "scopusCitingDocs": {
-        "id": "amv",
-        "code": "AMV",
-        "scopusSourceId": "21100199843",
-        "totalDistinctCitingDocs": 910,
+      "scopusCitedBy": {
+        "sourceId": "21100199843",
+        "sourceUrl": "https://www.scopus.com/sourceid/21100199843",
+        "sourceDocuments": 703,
+        "citingDocuments": 2446,
+        "analysisYearFrom": 2011,
+        "analysisYearTo": 2027,
+        "collectedAt": "2026-10-23",
         "citationSeries": [
           {
-            "year": 2011,
-            "citingDocuments": 4,
-            "confirmedCitationEdges": 4
+            "year": 2027,
+            "citingDocuments": 6
           },
           {
-            "year": 2012,
-            "citingDocuments": 10,
-            "confirmedCitationEdges": 10
-          },
-          {
-            "year": 2013,
-            "citingDocuments": 22,
-            "confirmedCitationEdges": 22
-          },
-          {
-            "year": 2014,
-            "citingDocuments": 33,
-            "confirmedCitationEdges": 33
-          },
-          {
-            "year": 2015,
-            "citingDocuments": 54,
-            "confirmedCitationEdges": 54
-          },
-          {
-            "year": 2016,
-            "citingDocuments": 53,
-            "confirmedCitationEdges": 53
-          },
-          {
-            "year": 2017,
-            "citingDocuments": 65,
-            "confirmedCitationEdges": 65
-          },
-          {
-            "year": 2018,
-            "citingDocuments": 61,
-            "confirmedCitationEdges": 61
-          },
-          {
-            "year": 2019,
-            "citingDocuments": 105,
-            "confirmedCitationEdges": 105
-          },
-          {
-            "year": 2020,
-            "citingDocuments": 111,
-            "confirmedCitationEdges": 111
-          },
-          {
-            "year": 2021,
-            "citingDocuments": 106,
-            "confirmedCitationEdges": 106
-          },
-          {
-            "year": 2022,
-            "citingDocuments": 94,
-            "confirmedCitationEdges": 94
-          },
-          {
-            "year": 2023,
-            "citingDocuments": 84,
-            "confirmedCitationEdges": 84
-          },
-          {
-            "year": 2024,
-            "citingDocuments": 49,
-            "confirmedCitationEdges": 49
+            "year": 2026,
+            "citingDocuments": 268
           },
           {
             "year": 2025,
-            "citingDocuments": 59,
-            "confirmedCitationEdges": 59
+            "citingDocuments": 280
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 256
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 265
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 260
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 238
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 217
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 189
+          },
+          {
+            "year": 2018,
+            "citingDocuments": 124
+          },
+          {
+            "year": 2017,
+            "citingDocuments": 110
+          },
+          {
+            "year": 2016,
+            "citingDocuments": 84
+          },
+          {
+            "year": 2015,
+            "citingDocuments": 72
+          },
+          {
+            "year": 2014,
+            "citingDocuments": 40
+          },
+          {
+            "year": 2013,
+            "citingDocuments": 23
+          },
+          {
+            "year": 2012,
+            "citingDocuments": 10
+          },
+          {
+            "year": 2011,
+            "citingDocuments": 4
           }
-        ],
-        "windowCounts": {
-          "2011": {
-            "reported": 3,
-            "fetched": 3
-          },
-          "2012": {
-            "reported": 10,
-            "fetched": 10
-          },
-          "2013": {
-            "reported": 34,
-            "fetched": 34
-          },
-          "2014": {
-            "reported": 68,
-            "fetched": 68
-          },
-          "2015": {
-            "reported": 90,
-            "fetched": 90
-          },
-          "2016": {
-            "reported": 120,
-            "fetched": 120
-          },
-          "2017": {
-            "reported": 104,
-            "fetched": 104
-          },
-          "2018": {
-            "reported": 124,
-            "fetched": 124
-          },
-          "2019": {
-            "reported": 169,
-            "fetched": 169
-          },
-          "2020": {
-            "reported": 233,
-            "fetched": 233
-          },
-          "2021": {
-            "reported": 246,
-            "fetched": 246
-          },
-          "2022": {
-            "reported": 259,
-            "fetched": 259
-          },
-          "2023": {
-            "reported": 176,
-            "fetched": 176
-          },
-          "2024": {
-            "reported": 125,
-            "fetched": 125
-          },
-          "2025": {
-            "reported": 120,
-            "fetched": 120
-          }
-        }
+        ]
       },
       "annualHistory": [
         {
@@ -3528,7 +3418,7 @@
           "issues": 3,
           "periodKind": "annual",
           "citingDocs": 4,
-          "citationEdges": 4,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3539,7 +3429,7 @@
           "issues": 4,
           "periodKind": "annual",
           "citingDocs": 10,
-          "citationEdges": 10,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3549,8 +3439,8 @@
           "papers": 39,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 22,
-          "citationEdges": 22,
+          "citingDocs": 23,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3560,8 +3450,8 @@
           "papers": 42,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 33,
-          "citationEdges": 33,
+          "citingDocs": 40,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3571,8 +3461,8 @@
           "papers": 40,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 54,
-          "citationEdges": 54,
+          "citingDocs": 72,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3582,8 +3472,8 @@
           "papers": 47,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 53,
-          "citationEdges": 53,
+          "citingDocs": 84,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3593,8 +3483,8 @@
           "papers": 44,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 65,
-          "citationEdges": 65,
+          "citingDocs": 110,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3604,8 +3494,8 @@
           "papers": 46,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 61,
-          "citationEdges": 61,
+          "citingDocs": 124,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3615,8 +3505,8 @@
           "papers": 53,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 105,
-          "citationEdges": 105,
+          "citingDocs": 189,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3626,8 +3516,8 @@
           "papers": 53,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 111,
-          "citationEdges": 111,
+          "citingDocs": 217,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3637,8 +3527,8 @@
           "papers": 46,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 106,
-          "citationEdges": 106,
+          "citingDocs": 238,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3648,8 +3538,8 @@
           "papers": 48,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 94,
-          "citationEdges": 94,
+          "citingDocs": 260,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3659,8 +3549,8 @@
           "papers": 36,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 84,
-          "citationEdges": 84,
+          "citingDocs": 265,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3670,8 +3560,8 @@
           "papers": 36,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 49,
-          "citationEdges": 49,
+          "citingDocs": 256,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3681,8 +3571,8 @@
           "papers": 32,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 59,
-          "citationEdges": 59,
+          "citingDocs": 280,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -3692,7 +3582,7 @@
           "papers": 27,
           "issues": 3,
           "periodKind": "ytd",
-          "citingDocs": null,
+          "citingDocs": 268,
           "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
@@ -5459,155 +5349,92 @@
           "quartile": "Q3"
         }
       ],
-      "scopusCitingDocs": {
-        "id": "ansn",
-        "code": "ANSN",
-        "scopusSourceId": "21100286862",
-        "totalDistinctCitingDocs": 6583,
+      "scopusCitedBy": {
+        "sourceId": "21100286862",
+        "sourceUrl": "https://www.scopus.com/sourceid/21100286862",
+        "sourceDocuments": 1261,
+        "citingDocuments": 25073,
+        "analysisYearFrom": 2007,
+        "analysisYearTo": 2027,
+        "collectedAt": "2026-10-23",
         "citationSeries": [
           {
-            "year": 2010,
-            "citingDocuments": 13,
-            "confirmedCitationEdges": 13
+            "year": 2027,
+            "citingDocuments": 23
           },
           {
-            "year": 2011,
-            "citingDocuments": 71,
-            "confirmedCitationEdges": 71
-          },
-          {
-            "year": 2012,
-            "citingDocuments": 126,
-            "confirmedCitationEdges": 126
-          },
-          {
-            "year": 2013,
-            "citingDocuments": 239,
-            "confirmedCitationEdges": 239
-          },
-          {
-            "year": 2014,
-            "citingDocuments": 366,
-            "confirmedCitationEdges": 366
-          },
-          {
-            "year": 2015,
-            "citingDocuments": 406,
-            "confirmedCitationEdges": 406
-          },
-          {
-            "year": 2016,
-            "citingDocuments": 386,
-            "confirmedCitationEdges": 386
-          },
-          {
-            "year": 2017,
-            "citingDocuments": 410,
-            "confirmedCitationEdges": 410
-          },
-          {
-            "year": 2018,
-            "citingDocuments": 528,
-            "confirmedCitationEdges": 528
-          },
-          {
-            "year": 2019,
-            "citingDocuments": 746,
-            "confirmedCitationEdges": 746
-          },
-          {
-            "year": 2020,
-            "citingDocuments": 652,
-            "confirmedCitationEdges": 652
-          },
-          {
-            "year": 2021,
-            "citingDocuments": 635,
-            "confirmedCitationEdges": 635
-          },
-          {
-            "year": 2022,
-            "citingDocuments": 524,
-            "confirmedCitationEdges": 524
-          },
-          {
-            "year": 2023,
-            "citingDocuments": 474,
-            "confirmedCitationEdges": 474
-          },
-          {
-            "year": 2024,
-            "citingDocuments": 457,
-            "confirmedCitationEdges": 457
+            "year": 2026,
+            "citingDocuments": 2286
           },
           {
             "year": 2025,
-            "citingDocuments": 550,
-            "confirmedCitationEdges": 550
+            "citingDocuments": 3075
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 3028
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 2850
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 2691
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 2473
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 2113
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 1886
+          },
+          {
+            "year": 2018,
+            "citingDocuments": 1364
+          },
+          {
+            "year": 2017,
+            "citingDocuments": 970
+          },
+          {
+            "year": 2016,
+            "citingDocuments": 747
+          },
+          {
+            "year": 2015,
+            "citingDocuments": 647
+          },
+          {
+            "year": 2014,
+            "citingDocuments": 452
+          },
+          {
+            "year": 2013,
+            "citingDocuments": 255
+          },
+          {
+            "year": 2012,
+            "citingDocuments": 126
+          },
+          {
+            "year": 2011,
+            "citingDocuments": 71
+          },
+          {
+            "year": 2010,
+            "citingDocuments": 15
+          },
+          {
+            "year": 2007,
+            "citingDocuments": 1
           }
-        ],
-        "windowCounts": {
-          "2011": {
-            "reported": 22,
-            "fetched": 22
-          },
-          "2012": {
-            "reported": 112,
-            "fetched": 112
-          },
-          "2013": {
-            "reported": 545,
-            "fetched": 545
-          },
-          "2014": {
-            "reported": 641,
-            "fetched": 641
-          },
-          "2015": {
-            "reported": 791,
-            "fetched": 791
-          },
-          "2016": {
-            "reported": 854,
-            "fetched": 854
-          },
-          "2017": {
-            "reported": 862,
-            "fetched": 862
-          },
-          "2018": {
-            "reported": 1161,
-            "fetched": 1161
-          },
-          "2019": {
-            "reported": 1493,
-            "fetched": 1493
-          },
-          "2020": {
-            "reported": 1437,
-            "fetched": 1437
-          },
-          "2021": {
-            "reported": 1229,
-            "fetched": 1229
-          },
-          "2022": {
-            "reported": 1069,
-            "fetched": 1069
-          },
-          "2023": {
-            "reported": 1077,
-            "fetched": 1077
-          },
-          "2024": {
-            "reported": 962,
-            "fetched": 962
-          },
-          "2025": {
-            "reported": 1143,
-            "fetched": 1143
-          }
-        }
+        ]
       },
       "annualHistory": [
         {
@@ -5615,8 +5442,8 @@
           "papers": 70,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 13,
-          "citationEdges": 13,
+          "citingDocs": 15,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5627,7 +5454,7 @@
           "issues": 4,
           "periodKind": "annual",
           "citingDocs": 71,
-          "citationEdges": 71,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5638,7 +5465,7 @@
           "issues": 4,
           "periodKind": "annual",
           "citingDocs": 126,
-          "citationEdges": 126,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5648,8 +5475,8 @@
           "papers": 80,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 239,
-          "citationEdges": 239,
+          "citingDocs": 255,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5659,8 +5486,8 @@
           "papers": 80,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 366,
-          "citationEdges": 366,
+          "citingDocs": 452,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5670,8 +5497,8 @@
           "papers": 80,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 406,
-          "citationEdges": 406,
+          "citingDocs": 647,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5681,8 +5508,8 @@
           "papers": 80,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 386,
-          "citationEdges": 386,
+          "citingDocs": 747,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5692,8 +5519,8 @@
           "papers": 80,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 410,
-          "citationEdges": 410,
+          "citingDocs": 970,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5703,8 +5530,8 @@
           "papers": 73,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 528,
-          "citationEdges": 528,
+          "citingDocs": 1364,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5714,8 +5541,8 @@
           "papers": 71,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 746,
-          "citationEdges": 746,
+          "citingDocs": 1886,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5725,8 +5552,8 @@
           "papers": 76,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 652,
-          "citationEdges": 652,
+          "citingDocs": 2113,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5736,8 +5563,8 @@
           "papers": 71,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 635,
-          "citationEdges": 635,
+          "citingDocs": 2473,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5747,8 +5574,8 @@
           "papers": 67,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 524,
-          "citationEdges": 524,
+          "citingDocs": 2691,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5758,8 +5585,8 @@
           "papers": 73,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 474,
-          "citationEdges": 474,
+          "citingDocs": 2850,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5769,8 +5596,8 @@
           "papers": 75,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 457,
-          "citationEdges": 457,
+          "citingDocs": 3028,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5780,8 +5607,8 @@
           "papers": 76,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 550,
-          "citationEdges": 550,
+          "citingDocs": 3075,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -5791,7 +5618,7 @@
           "papers": 56,
           "issues": 3,
           "periodKind": "ytd",
-          "citingDocs": null,
+          "citingDocs": 2286,
           "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
@@ -7781,14 +7608,65 @@
         ],
         "selfCalculatedSeries": []
       },
+      "scopusCitedBy": {
+        "sourceId": "21101043786",
+        "sourceUrl": "https://www.scopus.com/sourceid/21101043786",
+        "sourceDocuments": 1074,
+        "citingDocuments": 4573,
+        "analysisYearFrom": 2018,
+        "analysisYearTo": 2027,
+        "collectedAt": "2026-10-23",
+        "citationSeries": [
+          {
+            "year": 2027,
+            "citingDocuments": 9
+          },
+          {
+            "year": 2026,
+            "citingDocuments": 992
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 1175
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 929
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 609
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 444
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 241
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 129
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 41
+          },
+          {
+            "year": 2018,
+            "citingDocuments": 4
+          }
+        ]
+      },
       "annualHistory": [
         {
           "year": 2007,
           "papers": 130,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 1,
-          "citationEdges": 1,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -7853,8 +7731,8 @@
           "papers": 185,
           "issues": 7,
           "periodKind": "annual",
-          "citingDocs": 0,
-          "citationEdges": 0,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -7864,8 +7742,8 @@
           "papers": 144,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 1,
-          "citationEdges": 1,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -7875,8 +7753,8 @@
           "papers": 137,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 4,
-          "citationEdges": 4,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -7886,8 +7764,8 @@
           "papers": 108,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 20,
-          "citationEdges": 20,
+          "citingDocs": 4,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -7897,8 +7775,8 @@
           "papers": 123,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 52,
-          "citationEdges": 59,
+          "citingDocs": 41,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -7908,8 +7786,8 @@
           "papers": 123,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 143,
-          "citationEdges": 158,
+          "citingDocs": 129,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -7919,8 +7797,8 @@
           "papers": 114,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 268,
-          "citationEdges": 289,
+          "citingDocs": 241,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -7930,8 +7808,8 @@
           "papers": 103,
           "issues": 7,
           "periodKind": "annual",
-          "citingDocs": 470,
-          "citationEdges": 493,
+          "citingDocs": 444,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -7942,7 +7820,7 @@
           "issues": 9,
           "periodKind": "annual",
           "citingDocs": 609,
-          "citationEdges": 675,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -7952,8 +7830,8 @@
           "papers": 119,
           "issues": 7,
           "periodKind": "annual",
-          "citingDocs": 940,
-          "citationEdges": 1008,
+          "citingDocs": 929,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -7963,8 +7841,8 @@
           "papers": 90,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 1170,
-          "citationEdges": 1229,
+          "citingDocs": 1175,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -7974,8 +7852,8 @@
           "papers": 96,
           "issues": 6,
           "periodKind": "ytd",
-          "citingDocs": 1010,
-          "citationEdges": 1064,
+          "citingDocs": 992,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9234,6 +9112,53 @@
         ],
         "selfCalculatedSeries": []
       },
+      "scopusCitedBy": {
+        "sourceId": "21101039869",
+        "sourceUrl": "https://www.scopus.com/sourceid/21101039869",
+        "sourceDocuments": 262,
+        "citingDocuments": 1330,
+        "analysisYearFrom": 2019,
+        "analysisYearTo": 2027,
+        "collectedAt": "2026-10-23",
+        "citationSeries": [
+          {
+            "year": 2027,
+            "citingDocuments": 3
+          },
+          {
+            "year": 2026,
+            "citingDocuments": 269
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 272
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 259
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 181
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 160
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 112
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 53
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 21
+          }
+        ]
+      },
       "annualHistory": [
         {
           "year": 2003,
@@ -9295,8 +9220,8 @@
           "papers": 53,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 1,
-          "citationEdges": 1,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9306,8 +9231,8 @@
           "papers": 41,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 1,
-          "citationEdges": 1,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9317,8 +9242,8 @@
           "papers": 33,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 2,
-          "citationEdges": 2,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9328,8 +9253,8 @@
           "papers": 28,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 5,
-          "citationEdges": 7,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9339,8 +9264,8 @@
           "papers": 27,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 31,
-          "citationEdges": 38,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9350,8 +9275,8 @@
           "papers": 30,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 57,
-          "citationEdges": 97,
+          "citingDocs": 21,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9361,8 +9286,8 @@
           "papers": 31,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 92,
-          "citationEdges": 187,
+          "citingDocs": 53,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9372,8 +9297,8 @@
           "papers": 31,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 170,
-          "citationEdges": 293,
+          "citingDocs": 112,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9383,8 +9308,8 @@
           "papers": 31,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 209,
-          "citationEdges": 340,
+          "citingDocs": 160,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9394,8 +9319,8 @@
           "papers": 32,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 224,
-          "citationEdges": 358,
+          "citingDocs": 181,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9405,8 +9330,8 @@
           "papers": 31,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 317,
-          "citationEdges": 500,
+          "citingDocs": 259,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9416,8 +9341,8 @@
           "papers": 31,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 332,
-          "citationEdges": 473,
+          "citingDocs": 272,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -9427,8 +9352,8 @@
           "papers": 24,
           "issues": 3,
           "periodKind": "ytd",
-          "citingDocs": 317,
-          "citationEdges": 459,
+          "citingDocs": 269,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -11389,6 +11314,53 @@
         ],
         "selfCalculatedSeries": []
       },
+      "scopusCitedBy": {
+        "sourceId": "21101101853",
+        "sourceUrl": "https://www.scopus.com/sourceid/21101101853",
+        "sourceDocuments": 629,
+        "citingDocuments": 1097,
+        "analysisYearFrom": 2019,
+        "analysisYearTo": 2027,
+        "collectedAt": "2026-10-23",
+        "citationSeries": [
+          {
+            "year": 2027,
+            "citingDocuments": 7
+          },
+          {
+            "year": 2026,
+            "citingDocuments": 331
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 291
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 190
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 126
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 73
+          },
+          {
+            "year": 2021,
+            "citingDocuments": 53
+          },
+          {
+            "year": 2020,
+            "citingDocuments": 21
+          },
+          {
+            "year": 2019,
+            "citingDocuments": 5
+          }
+        ]
+      },
       "annualHistory": [
         {
           "year": 2013,
@@ -11406,8 +11378,8 @@
           "papers": 27,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 0,
-          "citationEdges": 0,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -11417,8 +11389,8 @@
           "papers": 328,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 0,
-          "citationEdges": 0,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -11428,8 +11400,8 @@
           "papers": 257,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 2,
-          "citationEdges": 2,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -11439,8 +11411,8 @@
           "papers": 223,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 20,
-          "citationEdges": 22,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -11450,8 +11422,8 @@
           "papers": 129,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 94,
-          "citationEdges": 101,
+          "citingDocs": 5,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -11461,8 +11433,8 @@
           "papers": 85,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 189,
-          "citationEdges": 199,
+          "citingDocs": 21,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -11472,8 +11444,8 @@
           "papers": 75,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 239,
-          "citationEdges": 259,
+          "citingDocs": 53,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -11483,8 +11455,8 @@
           "papers": 97,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 264,
-          "citationEdges": 295,
+          "citingDocs": 73,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -11494,8 +11466,8 @@
           "papers": 87,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 312,
-          "citationEdges": 328,
+          "citingDocs": 126,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -11505,8 +11477,8 @@
           "papers": 93,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 394,
-          "citationEdges": 419,
+          "citingDocs": 190,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -11516,8 +11488,8 @@
           "papers": 89,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 540,
-          "citationEdges": 563,
+          "citingDocs": 291,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -11527,8 +11499,8 @@
           "papers": 76,
           "issues": 5,
           "periodKind": "ytd",
-          "citingDocs": 524,
-          "citationEdges": 557,
+          "citingDocs": 331,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12535,6 +12507,37 @@
         ],
         "selfCalculatedSeries": []
       },
+      "scopusCitedBy": {
+        "sourceId": "21101380177",
+        "sourceUrl": "https://www.scopus.com/sourceid/21101380177",
+        "sourceDocuments": 180,
+        "citingDocuments": 140,
+        "analysisYearFrom": 2022,
+        "analysisYearTo": 2026,
+        "collectedAt": "2026-10-23",
+        "citationSeries": [
+          {
+            "year": 2026,
+            "citingDocuments": 59
+          },
+          {
+            "year": 2025,
+            "citingDocuments": 39
+          },
+          {
+            "year": 2024,
+            "citingDocuments": 33
+          },
+          {
+            "year": 2023,
+            "citingDocuments": 5
+          },
+          {
+            "year": 2022,
+            "citingDocuments": 4
+          }
+        ]
+      },
       "annualHistory": [
         {
           "year": 2004,
@@ -12552,8 +12555,8 @@
           "papers": 3,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 1,
-          "citationEdges": 1,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12585,8 +12588,8 @@
           "papers": 47,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 2,
-          "citationEdges": 2,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12596,8 +12599,8 @@
           "papers": 48,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 4,
-          "citationEdges": 4,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12607,8 +12610,8 @@
           "papers": 46,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 3,
-          "citationEdges": 3,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12629,8 +12632,8 @@
           "papers": 85,
           "issues": 6,
           "periodKind": "annual",
-          "citingDocs": 3,
-          "citationEdges": 5,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12640,8 +12643,8 @@
           "papers": 41,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 3,
-          "citationEdges": 5,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12651,8 +12654,8 @@
           "papers": 40,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 4,
-          "citationEdges": 4,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12662,8 +12665,8 @@
           "papers": 36,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 4,
-          "citationEdges": 4,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12673,8 +12676,8 @@
           "papers": 35,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 4,
-          "citationEdges": 4,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12684,8 +12687,8 @@
           "papers": 50,
           "issues": 5,
           "periodKind": "annual",
-          "citingDocs": 4,
-          "citationEdges": 4,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12695,8 +12698,8 @@
           "papers": 40,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 4,
-          "citationEdges": 4,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12706,8 +12709,8 @@
           "papers": 39,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 6,
-          "citationEdges": 6,
+          "citingDocs": null,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12717,8 +12720,8 @@
           "papers": 40,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 12,
-          "citationEdges": 12,
+          "citingDocs": 4,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12728,8 +12731,8 @@
           "papers": 40,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 14,
-          "citationEdges": 16,
+          "citingDocs": 5,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12739,8 +12742,8 @@
           "papers": 36,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 38,
-          "citationEdges": 47,
+          "citingDocs": 33,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12750,8 +12753,8 @@
           "papers": 34,
           "issues": 4,
           "periodKind": "annual",
-          "citingDocs": 48,
-          "citationEdges": 53,
+          "citingDocs": 39,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
@@ -12761,8 +12764,8 @@
           "papers": 30,
           "issues": 3,
           "periodKind": "ytd",
-          "citingDocs": 66,
-          "citationEdges": 76,
+          "citingDocs": 59,
+          "citationEdges": null,
           "selfCalcScore": null,
           "selfCalcNum": null,
           "selfCalcDen": null
