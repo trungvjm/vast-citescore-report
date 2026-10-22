@@ -1265,37 +1265,7 @@
       "id": "cip",
       "code": "CIP",
       "scopusSourceId": "21101380177",
-      "categories": [
-        {
-          "code": "3100",
-          "parent": "Physics and Astronomy",
-          "name": "General Physics and Astronomy",
-          "year": 2026,
-          "isTrackerOnly": true,
-          "percentile": 17,
-          "rank": 204,
-          "total": 248,
-          "annual2025": null,
-          "tracker2026": {
-            "rank": 204,
-            "total": 248,
-            "percentile": 17,
-            "quartile": "Q4"
-          },
-          "history": [
-            {
-              "year": 2026,
-              "type": "tracker",
-              "rank": 204,
-              "total": 248,
-              "percentile": 17,
-              "quartile": "Q4"
-            }
-          ],
-          "sourceUrl": "https://www.scopus.com/sourceid/21101380177",
-          "quartile": "Q4"
-        }
-      ]
+      "categories": []
     }
   ]
 }

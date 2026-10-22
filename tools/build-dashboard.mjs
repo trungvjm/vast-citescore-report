@@ -20,6 +20,7 @@ assert.equal(sha(baselineBytes),baselineHash,'Original official Scopus snapshot 
 const scopus=JSON.parse(baselineBytes);
 assert.equal(scopus.records.length,84,'Baseline must retain all 84 observations.');
 assert.equal(new Set(scopus.records.map(r=>r.journal+'|'+r.year+'|'+r.type)).size,84,'Duplicate official observations.');
+const officialAnnualCodes=new Set(scopus.records.filter(r=>r.type==='annual'&&Number.isFinite(r.value)).map(r=>r.journal));
 const evidence=await Promise.all(profileFiles.map(f=>readJson(path.join(root,f))));
 const audits=await Promise.all(auditFiles.map(f=>readJson(path.join(root,f))));
 const [histIntl,histOjs,media,jcrData,scopusCatData,intlCitData,originData]=await Promise.all([
@@ -48,6 +49,9 @@ const originSourceIds=new Set(originData.sources.map(s=>s.id));
 assert.deepEqual([...originMap.keys()].sort(),[...order].sort(),'Need sourced histories for all 12 journals.');
 assert.deepEqual([...jcrMap.keys()].sort(),['amv','ansn','vjc','vjes','vjm'],'Need exact 5 JCR 2025 journal entries.');
 assert.deepEqual([...scopusCatMap.keys()].sort(),['amv','ansn','cip','vjc','vjes','vjm','vjst'],'Need exact 7 VAST-1 Scopus category entries.');
+for(const journal of scopusCatData.journals){
+ assert(officialAnnualCodes.has(journal.code)||journal.categories.length===0,journal.code+': Scopus category rankings require a published official annual CiteScore; Tracker alone is insufficient.');
+}
 assert.deepEqual([...intlCitMap.keys()].sort(),['amv','ansn','vjm'],'Need exact 3 international Scopus citing-doc entries.');
 for(const ic of intlCitMap.values()){
  const sumDocs=ic.citationSeries.reduce((s,r)=>s+r.citingDocuments,0);
@@ -236,7 +240,7 @@ for(let index=0;index<order.length;index++){
  const scopusQuarter=p=>p>=75?'Q1':(p>=50?'Q2':(p>=25?'Q3':'Q4'));
  const scats=scopusCatMap.get(j.id);
  if(scats){
-  assert(Array.isArray(scats)&&scats.length>=1,j.code+': missing Scopus categories.');
+  assert(Array.isArray(scats)&&(!officialAnnualCodes.has(j.code)||scats.length>=1),j.code+': missing Scopus categories for a published official annual CiteScore.');
   for(const c of scats){
    assert.equal(c.quartile,scopusQuarter(c.percentile),j.code+' '+c.name+': Scopus quartile mismatch.');
    if(c.annual2025)assert.equal(c.annual2025.quartile,scopusQuarter(c.annual2025.percentile),j.code+' '+c.name+': 2025 Scopus quartile mismatch.');

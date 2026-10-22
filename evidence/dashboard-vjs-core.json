@@ -683,9 +683,9 @@
           "system": "ACI",
           "collection": null,
           "status": "listed",
-          "evidenceLevel": "vast",
-          "sourceUrl": "https://vast.gov.vn/web/guest/tap-chi-chi-tiet/-/chi-tiet/tap-chi-khoa-hoc-va-cong-nghe-20046-438.html",
-          "checkedAt": "2026-10-21",
+          "evidenceLevel": "database",
+          "sourceUrl": "https://asean-cites.org/journal_info?jid=10626",
+          "checkedAt": "2026-10-22",
           "coverage": "since 2017"
         },
         {
