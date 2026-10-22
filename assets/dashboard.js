@@ -1664,7 +1664,7 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023c'),fetch('data-scopus.json?v=20261023c')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023d'),fetch('data-scopus.json?v=20261023d')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     [dashboard,scopus]=await Promise.all([dRes.json(),sRes.json()]);
     syncPaletteColors();

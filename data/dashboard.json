@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "snapshotId": "2026-10-23-hdgsnn-corrections-v1",
+  "snapshotId": "2026-10-23-hdgsnn-corrections-v2",
   "collectedAt": "2026-10-21",
   "reviewAfterDays": 45,
   "outputYears": [
@@ -43,7 +43,7 @@
       "date": "2026-10-21",
       "title": "Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)",
       "description": "Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.",
-      "url": "data/snapshots/2026-10-23-hdgsnn-corrections-v1.json"
+      "url": "data/snapshots/2026-10-23-hdgsnn-corrections-v2.json"
     },
     {
       "date": "2026-10-21",
@@ -4882,7 +4882,7 @@
           "councilShort": "Vật lý",
           "score": "1.0",
           "maxScore": 1,
-          "conditions": "0 - 1,0 (danh mục ghi Advances in Natural Sciences, ISSN 1859-221X)",
+          "conditions": "0 - 1,0",
           "sourcePage": 2,
           "sourceRow": 5,
           "sourceQuote": "5 | Advances in Natural Sciences (Tên cũ: Proceedings of the National Centre for Scientific Research of Vietnam) | 1859-221X | Tạp chí | Viện Hàn lâm Khoa học và Công nghệ Việt Nam | 0 - 1,0",
