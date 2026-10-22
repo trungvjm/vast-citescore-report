@@ -4868,17 +4868,17 @@
             ],
             "portrait": {
               "path": "assets/images/editors/p0689-nguyen-van-hieu.webp",
-              "width": 173,
-              "height": 183,
-              "bytes": 5144,
-              "sha256": "a47ff6adb495c2928736daf20011b78543332721854ca7d40ae601d253d9c4ae",
+              "width": 114,
+              "height": 152,
+              "bytes": 3694,
+              "sha256": "23bee0010f2c85397654bb9a639871a4e938dfac3b1e434c3766922ad1589c39",
               "sourceId": "anniversary-2026",
               "documentMember": "word/media/image12.png",
               "imageParagraph": 689,
               "captionParagraph": 690,
               "sourceImageSha256": "4b6965985fb3415a409c13296226da3ba403be262b7ec904c6f31cc99f4f57a2",
               "caption": "GS.VS. Nguyễn Văn Hiệu",
-              "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+              "treatment": "Trích ảnh nhúng; căn khung chân dung tỉ lệ 3:4 (114x152) vào khuôn mặt và chuyển WebP để hiển thị trên web."
             }
           },
           {

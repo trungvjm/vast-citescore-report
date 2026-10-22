@@ -300,11 +300,6 @@ function publicationFrequency(j){
 function archiveLinks(j){
   return [external(j.archiveUrl,'Các số đã xuất bản'),...(j.additionalArchives??[]).map(a=>external(a.url,a.label))].join(' · ');
 }
-function indexingStatusLabel(status,system){
-  if(status==='listed')return 'Đã có trong danh mục';
-  if(status==='not_listed')return system==='WoS'?'Chưa được chỉ mục':'Chưa có trong danh mục';
-  return 'Chưa có thông tin xác nhận';
-}
 function isScopusVerified(j){return j.indexings.some(i=>i.system==='Scopus'&&i.status==='listed');}
 function scopusRecord(j,year){return scopus.records.find(r=>r.journal===j.code&&r.year===year);}
 function annualRecord(j,year){return scopus.records.find(r=>r.journal===j.code&&r.year===year&&r.type==='annual');}
@@ -1439,7 +1434,7 @@ function renderDetail(id){
         ${listedIndexings.length?`<section id="journal-indexing" class="detail-section">
           <h3>Chỉ mục khoa học</h3>
           <ul class="source-evidence">
-            ${listedIndexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong> — ${indexingStatusLabel(i.status,i.system)}<small>${[i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',external(i.sourceUrl,i.system==='WoS'?'Clarivate Master Journal List':`Thông tin ${i.system}`)].filter(Boolean).join(' · ')}</small></li>`).join('')}
+            ${listedIndexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong><small>${[i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',external(i.sourceUrl,i.system==='WoS'?'Clarivate Master Journal List':`Thông tin ${i.system}`)].filter(Boolean).join(' · ')}</small></li>`).join('')}
           </ul>
         </section>`:''}
       </div>
@@ -1707,7 +1702,7 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022e'),fetch('data-scopus.json?v=20261022a')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022g'),fetch('data-scopus.json?v=20261022a')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     dashboard=await dRes.json();
     scopus=await sRes.json();
