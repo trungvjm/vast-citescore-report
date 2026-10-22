@@ -400,14 +400,6 @@ function renderHeroAndOverview(){
   ];
   $('#summary-strip').innerHTML=cells.map(([l,v,d])=>`<div class="summary-item"><span class="summary-label">${esc(l)}</span><strong class="summary-value">${esc(v)}</strong><span class="summary-detail">${esc(d)}</span></div>`).join('');
 
-  // 4. Key analytical remarks
-  const remarks=[
-    '<strong>VJES</strong> dẫn đầu toàn khối với CiteScore 2025 đạt <strong>5,0</strong> (<strong>Q1 Scopus</strong>, phân vị 77%, hạng 45/201 ngành Khoa học Trái đất; JIF 2025 = 2,1 · Q3 JIF / Q2 JCI) và Tracker 2026 đạt <strong>4,6</strong> (Q2, 74%).',
-    '<strong>ANSN</strong> đạt CiteScore 2025 là <strong>3,9</strong> (<strong>Q2 Scopus</strong> ở 2 ngành Kỹ thuật với phân vị 61% &amp; 60%, <strong>Q3</strong> Khoa học Vật liệu 48%; JIF 2025 = <strong>2,4 · Q3</strong>) và Tracker 2026 tăng lên <strong>4,0</strong> (Q2, 62%).',
-    '<strong>VJC</strong> tăng liên tục từ <strong>0,5</strong> (2021 · Q4), <strong>1,4</strong> (2022 · Q3) lên <strong>3,0</strong> (2025 · <strong>Q3 Scopus</strong>, 43%) và lên <strong>Q2 Scopus (50%)</strong> ở Tracker 2026 (3,4); <strong>VJM</strong> đạt <strong>2,1</strong> (<strong>Q2 Scopus</strong>, phân vị 72%, hạng 115/414 Toán học; năm 2024 đạt <strong>Q1 Scopus</strong> với 76%; JIF 2025 = 0,9 · <strong>Q2 WoS</strong>); <strong>AMV</strong> do <strong>Viện Toán học</strong> trực tiếp chủ quản.',
-    'Trong nhóm <strong>VAST-2</strong>, <strong>VJMech</strong> (0,79 năm 2025 → 1,14 năm 2026) và <strong>JCC</strong> (0,70 năm 2025 → 1,12 năm 2026) có CiteScore tự tính cao hơn mức Tracker 2026 (0,7) của <strong>CIP</strong>.'
-  ];
-  $('#remarks-list').innerHTML=remarks.map(item=>`<li>${item}</li>`).join('');
 }
 
 function renderVast1MatrixTable(){
@@ -721,7 +713,7 @@ function renderChart(){
   }
   out+=`<line id="hover-line" x1="0" y1="${plot.top}" x2="0" y2="${plot.top+plot.height}" stroke="var(--ink)" stroke-dasharray="3 3" hidden/><rect id="chart-hitbox" x="${plot.left}" y="${plot.top}" width="${plot.width}" height="${plot.height}" fill="transparent"/>`;
   svg.innerHTML=out;
-  $('#trend-caption').textContent=`${m.label} của 7 tạp chí nhóm VAST-1 giai đoạn ${years[0]}–${years.at(-1)}. Năm ${scopus.trackerYear}* là CiteScore Tracker cập nhật ngày ${formatDate(dashboard.officialScopus.trackerSourceUpdatedAt)}.`;
+  $('#trend-caption').textContent=`* Tracker 2026 (${formatDate(dashboard.officialScopus.trackerSourceUpdatedAt)}).`;
   bindChartEvents(svg,years,x,plot);
   if(state.activeYear&&years.includes(state.activeYear))showYearTooltip(state.activeYear,years,x,plot);
   else hideTooltip();
@@ -985,8 +977,8 @@ function renderCitationsSection(){
   out+=`<line id="citations-hover-line" x1="0" y1="${plot.top}" x2="0" y2="${plot.top+plot.height}" stroke="var(--ink)" stroke-dasharray="3 3" hidden/><rect x="${plot.left}" y="${plot.top}" width="${plot.width}" height="${plot.height}" fill="transparent"/>`;
   svg.innerHTML=out;
 
-  const modeLabel=state.citationMode==='scopus-window'?'Trích dẫn trong cửa sổ 4 năm của CiteScore Scopus':(state.citationMode==='docs'?'Số tài liệu trích dẫn đã xác nhận theo năm':'Số lượt trích dẫn đã xác nhận theo năm');
-  $('#citations-caption').textContent=`${modeLabel} giai đoạn 2015–2026.`;
+  const modeLabel=state.citationMode==='scopus-window'?'Trích dẫn trong cửa sổ CiteScore Scopus':(state.citationMode==='docs'?'Tài liệu trích dẫn đã xác nhận':'Lượt trích dẫn đã xác nhận');
+  $('#citations-caption').textContent=`${modeLabel}.`;
 
   svg.onpointermove=e=>{
     const r=svg.getBoundingClientRect(),px=((e.clientX-r.left)/r.width)*820;
@@ -1117,11 +1109,10 @@ function renderAllCharts(){
    ========================================================================== */
 function renderReferences(){
   $('#source-links').innerHTML=dashboard.journals.map(j=>{
-    const inst=j.institution||{name:j.publisher};
     const scopusLink=j.scopusSourceId?` · ${external(`https://www.scopus.com/sourceid/${j.scopusSourceId}`,'Scopus Sources')}`:'';
     const wos=j.indexings.find(i=>i.system==='WoS'&&i.status==='listed');
-    const wosLink=wos?` · ${external(wos.sourceUrl,'Clarivate Master Journal List')}`:'';
-    return`<li><p><strong>${esc(fullName(j))}</strong> — ${esc(j.titleVi)}. Đơn vị xuất bản: <em>${esc(inst.name)}${inst.coPublisher?` & ${esc(inst.coPublisher)}`:''}</em>. Trang chủ: ${external(j.website,j.website)} · Kho lưu trữ: ${archiveLinks(j)}${scopusLink}${wosLink}.</p></li>`;
+    const wosLink=wos?` · ${external(wos.sourceUrl,'Clarivate MJL')}`:'';
+    return`<li><strong>${esc(fullName(j))}</strong> — ${external(j.website,'Trang chủ')} · ${archiveLinks(j)}${scopusLink}${wosLink}</li>`;
   }).join('');
   $('#source-links').insertAdjacentHTML('beforeend',dashboard.historySources.filter(source=>source.url).map(source=>`<li><p>${external(source.url,source.title)}</p></li>`).join(''));
 }
@@ -1174,7 +1165,7 @@ function renderDetail(id){
   const listedIndexings=j.indexings.filter(i=>i.status==='listed');
 
   const profileRows=[
-    ['Phân nhóm VAST',j.group==='VAST-1'?'Nhóm VAST-1 (Đã chỉ mục Scopus; xem thêm ở mục Chỉ mục)':'Nhóm VAST-2 (Tạp chí chuyên ngành VAST)'],
+    ['Phân nhóm VAST',j.group==='VAST-1'?'VAST-1 · Scopus':'VAST-2 · Tạp chí chuyên ngành VAST'],
     ['Tên tiếng Việt',j.titleVi],
     ['Lĩnh vực',j.subject],
     ['Đơn vị chủ quản xuất bản',inst.name],
@@ -1254,8 +1245,8 @@ function renderDetail(id){
     <section id="journal-charts" class="detail-charts-section" aria-label="Số liệu xuất bản và trích dẫn qua các năm của ${esc(j.code)}">
       <div class="detail-charts-head">
         <div>
-          <span class="hud-label chart-kicker">BIỂU ĐỒ CỦA ${esc(j.code)} (${minYear}–${maxYear})</span>
-          <h3>Số liệu xuất bản, trích dẫn và CiteScore theo năm của ${esc(j.code)}</h3>
+          <span class="hud-label chart-kicker">${esc(j.code)} · ${minYear}–${maxYear}</span>
+          <h3>Xuất bản, trích dẫn &amp; CiteScore</h3>
         </div>
         <form class="trend-controls" style="margin:0" aria-label="Chọn khoảng năm hiển thị">
           <div class="field">
@@ -1272,18 +1263,18 @@ function renderDetail(id){
 
       <div class="detail-charts-grid">
         <div class="detail-chart-card">
-          <h4>1. Số bài và số kỳ xuất bản theo năm (${minYear}–${maxYear})</h4>
-          <p id="j-pub-summary">Di chuột hoặc chạm vào biểu đồ để xem số bài nghiên cứu và số kỳ phát hành từng năm của ${esc(j.code)}.</p>
+          <h4>1. Bài và kỳ xuất bản</h4>
+          <p id="j-pub-summary"></p>
           <svg id="j-pub-chart" class="detail-svg" viewBox="0 0 860 270" role="img" aria-label="Biểu đồ lịch sử xuất bản của ${esc(j.code)}"></svg>
         </div>
         <div class="detail-chart-card">
-          <h4>2. Lượt trích dẫn và bài trích dẫn theo năm</h4>
-          <p id="j-cit-summary">Diễn biến số lượt trích dẫn và tài liệu trích dẫn qua các năm của ${esc(j.code)}.</p>
+          <h4>2. ${j.scopusCitingDocs?'Tài liệu trích dẫn (cửa sổ CiteScore)':'Trích dẫn theo năm'}</h4>
+          <p id="j-cit-summary"></p>
           <svg id="j-cit-chart" class="detail-svg" viewBox="0 0 860 260" role="img" aria-label="Biểu đồ lịch sử trích dẫn của ${esc(j.code)}"></svg>
         </div>
         <div class="detail-chart-card">
-          <h4>3. Diễn biến ${j.group==='VAST-1'?'CiteScore chính thức & Tracker Scopus':'CiteScore tự tính'} của ${esc(j.code)}</h4>
-          <p id="j-cs-summary">Chỉ số CiteScore theo năm, kèm số lượt trích dẫn và số tài liệu dùng để tính chỉ số.</p>
+          <h4>3. ${j.group==='VAST-1'?'CiteScore &amp; Tracker (Scopus)':'CiteScore tự tính'}</h4>
+          <p id="j-cs-summary"></p>
           <svg id="j-cs-chart" class="detail-svg" viewBox="0 0 860 250" role="img" aria-label="Biểu đồ CiteScore của ${esc(j.code)}"></svg>
         </div>
       </div>
@@ -1335,8 +1326,8 @@ function renderDetail(id){
           </div>
         </section>`:''}
         ${cats.length?`<section class="detail-section">
-          <h3>Vị trí xếp hạng, Quartile &amp; Phân vị theo từng phân ngành Scopus qua các năm</h3>
-          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">Hiển thị đầy đủ ${cats.length} phân ngành ASJC của <strong>${esc(j.code)}</strong> trên hệ thống Scopus (gồm thứ hạng <code>hạng / tổng số tạp chí</code>, <strong>Quartile Scopus (Q1–Q4 theo phân vị: ≥75% Q1 · 50–74% Q2 · 25–49% Q3 · &lt;25% Q4)</strong> và phân vị <code>%</code> qua các năm).</p>
+          <h3>Thứ hạng Scopus theo phân ngành qua các năm</h3>
+          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">Phân ngành ASJC · dữ liệu lịch sử Scopus.</p>
           <div class="table-scroll" style="max-height:420px;overflow-y:auto;border:1px solid var(--line)">
             <table class="detail-table">
               <thead><tr><th scope="col">Lĩnh vực &amp; Phân ngành Scopus (ASJC)</th><th scope="col">Năm</th><th scope="col">Loại</th><th scope="col">Vị trí (Hạng / Tổng)</th><th scope="col">Quartile Scopus</th><th scope="col">Phân vị Scopus</th></tr></thead>
@@ -1357,8 +1348,8 @@ function renderDetail(id){
           </div>
         </section>`:''}
         ${jr?`<section class="detail-section">
-          <h3>Chỉ số Web of Science — Clarivate JCR ${jr.metricYear} (${esc(jr.wosCollection)})</h3>
-          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">JIF, JCI và xếp hạng theo Clarivate JCR ${jr.metricYear}. ${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed').sourceUrl,'Thông tin chỉ mục trên Clarivate Master Journal List')}.</p>
+          <h3>JCR ${jr.metricYear} · ${esc(jr.wosCollection)}</h3>
+          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed').sourceUrl,'Clarivate MJL')}</p>
           <div class="table-scroll">
             <table class="detail-table">
               <thead><tr><th scope="col">Chỉ số JCR 2025</th><th scope="col">Giá trị</th><th scope="col">Chi tiết / Giai đoạn tính</th></tr></thead>
@@ -1408,27 +1399,10 @@ function renderDetail(id){
           </dl>
         </section>
 
-        ${cats.length?`<section class="detail-section">
-          <h3>Phân ngành Scopus (${cats.length} ngành · Quartile, Vị trí &amp; Phân vị)</h3>
-          <ul class="source-evidence">${cats.map(c=>{
-            const a=c.annual2025,t=c.tracker2026;
-            const aq=a?(a.quartile||scopusQuartile(a.percentile)):null;
-            const tq=t?(t.quartile||scopusQuartile(t.percentile)):null;
-            const head=`<strong>${esc(c.parent?`${c.parent} — ${c.name}`:c.name)}</strong>${c.code?` <small style="display:inline;color:var(--muted)">(ASJC ${esc(c.code)})</small>`:''}`;
-            const aTxt=a?`CiteScore 2025: <strong>${esc(aq)}</strong> · hạng <strong>${a.rank}/${a.total}</strong>, phân vị <strong>${a.percentile}%</strong>`:'CiteScore 2025: N/A';
-            const tTxt=t?`Tracker 2026: <strong>${esc(tq)}</strong> · hạng <strong>${t.rank}/${t.total}</strong>, phân vị <strong>${t.percentile}%</strong>`:'';
-            return `<li>${head}<br>${[aTxt,tTxt].filter(Boolean).join(' · ')}</li>`;
-          }).join('')}</ul>
-        </section>`:''}
-        ${jr?`<section class="detail-section">
-          <h3>Phân ngành Web of Science (JCR ${jr.metricYear} · ${esc(jr.wosCollection)})</h3>
-          <ul class="source-evidence">${jr.categories.map(c=>`<li><strong>${esc(c.name)}</strong> — JIF: hạng <strong>${c.jif.rank}/${c.jif.total}</strong> (<strong>${esc(c.jif.quartile)}</strong>, phân vị ${oneDec.format(c.jif.percentile)}%) · JCI: hạng <strong>${c.jci.rank}/${c.jci.total}</strong> (<strong>${esc(c.jci.quartile)}</strong>, phân vị ${twoDec.format(c.jci.percentile)}%)</li>`).join('')}</ul>
-        </section>`:''}
-
         ${listedIndexings.length?`<section id="journal-indexing" class="detail-section">
           <h3>Chỉ mục khoa học</h3>
           <ul class="source-evidence">
-            ${listedIndexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong><small>${[i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',external(i.sourceUrl,i.system==='WoS'?'Clarivate Master Journal List':`Thông tin ${i.system}`)].filter(Boolean).join(' · ')}</small></li>`).join('')}
+            ${listedIndexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong><small>${[i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',external(i.sourceUrl,i.system==='WoS'?'Clarivate MJL':`Thông tin ${i.system}`)].filter(Boolean).join(' · ')}</small></li>`).join('')}
           </ul>
         </section>`:''}
       </div>
@@ -1547,7 +1521,9 @@ function renderDetailCharts(j){
       if(r){
         $('#j-cit-summary').innerHTML=r.isScopusWindow
           ?`<strong>Năm ${r.year} (Cửa sổ CiteScore Scopus):</strong> <strong>${integer.format(r.citationEdges||0)} trích dẫn</strong> / <strong>${integer.format(r.citingDocs||0)} tài liệu</strong>.`
-          :`<strong>Năm ${r.year}:</strong> <strong>${integer.format(r.citationEdges||0)} lượt trích dẫn</strong> từ <strong>${integer.format(r.citingDocs||0)} bài báo trích dẫn</strong>.`;
+          :j.scopusCitingDocs
+            ?`<strong>Năm ${r.year}:</strong> <strong>${integer.format(r.citingDocs||0)} tài liệu trích dẫn</strong> (cửa sổ CiteScore).`
+            :`<strong>Năm ${r.year}:</strong> <strong>${integer.format(r.citationEdges||0)} lượt trích dẫn</strong> từ <strong>${integer.format(r.citingDocs||0)} bài báo trích dẫn</strong>.`;
       }
     };
   }
@@ -1587,7 +1563,7 @@ function renderDetailCharts(j){
       const idx=Math.max(0,Math.min(csRows.length-1,Math.round(((px-p.left)/Math.max(1,p.w))*(csRows.length-1))));
       const r=csRows[idx];
       if(r){
-        $('#j-cs-summary').innerHTML=`<strong>Năm ${r.year}${r.isTracker?' (Tracker/YTD)':''}:</strong> CiteScore = <strong>${j.group==='VAST-1'?oneDec.format(r.score):twoDec.format(r.score)}</strong> (${integer.format(r.num||0)} trích dẫn / ${integer.format(r.den||0)} tài liệu).`;
+        $('#j-cs-summary').innerHTML=`<strong>Năm ${r.year}${r.isTracker?(j.group==='VAST-1'?' (Tracker)':' (tự tính, YTD)'):''}:</strong> CiteScore = <strong>${j.group==='VAST-1'?oneDec.format(r.score):twoDec.format(r.score)}</strong> (${integer.format(r.num||0)} trích dẫn / ${integer.format(r.den||0)} tài liệu).`;
       }
     };
   }
