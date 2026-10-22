@@ -335,7 +335,7 @@ function indexingBadges(j){
   const groupBadge=`<span class="badge ${j.group==='VAST-1'?'is-vast1':'is-vast2'}">${esc(j.group)}</span>`;
   const verified=j.indexings.filter(i=>i.status==='listed').map(i=>{
     const short=i.system==='WoS'?(i.collection?`WoS ${i.collection}`:'WoS'):i.system;
-    const source=i.evidenceLevel==='database'?'cơ sở dữ liệu':i.evidenceLevel==='vast'?'website VAST':'website tạp chí';
+    const source=i.system==='WoS'?'Clarivate Master Journal List':i.evidenceLevel==='database'?'cơ sở dữ liệu':i.evidenceLevel==='vast'?'website VAST':'website tạp chí';
     return `<a class="badge is-verified" href="${esc(safeUrl(i.sourceUrl))}" target="_blank" rel="noopener noreferrer" title="${esc(`${short}: đã có trong danh mục. Nguồn: ${source}.`)}">${esc(short)}</a>`;
   }).join('');
   return groupBadge+verified;
@@ -501,7 +501,7 @@ function renderVast1JcrTable(){
     <th scope="col">Tổng trích dẫn<br>JCR 2025</th>
     <th scope="col">Xếp hạng &amp; Quartile JIF (JCR 2025)</th>
     <th scope="col">Xếp hạng &amp; Quartile JCI (JCR 2025)</th>
-    <th scope="col">Nguồn hồ sơ JCR</th>
+    <th scope="col">Nguồn số liệu JCR / Minh chứng chỉ mục WoS</th>
   </tr>`;
   body.innerHTML=jcrJournals.map(j=>{
     const jr=j.jcr;
@@ -528,7 +528,7 @@ function renderVast1JcrTable(){
       <td><strong>${Number.isFinite(jr.totalCitations)?integer.format(jr.totalCitations):'—'}</strong><small style="display:block;color:var(--muted)">Cited half-life: ${jr.citedHalfLife} năm</small></td>
       <td>${jifCats}</td>
       <td>${jciCats}</td>
-      <td><code style="font-size:11px">${esc(jr.source.filename)}</code><small style="display:block;color:var(--muted)">Tải: ${esc(jr.source.downloadedAtRaw)} · ${jr.source.pageCount} trang</small></td>
+      <td><code style="font-size:11px">${esc(jr.source.filename)}</code><small style="display:block;color:var(--muted)">Nguồn số liệu JCR · tải: ${esc(jr.source.downloadedAtRaw)} · ${jr.source.pageCount} trang</small>${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed').sourceUrl,'Xem chỉ mục trên Clarivate MJL')}</td>
     </tr>`;
   }).join('');
 }
@@ -1137,7 +1137,9 @@ function renderReferences(){
     const spanStart=j.historyStartYear||j.annualHistory?.[0]?.year||2020;
     const spanEnd=j.historyEndYear||2026;
     const scopusLink=j.scopusSourceId?` · ${external(`https://www.scopus.com/sourceid/${j.scopusSourceId}`,`Scopus Source ID ${j.scopusSourceId}`)}`:'';
-    return`<li><p><strong>${esc(fullName(j))}</strong> — ${esc(j.titleVi)}. Đơn vị xuất bản: <em>${esc(inst.name)}${inst.coPublisher?` & ${esc(inst.coPublisher)}`:''}</em>. Thời gian có dữ liệu: <strong>${spanStart}–${spanEnd}</strong>. Trang chủ: ${external(j.website,j.website)} · Kho lưu trữ: ${archiveLinks(j)}${scopusLink}.</p></li>`;
+    const wos=j.indexings.find(i=>i.system==='WoS');
+    const wosLink=wos?` · ${external(wos.sourceUrl,wos.status==='unverified'?'Tra cứu WoS tại Clarivate MJL':'Minh chứng chỉ mục WoS — Clarivate MJL')}`:'';
+    return`<li><p><strong>${esc(fullName(j))}</strong> — ${esc(j.titleVi)}. Đơn vị xuất bản: <em>${esc(inst.name)}${inst.coPublisher?` & ${esc(inst.coPublisher)}`:''}</em>. Thời gian có dữ liệu: <strong>${spanStart}–${spanEnd}</strong>. Trang chủ: ${external(j.website,j.website)} · Kho lưu trữ: ${archiveLinks(j)}${scopusLink}${wosLink}.</p></li>`;
   }).join('');
 }
 
@@ -1348,7 +1350,7 @@ function renderDetail(id){
         </section>`:''}
         ${jr?`<section class="detail-section">
           <h3>Báo cáo Web of Science — Clarivate JCR ${jr.metricYear} (${esc(jr.wosCollection)})</h3>
-          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">Nguồn: <code>${esc(jr.source.filename)}</code> (tải ngày ${esc(jr.source.downloadedAtRaw)}, ${jr.source.pageCount} trang; ISSN in trên báo cáo JCR: ${esc(jr.issn||'—')} / eISSN: ${esc(jr.eissn||'—')}). Chỉ số JIF 2 năm và JCI 3 năm của Clarivate hoàn toàn độc lập với CiteScore 4 năm của Scopus.</p>
+          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">Nguồn số liệu: báo cáo Clarivate <code>${esc(jr.source.filename)}</code> (tải ngày ${esc(jr.source.downloadedAtRaw)}, ${jr.source.pageCount} trang; ISSN in trên báo cáo JCR: ${esc(jr.issn||'—')} / eISSN: ${esc(jr.eissn||'—')}). ${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed').sourceUrl,'Đối chiếu trạng thái chỉ mục tại Clarivate Master Journal List')}. MJL minh chứng chỉ mục; JIF, JCI và xếp hạng theo năm lấy từ báo cáo JCR, không suy ra từ MJL hay CiteScore.</p>
           <div class="table-scroll">
             <table class="detail-table">
               <thead><tr><th scope="col">Chỉ số JCR 2025</th><th scope="col">Giá trị</th><th scope="col">Chi tiết tính toán / Cửa sổ</th><th scope="col">Trang PDF</th></tr></thead>
@@ -1418,7 +1420,7 @@ function renderDetail(id){
         <section id="journal-indexing" class="detail-section">
           <h3>Chỉ mục khoa học</h3>
           <ul class="source-evidence">
-            ${j.indexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong> — ${indexingStatusLabel(i.status)}<small>${[i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',i.notes?esc(i.notes):'',external(i.sourceUrl,i.evidenceLevel==='database'?`Xem trên ${i.system}`:'Xem nguồn minh chứng')].filter(Boolean).join(' · ')}</small></li>`).join('')}
+            ${j.indexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong> — ${indexingStatusLabel(i.status)}<small>${[i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',i.notes?esc(i.notes):'',external(i.sourceUrl,i.system==='WoS'?(i.status==='unverified'?'Tra cứu tại Clarivate MJL (chưa xác minh đầy đủ)':'Xem minh chứng trên Clarivate MJL'):i.evidenceLevel==='database'?`Xem trên ${i.system}`:'Xem nguồn minh chứng')].filter(Boolean).join(' · ')}</small></li>`).join('')}
           </ul>
         </section>
       </div>

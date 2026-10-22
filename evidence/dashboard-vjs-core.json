@@ -47,10 +47,11 @@
           "system": "WoS",
           "collection": "ESCI",
           "status": "listed",
-          "evidenceLevel": "journal",
-          "sourceUrl": "https://vjs.ac.vn/jse/indexing",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=2615-9783&hide_exact_match_fl=true",
+          "checkedAt": "2026-10-22",
+          "coverage": "Web of Science Core Collection: Emerging Sources Citation Index",
+          "notes": "MJL ghi ISSN/eISSN 0866-7187 / 2615-9783. Liên kết dùng định danh của MJL; giữ nguyên định danh hiện tại trong hồ sơ tạp chí."
         },
         {
           "system": "ACI",
@@ -672,9 +673,10 @@
           "collection": null,
           "status": "unverified",
           "evidenceLevel": "database",
-          "sourceUrl": "https://mjl.clarivate.com/",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=2525-2518&hide_exact_match_fl=true",
+          "checkedAt": "2026-10-22",
+          "coverage": null,
+          "notes": "Liên kết tra cứu MJL theo ISSN. Chưa xác minh đầy đủ mọi định danh và bộ chỉ mục; không suy ra không được chỉ mục từ một truy vấn không có kết quả."
         },
         {
           "system": "ACI",
@@ -1805,9 +1807,10 @@
           "collection": null,
           "status": "unverified",
           "evidenceLevel": "database",
-          "sourceUrl": "https://mjl.clarivate.com/",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=0868-3166&hide_exact_match_fl=true",
+          "checkedAt": "2026-10-22",
+          "coverage": null,
+          "notes": "Liên kết tra cứu MJL theo ISSN. Chưa xác minh đầy đủ mọi định danh và bộ chỉ mục; không suy ra không được chỉ mục từ một truy vấn không có kết quả."
         },
         {
           "system": "ACI",
@@ -2471,9 +2474,10 @@
           "collection": null,
           "status": "unverified",
           "evidenceLevel": "database",
-          "sourceUrl": "https://mjl.clarivate.com/",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=0866-7136&hide_exact_match_fl=true",
+          "checkedAt": "2026-10-22",
+          "coverage": null,
+          "notes": "Liên kết tra cứu MJL theo ISSN. Chưa xác minh đầy đủ mọi định danh và bộ chỉ mục; không suy ra không được chỉ mục từ một truy vấn không có kết quả."
         },
         {
           "system": "ACI",

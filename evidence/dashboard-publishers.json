@@ -51,10 +51,11 @@
           "system": "WoS",
           "collection": "ESCI",
           "status": "listed",
-          "evidenceLevel": "vast",
-          "sourceUrl": "https://vast.gov.vn/CmsView-EcoIT-portlet/html/print_cms.jsp?articleId=125804",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=2305-221X&hide_exact_match_fl=true",
+          "checkedAt": "2026-10-22",
+          "coverage": "Web of Science Core Collection: Emerging Sources Citation Index",
+          "notes": "Đọc trực tiếp kết quả Clarivate Master Journal List; ISSN/eISSN: 2305-221X / 2305-2228."
         },
         {
           "system": "DOAJ",
@@ -859,10 +860,11 @@
           "system": "WoS",
           "collection": "ESCI",
           "status": "listed",
-          "evidenceLevel": "vast",
-          "sourceUrl": "https://vast.gov.vn/web/vietnam-academy-of-science-and-technology/tin-chi-tiet/-/chi-tiet/scientific-journals-of-vietnam-academy-of-science-and-technology-continue-to-grow-125804-871.html",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=0251-4184&hide_exact_match_fl=true",
+          "checkedAt": "2026-10-22",
+          "coverage": "Web of Science Core Collection: Emerging Sources Citation Index",
+          "notes": "Đọc trực tiếp kết quả Clarivate Master Journal List; ISSN/eISSN: 0251-4184 / 2315-4144."
         },
         {
           "system": "DOAJ",
@@ -1537,10 +1539,11 @@
           "system": "WoS",
           "collection": "ESCI",
           "status": "listed",
-          "evidenceLevel": "vast",
-          "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/tap-chi-advances-in-natural-sciences-nanoscience-and-nanotechnology-ansn-tro-lai-web-of-science-esci--5416-463.html",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=2043-6254&hide_exact_match_fl=true",
+          "checkedAt": "2026-10-22",
+          "coverage": "Web of Science Core Collection: Emerging Sources Citation Index",
+          "notes": "Đọc trực tiếp kết quả Clarivate Master Journal List; ISSN/eISSN: 2043-6254 / 2043-6262."
         },
         {
           "system": "DOAJ",
@@ -2451,10 +2454,11 @@
           "system": "WoS",
           "collection": "ESCI",
           "status": "listed",
-          "evidenceLevel": "vast",
-          "sourceUrl": "https://vast.gov.vn/tin-chi-tiet/-/chi-tiet/vietnam-journal-of-chemistry-tap-chi-hoa-hoc-%C4%91uoc-chap-nhan-vao-danh-muc-cac-tap-chi-cua-web-of-science-wos-tro-thanh-tap-chi-moi-noi-emerging-source-citation-index-esci-cua-he-thong-nay-10704-427.html",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=0866-7144&hide_exact_match_fl=true",
+          "checkedAt": "2026-10-22",
+          "coverage": "Web of Science Core Collection: Emerging Sources Citation Index",
+          "notes": "MJL ghi ISSN/eISSN 0866-7144 / 2572-8288. Liên kết dùng ISSN của MJL, không thay định danh hiện tại trong hồ sơ tạp chí."
         },
         {
           "system": "DOAJ",

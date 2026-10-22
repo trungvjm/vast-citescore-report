@@ -197,15 +197,13 @@ for(let index=0;index<order.length;index++){
   j.indexings=j.indexings.filter(i=>i.system!=='Scopus');
   j.indexings.unshift({system:'Scopus',collection:null,status:'listed',evidenceLevel:'database',sourceUrl:'https://www.scopus.com/sourceid/'+original.sourceId,checkedAt:scopus.reportDate,coverage:original.coverage});
  }
- if(j.jcr){
-  const wosIdx=j.indexings.find(i=>i.system==='WoS'&&i.status==='listed');
-  if(wosIdx){
-   wosIdx.collection=j.jcr.wosCollection;
-   wosIdx.coverage=`JCR ${j.jcr.metricYear}: JIF ${j.jcr.jif.toFixed(1)} · JCI ${j.jcr.jci.toFixed(2)}`;
-   wosIdx.notes=`Báo cáo Clarivate JCR ${j.jcr.metricYear} (${j.jcr.source.filename}, tải ngày ${j.jcr.source.downloadedAtRaw})`;
-  }
- }
  for(const i of j.indexings){assert(['listed','not_listed','unverified'].includes(i.status),j.code+': invalid indexing status.');assert(['database','journal','vast'].includes(i.evidenceLevel),j.code+': invalid evidence level.');assert(/^https?:\/\//.test(i.sourceUrl),j.code+': indexing needs a source URL.');}
+ for(const i of j.indexings.filter(i=>i.system==='WoS')){
+  const source=new URL(i.sourceUrl);
+  assert.equal(source.hostname,'mjl.clarivate.com',j.code+': WoS proof must link to Clarivate MJL.');
+  assert.equal(source.pathname,'/search-results',j.code+': WoS link must open journal search results.');
+  assert(source.searchParams.get('issn'),j.code+': WoS link needs a journal identifier.');
+ }
  assert.deepEqual(j.outputs.map(o=>o.year),outputYears,j.code+': need 2020-2026 reporting periods.');
  for(const o of j.outputs)validateOutput(j,o);
  const scopusQuarter=p=>p>=75?'Q1':(p>=50?'Q2':(p>=25?'Q3':'Q4'));

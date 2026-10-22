@@ -40,19 +40,21 @@
           "system": "WoS",
           "collection": "Zoological Record",
           "status": "listed",
-          "evidenceLevel": "journal",
-          "sourceUrl": "https://vjs.ac.vn/index.php/vjbio",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=2615-9023&hide_exact_match_fl=true&index=Zoological%20Record",
+          "checkedAt": "2026-10-22",
+          "coverage": "Additional Web of Science Indexes: Zoological Record",
+          "notes": "Đọc trực tiếp MJL: Academia Journal of Biology, ISSN/eISSN 2615-9023 / 2815-5920. Zoological Record là bộ chỉ mục riêng, không phải Core Collection."
         },
         {
           "system": "WoS",
           "collection": "Core Collection",
           "status": "not_listed",
-          "evidenceLevel": "journal",
-          "sourceUrl": "https://vjs.ac.vn/index.php/vjbio",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=2615-9023&hide_exact_match_fl=true&index=Zoological%20Record",
+          "checkedAt": "2026-10-22",
+          "coverage": "Not indexed in Web of Science Core Collection",
+          "notes": "Trạng thái được ghi rõ trên cùng kết quả MJL; không suy ra từ việc thiếu kết quả tìm kiếm."
         },
         {
           "system": "ACI",
@@ -810,10 +812,11 @@
           "system": "WoS",
           "collection": null,
           "status": "unverified",
-          "evidenceLevel": "journal",
-          "sourceUrl": "https://vjs.ac.vn/index.php/jcc",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=1813-9663&hide_exact_match_fl=true",
+          "checkedAt": "2026-10-22",
+          "coverage": null,
+          "notes": "Liên kết tra cứu MJL theo ISSN. Chưa xác minh đầy đủ mọi định danh và bộ chỉ mục; không suy ra không được chỉ mục từ một truy vấn không có kết quả."
         },
         {
           "system": "ACI",
@@ -1386,10 +1389,11 @@
           "system": "WoS",
           "collection": null,
           "status": "unverified",
-          "evidenceLevel": "journal",
-          "sourceUrl": "https://vjs.ac.vn/index.php/jmst",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=1859-3097&hide_exact_match_fl=true",
+          "checkedAt": "2026-10-22",
+          "coverage": null,
+          "notes": "Liên kết tra cứu MJL theo ISSN. Chưa xác minh đầy đủ mọi định danh và bộ chỉ mục; không suy ra không được chỉ mục từ một truy vấn không có kết quả."
         },
         {
           "system": "ACI",
@@ -2082,10 +2086,11 @@
           "system": "WoS",
           "collection": null,
           "status": "unverified",
-          "evidenceLevel": "journal",
-          "sourceUrl": "https://vjs.ac.vn/index.php/vjbt",
-          "checkedAt": "2026-10-21",
-          "coverage": null
+          "evidenceLevel": "database",
+          "sourceUrl": "https://mjl.clarivate.com/search-results?issn=2815-5955&hide_exact_match_fl=true",
+          "checkedAt": "2026-10-22",
+          "coverage": null,
+          "notes": "Liên kết tra cứu MJL theo ISSN. Chưa xác minh đầy đủ mọi định danh và bộ chỉ mục; không suy ra không được chỉ mục từ một truy vấn không có kết quả."
         },
         {
           "system": "ACI",
