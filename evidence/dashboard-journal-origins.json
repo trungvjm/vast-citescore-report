@@ -23,6 +23,11 @@
       "title": "Viện Toán học · Acta Mathematica Vietnamica · Editorial board / Former Editors-in-Chief",
       "url": "https://math.ac.vn/acta/editorial-board",
       "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "user-editor-portraits",
+      "kind": "user-supplied-images",
+      "title": "Ảnh chân dung Tổng biên tập AMV do người dùng cung cấp"
     }
   ],
   "journals": [
@@ -61,7 +66,7 @@
           "sourceId": "anniversary-2026"
         },
         {
-          "dateLabel": "1995 đến nay (theo tài liệu)",
+          "dateLabel": "1995 đến nay",
           "year": 1995,
           "text": "Đổi tên thành Vietnam Journal of Mathematics và chuyển hoàn toàn sang tiếng Anh.",
           "sourceParagraphs": [
@@ -394,7 +399,18 @@
               "sourceId": "amv-editors",
               "sourceParagraphs": []
             }
-          ]
+          ],
+          "portrait": {
+            "path": "assets/images/editors/amv-ngo-viet-trung.webp",
+            "width": 332,
+            "height": 462,
+            "bytes": 40966,
+            "sha256": "b8a181b3ef2b42cada0113bc0fb506afa311cfaebd2211da4851e604bb7c33d1",
+            "sourceId": "user-editor-portraits",
+            "sourceImageSha256": "4ca7051369ecb3a12b28962dba1d5a96ee3f5fc9cfae0c3f62aa304c429ae2f4",
+            "caption": "Ngô Việt Trung",
+            "treatment": "full frame, proportional WebP"
+          }
         },
         {
           "name": "Nguyễn Tự Cường",
@@ -405,7 +421,18 @@
               "sourceId": "amv-editors",
               "sourceParagraphs": []
             }
-          ]
+          ],
+          "portrait": {
+            "path": "assets/images/editors/amv-nguyen-tu-cuong.webp",
+            "width": 200,
+            "height": 100,
+            "bytes": 2084,
+            "sha256": "5e44b8eaa2e7d7daa1825b06064a32d17b6e6f53eaa7483db89e720b5afbb3a6",
+            "sourceId": "user-editor-portraits",
+            "sourceImageSha256": "4e40180b74021a0150a530c7df09b7af098adc16180ae7638d429f93e32522c5",
+            "caption": "Nguyễn Tự Cường",
+            "treatment": "full frame, proportional WebP"
+          }
         },
         {
           "name": "Đinh Nho Hào",
@@ -416,18 +443,40 @@
               "sourceId": "amv-editors",
               "sourceParagraphs": []
             }
-          ]
+          ],
+          "portrait": {
+            "path": "assets/images/editors/amv-dinh-nho-hao.webp",
+            "width": 103,
+            "height": 122,
+            "bytes": 2352,
+            "sha256": "5907d6c09d1d400fec01dca7ee5e94a056505ef73a8923445c93040c619fcecb",
+            "sourceId": "user-editor-portraits",
+            "sourceImageSha256": "387ec54620a109f14368ccd6a7d407acd4762d3b8bdc879cc9149150d1bac4ff",
+            "caption": "Đinh Nho Hào",
+            "treatment": "full frame, proportional WebP"
+          }
         },
         {
           "name": "Đoàn Trung Cường",
           "appointments": [
             {
               "role": "Tổng biên tập",
-              "tenure": "Hiện tại theo trang Viện Toán học",
+              "tenure": "Hiện nay",
               "sourceId": "amv-editors",
               "sourceParagraphs": []
             }
-          ]
+          ],
+          "portrait": {
+            "path": "assets/images/editors/amv-doan-trung-cuong.webp",
+            "width": 364,
+            "height": 549,
+            "bytes": 30030,
+            "sha256": "2b6d88c95a9189eda20f8121d04e4c4ec1802e4225c4d564223fbb09a7f27dbd",
+            "sourceId": "user-editor-portraits",
+            "sourceImageSha256": "cbf3c2b61de5b17db527bdcd113743293eb70045fb895f29e222e37ae0182dcb",
+            "caption": "Đoàn Trung Cường",
+            "treatment": "full frame, proportional WebP"
+          }
         }
       ],
       "cautions": [
@@ -449,7 +498,7 @@
           "sourceId": "anniversary-2026"
         },
         {
-          "dateLabel": "2010 đến nay (theo tài liệu)",
+          "dateLabel": "2010 đến nay",
           "year": 2010,
           "text": "Chính thức hợp tác xuất bản với IOP Publishing (Vương quốc Anh).",
           "sourceParagraphs": [
@@ -494,7 +543,7 @@
           "appointments": [
             {
               "role": "Tổng biên tập",
-              "tenure": "7/2017 đến nay (theo tài liệu)",
+              "tenure": "7/2017 đến nay",
               "sourceId": "anniversary-2026",
               "sourceParagraphs": [
                 691
@@ -1040,7 +1089,7 @@
         {
           "dateLabel": "2019",
           "year": 2019,
-          "text": "Đại diện De Gruyter trao đổi kinh nghiệm về nâng cấp và chuẩn bị hồ sơ; không phải thỏa thuận xuất bản.",
+          "text": "Trao đổi với đại diện De Gruyter về kinh nghiệm nâng cấp tạp chí và chuẩn bị hồ sơ.",
           "sourceParagraphs": [
             1263
           ],
@@ -1480,7 +1529,7 @@
           "appointments": [
             {
               "role": "Tổng biên tập",
-              "tenure": "1976–2006 (mốc đầu chưa thống nhất trong kỷ yếu)",
+              "tenure": "Đến năm 2006",
               "sourceId": "anniversary-2026",
               "sourceParagraphs": [
                 1473,
@@ -1918,7 +1967,7 @@
           "name": "Đặng Ngọc Thanh",
           "appointments": [
             {
-              "role": "Lãnh đạo tạp chí (theo mục Ban lãnh đạo)",
+              "role": "Lãnh đạo tạp chí",
               "tenure": "2006-2010",
               "sourceId": "anniversary-2026",
               "sourceParagraphs": [
@@ -2201,7 +2250,7 @@
     },
     {
       "id": "vjbt",
-      "summary": "Thành lập năm 2003 với tên Tạp chí Công nghệ Sinh học, tạp chí đổi tên thành Vietnam Journal of Biotechnology và chuyển sang tiếng Anh từ năm 2022. Kỷ yếu ghi nhận cơ quan chủ quản mới là Viện Sinh học từ năm 2025.",
+      "summary": "Thành lập năm 2003 với tên Tạp chí Công nghệ Sinh học, tạp chí đổi tên thành Vietnam Journal of Biotechnology và chuyển sang tiếng Anh từ năm 2022. Từ năm 2025, cơ quan chủ quản là Viện Sinh học.",
       "events": [
         {
           "dateLabel": "2003",
@@ -2218,7 +2267,7 @@
         {
           "dateLabel": "2009",
           "year": 2009,
-          "text": "Kỷ yếu ghi nhận đây là mốc khởi đầu gán DOI; các bài từ năm 2009 trở đi có mã DOI.",
+          "text": "Bắt đầu gán DOI cho các bài báo; các bài từ năm 2009 trở đi có mã DOI.",
           "sourceParagraphs": [
             2194,
             2195

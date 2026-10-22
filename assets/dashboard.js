@@ -302,8 +302,8 @@ function archiveLinks(j){
 }
 function indexingStatusLabel(status,system){
   if(status==='listed')return 'Đã có trong danh mục';
-  if(status==='not_listed')return system==='WoS'?'Chưa được chỉ mục':'Chưa có trong danh mục theo nguồn đã kiểm tra';
-  return 'Chưa xác minh';
+  if(status==='not_listed')return system==='WoS'?'Chưa được chỉ mục':'Chưa có trong danh mục';
+  return 'Chưa có thông tin xác nhận';
 }
 function isScopusVerified(j){return j.indexings.some(i=>i.system==='Scopus'&&i.status==='listed');}
 function scopusRecord(j,year){return scopus.records.find(r=>r.journal===j.code&&r.year===year);}
@@ -395,13 +395,12 @@ function renderHeroAndOverview(){
   // 3. Summary KPI strip
   const totalPeriodPapers=dashboard.journals.reduce((s,j)=>s+statisticalHistory(j).reduce((a,r)=>a+(r.papers||0),0),0);
   const totalPeriodIssues=dashboard.journals.reduce((s,j)=>s+statisticalHistory(j).reduce((a,r)=>a+(r.issues||0),0),0);
-  const totalConfirmedCitations=dashboard.journals.reduce((s,j)=>s+(j.localCitation?.totals?.citations??0),0);
   const totalCitingDocs=dashboard.journals.reduce((s,j)=>s+(j.localCitation?.totals?.citingDocs??j.scopusCitingDocs?.totalDistinctCitingDocs??0),0);
 
   const cells=[
     ['Hệ thống tạp chí VAST','12 tạp chí','7 tạp chí VAST-1 (Scopus; 5 tạp chí có JCR/ESCI) · 5 tạp chí VAST-2'],
-    ['Tổng số bài đã thu thập (2015–2026)',`${integer.format(totalPeriodPapers)} bài`,`${integer.format(totalPeriodIssues)} kỳ xuất bản`],
-    ['Bài trích dẫn Scopus (12 tạp chí)',`${integer.format(totalCitingDocs)} bài`,`9 tạp chí OJS (${integer.format(totalConfirmedCitations)} lượt) + VJM, AMV, ANSN (Scopus CS)`],
+    ['Tổng số bài trong thống kê (2015–2026)',`${integer.format(totalPeriodPapers)} bài`,`${integer.format(totalPeriodIssues)} kỳ xuất bản`],
+    ['Tài liệu trích dẫn trong thống kê',`${integer.format(totalCitingDocs)} bài`,'Tổng cộng theo tạp chí; một tài liệu có thể được tính ở nhiều tạp chí.'],
     ['Đỉnh CiteScore & JIF 2025','CS 5,0 · JIF 2,4','CiteScore: VJES 5,0 · ANSN 3,9 | JIF (JCR): ANSN 2,4 · VJES 2,1']
   ];
   $('#summary-strip').innerHTML=cells.map(([l,v,d])=>`<div class="summary-item"><span class="summary-label">${esc(l)}</span><strong class="summary-value">${esc(v)}</strong><span class="summary-detail">${esc(d)}</span></div>`).join('');
@@ -497,13 +496,12 @@ function renderVast1JcrTable(){
     <th scope="col">Tổng trích dẫn<br>JCR 2025</th>
     <th scope="col">Xếp hạng &amp; Quartile JIF (JCR 2025)</th>
     <th scope="col">Xếp hạng &amp; Quartile JCI (JCR 2025)</th>
-    <th scope="col">Nguồn số liệu JCR / Minh chứng chỉ mục WoS</th>
+    <th scope="col">Clarivate JCR / Web of Science</th>
   </tr>`;
   body.innerHTML=jcrJournals.map(j=>{
     const jr=j.jcr;
     const jifCats=jr.categories.map(c=>`<div><strong>${esc(c.jif.quartile)}</strong> · hạng ${c.jif.rank}/${c.jif.total} (${oneDec.format(c.jif.percentile)}%)<small style="display:block;color:var(--muted)">${esc(c.name)}</small></div>`).join('');
     const jciCats=jr.categories.map(c=>`<div><strong>${esc(c.jci.quartile)}</strong> · hạng ${c.jci.rank}/${c.jci.total} (${twoDec.format(c.jci.percentile)}%)<small style="display:block;color:var(--muted)">${esc(c.name)}</small></div>`).join('');
-    const issnNote=(jr.issn!==j.issn||jr.eissn!==j.eissn)?`<small style="display:block;color:var(--muted)">ISSN in trên JCR: ${esc(jr.issn||'—')} / ${esc(jr.eissn||'—')}</small>`:'';
     return `<tr>
       <td>
         <div class="matrix-journal-cell">
@@ -511,7 +509,6 @@ function renderVast1JcrTable(){
           <div class="matrix-meta">
             <a href="#journal/${esc(j.id)}">${esc(j.code)} · ${esc(j.title)}</a>
             <small style="display:block;color:var(--muted)">WoS Core Collection (${esc(jr.wosCollection)}) · ISSN: ${esc(j.issn||'—')} / ${esc(j.eissn||'—')}</small>
-            ${issnNote}
           </div>
         </div>
       </td>
@@ -524,7 +521,7 @@ function renderVast1JcrTable(){
       <td><strong>${Number.isFinite(jr.totalCitations)?integer.format(jr.totalCitations):'—'}</strong><small style="display:block;color:var(--muted)">Cited half-life: ${jr.citedHalfLife} năm</small></td>
       <td>${jifCats}</td>
       <td>${jciCats}</td>
-      <td><code style="font-size:11px">${esc(jr.source.filename)}</code><small style="display:block;color:var(--muted)">Nguồn số liệu JCR · tải: ${esc(jr.source.downloadedAtRaw)} · ${jr.source.pageCount} trang</small>${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed').sourceUrl,'Xem chỉ mục trên Clarivate MJL')}</td>
+      <td>Clarivate JCR ${jr.metricYear}<br>${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed').sourceUrl,'Xem chỉ mục trên Clarivate MJL')}</td>
     </tr>`;
   }).join('');
 }
@@ -1035,7 +1032,7 @@ function renderCitationsSection(){
     const pct=v=>Math.max(2,Math.min(100,(v/maxC)*100)).toFixed(1);
     barsEl.innerHTML=withTotals.map(x=>{
       const color=styles[x.j.id]?.color||'#2d81ff';
-      const sub=x.hIndex!==null?`h-index: <strong>${x.hIndex}</strong>`:'Scopus CS (2011–25)';
+      const sub=x.hIndex!==null?`h-index: <strong>${x.hIndex}</strong>`:'Tài liệu trích dẫn trong các cửa sổ CiteScore';
       const rightLabel=x.isScopusWindowDocs?`<strong>${integer.format(x.citingDocs)}</strong> bài TD Scopus`:`<strong>${integer.format(x.citations)}</strong> trích dẫn`;
       return`<div class="bar-item">
         <div class="bar-top">
@@ -1132,44 +1129,30 @@ function renderAllCharts(){
 function renderReferences(){
   $('#source-links').innerHTML=dashboard.journals.map(j=>{
     const inst=j.institution||{name:j.publisher};
-    const hist=statisticalHistory(j);
-    const spanStart=hist[0]?.year??CHART_START_YEAR;
-    const spanEnd=hist.at(-1)?.year??2026;
-    const scopusLink=j.scopusSourceId?` · ${external(`https://www.scopus.com/sourceid/${j.scopusSourceId}`,`Scopus Source ID ${j.scopusSourceId}`)}`:'';
+    const scopusLink=j.scopusSourceId?` · ${external(`https://www.scopus.com/sourceid/${j.scopusSourceId}`,'Scopus Sources')}`:'';
     const wos=j.indexings.find(i=>i.system==='WoS');
-    const wosLink=wos?` · ${external(wos.sourceUrl,wos.status==='unverified'?'Tra cứu WoS tại Clarivate MJL':'Minh chứng chỉ mục WoS — Clarivate MJL')}`:'';
-    return`<li><p><strong>${esc(fullName(j))}</strong> — ${esc(j.titleVi)}. Đơn vị xuất bản: <em>${esc(inst.name)}${inst.coPublisher?` & ${esc(inst.coPublisher)}`:''}</em>. Giai đoạn thống kê: <strong>${spanStart}–${spanEnd}</strong>. Trang chủ: ${external(j.website,j.website)} · Kho lưu trữ: ${archiveLinks(j)}${scopusLink}${wosLink}.</p></li>`;
+    const wosLink=wos?` · ${external(wos.sourceUrl,'Clarivate Master Journal List')}`:'';
+    return`<li><p><strong>${esc(fullName(j))}</strong> — ${esc(j.titleVi)}. Đơn vị xuất bản: <em>${esc(inst.name)}${inst.coPublisher?` & ${esc(inst.coPublisher)}`:''}</em>. Trang chủ: ${external(j.website,j.website)} · Kho lưu trữ: ${archiveLinks(j)}${scopusLink}${wosLink}.</p></li>`;
   }).join('');
-  $('#source-links').insertAdjacentHTML('beforeend',dashboard.historySources.map(source=>`<li><p>${source.url?external(source.url,source.title):`<cite>${esc(source.title)}</cite> · <code>${esc(source.filename)}</code> · ${esc(source.section)}`}</p></li>`).join(''));
+  $('#source-links').insertAdjacentHTML('beforeend',dashboard.historySources.filter(source=>source.url).map(source=>`<li><p>${external(source.url,source.title)}</p></li>`).join(''));
 }
 
-function historyLocator(item){
-  const source=dashboard.historySources.find(s=>s.id===item.sourceId);
-  const paragraphs=item.sourceParagraphs?.length?` · đoạn ${item.sourceParagraphs.join(', ')}`:'';
-  return `${esc(item.sourceSection||'Ban lãnh đạo qua các thời kỳ')}${paragraphs}${source.url?` · ${external(source.url,'Website Viện Toán học')}`:''}`;
-}
 
 function renderJournalHistory(j){
   const history=j.journalHistory;
-  const sourceIds=new Set([history.sourceId,...history.events.map(e=>e.sourceId),...history.editors.flatMap(e=>[...e.appointments.map(a=>a.sourceId),e.portrait?.sourceId]).filter(Boolean)]);
-  const sources=dashboard.historySources.filter(s=>sourceIds.has(s.id));
   return `
     <section id="journal-history" class="history-section" aria-labelledby="journal-history-heading">
       <p class="hud-label chart-kicker">LỊCH SỬ PHÁT TRIỂN · ${esc(j.code)}</p>
       <h3 id="journal-history-heading">Từ những số đầu tiên đến hôm nay</h3>
       <p class="history-summary">${esc(history.summary)}</p>
-      <ol class="history-timeline">${history.events.map(event=>`<li><strong class="history-date">${esc(event.dateLabel)}</strong><div><p>${esc(event.text)}</p><small class="history-locator">${historyLocator(event)}</small></div></li>`).join('')}</ol>
-      ${history.cautions.length?`<aside class="history-cautions" role="note"><strong>Lưu ý đối chiếu nguồn</strong><ul>${history.cautions.map(note=>`<li>${esc(note)}</li>`).join('')}</ul></aside>`:''}
-      <details class="history-source-details"><summary>Nguồn lịch sử và cách đối chiếu</summary><ul>${sources.map(source=>`<li>${source.url?external(source.url,source.title):`<cite>${esc(source.title)}</cite> · <code>${esc(source.filename)}</code><p>${esc(source.locatorNote)}</p>`}</li>`).join('')}</ul></details>
+      <ol class="history-timeline">${history.events.map(event=>`<li><strong class="history-date">${esc(event.dateLabel)}</strong><div><p>${esc(event.text)}</p></div></li>`).join('')}</ol>
     </section>
     <section id="journal-editors" class="history-section" aria-labelledby="journal-editors-heading">
       <p class="hud-label chart-kicker">LÃNH ĐẠO TÒA SOẠN · ${esc(j.code)}</p>
       <h3 id="journal-editors-heading">Tổng biên tập qua các thời kỳ</h3>
-      <p class="history-summary">Phân biệt Tổng biên tập, Tổng biên tập danh dự và Phó Tổng biên tập phụ trách theo đúng chức danh trong nguồn. Các mốc “nay” được hiểu tại thời điểm của tài liệu trích dẫn.</p>
       <div class="editor-grid">${history.editors.map(editor=>`<article class="editor-card${editor.portrait?'':' is-text-only'}">
-        ${editor.portrait?`<img class="editor-portrait" src="${esc(editor.portrait.path)}" alt="Chân dung ${esc(editor.name)}, trích từ kỷ yếu" width="${editor.portrait.width}" height="${editor.portrait.height}" loading="lazy" decoding="async">`:''}
+        ${editor.portrait?`<img class="editor-portrait" src="${esc(editor.portrait.path)}" alt="Chân dung ${esc(editor.name)}" width="${editor.portrait.width}" height="${editor.portrait.height}" loading="lazy" decoding="async">`:''}
         <div class="editor-content"><h4>${esc(editor.name)}</h4><ul class="editor-appointments">${editor.appointments.map(appointment=>`<li><strong>${esc(appointment.role)}</strong>${appointment.tenure?`<span>${esc(appointment.tenure)}</span>`:''}</li>`).join('')}</ul>
-          <details class="history-source-details"><summary>Nguồn thông tin${editor.portrait?' và ảnh':''}</summary><ul>${editor.appointments.map(appointment=>`<li>${historyLocator(appointment)}</li>`).join('')}${editor.portrait?`<li>Ảnh trong kỷ yếu: đoạn ${editor.portrait.imageParagraph}; chú thích/ngữ cảnh: đoạn ${editor.portrait.captionParagraph}. ${esc(editor.portrait.caption)}</li>`:''}</ul></details>
         </div>
       </article>`).join('')}</div>
     </section>`;
@@ -1209,7 +1192,7 @@ function renderDetail(id){
     ['ISSN bản in / điện tử',`${j.issn??'—'} / ${j.eissn??'—'}`],
     ...(jr?[['Chỉ số Web of Science (JCR 2025)',`JIF 2025: <strong>${oneDec.format(jr.jif)}</strong> (${jr.jifNumerator}/${jr.jifDenominator}) · 5-Year JIF: <strong>${oneDec.format(jr.fiveYearJif)}</strong> · JCI: <strong>${twoDec.format(jr.jci)}</strong> · Tổng trích dẫn JCR 2025: <strong>${integer.format(jr.totalCitations)}</strong>`]]:[]),
     ['Kỳ hạn xuất bản',esc(publicationFrequency(j))],
-    ['Số liệu xuất bản trên trang',`${minYear}–${maxYear} · ${integer.format(totalHistPapers)} bài / ${integer.format(totalHistIssues)} kỳ${missingYears.length?`; chưa thu thập dữ liệu năm: ${missingYears.join(', ')}`:''}`],
+    ['Số liệu xuất bản',`${minYear}–${maxYear} · ${integer.format(totalHistPapers)} bài / ${integer.format(totalHistIssues)} kỳ${missingYears.length?`; năm chưa có số liệu: ${missingYears.join(', ')}`:''}`],
     ['Trang chủ chính thức',external(j.website)],
     ['Các số đã xuất bản',archiveLinks(j)]
   ];
@@ -1227,7 +1210,7 @@ function renderDetail(id){
       jr
         ?['JIF 2025 (WoS JCR)',`${oneDec.format(jr.jif)} (${jr.categories[0].jif.quartile})`,`${integer.format(jr.jifNumerator)} trích dẫn / ${integer.format(jr.jifDenominator)} bài (2023–2024) · JCI: ${twoDec.format(jr.jci)}`]
         :[`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ xuất bản`],
-      ['Tổng trích dẫn',j.localCitation?.totals?`${integer.format(j.localCitation.totals.citations)} lượt (OJS)`:(j.scopusCitingDocs?`${integer.format(j.scopusCitingDocs.totalDistinctCitingDocs)} bài TD (Scopus)`:(jr?`${integer.format(jr.totalCitations)} lượt (JCR 2025)`:'Scopus Sources')),j.localCitation?.totals?`h-index: ${j.localCitation.totals.hIndex} · ${integer.format(j.localCitation.totals.citingDocs)} bài trích dẫn${jr?` · JCR 2025: ${integer.format(jr.totalCitations)} lượt`:''}`:(j.scopusCitingDocs?`Khử trùng theo EID cửa sổ CS Scopus${jr?` · JCR 2025: ${integer.format(jr.totalCitations)} lượt`:''} · ${integer.format(totalHistPapers)} bài xuất bản`:'Theo Scopus Source Details')]
+      ['Tổng trích dẫn',j.localCitation?.totals?`${integer.format(j.localCitation.totals.citations)} lượt`:(j.scopusCitingDocs?`${integer.format(j.scopusCitingDocs.totalDistinctCitingDocs)} tài liệu`:(jr?`${integer.format(jr.totalCitations)} lượt (JCR 2025)`:'Scopus Sources')),j.localCitation?.totals?`h-index: ${j.localCitation.totals.hIndex} · ${integer.format(j.localCitation.totals.citingDocs)} bài trích dẫn${jr?` · JCR 2025: ${integer.format(jr.totalCitations)} lượt`:''}`:(j.scopusCitingDocs?`Tài liệu trích dẫn trong các cửa sổ CiteScore${jr?` · JCR 2025: ${integer.format(jr.totalCitations)} lượt`:''} · ${integer.format(totalHistPapers)} bài xuất bản`:'Theo Scopus Source Details')]
     ];
   }else{
     const tot=j.localCitation?.totals;
@@ -1235,7 +1218,7 @@ function renderDetail(id){
       ['Chỉ số 4 năm 2025 (tự tính)',loc25?twoDec.format(loc25.score):'N/A',loc25?`${integer.format(loc25.numerator)} trích dẫn / ${integer.format(loc25.denominator)} bài (2022–2025)`:'—'],
       ['Chỉ số 4 năm 2026 (tự tính)',loc26?twoDec.format(loc26.score):'N/A',loc26?`${integer.format(loc26.numerator)} trích dẫn / ${integer.format(loc26.denominator)} bài (2023–2026)`:'—'],
       [`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ xuất bản`],
-      ['Tổng trích dẫn đối soát OJS',tot?`${integer.format(tot.citations)} lượt`:'N/A',tot?`h-index: ${tot.hIndex} · ${integer.format(tot.citingDocs)} bài trích dẫn`:'—']
+      ['Tổng trích dẫn',tot?`${integer.format(tot.citations)} lượt`:'N/A',tot?`h-index: ${tot.hIndex} · ${integer.format(tot.citingDocs)} bài trích dẫn`:'—']
     ];
   }
 
@@ -1384,19 +1367,19 @@ function renderDetail(id){
           </div>
         </section>`:''}
         ${jr?`<section class="detail-section">
-          <h3>Báo cáo Web of Science — Clarivate JCR ${jr.metricYear} (${esc(jr.wosCollection)})</h3>
-          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">Nguồn số liệu: báo cáo Clarivate <code>${esc(jr.source.filename)}</code> (tải ngày ${esc(jr.source.downloadedAtRaw)}, ${jr.source.pageCount} trang; ISSN in trên báo cáo JCR: ${esc(jr.issn||'—')} / eISSN: ${esc(jr.eissn||'—')}). ${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed').sourceUrl,'Đối chiếu trạng thái chỉ mục tại Clarivate Master Journal List')}. MJL minh chứng chỉ mục; JIF, JCI và xếp hạng theo năm lấy từ báo cáo JCR, không suy ra từ MJL hay CiteScore.</p>
+          <h3>Chỉ số Web of Science — Clarivate JCR ${jr.metricYear} (${esc(jr.wosCollection)})</h3>
+          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">JIF, JCI và xếp hạng theo Clarivate JCR ${jr.metricYear}. ${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed').sourceUrl,'Thông tin chỉ mục trên Clarivate Master Journal List')}.</p>
           <div class="table-scroll">
             <table class="detail-table">
-              <thead><tr><th scope="col">Chỉ số JCR 2025</th><th scope="col">Giá trị</th><th scope="col">Chi tiết tính toán / Cửa sổ</th><th scope="col">Trang PDF</th></tr></thead>
+              <thead><tr><th scope="col">Chỉ số JCR 2025</th><th scope="col">Giá trị</th><th scope="col">Chi tiết / Giai đoạn tính</th></tr></thead>
               <tbody>
-                <tr><td><strong>Journal Impact Factor (JIF 2025)</strong></td><td><strong>${oneDec.format(jr.jif)}</strong></td><td>${integer.format(jr.jifNumerator)} trích dẫn năm 2025 / ${integer.format(jr.jifDenominator)} bài citable (2023–2024)</td><td>Tr. ${jr.source.pages.jif}–${jr.source.pages.jifCalculation}</td></tr>
-                <tr><td>JIF không tính tự trích dẫn</td><td><strong>${oneDec.format(jr.jifWithoutSelfCitations)}</strong></td><td>${integer.format(jr.jifWithoutSelfNumerator)} trích dẫn không tự TD / ${integer.format(jr.jifDenominator)} bài citable (2023–2024)</td><td>Tr. ${jr.source.pages.jif}–${jr.source.pages.jifCalculation}</td></tr>
-                <tr><td>5-Year Impact Factor</td><td><strong>${oneDec.format(jr.fiveYearJif)}</strong></td><td>${integer.format(jr.fiveYearNumerator)} trích dẫn năm 2025 / ${integer.format(jr.fiveYearDenominator)} bài citable (2020–2024)</td><td>Tr. ${jr.source.pages.otherMetrics.fiveYearJif}</td></tr>
-                <tr><td>Journal Citation Indicator (JCI 2025)</td><td><strong>${twoDec.format(jr.jci)}</strong></td><td>Chỉ số chuẩn hóa theo lĩnh vực (CNCI trung bình 3 năm)</td><td>Tr. ${jr.source.pages.jci}</td></tr>
-                <tr><td>Immediacy Index</td><td><strong>${oneDec.format(jr.immediacyIndex)}</strong></td><td>${integer.format(jr.immediacyNumerator)} trích dẫn năm 2025 / ${integer.format(jr.immediacyDenominator)} bài citable năm 2025</td><td>Tr. ${jr.source.pages.otherMetrics.immediacyIndex}</td></tr>
-                <tr><td>Tổng trích dẫn trong JCR 2025</td><td><strong>${integer.format(jr.totalCitations)} lượt</strong></td><td>Cited Half-life: ${jr.citedHalfLife} năm · Citing Half-life: ${jr.citingHalfLife} năm</td><td>Tr. ${jr.source.pages.totalCitations}</td></tr>
-                <tr><td>Eigenfactor / Normalized Eigenfactor / AIS</td><td><strong>${jr.eigenfactorScore.toFixed(5)}</strong></td><td>Normalized Eigenfactor: ${jr.normalizedEigenfactor.toFixed(5)} · Article Influence Score: ${jr.articleInfluenceScore.toFixed(3)}</td><td>Tr. ${jr.source.pages.otherMetrics.eigenfactorScore}–${jr.source.pages.otherMetrics.articleInfluenceScore}</td></tr>
+                <tr><td><strong>Journal Impact Factor (JIF 2025)</strong></td><td><strong>${oneDec.format(jr.jif)}</strong></td><td>${integer.format(jr.jifNumerator)} trích dẫn năm 2025 / ${integer.format(jr.jifDenominator)} bài citable (2023–2024)</td></tr>
+                <tr><td>JIF không tính tự trích dẫn</td><td><strong>${oneDec.format(jr.jifWithoutSelfCitations)}</strong></td><td>${integer.format(jr.jifWithoutSelfNumerator)} trích dẫn không tự TD / ${integer.format(jr.jifDenominator)} bài citable (2023–2024)</td></tr>
+                <tr><td>5-Year Impact Factor</td><td><strong>${oneDec.format(jr.fiveYearJif)}</strong></td><td>${integer.format(jr.fiveYearNumerator)} trích dẫn năm 2025 / ${integer.format(jr.fiveYearDenominator)} bài citable (2020–2024)</td></tr>
+                <tr><td>Journal Citation Indicator (JCI 2025)</td><td><strong>${twoDec.format(jr.jci)}</strong></td><td>Chỉ số chuẩn hóa theo lĩnh vực (CNCI trung bình 3 năm)</td></tr>
+                <tr><td>Immediacy Index</td><td><strong>${oneDec.format(jr.immediacyIndex)}</strong></td><td>${integer.format(jr.immediacyNumerator)} trích dẫn năm 2025 / ${integer.format(jr.immediacyDenominator)} bài citable năm 2025</td></tr>
+                <tr><td>Tổng trích dẫn trong JCR 2025</td><td><strong>${integer.format(jr.totalCitations)} lượt</strong></td><td>Cited Half-life: ${jr.citedHalfLife} năm · Citing Half-life: ${jr.citingHalfLife} năm</td></tr>
+                <tr><td>Eigenfactor / Normalized Eigenfactor / AIS</td><td><strong>${jr.eigenfactorScore.toFixed(5)}</strong></td><td>Normalized Eigenfactor: ${jr.normalizedEigenfactor.toFixed(5)} · Article Influence Score: ${jr.articleInfluenceScore.toFixed(3)}</td></tr>
               </tbody>
             </table>
           </div>
@@ -1455,7 +1438,7 @@ function renderDetail(id){
         <section id="journal-indexing" class="detail-section">
           <h3>Chỉ mục khoa học</h3>
           <ul class="source-evidence">
-            ${j.indexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong> — ${indexingStatusLabel(i.status,i.system)}<small>${[i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',i.notes?esc(i.notes):'',external(i.sourceUrl,i.system==='WoS'?(i.status==='unverified'?'Tra cứu tại Clarivate MJL (chưa xác minh đầy đủ)':'Xem minh chứng trên Clarivate MJL'):i.evidenceLevel==='database'?`Xem trên ${i.system}`:'Xem nguồn minh chứng')].filter(Boolean).join(' · ')}</small></li>`).join('')}
+            ${j.indexings.map(i=>`<li><strong>${esc(i.system)}${i.collection?` · ${esc(i.collection)}`:''}</strong> — ${indexingStatusLabel(i.status,i.system)}<small>${[i.status==='listed'&&i.coverage?`Phạm vi: ${esc(i.coverage)}`:'',external(i.sourceUrl,i.system==='WoS'?'Clarivate Master Journal List':`Thông tin ${i.system}`)].filter(Boolean).join(' · ')}</small></li>`).join('')}
           </ul>
         </section>
       </div>
@@ -1723,7 +1706,7 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022b'),fetch('data-scopus.json?v=20261022a')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022e'),fetch('data-scopus.json?v=20261022a')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     dashboard=await dRes.json();
     scopus=await sRes.json();
