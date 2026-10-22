@@ -47,7 +47,16 @@
       "sha256": "383e220a394c4f9b2b7a8d5cea5b2c992d946168695d3facc48b9c5eca486cf2",
       "name": "Springer Nature",
       "nameVi": "Nhà xuất bản Springer Nature",
-      "source": "User-supplied PNG artwork: assets/images/logos/springer.png"
+      "source": "User-supplied PNG artwork: assets/images/logos/springer.png",
+      "darkVariant": {
+        "path": "assets/images/logos/springer-dark.png",
+        "width": 800,
+        "height": 214,
+        "bytes": 10880,
+        "sha256": "d220c58ca50e75628703f2132bf05639dbba98fd81774c47e7bf4f1a2f822528",
+        "sourceSha256": "383e220a394c4f9b2b7a8d5cea5b2c992d946168695d3facc48b9c5eca486cf2",
+        "treatment": "Chữ Springer và hình ngựa chuyển trắng; giữ nguyên từng pixel của gạch cam, kích thước và kênh alpha."
+      }
     },
     "iop": {
       "path": "assets/images/logos/iop.png",
@@ -59,7 +68,16 @@
       "sha256": "07d518fb9f95f02e9b7faa732aa1fd1c22f476f530d8272bba74a9d2b2ca554f",
       "name": "IOP Publishing",
       "nameVi": "Nhà xuất bản IOP Publishing",
-      "source": "User-supplied PNG artwork: assets/images/logos/iop.png"
+      "source": "User-supplied PNG artwork: assets/images/logos/iop.png",
+      "darkVariant": {
+        "path": "assets/images/logos/iop-dark.png",
+        "width": 1027,
+        "height": 194,
+        "bytes": 21459,
+        "sha256": "d82ae600f74db4712371a277bd16dd3de030b3141c06a7bff527bb8f9fd44b5d",
+        "sourceSha256": "07d518fb9f95f02e9b7faa732aa1fd1c22f476f530d8272bba74a9d2b2ca554f",
+        "treatment": "Chỉ chữ Publishing chuyển trắng; giữ nguyên toàn bộ phần IOP đỏ, kích thước và kênh alpha."
+      }
     },
     "wiley": {
       "path": "assets/images/logos/wiley.png",

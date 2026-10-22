@@ -22,14 +22,20 @@ assert.equal(scopus.records.length,84,'Baseline must retain all 84 observations.
 assert.equal(new Set(scopus.records.map(r=>r.journal+'|'+r.year+'|'+r.type)).size,84,'Duplicate official observations.');
 const evidence=await Promise.all(profileFiles.map(f=>readJson(path.join(root,f))));
 const audits=await Promise.all(auditFiles.map(f=>readJson(path.join(root,f))));
-const [histIntl,histOjs,media,jcrData,scopusCatData,intlCitData]=await Promise.all([
+const [histIntl,histOjs,media,jcrData,scopusCatData,intlCitData,originData]=await Promise.all([
  readJson(path.join(root,'evidence/dashboard-history-intl.json')),
  readJson(path.join(root,'evidence/dashboard-history-ojs.json')),
  readJson(path.join(root,'evidence/dashboard-media.json')),
  readJson(path.join(root,'evidence/dashboard-jcr.json')),
  readJson(path.join(root,'evidence/scopus-categories.json')),
- readJson(path.join(root,'evidence/scopus-citing-docs-intl.json'))
+ readJson(path.join(root,'evidence/scopus-citing-docs-intl.json')),
+ readJson(path.join(root,'evidence/dashboard-journal-origins.json'))
 ]);
+for(const logo of Object.values(media.logos)){
+ if(!logo.darkVariant)continue;
+ assert.equal(logo.darkVariant.sourceSha256,logo.sha256,'Dark artwork must reference its original logo.');
+ assert.equal(sha(await readFile(path.join(root,logo.darkVariant.path))),logo.darkVariant.sha256,'Dark logo asset differs from its manifest.');
+}
 const collectedAt=evidence[0].collectedAt,currentYear=Number(collectedAt.slice(0,4)),outputYears=Array.from({length:currentYear-2019},(_,i)=>2020+i);
 assert(evidence.every(e=>e.collectedAt===collectedAt),'Profile evidence dates must agree.');
 const profiles=evidence.flatMap(e=>e.journals),localAudits=audits.flatMap(a=>a.journals);
@@ -37,6 +43,9 @@ const historyMap=new Map([...histIntl.journals,...histOjs.journals].map(j=>[j.id
 const jcrMap=new Map((jcrData.journals||[]).map(j=>[j.id,j]));
 const scopusCatMap=new Map((scopusCatData.journals||[]).map(j=>[j.id,j.categories]));
 const intlCitMap=new Map((intlCitData.journals||[]).map(j=>[j.id,j]));
+const originMap=new Map(originData.journals.map(j=>[j.id,j]));
+const originSourceIds=new Set(originData.sources.map(s=>s.id));
+assert.deepEqual([...originMap.keys()].sort(),[...order].sort(),'Need sourced histories for all 12 journals.');
 assert.deepEqual([...jcrMap.keys()].sort(),['amv','ansn','vjc','vjes','vjm'],'Need exact 5 JCR 2025 journal entries.');
 assert.deepEqual([...scopusCatMap.keys()].sort(),['amv','ansn','cip','vjc','vjes','vjm','vjst'],'Need exact 7 VAST-1 Scopus category entries.');
 assert.deepEqual([...intlCitMap.keys()].sort(),['amv','ansn','vjm'],'Need exact 3 international Scopus citing-doc entries.');
@@ -57,6 +66,23 @@ for(const jr of jcrMap.values()){
 }
 assert.deepEqual(profiles.map(j=>j.id).sort(),[...order].sort(),'Need exactly the 12 agreed journal profiles.');
 assert.equal(new Set(localAudits.map(j=>j.id)).size,9,'Need nine distinct user collections.');
+const checkedPortraits=new Set();
+for(const journal of originMap.values()){
+ assert(journal.summary&&journal.events.length&&journal.editors.length,journal.id+': history, milestones and editors required.');
+ for(const item of [...journal.events,...journal.editors.flatMap(e=>e.appointments)]){
+  assert(originSourceIds.has(item.sourceId),journal.id+': unknown history source.');
+  assert(Array.isArray(item.sourceParagraphs)&&item.sourceParagraphs.every(p=>Number.isInteger(p)&&p>0),journal.id+': invalid source paragraphs.');
+  if(item.sourceId==='anniversary-2026')assert(item.sourceParagraphs.length,journal.id+': book claim needs a paragraph locator.');
+ }
+ for(const editor of journal.editors){
+  assert(editor.name&&editor.appointments.length,journal.id+': editor identity and role required.');
+  const portrait=editor.portrait;
+  if(!portrait||checkedPortraits.has(portrait.path))continue;
+  assert(portrait.path.startsWith('assets/images/editors/')&&portrait.width>0&&portrait.height>0,journal.id+': invalid portrait asset.');
+  assert.equal(sha(await readFile(path.join(root,portrait.path))),portrait.sha256,journal.id+': portrait asset differs from its manifest.');
+  checkedPortraits.add(portrait.path);
+ }
+}
 
 function validateOutput(j,o){
  assert.equal(o.asOf,collectedAt,j.code+': output cutoff differs from snapshot.');
@@ -183,6 +209,7 @@ for(let index=0;index<order.length;index++){
  j.group=original?'VAST-1':'VAST-2';
  j.scopusSourceId=original?.sourceId??null;
  j.jcr=jcrMap.get(j.id)?structuredClone(jcrMap.get(j.id)):null;
+ j.journalHistory=structuredClone(originMap.get(j.id));
  j.cover='assets/images/covers/'+j.id+'.png';
  j.coverImage=j.cover;
  assert(media.covers[j.id]?.path===j.cover,j.code+': missing verified cover asset.');
@@ -238,6 +265,7 @@ for(let index=0;index<order.length;index++){
 }
 const snapshotId=collectedAt+'-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
 const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.png',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},officialJcr:{path:'evidence/dashboard-jcr.json',metricYear:2025,journalsCount:jcrMap.size,edition:'Emerging Sources Citation Index (ESCI)'},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'}],journals};
+dataset.historySources=structuredClone(originData.sources);
 const serialized=JSON.stringify(dataset,null,2)+'\n';
 if(process.argv.includes('--write')){
  await mkdir(path.join(root,'data/snapshots'),{recursive:true});

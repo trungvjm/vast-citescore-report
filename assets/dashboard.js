@@ -319,6 +319,7 @@ function localScore(j,year=2025){
 function citationRecord(j,year){return (j.localCitation?.citationSeries||j.scopusCitingDocs?.citationSeries)?.find(r=>r.year===year)??null;}
 function scopusQuartile(percentile){return Number.isFinite(percentile)?(percentile>=75?'Q1':(percentile>=50?'Q2':(percentile>=25?'Q3':'Q4'))):null;}
 function historyRecord(j,year){return (j.annualHistory||j.outputs||[]).find(r=>r.year===year)??null;}
+function statisticalHistory(j){return (j.annualHistory||j.outputs||[]).filter(r=>r.year>=CHART_START_YEAR);}
 function observation(j,metric,year){
   const r=scopusRecord(j,year);
   if(!r)return{value:null,isProvisional:false,kind:'missing'};
@@ -392,14 +393,14 @@ function renderHeroAndOverview(){
   }
 
   // 3. Summary KPI strip
-  const totalAllTimePapers=dashboard.journals.reduce((s,j)=>s+(j.annualHistory||[]).reduce((a,r)=>a+(r.papers||0),0),0);
-  const totalAllTimeIssues=dashboard.journals.reduce((s,j)=>s+(j.annualHistory||[]).reduce((a,r)=>a+(r.issues||0),0),0);
+  const totalPeriodPapers=dashboard.journals.reduce((s,j)=>s+statisticalHistory(j).reduce((a,r)=>a+(r.papers||0),0),0);
+  const totalPeriodIssues=dashboard.journals.reduce((s,j)=>s+statisticalHistory(j).reduce((a,r)=>a+(r.issues||0),0),0);
   const totalConfirmedCitations=dashboard.journals.reduce((s,j)=>s+(j.localCitation?.totals?.citations??0),0);
   const totalCitingDocs=dashboard.journals.reduce((s,j)=>s+(j.localCitation?.totals?.citingDocs??j.scopusCitingDocs?.totalDistinctCitingDocs??0),0);
 
   const cells=[
     ['Hệ thống tạp chí VAST','12 tạp chí','7 tạp chí VAST-1 (Scopus; 5 tạp chí có JCR/ESCI) · 5 tạp chí VAST-2'],
-    ['Tổng số bài có dữ liệu (1976–2026)',`${integer.format(totalAllTimePapers)} bài`,`${integer.format(totalAllTimeIssues)} kỳ phát hành trực tuyến đã lưu trữ`],
+    ['Tổng số bài đã thu thập (2015–2026)',`${integer.format(totalPeriodPapers)} bài`,`${integer.format(totalPeriodIssues)} kỳ xuất bản`],
     ['Bài trích dẫn Scopus (12 tạp chí)',`${integer.format(totalCitingDocs)} bài`,`9 tạp chí OJS (${integer.format(totalConfirmedCitations)} lượt) + VJM, AMV, ANSN (Scopus CS)`],
     ['Đỉnh CiteScore & JIF 2025','CS 5,0 · JIF 2,4','CiteScore: VJES 5,0 · ANSN 3,9 | JIF (JCR): ANSN 2,4 · VJES 2,1']
   ];
@@ -409,7 +410,7 @@ function renderHeroAndOverview(){
   const remarks=[
     '<strong>VJES</strong> dẫn đầu toàn khối với CiteScore 2025 đạt <strong>5,0</strong> (<strong>Q1 Scopus</strong>, phân vị 77%, hạng 45/201 ngành Khoa học Trái đất; JIF 2025 = 2,1 · Q3 JIF / Q2 JCI) và Tracker 2026 đạt <strong>4,6</strong> (Q2, 74%).',
     '<strong>ANSN</strong> đạt CiteScore 2025 là <strong>3,9</strong> (<strong>Q2 Scopus</strong> ở 2 ngành Kỹ thuật với phân vị 61% &amp; 60%, <strong>Q3</strong> Khoa học Vật liệu 48%; JIF 2025 = <strong>2,4 · Q3</strong>) và Tracker 2026 tăng lên <strong>4,0</strong> (Q2, 62%).',
-    '<strong>VJC</strong> tăng liên tục từ <strong>0,5</strong> (2021 · Q4), <strong>1,4</strong> (2022 · Q3) lên <strong>3,0</strong> (2025 · <strong>Q3 Scopus</strong>, 43%) và lên <strong>Q2 Scopus (50%)</strong> ở Tracker 2026 (3,4); <strong>VJM</strong> đạt <strong>2,1</strong> (<strong>Q2 Scopus</strong>, phân vị 72%, hạng 115/414 Toán học; năm 2024 đạt <strong>Q1 Scopus</strong> với 76%; JIF 2025 = 0,9 · <strong>Q2 WoS</strong>); <strong>AMV</strong> trực thuộc <strong>Viện Toán học</strong>, có dữ liệu xuất bản 51 năm (1976–2026).',
+    '<strong>VJC</strong> tăng liên tục từ <strong>0,5</strong> (2021 · Q4), <strong>1,4</strong> (2022 · Q3) lên <strong>3,0</strong> (2025 · <strong>Q3 Scopus</strong>, 43%) và lên <strong>Q2 Scopus (50%)</strong> ở Tracker 2026 (3,4); <strong>VJM</strong> đạt <strong>2,1</strong> (<strong>Q2 Scopus</strong>, phân vị 72%, hạng 115/414 Toán học; năm 2024 đạt <strong>Q1 Scopus</strong> với 76%; JIF 2025 = 0,9 · <strong>Q2 WoS</strong>); <strong>AMV</strong> do <strong>Viện Toán học</strong> trực tiếp chủ quản.',
     'Trong nhóm <strong>VAST-2</strong>, <strong>VJMech</strong> (0,79 năm 2025 → 1,14 năm 2026) và <strong>JCC</strong> (0,70 năm 2025 → 1,12 năm 2026) có chỉ số 4 năm tự tính cao hơn mức Tracker 2026 (0,7 · Q4 Scopus) của <strong>CIP</strong>.'
   ];
   $('#remarks-list').innerHTML=remarks.map(item=>`<li>${item}</li>`).join('');
@@ -552,7 +553,7 @@ function filteredJournals(){
     if(state.index==='VAST-1'||state.index==='VAST-2')return j.group===state.index;
     return j.indexings.some(i=>i.system===state.index&&i.status==='listed');
   });
-  const totalHistPapers=j=>(j.annualHistory||[]).reduce((s,r)=>s+(r.papers||0),0);
+  const totalHistPapers=j=>statisticalHistory(j).reduce((s,r)=>s+(r.papers||0),0);
   const scoreSort=j=>j.group==='VAST-1'?(annualRecord(j,2025)?.value??trackerRecord(j)?.value??-1):(localScore(j,2025)?.score??-1);
   if(state.sort==='name')list.sort((a,b)=>a.title.localeCompare(b.title,'en'));
   if(state.sort==='papers')list.sort((a,b)=>totalHistPapers(b)-totalHistPapers(a)||a.order-b.order);
@@ -570,12 +571,14 @@ function renderCatalog(){
     const st=styles[j.id]||{color:'#2d81ff'};
     const num=String(j.order).padStart(2,'0');
     const inst=j.institution||{name:j.publisher,logo:'assets/images/logos/nxb.png',coPublisher:null,coLogo:null};
+    const publisherName=inst.name==='NXB Khoa học tự nhiên và Công nghệ'?'NXB Khoa học<br>tự nhiên<br>và Công nghệ':esc(inst.name);
     const a25=annualRecord(j,2025),t26=trackerRecord(j);
     const loc25=localScore(j,2025),loc26=localScore(j,2026);
     const out25=historyRecord(j,2025);
-    const spanStart=j.historyStartYear||j.annualHistory?.[0]?.year||2020;
-    const spanEnd=j.historyEndYear||2026;
-    const totalHistPapers=(j.annualHistory||[]).reduce((s,r)=>s+(r.papers||0),0);
+    const hist=statisticalHistory(j);
+    const spanStart=hist[0]?.year??CHART_START_YEAR;
+    const spanEnd=hist.at(-1)?.year??2026;
+    const totalHistPapers=hist.reduce((s,r)=>s+(r.papers||0),0);
 
     const topScopus25=j.scopusCategories?.find(c=>c.annual2025)?.annual2025||null;
     const topScopusT26=j.scopusCategories?.[0]?.tracker2026||null;
@@ -601,14 +604,14 @@ function renderCatalog(){
               <img src="${esc(inst.logo)}" alt="${esc(inst.name)}" title="${esc(inst.name)}">
               ${inst.coLogo?`<img src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}" title="${esc(inst.coPublisher||'')}">`:''}
             </div>
-            <span class="lineup-inst-name">${esc(inst.name)}${inst.coPublisher?` &amp; ${esc(inst.coPublisher)}`:''}</span>
+            <span class="lineup-inst-name">${publisherName}${inst.coPublisher?`<br>&amp; ${esc(inst.coPublisher)}`:''}</span>
           </div>
         </div>
       </div>
       <div class="lineup-body">
         <div>
           <h3 class="lineup-title"><a href="#journal/${esc(j.id)}">${esc(j.title)} <span class="lineup-code">(${esc(j.code)})</span></a></h3>
-          <p class="lineup-vi">${esc(j.titleVi)} · Số liệu giai đoạn <strong>${spanStart}–${spanEnd}</strong> (${j.annualHistory?.length||0} năm có dữ liệu)</p>
+          <p class="lineup-vi">${esc(j.titleVi)} · Thống kê <strong>${spanStart}–${spanEnd}</strong></p>
         </div>
         <div>
           <div class="lineup-metrics">
@@ -1051,7 +1054,7 @@ function renderCitationsSection(){
 function renderPapersSection(){
   const svg=$('#papers-chart');
   if(!svg||!dashboard)return;
-  const years=dashboard.outputYears.filter(y=>y>=CHART_START_YEAR);
+  const years=[...new Set(dashboard.journals.flatMap(j=>statisticalHistory(j).map(r=>r.year)))].sort((a,b)=>a-b);
   const journals=dashboard.journals.filter(j=>state.papersGroup==='all'||j.group===state.papersGroup);
   const yearTotals=years.map(yr=>{
     const rows=journals.map(j=>({j,o:historyRecord(j,yr)})).filter(x=>Number.isFinite(x.o?.papers));
@@ -1129,13 +1132,47 @@ function renderAllCharts(){
 function renderReferences(){
   $('#source-links').innerHTML=dashboard.journals.map(j=>{
     const inst=j.institution||{name:j.publisher};
-    const spanStart=j.historyStartYear||j.annualHistory?.[0]?.year||2020;
-    const spanEnd=j.historyEndYear||2026;
+    const hist=statisticalHistory(j);
+    const spanStart=hist[0]?.year??CHART_START_YEAR;
+    const spanEnd=hist.at(-1)?.year??2026;
     const scopusLink=j.scopusSourceId?` · ${external(`https://www.scopus.com/sourceid/${j.scopusSourceId}`,`Scopus Source ID ${j.scopusSourceId}`)}`:'';
     const wos=j.indexings.find(i=>i.system==='WoS');
     const wosLink=wos?` · ${external(wos.sourceUrl,wos.status==='unverified'?'Tra cứu WoS tại Clarivate MJL':'Minh chứng chỉ mục WoS — Clarivate MJL')}`:'';
-    return`<li><p><strong>${esc(fullName(j))}</strong> — ${esc(j.titleVi)}. Đơn vị xuất bản: <em>${esc(inst.name)}${inst.coPublisher?` & ${esc(inst.coPublisher)}`:''}</em>. Thời gian có dữ liệu: <strong>${spanStart}–${spanEnd}</strong>. Trang chủ: ${external(j.website,j.website)} · Kho lưu trữ: ${archiveLinks(j)}${scopusLink}${wosLink}.</p></li>`;
+    return`<li><p><strong>${esc(fullName(j))}</strong> — ${esc(j.titleVi)}. Đơn vị xuất bản: <em>${esc(inst.name)}${inst.coPublisher?` & ${esc(inst.coPublisher)}`:''}</em>. Giai đoạn thống kê: <strong>${spanStart}–${spanEnd}</strong>. Trang chủ: ${external(j.website,j.website)} · Kho lưu trữ: ${archiveLinks(j)}${scopusLink}${wosLink}.</p></li>`;
   }).join('');
+  $('#source-links').insertAdjacentHTML('beforeend',dashboard.historySources.map(source=>`<li><p>${source.url?external(source.url,source.title):`<cite>${esc(source.title)}</cite> · <code>${esc(source.filename)}</code> · ${esc(source.section)}`}</p></li>`).join(''));
+}
+
+function historyLocator(item){
+  const source=dashboard.historySources.find(s=>s.id===item.sourceId);
+  const paragraphs=item.sourceParagraphs?.length?` · đoạn ${item.sourceParagraphs.join(', ')}`:'';
+  return `${esc(item.sourceSection||'Ban lãnh đạo qua các thời kỳ')}${paragraphs}${source.url?` · ${external(source.url,'Website Viện Toán học')}`:''}`;
+}
+
+function renderJournalHistory(j){
+  const history=j.journalHistory;
+  const sourceIds=new Set([history.sourceId,...history.events.map(e=>e.sourceId),...history.editors.flatMap(e=>[...e.appointments.map(a=>a.sourceId),e.portrait?.sourceId]).filter(Boolean)]);
+  const sources=dashboard.historySources.filter(s=>sourceIds.has(s.id));
+  return `
+    <section id="journal-history" class="history-section" aria-labelledby="journal-history-heading">
+      <p class="hud-label chart-kicker">LỊCH SỬ PHÁT TRIỂN · ${esc(j.code)}</p>
+      <h3 id="journal-history-heading">Từ những số đầu tiên đến hôm nay</h3>
+      <p class="history-summary">${esc(history.summary)}</p>
+      <ol class="history-timeline">${history.events.map(event=>`<li><strong class="history-date">${esc(event.dateLabel)}</strong><div><p>${esc(event.text)}</p><small class="history-locator">${historyLocator(event)}</small></div></li>`).join('')}</ol>
+      ${history.cautions.length?`<aside class="history-cautions" role="note"><strong>Lưu ý đối chiếu nguồn</strong><ul>${history.cautions.map(note=>`<li>${esc(note)}</li>`).join('')}</ul></aside>`:''}
+      <details class="history-source-details"><summary>Nguồn lịch sử và cách đối chiếu</summary><ul>${sources.map(source=>`<li>${source.url?external(source.url,source.title):`<cite>${esc(source.title)}</cite> · <code>${esc(source.filename)}</code><p>${esc(source.locatorNote)}</p>`}</li>`).join('')}</ul></details>
+    </section>
+    <section id="journal-editors" class="history-section" aria-labelledby="journal-editors-heading">
+      <p class="hud-label chart-kicker">LÃNH ĐẠO TÒA SOẠN · ${esc(j.code)}</p>
+      <h3 id="journal-editors-heading">Tổng biên tập qua các thời kỳ</h3>
+      <p class="history-summary">Phân biệt Tổng biên tập, Tổng biên tập danh dự và Phó Tổng biên tập phụ trách theo đúng chức danh trong nguồn. Các mốc “nay” được hiểu tại thời điểm của tài liệu trích dẫn.</p>
+      <div class="editor-grid">${history.editors.map(editor=>`<article class="editor-card${editor.portrait?'':' is-text-only'}">
+        ${editor.portrait?`<img class="editor-portrait" src="${esc(editor.portrait.path)}" alt="Chân dung ${esc(editor.name)}, trích từ kỷ yếu" width="${editor.portrait.width}" height="${editor.portrait.height}" loading="lazy" decoding="async">`:''}
+        <div class="editor-content"><h4>${esc(editor.name)}</h4><ul class="editor-appointments">${editor.appointments.map(appointment=>`<li><strong>${esc(appointment.role)}</strong>${appointment.tenure?`<span>${esc(appointment.tenure)}</span>`:''}</li>`).join('')}</ul>
+          <details class="history-source-details"><summary>Nguồn thông tin${editor.portrait?' và ảnh':''}</summary><ul>${editor.appointments.map(appointment=>`<li>${historyLocator(appointment)}</li>`).join('')}${editor.portrait?`<li>Ảnh trong kỷ yếu: đoạn ${editor.portrait.imageParagraph}; chú thích/ngữ cảnh: đoạn ${editor.portrait.captionParagraph}. ${esc(editor.portrait.caption)}</li>`:''}</ul></details>
+        </div>
+      </article>`).join('')}</div>
+    </section>`;
 }
 
 /* ==========================================================================
@@ -1151,11 +1188,9 @@ function renderDetail(id){
   const inst=j.institution||{name:j.publisher,logo:'assets/images/logos/nxb.png',coPublisher:null,coLogo:null};
   const a25=annualRecord(j,2025),t26=trackerRecord(j);
   const loc25=localScore(j,2025),loc26=localScore(j,2026);
-  const hist=j.annualHistory||j.outputs||[];
-  const minYear=hist[0]?.year||2020,maxYear=hist.at(-1)?.year||2026;
-  const chartHist=hist.filter(r=>r.year>=CHART_START_YEAR);
-  const chartMinYear=chartHist[0]?.year??Math.max(CHART_START_YEAR,minYear);
-  state.detailFromYear=chartMinYear;
+  const hist=statisticalHistory(j);
+  const minYear=hist[0]?.year??CHART_START_YEAR,maxYear=hist.at(-1)?.year||2026;
+  state.detailFromYear=minYear;
   state.detailToYear=maxYear;
 
   const totalHistPapers=hist.reduce((s,r)=>s+(r.papers||0),0);
@@ -1174,12 +1209,12 @@ function renderDetail(id){
     ['ISSN bản in / điện tử',`${j.issn??'—'} / ${j.eissn??'—'}`],
     ...(jr?[['Chỉ số Web of Science (JCR 2025)',`JIF 2025: <strong>${oneDec.format(jr.jif)}</strong> (${jr.jifNumerator}/${jr.jifDenominator}) · 5-Year JIF: <strong>${oneDec.format(jr.fiveYearJif)}</strong> · JCI: <strong>${twoDec.format(jr.jci)}</strong> · Tổng trích dẫn JCR 2025: <strong>${integer.format(jr.totalCitations)}</strong>`]]:[]),
     ['Kỳ hạn xuất bản',esc(publicationFrequency(j))],
-    ['Số liệu xuất bản trên trang',`${minYear}–${maxYear} (${hist.length} năm có dữ liệu · ${integer.format(totalHistPapers)} bài / ${integer.format(totalHistIssues)} kỳ${missingYears.length?`; chưa có số lưu trữ trực tuyến năm: ${missingYears.join(', ')}`:''})`],
+    ['Số liệu xuất bản trên trang',`${minYear}–${maxYear} · ${integer.format(totalHistPapers)} bài / ${integer.format(totalHistIssues)} kỳ${missingYears.length?`; chưa thu thập dữ liệu năm: ${missingYears.join(', ')}`:''}`],
     ['Trang chủ chính thức',external(j.website)],
     ['Các số đã xuất bản',archiveLinks(j)]
   ];
 
-  const ownRecords=scopus.records.filter(r=>r.journal===j.code);
+  const ownRecords=scopus.records.filter(r=>r.journal===j.code&&r.year>=CHART_START_YEAR);
   const cats=j.scopusCategories??[];
 
   let metricCards=[];
@@ -1191,7 +1226,7 @@ function renderDetail(id){
       ['CiteScore Tracker 2026',t26&&Number.isFinite(t26.value)?`${oneDec.format(t26.value)}${bestT26?` (${bestT26.quartile||scopusQuartile(bestT26.percentile)})`:''}`:'N/A',t26&&Number.isFinite(t26.citations)?`${integer.format(t26.citations)} trích dẫn / ${integer.format(t26.documents)} tài liệu${bestT26?` · phân vị ${bestT26.percentile}% (${bestT26.rank}/${bestT26.total})`:' (cập nhật 05/10/2026)'}`:'Cập nhật 05/10/2026'],
       jr
         ?['JIF 2025 (WoS JCR)',`${oneDec.format(jr.jif)} (${jr.categories[0].jif.quartile})`,`${integer.format(jr.jifNumerator)} trích dẫn / ${integer.format(jr.jifDenominator)} bài (2023–2024) · JCI: ${twoDec.format(jr.jci)}`]
-        :[`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ phát hành (${hist.length} năm)`],
+        :[`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ xuất bản`],
       ['Tổng trích dẫn',j.localCitation?.totals?`${integer.format(j.localCitation.totals.citations)} lượt (OJS)`:(j.scopusCitingDocs?`${integer.format(j.scopusCitingDocs.totalDistinctCitingDocs)} bài TD (Scopus)`:(jr?`${integer.format(jr.totalCitations)} lượt (JCR 2025)`:'Scopus Sources')),j.localCitation?.totals?`h-index: ${j.localCitation.totals.hIndex} · ${integer.format(j.localCitation.totals.citingDocs)} bài trích dẫn${jr?` · JCR 2025: ${integer.format(jr.totalCitations)} lượt`:''}`:(j.scopusCitingDocs?`Khử trùng theo EID cửa sổ CS Scopus${jr?` · JCR 2025: ${integer.format(jr.totalCitations)} lượt`:''} · ${integer.format(totalHistPapers)} bài xuất bản`:'Theo Scopus Source Details')]
     ];
   }else{
@@ -1199,21 +1234,23 @@ function renderDetail(id){
     metricCards=[
       ['Chỉ số 4 năm 2025 (tự tính)',loc25?twoDec.format(loc25.score):'N/A',loc25?`${integer.format(loc25.numerator)} trích dẫn / ${integer.format(loc25.denominator)} bài (2022–2025)`:'—'],
       ['Chỉ số 4 năm 2026 (tự tính)',loc26?twoDec.format(loc26.score):'N/A',loc26?`${integer.format(loc26.numerator)} trích dẫn / ${integer.format(loc26.denominator)} bài (2023–2026)`:'—'],
-      [`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ phát hành (${hist.length} năm)`],
+      [`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ xuất bản`],
       ['Tổng trích dẫn đối soát OJS',tot?`${integer.format(tot.citations)} lượt`:'N/A',tot?`h-index: ${tot.hIndex} · ${integer.format(tot.citingDocs)} bài trích dẫn`:'—']
     ];
   }
 
-  const yearOptions=chartHist.map(r=>`<option value="${r.year}">${r.year}</option>`).join('');
+  const yearOptions=hist.map(r=>`<option value="${r.year}">${r.year}</option>`).join('');
 
   panel.innerHTML=`
     <div class="detail-top-bar">
       <div class="detail-top-main">
         <a class="detail-back" href="#section-catalog">← QUAY LẠI DANH MỤC 12 TẠP CHÍ</a>
-        <span class="hud-label">${esc(j.group)} · MÃ TẠP CHÍ: <strong>${esc(j.code)}</strong> · LỊCH SỬ ${minYear}–${maxYear}</span>
+        <span class="hud-label">${esc(j.group)} · MÃ TẠP CHÍ: <strong>${esc(j.code)}</strong> · THỐNG KÊ ${minYear}–${maxYear}</span>
       </div>
       <nav class="detail-mobile-nav" aria-label="Chuyển nhanh mục trong hồ sơ tạp chí">
         <a href="#journal/${esc(j.id)}/journal-info">Thông tin</a>
+        <a href="#journal/${esc(j.id)}/journal-history">Lịch sử</a>
+        <a href="#journal/${esc(j.id)}/journal-editors">Tổng biên tập</a>
         <a href="#journal/${esc(j.id)}/journal-charts">Biểu đồ</a>
         <a href="#journal/${esc(j.id)}/journal-data">Số liệu</a>
         <a href="#journal/${esc(j.id)}/journal-indexing">Chỉ mục</a>
@@ -1239,11 +1276,12 @@ function renderDetail(id){
         </div>
       </div>
     </div>
+    ${renderJournalHistory(j)}
 
     <section id="journal-charts" class="detail-charts-section" aria-label="Số liệu xuất bản và trích dẫn qua các năm của ${esc(j.code)}">
       <div class="detail-charts-head">
         <div>
-          <span class="hud-label chart-kicker">BIỂU ĐỒ CỦA ${esc(j.code)} (${chartMinYear}–${maxYear} · ${chartHist.length} NĂM CÓ DỮ LIỆU)</span>
+          <span class="hud-label chart-kicker">BIỂU ĐỒ CỦA ${esc(j.code)} (${minYear}–${maxYear})</span>
           <h3>Số liệu xuất bản, trích dẫn và CiteScore theo năm của ${esc(j.code)}</h3>
         </div>
         <form class="trend-controls" style="margin:0" aria-label="Chọn khoảng năm hiển thị">
@@ -1255,13 +1293,13 @@ function renderDetail(id){
             <label for="detail-to-year">Đến năm</label>
             <select id="detail-to-year">${yearOptions}</select>
           </div>
-          <button id="detail-reset-years" class="text-button" type="button">Toàn bộ (${chartMinYear}–${maxYear})</button>
+          <button id="detail-reset-years" class="text-button" type="button">Toàn bộ (${minYear}–${maxYear})</button>
         </form>
       </div>
 
       <div class="detail-charts-grid">
         <div class="detail-chart-card">
-          <h4>1. Số bài và số kỳ xuất bản theo năm (${chartMinYear}–${maxYear})</h4>
+          <h4>1. Số bài và số kỳ xuất bản theo năm (${minYear}–${maxYear})</h4>
           <p id="j-pub-summary">Di chuột hoặc chạm vào biểu đồ để xem số bài nghiên cứu và số kỳ phát hành từng năm của ${esc(j.code)}.</p>
           <svg id="j-pub-chart" class="detail-svg" viewBox="0 0 860 270" role="img" aria-label="Biểu đồ lịch sử xuất bản của ${esc(j.code)}"></svg>
         </div>
@@ -1330,7 +1368,7 @@ function renderDetail(id){
             <table class="detail-table">
               <thead><tr><th scope="col">Lĩnh vực &amp; Phân ngành Scopus (ASJC)</th><th scope="col">Năm</th><th scope="col">Loại</th><th scope="col">Vị trí (Hạng / Tổng)</th><th scope="col">Quartile Scopus</th><th scope="col">Phân vị Scopus</th></tr></thead>
               <tbody>
-                ${cats.flatMap(c=>(c.history||[{year:c.year,type:c.isTrackerOnly?'tracker':'annual',rank:c.rank,total:c.total,percentile:c.percentile,quartile:c.quartile}]).slice().sort((a,b)=>b.year-a.year).map(h=>{
+                ${cats.flatMap(c=>(c.history||[{year:c.year,type:c.isTrackerOnly?'tracker':'annual',rank:c.rank,total:c.total,percentile:c.percentile,quartile:c.quartile}]).filter(h=>h.year>=CHART_START_YEAR).sort((a,b)=>b.year-a.year).map(h=>{
                   const q=h.quartile||scopusQuartile(h.percentile);
                   return `<tr>
                   <td><strong>${esc(c.name)}</strong><small style="display:block;color:var(--muted)">${esc(c.parent||'')}${c.code?` · ASJC ${esc(c.code)}`:''}</small></td>
@@ -1367,7 +1405,7 @@ function renderDetail(id){
               <thead><tr><th scope="col">Phân ngành Web of Science (JCR)</th><th scope="col">Năm</th><th scope="col">Hạng JIF</th><th scope="col">Quartile JIF</th><th scope="col">Phân vị JIF</th><th scope="col">Hạng JCI</th><th scope="col">Quartile JCI</th><th scope="col">Phân vị JCI</th></tr></thead>
               <tbody>
                 ${jr.categories.flatMap(c=>{
-                  const years=[...new Set([...(c.jifHistory||[]).map(x=>x.year),...(c.jciHistory||[]).map(x=>x.year)])].sort((a,b)=>b-a);
+                  const years=[...new Set([...(c.jifHistory||[]).map(x=>x.year),...(c.jciHistory||[]).map(x=>x.year)])].filter(y=>y>=CHART_START_YEAR).sort((a,b)=>b-a);
                   return years.map(yr=>{
                     const jf=(c.jifHistory||[]).find(x=>x.year===yr);
                     const jc=(c.jciHistory||[]).find(x=>x.year===yr);
@@ -1425,7 +1463,7 @@ function renderDetail(id){
 
   const fromSel=$('#detail-from-year'),toSel=$('#detail-to-year');
   if(fromSel&&toSel){
-    fromSel.value=String(chartMinYear);
+    fromSel.value=String(minYear);
     toSel.value=String(maxYear);
     const updateRange=()=>{
       state.detailFromYear=Math.min(Number(fromSel.value),Number(toSel.value));
@@ -1435,7 +1473,7 @@ function renderDetail(id){
     fromSel.addEventListener('change',updateRange);
     toSel.addEventListener('change',updateRange);
     $('#detail-reset-years')?.addEventListener('click',()=>{
-      fromSel.value=String(chartMinYear);
+      fromSel.value=String(minYear);
       toSel.value=String(maxYear);
       updateRange();
     });
@@ -1604,6 +1642,8 @@ function syncRoute(){
     document.title=journal?`${journal.code} · Thông tin & Biểu đồ · VAST`:'Thông tin tạp chí · VAST';
     setFlightSections([
       {id:'info',elId:'journal-info',word:'THÔNG TIN'},
+      {id:'history',elId:'journal-history',word:'LỊCH SỬ'},
+      {id:'editors',elId:'journal-editors',word:'TỔNG BIÊN TẬP'},
       {id:'charts',elId:'journal-charts',word:'BIỂU ĐỒ'},
       {id:'data',elId:'journal-data',word:'SỐ LIỆU'},
       {id:'indexing',elId:'journal-indexing',word:'CHỈ MỤC'}
@@ -1666,13 +1706,24 @@ function wireEvents(){
   $('#papers-focus-year').addEventListener('change',e=>{state.papersFocusYear=Number(e.target.value);renderPapersSection();});
   $('#close-papers-tooltip').addEventListener('click',()=>{$('#papers-tooltip').hidden=true;});
 
+  document.addEventListener('click',e=>{
+    const link=e.target.closest('a[href^="#journal/"]');
+    if(!link||e.defaultPrevented||e.button!==0||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;
+    // The browser cannot resolve a journal route as an element ID, and an
+    // unchanged hash emits no hashchange when revisiting the current section.
+    if(link.hash===location.hash){
+      e.preventDefault();
+      syncRoute();
+    }
+  });
+
   window.addEventListener('hashchange',syncRoute);
 }
 
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022a'),fetch('data-scopus.json?v=20261022a')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022b'),fetch('data-scopus.json?v=20261022a')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     dashboard=await dRes.json();
     scopus=await sRes.json();

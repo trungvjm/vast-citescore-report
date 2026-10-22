@@ -1,0 +1,2367 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "id": "anniversary-2026",
+      "kind": "user-supplied-docx",
+      "title": "Kỷ yếu 20 năm xây dựng và phát triển Nhà xuất bản Khoa học tự nhiên và Công nghệ (2006–2026)",
+      "filename": "KỶ YẾU 20 NĂM.docx",
+      "sha256": "fb5402aad2aaf17a73e3934caa5c10fa55353359f7b8dce0421a54b060809aeb",
+      "section": "Phần II · 2.1. Hoạt động xuất bản tạp chí khoa học",
+      "locatorNote": "Số đoạn tham chiếu là thứ tự đoạn trong word/document.xml của tệp gốc, không phải số trang. Tài liệu gốc giữ nguyên và không được đăng toàn văn lên website."
+    },
+    {
+      "id": "amv-about",
+      "kind": "official-website",
+      "title": "Viện Toán học · Acta Mathematica Vietnamica · About the journal",
+      "url": "https://math.ac.vn/acta/about-the-journal",
+      "checkedAt": "2026-10-22"
+    },
+    {
+      "id": "amv-editors",
+      "kind": "official-website",
+      "title": "Viện Toán học · Acta Mathematica Vietnamica · Editorial board / Former Editors-in-Chief",
+      "url": "https://math.ac.vn/acta/editorial-board",
+      "checkedAt": "2026-10-22"
+    }
+  ],
+  "journals": [
+    {
+      "id": "vjm",
+      "summary": "Vietnam Journal of Mathematics thành lập năm 1973, tách từ Tập san Toán lý; do Giáo sư Lê Văn Thiêm sáng lập. Qua các lần đổi tên, từ 1995 mang tên hiện nay và xuất bản hoàn toàn bằng tiếng Anh.",
+      "events": [
+        {
+          "dateLabel": "1973",
+          "year": 1973,
+          "text": "Thành lập trên cơ sở tách từ Tập san Toán lý; Giáo sư Lê Văn Thiêm là người sáng lập.",
+          "sourceParagraphs": [
+            295
+          ],
+          "sourceSection": "VJM / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "Trước 1990",
+          "year": null,
+          "text": "Mang tên Tạp chí Toán học, xuất bản bằng tiếng Việt.",
+          "sourceParagraphs": [
+            295
+          ],
+          "sourceSection": "VJM / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1991",
+          "year": 1991,
+          "text": "Đổi tên thành Journal of Mathematics; xuất bản tiếng Việt hoặc tiếng Anh.",
+          "sourceParagraphs": [
+            295
+          ],
+          "sourceSection": "VJM / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1995 đến nay (theo tài liệu)",
+          "year": 1995,
+          "text": "Đổi tên thành Vietnam Journal of Mathematics và chuyển hoàn toàn sang tiếng Anh.",
+          "sourceParagraphs": [
+            295
+          ],
+          "sourceSection": "VJM / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "Cuối 1997–2005",
+          "year": 1997,
+          "text": "Hợp tác với Nhà xuất bản Springer.",
+          "sourceParagraphs": [
+            662
+          ],
+          "sourceSection": "VJM / IV. HỢP TÁC QUỐC TẾ",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2012 · 2022 · 2025",
+          "year": 2012,
+          "text": "Thỏa thuận ký ngày 17/01/2012 đưa tạp chí trở lại hợp tác xuất bản với Springer từ năm 2013; các thỏa thuận ngày 04/5/2022 và 01/4/2025 gia hạn lần lượt đến năm 2025 và 2027.",
+          "sourceParagraphs": [
+            663,
+            664,
+            665
+          ],
+          "sourceSection": "VJM / IV. Hợp tác quốc tế",
+          "sourceId": "anniversary-2026"
+        }
+      ],
+      "cautions": [],
+      "editors": [
+        {
+          "name": "Lê Văn Thiêm",
+          "appointments": [
+            {
+              "role": "Chủ nhiệm Tạp chí",
+              "tenure": "1973–giữa 1984",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                309,
+                311
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0310-le-van-thiem.webp",
+            "width": 369,
+            "height": 419,
+            "bytes": 21056,
+            "sha256": "9389284e68f2fcb91dbe97e077137f91fd548b5067c3271d00223ee7a7bd6982",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image5.jpeg",
+            "imageParagraph": 310,
+            "captionParagraph": 311,
+            "sourceImageSha256": "6385e6e03a0433f0d0b14ae78fffcdbc3610ea6e3d65f7c2fb72bae849dd770a",
+            "caption": "Giáo sư Lê Văn Thiêm (1918-1991) (nguồn: https://math.ac.vn/)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Hoàng Tụy",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "giữa 1984–giữa 1990",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                312,
+                314
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0313-hoang-tuy.webp",
+            "width": 374,
+            "height": 392,
+            "bytes": 45596,
+            "sha256": "db741da5fcc828362e4f378dd2b4c8f07f11d7a1e67f0b086c92dd7a568e910e",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image6.jpeg",
+            "imageParagraph": 313,
+            "captionParagraph": 314,
+            "sourceImageSha256": "8cf0f5fec5866dfa8dc294bf5469c14ffb01b1a13237d92bd2586e3bd740b6cf",
+            "caption": "Giáo sư Hoàng Tụy (1927-2019) (Nguồn: https://math.ac.vn)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Đinh Văn Huỳnh",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1990–1998",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                315,
+                317
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0316-dinh-van-huynh.webp",
+            "width": 480,
+            "height": 282,
+            "bytes": 14496,
+            "sha256": "7004f01a6933ce695f420cd3e0676d355dc04bc8e8e79513fe3ce44b0582f72b",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image7.jpeg",
+            "imageParagraph": 316,
+            "captionParagraph": 317,
+            "sourceImageSha256": "8ce43a3fcf617555acc0fccbe1350e2de78e75b5c3e0696fcd2b6e9fe138c4cb",
+            "caption": "Giáo sư Đinh Văn Huỳnh (Nguồn: https://www.ohio.edu)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Khoa Sơn",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1998–2011",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                318,
+                320
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0319-nguyen-khoa-son.webp",
+            "width": 247,
+            "height": 342,
+            "bytes": 15646,
+            "sha256": "d49d82ae78c61b236a72268940863f0b019b4fc9b9b587d8a229c3de31338feb",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image8.jpeg",
+            "imageParagraph": 319,
+            "captionParagraph": 320,
+            "sourceImageSha256": "9cff779a78d3155623a9c75b59eaf039aba9b21701f22105de6a7e025ae25d87",
+            "caption": "Giáo sư Nguyễn Khoa Sơn",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Hoàng Xuân Phú",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2011–2022",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                321,
+                323
+              ]
+            },
+            {
+              "role": "Tổng biên tập danh dự",
+              "tenure": "2023–2025; từ 9/2025 đến nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                324,
+                327,
+                323
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0322-hoang-xuan-phu.webp",
+            "width": 271,
+            "height": 331,
+            "bytes": 19028,
+            "sha256": "869eabec1fdf4ab109e7db896613f653f2fa55e80b992cdd7c7f93ffdd45ad38",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image9.jpeg",
+            "imageParagraph": 322,
+            "captionParagraph": 323,
+            "sourceImageSha256": "5677d1d1e7cbdf98e53f92bc93640f7dc53d03f18e9c336319442aa10e2ccb09",
+            "caption": "Giáo sư Hoàng Xuân Phú (Nguồn: https://math.ac.vn)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Lê Tuấn Hoa",
+          "appointments": [
+            {
+              "role": "Phó Tổng biên tập phụ trách",
+              "tenure": "2023–2025",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                324,
+                326
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0325-le-tuan-hoa.webp",
+            "width": 110,
+            "height": 141,
+            "bytes": 2956,
+            "sha256": "655c18a2e0f65017f21f9b480f6be5fa7a8ad6489d9ec08333f63a2caafa5fad",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image10.jpg",
+            "imageParagraph": 325,
+            "captionParagraph": 326,
+            "sourceImageSha256": "7645a97db048cb1b75e25045aec1b6b0593e29e5e9d2c8db83b675d9a9bd5fc6",
+            "caption": "Giáo sư Lê Tuấn Hoa (Nguồn: https://math.ac.vn)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Đoàn Thái Sơn",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "từ 9/2025 đến nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                327,
+                329
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0328-doan-thai-son.webp",
+            "width": 70,
+            "height": 105,
+            "bytes": 3490,
+            "sha256": "1230cbe282ce3428d19ec886d7d17c422bb0702cdf483cd43bf58075040d0c55",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image11.jpg",
+            "imageParagraph": 328,
+            "captionParagraph": 329,
+            "sourceImageSha256": "dc3a7d157789b601b5f0e72398c6a8f53be82be33498da9377e85fddbcf6f2ac",
+            "caption": "Giáo sư Đoàn Thái Sơn (Nguồn: https://math.ac.vn)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        }
+      ],
+      "sourceId": "anniversary-2026"
+    },
+    {
+      "id": "amv",
+      "sourceId": "amv-about",
+      "summary": "Tiền thân của Acta Mathematica Vietnamica ra số đầu năm 1964 và kết thúc ở Tập 10 năm 1974. Năm 1976, tạp chí mang tên hiện nay và bắt đầu lại từ Tập 1, do Viện Toán học xuất bản.",
+      "events": [
+        {
+          "dateLabel": "1964",
+          "year": 1964,
+          "text": "Ra số đầu dưới tên Acta Scientiarum Vietnamicarum, Sectio Scientiarum Mathematicarum et Physicarum, do Ban Toán và Vật lý thuộc Ủy ban Khoa học Nhà nước xuất bản.",
+          "sourceId": "amv-about",
+          "sourceParagraphs": [],
+          "sourceSection": "About the journal"
+        },
+        {
+          "dateLabel": "1974",
+          "year": 1974,
+          "text": "Ấn phẩm tiền thân xuất bản đến Tập 10.",
+          "sourceId": "amv-about",
+          "sourceParagraphs": [],
+          "sourceSection": "About the journal"
+        },
+        {
+          "dateLabel": "1976",
+          "year": 1976,
+          "text": "Đổi tên thành Acta Mathematica Vietnamica, bắt đầu từ Tập 1 và do Viện Toán học xuất bản.",
+          "sourceId": "amv-about",
+          "sourceParagraphs": [],
+          "sourceSection": "About the journal"
+        }
+      ],
+      "editors": [
+        {
+          "name": "Lê Văn Thiêm",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1964–1983",
+              "sourceId": "amv-editors",
+              "sourceParagraphs": []
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0310-le-van-thiem.webp",
+            "width": 369,
+            "height": 419,
+            "bytes": 21056,
+            "sha256": "9389284e68f2fcb91dbe97e077137f91fd548b5067c3271d00223ee7a7bd6982",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image5.jpeg",
+            "imageParagraph": 310,
+            "captionParagraph": 311,
+            "sourceImageSha256": "6385e6e03a0433f0d0b14ae78fffcdbc3610ea6e3d65f7c2fb72bae849dd770a",
+            "caption": "Giáo sư Lê Văn Thiêm (1918-1991) (nguồn: https://math.ac.vn/)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Hoàng Tụy",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1984–1990",
+              "sourceId": "amv-editors",
+              "sourceParagraphs": []
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0313-hoang-tuy.webp",
+            "width": 374,
+            "height": 392,
+            "bytes": 45596,
+            "sha256": "db741da5fcc828362e4f378dd2b4c8f07f11d7a1e67f0b086c92dd7a568e910e",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image6.jpeg",
+            "imageParagraph": 313,
+            "captionParagraph": 314,
+            "sourceImageSha256": "8cf0f5fec5866dfa8dc294bf5469c14ffb01b1a13237d92bd2586e3bd740b6cf",
+            "caption": "Giáo sư Hoàng Tụy (1927-2019) (Nguồn: https://math.ac.vn)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Ngô Việt Trung",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1991–2007",
+              "sourceId": "amv-editors",
+              "sourceParagraphs": []
+            }
+          ]
+        },
+        {
+          "name": "Nguyễn Tự Cường",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2008–2022",
+              "sourceId": "amv-editors",
+              "sourceParagraphs": []
+            }
+          ]
+        },
+        {
+          "name": "Đinh Nho Hào",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2022–2025",
+              "sourceId": "amv-editors",
+              "sourceParagraphs": []
+            }
+          ]
+        },
+        {
+          "name": "Đoàn Trung Cường",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "Hiện tại theo trang Viện Toán học",
+              "sourceId": "amv-editors",
+              "sourceParagraphs": []
+            }
+          ]
+        }
+      ],
+      "cautions": [
+        "AMV không có chương riêng trong phần 11 tạp chí do NXB quản lý của kỷ yếu. Lịch sử và danh sách Tổng biên tập được đối chiếu trực tiếp với website Viện Toán học; hai chân dung Lê Văn Thiêm và Hoàng Tụy lấy từ phần VJM của kỷ yếu, không dùng kỷ yếu làm nguồn nhiệm kỳ AMV."
+      ]
+    },
+    {
+      "id": "ansn",
+      "summary": "ANSN thành lập năm 2010 và từ khi ra đời hợp tác xuất bản với IOP Publishing.",
+      "events": [
+        {
+          "dateLabel": "2010",
+          "year": 2010,
+          "text": "Tạp chí được thành lập.",
+          "sourceParagraphs": [
+            674
+          ],
+          "sourceSection": "ANSN / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2010 đến nay (theo tài liệu)",
+          "year": 2010,
+          "text": "Chính thức hợp tác xuất bản với IOP Publishing (Vương quốc Anh).",
+          "sourceParagraphs": [
+            841
+          ],
+          "sourceSection": "ANSN / IV. HỢP TÁC QUỐC TẾ",
+          "sourceId": "anniversary-2026"
+        }
+      ],
+      "cautions": [],
+      "editors": [
+        {
+          "name": "Nguyễn Văn Hiệu",
+          "appointments": [
+            {
+              "role": "Tổng biên tập sáng lập",
+              "tenure": "2010–6/2017",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                688,
+                690
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0689-nguyen-van-hieu.webp",
+            "width": 173,
+            "height": 183,
+            "bytes": 5144,
+            "sha256": "a47ff6adb495c2928736daf20011b78543332721854ca7d40ae601d253d9c4ae",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image12.png",
+            "imageParagraph": 689,
+            "captionParagraph": 690,
+            "sourceImageSha256": "4b6965985fb3415a409c13296226da3ba403be262b7ec904c6f31cc99f4f57a2",
+            "caption": "GS.VS. Nguyễn Văn Hiệu",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Quang Liêm",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "7/2017 đến nay (theo tài liệu)",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                691
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0692-nguyen-quang-liem.webp",
+            "width": 480,
+            "height": 407,
+            "bytes": 16016,
+            "sha256": "fcf1fc8cd61aaaff8256127f3303591f77a4bc5bcbfa4f1ec7d91834b3cdaeb9",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image13.png",
+            "imageParagraph": 692,
+            "captionParagraph": 691,
+            "sourceImageSha256": "cb4fbde4dbb89857502b481a6a01b8b235d9337e8d9d251caccac9e6c00f1132",
+            "caption": "Giai đoạn 7/2017-nay: Tổng biên tập GS.TS. Nguyễn Quang Liêm; Phó Tổng biên tập TS. Nguyễn Thị Bích Hà",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        }
+      ],
+      "sourceId": "anniversary-2026"
+    },
+    {
+      "id": "vjc",
+      "summary": "Tập san Hóa học ra số đầu năm 1962, đổi tên thành Tạp chí Hóa học năm 1976. Tạp chí hợp tác Wiley-VCH từ 2018, chuyển hoàn toàn sang tiếng Anh năm 2019 và lấy tên Vietnam Journal of Chemistry năm 2024.",
+      "events": [
+        {
+          "dateLabel": "1962",
+          "year": 1962,
+          "text": "Tập san Hóa học xuất bản số đầu tiên.",
+          "sourceParagraphs": [
+            979
+          ],
+          "sourceSection": "VJC / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1976",
+          "year": 1976,
+          "text": "Đổi tên thành Tạp chí Hóa học.",
+          "sourceParagraphs": [
+            980
+          ],
+          "sourceSection": "VJC / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2018",
+          "year": 2018,
+          "text": "Chính thức hợp tác xuất bản với Wiley-VCH (Đức); từ số 1, tập 56, có tên trên nền tảng nhà xuất bản.",
+          "sourceParagraphs": [
+            982
+          ],
+          "sourceSection": "VJC / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2019",
+          "year": 2019,
+          "text": "Chuyển sang xuất bản hoàn toàn bằng tiếng Anh.",
+          "sourceParagraphs": [
+            983
+          ],
+          "sourceSection": "VJC / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2024",
+          "year": 2024,
+          "text": "Chuyển tên chính thức từ Tạp chí Hóa học thành Vietnam Journal of Chemistry.",
+          "sourceParagraphs": [
+            985
+          ],
+          "sourceSection": "VJC / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2018–2033",
+          "year": 2018,
+          "text": "Thỏa thuận Wiley-VCH gồm giai đoạn 2018–2023 và tiếp tục giai đoạn 2024–2033.",
+          "sourceParagraphs": [
+            1104
+          ],
+          "sourceSection": "VJC / 4.2. Hợp tác quốc tế",
+          "sourceId": "anniversary-2026"
+        }
+      ],
+      "cautions": [],
+      "editors": [
+        {
+          "name": "Nguyễn Hoán",
+          "appointments": [
+            {
+              "role": "Tổng biên tập đầu tiên",
+              "tenure": null,
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1000
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0999-nguyen-hoan.webp",
+            "width": 270,
+            "height": 210,
+            "bytes": 4952,
+            "sha256": "cd642a1c5bc78ed3d1ea78b8f22807c1fd3bc76d7a2e6acc3c82829eabe205bc",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image21.jpeg",
+            "imageParagraph": 999,
+            "captionParagraph": 1000,
+            "sourceImageSha256": "626ef50252278030cf3503c5146ed9c78cb060bd1d2d8d9d9f0eb9e53aa14461",
+            "caption": "GS.TS. Nguyễn Hoán - Tổng biên tập đầu tiên ",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Hồ Sĩ Thoảng",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1978–1993",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1002
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1001-ho-si-thoang.webp",
+            "width": 480,
+            "height": 389,
+            "bytes": 38712,
+            "sha256": "2ba8473ff3791e4da8581bc36c481295c01ae1eb42998e581f6d714d88da0d47",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image22.jpeg",
+            "imageParagraph": 1001,
+            "captionParagraph": 1002,
+            "sourceImageSha256": "bc14da9f1dae0f315f17a2ac64665321a58ef4030395b0441a6d6ea7f5773a78",
+            "caption": " GS.TSKH. Hồ Sĩ Thoảng - Tổng biên tập 1978-1993 ",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Đặng Văn Luyến",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1993–1997",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1003,
+                1005
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1004-dang-van-luyen.webp",
+            "width": 400,
+            "height": 286,
+            "bytes": 21052,
+            "sha256": "5424f6c8929806b22d3491b614daa089198da7be178826bf6dbfaa6e2b6551f3",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image23.jpeg",
+            "imageParagraph": 1004,
+            "captionParagraph": 1005,
+            "sourceImageSha256": "8fd549f0221c1a32f4fb1305166a169c086b08de3e6007f566a8c1b0bcaf6156",
+            "caption": "GS.TSKH. Đặng Văn Luyến",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Trần Vĩnh Diệu",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1997–2012",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1006,
+                1008
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1007-tran-vinh-dieu.webp",
+            "width": 427,
+            "height": 640,
+            "bytes": 27844,
+            "sha256": "9ecab7df75d409a0032ac225478b7773b9f12b924625c65a3042930694b7c83c",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image24.jpg",
+            "imageParagraph": 1007,
+            "captionParagraph": 1008,
+            "sourceImageSha256": "ce9221c2a12fcfa67f0690ddb3bdd3b431bcce4ae413655b38ebba07b0831596",
+            "caption": "GS.TSKH. Trần Vĩnh Diệu ",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Trần Văn Sung",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2012–2024",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1009,
+                1011
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1010-tran-van-sung.webp",
+            "width": 427,
+            "height": 640,
+            "bytes": 20346,
+            "sha256": "2e2fbc6e88cb57f2f4a64f7320fef9d750b7496aa0f17fc261455000a1be2a11",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image25.jpg",
+            "imageParagraph": 1010,
+            "captionParagraph": 1011,
+            "sourceImageSha256": "a2c84f85d003963839539ed0190603f180678176ff4f43d9a22f6fd07c56049c",
+            "caption": "GS.TSKH. Trần Văn Sung ",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Trần Đại Lâm",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2024 đến nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1012,
+                1014
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1013-tran-dai-lam.webp",
+            "width": 426,
+            "height": 640,
+            "bytes": 30764,
+            "sha256": "9ab242dff89f0a39ce7c45e2f8459ffefc0870793718fdf8fcd6007d96bdb768",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/imagea3.jpg",
+            "imageParagraph": 1013,
+            "captionParagraph": 1014,
+            "sourceImageSha256": "37ca1e519f244520f434e283731acde643d31a1488c3c10a6d5cc607ab98a414",
+            "caption": "GS.TS. Trần Đại Lâm - Tổng biên tập 2024-nay",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        }
+      ],
+      "sourceId": "anniversary-2026"
+    },
+    {
+      "id": "vjes",
+      "summary": "VJES ra đời năm 1979, kế tục các ấn phẩm tiền thân về sinh vật và địa học. Quốc tế hóa được đẩy mạnh từ 2014; từ 2017, bốn số hằng năm xuất bản hoàn toàn bằng tiếng Anh.",
+      "events": [
+        {
+          "dateLabel": "1960",
+          "year": 1960,
+          "text": "Tiền thân là Tập tài liệu Sinh vật - Địa học.",
+          "sourceParagraphs": [
+            859
+          ],
+          "sourceSection": "VJES / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1961–1975",
+          "year": 1961,
+          "text": "Kế tục Tập san Sinh vật - Địa học.",
+          "sourceParagraphs": [
+            859
+          ],
+          "sourceSection": "VJES / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1976–1978",
+          "year": 1976,
+          "text": "Ấn phẩm tiền nhiệm tiếp tục với tên Tạp chí Sinh vật - Địa học.",
+          "sourceParagraphs": [
+            859
+          ],
+          "sourceSection": "VJES / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1979",
+          "year": 1979,
+          "text": "VJES ra đời trên cơ sở kế tục các ấn phẩm trên.",
+          "sourceParagraphs": [
+            859
+          ],
+          "sourceSection": "VJES / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2014–2017",
+          "year": 2014,
+          "text": "Quốc tế hóa được đẩy mạnh từ 2014; từ 2017, cả bốn số thường niên xuất bản hoàn toàn bằng tiếng Anh.",
+          "sourceParagraphs": [
+            860
+          ],
+          "sourceSection": "VJES / I.1.1",
+          "sourceId": "anniversary-2026"
+        }
+      ],
+      "cautions": [],
+      "editors": [
+        {
+          "name": "Nguyễn Văn Chiển",
+          "appointments": [
+            {
+              "role": "Chủ nhiệm, sau đó Tổng biên tập đầu tiên",
+              "tenure": "1979–1990",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                877,
+                882
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0881-nguyen-van-chien.webp",
+            "width": 461,
+            "height": 347,
+            "bytes": 29248,
+            "sha256": "bc8ed9df24240dbc7b36c13b460e2abc046cb605e6a47564b17655d13c6a99eb",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image14.png",
+            "imageParagraph": 881,
+            "captionParagraph": 882,
+            "sourceImageSha256": "8578962af65880e9e3323926cf82c579f4bb88d22048f6ce582eb8620c1b9e85",
+            "caption": "GS.TS. Nguyễn Văn Chiển, Tổng biên tập đầu tiên (1979-1990) (Nguồn: Tạp chí Các Khoa học về Trái đất)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Lê Đức An",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1991–1995",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                877,
+                884
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0883-le-duc-an.webp",
+            "width": 330,
+            "height": 477,
+            "bytes": 15572,
+            "sha256": "6884f91ee7d31043dce31e57edb0351e1277331c41c7edadb6612710694c5d19",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image15.jpeg",
+            "imageParagraph": 883,
+            "captionParagraph": 884,
+            "sourceImageSha256": "f4a5b85032939c5ee807b74b915f7785d70448ff7c46b6c3d87cc115ba9f727b",
+            "caption": "GS.TSKH. Lê Đức An, Tổng Biên tập 1991-1995 (Ảnh Viện Các Khoa học Trái đất)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Thị Kim Thoa",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1996–2006",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                877,
+                886
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0885-nguyen-thi-kim-thoa.webp",
+            "width": 346,
+            "height": 520,
+            "bytes": 35516,
+            "sha256": "718a241af42e7ac062caabe8a793e16f3783ccce54979ebf4a5a1c9f026b7d7d",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image16.jpeg",
+            "imageParagraph": 885,
+            "captionParagraph": 886,
+            "sourceImageSha256": "38ad1a15a41dc2fae1a252ac8e8cbc060586c9ef84a7ff8a71ca06e709af71c4",
+            "caption": "GS.TSKH. Nguyễn Thị Kim Thoa, Tổng Biên tập 1996-2006 (Ảnh tác giả)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Trần Trọng Hòa",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2007–2016",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                877,
+                888
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0887-tran-trong-hoa.webp",
+            "width": 364,
+            "height": 520,
+            "bytes": 36264,
+            "sha256": "972bd108442000030abe4e25a339853b30b6e8696b0634778b7f954a5c5c98db",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image17.jpeg",
+            "imageParagraph": 887,
+            "captionParagraph": 888,
+            "sourceImageSha256": "fa75ce6647e9a3c74975b674236b32553ab826a53aeeff73194df007eb33991b",
+            "caption": "PGS.TSKH. Trần Trọng Hòa, Tổng biên tập 2007-2016 (Ảnh tác giả)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Phan Trọng Trịnh",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2016–2024",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                877,
+                878,
+                890
+              ]
+            },
+            {
+              "role": "Tổng biên tập danh dự, phụ trách biên tập",
+              "tenure": "từ số 1/2025 đến nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                878,
+                890
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0889-phan-trong-trinh.webp",
+            "width": 316,
+            "height": 476,
+            "bytes": 29466,
+            "sha256": "e7018e2316be7662e63b333441d69c315223ddf9d564515e7fe9a3774c5740b6",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image18.jpg",
+            "imageParagraph": 889,
+            "captionParagraph": 890,
+            "sourceImageSha256": "db5299085fadfbc1022512edf2aba887d7bc7557ccec81be9cc3fa77582c8d26",
+            "caption": "GS.TS. Phan Trọng Trịnh Tổng biên tập 2016-2024 (Ảnh tác giả)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Trần Tuấn Anh",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "từ số 1/2025 đến nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                878,
+                892
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p0891-tran-tuan-anh.webp",
+            "width": 426,
+            "height": 640,
+            "bytes": 26668,
+            "sha256": "7bc1900dbe77a61a7bed81e39434003158261636b1d870893454b86b8b028f7d",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image19.jpg",
+            "imageParagraph": 891,
+            "captionParagraph": 892,
+            "sourceImageSha256": "1b90da455850a920915cbe5fc9e034093174f335ce55b2e99163d3c71ef9e899",
+            "caption": "GS.TS. Trần Tuấn Anh, Tổng biên tập từ năm 2025 đến nay (Ảnh tác giả)",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        }
+      ],
+      "sourceId": "anniversary-2026"
+    },
+    {
+      "id": "vjst",
+      "summary": "VJST thành lập năm 1962 với tên Tập san Khoa học Kỹ thuật, đổi thành Tạp chí Khoa học Kỹ thuật năm 1978. Tạp chí bắt đầu hội nhập quốc tế trong tổ chức và quản trị năm 2013, rồi chuyển hoàn toàn sang tiếng Anh dưới tên hiện nay tháng 7/2017.",
+      "events": [
+        {
+          "dateLabel": "1962",
+          "year": 1962,
+          "text": "Thành lập theo quyết định của Phủ Thủ tướng với tên Tập san Khoa học Kỹ thuật; KS. Lê Khắc làm Chủ nhiệm.",
+          "sourceParagraphs": [
+            1185
+          ],
+          "sourceSection": "VJST / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "Tháng 11/1978",
+          "year": 1978,
+          "text": "Đổi tên thành Tạp chí Khoa học Kỹ thuật, giao Viện Khoa học Việt Nam quản lý; Lê Khắc tiếp tục làm Tổng biên tập.",
+          "sourceParagraphs": [
+            1185
+          ],
+          "sourceSection": "VJST / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2013",
+          "year": 2013,
+          "text": "Bắt đầu từng bước hội nhập quốc tế trong tổ chức Hội đồng biên tập và phương thức quản trị.",
+          "sourceParagraphs": [
+            1187
+          ],
+          "sourceSection": "VJST / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "Tháng 7/2017",
+          "year": 2017,
+          "text": "Chuyển hoàn toàn sang tiếng Anh dưới tên Vietnam Journal of Science and Technology.",
+          "sourceParagraphs": [
+            1187
+          ],
+          "sourceSection": "VJST / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2019",
+          "year": 2019,
+          "text": "Đại diện De Gruyter trao đổi kinh nghiệm về nâng cấp và chuẩn bị hồ sơ; không phải thỏa thuận xuất bản.",
+          "sourceParagraphs": [
+            1263
+          ],
+          "sourceSection": "VJST / IV. HỢP TÁC QUỐC TẾ",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2025",
+          "year": 2025,
+          "text": "Ký biên bản hợp tác với Pensoft (Bulgaria) về phản biện, biên tập và xuất bản bài báo.",
+          "sourceParagraphs": [
+            2711
+          ],
+          "sourceSection": "ẢNH HOẠT ĐỘNG / Vietnam Journal of Science and Technology",
+          "sourceId": "anniversary-2026"
+        }
+      ],
+      "cautions": [],
+      "editors": [
+        {
+          "name": "Lê Khắc",
+          "appointments": [
+            {
+              "role": "Chủ nhiệm, sau đó Tổng biên tập",
+              "tenure": "1962–1983",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1185,
+                1202,
+                1204
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1203-le-khac.webp",
+            "width": 480,
+            "height": 553,
+            "bytes": 33434,
+            "sha256": "5609c8c4e6cff7403bf8d660590008cf14c56b499bbc114f273c28d0ec298426",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image32.png",
+            "imageParagraph": 1203,
+            "captionParagraph": 1204,
+            "sourceImageSha256": "49d501761c2935ac0cf3abc4c28cb41ead9d2d4f193f029e2c115d8d9c44a35e",
+            "caption": "Kỹ sư Lê Khắc",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Vũ Đình Cự",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1984–1991",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1185,
+                1205,
+                1207
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1206-vu-dinh-cu.webp",
+            "width": 480,
+            "height": 576,
+            "bytes": 37338,
+            "sha256": "f71f4b155d239a794c4cb179c9c80975dd8576e207c2a64dd25b96c05d02fbe8",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image33.png",
+            "imageParagraph": 1206,
+            "captionParagraph": 1207,
+            "sourceImageSha256": "6725c26c9c68db67245d5a37cc1828a5f4fbfe73e394a557dbb201c0a3503dda",
+            "caption": "GS.TSKH. Vũ Đình Cự",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Hồ Sĩ Thoảng",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1992–1995",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1208,
+                1210
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1209-ho-si-thoang.webp",
+            "width": 480,
+            "height": 599,
+            "bytes": 37272,
+            "sha256": "1d68d4f9ea1e2fe423cd294b0125c092797c52227b4a4ae23b67797c5fba8380",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image34.png",
+            "imageParagraph": 1209,
+            "captionParagraph": 1210,
+            "sourceImageSha256": "28f0d06609218d5bfd4ee5b134e9f7133fbaab39fcf979252177375b402903e8",
+            "caption": "GS.TSKH. Hồ Sĩ Thoảng",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Lê Văn Nhương",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1996–2005",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1211,
+                1213
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1212-le-van-nhuong.webp",
+            "width": 240,
+            "height": 288,
+            "bytes": 14922,
+            "sha256": "911401fa5dab0997eba51e647557326db5a52d8f4db0fb6d0d7c6175e976a112",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image35.png",
+            "imageParagraph": 1212,
+            "captionParagraph": 1213,
+            "sourceImageSha256": "f833764da5b1f56cd7613d1c04d0ef749dfd7171aac18a9e13f828cfb65f6bf4",
+            "caption": "GS.TSKH. Lê Văn Nhương",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Xuân Nguyên",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2005–2010",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1214,
+                1216
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1215-nguyen-xuan-nguyen.webp",
+            "width": 480,
+            "height": 557,
+            "bytes": 26072,
+            "sha256": "80b7a51c6af0bb71884a98cb9ca34ac80bb07419f6624d95a1ce70ed2bbbadaf",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image36.png",
+            "imageParagraph": 1215,
+            "captionParagraph": 1216,
+            "sourceImageSha256": "5fb86ae6124a46a818bce28a8504302bf89d58baa68d1fdd4f92bc7ce5b2cfdf",
+            "caption": "GS.TSKH. Nguyễn Xuân Nguyên",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Xuân Phúc",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2011–2020",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1217,
+                1220,
+                1219
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1218-nguyen-xuan-phuc.webp",
+            "width": 480,
+            "height": 569,
+            "bytes": 20202,
+            "sha256": "0f775faecebbde521683b873bb9e8a8d2399bb31e5af8ca401cb0c634e683df9",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image37.png",
+            "imageParagraph": 1218,
+            "captionParagraph": 1219,
+            "sourceImageSha256": "e4c1f32cdb2fc77524a83784247d94acd6cb296692231c9cdc8f64bd72353579",
+            "caption": "GS.TSKH. Nguyễn Xuân Phúc",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Thái Hoàng",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2020 đến nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1221,
+                1223
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1222-thai-hoang.webp",
+            "width": 362,
+            "height": 434,
+            "bytes": 11832,
+            "sha256": "d1f72ce420795f89e331c8c506d6e2ad1215f396f2a713a6c09b6ed4174133d2",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image38.jpeg",
+            "imageParagraph": 1222,
+            "captionParagraph": 1223,
+            "sourceImageSha256": "22e60349be5e4332c83ebe6de81af703a572ee2347089a8b7e7092ff94b36912",
+            "caption": "GS.TS. Thái Hoàng",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        }
+      ],
+      "sourceId": "anniversary-2026"
+    },
+    {
+      "id": "cip",
+      "summary": "CIP phát triển từ Tập san Toán – Lý thành lập năm 1962. Phần vật lý trở thành Tạp chí Vật lý năm 1976; năm 1991 đổi thành Communications in Physics và xuất bản hoàn toàn bằng tiếng Anh.",
+      "events": [
+        {
+          "dateLabel": "1962",
+          "year": 1962,
+          "text": "Tập san Toán – Lý, tiền thân của CIP, được thành lập để công bố nghiên cứu toán học và vật lý.",
+          "sourceParagraphs": [
+            1284
+          ],
+          "sourceSection": "CIP / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1976",
+          "year": 1976,
+          "text": "Phần vật lý của Tập san Toán – Lý phát triển thành Tạp chí Vật lý, xuất bản bằng tiếng Việt với tóm tắt tiếng Anh, Nga và Pháp.",
+          "sourceParagraphs": [
+            1285
+          ],
+          "sourceSection": "CIP / I.1.1",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1991",
+          "year": 1991,
+          "text": "Viện Khoa học Việt Nam đổi tên Tạp chí Vật lý thành Communications in Physics; từ đó xuất bản hoàn toàn bằng tiếng Anh hàng quý.",
+          "sourceParagraphs": [
+            1286
+          ],
+          "sourceSection": "CIP / I.1.1",
+          "sourceId": "anniversary-2026"
+        }
+      ],
+      "cautions": [
+        "P1324 ghi nhiệm kỳ ‘1191-2010’ và P1327 ghi ‘1991-20’; hai mốc lỗi/khuyết không được suy diễn. Các mốc chỉ mục bị loại theo chỉ dẫn dùng nguồn dashboard riêng."
+      ],
+      "editors": [
+        {
+          "name": "Đào Vọng Đức",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": null,
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1324,
+                1326
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1325-dao-vong-duc.webp",
+            "width": 212,
+            "height": 148,
+            "bytes": 9326,
+            "sha256": "ee1dc7145cf01a9155b8f6778404f24395a24df580143c265eaa0e98d9819700",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image41.jpeg",
+            "imageParagraph": 1325,
+            "captionParagraph": 1326,
+            "sourceImageSha256": "7a19ed39ab543c8cbfc131d03da6e28bacac43dff7e172a248dec8defd4cf8b7",
+            "caption": "GS.VS. Đào Vọng Đức",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Toàn Thắng",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": null,
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1327,
+                1329
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1328-nguyen-toan-thang.webp",
+            "width": 158,
+            "height": 203,
+            "bytes": 5440,
+            "sha256": "318901b933c460ce74cbc2072a0e5f2a6f22cd00581dacb0a4acf5cfafe163c3",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image42.jpeg",
+            "imageParagraph": 1328,
+            "captionParagraph": 1329,
+            "sourceImageSha256": "919c95e83623dc7aae6bf0dfe414c7afc41d5bdaa275ca014a69fc3e0da2641c",
+            "caption": "GS.TS. Nguyễn Toàn Thắng",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Đại Hưng",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2011–2025",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1330,
+                1332
+              ]
+            },
+            {
+              "role": "Tổng biên tập danh dự",
+              "tenure": "từ 9/2025 đến nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1333,
+                1336
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1331-nguyen-dai-hung.webp",
+            "width": 306,
+            "height": 433,
+            "bytes": 10834,
+            "sha256": "bc1bdf838960dfd95910701426a7bbcecdadbe533441195a4af34601b9ed486c",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image43.jpeg",
+            "imageParagraph": 1331,
+            "captionParagraph": 1332,
+            "sourceImageSha256": "ac01d9c36f59043c5140651db2db2903d7d69f94274f52e50067231a6be857bc",
+            "caption": "GS.TS. Nguyễn Đại Hưng",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Thanh Bình",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "từ 9/2025 đến nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1333,
+                1337
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1335-nguyen-thanh-binh.webp",
+            "width": 282,
+            "height": 387,
+            "bytes": 8596,
+            "sha256": "d594b10010891ebf0f18035ad0f1de688fe352df18440ec7198ad869f98c328a",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image44.jpeg",
+            "imageParagraph": 1335,
+            "captionParagraph": 1337,
+            "sourceImageSha256": "4f366e2ad943eb49e3d90a08a40e1cfd1cd789b88e17e51da4bdbe96294db0d7",
+            "caption": "Tổng biên tậpPGS.TS. Nguyễn Thanh Bình",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        }
+      ],
+      "sourceId": "anniversary-2026"
+    },
+    {
+      "id": "vjmech",
+      "summary": "Thành lập năm 1979 với tên Tạp chí Cơ học, tạp chí đổi tên thành Vietnam Journal of Mechanics và xuất bản hoàn toàn bằng tiếng Anh từ năm 1999. Từ năm 2013, tạp chí đẩy mạnh xuất bản trực tuyến và mở rộng hợp tác quốc tế.",
+      "events": [
+        {
+          "dateLabel": "1979",
+          "year": 1979,
+          "text": "Thành lập và xuất bản số đầu tiên với tên Tạp chí Cơ học; GS.VS. Nguyễn Văn Đạo góp phần đặt nền móng cho tạp chí.",
+          "sourceParagraphs": [
+            1450,
+            1451
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF MECHANICS / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1979–1998",
+          "year": null,
+          "text": "Chủ yếu xuất bản bằng tiếng Việt, công bố nghiên cứu cơ bản và ứng dụng trong lĩnh vực cơ học.",
+          "sourceParagraphs": [
+            1452
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF MECHANICS / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1999",
+          "year": 1999,
+          "text": "Đổi tên thành Vietnam Journal of Mechanics và bắt đầu xuất bản hoàn toàn bằng tiếng Anh.",
+          "sourceParagraphs": [
+            1453
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF MECHANICS / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "Từ năm 2013",
+          "year": 2013,
+          "text": "Áp dụng phản biện kín hai chiều, phát triển xuất bản trực tuyến và mở rộng Hội đồng biên tập quốc tế.",
+          "sourceParagraphs": [
+            1454
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF MECHANICS / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        }
+      ],
+      "cautions": [
+        "Kỷ yếu ghi năm thành lập là 1979 ở mục 1.1, nhưng nhiệm kỳ đầu của Nguyễn Văn Đạo được ghi 1976–2006 ở mục 2.1. Hai mốc chưa thống nhất; website giữ nguyên cách ghi của nguồn kèm lưu ý, không tự sửa thành một năm khác."
+      ],
+      "editors": [
+        {
+          "name": "Nguyễn Văn Đạo",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "1976–2006 (mốc đầu chưa thống nhất trong kỷ yếu)",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1473,
+                1475
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1474-nguyen-van-dao.webp",
+            "width": 357,
+            "height": 519,
+            "bytes": 25984,
+            "sha256": "6c1a4eb90d51086320f061c6b0d3b3d0a18f26fac1eb361f7d769d3fd05fc2e8",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image46.jpeg",
+            "imageParagraph": 1474,
+            "captionParagraph": 1475,
+            "sourceImageSha256": "869f532119c709ca13c15c8595d16c5759240e9481e2a72d0b2bdc411e80ab26",
+            "caption": "GS.VS. Nguyễn Văn Đạo",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Văn Điệp",
+          "appointments": [
+            {
+              "role": "Phó Tổng biên tập (phụ trách)",
+              "tenure": "2007-2008",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1477,
+                1479
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1478-nguyen-van-diep.webp",
+            "width": 243,
+            "height": 294,
+            "bytes": 7922,
+            "sha256": "c8b3174d2cf7dcaa126734e4a18fbc99f33e4f88061c24629e1eece784815a8c",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image47.png",
+            "imageParagraph": 1478,
+            "captionParagraph": 1479,
+            "sourceImageSha256": "b7ec489c307ac9e640c46c0f366020f456d6e4bd9e95d18d7057ed052046229f",
+            "caption": "GS.TSKH. Nguyễn Văn Điệp ",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Đông Anh",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2008-2020",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1481,
+                1483
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1482-nguyen-dong-anh.webp",
+            "width": 291,
+            "height": 433,
+            "bytes": 29232,
+            "sha256": "0aedb338c93439fe221a161d95392a88ffb128318d6f67b178c3e970b94b4a99",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image48.jpeg",
+            "imageParagraph": 1482,
+            "captionParagraph": 1483,
+            "sourceImageSha256": "e6cd87e38247eed8a3c634028fb511ecb743c04d75b348f3aff09283036ab470",
+            "caption": "GS.TSKH. Nguyễn Đông Anh",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Tiến Khiêm",
+          "appointments": [
+            {
+              "role": "Phó Tổng biên tập phụ trách",
+              "tenure": "2021-2025",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1485,
+                1487
+              ]
+            },
+            {
+              "role": "Tổng biên tập danh dự",
+              "tenure": "2025-nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1489
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1486-nguyen-tien-khiem.webp",
+            "width": 480,
+            "height": 320,
+            "bytes": 25418,
+            "sha256": "5e01fbca9aa1db85996832d03c5719dba1f67dcfa6ca6a8f5d408b8fd20a1bba",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image49.jpg",
+            "imageParagraph": 1486,
+            "captionParagraph": 1487,
+            "sourceImageSha256": "10edc0451198f79a8f0149c70ac5e481c8c7633ce63f6d4bfd3cd17e0e7a3b9a",
+            "caption": "GS.TSKH. Nguyễn Tiến Khiêm",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Phạm Hồng Công",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2025-nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1489,
+                1491
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1490-pham-hong-cong.webp",
+            "width": 413,
+            "height": 503,
+            "bytes": 48234,
+            "sha256": "91ae233bb638733e8096013eef81ae88d80856f66895f57eac2d941a15ee6bc1",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image50.jpeg",
+            "imageParagraph": 1490,
+            "captionParagraph": 1491,
+            "sourceImageSha256": "a288d85003399d6f67161282dd432f0edf7273797bc684bfb93243594a5bdde8",
+            "caption": "TS. Phạm Hồng Công",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        }
+      ],
+      "sourceId": "anniversary-2026"
+    },
+    {
+      "id": "jcc",
+      "summary": "Tạp chí Tin học và Điều khiển học được thành lập năm 1985. Các giai đoạn phát triển gồm chuẩn hóa phản biện, mở rộng bài báo tiếng Anh và triển khai quản lý xuất bản trực tuyến.",
+      "events": [
+        {
+          "dateLabel": "1985",
+          "year": 1985,
+          "text": "Thành lập theo quyết định của Chủ tịch Viện Khoa học Việt Nam với tên Tạp chí Tin học và Điều khiển học.",
+          "sourceParagraphs": [
+            1552,
+            1556
+          ],
+          "sourceSection": "JOURNAL OF COMPUTER SCIENCE AND CYBERNETICS / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và các mốc phát triển quan trọng",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1985–1995",
+          "year": null,
+          "text": "Xuất bản bằng tiếng Việt, tập trung vào toán tin, lý thuyết điều khiển, xử lý tín hiệu và ứng dụng tin học.",
+          "sourceParagraphs": [
+            1558
+          ],
+          "sourceSection": "JOURNAL OF COMPUTER SCIENCE AND CYBERNETICS / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và các mốc phát triển quan trọng",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1996–2005",
+          "year": null,
+          "text": "Ổn định định kỳ xuất bản, thiết lập phản biện kín và bắt đầu nhận bài báo bằng tiếng Anh.",
+          "sourceParagraphs": [
+            1559
+          ],
+          "sourceSection": "JOURNAL OF COMPUTER SCIENCE AND CYBERNETICS / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và các mốc phát triển quan trọng",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2006–2015",
+          "year": null,
+          "text": "Tăng bài viết bằng tiếng Anh, thu hút tác giả quốc tế và đăng ký ISSN cho bản in.",
+          "sourceParagraphs": [
+            1560
+          ],
+          "sourceSection": "JOURNAL OF COMPUTER SCIENCE AND CYBERNETICS / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và các mốc phát triển quan trọng",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2016–2020",
+          "year": null,
+          "text": "Triển khai hệ thống quản lý xuất bản trực tuyến OJS và mã định danh eISSN.",
+          "sourceParagraphs": [
+            1561
+          ],
+          "sourceSection": "JOURNAL OF COMPUTER SCIENCE AND CYBERNETICS / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và các mốc phát triển quan trọng",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2021–nay",
+          "year": 2021,
+          "text": "Tổ chức phản biện kín hai chiều, gán DOI qua Crossref và mở rộng Hội đồng biên tập quốc tế.",
+          "sourceParagraphs": [
+            1562
+          ],
+          "sourceSection": "JOURNAL OF COMPUTER SCIENCE AND CYBERNETICS / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và các mốc phát triển quan trọng",
+          "sourceId": "anniversary-2026"
+        }
+      ],
+      "cautions": [
+        "Kỷ yếu liệt kê các Tổng biên tập theo thứ tự thời kỳ nhưng không ghi nhiệm kỳ cụ thể cho phần lớn lãnh đạo; website không tự điền khoảng năm.",
+        "Các mục 1.1, 1.4 và 3.2 chưa thống nhất về thời điểm chuyển hoàn toàn sang tiếng Anh. Vì vậy, lịch sử ở đây không khẳng định một năm chuyển đổi duy nhất."
+      ],
+      "editors": [
+        {
+          "name": "Phan Đình Diệu",
+          "appointments": [
+            {
+              "role": "Tổng biên tập (thời kỳ đầu)",
+              "tenure": null,
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1590,
+                1599
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1597-phan-dinh-dieu.webp",
+            "width": 196,
+            "height": 261,
+            "bytes": 6492,
+            "sha256": "44a3345ccfb824b908f421f7e3dea993f748608da51d48355b6f2fab823adf3b",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image56.jpg",
+            "imageParagraph": 1597,
+            "captionParagraph": 1599,
+            "sourceImageSha256": "63288a5d83979c34f5d2866b58f1ea9d25d2c7e9310ef2602a5bcf593a7cb9c4",
+            "caption": "GS.TSKH. Phan Đình Diệu",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Bạch Hưng Khang",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": null,
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1591,
+                1600
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1598-bach-hung-khang.webp",
+            "width": 192,
+            "height": 255,
+            "bytes": 8024,
+            "sha256": "ae0887ba9bb1e3486496bb3dfe9f95c454a5c4e35f2315a23ed4bdfc1f8321cb",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image57.jpg",
+            "imageParagraph": 1598,
+            "captionParagraph": 1600,
+            "sourceImageSha256": "4b1526265f6c71b1955dc854519f949e167ceb92bc07a5da7060825cba8b2121",
+            "caption": "GS.TSKH. Bạch Hưng Khang",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Lê Hải Khôi",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": null,
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1592,
+                1603
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1601-le-hai-khoi.webp",
+            "width": 188,
+            "height": 253,
+            "bytes": 8632,
+            "sha256": "1c8ca55ed2ee00ebfd7f8dd48b5ca22cfd3503757cc7b615fb2042b7bbbb5da1",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image58.jpg",
+            "imageParagraph": 1601,
+            "captionParagraph": 1603,
+            "sourceImageSha256": "6471cb728e56cbd9062c052eb1837c539ca1cf111e23dc950640c9ec9da52e0b",
+            "caption": "PGS.TS. Lê Hải Khôi",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Phạm Thượng Cát",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": null,
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1593,
+                1604
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Đặng Quang Á",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": null,
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1594,
+                1607
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1605-dang-quang-a.webp",
+            "width": 453,
+            "height": 585,
+            "bytes": 72376,
+            "sha256": "4c965ac425fd1a781b7771454dfa1dc9a714d6a2e9e5b7265222ab33ea5f7838",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image59.jpg",
+            "imageParagraph": 1605,
+            "captionParagraph": 1607,
+            "sourceImageSha256": "95fb2170b6419f3e74b49706679d8f360f98b76383c587c1999d406d26261564",
+            "caption": "GS.TS. Đặng Quang Á",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Long Giang",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "hiện nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1595,
+                1608
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1606-nguyen-long-giang.webp",
+            "width": 426,
+            "height": 640,
+            "bytes": 50320,
+            "sha256": "df0cca843b868408f84e0ad81abe5d49b749e4e8f05fd099aa6e6513473ccc80",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image60.jpg",
+            "imageParagraph": 1606,
+            "captionParagraph": 1608,
+            "sourceImageSha256": "20a95a27658388c2f2313061946b8c39c23b2db0629344baec09066494f2510c",
+            "caption": "PGS.TS Nguyễn Long Giang",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        }
+      ],
+      "sourceId": "anniversary-2026"
+    },
+    {
+      "id": "ajb",
+      "summary": "Tạp chí Sinh học được thành lập theo quyết định năm 1978 và xuất bản số đầu tiên năm 1979. Sau giai đoạn xuất bản song song bằng tiếng Việt và tiếng Anh, từ năm 2021 tạp chí mang tên Academia Journal of Biology và xuất bản bằng tiếng Anh.",
+      "events": [
+        {
+          "dateLabel": "1978–1979",
+          "year": 1978,
+          "text": "Thành lập theo Quyết định số 561/QĐ ngày 19/10/1978 của Viện Khoa học Việt Nam (nay là VAST) và xuất bản số đầu tiên vào năm 1979 với tên gọi Tạp chí Sinh học, ISSN 0866-7160, duy trì định kỳ thường xuyên 4 số/năm.",
+          "sourceParagraphs": [
+            1799
+          ],
+          "sourceSection": "ACADEMIA JOURNAL OF BIOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "1979–2017",
+          "year": null,
+          "text": "Hầu hết các bài báo đăng trong Tạp chí Sinh học được xuất bản bằng tiếng Việt kèm phần tóm tắt bằng tiếng Anh, phục vụ công bố nghiên cứu sinh học cơ bản và ứng dụng.",
+          "sourceParagraphs": [
+            1799
+          ],
+          "sourceSection": "ACADEMIA JOURNAL OF BIOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2018–2020",
+          "year": null,
+          "text": "Thực hiện giai đoạn chuyển tiếp xuất bản song hành: mỗi năm phát hành 2 số bằng tiếng Việt với tóm tắt tiếng Anh (tên Tạp chí Sinh học) và 2 số hoàn toàn bằng tiếng Anh (tên Academia Journal of Biology).",
+          "sourceParagraphs": [
+            1799
+          ],
+          "sourceSection": "ACADEMIA JOURNAL OF BIOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "Từ năm 2021",
+          "year": 2021,
+          "text": "Chính thức đổi tên thành Academia Journal of Biology và chuyển sang xuất bản hoàn toàn 4 số/năm bằng tiếng Anh với mã số mới (ISSN print: 2615-9023, ISSN online: 2815-5920), ngừng xuất bản các số tiếng Việt trong hệ thống.",
+          "sourceParagraphs": [
+            1799
+          ],
+          "sourceSection": "ACADEMIA JOURNAL OF BIOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "Giai đoạn hợp tác quốc tế",
+          "year": null,
+          "text": "Thiết lập quan hệ hợp tác quốc tế với EBSCO Publishing (Hoa Kỳ) để phân phối ấn phẩm toàn cầu và hợp tác với DDBJ Center (Viện Di truyền Quốc gia Nhật Bản) tổ chức Hội thảo song phương Việt - Nhật về sinh học và tài nguyên.",
+          "sourceParagraphs": [
+            1971
+          ],
+          "sourceSection": "ACADEMIA JOURNAL OF BIOLOGY / IV. HỢP TÁC QUỐC TẾ",
+          "sourceId": "anniversary-2026"
+        }
+      ],
+      "cautions": [
+        "Mục Ban lãnh đạo trong kỷ yếu chỉ trình bày từ năm 2006, không có danh sách đầy đủ cho giai đoạn trước đó.",
+        "Nguồn đặt chân dung Đặng Ngọc Thanh dưới mục Ban lãnh đạo giai đoạn 2006–2010 nhưng không ghi rõ chức danh; website không tự gán chức danh Tổng biên tập."
+      ],
+      "editors": [
+        {
+          "name": "Đặng Ngọc Thanh",
+          "appointments": [
+            {
+              "role": "Lãnh đạo tạp chí (theo mục Ban lãnh đạo)",
+              "tenure": "2006-2010",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1851,
+                1853
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1852-dang-ngoc-thanh.webp",
+            "width": 427,
+            "height": 640,
+            "bytes": 34228,
+            "sha256": "70f66911af7a4c23530c97c5f2c4705959f062d3d6172f628fa778f127f44bb8",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image61.jpeg",
+            "imageParagraph": 1852,
+            "captionParagraph": 1853,
+            "sourceImageSha256": "37c6e1b49b77f5c2b388e0e4cbf1fd5a15c8cb76a1afb6d7fa6d5d1d647848d5",
+            "caption": "GS.TSKH. Đặng Ngọc Thanh",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Khuất Đăng Long",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2011-2021",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1855,
+                1857
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1856-khuat-dang-long.webp",
+            "width": 480,
+            "height": 334,
+            "bytes": 23156,
+            "sha256": "49fd94b464426c338e9cfa7eac8b674bbe3865daef22206125799c55eaab5aca",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image62.jpeg",
+            "imageParagraph": 1856,
+            "captionParagraph": 1857,
+            "sourceImageSha256": "c16128d7fa85d0e678dfe089b55e412e02190c2a8032472e66efd6fc28890c11",
+            "caption": "PGS.TS. Khuất Đăng Long",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Trương Xuân Lam",
+          "appointments": [
+            {
+              "role": "Phó Tổng biên tập phụ trách",
+              "tenure": "2021-nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                1859,
+                1861
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p1860-truong-xuan-lam.webp",
+            "width": 441,
+            "height": 640,
+            "bytes": 23528,
+            "sha256": "e6c4aadb66c18004ad5e3c6f667b87190fc57db2fd18741a02ea28feb3e48828",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image63.jpeg",
+            "imageParagraph": 1860,
+            "captionParagraph": 1861,
+            "sourceImageSha256": "0960e5d8436cb74fa6f1999b07d528e1b3fdbcacc5345f684c381870d42f5bc6",
+            "caption": "GS.TS. Trương Xuân Lam",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        }
+      ],
+      "sourceId": "anniversary-2026"
+    },
+    {
+      "id": "vjmst",
+      "summary": "Thành lập năm 2001 với tên Tạp chí Khoa học và Công nghệ Biển, tạp chí triển khai xuất bản trực tuyến từ năm 2010. Tên tiếng Anh đổi thành Vietnam Journal of Marine Science and Technology năm 2019; từ năm 2022 xuất bản hoàn toàn bằng tiếng Anh.",
+      "events": [
+        {
+          "dateLabel": "2001",
+          "year": 2001,
+          "text": "Thành lập theo Quyết định của Giám đốc Trung tâm Khoa học tự nhiên và Công nghệ Quốc gia (nay là VAST) với tên tiếng Anh ban đầu là Journal of Marine Science and Technology, dưới sự dẫn dắt của PGS.TSKH. Nguyễn Tác An, Tổng biên tập đầu tiên.",
+          "sourceParagraphs": [
+            1992,
+            1995
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF MARINE SCIENCE AND TECHNOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2006",
+          "year": 2006,
+          "text": "Tăng dung lượng mỗi số từ 64 lên 96 trang.",
+          "sourceParagraphs": [
+            1996
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF MARINE SCIENCE AND TECHNOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2010",
+          "year": 2010,
+          "text": "Đưa vào vận hành hệ thống quản lý và xuất bản trực tuyến OJS.",
+          "sourceParagraphs": [
+            1999
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF MARINE SCIENCE AND TECHNOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2014",
+          "year": 2014,
+          "text": "Đăng ký và gán DOI cho các bài báo; tham gia dự án nâng cao chất lượng tạp chí do Viện Hàn lâm triển khai.",
+          "sourceParagraphs": [
+            1998,
+            2000
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF MARINE SCIENCE AND TECHNOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2019",
+          "year": 2019,
+          "text": "Đổi tên tiếng Anh từ Journal of Marine Science and Technology thành Vietnam Journal of Marine Science and Technology.",
+          "sourceParagraphs": [
+            2001
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF MARINE SCIENCE AND TECHNOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2022",
+          "year": 2022,
+          "text": "Xuất bản hoàn toàn bằng tiếng Anh từ số đầu năm 2022.",
+          "sourceParagraphs": [
+            2004,
+            2015
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF MARINE SCIENCE AND TECHNOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2026",
+          "year": 2026,
+          "text": "Triển khai xuất bản trực tuyến sớm (Early View/Online First) trước khi bài báo được xếp vào số chính thức.",
+          "sourceParagraphs": [
+            2157,
+            2163
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF MARINE SCIENCE AND TECHNOLOGY / III. HOẠT ĐỘNG XUẤT BẢN / 3.2. Thống kê hoạt động biên tập",
+          "sourceId": "anniversary-2026"
+        }
+      ],
+      "cautions": [],
+      "editors": [
+        {
+          "name": "Nguyễn Tác An",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2001-2010",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                2025,
+                2027
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p2026-nguyen-tac-an.webp",
+            "width": 480,
+            "height": 640,
+            "bytes": 19434,
+            "sha256": "c6369e6b6be7cb75e2d76dfdf2a3bf067dc39804aaad03b1ed82ba917f63e0df",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image66.png",
+            "imageParagraph": 2026,
+            "captionParagraph": 2027,
+            "sourceImageSha256": "90c7aa21f9d501c6eefdbd166894b3deb611b618a87136a880541110cdc756db",
+            "caption": "PGS.TSKH. Nguyễn Tác An",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Bùi Công Quế",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2011-2020",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                2028,
+                2030
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p2029-bui-cong-que.webp",
+            "width": 480,
+            "height": 497,
+            "bytes": 19406,
+            "sha256": "d46ab3d776c14dcd57f6109bbd8261ebb3a0313585fc320c14f4e6b8b18e72ad",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image67.jpeg",
+            "imageParagraph": 2029,
+            "captionParagraph": 2030,
+            "sourceImageSha256": "c68f75491f961223b252d43ac80e3df7125bf68bb54087351ab1d48b0fff9c4b",
+            "caption": "GS.TS. Bùi Công Quế",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Trần Đức Thạnh",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2021-9/2025",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                2031,
+                2062,
+                2033
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p2032-tran-duc-thanh.webp",
+            "width": 472,
+            "height": 623,
+            "bytes": 50110,
+            "sha256": "23ce5948baeb1fc9f4dbe752f6a5b3c0db5fffe56f0ae8184bc7bfdf0c6effc1",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image68.jpg",
+            "imageParagraph": 2032,
+            "captionParagraph": 2033,
+            "sourceImageSha256": "9accc6bf09ceae5e8e8959af46f188d32c07605669761d6f7eb5d9b2c7041d83",
+            "caption": "GS.TS. Trần Đức Thạnh",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Đào Đình Châm",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "Từ 9/2025-nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                2034,
+                2063,
+                2036
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p2035-dao-dinh-cham.webp",
+            "width": 442,
+            "height": 640,
+            "bytes": 19978,
+            "sha256": "b723faaf71686d70a67f7bff09481699f56954a248ade871677bd8dfbc1856ca",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image69.jpeg",
+            "imageParagraph": 2035,
+            "captionParagraph": 2036,
+            "sourceImageSha256": "c73e8d9f44a8745620552df57f783a9b2015a9d6857501bb51f9996801517015",
+            "caption": "PGS.TS. Đào Đình Châm",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        }
+      ],
+      "sourceId": "anniversary-2026"
+    },
+    {
+      "id": "vjbt",
+      "summary": "Thành lập năm 2003 với tên Tạp chí Công nghệ Sinh học, tạp chí đổi tên thành Vietnam Journal of Biotechnology và chuyển sang tiếng Anh từ năm 2022. Kỷ yếu ghi nhận cơ quan chủ quản mới là Viện Sinh học từ năm 2025.",
+      "events": [
+        {
+          "dateLabel": "2003",
+          "year": 2003,
+          "text": "Thành lập Tạp chí Công nghệ Sinh học dưới sự quản lý của Viện Công nghệ Sinh học; Lê Trần Bình là Tổng biên tập đầu tiên.",
+          "sourceParagraphs": [
+            2185,
+            2193,
+            2229
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF BIOTECHNOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2009",
+          "year": 2009,
+          "text": "Kỷ yếu ghi nhận đây là mốc khởi đầu gán DOI; các bài từ năm 2009 trở đi có mã DOI.",
+          "sourceParagraphs": [
+            2194,
+            2195
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF BIOTECHNOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2012",
+          "year": 2012,
+          "text": "Tăng dung lượng mỗi số và duy trì định kỳ xuất bản bốn số mỗi năm.",
+          "sourceParagraphs": [
+            2185,
+            2197
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF BIOTECHNOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2016",
+          "year": 2016,
+          "text": "Mở rộng Hội đồng biên tập và bắt đầu có thành viên quốc tế tham gia.",
+          "sourceParagraphs": [
+            2186,
+            2201,
+            2244
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF BIOTECHNOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2022",
+          "year": 2022,
+          "text": "Đổi tên thành Vietnam Journal of Biotechnology và chuyển hoàn toàn sang tiếng Anh.",
+          "sourceParagraphs": [
+            2187,
+            2205,
+            2220,
+            2221
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF BIOTECHNOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        },
+        {
+          "dateLabel": "2025",
+          "year": 2025,
+          "text": "Được cấp giấy phép sửa đổi, bổ sung số 160/GP-BVHTTDL ngày 19/11/2025; cơ quan chủ quản mới là Viện Sinh học.",
+          "sourceParagraphs": [
+            2209,
+            2212
+          ],
+          "sourceSection": "VIETNAM JOURNAL OF BIOTECHNOLOGY / I. THÔNG TIN CHUNG / 1.1. Lịch sử hình thành và phát triển",
+          "sourceId": "anniversary-2026"
+        }
+      ],
+      "cautions": [],
+      "editors": [
+        {
+          "name": "Lê Trần Bình",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2003-2015",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                2229,
+                2231
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p2230-le-tran-binh.webp",
+            "width": 295,
+            "height": 395,
+            "bytes": 11676,
+            "sha256": "06d8210a59abe310d49772ca315ff1d6f467215ff51416e796dfdd70bb42e920",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image71.png",
+            "imageParagraph": 2230,
+            "captionParagraph": 2231,
+            "sourceImageSha256": "ede89a9700b9995e858af32f212880a6f89175ba9166a92f6df4e9f5a7671d2c",
+            "caption": "GS.TS. Lê Trần Bình ",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nông Văn Hải",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2016-2024",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                2232,
+                2234
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p2233-nong-van-hai.webp",
+            "width": 177,
+            "height": 221,
+            "bytes": 7404,
+            "sha256": "d123ea647f29a0c4a5e453abc6bc3981872d84645d8bb24d6d610589e27b51cd",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image72.png",
+            "imageParagraph": 2233,
+            "captionParagraph": 2234,
+            "sourceImageSha256": "c42c1250fab5515af9ac5f20130c80ea0ff6472ef9a29a6ccbe8d5f99d996eb0",
+            "caption": "GS.TS. Nông Văn Hải ",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        },
+        {
+          "name": "Nguyễn Huy Hoàng",
+          "appointments": [
+            {
+              "role": "Tổng biên tập",
+              "tenure": "2024-nay",
+              "sourceId": "anniversary-2026",
+              "sourceParagraphs": [
+                2235,
+                2237
+              ]
+            }
+          ],
+          "portrait": {
+            "path": "assets/images/editors/p2236-nguyen-huy-hoang.webp",
+            "width": 434,
+            "height": 507,
+            "bytes": 26096,
+            "sha256": "2660ec6224ebd8b28c4631ef128f7313e5cda6c1b5ba97f6c3c8cbfbf58bbd33",
+            "sourceId": "anniversary-2026",
+            "documentMember": "word/media/image73.png",
+            "imageParagraph": 2236,
+            "captionParagraph": 2237,
+            "sourceImageSha256": "68285233c514180767a0f52a7f917ce51b6f8f626aae1abde4a8eae62243e8e3",
+            "caption": "GS.TS. Nguyễn Huy Hoàng",
+            "treatment": "Trích ảnh nhúng; giữ toàn khung, thu nhỏ theo tỷ lệ và chuyển WebP để hiển thị trên web."
+          }
+        }
+      ],
+      "sourceId": "anniversary-2026"
+    }
+  ]
+}
