@@ -188,10 +188,10 @@ function initRulerAndFlight(){
     const ratio=clamp01((e.clientY-rect.top)/Math.max(1,rect.height));
     window.scrollTo({top:ratio*Math.max(0,document.documentElement.scrollHeight-innerHeight),behavior:reducedMotion.matches?'instant':'smooth'});
   });
-  if(!reducedMotion.matches&&'IntersectionObserver' in window){
+  if(!reducedMotion.matches&&innerWidth>=960&&'IntersectionObserver' in window){
     const observer=new IntersectionObserver(entries=>{
       for(const entry of entries)if(entry.isIntersecting)entry.target.classList.remove('is-pending');
-    },{threshold:0.08});
+    },{threshold:0.01,rootMargin:'120px 0px'});
     document.querySelectorAll('[data-reveal]').forEach((el,index)=>{
       if(index>0)el.classList.add('is-pending');
       observer.observe(el);
@@ -214,6 +214,9 @@ function onScrollUpdate(){
   marqueeVelocity=Math.max(-4.2,Math.min(4.8,0.45+(scrollY-lastScrollY)*0.08));
   lastScrollY=scrollY;
   const vw=innerWidth,vh=innerHeight;
+  document.querySelectorAll('[data-reveal].is-pending').forEach(el=>{
+    if(vw<960||el.getBoundingClientRect().top<vh+120)el.classList.remove('is-pending');
+  });
   const progress=clamp01(scrollY/Math.max(1,document.documentElement.scrollHeight-vh));
   const percent=Math.round(progress*100);
   $('#artcraft-scrollbar').setAttribute('aria-valuenow',String(percent));
@@ -1190,8 +1193,16 @@ function renderDetail(id){
 
   panel.innerHTML=`
     <div class="detail-top-bar">
-      <a class="detail-back" href="#section-catalog">← QUAY LẠI DANH MỤC 12 TẠP CHÍ</a>
-      <span class="hud-label">${esc(j.group)} · MÃ TẠP CHÍ: <strong>${esc(j.code)}</strong> · LỊCH SỬ ${minYear}–${maxYear}</span>
+      <div class="detail-top-main">
+        <a class="detail-back" href="#section-catalog">← QUAY LẠI DANH MỤC 12 TẠP CHÍ</a>
+        <span class="hud-label">${esc(j.group)} · MÃ TẠP CHÍ: <strong>${esc(j.code)}</strong> · LỊCH SỬ ${minYear}–${maxYear}</span>
+      </div>
+      <nav class="detail-mobile-nav" aria-label="Chuyển nhanh mục trong hồ sơ tạp chí">
+        <a href="#journal/${esc(j.id)}/journal-info">Thông tin</a>
+        <a href="#journal/${esc(j.id)}/journal-charts">Biểu đồ</a>
+        <a href="#journal/${esc(j.id)}/journal-data">Số liệu</a>
+        <a href="#journal/${esc(j.id)}/journal-indexing">Chỉ mục</a>
+      </nav>
     </div>
 
     <div id="journal-info" class="detail-hero">
