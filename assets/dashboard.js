@@ -311,10 +311,20 @@ function localScore(j,year=2025){
   const s=r.score??r.value;
   return {...r,score:s,value:s};
 }
-function citationRecord(j,year){return (j.localCitation?.citationSeries||j.scopusCitingDocs?.citationSeries)?.find(r=>r.year===year)??null;}
+function statisticalStartYear(j){return j.id==='vjst'?2016:CHART_START_YEAR;}
+function citationRecord(j,year){
+  if(year<statisticalStartYear(j))return null;
+  return (j.localCitation?.citationSeries||j.scopusCitingDocs?.citationSeries)?.find(r=>r.year===year)??null;
+}
 function scopusQuartile(percentile){return Number.isFinite(percentile)?(percentile>=75?'Q1':(percentile>=50?'Q2':(percentile>=25?'Q3':'Q4'))):null;}
-function historyRecord(j,year){return (j.annualHistory||j.outputs||[]).find(r=>r.year===year)??null;}
-function statisticalHistory(j){return (j.annualHistory||j.outputs||[]).filter(r=>r.year>=CHART_START_YEAR);}
+function historyRecord(j,year){
+  if(year<statisticalStartYear(j))return null;
+  return (j.annualHistory||j.outputs||[]).find(r=>r.year===year)??null;
+}
+function statisticalHistory(j){
+  const startYear=statisticalStartYear(j);
+  return (j.annualHistory||j.outputs||[]).filter(r=>r.year>=startYear);
+}
 function observation(j,metric,year){
   const r=scopusRecord(j,year);
   if(!r)return{value:null,isProvisional:false,kind:'missing'};
@@ -1152,7 +1162,7 @@ function renderDetail(id){
   const a25=annualRecord(j,2025),t26=trackerRecord(j);
   const loc25=localScore(j,2025),loc26=localScore(j,2026);
   const hist=statisticalHistory(j);
-  const minYear=hist[0]?.year??CHART_START_YEAR,maxYear=hist.at(-1)?.year||2026;
+  const minYear=hist[0]?.year??statisticalStartYear(j),maxYear=hist.at(-1)?.year||2026;
   state.detailFromYear=minYear;
   state.detailToYear=maxYear;
 
@@ -1178,7 +1188,7 @@ function renderDetail(id){
     ['Các số đã xuất bản',archiveLinks(j)]
   ];
 
-  const ownRecords=scopus.records.filter(r=>r.journal===j.code&&r.year>=CHART_START_YEAR&&Number.isFinite(r.value));
+  const ownRecords=scopus.records.filter(r=>r.journal===j.code&&r.year>=statisticalStartYear(j)&&Number.isFinite(r.value));
   const cats=j.scopusCategories??[];
 
   let metricCards=[];
@@ -1430,8 +1440,8 @@ function renderDetail(id){
 
 function renderDetailCharts(j){
   const color=styles[j.id]?.color||'#2d81ff';
-  const allHist=j.annualHistory||j.outputs||[];
-  const a=Math.max(CHART_START_YEAR,state.detailFromYear??allHist[0]?.year??2020);
+  const allHist=statisticalHistory(j);
+  const a=Math.max(statisticalStartYear(j),state.detailFromYear??allHist[0]?.year??2020);
   const b=state.detailToYear??allHist.at(-1)?.year??2026;
   const hist=allHist.filter(r=>r.year>=a&&r.year<=b);
   if(!hist.length)return;
@@ -1672,7 +1682,7 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022k'),fetch('data-scopus.json?v=20261022a')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261022n'),fetch('data-scopus.json?v=20261022a')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     dashboard=await dRes.json();
     scopus=await sRes.json();
