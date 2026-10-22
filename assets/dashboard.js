@@ -534,37 +534,6 @@ function renderVast1JcrTable(){
   }).join('');
 }
 
-function renderHdgsnnOverviewTable(){
-  const head=$('#vast-hdgsnn-head'),body=$('#vast-hdgsnn-body');
-  if(!head||!body||!dashboard.hdgsnn)return;
-  head.innerHTML=`<tr>
-    <th scope="col">Tạp chí VAST</th>
-    <th scope="col">Số HĐGS<br>tính điểm</th>
-    <th scope="col">Khung điểm<br>tối đa (2025)</th>
-    <th scope="col">Điểm tối đa theo từng Hội đồng Giáo sư ngành, liên ngành (QĐ 26/QĐ-HĐGSNN)</th>
-  </tr>`;
-  body.innerHTML=dashboard.journals.map(j=>{
-    const rows=j.hdgsnn2025||[];
-    const nums=rows.flatMap(r=>String(r.score).split('-').map(Number)).filter(Number.isFinite);
-    const min=Math.min(...nums),max=Math.max(...nums);
-    const range=min===max?`0–${decimal.format(max)}`:`0–${decimal.format(min)} đến 0–${decimal.format(max)}`;
-    const details=rows.map(r=>`<span style="display:inline-block;margin:2px 10px 2px 0">${external(r.sourceUrl,r.councilShort)}: <strong>${esc(formatHdgsnnScore(r.score))}</strong></span>`).join('');
-    return `<tr>
-      <td>
-        <div class="matrix-journal-cell">
-          <a href="#journal/${esc(j.id)}"><img class="matrix-cover" src="${esc(coverUrl(j))}" alt="Bìa ${esc(j.code)}" width="40" height="58"></a>
-          <div class="matrix-meta">
-            <a href="#journal/${esc(j.id)}">${esc(j.code)} · ${esc(j.title)}</a>
-            <small style="display:block;color:var(--muted)">${esc(j.group)} · ISSN: ${esc(j.issn||'—')} / ${esc(j.eissn||'—')}</small>
-          </div>
-        </div>
-      </td>
-      <td><strong>${rows.length}</strong> hội đồng</td>
-      <td class="matrix-score-annual"><strong>${esc(range)}</strong></td>
-      <td style="text-align:left;white-space:normal;line-height:1.55">${details}</td>
-    </tr>`;
-  }).join('');
-}
 
 /* ==========================================================================
    5. SECTION 02: ARTCRAFT 4x3 JOURNAL LINEUP CARDS (NO TABLE LIST BELOW)
@@ -588,6 +557,7 @@ function filteredJournals(){
     if(state.subject!=='all'&&j.subject!==state.subject)return false;
     if(state.index==='all')return true;
     if(state.index==='VAST-1'||state.index==='VAST-2')return j.group===state.index;
+    if(state.index==='WoS')return j.indexings.some(i=>i.system==='WoS'&&i.status==='listed'&&['SCIE','SSCI','AHCI','ESCI','Core Collection'].includes(i.collection));
     return j.indexings.some(i=>i.system===state.index&&i.status==='listed');
   });
   const totalHistPapers=j=>statisticalHistory(j).reduce((s,r)=>s+(r.papers||0),0);
@@ -1288,12 +1258,13 @@ function renderDetail(id){
         <span class="hud-label">${esc(j.group)} · MÃ TẠP CHÍ: <strong>${esc(j.code)}</strong></span>
       </div>
       <nav class="detail-mobile-nav" aria-label="Chuyển nhanh mục trong hồ sơ tạp chí">
-        <a href="#journal/${esc(j.id)}/journal-info">Thông tin</a>
+        <a href="#journal/${esc(j.id)}/journal-profile">Thông tin chung</a>
         <a href="#journal/${esc(j.id)}/journal-history">Lịch sử</a>
         <a href="#journal/${esc(j.id)}/journal-editors">Tổng biên tập</a>
         <a href="#journal/${esc(j.id)}/journal-charts">Biểu đồ</a>
         <a href="#journal/${esc(j.id)}/journal-data">Số liệu</a>
         ${listedIndexings.length?`<a href="#journal/${esc(j.id)}/journal-indexing">Chỉ mục</a>`:''}
+        ${j.hdgsnn2025?.length?`<a href="#journal/${esc(j.id)}/journal-hdgsnn">HĐGSNN</a>`:''}
       </nav>
     </div>
 
@@ -1316,6 +1287,12 @@ function renderDetail(id){
         </div>
       </div>
     </div>
+    <section id="journal-profile" class="detail-profile-section" aria-labelledby="journal-profile-heading">
+      <h3 id="journal-profile-heading">Thông tin chung</h3>
+      <dl class="profile-list">
+        ${profileRows.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join('')}
+      </dl>
+    </section>
     ${renderJournalHistory(j)}
 
     <section id="journal-charts" class="detail-charts-section" aria-label="Số liệu xuất bản và trích dẫn qua các năm của ${esc(j.code)}">
@@ -1356,8 +1333,7 @@ function renderDetail(id){
       </div>
     </section>
 
-    <div id="journal-data" class="detail-grid">
-      <div>
+    <div id="journal-data" class="detail-data-section">
         <section class="detail-section">
           <h3>Bảng số liệu xuất bản &amp; trích dẫn theo năm</h3>
           <div class="table-scroll" style="max-height:520px;overflow-y:auto;border:1px solid var(--line)">
@@ -1465,15 +1441,6 @@ function renderDetail(id){
             </table>
           </div>
         </section>`:''}
-      </div>
-
-      <div>
-        <section class="detail-section">
-          <h3>Hồ sơ tạp chí</h3>
-          <dl class="profile-list">
-            ${profileRows.map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${v}</dd></div>`).join('')}
-          </dl>
-        </section>
 
         ${listedIndexings.length?`<section id="journal-indexing" class="detail-section">
           <h3>Chỉ mục khoa học</h3>
@@ -1498,7 +1465,6 @@ function renderDetail(id){
             </table>
           </div>
         </section>`:''}
-      </div>
     </div>`;
 
   const fromSel=$('#detail-from-year'),toSel=$('#detail-to-year');
@@ -1683,12 +1649,13 @@ function syncRoute(){
     const journal=dashboard.journals.find(j=>j.id===id);
     document.title=journal?`${journal.code} · Thông tin & Biểu đồ · VAST`:'Thông tin tạp chí · VAST';
     setFlightSections([
-      {id:'info',elId:'journal-info',word:'THÔNG TIN'},
+      {id:'info',elId:'journal-profile',word:'THÔNG TIN'},
       {id:'history',elId:'journal-history',word:'LỊCH SỬ'},
       {id:'editors',elId:'journal-editors',word:'TỔNG BIÊN TẬP'},
       {id:'charts',elId:'journal-charts',word:'BIỂU ĐỒ'},
       {id:'data',elId:'journal-data',word:'SỐ LIỆU'},
-      ...(journal?.indexings?.some(i=>i.status==='listed')?[{id:'indexing',elId:'journal-indexing',word:'CHỈ MỤC'}]:[])
+      ...(journal?.indexings?.some(i=>i.status==='listed')?[{id:'indexing',elId:'journal-indexing',word:'CHỈ MỤC'}]:[]),
+      ...(journal?.hdgsnn2025?.length?[{id:'hdgsnn',elId:'journal-hdgsnn',word:'HĐGSNN'}]:[])
     ],journal?`${journal.code} · VAST JOURNALS`:'VAST JOURNALS',id);
     target=sectionId?document.getElementById(sectionId):null;
     if(!target)window.scrollTo({top:0,behavior:'instant'});
@@ -1777,7 +1744,6 @@ async function start(){
     renderHeroAndOverview();
     renderVast1MatrixTable();
     renderVast1JcrTable();
-    renderHdgsnnOverviewTable();
     renderCatalog();
     renderReferences();
     initRulerAndFlight();
