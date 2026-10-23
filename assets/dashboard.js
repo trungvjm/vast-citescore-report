@@ -1050,27 +1050,30 @@ function renderPapersSection(){
   const tip=$('#papers-tooltip');
   let pinnedIndex=null,activeIndex=Math.max(0,years.indexOf(Number(state.papersFocusYear)));
   tip.hidden=true;
-  const showYear=idx=>{
+  const showYear=(idx,clientX)=>{
     activeIndex=idx;
     const t=yearTotals[idx];
     $('#papers-tooltip-year').textContent=`Năm ${t.yr}${t.yr===2026?' (chưa đủ năm)':''}`;
     $('#papers-tooltip-values').innerHTML=t.rows.map(({j,papers})=>`<div class="tooltip-row"><dt><span class="tooltip-dot" style="background:${colorFor(j)}"></span>${esc(j.code)}</dt><dd>${Number.isFinite(papers)?`${integer.format(papers)} bài`:'—'}</dd></div>`).join('')
       +`<div class="tooltip-row"><dt><strong>Tổng</strong></dt><dd>${integer.format(t.totalPapers)} bài</dd></div>`;
     tip.hidden=false;
+    tip.style.pointerEvents=pinnedIndex===null?'none':'auto';
+    $('#close-papers-tooltip').hidden=pinnedIndex===null;
     const area=svg.parentElement.getBoundingClientRect();
-    const left=(xCenter(idx)/width)*area.width;
-    tip.style.left=`${Math.max(12,Math.min(area.width-tip.offsetWidth-12,left+16))}px`;
+    const anchor=Number.isFinite(clientX)?clientX-area.left:(xCenter(idx)/width)*area.width;
+    const left=anchor+tip.offsetWidth+28<=area.width?anchor+16:anchor-tip.offsetWidth-16;
+    tip.style.left=`${Math.max(12,Math.min(area.width-tip.offsetWidth-12,left))}px`;
   };
   const indexFromEvent=e=>{
     const r=svg.getBoundingClientRect(),px=(e.clientX-r.left)/r.width*width;
     return Math.max(0,Math.min(years.length-1,Math.floor((px-plot.left)/slot)));
   };
-  svg.onpointermove=e=>{if(pinnedIndex===null)showYear(indexFromEvent(e));};
+  svg.onpointermove=e=>{if(pinnedIndex===null)showYear(indexFromEvent(e),e.clientX);};
   svg.onpointerleave=()=>{if(pinnedIndex===null)tip.hidden=true;};
   svg.onclick=e=>{
     const idx=indexFromEvent(e);
     if(pinnedIndex===idx){pinnedIndex=null;tip.hidden=true;}
-    else{pinnedIndex=idx;showYear(idx);}
+    else{pinnedIndex=idx;showYear(idx,e.clientX);}
   };
   svg.onkeydown=e=>{
     if(e.key==='Escape'){pinnedIndex=null;tip.hidden=true;return;}
