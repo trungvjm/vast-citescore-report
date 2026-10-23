@@ -659,11 +659,12 @@ function citationJournals(){
 function buildLegend(containerSelector,journalsList,selectedSet,onChange){
   const el=$(containerSelector);
   if(!el)return;
+  const isIsolated=selectedSet.size===1;
   el.innerHTML=journalsList.map(j=>{
     const st=styles[j.id]||{color:'#2d81ff',dash:'',marker:'circle'};
     const dash=st.dash?`stroke-dasharray="${st.dash}"`:'';
     const pressed=selectedSet.has(j.id);
-    return`<button class="journal-toggle" type="button" data-id="${esc(j.id)}" aria-pressed="${pressed}" title="${esc(fullName(j))}">
+    return`<button class="journal-toggle${isIsolated&&!pressed?' is-muted':''}" type="button" data-id="${esc(j.id)}" aria-pressed="${pressed}" title="${esc(fullName(j))} — Bấm để chỉ hiện tạp chí này; bấm lại để hiện tất cả">
       <svg viewBox="0 0 20 12" aria-hidden="true"><line x1="1" y1="6" x2="19" y2="6" stroke="${st.color}" stroke-width="2.4" ${dash}/>${markerShape(st.marker,10,6,3.1,st.color)}</svg>
       <span class="legend-label" translate="no">${esc(j.code)}</span>
     </button>`;
@@ -671,13 +672,16 @@ function buildLegend(containerSelector,journalsList,selectedSet,onChange){
   for(const btn of el.querySelectorAll('.journal-toggle')){
     btn.addEventListener('click',()=>{
       const id=btn.dataset.id;
-      if(selectedSet.has(id)&&selectedSet.size>1)selectedSet.delete(id);
-      else selectedSet.add(id);
+      if(selectedSet.size===1&&selectedSet.has(id)){
+        for(const j of journalsList)selectedSet.add(j.id);
+      }else{
+        selectedSet.clear();
+        selectedSet.add(id);
+      }
       onChange();
     });
   }
 }
-
 function renderLegend(){
   buildLegend('#trend-legend',scopusJournals(),state.selected,()=>{renderLegend();renderChart();});
 }
@@ -911,7 +915,7 @@ function renderCandidatesSection(){
 /* CHART 3: CITATIONS */
 function renderCitationsSection(){
   const list=citationJournals();
-  for(const j of list)if(!state.selectedCitations.size)state.selectedCitations.add(j.id);
+  if(!list.some(j=>state.selectedCitations.has(j.id)))for(const j of list)state.selectedCitations.add(j.id);
   buildLegend('#citations-legend',list,state.selectedCitations,()=>{renderCitationsSection();});
   const svg=$('#citations-chart');
   if(!svg)return;
@@ -1735,7 +1739,7 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023f'),fetch('data-scopus.json?v=20261023f')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023g'),fetch('data-scopus.json?v=20261023g')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     [dashboard,scopus]=await Promise.all([dRes.json(),sRes.json()]);
     syncPaletteColors();
