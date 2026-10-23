@@ -1007,14 +1007,14 @@ function renderPapersSection(){
   if(!svg||!dashboard)return;
   const years=[...new Set(dashboard.journals.flatMap(j=>statisticalHistory(j).map(r=>r.year)))].sort((a,b)=>a-b);
   const journals=dashboard.journals.filter(j=>state.papersGroup==='all'||j.group===state.papersGroup);
+  const extraColors=document.documentElement.dataset.theme==='dark'
+    ?{vjmech:'#df59ff',jcc:'#e6c654',ajb:'#b5d47a',vjmst:'#d7b28c',vjbt:'#9aaed7'}
+    :{vjmech:'#c6009c',jcc:'#b08900',ajb:'#5c940d',vjmst:'#8d5a3b',vjbt:'#7286b8'};
+  const colorFor=j=>extraColors[j.id]||styles[j.id].color;
+  $('#papers-legend').innerHTML=journals.map(j=>`<span class="papers-legend-item" role="listitem" title="${esc(fullName(j))}"><span class="papers-swatch" style="background:${colorFor(j)}" aria-hidden="true"></span><span translate="no">${esc(j.code)}</span></span>`).join('');
   const yearTotals=years.map(yr=>{
-    const rows=journals.map(j=>({j,o:historyRecord(j,yr)})).filter(x=>Number.isFinite(x.o?.papers));
-    return{
-      yr,
-      totalPapers:rows.reduce((s,x)=>s+x.o.papers,0),
-      totalIssues:rows.reduce((s,x)=>s+(x.o.issues||0),0),
-      rows
-    };
+    const rows=journals.map(j=>({j,papers:historyRecord(j,yr)?.papers}));
+    return{yr,totalPapers:rows.reduce((s,r)=>s+(Number.isFinite(r.papers)?r.papers:0),0),rows};
   });
   const scale=niceScale(Math.max(50,...yearTotals.map(t=>t.totalPapers)));
   const width=820,height=350,plot={left:60,right:40,top:28,bottom:44};
@@ -1029,20 +1029,56 @@ function renderPapersSection(){
     if(py<plot.top-1)break;
     out+=`<line x1="${plot.left}" y1="${py.toFixed(1)}" x2="${plot.left+plot.width}" y2="${py.toFixed(1)}" stroke="var(--line)"/><text x="${plot.left-10}" y="${(py+4).toFixed(1)}" text-anchor="end" fill="var(--muted)" font-size="11.5">${esc(integer.format(tick))}</text>`;
   }
-
-  yearTotals.forEach((t,idx)=>{
-    const cx=xCenter(idx),bx=cx-barW/2,py=y(t.totalPapers),bh=plot.top+plot.height-py;
-    const isFocus=t.yr===Number(state.papersFocusYear);
-    const fill=isFocus?'var(--accent)':(t.yr===2026?'color-mix(in srgb,var(--accent) 52%,var(--bg-raised))':'color-mix(in srgb,var(--ink) 74%,var(--bg-raised))');
-    out+=`<g class="year-bar" data-year="${t.yr}">
-      <rect x="${bx.toFixed(1)}" y="${py.toFixed(1)}" width="${barW.toFixed(1)}" height="${Math.max(2,bh).toFixed(1)}" rx="2" fill="${fill}" stroke="${isFocus?'var(--ink-strong)':'none'}" stroke-width="1.5"/>
-      <text x="${cx.toFixed(1)}" y="${(py-7).toFixed(1)}" text-anchor="middle" fill="var(--ink-strong)" font-size="11.5" font-weight="600">${integer.format(t.totalPapers)}</text>
-      <text x="${cx.toFixed(1)}" y="${height-14}" text-anchor="middle" fill="${isFocus?'var(--accent-ink)':'var(--muted)'}" font-weight="${isFocus?'700':'400'}" font-size="11.5">${t.yr===2026?'2026*':t.yr}</text>
-    </g>`;
-  });
   out+=`<rect x="${plot.left}" y="${plot.top}" width="${plot.width}" height="${plot.height}" fill="transparent"/>`;
+  yearTotals.forEach((t,idx)=>{
+    const cx=xCenter(idx),bx=cx-barW/2,py=y(t.totalPapers);
+    const isFocus=t.yr===Number(state.papersFocusYear);
+    let cumulative=0;
+    out+=`<g class="year-bar" data-year="${t.yr}">`;
+    for(const {j,papers} of t.rows){
+      if(!Number.isFinite(papers)||papers<=0)continue;
+      const top=y(cumulative+papers),segmentHeight=y(cumulative)-top;
+      out+=`<rect class="paper-segment" data-journal="${esc(j.id)}" data-papers="${papers}" x="${bx.toFixed(1)}" y="${top.toFixed(2)}" width="${barW.toFixed(1)}" height="${segmentHeight.toFixed(2)}" fill="${colorFor(j)}" opacity="${t.yr===2026?'0.7':'1'}"><title>${esc(j.code)}: ${integer.format(papers)} bài (${t.yr})</title></rect>`;
+      cumulative+=papers;
+    }
+    if(isFocus)out+=`<rect class="papers-focus-outline" x="${(bx-2).toFixed(1)}" y="${(py-2).toFixed(1)}" width="${(barW+4).toFixed(1)}" height="${(y(0)-py+4).toFixed(1)}" fill="none" stroke="var(--ink-strong)" stroke-width="1.5" pointer-events="none"/>`;
+    out+=`<text x="${cx.toFixed(1)}" y="${(py-7).toFixed(1)}" text-anchor="middle" fill="var(--ink-strong)" font-size="11.5" font-weight="600">${integer.format(t.totalPapers)}</text>
+      <text x="${cx.toFixed(1)}" y="${height-14}" text-anchor="middle" fill="${isFocus?'var(--accent-ink)':'var(--muted)'}" font-weight="${isFocus?'700':'400'}" font-size="11.5">${t.yr===2026?'2026*':t.yr}</text></g>`;
+  });
   svg.innerHTML=out;
 
+  const tip=$('#papers-tooltip');
+  let pinnedIndex=null,activeIndex=Math.max(0,years.indexOf(Number(state.papersFocusYear)));
+  tip.hidden=true;
+  const showYear=idx=>{
+    activeIndex=idx;
+    const t=yearTotals[idx];
+    $('#papers-tooltip-year').textContent=`Năm ${t.yr}${t.yr===2026?' (chưa đủ năm)':''}`;
+    $('#papers-tooltip-values').innerHTML=t.rows.map(({j,papers})=>`<div class="tooltip-row"><dt><span class="tooltip-dot" style="background:${colorFor(j)}"></span>${esc(j.code)}</dt><dd>${Number.isFinite(papers)?`${integer.format(papers)} bài`:'—'}</dd></div>`).join('')
+      +`<div class="tooltip-row"><dt><strong>Tổng</strong></dt><dd>${integer.format(t.totalPapers)} bài</dd></div>`;
+    tip.hidden=false;
+    const area=svg.parentElement.getBoundingClientRect();
+    const left=(xCenter(idx)/width)*area.width;
+    tip.style.left=`${Math.max(12,Math.min(area.width-tip.offsetWidth-12,left+16))}px`;
+  };
+  const indexFromEvent=e=>{
+    const r=svg.getBoundingClientRect(),px=(e.clientX-r.left)/r.width*width;
+    return Math.max(0,Math.min(years.length-1,Math.floor((px-plot.left)/slot)));
+  };
+  svg.onpointermove=e=>{if(pinnedIndex===null)showYear(indexFromEvent(e));};
+  svg.onpointerleave=()=>{if(pinnedIndex===null)tip.hidden=true;};
+  svg.onclick=e=>{
+    const idx=indexFromEvent(e);
+    if(pinnedIndex===idx){pinnedIndex=null;tip.hidden=true;}
+    else{pinnedIndex=idx;showYear(idx);}
+  };
+  svg.onkeydown=e=>{
+    if(e.key==='Escape'){pinnedIndex=null;tip.hidden=true;return;}
+    const idx=e.key==='ArrowLeft'?Math.max(0,activeIndex-1):e.key==='ArrowRight'?Math.min(years.length-1,activeIndex+1):e.key==='Home'?0:e.key==='End'?years.length-1:null;
+    if(idx===null)return;
+    e.preventDefault();pinnedIndex=idx;showYear(idx);
+  };
+  $('#close-papers-tooltip').onclick=()=>{pinnedIndex=null;tip.hidden=true;};
 }
 
 function renderAllCharts(){
@@ -1645,7 +1681,6 @@ function wireEvents(){
 
   $('#papers-group').addEventListener('change',e=>{state.papersGroup=e.target.value;renderPapersSection();});
   $('#papers-focus-year').addEventListener('change',e=>{state.papersFocusYear=Number(e.target.value);renderPapersSection();});
-  $('#close-papers-tooltip').addEventListener('click',()=>{$('#papers-tooltip').hidden=true;});
 
   document.addEventListener('click',e=>{
     const link=e.target.closest('a[href^="#journal/"]');
@@ -1664,7 +1699,7 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023d'),fetch('data-scopus.json?v=20261023d')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023e'),fetch('data-scopus.json?v=20261023e')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     [dashboard,scopus]=await Promise.all([dRes.json(),sRes.json()]);
     syncPaletteColors();

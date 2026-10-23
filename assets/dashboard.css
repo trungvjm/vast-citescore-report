@@ -1178,6 +1178,15 @@ input[type="search"]::placeholder{color:var(--faint)}
   flex-wrap:wrap;
   margin-bottom:12px;
 }
+.papers-legend-item{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:4px 10px 4px 0;
+  font-family:var(--font-mono);
+  font-size:11px;
+}
+.papers-swatch{width:11px;height:11px;flex-shrink:0}
 .journal-toggle{
   display:inline-flex;
   align-items:center;
