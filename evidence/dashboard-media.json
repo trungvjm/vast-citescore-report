@@ -103,7 +103,15 @@
       "sha256": "00a8c93fba1f2729fa651f4f7e8b3f757a137cb971d02d3443fe88728e5e289f",
       "name": "Vietnam Journal of Mathematics",
       "nameVi": "Tạp chí Toán học",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJM.png"
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJM.png",
+      "webpVariant": {
+        "path": "assets/images/covers/webp/vjm.webp",
+        "width": 700,
+        "height": 1056,
+        "bytes": 29908,
+        "sha256": "1326bdd64fff77f6288bc81ef662ff8231ce5db86c3fe14c81e184fddb7c9aca",
+        "sourceSha256": "00a8c93fba1f2729fa651f4f7e8b3f757a137cb971d02d3443fe88728e5e289f"
+      }
     },
     "amv": {
       "path": "assets/images/covers/amv.png",
@@ -115,7 +123,15 @@
       "sha256": "d611daa286bb6a75f7bc826b3a6d6bc1fefaadeba321da29fb8cb776101081e0",
       "name": "Acta Mathematica Vietnamica",
       "nameVi": "Acta Mathematica Vietnamica",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/AMV.png"
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/AMV.png",
+      "webpVariant": {
+        "path": "assets/images/covers/webp/amv.webp",
+        "width": 694,
+        "height": 1056,
+        "bytes": 33022,
+        "sha256": "761d300569793d840880929753e544c00c84520f83240d90ea5bbdcb23bd3b93",
+        "sourceSha256": "d611daa286bb6a75f7bc826b3a6d6bc1fefaadeba321da29fb8cb776101081e0"
+      }
     },
     "ansn": {
       "path": "assets/images/covers/ansn.png",
@@ -127,7 +143,15 @@
       "sha256": "5c785d4c45777761acbb7d83defb3cc647229c150d3e57c64f9c6c1e020ccbf9",
       "name": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
       "nameVi": "Advances in Natural Sciences: Nanoscience and Nanotechnology",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/ANSN.png"
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/ANSN.png",
+      "webpVariant": {
+        "path": "assets/images/covers/webp/ansn.webp",
+        "width": 775,
+        "height": 1056,
+        "bytes": 61216,
+        "sha256": "8b28ceda2af8e6f38d8102889b0c5fb05e4f7fdcd33c192b8551bf43540819df",
+        "sourceSha256": "5c785d4c45777761acbb7d83defb3cc647229c150d3e57c64f9c6c1e020ccbf9"
+      }
     },
     "vjc": {
       "path": "assets/images/covers/vjc.png",
@@ -139,7 +163,15 @@
       "sha256": "d239f6b6dad9aae3aadb5efb871f3043c4eddb793be4cc200b3ddf1c96f325b0",
       "name": "Vietnam Journal of Chemistry",
       "nameVi": "Tạp chí Hóa học",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJC.png"
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJC.png",
+      "webpVariant": {
+        "path": "assets/images/covers/webp/vjc.webp",
+        "width": 794,
+        "height": 1031,
+        "bytes": 64886,
+        "sha256": "fa30ec9451aad1c7e71374959da79028b01eb034e71a56498935feeb27e3b4c7",
+        "sourceSha256": "d239f6b6dad9aae3aadb5efb871f3043c4eddb793be4cc200b3ddf1c96f325b0"
+      }
     },
     "vjes": {
       "path": "assets/images/covers/vjes.png",
@@ -151,7 +183,15 @@
       "sha256": "b5b9ca6d07a19874850bfa7b60c11659032d0d722b1a46a940c0fbf5645de350",
       "name": "Vietnam Journal of Earth Sciences",
       "nameVi": "Tạp chí Các Khoa học về Trái đất",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJES.png"
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJES.png",
+      "webpVariant": {
+        "path": "assets/images/covers/webp/vjes.webp",
+        "width": 784,
+        "height": 1056,
+        "bytes": 59650,
+        "sha256": "c1818d87ede404d8552948e5b5f6d417e1c8c33807dfa6c69fbb90a35c49af0a",
+        "sourceSha256": "b5b9ca6d07a19874850bfa7b60c11659032d0d722b1a46a940c0fbf5645de350"
+      }
     },
     "vjst": {
       "path": "assets/images/covers/vjst.png",
@@ -163,7 +203,15 @@
       "sha256": "94fcbd2024fba5e2b67bfa2d2cb7f6c95b0df035d8475920f1661d67fe99968a",
       "name": "Vietnam Journal of Science and Technology",
       "nameVi": "Tạp chí Khoa học và Công nghệ",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJST.png"
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJST.png",
+      "webpVariant": {
+        "path": "assets/images/covers/webp/vjst.webp",
+        "width": 756,
+        "height": 1056,
+        "bytes": 117166,
+        "sha256": "342ff2734277c0693b02a9ac6480a476a39bede7f10f8e34434c6607cfd3ba78",
+        "sourceSha256": "94fcbd2024fba5e2b67bfa2d2cb7f6c95b0df035d8475920f1661d67fe99968a"
+      }
     },
     "cip": {
       "path": "assets/images/covers/cip.png",
@@ -175,7 +223,15 @@
       "sha256": "b8fc4d3e4aa40404bb462d3acacec6b6e6a4c1ed9200e7dc2510d1368c3f1f96",
       "name": "Communications in Physics",
       "nameVi": "Tạp chí Vật lý",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/CIP.png"
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/CIP.png",
+      "webpVariant": {
+        "path": "assets/images/covers/webp/cip.webp",
+        "width": 762,
+        "height": 1056,
+        "bytes": 36142,
+        "sha256": "5be64ccf79c2cfa979a1331d0360106528333f9e4c411fd38f10b4ea742a45ce",
+        "sourceSha256": "b8fc4d3e4aa40404bb462d3acacec6b6e6a4c1ed9200e7dc2510d1368c3f1f96"
+      }
     },
     "vjmech": {
       "path": "assets/images/covers/vjmech.png",
@@ -187,7 +243,15 @@
       "sha256": "56a340e850aa6ed823fcb1fe850b8a6c4ee8358105f9e7732ec3b9ab75d3501d",
       "name": "Vietnam Journal of Mechanics",
       "nameVi": "Tạp chí Cơ học",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJMech.png"
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJMech.png",
+      "webpVariant": {
+        "path": "assets/images/covers/webp/vjmech.webp",
+        "width": 744,
+        "height": 1056,
+        "bytes": 28848,
+        "sha256": "cf65328ea9f789071d46088633e982d9a7bf79f3e5255de159b78dbae4f2ba21",
+        "sourceSha256": "56a340e850aa6ed823fcb1fe850b8a6c4ee8358105f9e7732ec3b9ab75d3501d"
+      }
     },
     "jcc": {
       "path": "assets/images/covers/jcc.png",
@@ -199,7 +263,15 @@
       "sha256": "570fabfb2f871aff30699df66278d1d132ce57b6b71f46be9426beaf25fa8567",
       "name": "Journal of Computer Science and Cybernetics",
       "nameVi": "Tạp chí Tin học và Điều khiển học",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/JCC.png"
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/JCC.png",
+      "webpVariant": {
+        "path": "assets/images/covers/webp/jcc.webp",
+        "width": 769,
+        "height": 1056,
+        "bytes": 33020,
+        "sha256": "904fbc2b0086b7b5a3f5b36a45eaee95063e75444451d381ad0e596701c83efd",
+        "sourceSha256": "570fabfb2f871aff30699df66278d1d132ce57b6b71f46be9426beaf25fa8567"
+      }
     },
     "ajb": {
       "path": "assets/images/covers/ajb.png",
@@ -211,7 +283,15 @@
       "sha256": "68e57cad854df4f58f1eb5c705dc1ddb43eefff53e4e1e3735088dd3719b1218",
       "name": "Academia Journal of Biology",
       "nameVi": "Tạp chí Sinh học",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/AJB.png"
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/AJB.png",
+      "webpVariant": {
+        "path": "assets/images/covers/webp/ajb.webp",
+        "width": 734,
+        "height": 1043,
+        "bytes": 82932,
+        "sha256": "54d13c3ecec78d456ed4bade54fc8d3a206088205bd79a3f499605cde025d657",
+        "sourceSha256": "68e57cad854df4f58f1eb5c705dc1ddb43eefff53e4e1e3735088dd3719b1218"
+      }
     },
     "vjmst": {
       "path": "assets/images/covers/vjmst.png",
@@ -223,7 +303,15 @@
       "sha256": "bf595b236047ba7f95476fe832f9f4ecf1b427671731b804e825b8f64567363c",
       "name": "Vietnam Journal of Marine Science and Technology",
       "nameVi": "Tạp chí Khoa học và Công nghệ biển",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJMST.png"
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJMST.png",
+      "webpVariant": {
+        "path": "assets/images/covers/webp/vjmst.webp",
+        "width": 765,
+        "height": 1056,
+        "bytes": 32388,
+        "sha256": "ad79d1eca96c088142c647be0f98fd1f8ff6ea561db29808de451878e6c38a60",
+        "sourceSha256": "bf595b236047ba7f95476fe832f9f4ecf1b427671731b804e825b8f64567363c"
+      }
     },
     "vjbt": {
       "path": "assets/images/covers/vjbt.png",
@@ -235,7 +323,15 @@
       "sha256": "cd3582def3e47a9314042cc8377528228a2f1043564afb4d07f25a7534a90a5a",
       "name": "Vietnam Journal of Biotechnology",
       "nameVi": "Tạp chí Công nghệ Sinh học",
-      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJBT.png"
+      "source": "2026/13-Dashbroad 12 Tạp chí VAST/VJBT.png",
+      "webpVariant": {
+        "path": "assets/images/covers/webp/vjbt.webp",
+        "width": 756,
+        "height": 1056,
+        "bytes": 91366,
+        "sha256": "fa55392b3b589b669053df204876f4fba717c2f874cfd48f843626fb0c9c9e79",
+        "sourceSha256": "cd3582def3e47a9314042cc8377528228a2f1043564afb4d07f25a7534a90a5a"
+      }
     }
   },
   "journals": {
@@ -291,7 +387,8 @@
           "name": "Springer Nature",
           "nameVi": "Nhà xuất bản Springer Nature"
         }
-      ]
+      ],
+      "coverWebp": "assets/images/covers/webp/vjm.webp"
     },
     "amv": {
       "id": "amv",
@@ -345,7 +442,8 @@
           "name": "Springer Nature",
           "nameVi": "Nhà xuất bản Springer Nature"
         }
-      ]
+      ],
+      "coverWebp": "assets/images/covers/webp/amv.webp"
     },
     "ansn": {
       "id": "ansn",
@@ -399,7 +497,8 @@
           "name": "IOP Publishing",
           "nameVi": "Nhà xuất bản IOP Publishing"
         }
-      ]
+      ],
+      "coverWebp": "assets/images/covers/webp/ansn.webp"
     },
     "vjc": {
       "id": "vjc",
@@ -453,7 +552,8 @@
           "name": "Wiley-VCH",
           "nameVi": "Nhà xuất bản Wiley-VCH"
         }
-      ]
+      ],
+      "coverWebp": "assets/images/covers/webp/vjc.webp"
     },
     "vjes": {
       "id": "vjes",
@@ -495,7 +595,8 @@
           "name": "Publishing House for Science and Technology (PST)",
           "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
         }
-      ]
+      ],
+      "coverWebp": "assets/images/covers/webp/vjes.webp"
     },
     "vjst": {
       "id": "vjst",
@@ -537,7 +638,8 @@
           "name": "Publishing House for Science and Technology (PST)",
           "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
         }
-      ]
+      ],
+      "coverWebp": "assets/images/covers/webp/vjst.webp"
     },
     "cip": {
       "id": "cip",
@@ -579,7 +681,8 @@
           "name": "Publishing House for Science and Technology (PST)",
           "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
         }
-      ]
+      ],
+      "coverWebp": "assets/images/covers/webp/cip.webp"
     },
     "vjmech": {
       "id": "vjmech",
@@ -621,7 +724,8 @@
           "name": "Publishing House for Science and Technology (PST)",
           "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
         }
-      ]
+      ],
+      "coverWebp": "assets/images/covers/webp/vjmech.webp"
     },
     "jcc": {
       "id": "jcc",
@@ -663,7 +767,8 @@
           "name": "Publishing House for Science and Technology (PST)",
           "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
         }
-      ]
+      ],
+      "coverWebp": "assets/images/covers/webp/jcc.webp"
     },
     "ajb": {
       "id": "ajb",
@@ -705,7 +810,8 @@
           "name": "Publishing House for Science and Technology (PST)",
           "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
         }
-      ]
+      ],
+      "coverWebp": "assets/images/covers/webp/ajb.webp"
     },
     "vjmst": {
       "id": "vjmst",
@@ -747,7 +853,8 @@
           "name": "Publishing House for Science and Technology (PST)",
           "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
         }
-      ]
+      ],
+      "coverWebp": "assets/images/covers/webp/vjmst.webp"
     },
     "vjbt": {
       "id": "vjbt",
@@ -789,7 +896,8 @@
           "name": "Publishing House for Science and Technology (PST)",
           "nameVi": "Nhà xuất bản Khoa học tự nhiên và Công nghệ"
         }
-      ]
+      ],
+      "coverWebp": "assets/images/covers/webp/vjbt.webp"
     }
   }
 }

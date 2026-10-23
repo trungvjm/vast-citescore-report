@@ -8,7 +8,7 @@ Website tĩnh giới thiệu 12 tạp chí thuộc Viện Hàn lâm Khoa học v
 - `evidence/`: hồ sơ, nguồn kho lưu trữ, bằng chứng chỉ mục và đối soát dữ liệu. `evidence/scopus-cited-by.json` chứa bản xuất Scopus Analyze results ngày 23/10/2026 cho 7 tạp chí VAST-1, đếm tài liệu trích dẫn riêng biệt theo năm xuất bản của tài liệu trích dẫn, không phải lượt dẫn chiếu hay trích dẫn trong cửa sổ CiteScore. Khoảng năm và mức độ đầy đủ khác nhau giữa các tạp chí; năm hiện tại chưa đủ năm.
 - `data/dashboard.json` và `data/snapshots/`: dữ liệu sinh từ các đầu vào nêu trên.
 
-CSV gốc được giữ nguyên byte tại `evidence/scopus-cited-by/2026-10-23/`, thu bằng quy trình Source → View all documents → More → View cited by → toàn bộ kết quả → View → Analyze results → Documents by year → Export CSV. Trình dựng đối chiếu SHA-256, số byte, từng năm, tổng số tài liệu và toàn bộ EID của tập bài nguồn với CSV. Giữ nguyên các dòng nguồn, không tự điền số; biểu đồ chỉ hiển thị đến 2026. Snapshot hiện tại là `2026-10-23-hdgsnn-corrections-v2`, rút gọn dòng điểm Vật lý của ANSN; các snapshot trước đó vẫn giữ nguyên. Ngày chốt dữ liệu xuất bản cũ vẫn là 21/10/2026.
+CSV gốc được giữ nguyên byte tại `evidence/scopus-cited-by/2026-10-23/`, thu bằng quy trình Source → View all documents → More → View cited by → toàn bộ kết quả → View → Analyze results → Documents by year → Export CSV. Trình dựng đối chiếu SHA-256, số byte, từng năm, tổng số tài liệu và toàn bộ EID của tập bài nguồn với CSV. Giữ nguyên các dòng nguồn, không tự điền số; biểu đồ chỉ hiển thị đến 2026. Snapshot hiện tại là `2026-10-23-engineering-improvements-v1`; các snapshot trước đó vẫn giữ nguyên. Ngày chốt dữ liệu xuất bản cũ vẫn là 21/10/2026.
 
 
 ## Giao diện
@@ -26,6 +26,8 @@ Tất cả bảng CiteScore, JCR, thống kê theo năm, thứ hạng và điể
 Mỗi mục biểu đồ 01–04 chỉ có một đồ thị chính chiếm toàn chiều rộng nội dung. Biểu đồ 03 mặc định hiển thị tài liệu trích dẫn Scopus theo năm xuất bản cho 7 tạp chí VAST-1; các chế độ cửa sổ CiteScore và trích dẫn OJS vẫn tách riêng. Biểu đồ 04 dùng cột chồng: mỗi phần màu là số bài của một tạp chí, tổng các phần bằng tổng số bài của năm. Chú giải phân biệt đủ 12 tạp chí; lọc VAST-1/VAST-2 giữ đúng tập tương ứng. Di chuột hoặc bấm cột để xem số bài từng tạp chí và tổng; hỗ trợ phím mũi tên, Home/End và Escape. Năm thiếu dữ liệu không tạo phần cột hoặc số 0 thay thế. “Năm nổi bật” chỉ viền cột, không đổi màu nhận diện tạp chí. Số liệu 2026 vẫn được đánh dấu chưa đủ năm. Nguồn ảnh chân dung chỉ giữ trong metadata, không đưa vào danh mục tham khảo học thuật.
 
 Bảng xem nhanh không chặn di chuột hoặc bấm sang cột khác. Bấm cột để ghim chi tiết; khi ghim, bảng cho phép cuộn và có nút đóng. Vị trí bảng chọn bên còn khoảng trống để không che con trỏ.
+
+Trên màn hình điện thoại, bốn biểu đồ chính và ba biểu đồ hồ sơ cuộn ngang độc lập để giữ kích thước nhãn đọc được mà không làm tràn trang; các biểu đồ chính hỗ trợ xem trước khi rê, ghim bằng bấm/chạm, nút đóng, Escape và điều hướng phím mũi tên/Home/End. Mục 03 có thanh đi nhanh tới hai bảng chỉ số và bốn biểu đồ. Biểu đồ 04 cho phép chọn riêng từng tạp chí từ bộ chọn hoặc chú giải; các năm thiếu dữ liệu vẫn không được trình bày thành số 0. Bìa dùng bản WebP khi có sẵn, ảnh dưới màn hình tải lười, còn logo vẫn trỏ tới PNG để giữ quy tắc giao diện tối. KPI ghi rõ cửa sổ thống kê xuất bản và ngày chốt riêng với tổng tài liệu trích dẫn Scopus tích lũy; tooltip Quartile nêu phân ngành và hạng tương ứng.
 
 Bìa tạp chí giữ đúng tỷ lệ ảnh gốc, nền khung trong suốt, không kéo méo hoặc cắt bìa. Trong danh mục desktop/tablet, bìa cùng cao 148 px và rộng tự động; mobile giữ rộng 88 px và cao tự động. Các thẻ cùng hàng chia sẻ ba hàng con bằng CSS subgrid (đầu thẻ, vùng bìa/logo, nội dung); vùng tên đơn vị dành tối thiểu ba dòng để căn hàng logo. Không ép đồng thời chiều rộng và chiều cao ảnh gây dải trắng trên/dưới.
 
@@ -65,7 +67,7 @@ node tools/build-dashboard.mjs
 node --check assets/dashboard.js
 ```
 
-**Điều kiện:** trình dựng hiện còn đọc các bộ sưu tập cục bộ bên ngoài repo tại đường dẫn `2026/09…` ghi trong `evidence/dashboard-local-*.json`, tính từ thư mục `Others`. Vì vậy bản clone riêng lẻ chưa đủ để dựng lại dữ liệu; không được thay dữ liệu thiếu bằng số 0 hoặc số ước tính.
+**Điều kiện:** `evidence/dashboard-local-extracted.json` lưu bản trích xuất đã đối chiếu SHA-256 của 9 bộ sưu tập OJS/Scopus nội bộ, nên bản clone độc lập có thể dựng lại và kiểm tra `data/dashboard.json` trực tiếp. Khi chạy trong thư mục làm việc có sẵn các thư mục `2026/09…` bên ngoài repo, trình dựng đồng thời kiểm tra mã SHA-256 của toàn bộ 33 file gốc và đối chiếu khớp tuyệt đối với bản trích xuất trong repo; không thay dữ liệu thiếu bằng số 0 hoặc số ước tính.
 
 ## Chạy thử
 

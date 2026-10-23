@@ -857,6 +857,29 @@ input[type="search"]::placeholder{color:var(--faint)}
 }
 .section-lead strong{color:var(--ink-strong);font-weight:600}
 
+.section-subnav{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:12px 32px;
+  border-bottom:1px solid var(--line);
+  -webkit-overflow-scrolling:touch;
+}
+.section-subnav a{
+  flex:0 0 auto;
+  padding:7px 10px;
+  border:1px solid var(--line);
+  color:var(--muted);
+  background:var(--bg-raised);
+  font-family:var(--font-mono);
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+.section-subnav a:hover{color:var(--accent-ink);border-color:var(--line-strong)}
+
 /* SCROLL REVEAL TRANSITION */
 [data-reveal]{
   opacity:1;
@@ -1186,6 +1209,8 @@ input[type="search"]::placeholder{color:var(--faint)}
   font-family:var(--font-mono);
   font-size:11px;
 }
+.papers-legend-item{border:0;background:transparent;color:var(--ink);cursor:pointer}
+.papers-legend-item.is-muted{opacity:0.35}
 .papers-swatch{width:11px;height:11px;flex-shrink:0}
 .journal-toggle{
   display:inline-flex;
@@ -1228,7 +1253,7 @@ figure{margin:0;min-width:0}
   width:100%;
   height:auto;
   cursor:crosshair;
-  touch-action:pan-y pinch-zoom;
+  touch-action:pan-x pan-y pinch-zoom;
 }
 .interactive-svg text,.detail-svg text{
   font-family:var(--font-mono);
@@ -1539,7 +1564,8 @@ figure{margin:0;min-width:0}
   padding:0 0 36px;
 }
 #journal-info,#journal-profile,#journal-history,#journal-editors,#journal-charts,#journal-data,#journal-indexing,#journal-hdgsnn,
-#section-overview,#section-citescore,#section-catalog,#section-references{
+#section-overview,#section-citescore,#section-catalog,#section-references,
+#vast1-matrix-block,#vast1-jcr-wrap,#chart-scopus-block,#chart-candidates-block,#chart-citations-block,#chart-papers-block{
   scroll-margin-top:148px;
 }
 .detail-top-bar{
@@ -1681,13 +1707,14 @@ figure{margin:0;min-width:0}
 }
 .detail-charts-grid{
   display:grid;
-  grid-template-columns:1fr;
+  grid-template-columns:minmax(0,1fr);
   gap:22px;
 }
 .detail-chart-card{
   background:var(--bg);
   border:1px solid var(--line);
   padding:18px 20px;
+  min-width:0;
 }
 .detail-chart-card h4{
   font-family:var(--font-display);
@@ -1705,7 +1732,7 @@ figure{margin:0;min-width:0}
   display:block;
   width:100%;
   height:280px;
-  cursor:crosshair;
+  touch-action:pan-x pan-y pinch-zoom;
 }
 
 .detail-profile-section,.detail-data-section{padding:28px 32px}
@@ -1887,8 +1914,9 @@ table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
     border-left:0;
     border-right:0;
   }
-  #journal-info,#journal-profile,#journal-history,#journal-editors,#journal-charts,#journal-data,#journal-indexing,#journal-hdgsnn,
-  #section-overview,#section-citescore,#section-catalog,#section-references{
+#journal-info,#journal-profile,#journal-history,#journal-editors,#journal-charts,#journal-data,#journal-indexing,#journal-hdgsnn,
+#section-overview,#section-citescore,#section-catalog,#section-references,
+#vast1-matrix-block,#vast1-jcr-wrap,#chart-scopus-block,#chart-candidates-block,#chart-citations-block,#chart-papers-block{
     scroll-margin-top:92px;
   }
   .artcraft-hero{
@@ -1969,16 +1997,14 @@ table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
   }
   .journal-toggle{min-width:64px;min-height:30px;padding:3px 7px;font-size:10.5px}
   .chart-area{padding:10px 8px 12px}
-  .interactive-svg{
-    height:auto;
-    aspect-ratio:820 / 370;
-    min-height:175px;
+  .chart-svg-scroll,.detail-svg-scroll{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    max-width:100%;
+    border-bottom:1px solid var(--line);
   }
-  .detail-svg{
-    height:auto;
-    aspect-ratio:860 / 280;
-    min-height:145px;
-  }
+  .interactive-svg{min-width:640px;width:100%;height:auto;min-height:175px}
+  .detail-svg{min-width:600px;width:100%;height:auto;min-height:145px}
   .chart-tooltip{
     position:static;
     width:100%;

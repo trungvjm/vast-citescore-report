@@ -1,4 +1,4 @@
-import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,access} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
@@ -23,7 +23,7 @@ assert.equal(new Set(scopus.records.map(r=>r.journal+'|'+r.year+'|'+r.type)).siz
 const officialAnnualCodes=new Set(scopus.records.filter(r=>r.type==='annual'&&Number.isFinite(r.value)).map(r=>r.journal));
 const evidence=await Promise.all(profileFiles.map(f=>readJson(path.join(root,f))));
 const audits=await Promise.all(auditFiles.map(f=>readJson(path.join(root,f))));
-const [histIntl,histOjs,media,jcrData,scopusCatData,originData,hdgsnnData,scopusCitedByData]=await Promise.all([
+const [histIntl,histOjs,media,jcrData,scopusCatData,originData,hdgsnnData,scopusCitedByData,localExtracted]=await Promise.all([
  readJson(path.join(root,'evidence/dashboard-history-intl.json')),
  readJson(path.join(root,'evidence/dashboard-history-ojs.json')),
  readJson(path.join(root,'evidence/dashboard-media.json')),
@@ -31,16 +31,48 @@ const [histIntl,histOjs,media,jcrData,scopusCatData,originData,hdgsnnData,scopus
  readJson(path.join(root,'evidence/scopus-categories.json')),
  readJson(path.join(root,'evidence/dashboard-journal-origins.json')),
  readJson(path.join(root,'evidence/dashboard-hdgsnn-2025.json')),
- readJson(path.join(root,'evidence/scopus-cited-by.json'))
+ readJson(path.join(root,'evidence/scopus-cited-by.json')),
+ readJson(path.join(root,'evidence/dashboard-local-extracted.json'))
 ]);
 for(const logo of Object.values(media.logos)){
  if(!logo.darkVariant)continue;
  assert.equal(logo.darkVariant.sourceSha256,logo.sha256,'Dark artwork must reference its original logo.');
  assert.equal(sha(await readFile(path.join(root,logo.darkVariant.path))),logo.darkVariant.sha256,'Dark logo asset differs from its manifest.');
 }
+for(const cover of Object.values(media.covers)){
+ assert(cover.webpVariant,cover.path+': missing webpVariant in media manifest.');
+ assert.equal(cover.webpVariant.sourceSha256,cover.sha256,'WebP derivative must reference its original PNG cover.');
+ const rawWebp=await readFile(path.join(root,cover.webpVariant.path));
+ assert.equal(rawWebp.length,cover.webpVariant.bytes,'WebP byte count differs from manifest.');
+ assert.equal(sha(rawWebp),cover.webpVariant.sha256,'WebP asset differs from its manifest.');
+}
+assert.equal(localExtracted.schemaVersion,1,'dashboard-local-extracted.json schemaVersion must be 1.');
+assert(localExtracted.sourceFileHashes&&typeof localExtracted.sourceFileHashes==='object','Missing sourceFileHashes map in extracted local data.');
+assert(Array.isArray(localExtracted.journals)&&localExtracted.journals.length===9,'Need exactly 9 extracted local journal records.');
+const localExtractedMap=new Map(localExtracted.journals.map(j=>[j.id,j]));
 const collectedAt=evidence[0].collectedAt,currentYear=Number(collectedAt.slice(0,4)),outputYears=Array.from({length:currentYear-2019},(_,i)=>2020+i);
 assert(evidence.every(e=>e.collectedAt===collectedAt),'Profile evidence dates must agree.');
 const profiles=evidence.flatMap(e=>e.journals),localAudits=audits.flatMap(a=>a.journals);
+for(const a of localAudits){
+ const ex=localExtractedMap.get(a.id);
+ assert(ex,a.code+': missing extracted local record.');
+ assert.equal(ex.code,a.code,a.code+': code mismatch in extracted local data.');
+ assert.equal(ex.processedAt,a.processedAt,a.code+': processedAt mismatch in extracted local data.');
+ assert.equal(ex.publicSourceUrl,a.publicSourceUrl,a.code+': publicSourceUrl mismatch in extracted local data.');
+ for(const input of a.sourceFiles){
+  assert.equal(localExtracted.sourceFileHashes[input.path],input.sha256,a.code+': recorded hash differs for '+input.path);
+ }
+}
+let hasWorkspace=true;
+try{
+ for(const a of localAudits){
+  for(const input of a.sourceFiles){
+   await access(path.join(workspace,input.path));
+  }
+ }
+}catch{
+ hasWorkspace=false;
+}
 const historyMap=new Map([...histIntl.journals,...histOjs.journals].map(j=>[j.id,j]));
 const jcrMap=new Map((jcrData.journals||[]).map(j=>[j.id,j]));
 const scopusCatMap=new Map((scopusCatData.journals||[]).map(j=>[j.id,j.categories]));
@@ -145,15 +177,29 @@ function validateOutput(j,o){
 }
 
 async function localCollection(audit,isScopusIndexed){
- const statsSource=audit.sourceFiles.find(s=>s.path.endsWith('-stats.json'));
- const catSource=audit.sourceFiles.find(s=>s.path.endsWith('_ojs_catalog.json'));
- assert(statsSource&&catSource,audit.code+': missing stats or catalog input.');
- for(const input of audit.sourceFiles){
-  assert(input.path.startsWith('2026/09')&&!input.path.includes('..'),audit.code+': unexpected input path.');
-  assert.equal(sha(await readFile(path.join(workspace,input.path))),input.sha256,audit.code+': source changed after audit: '+input.path);
+ const ex=localExtractedMap.get(audit.id);
+ assert(ex,audit.code+': missing extracted record.');
+ let raw,cat;
+ if(hasWorkspace){
+  const statsSource=audit.sourceFiles.find(s=>s.path.endsWith('-stats.json'));
+  const catSource=audit.sourceFiles.find(s=>s.path.endsWith('_ojs_catalog.json'));
+  assert(statsSource&&catSource,audit.code+': missing stats or catalog input.');
+  for(const input of audit.sourceFiles){
+   assert(input.path.startsWith('2026/09')&&!input.path.includes('..'),audit.code+': unexpected input path.');
+   assert.equal(sha(await readFile(path.join(workspace,input.path))),input.sha256,audit.code+': source changed after audit: '+input.path);
+  }
+  raw=await readJson(path.join(workspace,statsSource.path));
+  cat=await readJson(path.join(workspace,catSource.path));
+  assert.deepEqual(raw.meta,ex.meta,audit.code+': live meta differs from extracted.');
+  assert.deepEqual(raw.citingSeries,ex.citingSeries,audit.code+': live citingSeries differs from extracted.');
+  assert.deepEqual(raw.citeScoreSeries,ex.citeScoreSeries,audit.code+': live citeScoreSeries differs from extracted.');
+ }else{
+  for(const input of audit.sourceFiles){
+   assert.equal(localExtracted.sourceFileHashes[input.path],input.sha256,audit.code+': hash differs for '+input.path);
+  }
+  raw={meta:ex.meta,citingSeries:ex.citingSeries,citeScoreSeries:ex.citeScoreSeries};
+  cat=null;
  }
- const raw=await readJson(path.join(workspace,statsSource.path));
- const cat=await readJson(path.join(workspace,catSource.path));
  assert.equal(raw.meta.officialScopusMetric,false,audit.code+': local data must not be labeled official.');
  assert.equal(raw.meta.updatedAt,audit.processedAt,audit.code+': wrong processing date.');
  const citationSeries=raw.citingSeries.filter(r=>r.year<=currentYear&&(r.docs>0||r.occurrences>0||r.year>=2015)).map(r=>{
@@ -190,9 +236,17 @@ function buildAnnualHistory(j,hist,cat,verifiedOutputs){
     issueSets.get(yr).add(String(a.issue??a.issueId??'1'));
    }
   }
+  const livePre2020=[];
   for(const [yr,papers] of [...counts.entries()].sort((a,b)=>a[0]-b[0])){
-   if(papers>0)byYear.set(yr,{year:yr,papers,issues:issueMap.get(yr)??issueSets.get(yr)?.size??null,periodKind:'annual'});
+   if(papers>0)livePre2020.push({year:yr,papers,issues:issueMap.get(yr)??issueSets.get(yr)?.size??null,periodKind:'annual'});
   }
+  const ex=localExtractedMap.get(j.id);
+  if(ex?.pre2020CatalogHistory)assert.deepEqual(livePre2020,ex.pre2020CatalogHistory,j.code+': live pre2020 catalog history differs from extracted.');
+  for(const r of livePre2020)byYear.set(r.year,{year:r.year,papers:r.papers,issues:r.issues,periodKind:r.periodKind});
+ }else if(!cat&&volOffsets[j.id]){
+  const ex=localExtractedMap.get(j.id);
+  assert(ex?.pre2020CatalogHistory,j.code+': missing pre2020CatalogHistory in extracted local data.');
+  for(const r of ex.pre2020CatalogHistory)byYear.set(r.year,{year:r.year,papers:r.papers,issues:r.issues,periodKind:r.periodKind});
  }
  for(const o of verifiedOutputs)byYear.set(o.year,{year:o.year,papers:o.papers,issues:o.issues,periodKind:o.periodKind});
  const citMap=new Map((j.scopusCitedBy?.citationSeries||j.localCitation?.citationSeries||hist?.fullCitationSeries||[]).map(c=>[c.year,c]));
@@ -254,7 +308,9 @@ for(let index=0;index<order.length;index++){
  j.hdgsnn2025=structuredClone(hdgsnnMap.get(j.id).scores);
  j.cover='assets/images/covers/'+j.id+'.png';
  j.coverImage=j.cover;
+ j.coverWebp='assets/images/covers/webp/'+j.id+'.webp';
  assert(media.covers[j.id]?.path===j.cover,j.code+': missing verified cover asset.');
+ assert(media.covers[j.id]?.webpVariant?.path===j.coverWebp,j.code+': missing verified webp cover asset.');
  const co=coPublishers[j.id];
  j.institution=j.id==='amv'
   ?{name:'Viện Toán học (VAST)',logo:'assets/images/logos/im-vast.png',coPublisher:co[0],coLogo:co[1]}
@@ -317,10 +373,12 @@ for(let index=0;index<order.length;index++){
  assert(j.annualHistory.length>=7,j.code+': annualHistory must include at least 2020-2026.');
  journals.push(j);
 }
-const snapshotId='2026-10-23-hdgsnn-corrections-v2',snapshotPath='data/snapshots/'+snapshotId+'.json';
+const snapshotId='2026-10-23-engineering-improvements-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
 const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.png',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},scopusCitedBy:{path:'evidence/scopus-cited-by.json',metric:scopusCitedByData.metric,method:scopusCitedByData.method,collectedAt:scopusCitedByData.collectedAt,journalsCount:scopusCitedByMap.size},officialJcr:{path:'evidence/dashboard-jcr.json',metricYear:2025,journalsCount:jcrMap.size,edition:'Emerging Sources Citation Index (ESCI)'},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'},{date:scopusCitedByData.collectedAt,title:'Báo cáo trích dẫn Scopus (View cited by → Analyze results) của 7 tạp chí VAST-1',description:'Dữ liệu trích dẫn theo tài liệu riêng biệt (distinct citing documents) phân theo năm xuất bản của tài liệu trích dẫn từ năm bắt đầu đến năm 2026/2027.',url:'evidence/scopus-cited-by.json'}],journals};
 dataset.historySources=structuredClone(originData.sources);
 dataset.hdgsnn={year:hdgsnnData.year,collectedAt:hdgsnnData.collectedAt,decision:structuredClone(hdgsnnData.decision),councils:structuredClone(hdgsnnData.councils)};
+dataset.metricYears={annual:2025,tracker:scopus.trackerYear,jcr:jcrData.metricYear||2025,hdgsnn:hdgsnnData.year||2025,statisticalStartYear:2015,vjstStatisticalStartYear:2016};
+dataset.cutoffDates={publication:collectedAt,scopusCitedBy:scopusCitedByData.collectedAt,scopusTracker:scopus.records.find(r=>r.type==='tracker').lastUpdated,scopusBaseline:scopus.reportDate,hdgsnnIssued:hdgsnnData.decision.issuedAt};
 const serialized=JSON.stringify(dataset,null,2)+'\n';
 if(process.argv.includes('--write')){
  await mkdir(path.join(root,'data/snapshots'),{recursive:true});

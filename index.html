@@ -11,8 +11,8 @@
 <link rel="preload" href="assets/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/dashboard.css?v=20261023e">
-<script type="module" src="assets/dashboard.js?v=20261023e"></script>
+<link rel="stylesheet" href="assets/dashboard.css?v=20261023f">
+<script type="module" src="assets/dashboard.js?v=20261023f"></script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Đến nội dung chính</a>
@@ -160,11 +160,11 @@
 <span class="hud-label arch-cell-num">03</span>
 </div>
 <div class="arch-inst-banner">
-<img src="assets/images/logos/nxb.png" alt="Logo NXB Khoa học tự nhiên và Công nghệ" width="76" height="44">
+<img src="assets/images/logos/nxb.png" alt="Logo NXB Khoa học tự nhiên và Công nghệ" width="76" height="44" loading="lazy" decoding="async">
 <div class="arch-co-logos">
-<img src="assets/images/logos/springer.png" alt="Springer" width="78" height="21">
-<img src="assets/images/logos/iop.png" alt="IOP Publishing" width="84" height="21">
-<img src="assets/images/logos/wiley.png" alt="Wiley" width="66" height="15">
+<img src="assets/images/logos/springer.png" alt="Springer" width="78" height="21" loading="lazy" decoding="async">
+<img src="assets/images/logos/iop.png" alt="IOP Publishing" width="84" height="21" loading="lazy" decoding="async">
+<img src="assets/images/logos/wiley.png" alt="Wiley" width="66" height="15" loading="lazy" decoding="async">
 </div>
 </div>
 <h3>Nhà xuất bản Khoa học tự nhiên và Công nghệ (VAST)</h3>
@@ -176,9 +176,9 @@
 <span class="hud-label arch-cell-num">04</span>
 </div>
 <div class="arch-inst-banner">
-<img src="assets/images/logos/im-vast.png" alt="Logo Viện Toán học" width="44" height="44">
+<img src="assets/images/logos/im-vast.png" alt="Logo Viện Toán học" width="44" height="44" loading="lazy" decoding="async">
 <div class="arch-co-logos">
-<img src="assets/images/logos/springer.png" alt="Springer" width="86" height="23">
+<img src="assets/images/logos/springer.png" alt="Springer" width="86" height="23" loading="lazy" decoding="async">
 </div>
 </div>
 <h3>Viện Toán học (Institute of Mathematics, VAST)</h3>
@@ -259,8 +259,16 @@
 <p class="hud-label section-kicker">03 · BIỂU ĐỒ &amp; BẢNG CHỈ SỐ</p>
 <h2 id="heading-citescore" class="section-display-title">Biến động CiteScore <em class="serif-italic">&amp; Trích dẫn.</em></h2>
 </div>
+<nav class="section-subnav" aria-label="Đi nhanh trong mục Biểu đồ &amp; Bảng chỉ số">
+<a href="#vast1-matrix-block">Bảng CiteScore Scopus</a>
+<a href="#vast1-jcr-wrap">Bảng WoS JCR 2025</a>
+<a href="#chart-scopus-block">01 · CiteScore &amp; Tracker</a>
+<a href="#chart-candidates-block">02 · CiteScore tự tính</a>
+<a href="#chart-citations-block">03 · Trích dẫn theo năm</a>
+<a href="#chart-papers-block">04 · Quy mô xuất bản</a>
+</nav>
 
-<div class="matrix-scroll" data-reveal>
+<div class="matrix-scroll" id="vast1-matrix-block" data-reveal>
 <p id="citescore-table-description" class="section-lead">CiteScore chính thức (2015–2025) và CiteScore Tracker 2026 từ Scopus của 7 tạp chí nhóm VAST-1.</p>
 <table class="citescore-matrix-table" id="vast1-citescore-table" aria-describedby="citescore-table-description">
 <thead id="vast1-matrix-head"></thead>
@@ -315,7 +323,7 @@
 </form>
 <div id="trend-legend" class="legend" role="group" aria-label="Bật hoặc tắt tạp chí VAST-1"></div>
 <figure class="chart-area">
-<svg id="trend-chart" class="interactive-svg" viewBox="0 0 820 360" tabindex="0" role="img" aria-labelledby="chart-title chart-desc"></svg>
+<div class="chart-svg-scroll"><svg id="trend-chart" class="interactive-svg" viewBox="0 0 820 360" tabindex="0" role="img" aria-labelledby="chart-title chart-desc"></svg></div>
 <div id="chart-tooltip" class="chart-tooltip" role="status" aria-live="polite" hidden>
 <div class="tooltip-head">
 <h3 id="tooltip-year"></h3>
@@ -341,7 +349,7 @@
 </div>
 <div id="candidates-legend" class="legend" role="group" aria-label="Bật hoặc tắt tạp chí nhóm VAST-2"></div>
 <figure class="chart-area">
-<svg id="candidates-chart" class="interactive-svg" viewBox="0 0 820 350" tabindex="0" role="img" aria-label="Biểu đồ đường CiteScore dự kiến của 5 tạp chí nhóm VAST-2"></svg>
+<div class="chart-svg-scroll"><svg id="candidates-chart" class="interactive-svg" viewBox="0 0 820 350" tabindex="0" role="img" aria-label="Biểu đồ đường CiteScore dự kiến của 5 tạp chí nhóm VAST-2"></svg></div>
 <div id="candidates-tooltip" class="chart-tooltip" role="status" aria-live="polite" hidden>
 <div class="tooltip-head">
 <h3 id="candidates-tooltip-year"></h3>
@@ -381,7 +389,7 @@
 </form>
 <div id="citations-legend" class="legend" role="group" aria-label="Bật hoặc tắt tạp chí trên biểu đồ trích dẫn"></div>
 <figure class="chart-area">
-<svg id="citations-chart" class="interactive-svg" viewBox="0 0 820 350" tabindex="0" role="img" aria-label="Biểu đồ diễn biến trích dẫn theo năm"></svg>
+<div class="chart-svg-scroll"><svg id="citations-chart" class="interactive-svg" viewBox="0 0 820 350" tabindex="0" role="img" aria-label="Biểu đồ diễn biến trích dẫn theo năm"></svg></div>
 <div id="citations-tooltip" class="chart-tooltip" role="status" aria-live="polite" hidden>
 <div class="tooltip-head">
 <h3 id="citations-tooltip-year"></h3>
@@ -405,9 +413,12 @@
 <div class="field">
 <label for="papers-group">Nhóm tạp chí</label>
 <select id="papers-group">
+<optgroup label="Theo nhóm tạp chí">
 <option value="all">Tất cả 12 tạp chí VAST</option>
 <option value="VAST-1">Nhóm VAST-1 (7 tạp chí)</option>
 <option value="VAST-2">Nhóm VAST-2 (5 tạp chí)</option>
+</optgroup>
+<optgroup label="Xem riêng từng tạp chí" id="papers-journal-options"></optgroup>
 </select>
 </div>
 <div class="field">
@@ -428,9 +439,9 @@
 </select>
 </div>
 </form>
-<div id="papers-legend" class="legend" role="list" aria-label="Chú giải tạp chí"></div>
+<div id="papers-legend" class="legend" role="group" aria-label="Chú giải tạp chí"></div>
 <figure class="chart-area">
-<svg id="papers-chart" class="interactive-svg" viewBox="0 0 820 350" tabindex="0" role="img" aria-label="Biểu đồ cột chồng số bài xuất bản theo từng tạp chí và từng năm"></svg>
+<div class="chart-svg-scroll"><svg id="papers-chart" class="interactive-svg" viewBox="0 0 820 350" tabindex="0" role="img" aria-label="Biểu đồ cột chồng số bài xuất bản theo từng tạp chí và từng năm"></svg></div>
 <div id="papers-tooltip" class="chart-tooltip" role="status" aria-live="polite" hidden>
 <div class="tooltip-head">
 <h3 id="papers-tooltip-year"></h3>

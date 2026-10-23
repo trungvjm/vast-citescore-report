@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "snapshotId": "2026-10-23-hdgsnn-corrections-v2",
+  "snapshotId": "2026-10-23-engineering-improvements-v1",
   "collectedAt": "2026-10-21",
   "reviewAfterDays": 45,
   "outputYears": [
@@ -43,7 +43,7 @@
       "date": "2026-10-21",
       "title": "Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)",
       "description": "Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.",
-      "url": "data/snapshots/2026-10-23-hdgsnn-corrections-v2.json"
+      "url": "data/snapshots/2026-10-23-engineering-improvements-v1.json"
     },
     {
       "date": "2026-10-21",
@@ -1343,6 +1343,7 @@
       ],
       "cover": "assets/images/covers/vjm.png",
       "coverImage": "assets/images/covers/vjm.png",
+      "coverWebp": "assets/images/covers/webp/vjm.webp",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
@@ -2785,6 +2786,7 @@
       ],
       "cover": "assets/images/covers/amv.png",
       "coverImage": "assets/images/covers/amv.png",
+      "coverWebp": "assets/images/covers/webp/amv.webp",
       "institution": {
         "name": "Viện Toán học (VAST)",
         "logo": "assets/images/logos/im-vast.png",
@@ -4893,6 +4895,7 @@
       ],
       "cover": "assets/images/covers/ansn.png",
       "coverImage": "assets/images/covers/ansn.png",
+      "coverWebp": "assets/images/covers/webp/ansn.webp",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
@@ -7470,6 +7473,7 @@
       ],
       "cover": "assets/images/covers/vjc.png",
       "coverImage": "assets/images/covers/vjc.png",
+      "coverWebp": "assets/images/covers/webp/vjc.webp",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
@@ -8971,6 +8975,7 @@
       ],
       "cover": "assets/images/covers/vjes.png",
       "coverImage": "assets/images/covers/vjes.png",
+      "coverWebp": "assets/images/covers/webp/vjes.webp",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
@@ -10949,6 +10954,7 @@
       ],
       "cover": "assets/images/covers/vjst.png",
       "coverImage": "assets/images/covers/vjst.png",
+      "coverWebp": "assets/images/covers/webp/vjst.webp",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
@@ -12429,6 +12435,7 @@
       ],
       "cover": "assets/images/covers/cip.png",
       "coverImage": "assets/images/covers/cip.png",
+      "coverWebp": "assets/images/covers/webp/cip.webp",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
@@ -13705,6 +13712,7 @@
       ],
       "cover": "assets/images/covers/vjmech.png",
       "coverImage": "assets/images/covers/vjmech.png",
+      "coverWebp": "assets/images/covers/webp/vjmech.webp",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
@@ -15348,6 +15356,7 @@
       ],
       "cover": "assets/images/covers/jcc.png",
       "coverImage": "assets/images/covers/jcc.png",
+      "coverWebp": "assets/images/covers/webp/jcc.webp",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
@@ -17027,6 +17036,7 @@
       ],
       "cover": "assets/images/covers/ajb.png",
       "coverImage": "assets/images/covers/ajb.png",
+      "coverWebp": "assets/images/covers/webp/ajb.webp",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
@@ -18493,6 +18503,7 @@
       ],
       "cover": "assets/images/covers/vjmst.png",
       "coverImage": "assets/images/covers/vjmst.png",
+      "coverWebp": "assets/images/covers/webp/vjmst.webp",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
@@ -19962,6 +19973,7 @@
       ],
       "cover": "assets/images/covers/vjbt.png",
       "coverImage": "assets/images/covers/vjbt.png",
+      "coverWebp": "assets/images/covers/webp/vjbt.webp",
       "institution": {
         "name": "NXB Khoa học tự nhiên và Công nghệ",
         "logo": "assets/images/logos/nxb.png",
@@ -20428,5 +20440,20 @@
         "sha256": "c8d2be348702b55dde18e01c3ff39ceb6b6b2839713154fb12c2acda95dedffc"
       }
     ]
+  },
+  "metricYears": {
+    "annual": 2025,
+    "tracker": 2026,
+    "jcr": 2025,
+    "hdgsnn": 2025,
+    "statisticalStartYear": 2015,
+    "vjstStatisticalStartYear": 2016
+  },
+  "cutoffDates": {
+    "publication": "2026-10-21",
+    "scopusCitedBy": "2026-10-23",
+    "scopusTracker": "2026-10-05",
+    "scopusBaseline": "2026-10-21",
+    "hdgsnnIssued": "2025-07-11"
   }
 }
