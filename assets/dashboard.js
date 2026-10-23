@@ -58,8 +58,14 @@ const state={
 
 let dashboard=null,scopus=null;
 
+function safeAsset(path){
+  return /^assets\/images\/[a-zA-Z0-9/_-]+\.(?:png|webp|svg)$/.test(String(path??''))?String(path):'';
+}
 function coverUrl(j){
-  return j?.coverWebp||(j?.id?`assets/images/covers/webp/${j.id}.webp`:j?.cover);
+  return safeAsset(j?.coverWebp||(j?.id?`assets/images/covers/webp/${j.id}.webp`:j?.cover));
+}
+function readHashRoute(){
+  try{return decodeURIComponent(location.hash.slice(1));}catch{return '';}
 }
 
 /* ==========================================================================
@@ -69,7 +75,8 @@ function syncPaletteColors(){
   const cs=getComputedStyle(document.documentElement);
   const c=[1,2,3,4,5,6].map(i=>cs.getPropertyValue(`--c${i}`).trim()||'#2d81ff');
   const map={vjm:c[0],amv:c[3],ansn:c[1],vjc:c[2],vjes:c[5],vjst:c[4],cip:cs.getPropertyValue('--muted').trim()||'#666',vjmech:c[0],jcc:c[1],ajb:c[2],vjmst:c[4],vjbt:c[3]};
-  for(const [k,val] of Object.entries(map)){if(styles[k]&&val)styles[k].color=val;}
+  const isSafeColor=v=>/^(#[0-9a-fA-F]{3,8}|rgba?\([0-9.,\s%/]+\)|var\(--[a-zA-Z0-9-]+\))$/.test(v);
+  for(const [k,val] of Object.entries(map)){if(styles[k]&&isSafeColor(val))styles[k].color=val;}
 }
 
 function applyThemeMode(mode,persist=true,animate=false){
@@ -90,7 +97,7 @@ function applyThemeMode(mode,persist=true,animate=false){
     syncPaletteColors();
     if(dashboard){
       renderAllCharts();
-      const id=decodeURIComponent(location.hash.slice(1));
+      const id=readHashRoute();
       if(id.startsWith('journal/')){
         const j=dashboard.journals.find(x=>x.id===id.slice(8));
         if(j)renderDetailCharts(j);
@@ -290,7 +297,7 @@ function formatValue(value,metric=state.metric){
   if(!Number.isFinite(value))return'N/A';
   return metricInfo[metric]?.decimals?oneDec.format(value):integer.format(value);
 }
-function safeUrl(url){return /^https?:\/\//i.test(String(url??''))?String(url):'#';}
+function safeUrl(url){return /^https:\/\//i.test(String(url??''))?String(url):'#';}
 function external(url,text){return `<a href="${esc(safeUrl(url))}" target="_blank" rel="noopener noreferrer">${esc(text??url)}</a>`;}
 function fullName(j){return j.title+` (${j.code})`;}
 function publicationFrequency(j){
@@ -531,10 +538,10 @@ function renderVast1JcrTable(){
       <td>${Number.isFinite(jr.fiveYearJif)?oneDec.format(jr.fiveYearJif):'—'}<small style="display:block;color:var(--muted)">${jr.fiveYearNumerator&&jr.fiveYearDenominator?`${integer.format(jr.fiveYearNumerator)}/${integer.format(jr.fiveYearDenominator)}`:''}</small></td>
       <td><strong>${twoDec.format(jr.jci)}</strong></td>
       <td>${Number.isFinite(jr.immediacyIndex)?oneDec.format(jr.immediacyIndex):'—'}<small style="display:block;color:var(--muted)">${jr.immediacyNumerator&&jr.immediacyDenominator?`${integer.format(jr.immediacyNumerator)}/${integer.format(jr.immediacyDenominator)}`:''}</small></td>
-      <td><strong>${Number.isFinite(jr.totalCitations)?integer.format(jr.totalCitations):'—'}</strong><small style="display:block;color:var(--muted)">Cited half-life: ${jr.citedHalfLife} năm</small></td>
+      <td><strong>${Number.isFinite(jr.totalCitations)?integer.format(jr.totalCitations):'—'}</strong><small style="display:block;color:var(--muted)">Cited half-life: ${esc(jr.citedHalfLife)} năm</small></td>
       <td>${jifCats}</td>
       <td>${jciCats}</td>
-      <td>Clarivate JCR ${jr.metricYear}<br>${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed').sourceUrl,'Xem chỉ mục trên Clarivate MJL')}</td>
+      <td>Clarivate JCR ${esc(jr.metricYear)}<br>${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed')?.sourceUrl,'Xem chỉ mục trên Clarivate MJL')}</td>
     </tr>`;
   }).join('');
 }
@@ -1147,13 +1154,17 @@ function renderReferences(){
       }))
     ];
   });
-  references.push(...dashboard.historySources.filter(source=>source.url&&source.kind!=='published-photograph').map(source=>({
-    author:source.author||(new URL(source.url).hostname==='math.ac.vn'?'Viện Toán học, VAST':null),
-    title:source.title,url:source.url
-  })));
+  references.push(...(dashboard.historySources||[]).filter(source=>source.url&&source.kind!=='published-photograph').map(source=>{
+    let host='';
+    try{host=new URL(source.url).hostname;}catch{}
+    return {
+      author:source.author||(host==='math.ac.vn'?'Viện Toán học, VAST':null),
+      title:source.title,url:source.url
+    };
+  }));
   if(dashboard.hdgsnn){
     references.push(
-      {author:'Hội đồng Giáo sư nhà nước',title:dashboard.hdgsnn.decision.title,year:dashboard.hdgsnn.year,url:dashboard.hdgsnn.decision.url},
+      {author:'Hội đồng Giáo sư nhà nước',title:dashboard.hdgsnn.decision.title,year:dashboard.hdgsnn.year,url:dashboard.hdgsnn.decision.pdfUrl||dashboard.hdgsnn.decision.mirrorIndexUrl},
       ...dashboard.hdgsnn.councils.map(c=>({author:c.name,title:`Danh mục tạp chí khoa học được tính điểm năm ${dashboard.hdgsnn.year}`,year:dashboard.hdgsnn.year,url:c.sourceUrl}))
     );
   }
@@ -1176,7 +1187,7 @@ function renderJournalHistory(j){
       <p class="hud-label chart-kicker">LÃNH ĐẠO TẠP CHÍ · ${esc(j.code)}</p>
       <h3 id="journal-editors-heading">Tổng biên tập qua các thời kỳ</h3>
       <div class="editor-grid">${history.editors.map(editor=>`<article class="editor-card${editor.portrait?'':' is-text-only'}">
-        ${editor.portrait?`<img class="editor-portrait" src="${esc(editor.portrait.path)}" alt="Chân dung ${esc(editor.name)}" width="${editor.portrait.width}" height="${editor.portrait.height}" loading="lazy" decoding="async">`:''}
+        ${editor.portrait?`<img class="editor-portrait" src="${esc(safeAsset(editor.portrait.path))}" alt="Chân dung ${esc(editor.name)}" width="${esc(editor.portrait.width)}" height="${esc(editor.portrait.height)}" loading="lazy" decoding="async">`:''}
         <div class="editor-content"><h4>${esc(editor.name)}</h4><ul class="editor-appointments">${editor.appointments.map(appointment=>`<li><strong>${esc(appointment.role)}</strong>${appointment.tenure?`<span>${esc(appointment.tenure)}</span>`:''}</li>`).join('')}</ul>
         </div>
       </article>`).join('')}</div>
@@ -1210,13 +1221,13 @@ function renderDetail(id){
   const listedIndexings=j.indexings.filter(i=>i.status==='listed');
 
   const profileRows=[
-    ['Phân nhóm VAST',j.group==='VAST-1'?'VAST-1 · Tạp chí quốc tế':'VAST-2 · Tạp chí quốc gia'],
-    ['Tên tiếng Việt',j.titleVi],
-    ['Lĩnh vực',j.subject],
-    ['Đơn vị chủ quản xuất bản',inst.name],
-    ['Đối tác đồng xuất bản quốc tế',inst.coPublisher||'Xuất bản độc lập trên hệ thống VJS (VAST)'],
-    ['ISSN bản in / điện tử',`${j.issn??'—'} / ${j.eissn??'—'}`],
-    ...(jr?[['Chỉ số Web of Science (JCR 2025)',`JIF 2025: <strong>${oneDec.format(jr.jif)}</strong> (${jr.jifNumerator}/${jr.jifDenominator}) · 5-Year JIF: <strong>${oneDec.format(jr.fiveYearJif)}</strong> · JCI: <strong>${twoDec.format(jr.jci)}</strong> · Tổng trích dẫn JCR 2025: <strong>${integer.format(jr.totalCitations)}</strong>`]]:[]),
+    ['Phân nhóm VAST',esc(j.group==='VAST-1'?'VAST-1 · Tạp chí quốc tế':'VAST-2 · Tạp chí quốc gia')],
+    ['Tên tiếng Việt',esc(j.titleVi)],
+    ['Lĩnh vực',esc(j.subject)],
+    ['Đơn vị chủ quản xuất bản',esc(inst.name)],
+    ['Đối tác đồng xuất bản quốc tế',esc(inst.coPublisher||'Xuất bản độc lập trên hệ thống VJS (VAST)')],
+    ['ISSN bản in / điện tử',`${esc(j.issn??'—')} / ${esc(j.eissn??'—')}`],
+    ...(jr?[['Chỉ số Web of Science (JCR 2025)',`JIF 2025: <strong>${oneDec.format(jr.jif)}</strong> (${integer.format(jr.jifNumerator)}/${integer.format(jr.jifDenominator)}) · 5-Year JIF: <strong>${oneDec.format(jr.fiveYearJif)}</strong> · JCI: <strong>${twoDec.format(jr.jci)}</strong> · Tổng trích dẫn JCR 2025: <strong>${integer.format(jr.totalCitations)}</strong>`]]:[]),
     ['Kỳ hạn xuất bản',esc(publicationFrequency(j))],
     ...(j.hdgsnn2025?.length?[['Điểm HĐGSNN 2025 (QĐ 26/QĐ-HĐGSNN)',esc(hdgsnnRangeText(j))]]:[]),
     ['Số liệu xuất bản',`${minYear}–${maxYear} · ${integer.format(totalHistPapers)} bài / ${integer.format(totalHistIssues)} kỳ${missingYears.length?`; năm chưa có số liệu: ${missingYears.join(', ')}`:''}`],
@@ -1384,7 +1395,7 @@ function renderDetail(id){
           <div class="table-scroll">
             <table class="detail-table">
               <thead><tr><th scope="col">Năm</th><th scope="col">Loại</th><th scope="col">CiteScore</th><th scope="col">Trích dẫn</th><th scope="col">Tài liệu</th><th scope="col">Cửa sổ</th></tr></thead>
-              <tbody>${ownRecords.map(r=>`<tr><td>${r.year}</td><td>${r.type==='tracker'?'Tracker':'Chính thức'}</td><td><strong>${oneDec.format(r.value)}</strong></td><td>${Number.isFinite(r.citations)?integer.format(r.citations):'N/A'}</td><td>${Number.isFinite(r.documents)?integer.format(r.documents):'N/A'}</td><td>${esc(r.citationWindow??'—')}</td></tr>`).join('')}</tbody>
+              <tbody>${ownRecords.map(r=>`<tr><td>${r.year}</td><td>${r.type==='tracker'?'Tracker':'Chính thức'}</td><td><strong>${oneDec.format(r.value)}</strong></td><td>${Number.isFinite(r.citations)?integer.format(r.citations):'N/A'}</td><td>${Number.isFinite(r.documents)?integer.format(r.documents):'N/A'}</td><td>${esc(r.window??r.citationWindow??'—')}</td></tr>`).join('')}</tbody>
             </table>
           </div>
         </section>`:''}
@@ -1411,8 +1422,8 @@ function renderDetail(id){
           </div>
         </section>`:''}
         ${jr?`<section class="detail-section">
-          <h3>JCR ${jr.metricYear} · ${esc(jr.wosCollection)}</h3>
-          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed').sourceUrl,'Clarivate MJL')}</p>
+          <h3>JCR ${esc(jr.metricYear)} · ${esc(jr.wosCollection)}</h3>
+          <p style="font-size:13px;color:var(--muted);margin:0 0 10px">${external(j.indexings.find(i=>i.system==='WoS'&&i.status==='listed')?.sourceUrl,'Clarivate MJL')}</p>
           <div class="table-scroll">
             <table class="detail-table">
               <thead><tr><th scope="col">Chỉ số JCR 2025</th><th scope="col">Giá trị</th><th scope="col">Chi tiết / Giai đoạn tính</th></tr></thead>
@@ -1422,7 +1433,7 @@ function renderDetail(id){
                 <tr title="Số trích dẫn năm 2025 tới các bài xuất bản trong 5 năm (2020–2024) chia cho số bài citable (2020–2024)"><td>5-Year Impact Factor</td><td><strong>${oneDec.format(jr.fiveYearJif)}</strong></td><td>${integer.format(jr.fiveYearNumerator)} trích dẫn năm 2025 / ${integer.format(jr.fiveYearDenominator)} bài citable (2020–2024)</td></tr>
                 <tr title="Chỉ số tác động trích dẫn chuẩn hóa theo ngành trong 3 năm (mức trung bình thế giới = 1,00)"><td>Journal Citation Indicator (JCI 2025)</td><td><strong>${twoDec.format(jr.jci)}</strong></td><td>Chỉ số chuẩn hóa theo lĩnh vực (CNCI trung bình 3 năm · mốc chuẩn toàn cầu = 1,00)</td></tr>
                 <tr title="Số trích dẫn ngay trong năm 2025 tới các bài vừa xuất bản năm 2025 chia cho số bài năm 2025"><td>Immediacy Index (Chỉ số tức thời)</td><td><strong>${oneDec.format(jr.immediacyIndex)}</strong></td><td>${integer.format(jr.immediacyNumerator)} trích dẫn năm 2025 / ${integer.format(jr.immediacyDenominator)} bài citable năm 2025</td></tr>
-                <tr title="Cited Half-life: tuổi trung vị của các bài được trích dẫn năm 2025. Citing Half-life: tuổi trung vị của các tài liệu tham khảo được tạp chí trích dẫn"><td>Tổng trích dẫn trong JCR 2025 &amp; Half-life</td><td><strong>${integer.format(jr.totalCitations)} lượt</strong></td><td>Cited Half-life: ${jr.citedHalfLife} năm · Citing Half-life: ${jr.citingHalfLife} năm</td></tr>
+                <tr title="Cited Half-life: tuổi trung vị của các bài được trích dẫn năm 2025. Citing Half-life: tuổi trung vị của các tài liệu tham khảo được tạp chí trích dẫn"><td>Tổng trích dẫn trong JCR 2025 &amp; Half-life</td><td><strong>${integer.format(jr.totalCitations)} lượt</strong></td><td>Cited Half-life: ${esc(jr.citedHalfLife)} năm · Citing Half-life: ${esc(jr.citingHalfLife)} năm</td></tr>
                 <tr title="Đo tầm ảnh hưởng có trọng số trong mạng lưới WoS (không tính tự trích dẫn; Normalized Eigenfactor và AIS có mức trung bình toàn JCR = 1,0)"><td>Eigenfactor / Normalized Eigenfactor / AIS</td><td><strong>${jr.eigenfactorScore.toFixed(5)}</strong></td><td>Normalized Eigenfactor: ${jr.normalizedEigenfactor.toFixed(5)} · Article Influence Score (AIS): ${jr.articleInfluenceScore.toFixed(3)}</td></tr>
               </tbody>
             </table>
@@ -1652,7 +1663,7 @@ function renderDetailCharts(j){
    ========================================================================== */
 function syncRoute(){
   if(!dashboard)return;
-  const raw=decodeURIComponent(location.hash.slice(1));
+  const raw=readHashRoute();
   const homeView=$('#home-view');
   const panel=$('#detail-panel');
   let target=null;
@@ -1675,7 +1686,7 @@ function syncRoute(){
       {id:'charts',elId:'journal-charts',word:'BIỂU ĐỒ'},
       {id:'data',elId:'journal-data',word:'SỐ LIỆU'},
       ...(journal?.hdgsnn2025?.length?[{id:'hdgsnn',elId:'journal-hdgsnn',word:'HĐGSNN'}]:[])
-    ],journal?`${journal.code} · VAST JOURNALS`:'VAST JOURNALS',id);
+    ],journal?`${journal.code} · VAST JOURNALS`:'VAST JOURNALS',journal?.id??'');
     target=sectionId?document.getElementById(sectionId):null;
     if(!target)window.scrollTo({top:0,behavior:'instant'});
   }else{
@@ -1750,9 +1761,10 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023h'),fetch('data-scopus.json?v=20261023h')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023i'),fetch('data-scopus.json?v=20261023i')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     [dashboard,scopus]=await Promise.all([dRes.json(),sRes.json()]);
+    if(dashboard?.schemaVersion!==1||!Array.isArray(dashboard?.journals)||!Array.isArray(scopus?.records)||!Array.isArray(scopus?.journals))throw new Error('Invalid dashboard dataset schema');
     syncPaletteColors();
     state.selected=new Set(scopusJournals().map(j=>j.id));
     state.selectedCandidates=new Set(candidateJournals().map(j=>j.id));

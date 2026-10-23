@@ -371,12 +371,50 @@ for(let index=0;index<order.length;index++){
  j.historyStartYear=j.annualHistory[0]?.year??2020;
  j.historyEndYear=j.annualHistory.at(-1)?.year??2026;
  assert(j.annualHistory.length>=7,j.code+': annualHistory must include at least 2020-2026.');
+ delete j.outputs;
+ delete j.latestIssue;
+ delete j.profileSources;
+ delete j.checkedAt;
+ delete j.coverImage;
+ if(j.jcr){delete j.jcr.source;delete j.jcr.notes;}
+ if(j.journalHistory){
+  delete j.journalHistory.cautions;
+  delete j.journalHistory.sourceId;
+  j.journalHistory.events=j.journalHistory.events.map(ev=>({dateLabel:ev.dateLabel,year:ev.year,text:ev.text}));
+  j.journalHistory.editors=j.journalHistory.editors.map(ed=>({
+   name:ed.name,
+   appointments:ed.appointments.map(ap=>({role:ap.role,tenure:ap.tenure})),
+   portrait:ed.portrait?{path:ed.portrait.path,width:ed.portrait.width,height:ed.portrait.height}:null
+  }));
+ }
+ if(j.hdgsnn2025){
+  j.hdgsnn2025=j.hdgsnn2025.map(s=>({
+   councilNumber:s.councilNumber,
+   council:s.council,
+   councilShort:s.councilShort,
+   score:s.score,
+   maxScore:s.maxScore,
+   conditions:s.conditions,
+   sourceUrl:s.sourceUrl
+  }));
+ }
  journals.push(j);
 }
 const snapshotId='2026-10-23-engineering-improvements-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
 const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.png',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},scopusCitedBy:{path:'evidence/scopus-cited-by.json',metric:scopusCitedByData.metric,method:scopusCitedByData.method,collectedAt:scopusCitedByData.collectedAt,journalsCount:scopusCitedByMap.size},officialJcr:{path:'evidence/dashboard-jcr.json',metricYear:2025,journalsCount:jcrMap.size,edition:'Emerging Sources Citation Index (ESCI)'},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'},{date:scopusCitedByData.collectedAt,title:'Báo cáo trích dẫn Scopus (View cited by → Analyze results) của 7 tạp chí VAST-1',description:'Dữ liệu trích dẫn theo tài liệu riêng biệt (distinct citing documents) phân theo năm xuất bản của tài liệu trích dẫn từ năm bắt đầu đến năm 2026/2027.',url:'evidence/scopus-cited-by.json'}],journals};
-dataset.historySources=structuredClone(originData.sources);
-dataset.hdgsnn={year:hdgsnnData.year,collectedAt:hdgsnnData.collectedAt,decision:structuredClone(hdgsnnData.decision),councils:structuredClone(hdgsnnData.councils)};
+dataset.historySources=originData.sources.filter(s=>s.url&&s.kind!=='published-photograph').map(s=>({id:s.id,kind:s.kind,title:s.title,author:s.author||null,url:s.url}));
+dataset.hdgsnn={
+ year:hdgsnnData.year,
+ collectedAt:hdgsnnData.collectedAt,
+ decision:{
+  number:hdgsnnData.decision.number,
+  issuedAt:hdgsnnData.decision.issuedAt,
+  title:hdgsnnData.decision.title,
+  pdfUrl:hdgsnnData.decision.pdfUrl,
+  mirrorIndexUrl:hdgsnnData.decision.mirrorIndexUrl
+ },
+ councils:hdgsnnData.councils.map(c=>({officialNumber:c.officialNumber,shortName:c.shortName,name:c.name,sourceUrl:c.sourceUrl}))
+};
 dataset.metricYears={annual:2025,tracker:scopus.trackerYear,jcr:jcrData.metricYear||2025,hdgsnn:hdgsnnData.year||2025,statisticalStartYear:2015,vjstStatisticalStartYear:2016};
 dataset.cutoffDates={publication:collectedAt,scopusCitedBy:scopusCitedByData.collectedAt,scopusTracker:scopus.records.find(r=>r.type==='tracker').lastUpdated,scopusBaseline:scopus.reportDate,hdgsnnIssued:hdgsnnData.decision.issuedAt};
 const serialized=JSON.stringify(dataset,null,2)+'\n';
