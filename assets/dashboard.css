@@ -1237,6 +1237,40 @@ input[type="search"]::placeholder{color:var(--faint)}
   line-height:1.6;
 }
 .chart-caption{margin-top:12px}
+.jcr-glossary{
+  margin-top:12px;
+  border:1px solid var(--line);
+  background:var(--bg-raised);
+  padding:10px 14px;
+}
+.jcr-glossary summary{
+  cursor:pointer;
+  font-family:var(--font-mono);
+  font-size:11.5px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:var(--ink-strong);
+}
+.jcr-glossary-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:12px 18px;
+  margin:12px 0 2px;
+}
+.jcr-glossary-grid dt{
+  font-family:var(--font-display);
+  font-size:13px;
+  font-weight:620;
+  color:var(--ink-strong);
+  margin-bottom:3px;
+}
+.jcr-glossary-grid dd{
+  margin:0;
+  font-size:12.5px;
+  line-height:1.5;
+  color:var(--muted);
+}
 
 figure{margin:0;min-width:0}
 .chart-area{

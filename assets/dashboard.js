@@ -499,17 +499,17 @@ function renderVast1JcrTable(){
   if(!head||!body)return;
   const jcrJournals=dashboard.journals.filter(j=>j.jcr);
   head.innerHTML=`<tr>
-    <th scope="col">Tạp chí VAST-1 (ESCI)</th>
-    <th scope="col">JIF 2025<br>(2 năm)</th>
-    <th scope="col">JIF không<br>tự trích dẫn</th>
-    <th scope="col">Tử số / Mẫu số JIF<br>(2023–2024)</th>
-    <th scope="col">5-Year<br>JIF</th>
-    <th scope="col">JCI<br>2025</th>
-    <th scope="col">Immediacy<br>Index</th>
-    <th scope="col">Tổng trích dẫn<br>JCR 2025</th>
-    <th scope="col">Xếp hạng &amp; Quartile JIF (JCR 2025)</th>
-    <th scope="col">Xếp hạng &amp; Quartile JCI (JCR 2025)</th>
-    <th scope="col">Clarivate JCR / Web of Science</th>
+    <th scope="col" title="Tạp chí thuộc bộ chỉ mục Emerging Sources Citation Index (ESCI) trong Web of Science Core Collection">Tạp chí VAST-1 (ESCI)</th>
+    <th scope="col" title="Journal Impact Factor (2 năm): Số trích dẫn năm 2025 tới các bài xuất bản 2023–2024 chia cho tổng số bài citable (2023–2024)">JIF 2025<br>(2 năm)</th>
+    <th scope="col" title="JIF 2 năm sau khi loại bỏ các lượt tự trích dẫn từ chính tạp chí đó">JIF không<br>tự trích dẫn</th>
+    <th scope="col" title="Tử số: số trích dẫn năm 2025 tới các bài 2023–2024. Mẫu số: số bài nghiên cứu &amp; tổng quan (citable items) xuất bản 2023–2024">Tử số / Mẫu số JIF<br>(2023–2024)</th>
+    <th scope="col" title="Hệ số ảnh hưởng 5 năm: Số trích dẫn năm 2025 tới các bài xuất bản 2020–2024 chia cho số bài citable (2020–2024)">5-Year<br>JIF</th>
+    <th scope="col" title="Journal Citation Indicator: Chỉ số tác động trích dẫn chuẩn hóa theo lĩnh vực (mức trung bình toàn cầu = 1,00)">JCI<br>2025</th>
+    <th scope="col" title="Chỉ số tức thời: Số trích dẫn ngay trong năm 2025 tới các bài xuất bản trong chính năm 2025 chia cho số bài năm 2025">Immediacy<br>Index</th>
+    <th scope="col" title="Tổng số lượt trích dẫn trong năm 2025 tới mọi năm xuất bản của tạp chí; kèm Cited half-life (tuổi trung vị của các bài được trích dẫn)">Tổng trích dẫn<br>JCR 2025</th>
+    <th scope="col" title="Thứ hạng, nhóm Quartile (Q1: top 25%, Q2: 25–50%, Q3: 50–75%, Q4: 75–100%) và phân vị theo JIF trong từng phân ngành WoS">Xếp hạng &amp; Quartile JIF (JCR 2025)</th>
+    <th scope="col" title="Thứ hạng, nhóm Quartile (Q1–Q4) và phân vị theo chỉ số chuẩn hóa JCI trong từng phân ngành WoS">Xếp hạng &amp; Quartile JCI (JCR 2025)</th>
+    <th scope="col" title="Liên kết đối chiếu trực tiếp trên Clarivate Master Journal List (MJL)">Clarivate JCR / Web of Science</th>
   </tr>`;
   body.innerHTML=jcrJournals.map(j=>{
     const jr=j.jcr;
@@ -1417,13 +1417,13 @@ function renderDetail(id){
             <table class="detail-table">
               <thead><tr><th scope="col">Chỉ số JCR 2025</th><th scope="col">Giá trị</th><th scope="col">Chi tiết / Giai đoạn tính</th></tr></thead>
               <tbody>
-                <tr><td><strong>Journal Impact Factor (JIF 2025)</strong></td><td><strong>${oneDec.format(jr.jif)}</strong></td><td>${integer.format(jr.jifNumerator)} trích dẫn năm 2025 / ${integer.format(jr.jifDenominator)} bài citable (2023–2024)</td></tr>
-                <tr><td>JIF không tính tự trích dẫn</td><td><strong>${oneDec.format(jr.jifWithoutSelfCitations)}</strong></td><td>${integer.format(jr.jifWithoutSelfNumerator)} trích dẫn không tự TD / ${integer.format(jr.jifDenominator)} bài citable (2023–2024)</td></tr>
-                <tr><td>5-Year Impact Factor</td><td><strong>${oneDec.format(jr.fiveYearJif)}</strong></td><td>${integer.format(jr.fiveYearNumerator)} trích dẫn năm 2025 / ${integer.format(jr.fiveYearDenominator)} bài citable (2020–2024)</td></tr>
-                <tr><td>Journal Citation Indicator (JCI 2025)</td><td><strong>${twoDec.format(jr.jci)}</strong></td><td>Chỉ số chuẩn hóa theo lĩnh vực (CNCI trung bình 3 năm)</td></tr>
-                <tr><td>Immediacy Index</td><td><strong>${oneDec.format(jr.immediacyIndex)}</strong></td><td>${integer.format(jr.immediacyNumerator)} trích dẫn năm 2025 / ${integer.format(jr.immediacyDenominator)} bài citable năm 2025</td></tr>
-                <tr><td>Tổng trích dẫn trong JCR 2025</td><td><strong>${integer.format(jr.totalCitations)} lượt</strong></td><td>Cited Half-life: ${jr.citedHalfLife} năm · Citing Half-life: ${jr.citingHalfLife} năm</td></tr>
-                <tr><td>Eigenfactor / Normalized Eigenfactor / AIS</td><td><strong>${jr.eigenfactorScore.toFixed(5)}</strong></td><td>Normalized Eigenfactor: ${jr.normalizedEigenfactor.toFixed(5)} · Article Influence Score: ${jr.articleInfluenceScore.toFixed(3)}</td></tr>
+                <tr title="Số trích dẫn năm 2025 tới các bài xuất bản 2023–2024 chia cho tổng số bài nghiên cứu và tổng quan (2023–2024)"><td><strong>Journal Impact Factor (JIF 2025)</strong></td><td><strong>${oneDec.format(jr.jif)}</strong></td><td>${integer.format(jr.jifNumerator)} trích dẫn năm 2025 / ${integer.format(jr.jifDenominator)} bài citable (2023–2024)</td></tr>
+                <tr title="JIF 2 năm khi không tính các trích dẫn từ chính tạp chí này"><td>JIF không tính tự trích dẫn</td><td><strong>${oneDec.format(jr.jifWithoutSelfCitations)}</strong></td><td>${integer.format(jr.jifWithoutSelfNumerator)} trích dẫn không tự TD / ${integer.format(jr.jifDenominator)} bài citable (2023–2024)</td></tr>
+                <tr title="Số trích dẫn năm 2025 tới các bài xuất bản trong 5 năm (2020–2024) chia cho số bài citable (2020–2024)"><td>5-Year Impact Factor</td><td><strong>${oneDec.format(jr.fiveYearJif)}</strong></td><td>${integer.format(jr.fiveYearNumerator)} trích dẫn năm 2025 / ${integer.format(jr.fiveYearDenominator)} bài citable (2020–2024)</td></tr>
+                <tr title="Chỉ số tác động trích dẫn chuẩn hóa theo ngành trong 3 năm (mức trung bình thế giới = 1,00)"><td>Journal Citation Indicator (JCI 2025)</td><td><strong>${twoDec.format(jr.jci)}</strong></td><td>Chỉ số chuẩn hóa theo lĩnh vực (CNCI trung bình 3 năm · mốc chuẩn toàn cầu = 1,00)</td></tr>
+                <tr title="Số trích dẫn ngay trong năm 2025 tới các bài vừa xuất bản năm 2025 chia cho số bài năm 2025"><td>Immediacy Index (Chỉ số tức thời)</td><td><strong>${oneDec.format(jr.immediacyIndex)}</strong></td><td>${integer.format(jr.immediacyNumerator)} trích dẫn năm 2025 / ${integer.format(jr.immediacyDenominator)} bài citable năm 2025</td></tr>
+                <tr title="Cited Half-life: tuổi trung vị của các bài được trích dẫn năm 2025. Citing Half-life: tuổi trung vị của các tài liệu tham khảo được tạp chí trích dẫn"><td>Tổng trích dẫn trong JCR 2025 &amp; Half-life</td><td><strong>${integer.format(jr.totalCitations)} lượt</strong></td><td>Cited Half-life: ${jr.citedHalfLife} năm · Citing Half-life: ${jr.citingHalfLife} năm</td></tr>
+                <tr title="Đo tầm ảnh hưởng có trọng số trong mạng lưới WoS (không tính tự trích dẫn; Normalized Eigenfactor và AIS có mức trung bình toàn JCR = 1,0)"><td>Eigenfactor / Normalized Eigenfactor / AIS</td><td><strong>${jr.eigenfactorScore.toFixed(5)}</strong></td><td>Normalized Eigenfactor: ${jr.normalizedEigenfactor.toFixed(5)} · Article Influence Score (AIS): ${jr.articleInfluenceScore.toFixed(3)}</td></tr>
               </tbody>
             </table>
           </div>
@@ -1451,6 +1451,17 @@ function renderDetail(id){
               </tbody>
             </table>
           </div>
+          <details class="jcr-glossary">
+            <summary>Giải thích các chỉ số trong báo cáo Clarivate JCR 2025</summary>
+            <dl class="jcr-glossary-grid">
+              <div><dt>JIF 2025 (2 năm) &amp; JIF không tự trích dẫn</dt><dd><strong>JIF 2025</strong> bằng tổng trích dẫn năm 2025 tới các bài xuất bản năm 2023–2024 chia cho số bài nghiên cứu &amp; tổng quan (<em>citable items</em>) giai đoạn 2023–2024. <strong>JIF không tự trích dẫn</strong> loại bỏ các lượt trích dẫn từ chính tạp chí này ở tử số.</dd></div>
+              <div><dt>5-Year Impact Factor</dt><dd>Số trích dẫn năm 2025 tới các bài xuất bản trong 5 năm (2020–2024) chia cho tổng số bài <em>citable items</em> giai đoạn 2020–2024 — phản ánh các lĩnh vực có chu kỳ trích dẫn dài.</dd></div>
+              <div><dt>Journal Citation Indicator (JCI)</dt><dd>Chỉ số tác động trích dẫn chuẩn hóa theo ngành, loại bài và năm xuất bản (cửa sổ 3 năm 2022–2024). Mốc trung bình thế giới của mọi ngành bằng <strong>1,00</strong>.</dd></div>
+              <div><dt>Immediacy Index &amp; Half-life</dt><dd><strong>Immediacy Index</strong> đo số trích dẫn phát sinh ngay trong năm 2025 cho các bài vừa xuất bản năm 2025. <strong>Cited Half-life</strong> là tuổi trung vị của các bài thuộc tạp chí được trích dẫn trong năm 2025; <strong>Citing Half-life</strong> là tuổi trung vị của tài liệu tham khảo mà tạp chí trích dẫn.</dd></div>
+              <div><dt>Eigenfactor, Normalized Eigenfactor &amp; AIS</dt><dd>Đánh giá tầm ảnh hưởng có trọng số trong mạng lưới trích dẫn WoS (trích dẫn từ tạp chí uy tín cao có trọng số lớn hơn, loại bỏ tự trích dẫn). <strong>Normalized Eigenfactor</strong> và <strong>Article Influence Score (AIS)</strong> lấy mức trung bình toàn JCR bằng <strong>1,0</strong>.</dd></div>
+              <div><dt>Quartile (Q1–Q4) &amp; Phân vị</dt><dd><strong>Q1</strong>: Top 25% đầu ngành (phân vị ≥ 75%); <strong>Q2</strong>: 50%–74,9%; <strong>Q3</strong>: 25%–49,9%; <strong>Q4</strong>: &lt; 25%.</dd></div>
+            </dl>
+          </details>
         </section>`:''}
 
 
@@ -1739,7 +1750,7 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023g'),fetch('data-scopus.json?v=20261023g')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023h'),fetch('data-scopus.json?v=20261023h')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     [dashboard,scopus]=await Promise.all([dRes.json(),sRes.json()]);
     syncPaletteColors();
