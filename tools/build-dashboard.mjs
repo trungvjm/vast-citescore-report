@@ -276,10 +276,10 @@ const archiveUrls={
  vjst:'https://vjs.ac.vn/index.php/jst/issue/archive',
  cip:'https://vjs.ac.vn/index.php/cip/issue/archive',
  vjmech:'https://vjs.ac.vn/index.php/vjmech/issue/archive',
- jcc:'https://vjs.ac.vn/jcc/issue/archive',
- ajb:'https://vjs.ac.vn/vjbio/issue/archive',
- vjmst:'https://vjs.ac.vn/jmst/issue/archive',
- vjbt:'https://vjs.ac.vn/vjbt/issue/archive'
+ jcc:'https://vjs.ac.vn/index.php/jcc/issue/archive',
+ ajb:'https://vjs.ac.vn/index.php/vjbio/issue/archive',
+ vjmst:'https://vjs.ac.vn/index.php/jmst/issue/archive',
+ vjbt:'https://vjs.ac.vn/index.php/vjbt/issue/archive'
 };
 const journals=[];
 for(let index=0;index<order.length;index++){

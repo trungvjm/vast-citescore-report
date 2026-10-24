@@ -424,11 +424,12 @@ function renderHeroAndOverview(){
   const totalPeriodIssues=dashboard.journals.reduce((s,j)=>s+statisticalHistory(j).reduce((a,r)=>a+(r.issues||0),0),0);
   const totalCitingDocs=dashboard.journals.reduce((s,j)=>s+(j.scopusCitedBy?.citingDocuments??0),0);
   const totalSourceDocs=dashboard.journals.reduce((s,j)=>s+(j.scopusCitedBy?.sourceDocuments??0),0);
+  const total2027Docs=dashboard.journals.reduce((s,j)=>s+(j.scopusCitedBy?.citationSeries?.find(r=>r.year===2027)?.citingDocuments??0),0);
 
   const cells=[
     ['Hệ thống tạp chí VAST','12 tạp chí','7 tạp chí VAST-1 (Scopus; 5 tạp chí có JCR/ESCI) · 5 tạp chí VAST-2'],
     ['Tổng số bài xuất bản (2015–2026*)',`${integer.format(totalPeriodPapers)} bài`,`${integer.format(totalPeriodIssues)} kỳ xuất bản (VJST từ 2016 · chốt 21/10/2026)`],
-    ['Tài liệu trích dẫn tích lũy (Scopus)',`${integer.format(totalCitingDocs)} tài liệu`,`Toàn thời gian từ ${integer.format(totalSourceDocs)} bài nguồn · 7 tạp chí VAST-1 (23/10/2026)`],
+    ['Tài liệu trích dẫn tích lũy (Scopus)',`${integer.format(totalCitingDocs)} tài liệu`,`Toàn thời gian từ ${integer.format(totalSourceDocs)} bài nguồn · 7 tạp chí VAST-1 (23/10/2026${total2027Docs?`; gồm ${integer.format(total2027Docs)} tài liệu ghi năm XB 2027`:''})`],
     ['Đỉnh CiteScore & JIF (kỳ 2025)','CS 5,0 · JIF 2,4','CiteScore 2025: VJES 5,0 · ANSN 3,9 | JCR 2025: ANSN 2,4 · VJES 2,1']
   ];
   $('#summary-strip').innerHTML=cells.map(([l,v,d])=>`<div class="summary-item"><span class="summary-label">${esc(l)}</span><strong class="summary-value">${esc(v)}</strong><span class="summary-detail">${esc(d)}</span></div>`).join('');
@@ -1244,19 +1245,20 @@ function renderDetail(id){
     const bestS25=bestCat25?.annual2025||null;
     const bestCatT26=cats.find(c=>c.tracker2026)||cats[0]||null;
     const bestT26=bestCatT26?.tracker2026||null;
+    const y27Docs=j.scopusCitedBy?.citationSeries?.find(r=>r.year===2027)?.citingDocuments||0;
     metricCards=[
       ['CiteScore 2025 (Scopus)',a25&&Number.isFinite(a25.value)?`${oneDec.format(a25.value)}${bestS25?` (${bestS25.quartile||scopusQuartile(bestS25.percentile)})`:''}`:'N/A',a25&&Number.isFinite(a25.citations)?`${integer.format(a25.citations)} trích dẫn / ${integer.format(a25.documents)} tài liệu (2022–2025)${bestCat25?` · Ngành: ${bestCat25.name} — phân vị ${bestS25.percentile}% (${bestS25.rank}/${bestS25.total})${cats.length>1?` (+${cats.length-1} ngành)`:''}`:''}`:'Chưa có CiteScore chính thức'],
       ['CiteScore Tracker 2026',t26&&Number.isFinite(t26.value)?`${oneDec.format(t26.value)}${bestT26?` (${bestT26.quartile||scopusQuartile(bestT26.percentile)})`:''}`:'N/A',t26&&Number.isFinite(t26.citations)?`${integer.format(t26.citations)} trích dẫn / ${integer.format(t26.documents)} tài liệu${bestT26?` · Ngành: ${bestCatT26.name} — phân vị ${bestT26.percentile}% (${bestT26.rank}/${bestT26.total})`:' (cập nhật 05/10/2026)'}`:'Cập nhật 05/10/2026'],
       jr
         ?['JIF 2025 (WoS JCR)',`${oneDec.format(jr.jif)} (${jr.categories[0].jif.quartile})`,`${integer.format(jr.jifNumerator)} trích dẫn / ${integer.format(jr.jifDenominator)} bài (2023–2024) · Ngành: ${jr.categories[0].name} (hạng ${jr.categories[0].jif.rank}/${jr.categories[0].jif.total}) · JCI: ${twoDec.format(jr.jci)}`]
         :[`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ xuất bản`],
-      ['Tổng tài liệu trích dẫn (Scopus)',`${integer.format(j.scopusCitedBy.citingDocuments)} tài liệu`,`${integer.format(j.scopusCitedBy.sourceDocuments)} bài nguồn · Toàn bộ bản ghi tại nguồn`]
+      ['Tổng tài liệu trích dẫn (Scopus)',`${integer.format(j.scopusCitedBy.citingDocuments)} tài liệu`,`${integer.format(j.scopusCitedBy.sourceDocuments)} bài nguồn · Toàn bộ bản ghi tại nguồn${y27Docs?` (gồm ${integer.format(y27Docs)} bài năm XB 2027)`:''}`]
     ];
   }else{
     const tot=j.localCitation?.totals;
     metricCards=[
-      ['CiteScore 2025 (tự tính)',loc25?twoDec.format(loc25.score):'N/A',loc25?`${integer.format(loc25.numerator)} trích dẫn / ${integer.format(loc25.denominator)} bài (2022–2025)`:'—'],
-      ['CiteScore 2026 (tự tính)',loc26?twoDec.format(loc26.score):'N/A',loc26?`${integer.format(loc26.numerator)} trích dẫn / ${integer.format(loc26.denominator)} bài (2023–2026)`:'—'],
+      ['CiteScore 2025 (tự tính)',loc25?twoDec.format(loc25.score):'N/A',loc25?`${integer.format(loc25.numerator)} trích dẫn / ${integer.format(loc25.denominator)} bài OJS (2022–2025)`:'—'],
+      ['CiteScore 2026 (tự tính)',loc26?twoDec.format(loc26.score):'N/A',loc26?`${integer.format(loc26.numerator)} trích dẫn / ${integer.format(loc26.denominator)} bài OJS (2023–2026)`:'—'],
       [`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ xuất bản`],
       ['Tổng trích dẫn',tot?`${integer.format(tot.citations)} lượt`:'N/A',tot?`h-index: ${tot.hIndex} · ${integer.format(tot.citingDocs)} bài trích dẫn`:'—']
     ];
@@ -1386,8 +1388,10 @@ function renderDetail(id){
             </table>
           </div>
           ${j.scopusCitedBy?`<p style="font-size:12.5px;color:var(--muted);margin:8px 0 0">
-            Scopus đếm tài liệu trích dẫn riêng biệt theo năm xuất bản, không phải số lượt dẫn chiếu. Cập nhật ${esc(j.scopusCitedBy.collectedAt)}; số liệu 2026 chưa đầy đủ.
-          </p>`:''}
+            Scopus đếm tài liệu trích dẫn riêng biệt theo năm xuất bản, không phải số lượt dẫn chiếu. Cập nhật ${esc(j.scopusCitedBy.collectedAt)}; số liệu 2026 chưa đầy đủ${(j.scopusCitedBy.citationSeries?.find(r=>r.year===2027)?.citingDocuments||0)?`; tổng tích lũy tại nguồn gồm ${integer.format(j.scopusCitedBy.citationSeries.find(r=>r.year===2027).citingDocuments)} tài liệu ghi năm xuất bản 2027`:''}.
+          </p>`:`<p style="font-size:12.5px;color:var(--muted);margin:8px 0 0">
+            CiteScore tự tính (tử số / mẫu số 4 năm) trích xuất từ bộ thống kê OJS nội bộ theo năm lưu trữ bản ghi trên OJS; cột Số bài xuất bản thống kê các số đã phát hành chính thức theo năm quyển nên tổng 4 năm có thể khác mẫu số OJS ở các giai đoạn số hóa số cũ.
+          </p>`}
         </section>
 
         ${ownRecords.length?`<section class="detail-section">
@@ -1761,7 +1765,7 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023i'),fetch('data-scopus.json?v=20261023i')]);
+    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023j'),fetch('data-scopus.json?v=20261023j')]);
     if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
     [dashboard,scopus]=await Promise.all([dRes.json(),sRes.json()]);
     if(dashboard?.schemaVersion!==1||!Array.isArray(dashboard?.journals)||!Array.isArray(scopus?.records)||!Array.isArray(scopus?.journals))throw new Error('Invalid dashboard dataset schema');
