@@ -3,12 +3,13 @@
 Website tĩnh giới thiệu 12 tạp chí thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST) tại `https://trungvjm.github.io/vast-journals-dashboard/`.
 
 - **VAST-1**: 7 tạp chí có dữ liệu Scopus trong bản đối chiếu: VJM, AMV, ANSN, VJC, VJES, VJST, CIP. Trạng thái Web of Science phải xem riêng theo từng bộ chỉ mục, không suy ra từ nhóm này.
-- **VAST-2**: VJMech, JCC, AJB, VJMST, VJBT. Chỉ số 4 năm tự tính không phải CiteScore chính thức của Scopus.
-- `data-scopus.json`: bản lịch sử được bảo vệ bằng SHA-256, gồm 84 quan sát CiteScore và Tracker. Đúng công thức không đồng nghĩa đã xác minh lại nguồn trực tuyến.
+- **VAST-2**: VJMech, JCC, AJB, VJMST, VJBT. Chỉ số 4 năm tự tính không phải CiteScore chính thức của Scopus. Chỉ số này tính theo **năm xuất bản** (năm của tập/số, suy từ số tập + độ lệch năm của từng tạp chí), không theo ngày đưa bài lên OJS: mẫu số là tổng cột “Số bài xuất bản” của 4 năm; tử số là trích dẫn phát sinh trong 4 năm đó tới các bài xuất bản trong cùng 4 năm. Trình dựng tái lập chính xác tử số cũ theo năm OJS từ cạnh trích dẫn gốc trước khi tính lại theo năm xuất bản.
+- `data-scopus.json`: bản lịch sử được bảo vệ bằng SHA-256, gồm 84 quan sát CiteScore và Tracker. Đúng công thức không đồng nghĩa đã xác minh lại nguồn trực tuyến. Trình duyệt không tải file này; `data/dashboard.json` chỉ nhúng các trường hiển thị (năm, loại, giá trị, trích dẫn, tài liệu, cửa sổ).
 - `evidence/`: hồ sơ, nguồn kho lưu trữ, bằng chứng chỉ mục và đối soát dữ liệu. `evidence/scopus-cited-by.json` chứa bản xuất Scopus Analyze results ngày 23/10/2026 cho 7 tạp chí VAST-1, đếm tài liệu trích dẫn riêng biệt theo năm xuất bản của tài liệu trích dẫn, không phải lượt dẫn chiếu hay trích dẫn trong cửa sổ CiteScore. Khoảng năm và mức độ đầy đủ khác nhau giữa các tạp chí; năm hiện tại chưa đủ năm.
-- `data/dashboard.json` và `data/snapshots/`: dữ liệu sinh từ các đầu vào nêu trên.
+- `data/dashboard.json` (JSON rút gọn, chỉ các trường giao diện đọc) và `data/snapshots/`: dữ liệu sinh từ các đầu vào nêu trên.
+- `_config.yml`: GitHub Pages không xuất bản `tools/`, `evidence/`, `data/snapshots/`, `data-scopus.json` và `README.md`; các file này vẫn có trong kho Git để kiểm tra.
 
-CSV gốc được giữ nguyên byte tại `evidence/scopus-cited-by/2026-10-23/`, thu bằng quy trình Source → View all documents → More → View cited by → toàn bộ kết quả → View → Analyze results → Documents by year → Export CSV. Trình dựng đối chiếu SHA-256, số byte, từng năm, tổng số tài liệu và toàn bộ EID của tập bài nguồn với CSV. Giữ nguyên các dòng nguồn, không tự điền số; biểu đồ chỉ hiển thị đến 2026. Snapshot hiện tại là `2026-10-23-engineering-improvements-v1`; các snapshot trước đó vẫn giữ nguyên. Ngày chốt dữ liệu xuất bản cũ vẫn là 21/10/2026.
+CSV gốc được giữ nguyên byte tại `evidence/scopus-cited-by/2026-10-23/`, thu bằng quy trình Source → View all documents → More → View cited by → toàn bộ kết quả → View → Analyze results → Documents by year → Export CSV. Trình dựng đối chiếu SHA-256, số byte, từng năm, tổng số tài liệu và toàn bộ EID của tập bài nguồn với CSV. Giữ nguyên các dòng nguồn, không tự điền số; biểu đồ chỉ hiển thị đến 2026. Snapshot hiện tại là `2026-10-24-publication-year-v1` (chỉ giữ snapshot hiện hành). Ngày chốt dữ liệu xuất bản cũ vẫn là 21/10/2026.
 
 
 ## Giao diện
@@ -75,4 +76,4 @@ node --check assets/dashboard.js
 python -m http.server 8765 --bind 127.0.0.1
 ```
 
-Mở `http://127.0.0.1:8765/`. Kiểm tra 12 hồ sơ, bộ lọc, nguồn chỉ mục, kho lưu trữ AMV và chuyển mục bằng menu góc phải. Thử cả sáng/tối, màn hình hẹp và tùy chọn giảm chuyển động. Trên mobile, kiểm tra sáu mục điều hướng của hồ sơ và bấm lại mục đang chọn sau khi cuộn ra chỗ khác: trang phải trở về đúng mục đó. Các lỗi chất lượng dữ liệu cần được ghi nhận cùng nguồn và phạm vi, không chỉ kiểm tra đồng bộ JSON.
+Mở `http://127.0.0.1:8765/`. Kiểm tra 12 hồ sơ, bộ lọc, nguồn chỉ mục, kho lưu trữ AMV và chuyển mục bằng menu góc phải. Thử cả sáng/tối, màn hình hẹp và tùy chọn giảm chuyển động. Trên mobile, kiểm tra các mục điều hướng của hồ sơ (5–7 mục tùy tạp chí có chỉ mục và điểm HĐGSNN) và bấm lại mục đang chọn sau khi cuộn ra chỗ khác: trang phải trở về đúng mục đó. Các lỗi chất lượng dữ liệu cần được ghi nhận cùng nguồn và phạm vi, không chỉ kiểm tra đồng bộ JSON.

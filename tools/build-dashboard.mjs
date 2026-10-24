@@ -10,9 +10,21 @@ const baselineHash='113f67b7de073007741f9bb3a1a2f4948df7098f520a434649d151bb2be1
 const order=['vjm','amv','ansn','vjc','vjes','vjst','cip','vjmech','jcc','ajb','vjmst','vjbt'];
 const codes=['VJM','AMV','ANSN','VJC','VJES','VJST','CIP','VJMech','JCC','AJB','VJMST','VJBT'];
 const subjects={vjm:'Toán học',amv:'Toán học',ansn:'Vật liệu và công nghệ nano',vjc:'Hóa học',vjes:'Khoa học Trái đất',vjst:'Khoa học và công nghệ',cip:'Vật lý',vjmech:'Cơ học',jcc:'Tin học và điều khiển học',ajb:'Sinh học',vjmst:'Khoa học và công nghệ biển',vjbt:'Công nghệ sinh học'};
-const volOffsets={cip:1990,vjst:1962,vjes:1978,ajb:1978,vjbt:2002,jcc:1984,vjmst:2000};
+const volOffsets={cip:1990,vjst:1962,vjes:1978,ajb:1978,vjbt:2002,jcc:1984,vjmst:2000,vjmech:1978};
+function publicationYearOf(a,offset){
+ let vol=Number(a.volume);
+ if(!vol&&a.doi){const m=String(a.doi).match(/10\.15625\/[^/]+\/(\d{1,2})\//);if(m)vol=Number(m[1]);}
+ return (vol&&vol>=1&&vol<=70)?(vol+offset):Number(a.year);
+}
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const readJson=async file=>JSON.parse(await readFile(file,'utf8'));
+// Manifest paths are data, not code: keep every read inside its base directory and expected prefix.
+function contained(base,rel,prefix){
+ assert(typeof rel==='string'&&rel.startsWith(prefix)&&!rel.includes('..')&&!path.isAbsolute(rel),'Unsafe manifest path: '+rel);
+ const full=path.resolve(base,rel),back=path.relative(base,full);
+ assert(back&&!back.startsWith('..')&&!path.isAbsolute(back),'Path escapes base directory: '+rel);
+ return full;
+}
 const profileFiles=['evidence/dashboard-publishers.json','evidence/dashboard-vjs-core.json','evidence/dashboard-vjs-other.json'];
 const auditFiles=['evidence/dashboard-local-core.json','evidence/dashboard-local-chem-earth.json','evidence/dashboard-local-other.json'];
 const baselineBytes=await readFile(path.join(root,'data-scopus.json'));
@@ -37,12 +49,12 @@ const [histIntl,histOjs,media,jcrData,scopusCatData,originData,hdgsnnData,scopus
 for(const logo of Object.values(media.logos)){
  if(!logo.darkVariant)continue;
  assert.equal(logo.darkVariant.sourceSha256,logo.sha256,'Dark artwork must reference its original logo.');
- assert.equal(sha(await readFile(path.join(root,logo.darkVariant.path))),logo.darkVariant.sha256,'Dark logo asset differs from its manifest.');
+ assert.equal(sha(await readFile(contained(root,logo.darkVariant.path,'assets/images/logos/'))),logo.darkVariant.sha256,'Dark logo asset differs from its manifest.');
 }
 for(const cover of Object.values(media.covers)){
  assert(cover.webpVariant,cover.path+': missing webpVariant in media manifest.');
  assert.equal(cover.webpVariant.sourceSha256,cover.sha256,'WebP derivative must reference its original PNG cover.');
- const rawWebp=await readFile(path.join(root,cover.webpVariant.path));
+ const rawWebp=await readFile(contained(root,cover.webpVariant.path,'assets/images/covers/webp/'));
  assert.equal(rawWebp.length,cover.webpVariant.bytes,'WebP byte count differs from manifest.');
  assert.equal(sha(rawWebp),cover.webpVariant.sha256,'WebP asset differs from its manifest.');
 }
@@ -67,7 +79,7 @@ let hasWorkspace=true;
 try{
  for(const a of localAudits){
   for(const input of a.sourceFiles){
-   await access(path.join(workspace,input.path));
+   await access(contained(workspace,input.path,'2026/09'));
   }
  }
 }catch{
@@ -114,7 +126,7 @@ for(const cb of scopusCitedByMap.values()){
   years.add(r.year);
  }
  assert.equal(cb.export?.path,'evidence/scopus-cited-by/'+scopusCitedByData.collectedAt+'/'+cb.id+'-analyze-year.csv',cb.code+': original export path required.');
- const rawExport=await readFile(path.join(root,cb.export.path));
+ const rawExport=await readFile(contained(root,cb.export.path,'evidence/scopus-cited-by/'));
  assert.equal(rawExport.length,cb.export.bytes,cb.code+': export bytes mismatch.');
  assert.equal(sha(rawExport),cb.export.sha256,cb.code+': export sha256 mismatch.');
  const exportText=rawExport.toString('utf8');
@@ -152,7 +164,7 @@ for(const journal of originMap.values()){
   const portrait=editor.portrait;
   if(!portrait||checkedPortraits.has(portrait.path))continue;
   assert(portrait.path.startsWith('assets/images/editors/')&&portrait.width>0&&portrait.height>0,journal.id+': invalid portrait asset.');
-  assert.equal(sha(await readFile(path.join(root,portrait.path))),portrait.sha256,journal.id+': portrait asset differs from its manifest.');
+  assert.equal(sha(await readFile(contained(root,portrait.path,'assets/images/editors/'))),portrait.sha256,journal.id+': portrait asset differs from its manifest.');
   checkedPortraits.add(portrait.path);
  }
 }
@@ -185,14 +197,17 @@ async function localCollection(audit,isScopusIndexed){
   const catSource=audit.sourceFiles.find(s=>s.path.endsWith('_ojs_catalog.json'));
   assert(statsSource&&catSource,audit.code+': missing stats or catalog input.');
   for(const input of audit.sourceFiles){
-   assert(input.path.startsWith('2026/09')&&!input.path.includes('..'),audit.code+': unexpected input path.');
-   assert.equal(sha(await readFile(path.join(workspace,input.path))),input.sha256,audit.code+': source changed after audit: '+input.path);
+   assert.equal(sha(await readFile(contained(workspace,input.path,'2026/09'))),input.sha256,audit.code+': source changed after audit: '+input.path);
   }
-  raw=await readJson(path.join(workspace,statsSource.path));
-  cat=await readJson(path.join(workspace,catSource.path));
+  raw=await readJson(contained(workspace,statsSource.path,'2026/09'));
+  cat=await readJson(contained(workspace,catSource.path,'2026/09'));
   assert.deepEqual(raw.meta,ex.meta,audit.code+': live meta differs from extracted.');
   assert.deepEqual(raw.citingSeries,ex.citingSeries,audit.code+': live citingSeries differs from extracted.');
   assert.deepEqual(raw.citeScoreSeries,ex.citeScoreSeries,audit.code+': live citeScoreSeries differs from extracted.');
+  if(!isScopusIndexed){
+   const livePubYear=publicationYearNumerators(raw,cat,volOffsets[audit.id],audit.code);
+   assert.deepEqual(livePubYear,ex.publicationYearNumerators,audit.code+': live publication-year numerators differ from extracted.');
+  }
  }else{
   for(const input of audit.sourceFiles){
    assert.equal(localExtracted.sourceFileHashes[input.path],input.sha256,audit.code+': hash differs for '+input.path);
@@ -206,14 +221,44 @@ async function localCollection(audit,isScopusIndexed){
   assert(Number.isInteger(r.year)&&Number.isInteger(r.docs)&&r.docs>=0&&Number.isInteger(r.occurrences)&&r.occurrences>=r.docs,audit.code+': invalid confirmed citation counts.');
   return {year:r.year,citingDocuments:r.docs,confirmedCitationEdges:r.occurrences};
  });
- const selfCalculatedSeries=isScopusIndexed?[]:raw.citeScoreSeries.filter(r=>r.year<=currentYear).map(r=>{
-  assert(Number.isInteger(r.cs4_num)&&r.cs4_num>=0&&Number.isInteger(r.cs4_den)&&r.cs4_den>=0,audit.code+': invalid four-year components.');
-  if(r.cs4_den>0)assert(Math.abs(r.cs4-r.cs4_num/r.cs4_den)<=0.005001,audit.code+': rounded four-year ratio does not reconcile.');
-  return {year:r.year,value:r.cs4_den>0?r.cs4:null,numerator:r.cs4_num,denominator:r.cs4_den,window:r.window};
- });
- for(const series of [citationSeries,selfCalculatedSeries])assert.equal(new Set(series.map(r=>r.year)).size,series.length,audit.code+': duplicate year.');
+ let publicationYearNumeratorsSeries=[];
+ if(!isScopusIndexed){
+  publicationYearNumeratorsSeries=ex.publicationYearNumerators;
+  assert(Array.isArray(publicationYearNumeratorsSeries)&&publicationYearNumeratorsSeries.every(r=>Number.isInteger(r.year)&&Number.isInteger(r.numerator)&&r.numerator>=0),audit.code+': missing publication-year numerators.');
+ }
+ assert.equal(new Set(citationSeries.map(r=>r.year)).size,citationSeries.length,audit.code+': duplicate year.');
  const totals={citingDocs:raw.meta.totalCitingDocs,citations:raw.meta.totalCitations,citedArticles:raw.meta.totalCitedArticles,hIndex:raw.meta.hIndex};
- return {local:{processedAt:audit.processedAt,publicSourceUrl:audit.publicSourceUrl,officialScopusMetric:false,totals,citationSeries,selfCalculatedSeries},cat};
+ return {local:{processedAt:audit.processedAt,publicSourceUrl:audit.publicSourceUrl,officialScopusMetric:false,totals,citationSeries,selfCalculatedSeries:[]},numerators:publicationYearNumeratorsSeries,cat};
+}
+
+// Self-calculated CiteScore counts each OJS article in its publication (volume) year, never its OJS upload year.
+function publicationYearNumerators(raw,cat,offset,code){
+ assert(Number.isInteger(offset),code+': missing volume-year offset.');
+ const citingYears=[];
+ for(const [y,n] of raw.yc)for(let i=0;i<n;i++)citingYears.push(y);
+ assert.equal(citingYears.length,raw.ci.length,code+': citing-year runs do not cover every citing document.');
+ const byId=new Map(cat.articles.map(a=>[String(a.id),a]));
+ const pubYears=raw.vjm.id.map(id=>{const a=byId.get(String(id));assert(a,code+': cited article '+id+' missing from catalog.');return publicationYearOf(a,offset);});
+ const count=(years,target)=>{
+  let n=0;
+  raw.ci.forEach((list,k)=>{
+   const cy=citingYears[k];
+   if(cy<target-3||cy>target)return;
+   for(const idx of list){const y=years[idx];if(y>=target-3&&y<=target)n++;}
+  });
+  return n;
+ };
+ for(const r of raw.citeScoreSeries)assert.equal(count(raw.vjm.y,r.year),r.cs4_num,code+': cannot reproduce archived OJS-year numerator for '+r.year);
+ return raw.citeScoreSeries.filter(r=>r.year<=currentYear).map(r=>({year:r.year,numerator:count(pubYears,r.year)}));
+}
+
+function publicationYearCiteScore(history,numerators){
+ const papers=new Map(history.map(r=>[r.year,r.papers]));
+ return numerators.map(({year,numerator})=>{
+  let denominator=0;
+  for(let y=year-3;y<=year;y++)denominator+=Number.isFinite(papers.get(y))?papers.get(y):0;
+  return {year,value:denominator>0?Math.round(numerator/denominator*100)/100:null,numerator,denominator,window:`${year-3}-${year}`};
+ });
 }
 
 function buildAnnualHistory(j,hist,cat,verifiedOutputs){
@@ -227,9 +272,7 @@ function buildAnnualHistory(j,hist,cat,verifiedOutputs){
   const offset=volOffsets[j.id],counts=new Map(),issueSets=new Map(),issueMap=new Map((hist?.annualSeries??[]).map(r=>[r.year,r.issues]));
   for(const a of cat.articles){
    if(a.isOnlineFirst)continue;
-   let vol=Number(a.volume);
-   if(!vol&&a.doi){const m=String(a.doi).match(/10\.15625\/[^/]+\/(\d{1,2})\//);if(m)vol=Number(m[1]);}
-   const yr=(vol&&vol>=1&&vol<=70)?(vol+offset):Number(a.year);
+   const yr=publicationYearOf(a,offset);
    if(yr&&yr>=1985&&yr<2020&&(j.id!=='ajb'||yr>=2005)){
     counts.set(yr,(counts.get(yr)||0)+1);
     if(!issueSets.has(yr))issueSets.set(yr,new Set());
@@ -250,17 +293,15 @@ function buildAnnualHistory(j,hist,cat,verifiedOutputs){
  }
  for(const o of verifiedOutputs)byYear.set(o.year,{year:o.year,papers:o.papers,issues:o.issues,periodKind:o.periodKind});
  const citMap=new Map((j.scopusCitedBy?.citationSeries||j.localCitation?.citationSeries||hist?.fullCitationSeries||[]).map(c=>[c.year,c]));
- const csMap=new Map((j.localCitation?.selfCalculatedSeries||[]).map(c=>[c.year,c]));
  return [...byYear.values()].sort((a,b)=>a.year-b.year).map(r=>{
   const cit=citMap.get(r.year);
-  const cs=csMap.get(r.year);
   return {
    ...r,
    citingDocs:cit?(cit.citingDocuments??cit.docs??null):null,
    citationEdges:j.scopusCitedBy?null:(cit?(cit.confirmedCitationEdges??cit.occurrences??null):null),
-   selfCalcScore:cs?(cs.value??cs.score??null):null,
-   selfCalcNum:cs?(cs.numerator??null):null,
-   selfCalcDen:cs?(cs.denominator??null):null
+   selfCalcScore:null,
+   selfCalcNum:null,
+   selfCalcDen:null
   };
  });
 }
@@ -353,7 +394,8 @@ for(let index=0;index<order.length;index++){
  }
  const audit=localAudits.find(a=>a.id===j.id);
  let cat=null;
- if(audit){const res=await localCollection(audit,Boolean(original));j.localCitation=res.local;cat=res.cat;}
+ let numerators=[];
+ if(audit){const res=await localCollection(audit,Boolean(original));j.localCitation=res.local;cat=res.cat;numerators=res.numerators;}
  if(scopusCitedByMap.has(j.id)){
   const scb=scopusCitedByMap.get(j.id);
   j.scopusCitedBy={
@@ -368,6 +410,14 @@ for(let index=0;index<order.length;index++){
   };
  }
  j.annualHistory=buildAnnualHistory(j,historyMap.get(j.id),cat,j.outputs);
+ if(numerators.length){
+  j.localCitation.selfCalculatedSeries=publicationYearCiteScore(j.annualHistory,numerators);
+  const csByYear=new Map(j.localCitation.selfCalculatedSeries.map(c=>[c.year,c]));
+  for(const r of j.annualHistory){
+   const cs=csByYear.get(r.year);
+   if(cs){r.selfCalcScore=cs.value;r.selfCalcNum=cs.numerator;r.selfCalcDen=cs.denominator;}
+  }
+ }
  j.historyStartYear=j.annualHistory[0]?.year??2020;
  j.historyEndYear=j.annualHistory.at(-1)?.year??2026;
  assert(j.annualHistory.length>=7,j.code+': annualHistory must include at least 2020-2026.');
@@ -398,11 +448,26 @@ for(let index=0;index<order.length;index++){
    sourceUrl:s.sourceUrl
   }));
  }
+ j.indexings=j.indexings.filter(i=>i.status==='listed').map(i=>({system:i.system,status:i.status,collection:i.collection??null,evidenceLevel:i.evidenceLevel??null,coverage:i.coverage??null,sourceUrl:i.sourceUrl}));
  journals.push(j);
 }
-const snapshotId='2026-10-23-engineering-improvements-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
-const dataset={schemaVersion:1,snapshotId,collectedAt,reviewAfterDays:45,outputYears,defaultOutputYear:currentYear-1,logos:{vast:'assets/images/logos/vast.png',nxb:'assets/images/logos/nxb.png',im:'assets/images/logos/im-vast.png'},officialScopus:{path:'data-scopus.json',sha256:baselineHash,observations:84,reportDate:scopus.reportDate,trackerSourceUpdatedAt:scopus.records.find(r=>r.type==='tracker').lastUpdated},scopusCitedBy:{path:'evidence/scopus-cited-by.json',metric:scopusCitedByData.metric,method:scopusCitedByData.method,collectedAt:scopusCitedByData.collectedAt,journalsCount:scopusCitedByMap.size},officialJcr:{path:'evidence/dashboard-jcr.json',metricYear:2025,journalsCount:jcrMap.size,edition:'Emerging Sources Citation Index (ESCI)'},history:[{date:collectedAt,title:'Danh mục 12 tạp chí VAST (Nhóm VAST-1 & VAST-2)',description:'Tổng hợp hồ sơ, bìa tạp chí, đơn vị xuất bản, chỉ mục, số bài xuất bản qua các năm, thống kê trích dẫn và báo cáo Clarivate JCR 2025 (5 tạp chí VAST-1) của 12 tạp chí.',url:snapshotPath},{date:scopus.reportDate,title:'Bản đối chiếu Scopus của 7 tạp chí nhóm VAST-1',description:'Giữ nguyên 84 bản ghi: CiteScore 2015–2025 và Tracker 2026; Tracker cập nhật tại nguồn ngày 05/10/2026.',url:'data-scopus.json'},{date:scopusCitedByData.collectedAt,title:'Báo cáo trích dẫn Scopus (View cited by → Analyze results) của 7 tạp chí VAST-1',description:'Dữ liệu trích dẫn theo tài liệu riêng biệt (distinct citing documents) phân theo năm xuất bản của tài liệu trích dẫn từ năm bắt đầu đến năm 2026/2027.',url:'evidence/scopus-cited-by.json'}],journals};
-dataset.historySources=originData.sources.filter(s=>s.url&&s.kind!=='published-photograph').map(s=>({id:s.id,kind:s.kind,title:s.title,author:s.author||null,url:s.url}));
+const snapshotId='2026-10-24-publication-year-v1',snapshotPath='data/snapshots/'+snapshotId+'.json';
+// Public payload: only fields read by assets/dashboard.js. Audit trails stay in evidence/ (excluded from Pages by _config.yml).
+const trackerUpdatedAt=scopus.records.find(r=>r.type==='tracker').lastUpdated;
+const dataset={
+ schemaVersion:1,
+ collectedAt,
+ officialScopus:{reportDate:scopus.reportDate,trackerSourceUpdatedAt:trackerUpdatedAt},
+ scopusCitedBy:{collectedAt:scopusCitedByData.collectedAt},
+ scopus:{
+  annualYears:scopus.annualYears,
+  trackerYear:scopus.trackerYear,
+  journals:scopus.journals.map(s=>({code:s.code})),
+  records:scopus.records.map(r=>({journal:r.journal,year:r.year,type:r.type,value:r.value,citations:r.citations??null,documents:r.documents??null,window:r.window??null}))
+ },
+ journals
+};
+dataset.historySources=originData.sources.filter(s=>/^https:\/\//i.test(s.url||'')&&s.kind!=='published-photograph').map(s=>({id:s.id,kind:s.kind,title:s.title,author:s.author||null,url:s.url}));
 dataset.hdgsnn={
  year:hdgsnnData.year,
  collectedAt:hdgsnnData.collectedAt,
@@ -415,9 +480,7 @@ dataset.hdgsnn={
  },
  councils:hdgsnnData.councils.map(c=>({officialNumber:c.officialNumber,shortName:c.shortName,name:c.name,sourceUrl:c.sourceUrl}))
 };
-dataset.metricYears={annual:2025,tracker:scopus.trackerYear,jcr:jcrData.metricYear||2025,hdgsnn:hdgsnnData.year||2025,statisticalStartYear:2015,vjstStatisticalStartYear:2016};
-dataset.cutoffDates={publication:collectedAt,scopusCitedBy:scopusCitedByData.collectedAt,scopusTracker:scopus.records.find(r=>r.type==='tracker').lastUpdated,scopusBaseline:scopus.reportDate,hdgsnnIssued:hdgsnnData.decision.issuedAt};
-const serialized=JSON.stringify(dataset,null,2)+'\n';
+const serialized=JSON.stringify(dataset)+'\n';
 if(process.argv.includes('--write')){
  await mkdir(path.join(root,'data/snapshots'),{recursive:true});
  await writeFile(path.join(root,'data/dashboard.json'),serialized);

@@ -2,4 +2,5 @@ exclude:
   - tools
   - evidence
   - data/snapshots
+  - data-scopus.json
   - README.md

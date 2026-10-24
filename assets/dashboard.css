@@ -131,7 +131,7 @@
   --ink:#101014;
   --ink-strong:#000000;
   --muted:rgba(16,16,20,0.62);
-  --faint:rgba(16,16,20,0.42);
+  --faint:rgba(16,16,20,0.58);
   --line:rgba(16,16,20,0.16);
   --line-strong:rgba(16,16,20,0.40);
   --accent:#2d81ff;
@@ -166,7 +166,7 @@
   --ink:#f2f1ee;
   --ink-strong:#ffffff;
   --muted:rgba(242,241,238,0.62);
-  --faint:rgba(242,241,238,0.40);
+  --faint:rgba(242,241,238,0.58);
   --line:rgba(242,241,238,0.15);
   --line-strong:rgba(242,241,238,0.38);
   --accent:#2d81ff;
@@ -574,7 +574,7 @@ input[type="search"]::placeholder{color:var(--faint)}
   line-height:1.25;
   letter-spacing:0.03em;
   text-decoration:none;
-  color:color-mix(in srgb,var(--ink-strong) 34%,var(--bg));
+  color:var(--muted);
   text-shadow:0 0 6px var(--bg);
   transition:color 160ms ease,transform 160ms ease;
 }
@@ -1210,7 +1210,8 @@ input[type="search"]::placeholder{color:var(--faint)}
   font-size:11px;
 }
 .papers-legend-item{border:0;background:transparent;color:var(--ink);cursor:pointer}
-.papers-legend-item.is-muted{opacity:0.35}
+.papers-legend-item.is-muted{color:var(--muted)}
+.papers-legend-item.is-muted .papers-swatch{opacity:0.35}
 .papers-swatch{width:11px;height:11px;flex-shrink:0}
 .journal-toggle{
   display:inline-flex;
@@ -1228,8 +1229,8 @@ input[type="search"]::placeholder{color:var(--faint)}
 .journal-toggle[aria-pressed="false"]{
   background:var(--bg-sunken);
   color:var(--muted);
-  opacity:0.42;
 }
+.journal-toggle[aria-pressed="false"] svg{opacity:0.42}
 .chart-caption{
   font-size:12.5px;
   color:var(--muted);
@@ -1291,8 +1292,6 @@ figure{margin:0;min-width:0}
   font-family:var(--font-mono);
   font-variant-numeric:tabular-nums;
 }
-.journal-series{transition:opacity 140ms ease}
-.journal-series.is-muted{opacity:0.15}
 
 .chart-tooltip{
   position:absolute;
@@ -1396,6 +1395,7 @@ figure{margin:0;min-width:0}
   font-size:10.5px;
   border-radius:1px;
 }
+:root[data-theme="dark"] .lineup-num{color:#101014}
 .lineup-stage{
   position:relative;
   padding:20px 18px 16px;
@@ -2122,4 +2122,5 @@ table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   [data-reveal],.flight-char,.hero-wordmark{transition:none}
+  *,*::before,*::after{transition-duration:0.01ms !important;animation-duration:0.01ms !important}
 }

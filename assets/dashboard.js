@@ -4,6 +4,8 @@ const integer=new Intl.NumberFormat('vi-VN');
 const decimal=new Intl.NumberFormat('vi-VN',{minimumFractionDigits:1,maximumFractionDigits:2});
 const oneDec=new Intl.NumberFormat('vi-VN',{minimumFractionDigits:1,maximumFractionDigits:1});
 const twoDec=new Intl.NumberFormat('vi-VN',{minimumFractionDigits:2,maximumFractionDigits:2});
+const num=(fmt,v)=>Number.isFinite(v)?fmt.format(v):'—';
+const fixed=(v,d)=>Number.isFinite(v)?v.toFixed(d):'—';
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 const CHART_START_YEAR=2015;
 
@@ -83,7 +85,7 @@ function applyThemeMode(mode,persist=true,animate=false){
   const valid=mode==='dark'?'dark':'light';
   state.themeMode=valid;
   const root=document.documentElement;
-  if(animate){
+  if(animate&&!reducedMotion.matches){
     root.classList.add('theme-anim');
     setTimeout(()=>root.classList.remove('theme-anim'),380);
   }
@@ -96,7 +98,10 @@ function applyThemeMode(mode,persist=true,animate=false){
   requestAnimationFrame(()=>{
     syncPaletteColors();
     if(dashboard){
-      renderAllCharts();
+      const homeView=$('#home-view');
+      renderCatalog();
+      if(homeView.hidden)delete homeView.dataset.chartsReady;
+      else renderAllCharts();
       const id=readHashRoute();
       if(id.startsWith('journal/')){
         const j=dashboard.journals.find(x=>x.id===id.slice(8));
@@ -487,8 +492,8 @@ function renderVast1MatrixTable(){
           <div class="matrix-meta">
             <a href="#journal/${esc(j.id)}">${esc(j.code)} · ${esc(j.title)}</a>
             <div class="matrix-pub-row">
-              <img class="mini-inst-logo" src="${esc(inst.logo)}" alt="${esc(inst.name)}" loading="lazy" decoding="async">
-              ${inst.coLogo?`<img class="mini-inst-logo" src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}" loading="lazy" decoding="async">`:''}
+              <img class="mini-inst-logo" src="${esc(safeAsset(inst.logo))}" alt="${esc(inst.name)}" loading="lazy" decoding="async">
+              ${inst.coLogo?`<img class="mini-inst-logo" src="${esc(safeAsset(inst.coLogo))}" alt="${esc(inst.coPublisher||'')}" loading="lazy" decoding="async">`:''}
               <span>${esc(inst.name)}${inst.coPublisher?` &amp; ${esc(inst.coPublisher)}`:''}</span>
             </div>
           </div>
@@ -533,11 +538,11 @@ function renderVast1JcrTable(){
           </div>
         </div>
       </td>
-      <td class="matrix-score-annual"><strong>${oneDec.format(jr.jif)}</strong></td>
-      <td>${oneDec.format(jr.jifWithoutSelfCitations)}</td>
-      <td>${integer.format(jr.jifNumerator)} / ${integer.format(jr.jifDenominator)}<small style="display:block;color:var(--muted)">Không tự TD: ${integer.format(jr.jifWithoutSelfNumerator)}/${integer.format(jr.jifDenominator)}</small></td>
+      <td class="matrix-score-annual"><strong>${num(oneDec,jr.jif)}</strong></td>
+      <td>${num(oneDec,jr.jifWithoutSelfCitations)}</td>
+      <td>${num(integer,jr.jifNumerator)} / ${num(integer,jr.jifDenominator)}<small style="display:block;color:var(--muted)">Không tự TD: ${num(integer,jr.jifWithoutSelfNumerator)}/${num(integer,jr.jifDenominator)}</small></td>
       <td>${Number.isFinite(jr.fiveYearJif)?oneDec.format(jr.fiveYearJif):'—'}<small style="display:block;color:var(--muted)">${jr.fiveYearNumerator&&jr.fiveYearDenominator?`${integer.format(jr.fiveYearNumerator)}/${integer.format(jr.fiveYearDenominator)}`:''}</small></td>
-      <td><strong>${twoDec.format(jr.jci)}</strong></td>
+      <td><strong>${num(twoDec,jr.jci)}</strong></td>
       <td>${Number.isFinite(jr.immediacyIndex)?oneDec.format(jr.immediacyIndex):'—'}<small style="display:block;color:var(--muted)">${jr.immediacyNumerator&&jr.immediacyDenominator?`${integer.format(jr.immediacyNumerator)}/${integer.format(jr.immediacyDenominator)}`:''}</small></td>
       <td><strong>${Number.isFinite(jr.totalCitations)?integer.format(jr.totalCitations):'—'}</strong><small style="display:block;color:var(--muted)">Cited half-life: ${esc(jr.citedHalfLife)} năm</small></td>
       <td>${jifCats}</td>
@@ -619,8 +624,8 @@ function renderCatalog(){
         <div class="lineup-logos">
           <div class="lineup-inst-badge">
             <div class="lineup-inst-logos">
-              <img src="${esc(inst.logo)}" alt="${esc(inst.name)}" title="${esc(inst.name)}" loading="lazy" decoding="async">
-              ${inst.coLogo?`<img src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}" title="${esc(inst.coPublisher||'')}" loading="lazy" decoding="async">`:''}
+              <img src="${esc(safeAsset(inst.logo))}" alt="${esc(inst.name)}" title="${esc(inst.name)}" loading="lazy" decoding="async">
+              ${inst.coLogo?`<img src="${esc(safeAsset(inst.coLogo))}" alt="${esc(inst.coPublisher||'')}" title="${esc(inst.coPublisher||'')}" loading="lazy" decoding="async">`:''}
             </div>
             <span class="lineup-inst-name">${publisherName}${inst.coPublisher?`<br>&amp; ${esc(inst.coPublisher)}`:''}</span>
           </div>
@@ -777,8 +782,10 @@ function bindChartEvents(svg,years,x,plot){
   };
   svg.onpointermove=e=>{
     if(state.pinnedYear)return;
-    state.activeYear=years[idxFromEvent(e)];
-    showYearTooltip(state.activeYear,years,x,plot,e.clientX);
+    const yr=years[idxFromEvent(e)];
+    if(yr===state.activeYear&&!$('#chart-tooltip').hidden)return;
+    state.activeYear=yr;
+    showYearTooltip(yr,years,x,plot,e.clientX);
   };
   svg.onpointerleave=()=>{if(!state.pinnedYear){state.activeYear=null;hideTooltip();}};
   svg.onclick=e=>{
@@ -912,7 +919,7 @@ function renderCandidatesSection(){
   };
   const indexFromEvent=e=>{const r=svg.getBoundingClientRect(),px=((e.clientX-r.left)/r.width)*820;return Math.round(Math.max(0,Math.min(1,(px-plot.left)/plot.width))*(years.length-1));};
   const clear=()=>{pinnedIndex=null;tip.hidden=true;$('#candidates-hover-line').hidden=true;};
-  svg.onpointermove=e=>{if(pinnedIndex===null)showYr(years[indexFromEvent(e)],e.clientX);};
+  svg.onpointermove=e=>{if(pinnedIndex!==null)return;const idx=indexFromEvent(e);if(idx===activeIndex&&!tip.hidden)return;showYr(years[idx],e.clientX);};
   svg.onpointerleave=()=>{if(pinnedIndex===null){tip.hidden=true;$('#candidates-hover-line').hidden=true;}};
   svg.onclick=e=>{const idx=indexFromEvent(e);if(pinnedIndex===idx){clear();return;}pinnedIndex=idx;showYr(years[idx],e.clientX);};
   svg.onkeydown=e=>{if(e.key==='Escape'){clear();return;}const idx=e.key==='ArrowLeft'?Math.max(0,activeIndex-1):e.key==='ArrowRight'?Math.min(years.length-1,activeIndex+1):e.key==='Home'?0:e.key==='End'?years.length-1:null;if(idx===null)return;e.preventDefault();pinnedIndex=idx;showYr(years[idx]);};
@@ -1027,7 +1034,7 @@ function renderCitationsSection(){
   };
   const indexFromEvent=e=>{const r=svg.getBoundingClientRect(),px=((e.clientX-r.left)/r.width)*820;return Math.round(Math.max(0,Math.min(1,(px-plot.left)/plot.width))*(years.length-1));};
   const clear=()=>{pinnedIndex=null;tip.hidden=true;$('#citations-hover-line').hidden=true;};
-  svg.onpointermove=e=>{if(pinnedIndex===null)showCitation(indexFromEvent(e),e.clientX);};
+  svg.onpointermove=e=>{if(pinnedIndex!==null)return;const idx=indexFromEvent(e);if(idx===activeIndex&&!tip.hidden)return;showCitation(idx,e.clientX);};
   svg.onpointerleave=()=>{if(pinnedIndex===null){tip.hidden=true;$('#citations-hover-line').hidden=true;}};
   svg.onclick=e=>{const idx=indexFromEvent(e);if(pinnedIndex===idx){clear();return;}pinnedIndex=idx;showCitation(idx,e.clientX);};
   svg.onkeydown=e=>{if(e.key==='Escape'){clear();return;}const idx=e.key==='ArrowLeft'?Math.max(0,activeIndex-1):e.key==='ArrowRight'?Math.min(years.length-1,activeIndex+1):e.key==='Home'?0:e.key==='End'?years.length-1:null;if(idx===null)return;e.preventDefault();pinnedIndex=idx;showCitation(idx);};
@@ -1111,7 +1118,7 @@ function renderPapersSection(){
     const r=svg.getBoundingClientRect(),px=(e.clientX-r.left)/r.width*width;
     return Math.max(0,Math.min(years.length-1,Math.floor((px-plot.left)/slot)));
   };
-  svg.onpointermove=e=>{if(pinnedIndex===null)showYear(indexFromEvent(e),e.clientX);};
+  svg.onpointermove=e=>{if(pinnedIndex!==null)return;const idx=indexFromEvent(e);if(idx===activeIndex&&!tip.hidden)return;showYear(idx,e.clientX);};
   svg.onpointerleave=()=>{if(pinnedIndex===null)tip.hidden=true;};
   svg.onclick=e=>{
     const idx=indexFromEvent(e);
@@ -1228,7 +1235,7 @@ function renderDetail(id){
     ['Đơn vị chủ quản xuất bản',esc(inst.name)],
     ['Đối tác đồng xuất bản quốc tế',esc(inst.coPublisher||'Xuất bản độc lập trên hệ thống VJS (VAST)')],
     ['ISSN bản in / điện tử',`${esc(j.issn??'—')} / ${esc(j.eissn??'—')}`],
-    ...(jr?[['Chỉ số Web of Science (JCR 2025)',`JIF 2025: <strong>${oneDec.format(jr.jif)}</strong> (${integer.format(jr.jifNumerator)}/${integer.format(jr.jifDenominator)}) · 5-Year JIF: <strong>${oneDec.format(jr.fiveYearJif)}</strong> · JCI: <strong>${twoDec.format(jr.jci)}</strong> · Tổng trích dẫn JCR 2025: <strong>${integer.format(jr.totalCitations)}</strong>`]]:[]),
+    ...(jr?[['Chỉ số Web of Science (JCR 2025)',`JIF 2025: <strong>${num(oneDec,jr.jif)}</strong> (${num(integer,jr.jifNumerator)}/${num(integer,jr.jifDenominator)}) · 5-Year JIF: <strong>${num(oneDec,jr.fiveYearJif)}</strong> · JCI: <strong>${num(twoDec,jr.jci)}</strong> · Tổng trích dẫn JCR 2025: <strong>${num(integer,jr.totalCitations)}</strong>`]]:[]),
     ['Kỳ hạn xuất bản',esc(publicationFrequency(j))],
     ...(j.hdgsnn2025?.length?[['Điểm HĐGSNN 2025 (QĐ 26/QĐ-HĐGSNN)',esc(hdgsnnRangeText(j))]]:[]),
     ['Số liệu xuất bản',`${minYear}–${maxYear} · ${integer.format(totalHistPapers)} bài / ${integer.format(totalHistIssues)} kỳ${missingYears.length?`; năm chưa có số liệu: ${missingYears.join(', ')}`:''}`],
@@ -1257,8 +1264,8 @@ function renderDetail(id){
   }else{
     const tot=j.localCitation?.totals;
     metricCards=[
-      ['CiteScore 2025 (tự tính)',loc25?twoDec.format(loc25.score):'N/A',loc25?`${integer.format(loc25.numerator)} trích dẫn / ${integer.format(loc25.denominator)} bài OJS (2022–2025)`:'—'],
-      ['CiteScore 2026 (tự tính)',loc26?twoDec.format(loc26.score):'N/A',loc26?`${integer.format(loc26.numerator)} trích dẫn / ${integer.format(loc26.denominator)} bài OJS (2023–2026)`:'—'],
+      ['CiteScore 2025 (tự tính)',loc25?twoDec.format(loc25.score):'N/A',loc25?`${integer.format(loc25.numerator)} trích dẫn / ${integer.format(loc25.denominator)} bài xuất bản (2022–2025)`:'—'],
+      ['CiteScore 2026 (tự tính)',loc26?twoDec.format(loc26.score):'N/A',loc26?`${integer.format(loc26.numerator)} trích dẫn / ${integer.format(loc26.denominator)} bài xuất bản (2023–2026)`:'—'],
       [`Tổng số bài (${minYear}–${maxYear})`,`${integer.format(totalHistPapers)} bài`,`${integer.format(totalHistIssues)} kỳ xuất bản`],
       ['Tổng trích dẫn',tot?`${integer.format(tot.citations)} lượt`:'N/A',tot?`h-index: ${tot.hIndex} · ${integer.format(tot.citingDocs)} bài trích dẫn`:'—']
     ];
@@ -1290,8 +1297,8 @@ function renderDetail(id){
         <h2 id="detail-heading" class="detail-heading">${esc(fullName(j))}</h2>
         <p class="detail-subtitle">${esc(j.titleVi)} · ${esc(j.subject)}</p>
         <div class="detail-inst-row">
-          <img src="${esc(inst.logo)}" alt="${esc(inst.name)}" loading="lazy" decoding="async">
-          ${inst.coLogo?`<img src="${esc(inst.coLogo)}" alt="${esc(inst.coPublisher||'')}" loading="lazy" decoding="async">`:''}
+          <img src="${esc(safeAsset(inst.logo))}" alt="${esc(inst.name)}" loading="lazy" decoding="async">
+          ${inst.coLogo?`<img src="${esc(safeAsset(inst.coLogo))}" alt="${esc(inst.coPublisher||'')}" loading="lazy" decoding="async">`:''}
           <div>
             <strong style="display:block;font-size:13.5px">${esc(inst.name)}${inst.coPublisher?` · Đồng xuất bản với ${esc(inst.coPublisher)}`:''}</strong>
             <span style="font-size:12px;color:var(--muted)">ISSN: ${esc(j.issn??'—')} · eISSN: ${esc(j.eissn??'—')} · Kỳ hạn xuất bản: ${esc(publicationFrequency(j))}</span>
@@ -1390,7 +1397,7 @@ function renderDetail(id){
           ${j.scopusCitedBy?`<p style="font-size:12.5px;color:var(--muted);margin:8px 0 0">
             Scopus đếm tài liệu trích dẫn riêng biệt theo năm xuất bản, không phải số lượt dẫn chiếu. Cập nhật ${esc(j.scopusCitedBy.collectedAt)}; số liệu 2026 chưa đầy đủ${(j.scopusCitedBy.citationSeries?.find(r=>r.year===2027)?.citingDocuments||0)?`; tổng tích lũy tại nguồn gồm ${integer.format(j.scopusCitedBy.citationSeries.find(r=>r.year===2027).citingDocuments)} tài liệu ghi năm xuất bản 2027`:''}.
           </p>`:`<p style="font-size:12.5px;color:var(--muted);margin:8px 0 0">
-            CiteScore tự tính (tử số / mẫu số 4 năm) trích xuất từ bộ thống kê OJS nội bộ theo năm lưu trữ bản ghi trên OJS; cột Số bài xuất bản thống kê các số đã phát hành chính thức theo năm quyển nên tổng 4 năm có thể khác mẫu số OJS ở các giai đoạn số hóa số cũ.
+            CiteScore tự tính tính theo năm xuất bản (năm của tập/số), không theo ngày đưa bài lên OJS: mẫu số là tổng cột Số bài xuất bản của 4 năm; tử số là trích dẫn trong 4 năm đó tới các bài xuất bản trong cùng 4 năm. Năm 2026 chưa đủ năm.
           </p>`}
         </section>
 
@@ -1432,13 +1439,13 @@ function renderDetail(id){
             <table class="detail-table">
               <thead><tr><th scope="col">Chỉ số JCR 2025</th><th scope="col">Giá trị</th><th scope="col">Chi tiết / Giai đoạn tính</th></tr></thead>
               <tbody>
-                <tr title="Số trích dẫn năm 2025 tới các bài xuất bản 2023–2024 chia cho tổng số bài nghiên cứu và tổng quan (2023–2024)"><td><strong>Journal Impact Factor (JIF 2025)</strong></td><td><strong>${oneDec.format(jr.jif)}</strong></td><td>${integer.format(jr.jifNumerator)} trích dẫn năm 2025 / ${integer.format(jr.jifDenominator)} bài citable (2023–2024)</td></tr>
-                <tr title="JIF 2 năm khi không tính các trích dẫn từ chính tạp chí này"><td>JIF không tính tự trích dẫn</td><td><strong>${oneDec.format(jr.jifWithoutSelfCitations)}</strong></td><td>${integer.format(jr.jifWithoutSelfNumerator)} trích dẫn không tự TD / ${integer.format(jr.jifDenominator)} bài citable (2023–2024)</td></tr>
-                <tr title="Số trích dẫn năm 2025 tới các bài xuất bản trong 5 năm (2020–2024) chia cho số bài citable (2020–2024)"><td>5-Year Impact Factor</td><td><strong>${oneDec.format(jr.fiveYearJif)}</strong></td><td>${integer.format(jr.fiveYearNumerator)} trích dẫn năm 2025 / ${integer.format(jr.fiveYearDenominator)} bài citable (2020–2024)</td></tr>
-                <tr title="Chỉ số tác động trích dẫn chuẩn hóa theo ngành trong 3 năm (mức trung bình thế giới = 1,00)"><td>Journal Citation Indicator (JCI 2025)</td><td><strong>${twoDec.format(jr.jci)}</strong></td><td>Chỉ số chuẩn hóa theo lĩnh vực (CNCI trung bình 3 năm · mốc chuẩn toàn cầu = 1,00)</td></tr>
-                <tr title="Số trích dẫn ngay trong năm 2025 tới các bài vừa xuất bản năm 2025 chia cho số bài năm 2025"><td>Immediacy Index (Chỉ số tức thời)</td><td><strong>${oneDec.format(jr.immediacyIndex)}</strong></td><td>${integer.format(jr.immediacyNumerator)} trích dẫn năm 2025 / ${integer.format(jr.immediacyDenominator)} bài citable năm 2025</td></tr>
-                <tr title="Cited Half-life: tuổi trung vị của các bài được trích dẫn năm 2025. Citing Half-life: tuổi trung vị của các tài liệu tham khảo được tạp chí trích dẫn"><td>Tổng trích dẫn trong JCR 2025 &amp; Half-life</td><td><strong>${integer.format(jr.totalCitations)} lượt</strong></td><td>Cited Half-life: ${esc(jr.citedHalfLife)} năm · Citing Half-life: ${esc(jr.citingHalfLife)} năm</td></tr>
-                <tr title="Đo tầm ảnh hưởng có trọng số trong mạng lưới WoS (không tính tự trích dẫn; Normalized Eigenfactor và AIS có mức trung bình toàn JCR = 1,0)"><td>Eigenfactor / Normalized Eigenfactor / AIS</td><td><strong>${jr.eigenfactorScore.toFixed(5)}</strong></td><td>Normalized Eigenfactor: ${jr.normalizedEigenfactor.toFixed(5)} · Article Influence Score (AIS): ${jr.articleInfluenceScore.toFixed(3)}</td></tr>
+                <tr title="Số trích dẫn năm 2025 tới các bài xuất bản 2023–2024 chia cho tổng số bài nghiên cứu và tổng quan (2023–2024)"><td><strong>Journal Impact Factor (JIF 2025)</strong></td><td><strong>${num(oneDec,jr.jif)}</strong></td><td>${num(integer,jr.jifNumerator)} trích dẫn năm 2025 / ${num(integer,jr.jifDenominator)} bài citable (2023–2024)</td></tr>
+                <tr title="JIF 2 năm khi không tính các trích dẫn từ chính tạp chí này"><td>JIF không tính tự trích dẫn</td><td><strong>${num(oneDec,jr.jifWithoutSelfCitations)}</strong></td><td>${num(integer,jr.jifWithoutSelfNumerator)} trích dẫn không tự TD / ${num(integer,jr.jifDenominator)} bài citable (2023–2024)</td></tr>
+                <tr title="Số trích dẫn năm 2025 tới các bài xuất bản trong 5 năm (2020–2024) chia cho số bài citable (2020–2024)"><td>5-Year Impact Factor</td><td><strong>${num(oneDec,jr.fiveYearJif)}</strong></td><td>${num(integer,jr.fiveYearNumerator)} trích dẫn năm 2025 / ${num(integer,jr.fiveYearDenominator)} bài citable (2020–2024)</td></tr>
+                <tr title="Chỉ số tác động trích dẫn chuẩn hóa theo ngành trong 3 năm (mức trung bình thế giới = 1,00)"><td>Journal Citation Indicator (JCI 2025)</td><td><strong>${num(twoDec,jr.jci)}</strong></td><td>Chỉ số chuẩn hóa theo lĩnh vực (CNCI trung bình 3 năm · mốc chuẩn toàn cầu = 1,00)</td></tr>
+                <tr title="Số trích dẫn ngay trong năm 2025 tới các bài vừa xuất bản năm 2025 chia cho số bài năm 2025"><td>Immediacy Index (Chỉ số tức thời)</td><td><strong>${num(oneDec,jr.immediacyIndex)}</strong></td><td>${num(integer,jr.immediacyNumerator)} trích dẫn năm 2025 / ${num(integer,jr.immediacyDenominator)} bài citable năm 2025</td></tr>
+                <tr title="Cited Half-life: tuổi trung vị của các bài được trích dẫn năm 2025. Citing Half-life: tuổi trung vị của các tài liệu tham khảo được tạp chí trích dẫn"><td>Tổng trích dẫn trong JCR 2025 &amp; Half-life</td><td><strong>${num(integer,jr.totalCitations)} lượt</strong></td><td>Cited Half-life: ${esc(jr.citedHalfLife)} năm · Citing Half-life: ${esc(jr.citingHalfLife)} năm</td></tr>
+                <tr title="Đo tầm ảnh hưởng có trọng số trong mạng lưới WoS (không tính tự trích dẫn; Normalized Eigenfactor và AIS có mức trung bình toàn JCR = 1,0)"><td>Eigenfactor / Normalized Eigenfactor / AIS</td><td><strong>${fixed(jr.eigenfactorScore,5)}</strong></td><td>Normalized Eigenfactor: ${fixed(jr.normalizedEigenfactor,5)} · Article Influence Score (AIS): ${fixed(jr.articleInfluenceScore,3)}</td></tr>
               </tbody>
             </table>
           </div>
@@ -1694,11 +1701,16 @@ function syncRoute(){
     target=sectionId?document.getElementById(sectionId):null;
     if(!target)window.scrollTo({top:0,behavior:'instant'});
   }else{
+    const fromDetail=!panel.hidden;
     homeView.hidden=false;
     panel.hidden=true;
     document.title='VAST JOURNALS — Hệ thống 12 Tạp chí Khoa học (VAST-1 & VAST-2)';
-    setFlightSections(homeFlightSections);
-    renderAllCharts();
+    // In-page anchor jumps keep charts (and pinned tooltips) intact; re-render only after detail view or theme change.
+    if(fromDetail||!homeView.dataset.chartsReady){
+      setFlightSections(homeFlightSections);
+      renderAllCharts();
+      homeView.dataset.chartsReady='1';
+    }
     target=document.getElementById(raw);
   }
   requestAnimationFrame(()=>{
@@ -1765,9 +1777,10 @@ function wireEvents(){
 async function start(){
   try{
     initThemeMode();
-    const [dRes,sRes]=await Promise.all([fetch('data/dashboard.json?v=20261023j'),fetch('data-scopus.json?v=20261023j')]);
-    if(!dRes.ok||!sRes.ok)throw new Error('HTTP status error');
-    [dashboard,scopus]=await Promise.all([dRes.json(),sRes.json()]);
+    const dRes=await fetch('data/dashboard.json?v=20261024a');
+    if(!dRes.ok)throw new Error('HTTP status error');
+    dashboard=await dRes.json();
+    scopus=dashboard?.scopus;
     if(dashboard?.schemaVersion!==1||!Array.isArray(dashboard?.journals)||!Array.isArray(scopus?.records)||!Array.isArray(scopus?.journals))throw new Error('Invalid dashboard dataset schema');
     syncPaletteColors();
     state.selected=new Set(scopusJournals().map(j=>j.id));
